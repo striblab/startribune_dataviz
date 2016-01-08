@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MNPOLL</title>
+  	<meta name="description" content="MNPOLL">
+ 	<meta name="author" content="Frey Hargarten - StarTribune">
+	<meta name="generator" content="BBEdit 10.5" />
+
+	<link href="../_common_resources/charts/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+
+<style>
+  body { font-family:"Benton Sans"; }
+
+	.myButton2 { background-color:#ddd; width:13%; }
+	.myButton2:hover { background-color:#5cbf2a !important; }
+	.myButton2:active { background-color:#5cbf2a; }
+	#chartBox { width:100%; }
+	.chart svg { width:100%; height:50px; margin:5px; }
+  .wrapper-dropdown-1 { width:100%; }
+  .wrapper-demo { width:100%; }
+  .filterBreak { height:7px; border-bottom:1px solid #333; clear:both; }
+
+  text { font-family:"Benton Sans" !important; }
+  .nv-axisMaxMin { font-family:"Popular" !important; }
+  .category { font-weight:900; font-family:"Benton Sans"; font-size:1.5em; }
+  .question { font-family:"Poynter Serif RE"; font-size:1em; text-align:center;  }
+
+  .card { padding:10px; border-bottom:1px solid #ddd; }
+  .year { display:inline-block; width:15%; vertical-align:top; }
+
+  #bigResults { text-align:center; width:100%; margin:20px; }
+  .result { display:inline-block; text-align:center; }
+
+  .for { color:#2c3942; }
+  .against { color:#556e7f; }
+
+  .bigNum { font-family:3em; font-family:"Popular" !important; text-align:center; font-weight:900; padding-top:15px; padding-left:15px; padding-right:15px; padding-bottom:5px; }
+  </style>
+</head>
+<body>
+
+<div id="wrapper">
+              <div id="selector">
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span>Select poll</span>
+              <ul class="dropdown race" tabindex="1">
+
+              </ul>
+          </div>
+        ​</div>
+</section>
+</div>
+
+<div class="clearfix"></div>
+<!-- <div id="menu">
+<button id="all" class="myButton2">All</button>
+<button id="party" class="myButton2">Party</button>
+<button id="income" class="myButton2">Income</button>
+<button id="region" class="myButton2">Region</button>
+<button id="gender" class="myButton2">Gender</button>
+<button id="age" class="myButton2">Age</button>
+<button id="race" class="myButton2">Race</button>
+</div> -->
+
+<div id="bigResults">
+<div class="result">
+  <div class="bigNum"><span class="for">0</span>%</div>
+  <div class="stat forLabel">support</div>
+</div>
+<div class="result">
+  <div class="bigNum"><span class="against">0</span>%</div>
+  <div class="stat againstLabel">oppose</div>
+</div>
+</div>
+
+<div id="chartBox">
+
+</div>
+
+
+</body>
+
+<!--SCRIPTS-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/nvd3-master/build/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master/test/stream_layers.js"></script>
+
+<script>
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=hPtDXdnlMWCnLBV-DQjTQvwfRVhXI9x0Aly_llEtoXzCD4PC4UwDDE_T-Y07MclwX1FVPOumJN_seQ4rw4tfdflREaZenGBnOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tb0U-14YGMBfk_OMYBYnswUTh6e76xg13EtP4QB9VkYZcReJD3bLlsgxpQyidp-ZAvl7IGsXAM8nfn9l0nyfDlg&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
+
+var url = window.location.href; 
+var captured = /poll=([^&]+)/.exec(url)[1];
+var poll = captured ? captured : 'test';
+
+data = json.polls;
+
+//GENERATE POLL SELECTION MENU
+var holder = "test";
+
+d3.select(".dropdown").selectAll(".list")
+.data(data).enter().append("div")
+.attr("class","list")
+.html(function (d){ 
+  // console.log(holder);
+  if (d.tag != holder) { holder = d.tag; return "<a href='index.html?poll='" + d.tag + " class='loadLink'><li class='card' data='" + d.tag + "''>" + d.year + ": " + d.question + "</li></a>"; }
+});
+
+$(document).ready(function() {
+  $(".loadLink").each(function(){
+    $(this).attr("href","index.html?poll=" + $(this).find("li").attr("data") + "");
+});
+  $(".loadLink").click(function(){
+
+    window.location.href = $(this).attr("href");
+  });
+});
+
+// redrawGraph = function(data) {
+
+//     d3.select('#pie1 svg').datum(data).transition().duration(500).call(chart0);
+//     nv.utils.windowResize(chart0.update);
+// };
+
+colors = ['#2c3942', '#556e7f', '#7f98aa', '#a8b9c5', '#c6d1d9'];
+
+var tag = poll;
+
+spillResults(tag,"#chartBox");
+
+function spillResults(tag,section) {
+    $(section).html("");
+    askQuestion(tag,section)
+    chartPolls(tag,"Total",section,0);
+    pinCategory("Party",section);
+    chartPolls(tag,"DFL/Democrat",section,1);
+    chartPolls(tag,"Republican",section,2);
+    chartPolls(tag,"Independent",section,3);
+    chartPolls(tag,"Other/None",section,4);
+    pinCategory("Gender",section);
+    chartPolls(tag,"Men",section,5);
+    chartPolls(tag,"Women",section,6);
+    pinCategory("Income",section);
+    chartPolls(tag,"Less than $50,000",section,7);
+    chartPolls(tag,"More than $50,000",section,8);
+    pinCategory("Region",section);
+    chartPolls(tag,"Hennepin/Ramsey",section,9);
+    chartPolls(tag,"Rest of metro",section,10);
+    chartPolls(tag,"Rest of state",section,11);
+    pinCategory("Age",section);
+    chartPolls(tag,"Age 18-34",section,12);
+    chartPolls(tag,"Age 35-29",section,13);
+    chartPolls(tag,"Age 50-64",section,14);
+    chartPolls(tag,"Age 65+",section,15);
+    overview(tag);
+}
+
+function askQuestion(tag,section){
+  for (i=0; i<data.length; i++){
+    if (data[i].tag == tag && data[i].demographic == "main") {
+      $(section).append("<div class='question'>" + data[i].question + "</div");
+    }
+  }
+}
+
+function pinCategory(cat,section){
+      $(section).append("<div class='category'>" + cat + "</div");
+}
+
+function chartPolls(tag,demographic,section,index) {
+  var count = d3.nest()
+  .key(function(d) { return d.tag == tag && d.demographic == demographic; })
+  .entries(data);
+
+  var resultsString = count[1].values[0];
+  
+  var boxID = tag + "_" + index;
+  // $(section).append("<div class='demo' rel="  + demographic + ">" + demographic + "</div>");
+  $(section).append("<div rel='"  + demographic + "' id='" + boxID + "'><svg></svg></div>");
+
+  var chart;
+nv.addGraph(function() {
+  chart = nv.models.multiBarHorizontalChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .margin({top: 30, right: 20, bottom: 50, left: 140})
+      .color(colors)
+      .stacked(true)
+      .showValues(false)
+      .showControls(false);
+
+  chart.tooltip.enabled(true);
+
+  chart.yAxis
+      .tickFormat(d3.format('%'));
+
+  d3.select('#' + boxID + ' svg')
+      .datum(datatest)
+    .transition().duration(500)
+      .call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+
+if (resultsString.answer5 != "null"){
+var datatest = [
+  {
+    "key": resultsString.answer1,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer1_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer2,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer2_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer3,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer3_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer4,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer4_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer5,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer5_pct)
+      }
+    ]
+  }
+]
+}
+else if  (resultsString.answer4 != "null"){
+var datatest = [
+  {
+    "key": resultsString.answer1,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer1_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer2,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer2_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer3,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer3_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer4,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer4_pct)
+      }
+    ]
+  }
+]
+}
+else {
+var datatest = [
+  {
+    "key": resultsString.answer1,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer1_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer2,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer2_pct)
+      }
+    ]
+  },
+  {
+    "key": resultsString.answer3,
+    "values": [
+      { 
+        "label" : demographic ,
+        "value" : Number(resultsString.answer3_pct)
+      }
+    ]
+  }
+]
+}
+
+}
+
+function overview(tag){
+
+// $(document).bind('DOMNodeInserted', function(event) {
+// $(document).ready(function() {
+//   $(".card").click(function() {
+//    spillResults($(this).attr("data"),"#chartBox");
+//   });
+
+var forNum = 0;
+var againstNum = 0;
+var forLabel;
+var againstLabel;
+
+for (i=0; i<data.length; i++){
+    if (data[i].tag == tag && data[i].demographic == "Total") {
+      var forNum = Number(data[i].answer1_pct * 100);
+      var againstNum = Number(data[i].answer2_pct * 100);
+      forLabel = data[i].answer1;
+      againstLabel = data[i].answer2;
+    }
+ }
+
+$(".forLabel").html("said  " + forLabel);
+$(".againstLabel").html("said " + againstLabel);
+
+$({countNum: $('.for').text()}).animate({countNum: forNum}, {
+  duration: 1000,
+  easing:'linear',
+  step: function() {
+    $('.for').text(Math.floor(this.countNum));
+  },
+  complete: function() {
+    $('.for').text(this.countNum);
+  }
+});
+
+$({countNum: $('.for').text()}).animate({countNum: againstNum}, {
+  duration: 1000,
+  easing:'linear',
+  step: function() {
+    $('.against').text(Math.floor(this.countNum));
+  },
+  complete: function() {
+    $('.against').text(this.countNum);
+  }
+});
+
+// });
+}
+
+});
+</script>
+
+<script type="text/javascript">
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+</script>

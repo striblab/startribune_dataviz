@@ -1,0 +1,100 @@
+Age,Income,Sex,Region,Party
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"<$25,000",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+18-34  ,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Hennepin/Ramsey,DFL/Democrat
+35-49,"$25,000-$49,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,DFL/Democrat
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Male,Metro Suburbs,Republican
+35-49,"$50,000-$74,999",Female,Metro Suburbs,Republican
+35-49,"$75,000-$99,999",Female,Metro Suburbs,Republican
+35-49,"$75,000-$99,999",Female,Metro Suburbs,Republican
+35-49,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Metro Suburbs,Republican
+50-64,"$75,000-$99,999",Female,Southern Minnesota,Republican
+50-64,"$75,000-$99,999",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Republican
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+50-64,"$100,000+",Female,Southern Minnesota,Independent/Other  
+65+  ,"$100,000+",Female,Southern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,Independent/Other  
+65+  ,Refused,Female,Northern Minnesota,None
+65+  ,Refused,Female,Northern Minnesota,None
+65+  ,Refused,Female,Northern Minnesota,None
+65+  ,Refused,Female,Northern Minnesota,None
+Refused ,Refused,Female,Northern Minnesota,None

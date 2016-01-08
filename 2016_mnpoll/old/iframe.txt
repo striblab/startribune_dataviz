@@ -1,0 +1,1 @@
+<iframe src="http://apps.startribune.com/news/mnpoll/dayton.php" frameborder="0" scrolling="no" width="100%" height="1800"></iframe>
