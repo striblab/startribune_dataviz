@@ -1,0 +1,13 @@
+ARTICLE PAGE
+<div id="deaths-database">&nbsp;</div>
+<script type="text/javascript" src="http://static.startribune.com/js/pym/pym.min.js"></script>
+<script>
+    var pymParent = new pym.Parent('deaths-database', 'http://apps.startribune.com/news/20151117-police_deaths/', {});
+</script>
+
+
+ELEMENT PAGE
+<script type="text/javascript" src="http://static.startribune.com/js/pym/pym.min.js"></script>
+<script>
+var pymChild = new pym.Child();
+</script>
