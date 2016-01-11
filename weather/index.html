@@ -9,7 +9,7 @@
   <meta name="description" content="Minnesota Weather Explorer">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href="js/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
   <style>
@@ -185,8 +185,7 @@
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/c3-master/c3.min.js"></script>
-<script src="../_common_resources/stickies/jquery.sticky.js"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 
 <script>
 // $("#selector").sticky({topSpacing:1});
@@ -257,38 +256,61 @@
 
 
 //THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-<?php
 
-$jsonData2011 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=l5_aNeJYpzBLERNvsi086lXDhWdKV_rV-zIYfSJ3Kq-smFJm1GhXPjLjm7pSGJuROJrCDFolUPJJJvQOa15umibMWjlo-U3UOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDaoHaP2ix_cb&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonData2012 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=9bJ4W0EzeuC0jr3RkVN0_i6zYMyRVuSScqO6K3SkWJTuMfqTJPL5OHariSOO40qSf-wrA2-NGvnSXd2TDqLCRynTGdzah8lKOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDR_LfmYbIuwY&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonData2013 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=mdVJzUd9WHmfJBkXkYEw_4bm7jNY3ZQnyPGPwS5UlrQOPJpoLsGfmrploIYcXuUCUG4mxOfXrt8v2QzIHhbNAz_g48noQ1KzOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDSBXb84BGvRE&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonData2014 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=9B-AWywwxrR1TBeP9Ia3cXAIqYN1T86VynrSb5_fkHf9DL_z4AgKJPoSIuffDiHDfT_drofP9agv2QzIHhbNA2NX_mOIqL0rOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDQsWJUuuPAtW&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonData2015 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=Kor1VwDOmGgoy_JfeRUxKiQ27I6lkP3BrUSasfwBKdeItoWcKZ_ijnXzzah4FKqUuAOdANrkFI0v2QzIHhbNAxig1ykYg_tjOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDS7AWuiHuzI1&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataTmp = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=vbmsyf5KREVq2ZYqQyEbRhbNrYZNewE28ZBxrPWb88KhGY2gURPkHmHAs0s9kiHTTFpiTp7nHE0jRkQ-X35H-cBijNEMrdFYOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6lssgaDZH-wzIA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataCool = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=6nyoUiL0ogAGtBuQrvxeu64CIZMJ-jlLqkPNKOCL57xQ4bN_Pp45qumEZs69wua-PbnC_7FDZnAjRkQ-X35H-d4atuqvRiuwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzW0Ar8EAym2-rSLd6Kd3MhGoD-a8Q7Shx&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonData90 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=Sm3LMCfJhh_4ui1k1tgAsG3LpcGjWo58N9vLW0Hitxm4F-_zO0ny_H_4W-nY_KQTbkl3w8FAE_sjRkQ-X35H-Z19ZG2n3KUIOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIz3SRbIqcu4Za0fnLkJQj8mg&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataDew = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=R5SXWbFJdDkDYssFUlLvPkeWCZPpzLbzl_6PV2PiSx5NbSf6F02xGpW2rNWOY2g_R7cS4LGfdbAjRkQ-X35H-Wj6U1N-qGvkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIz3dzJzZTV7GibOBmgGRDvDAePdCTtDnUe&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataHeat = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=bDx9446nsE_17BOWXpdCg88TQN1F8hiJigvS1OAp3QvthRP09Fn-g70V4tQFjE-8096_wSmLulZHGJOtJcWT_sRVhlD-fLluOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzSCWgToZmllYLAludXjgR92oD-a8Q7Shx&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataDecade = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=inQ4H6msBBEe2lAuUmcihnvF_9T41FyWQpZfRLInrHzBv1WFR4VXLQRog--cgHi6mOUPZ6Do_TdHGJOtJcWT_qGr0FgEJyzOOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzSCWgToZmllbQp3vYj6SpyFwQpERPvs5H&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataPrecip = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=-PIWqx5kMzKvhitTFnzAReTbLeF8ayn4t3smDKTRyg618IeHLVfNAuvI37QFTtuPzrxKnR3ps9VHGJOtJcWT_o5drkE28sTlOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6ls6fOqW35suTWBZtRnYfzDl&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-$jsonDataSnow = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=uaAlUqxjSlon5e_C8c5IOzeeuQNOfi6s9HyU2a0brYaJVvdddqLmk37tkWKS-H9dbo-NdWzNbP1HGJOtJcWT_kBSc61GAoNPOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6lts1UOCsECMqBGQmSuaYtHQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonData2011 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=l5_aNeJYpzBLERNvsi086lXDhWdKV_rV-zIYfSJ3Kq-smFJm1GhXPjLjm7pSGJuROJrCDFolUPJJJvQOa15umibMWjlo-U3UOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDaoHaP2ix_cb&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonData2012 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=9bJ4W0EzeuC0jr3RkVN0_i6zYMyRVuSScqO6K3SkWJTuMfqTJPL5OHariSOO40qSf-wrA2-NGvnSXd2TDqLCRynTGdzah8lKOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDR_LfmYbIuwY&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonData2013 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=mdVJzUd9WHmfJBkXkYEw_4bm7jNY3ZQnyPGPwS5UlrQOPJpoLsGfmrploIYcXuUCUG4mxOfXrt8v2QzIHhbNAz_g48noQ1KzOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDSBXb84BGvRE&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonData2014 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=9B-AWywwxrR1TBeP9Ia3cXAIqYN1T86VynrSb5_fkHf9DL_z4AgKJPoSIuffDiHDfT_drofP9agv2QzIHhbNA2NX_mOIqL0rOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDQsWJUuuPAtW&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonData2015 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=Kor1VwDOmGgoy_JfeRUxKiQ27I6lkP3BrUSasfwBKdeItoWcKZ_ijnXzzah4FKqUuAOdANrkFI0v2QzIHhbNAxig1ykYg_tjOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDS7AWuiHuzI1&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataTmp = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=vbmsyf5KREVq2ZYqQyEbRhbNrYZNewE28ZBxrPWb88KhGY2gURPkHmHAs0s9kiHTTFpiTp7nHE0jRkQ-X35H-cBijNEMrdFYOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6lssgaDZH-wzIA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataCool = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=6nyoUiL0ogAGtBuQrvxeu64CIZMJ-jlLqkPNKOCL57xQ4bN_Pp45qumEZs69wua-PbnC_7FDZnAjRkQ-X35H-d4atuqvRiuwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzW0Ar8EAym2-rSLd6Kd3MhGoD-a8Q7Shx&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonData90 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=Sm3LMCfJhh_4ui1k1tgAsG3LpcGjWo58N9vLW0Hitxm4F-_zO0ny_H_4W-nY_KQTbkl3w8FAE_sjRkQ-X35H-Z19ZG2n3KUIOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIz3SRbIqcu4Za0fnLkJQj8mg&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataDew = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=R5SXWbFJdDkDYssFUlLvPkeWCZPpzLbzl_6PV2PiSx5NbSf6F02xGpW2rNWOY2g_R7cS4LGfdbAjRkQ-X35H-Wj6U1N-qGvkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIz3dzJzZTV7GibOBmgGRDvDAePdCTtDnUe&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataHeat = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=bDx9446nsE_17BOWXpdCg88TQN1F8hiJigvS1OAp3QvthRP09Fn-g70V4tQFjE-8096_wSmLulZHGJOtJcWT_sRVhlD-fLluOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzSCWgToZmllYLAludXjgR92oD-a8Q7Shx&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataDecade = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=inQ4H6msBBEe2lAuUmcihnvF_9T41FyWQpZfRLInrHzBv1WFR4VXLQRog--cgHi6mOUPZ6Do_TdHGJOtJcWT_qGr0FgEJyzOOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzSCWgToZmllbQp3vYj6SpyFwQpERPvs5H&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataPrecip = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=-PIWqx5kMzKvhitTFnzAReTbLeF8ayn4t3smDKTRyg618IeHLVfNAuvI37QFTtuPzrxKnR3ps9VHGJOtJcWT_o5drkE28sTlOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6ls6fOqW35suTWBZtRnYfzDl&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataSnow = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=uaAlUqxjSlon5e_C8c5IOzeeuQNOfi6s9HyU2a0brYaJVvdddqLmk37tkWKS-H9dbo-NdWzNbP1HGJOtJcWT_kBSc61GAoNPOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6lts1UOCsECMqBGQmSuaYtHQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
 
-?>
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=l5_aNeJYpzBLERNvsi086lXDhWdKV_rV-zIYfSJ3Kq-smFJm1GhXPjLjm7pSGJuROJrCDFolUPJJJvQOa15umibMWjlo-U3UOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDaoHaP2ix_cb&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad2011) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=9bJ4W0EzeuC0jr3RkVN0_i6zYMyRVuSScqO6K3SkWJTuMfqTJPL5OHariSOO40qSf-wrA2-NGvnSXd2TDqLCRynTGdzah8lKOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDR_LfmYbIuwY&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad2012) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=mdVJzUd9WHmfJBkXkYEw_4bm7jNY3ZQnyPGPwS5UlrQOPJpoLsGfmrploIYcXuUCUG4mxOfXrt8v2QzIHhbNAz_g48noQ1KzOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDSBXb84BGvRE&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad2013) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=9B-AWywwxrR1TBeP9Ia3cXAIqYN1T86VynrSb5_fkHf9DL_z4AgKJPoSIuffDiHDfT_drofP9agv2QzIHhbNA2NX_mOIqL0rOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDQsWJUuuPAtW&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad2014) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=Kor1VwDOmGgoy_JfeRUxKiQ27I6lkP3BrUSasfwBKdeItoWcKZ_ijnXzzah4FKqUuAOdANrkFI0v2QzIHhbNAxig1ykYg_tjOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzGetL3GQdFGtzSS3bVLNjDS7AWuiHuzI1&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad2015) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=vbmsyf5KREVq2ZYqQyEbRhbNrYZNewE28ZBxrPWb88KhGY2gURPkHmHAs0s9kiHTTFpiTp7nHE0jRkQ-X35H-cBijNEMrdFYOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6lssgaDZH-wzIA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadTmp) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=6nyoUiL0ogAGtBuQrvxeu64CIZMJ-jlLqkPNKOCL57xQ4bN_Pp45qumEZs69wua-PbnC_7FDZnAjRkQ-X35H-d4atuqvRiuwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzW0Ar8EAym2-rSLd6Kd3MhGoD-a8Q7Shx&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadCool) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=Sm3LMCfJhh_4ui1k1tgAsG3LpcGjWo58N9vLW0Hitxm4F-_zO0ny_H_4W-nY_KQTbkl3w8FAE_sjRkQ-X35H-Z19ZG2n3KUIOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIz3SRbIqcu4Za0fnLkJQj8mg&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad90) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=R5SXWbFJdDkDYssFUlLvPkeWCZPpzLbzl_6PV2PiSx5NbSf6F02xGpW2rNWOY2g_R7cS4LGfdbAjRkQ-X35H-Wj6U1N-qGvkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIz3dzJzZTV7GibOBmgGRDvDAePdCTtDnUe&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadDew) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=bDx9446nsE_17BOWXpdCg88TQN1F8hiJigvS1OAp3QvthRP09Fn-g70V4tQFjE-8096_wSmLulZHGJOtJcWT_sRVhlD-fLluOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzSCWgToZmllYLAludXjgR92oD-a8Q7Shx&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadHeat) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=inQ4H6msBBEe2lAuUmcihnvF_9T41FyWQpZfRLInrHzBv1WFR4VXLQRog--cgHi6mOUPZ6Do_TdHGJOtJcWT_qGr0FgEJyzOOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzSCWgToZmllbQp3vYj6SpyFwQpERPvs5H&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadDecade) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=-PIWqx5kMzKvhitTFnzAReTbLeF8ayn4t3smDKTRyg618IeHLVfNAuvI37QFTtuPzrxKnR3ps9VHGJOtJcWT_o5drkE28sTlOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6ls6fOqW35suTWBZtRnYfzDl&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadPrecip) {
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=uaAlUqxjSlon5e_C8c5IOzeeuQNOfi6s9HyU2a0brYaJVvdddqLmk37tkWKS-H9dbo-NdWzNbP1HGJOtJcWT_kBSc61GAoNPOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TuemWiCPnYU3v6YF6IJkSFYyyTJG-HL6oSfmK20SEw86uyLwhxRZulMt4JgiTXzIzCybrZkpw6lts1UOCsECMqBGQmSuaYtHQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadSnow) {
 
 //THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
-var dataLoad2011 = <?php echo $jsonData2011; ?>;
-var dataLoad2012 = <?php echo $jsonData2012; ?>;
-var dataLoad2013 = <?php echo $jsonData2013; ?>;
-var dataLoad2014 = <?php echo $jsonData2014; ?>;
-var dataLoad2015 = <?php echo $jsonData2015; ?>;
-var dataLoadTmp = <?php echo $jsonDataTmp; ?>;
-var dataLoadCool = <?php echo $jsonDataCool; ?>;
-var dataLoad90 = <?php echo $jsonData90; ?>;
-var dataLoadDew = <?php echo $jsonDataDew; ?>;
-var dataLoadHeat = <?php echo $jsonDataHeat; ?>;
-var dataLoadDecade = <?php echo $jsonDataDecade; ?>;
-var dataLoadPrecip = <?php echo $jsonDataPrecip; ?>;
-var dataLoadSnow = <?php echo $jsonDataSnow; ?>;
+// var dataLoad2011 = <?php echo $jsonData2011; ?>;
+// var dataLoad2012 = <?php echo $jsonData2012; ?>;
+// var dataLoad2013 = <?php echo $jsonData2013; ?>;
+// var dataLoad2014 = <?php echo $jsonData2014; ?>;
+// var dataLoad2015 = <?php echo $jsonData2015; ?>;
+// var dataLoadTmp = <?php echo $jsonDataTmp; ?>;
+// var dataLoadCool = <?php echo $jsonDataCool; ?>;
+// var dataLoad90 = <?php echo $jsonData90; ?>;
+// var dataLoadDew = <?php echo $jsonDataDew; ?>;
+// var dataLoadHeat = <?php echo $jsonDataHeat; ?>;
+// var dataLoadDecade = <?php echo $jsonDataDecade; ?>;
+// var dataLoadPrecip = <?php echo $jsonDataPrecip; ?>;
+// var dataLoadSnow = <?php echo $jsonDataSnow; ?>;
 
 data2011 = dataLoad2012.weather2011;
 data2012 = dataLoad2012.weather2012;
@@ -303,9 +325,7 @@ dataHeat = dataLoadHeat.heatingDegree;
 dataDecade = dataLoadDecade.hottestDecade;
 dataPrecip = dataLoadPrecip.annualPrecip;
 dataSnow = dataLoadSnow.annualSnow;
-</script>
 
-<script>
 
 $(".years li").on('click',function(){
 $(".thisYear").text($(this).attr('year'));
@@ -727,5 +747,18 @@ var chartWind = c3.generate({
       subchart: { show: true },
         color: { pattern: ['#E7C6A9', '#AA6C38'] },
     });
+});
+});
+});
+});
+});
+});
+});
+});
+});
+});
+});
+});
+});
 </script>
 </html>
