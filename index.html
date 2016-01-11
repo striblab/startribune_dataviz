@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MNPOLL">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+  <meta name="generator" content="BBEdit 10.5" />
+  <title>Data-driven storytelling, maps, charts and more | Startribune.com</title>
+
+<!-- load common dataviz styles -->
+<link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
+
+<!-- dataviz and custom styles for this page -->
+   <style>
+      body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+      #infobox { font-family:"Poynter Serif RE",Georgia,Times,serif; }
+      .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
+      .native-ad { display:none !important; }
+      #js-navigation-menu { display:block !important; }
+      .one-half { display:inline-block !important; float:left; }
+      #testDiv { height:400px; background-color:#ddd; width:85%; float:right; }
+
+      p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
+      .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
+      .specialContentWrapper{ width:100%; }
+      #sorting_mobile { display:none; }
+      #leftPane { float:left !important; width:65% !important; }
+      #infobox { font-size:16px; margin:10px; }
+      #infobox p { padding:3px; }
+      #logo_container { width:35%; }
+      .datalab-logo { float:left; margin:10px; width:100%;}
+      #articlePane { display:inline-block !important;  }
+      .articleEntry { margin:30px; }
+      .articleName { font-weight:normal; font-size:28px; }
+      .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%; }
+      .byline { font-weight:bold; }
+      #dataSidebar { float:right !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
+      .sectionBox { margin:7px; }
+      .creditBox { width:32%; height:auto; float:left; }
+      #team { font-weight:bold; clear:both; }
+      .sort-link { border-bottom: 1px solid #000; padding:15px; font-size:13px; }
+      #searchMe, #searchMe_m { padding:15px; font-size:14px; }
+      .fixed { position:fixed; top:40px !important;}
+      #github { padding:15px; font-size:14px; }
+      .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }
+      #search-criteria, #search-criteria_m { width:98%; }
+      #search-criteria_m { height:40px; font-size:20px; }
+      .links { text-align:center; }
+      .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
+      .l-container:nth-child(2) { width:100%; }
+      .nav-section-mod.col-2 li { text-align:center !important; }
+      .nav-shortcuts-inner { text-align:center !important; }
+      .link { width:100%; font-size:1.3em; border-top: 1px solid #ddd; padding:10px; font-weight:bold; vertical-align:middle; }
+      .more { font-size:18px; display:block; text-align:center; }
+      #links_m { display:none; }
+      #contribs { display:none; }
+      .article-share { width:100%; }
+      .breaker { clear:both; margin:7px; padding:10px; }
+      .article-share, .comments-section { display:none !important; }
+      #contributors { display:none; }
+
+      .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#61bd1a; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
+      .git:hover { cursor:pointer; background-color:#fff !important; }
+    </style>
+
+  <style type="text/css"> 
+/*page template styles*/
+    #specialContentWrapper{ margin-top:50px !important; width:970px !important; margin-left:auto; margin-right:auto; }
+    .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
+    .nav-section-mod.col-2 li { text-align:center !important; }
+    .nav-shortcuts-inner { text-align:center !important; }
+
+    #articleHeader {margin-top:40px;}
+    .l-container:nth-child(2) { width:100%; }
+    .l-navigation-shortnav-container { width:100%; min-width:100%; }
+    .l-section-right { display:none; }
+    .l-section-inner { width:95%; border-right:0;}
+    .l-footer-inner, .l-section-container { width:90% !important; }
+    .nav-branding-mod, .nav-shortcuts-mod { width:100% !important;  }
+    .nav-utility-mod {  width: 100%; margin: 0 auto; max-width: 100% !important; min-width: 100% !important; }
+    #zone-none-block-1-leaderboard iframe { width:100% !important; }
+    #zone-none-block-1-leaderboard, #zone-none-block-3-leaderboard { display: none !important; }
+    #zone-none-block-3-leaderboard div iframe { width:100% !important; }
+    /*.navbar-fixed-top { display:none !important; }*/
+    .l-section-inner { padding-right: 0; width:100%; } 
+    a { color: #333; text-decoration: none; }
+    a:hover { text-decoration:none !important; color:inherit !important; }
+    .article-share { position:relative !important; float:left !important; margin-left:0 !important; }
+    .fyre .fyre-comment-head .fyre-comment-username { cursor: default !important; font-size: 12px !important; line-height: 25px !important; text-decoration: none !important; color: #000 !important; }
+    .fyre-post-button { border-radius:0 !important; }
+    .fyre { background-color:#fff !important; }
+    .fyre .fyre-comment-article .fyre-comment-wrapper section p, .fyre .fyre-comment-stream .fyre-comment-wrapper section p { font-size:1em !important; }
+    .fyre .fyre-comment-article .fyre-comment-head {  margin-top:0 !important; }
+    .fyre .fyre-auth { margin:0px 0 0 0 !important; }
+    .fyre .fyre-auth .fyre-login-bar, .fyre .fyre-auth .fyre-user-loggedout { color:#61bf1a !important; text-decoration:none !important; }
+    .articlePhoto img { max-width:100%; max-height:250px !important; }
+
+    @media only screen and (min-width:650px) {
+      .sort-link-mid:hover, .sort-link:hover, .link:hover { background-color:#eee !important; cursor:pointer; }
+    }
+
+    @media (max-width: 970px) {
+      .l-container { text-align:left !important; width:100% !important; margin:0; }
+      .footer-navigation-mod { display:block !important; margin-top:30px; }
+
+      #articleHeader {margin-top:40px;}
+      .nav-shortcuts-inner { display:none !important; }
+      .nav-utility-btn:before { width:30px; height:30px; }
+      .nav-utility-mod { height:50px; }
+      .nav-utility-inner-right { float: right !important;  width:auto !important}
+      .nav-utility-inner-center { float:right !important; text-align: right; width:auto !important; margin-top:10px !important; }
+      .nav-utility-mod { width:100% !important; min-width:auto !important; max-width:auto!important; float:left !important; border-bottom: 1px solid #000; }
+      .nav-branding-mod {/* margin-top:0 !important;*/ display:none !important; }
+      .nav-utility-inner { width:auto; }
+      .nav-utility-inner .btn-subscribe { display:none !important; }
+      .btn-eedition { display:none !important; }
+      .js-nav-subscriptions-dropdown { display:none !important; }
+      .dpp, .navigation-shortnav-ad { display:none !important; }
+      .show-divider { border-left:0 !important; }
+      .nav-logo-link { height: 38px !important; width: 260px !important; }
+      .nav-utility-btn.show-divider:after { display:none; }
+      #wrapper { padding:0; }
+      /*.nav-utility-btn { text-indent:-5000px; }
+      .nav-utility-btn::before { text-indent:2px; }*/
+      .nav-weather-mod, .nav-section-mod { margin-top:40px !important; }
+      .logInBtn { display:none !important; }
+      /*.navbar-fixed-top { display:block !important; }*/
+      .global-nav-mod { display:none !important; } 
+      #specialContentWrapper { margin-top:50px !important; width:97% !important; }
+      .l-section-container { width:100% !important; }
+      .l-section-inner { padding-right: 0; width:100%; } 
+
+      #dataSidebar{ display:none !important;}
+      #leftPane, #articlePane, #infobox { width:100% !important; }
+      #searchMe_m, #sorting_mobile { display:block !important; }
+    }
+   </style>
+
+<body>
+<div id="specialContentWrapper">
+<!-- mark me bro -->
+
+<div id="leftPane">
+<div id="infobox">
+<p id="logo_container"><img src="img/datalab-color.png" class="datalab-logo" /> 
+<p>Welcome to StribLab, the Star Tribune's aggregation of data-driven and visual storytelling, including maps, charts, investigations and analysis from the Watchdog and Data Team and others across the newsroom.</p>
+<p></p>
+<p id="contribs">Regular contributors: <strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a>, <a href="http://www.startribune.com/dan-browning/10644516/">Dan Browning</a>, <a href="http://www.startribune.com/matt-delong/285386351/">Matt DeLong</a>, <a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a>, <a href="http://www.startribune.com/local/blogs/Full_Disclosure/">James Eli Shiffer</a>, <a href="http://www.startribune.com/cj-sinner/284976151/">CJ Sinner</a>, <a href="http://www.startribune.com/brandon-stahl/186499941/">Brandon Stahl</a>, <a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a></strong></p>
+<p></p>
+<p><strong>Have a tip or story idea? Contact us via our tipline.</strong></p>
+</p>
+</div>
+
+<div id="sorting_mobile" class="sectionBox">
+<div id="searchMe_m"><input type="text" id="search-criteria_m"/></div>
+</div>
+
+<div id="articlePane" class="sectionBox">
+</div>
+
+<div class="more"><a  href="javascript:void(0)">See more</a></div>
+
+</div>
+
+<div id="dataSidebar">
+<div id="sorting" class="sectionBox">
+<div class="sort-link" id="allProjects">All Projects</div>
+<div class="sort-link" id="economics">Business and Economics</div>
+<div class="sort-link" id="crime">Criminal Justice</div>
+<div class="sort-link" id="demographics">Demographics</div>
+<div class="sort-link" id="education">Education</div>
+<div class="sort-link" id="environment">Environment</div>
+<div class="sort-link" id="health">Health</div>
+<div class="sort-link" id="politics">Politics</div>
+<div class="sort-link" id="scitech">Science and Technology</div>
+<div class="sort-link" id="transit">Transportation and Infrastructure</div>
+<div class="sort-link" id="other">Other</div>
+<div id="searchMe"><input type="text" id="search-criteria"/></div>
+<div id="links">
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure Blog</a></div>
+<div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
+
+<div id="contributors">
+
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/">James Eli Shiffer</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/matt-delong/285386351/">Matt DeLong</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/dan-browning/10644516/">Dan Browning</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/cj-sinner/284976151/">CJ Sinner</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/brandon-stahl/186499941/">Brandon Stahl</a></div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+</body>
+<!--close specialContentWrapper-->
+
+<!-- custom scripts calls for this page -->
+
+
+<!-- custom script coding for this page -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+// $(window).on('resize', function(event){
+//     var windowWidth = $(window).width();
+// if(windowWidth < 933){
+//     $(".nav-utility-btn").text("");
+// }
+// });
+
+// $(document).ready(function() {
+//     var windowWidth = $(window).width();
+// if(windowWidth < 933){
+//     $(".nav-utility-btn").text("");
+// }
+// });
+</script>
+
+<script>
+//menu magic
+
+</script>
+
+<script>
+//live json magic
+
+//https://script.google.com/a/macros/umn.edu/s/AKfycbzOAHrfmtGJMR9crHeF9zdAhqU9saB9YzKf1Xxivfs/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=Sheet1
+//https://script.google.com/macros/s/AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=Sheet1
+
+// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI4TSNmVu370MsVSQB_Uyyblk_gZzoGt5pocAksdR5w4v_f2ujy3Itp6RrgmHu-1uDbWlU06h6dNs9MBqWM2rkCMrzZGwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa3HMflvAE5oEneTLZU5s79KARkcyFDMjX0ewt5-cuI2hRHouKSPCrKRcgufhrII6-M3MleihyRS6Yxs7ziheq_kx8s3fq8FhcV7V45FBz4fadfh_z-4qMMEa0mO-EXf9WyjPuXlbvplVwqJbeTowOR_fVIgxkfofiQ&lib=Mpc9sEUZubx48Zop7g8xYBjbZ7jG6IkQL");
+
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI4TSNmVu370MsVSQB_Uyyblk_gZzoGt5pocAksdR5w4v_f2ujy3Itp6RrgmHu-1uDbWlU06h6dNs9MBqWM2rkCMrzZGwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa3HMflvAE5oEneTLZU5s79KARkcyFDMjX0ewt5-cuI2hRHouKSPCrKRcgufhrII6-M3MleihyRS6Yxs7ziheq_kx8s3fq8FhcV7V45FBz4fadfh_z-4qMMEa0mO-EXf9WyjPuXlbvplVwqJbeTowOR_fVIgxkfofiQ&lib=Mpc9sEUZubx48Zop7g8xYBjbZ7jG6IkQL", function(error, json) {
+
+// $(".nav-section-link").text("StribLab");
+// $(document).prop('title', 'Data-driven storytelling, maps, charts and more | Startribune.com');
+
+
+var data = json;
+
+d3.select("#articlePane").selectAll("div").data(data.Sheet1).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
+
+if (d.git != '') { var git = "<div class='git'><a href='" + d.git + "' target='new_'>View on Github</a></div>"; }
+else { var git = ""; }
+
+  return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>by " + d.byline + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
+
+});
+
+$('#allProjects').css("background-color","#ddd");
+
+$( ".sort-link" ).click(function() {
+  $('#search-criteria_m').val("");
+  $('#search-criteria').val("");
+});
+
+$( "#allProjects" ).click(function() {
+  $(".articleEntry").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#presentations" ).click(function() {
+  $(".articleEntry").hide();
+  $(".presentations").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#crime" ).click(function() {
+  $(".articleEntry").hide();
+  $(".crime").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#education" ).click(function() {
+  $(".articleEntry").hide();
+  $(".education").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#health" ).click(function() {
+  $(".articleEntry").hide();
+  $(".health").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#politics" ).click(function() {
+  $(".articleEntry").hide();
+  $(".politics").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#scitech" ).click(function() {
+  $(".articleEntry").hide();
+  $(".scitech").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#transit" ).click(function() {
+  $(".articleEntry").hide();
+  $(".transit").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#economics" ).click(function() {
+  $(".articleEntry").hide();
+  $(".economics").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#demographics" ).click(function() {
+  $(".articleEntry").hide();
+  $(".demographics").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#other" ).click(function() {
+  $(".articleEntry").hide();
+  $(".other").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+$( "#environment" ).click(function() {
+  $(".articleEntry").hide();
+  $(".environment").show();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+});
+
+$( document ).ready(function() {
+ $('#search-criteria').keyup(function(){
+    $('.articleEntry').hide();
+    $(".sort-link").css("background-color","#fff");
+    var txt = $('#search-criteria').val();
+    if (txt == '') { $('#allProjects').css("background-color","#ddd"); }
+    $('.articleName, .byline').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).parent().show();
+           $(this).show();
+       }
+    });
+});
+
+$('#search-criteria_m').keyup(function(){
+    $('.articleEntry').hide();
+    $(".sort-link").css("background-color","#fff");
+    var txt = $('#search-criteria_m').val();
+    $('.articleName, .byline, #tags').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).parent().show();
+           $(this).show();
+       }
+    });
+});
+
+});
+
+$(document).ready(function () {
+  $(".articleEntry").hide();
+    size_li = $(".articleEntry").size();
+    x=3;
+    $('.articleEntry:lt('+x+')').show();
+    $('.more').click(function () {
+        x= (x+3 <= size_li) ? x+3 : size_li;
+        $('.articleEntry:lt('+x+')').show();
+    });
+    if($(window).scrollTop() + screen.height > $('body').height())
+{
+        x= (x+3 <= size_li) ? x+3 : size_li;
+        $('.articleEntry:lt('+x+')').show();
+}
+});
+
+$(document).ready(function () {
+
+    var length = $('#specialContentWrapper').height() - $('#dataSidebar').height() + $('#specialContentWrapper').offset().top;
+
+    $(window).scroll(function () {
+
+        var scroll = $(this).scrollTop();
+        var height = $('#dataSidebar').height() + 'px';
+
+        if (scroll < $('#left').offset().top) {
+
+            $('#dataSidebar').css({
+                'position': 'absolute',
+                'top': '0'
+            });
+
+        } else if (scroll > length) {
+
+            $('#dataSidebar').css({
+                'position': 'absolute',
+                'bottom': '0',
+                'top': 'auto'
+            });
+
+        } else {
+
+            $('#dataSidebar').css({
+                'position': 'fixed',
+                'top': '0',
+                'height': height
+            });
+        }
+    });
+});
+});
+</script>
