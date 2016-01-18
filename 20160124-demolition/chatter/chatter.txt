@@ -1,0 +1,9 @@
+<p>The Star Tribune obtained construction and wrecking permits from the City of Minneapolis spanning 2002 through 2015 and matched up associated parcel numbers from each dataset to derive the number of teardowns and rebuilds across the city.</p>
+
+<p><span style="color:#801515;font-weight:900;">Teardowns</span> are demolitions without a permit for new construction on that parcel, while <span style="font-weight:900;color:#777;">rebuilds</span> are demolitions on parcels also granted construction permits.</p>
+
+<p>Due to shifting parcel designations over time, some wrecking and construction permit associations may not be precise.</p>
+
+<p>Construction and wrecking data can be vieed either by Minneapolis communities or neighborhoods. Individual years can be selected by moving through the timeline.</p>
+
+<p>Source: City of Minneapolis, Star Tribune reporting</p>
