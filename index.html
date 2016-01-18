@@ -28,7 +28,7 @@
       #leftPane { float:left !important; width:65% !important; }
       #infobox { font-size:16px; margin:10px; }
       #infobox p { padding:3px; }
-      #logo_container { width:35%; }
+      #logo_container { width:208px; }
       .datalab-logo { float:left; margin:10px; width:100%;}
       #articlePane { display:inline-block !important;  }
       .articleEntry { margin:30px; }
@@ -44,7 +44,7 @@
       .fixed { position:fixed; top:40px !important;}
       #github { padding:15px; font-size:14px; }
       .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }
-      #search-criteria, #search-criteria_m { width:98%; }
+      #search-criteria, #search-criteria_m { width:100%; }
       #search-criteria_m { height:40px; font-size:20px; }
       .links { text-align:center; }
       .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
@@ -104,6 +104,8 @@
       .l-container { text-align:left !important; width:100% !important; margin:0; }
       .footer-navigation-mod { display:block !important; margin-top:30px; }
 
+      #logo_container { text-align:center; display:block !important; float:none !important; }
+
       #articleHeader {margin-top:40px;}
       .nav-shortcuts-inner { display:none !important; }
       .nav-utility-btn:before { width:30px; height:30px; }
@@ -142,14 +144,13 @@
 <!-- mark me bro -->
 
 <div id="leftPane">
+  <div id="logo_container"><img src="img/datalab-color.png" class="datalab-logo" /></div>
 <div id="infobox">
-<p id="logo_container"><img src="img/datalab-color.png" class="datalab-logo" /> 
-<p>Welcome to StribLab, the Star Tribune's aggregation of data-driven and visual storytelling, including maps, charts, investigations and analysis from the Watchdog and Data Team and others across the newsroom.</p>
+<div>Welcome to StribLab, the Star Tribune's aggregation of data-driven and visual storytelling, including maps, charts, investigations and analysis from the Watchdog and Data Team and others across the newsroom.</div>
 <p></p>
-<p id="contribs">Regular contributors: <strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a>, <a href="http://www.startribune.com/dan-browning/10644516/">Dan Browning</a>, <a href="http://www.startribune.com/matt-delong/285386351/">Matt DeLong</a>, <a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a>, <a href="http://www.startribune.com/local/blogs/Full_Disclosure/">James Eli Shiffer</a>, <a href="http://www.startribune.com/cj-sinner/284976151/">CJ Sinner</a>, <a href="http://www.startribune.com/brandon-stahl/186499941/">Brandon Stahl</a>, <a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a></strong></p>
+<div id="contribs">Regular contributors: <strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a>, <a href="http://www.startribune.com/dan-browning/10644516/">Dan Browning</a>, <a href="http://www.startribune.com/matt-delong/285386351/">Matt DeLong</a>, <a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a>, <a href="http://www.startribune.com/local/blogs/Full_Disclosure/">James Eli Shiffer</a>, <a href="http://www.startribune.com/cj-sinner/284976151/">CJ Sinner</a>, <a href="http://www.startribune.com/brandon-stahl/186499941/">Brandon Stahl</a>, <a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a></strong></div>
 <p></p>
-<p><strong>Have a tip or story idea? Contact us via our tipline.</strong></p>
-</p>
+<div><strong>Have a tip or story idea? Contact us via our tipline.</strong></div>
 </div>
 
 <div id="sorting_mobile" class="sectionBox">
@@ -178,7 +179,7 @@
 <div class="sort-link" id="other">Other</div>
 <div id="searchMe"><input type="text" id="search-criteria"/></div>
 <div id="links">
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure Blog</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure</a></div>
 <div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
 
 <div id="contributors">

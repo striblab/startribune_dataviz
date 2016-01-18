@@ -1,0 +1,113 @@
+Race,Status,Count2010,Count2011,Count2012,Count2013,CountTotal
+White,Acquitted,14,12,8,14,48
+White,"Acquitted, mental illness",,1,,1,2
+White,Adjudication unknown,2,1,,,3
+White,Continued for dismissal,1,7,23,45,76
+White,Continued without adjudication,1,3,1,12,17
+White,Continued without findings,,1,,1,2
+White,Convicted,"2,287","2,443","2,387","2,519","9,636"
+White,Dismissed,"1,129","1,186","1,302","1,571","5,188"
+White,"Dismissed, civil action",,,1,,1
+White,"Dismissed, Conditions Met or Expired",877,776,777,815,"3,245"
+White,"Dismissed, mental deficiency",,,2,1,3
+White,Diversion,3,8,6,35,52
+White,Filings,"4,133","4,338","5,076","5,632","19,179"
+White,Statutory stay of adjudication,124,268,514,755,"1,661"
+White,Stay of adjudication,50,64,93,145,352
+White,Vacated,1,4,,,5
+Unknown,Acquitted,,1,,3,4
+Unknown,Adjudication unknown,1,1,,1,3
+Unknown,Continued for dismissal,,,1,4,5
+Unknown,Convicted,199,208,292,344,"1,043"
+Unknown,Conviction set aside,,,,1,1
+Unknown,Dismissed,108,116,125,156,505
+Unknown,"Dismissed, Conditions Met or Expired",169,102,95,117,483
+Unknown,Diversion,,2,5,5,12
+Unknown,Filings,409,447,681,753,"2,290"
+Unknown,Statutory stay of adjudication,11,22,52,62,147
+Unknown,Stay of adjudication,2,5,6,17,30
+Unknown,Vacated,,,,1,1
+Unavailable,Adjudication unknown,1,,,,1
+Unavailable,Continued for dismissal,,1,3,1,5
+Unavailable,Convicted,253,227,172,156,808
+Unavailable,Conviction set aside,,2,1,,3
+Unavailable,Dismissed,122,167,97,112,498
+Unavailable,"Dismissed, Conditions Met or Expired",96,91,90,85,362
+Unavailable,Diversion,,,2,3,5
+Unavailable,Filings,369,322,297,276,"1,264"
+Unavailable,Statutory stay of adjudication,10,15,32,26,83
+Unavailable,Stay of adjudication,7,4,1,4,16
+Refused,Convicted,42,32,39,25,138
+Refused,Dismissed,13,17,18,14,62
+Refused,"Dismissed, Conditions Met or Expired",15,8,11,19,53
+Refused,Diversion,2,,,1,3
+Refused,Filings,67,69,69,67,272
+Refused,Statutory stay of adjudication,3,4,5,12,24
+Refused,Stay of adjudication,,,,2,2
+Other,Acquitted,,,1,1,2
+Other,Convicted,33,26,32,27,118
+Other,Dismissed,17,18,17,22,74
+Other,"Dismissed, Conditions Met or Expired",14,14,13,6,47
+Other,Diversion,,,,1,1
+Other,Filings,57,59,59,87,262
+Other,Statutory stay of adjudication,2,4,4,14,24
+Other,Stay of adjudication,1,,1,1,3
+Multiracial,Convicted,18,11,10,23,62
+Multiracial,Dismissed,6,5,7,7,25
+Multiracial,"Dismissed, Conditions Met or Expired",2,4,2,3,11
+Multiracial,Diversion,,,,2,2
+Multiracial,Filings,22,22,33,44,121
+Multiracial,Statutory stay of adjudication,,1,5,5,11
+Multiracial,Stay of adjudication,,,1,,1
+Indian,Acquitted,1,1,2,,4
+Indian,Adjudication unknown,1,,,,1
+Indian,Continued for dismissal,1,2,8,10,21
+Indian,Convicted,199,218,256,302,975
+Indian,Dismissed,94,112,133,145,484
+Indian,"Dismissed, Conditions Met or Expired",44,34,43,51,172
+Indian,Diversion,,,2,2,4
+Indian,Filings,384,404,568,593,"1,949"
+Indian,Statutory stay of adjudication,10,16,37,82,145
+Indian,Stay of adjudication,6,8,9,21,44
+Indian,Vacated,,,3,,3
+Hispanic,Acquitted,2,2,2,,6
+Hispanic,Adjudication unknown,,,2,,2
+Hispanic,Continued for dismissal,,,,5,5
+Hispanic,Continued without adjudication,,,,2,2
+Hispanic,Convicted,248,243,241,220,952
+Hispanic,Dismissed,127,120,135,150,532
+Hispanic,"Dismissed, Conditions Met or Expired",67,44,39,48,198
+Hispanic,Diversion,1,,2,2,5
+Hispanic,Filings,465,392,424,500,"1,781"
+Hispanic,No adjudication-lesser offense,,1,,,1
+Hispanic,Statutory stay of adjudication,16,16,28,48,108
+Hispanic,Stay of adjudication,5,4,4,11,24
+Pacific,Convicted,5,11,7,11,34
+Pacific,Dismissed,3,1,5,4,13
+Pacific,"Dismissed, Conditions Met or Expired",3,2,3,3,11
+Pacific,Filings,15,15,15,20,65
+Pacific,Statutory stay of adjudication,2,,3,,5
+Pacific,Stay of adjudication,,,,1,1
+Black,Acquitted,4,6,10,7,27
+Black,Adjudication unknown,1,,,,1
+Black,Continued for dismissal,,1,3,9,13
+Black,Convicted,834,819,688,686,"3,027"
+Black,Dismissed,366,419,398,469,"1,652"
+Black,"Dismissed, Conditions Met or Expired",243,171,143,180,737
+Black,"Dismissed, mental deficiency",,1,,,1
+Black,Diversion,1,1,5,22,29
+Black,Filings,"1,402","1,404","1,398","1,559","5,763"
+Black,Statutory stay of adjudication,38,50,102,124,314
+Black,Stay of adjudication,7,6,2,14,29
+Black,Vacated,,,,2,2
+Asian,Acquitted,1,1,1,,3
+Asian,Continued for dismissal,,,1,2,3
+Asian,Continued without findings,,1,,,1
+Asian,Convicted,76,96,106,96,374
+Asian,Dismissed,43,44,45,43,175
+Asian,"Dismissed, Conditions Met or Expired",26,25,21,21,93
+Asian,Diversion,,,,1,1
+Asian,Filings,165,176,180,199,720
+Asian,Statutory stay of adjudication,5,6,18,24,53
+Asian,Stay of adjudication,1,1,2,6,10
+Asian,Vacated,,,1,,1
