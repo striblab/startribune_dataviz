@@ -1,0 +1,583 @@
+race,county,convictions,total
+hispanic,Aitkin,1,41
+indian,Aitkin,1,41
+unavailable,Aitkin,1,41
+unknown,Aitkin,4,41
+white,Aitkin,34,41
+asian,Anoka,17,893
+black,Anoka,87,893
+pacific,Anoka,1,893
+hispanic,Anoka,19,893
+indian,Anoka,34,893
+multiracial,Anoka,5,893
+total,Anoka,6,893
+refused,Anoka,17,893
+unavailable,Anoka,88,893
+unknown,Anoka,49,893
+white,Anoka,570,893
+black,Becker,3,156
+hispanic,Becker,2,156
+indian,Becker,54,156
+refused,Becker,1,156
+unavailable,Becker,5,156
+unknown,Becker,8,156
+white,Becker,83,156
+black,Beltrami,12,279
+hispanic,Beltrami,2,279
+indian,Beltrami,104,279
+multiracial,Beltrami,1,279
+refused,Beltrami,6,279
+unavailable,Beltrami,23,279
+unknown,Beltrami,19,279
+white,Beltrami,112,279
+asian,Benton,3,167
+black,Benton,29,167
+hispanic,Benton,4,167
+indian,Benton,4,167
+total,Benton,1,167
+refused,Benton,3,167
+unavailable,Benton,11,167
+unknown,Benton,7,167
+white,Benton,105,167
+black,Big Stone,2,14
+unknown,Big Stone,1,14
+white,Big Stone,11,14
+asian,Blue Earth,5,256
+black,Blue Earth,42,256
+pacific,Blue Earth,1,256
+hispanic,Blue Earth,7,256
+indian,Blue Earth,3,256
+total,Blue Earth,4,256
+unavailable,Blue Earth,8,256
+unknown,Blue Earth,16,256
+white,Blue Earth,170,256
+black,Brown,1,61
+hispanic,Brown,9,61
+indian,Brown,1,61
+unavailable,Brown,1,61
+unknown,Brown,4,61
+white,Brown,45,61
+asian,Carlton,3,336
+black,Carlton,14,336
+hispanic,Carlton,7,336
+indian,Carlton,70,336
+multiracial,Carlton,1,336
+total,Carlton,3,336
+refused,Carlton,1,336
+unavailable,Carlton,23,336
+unknown,Carlton,18,336
+white,Carlton,196,336
+asian,Carver,2,137
+black,Carver,12,137
+hispanic,Carver,8,137
+indian,Carver,5,137
+multiracial,Carver,2,137
+total,Carver,3,137
+unavailable,Carver,1,137
+unknown,Carver,14,137
+white,Carver,90,137
+black,Cass,4,70
+hispanic,Cass,2,70
+indian,Cass,36,70
+unavailable,Cass,3,70
+unknown,Cass,3,70
+white,Cass,22,70
+asian,Chippewa,1,35
+black,Chippewa,1,35
+hispanic,Chippewa,1,35
+indian,Chippewa,2,35
+unavailable,Chippewa,4,35
+unknown,Chippewa,3,35
+white,Chippewa,23,35
+asian,Chisago,1,186
+black,Chisago,4,186
+pacific,Chisago,1,186
+hispanic,Chisago,6,186
+indian,Chisago,10,186
+multiracial,Chisago,3,186
+refused,Chisago,3,186
+unavailable,Chisago,11,186
+unknown,Chisago,24,186
+white,Chisago,123,186
+black,Clay,11,202
+hispanic,Clay,16,202
+indian,Clay,13,202
+total,Clay,2,202
+refused,Clay,2,202
+unavailable,Clay,10,202
+unknown,Clay,30,202
+white,Clay,118,202
+indian,Clearwater,12,36
+unavailable,Clearwater,1,36
+unknown,Clearwater,2,36
+white,Clearwater,21,36
+hispanic,Cook,1,18
+indian,Cook,5,18
+unavailable,Cook,1,18
+unknown,Cook,9,18
+white,Cook,2,18
+asian,Cottonwood,3,29
+black,Cottonwood,1,29
+hispanic,Cottonwood,3,29
+unavailable,Cottonwood,2,29
+white,Cottonwood,20,29
+black,Crow Wing,13,312
+hispanic,Crow Wing,3,312
+indian,Crow Wing,18,312
+total,Crow Wing,1,312
+unavailable,Crow Wing,26,312
+unknown,Crow Wing,45,312
+white,Crow Wing,206,312
+asian,Dakota,29,1152
+black,Dakota,167,1152
+pacific,Dakota,3,1152
+hispanic,Dakota,101,1152
+indian,Dakota,19,1152
+multiracial,Dakota,1,1152
+total,Dakota,9,1152
+refused,Dakota,3,1152
+unavailable,Dakota,80,1152
+unknown,Dakota,48,1152
+white,Dakota,692,1152
+black,Dodge,5,39
+unavailable,Dodge,2,39
+unknown,Dodge,6,39
+white,Dodge,26,39
+asian,Douglas,1,140
+black,Douglas,10,140
+pacific,Douglas,2,140
+hispanic,Douglas,6,140
+indian,Douglas,8,140
+refused,Douglas,2,140
+unavailable,Douglas,3,140
+unknown,Douglas,9,140
+white,Douglas,99,140
+hispanic,Faribault,3,35
+total,Faribault,1,35
+unavailable,Faribault,5,35
+unknown,Faribault,6,35
+white,Faribault,20,35
+indian,Fillmore,1,21
+white,Fillmore,20,21
+asian,Freeborn,1,168
+black,Freeborn,7,168
+hispanic,Freeborn,37,168
+multiracial,Freeborn,1,168
+total,Freeborn,2,168
+unavailable,Freeborn,6,168
+unknown,Freeborn,7,168
+white,Freeborn,107,168
+asian,Goodhue,2,193
+black,Goodhue,23,193
+pacific,Goodhue,1,193
+hispanic,Goodhue,7,193
+indian,Goodhue,4,193
+total,Goodhue,2,193
+unavailable,Goodhue,4,193
+unknown,Goodhue,8,193
+white,Goodhue,142,193
+indian,Grant,1,13
+white,Grant,12,13
+asian,Hennepin,54,2451
+black,Hennepin,1216,2451
+pacific,Hennepin,7,2451
+hispanic,Hennepin,103,2451
+indian,Hennepin,72,2451
+multiracial,Hennepin,16,2451
+total,Hennepin,25,2451
+refused,Hennepin,59,2451
+unavailable,Hennepin,37,2451
+unknown,Hennepin,145,2451
+white,Hennepin,717,2451
+black,Houston,3,37
+hispanic,Houston,1,37
+indian,Houston,1,37
+unknown,Houston,2,37
+white,Houston,30,37
+black,Hubbard,3,119
+hispanic,Hubbard,3,119
+indian,Hubbard,24,119
+unavailable,Hubbard,8,119
+unknown,Hubbard,5,119
+white,Hubbard,76,119
+asian,Isanti,1,204
+pacific,Isanti,1,204
+indian,Isanti,6,204
+total,Isanti,1,204
+refused,Isanti,2,204
+unavailable,Isanti,18,204
+unknown,Isanti,10,204
+white,Isanti,165,204
+black,Itasca,7,250
+pacific,Itasca,1,250
+hispanic,Itasca,7,250
+indian,Itasca,32,250
+multiracial,Itasca,1,250
+refused,Itasca,1,250
+unavailable,Itasca,17,250
+unknown,Itasca,10,250
+white,Itasca,174,250
+asian,Jackson,2,33
+black,Jackson,3,33
+hispanic,Jackson,4,33
+indian,Jackson,1,33
+unavailable,Jackson,2,33
+unknown,Jackson,11,33
+white,Jackson,10,33
+asian,Kanabec,1,67
+black,Kanabec,2,67
+pacific,Kanabec,1,67
+hispanic,Kanabec,1,67
+indian,Kanabec,4,67
+unavailable,Kanabec,2,67
+unknown,Kanabec,1,67
+white,Kanabec,55,67
+asian,Kandiyohi,1,244
+black,Kandiyohi,15,244
+hispanic,Kandiyohi,92,244
+indian,Kandiyohi,7,244
+unavailable,Kandiyohi,6,244
+unknown,Kandiyohi,8,244
+white,Kandiyohi,115,244
+unknown,Kittson,1,4
+white,Kittson,3,4
+indian,Koochiching,1,58
+unavailable,Koochiching,1,58
+unknown,Koochiching,16,58
+white,Koochiching,40,58
+unknown,Lac qui Parle,2,8
+white,Lac qui Parle,6,8
+black,Lake,1,15
+indian,Lake,1,15
+unavailable,Lake,1,15
+white,Lake,12,15
+asian,Lake of the Woods,2,13
+unavailable,Lake of the Woods,1,13
+unknown,Lake of the Woods,5,13
+white,Lake of the Woods,5,13
+black,Le Sueur,1,35
+hispanic,Le Sueur,1,35
+indian,Le Sueur,1,35
+total,Le Sueur,1,35
+unavailable,Le Sueur,3,35
+unknown,Le Sueur,2,35
+white,Le Sueur,26,35
+white,Lincoln,4,4
+asian,Lyon,1,78
+black,Lyon,4,78
+hispanic,Lyon,4,78
+indian,Lyon,4,78
+unavailable,Lyon,1,78
+unknown,Lyon,3,78
+white,Lyon,61,78
+indian,Mahnomen,34,54
+unavailable,Mahnomen,3,54
+unknown,Mahnomen,8,54
+white,Mahnomen,9,54
+hispanic,Marshall,3,10
+unavailable,Marshall,2,10
+unknown,Marshall,1,10
+white,Marshall,4,10
+black,Martin,2,126
+pacific,Martin,1,126
+hispanic,Martin,7,126
+indian,Martin,2,126
+unavailable,Martin,3,126
+unknown,Martin,20,126
+white,Martin,91,126
+asian,McLeod,2,120
+black,McLeod,1,120
+hispanic,McLeod,8,120
+indian,McLeod,4,120
+multiracial,McLeod,1,120
+refused,McLeod,1,120
+unavailable,McLeod,7,120
+unknown,McLeod,10,120
+white,McLeod,86,120
+black,Meeker,2,51
+pacific,Meeker,1,51
+hispanic,Meeker,8,51
+multiracial,Meeker,1,51
+unavailable,Meeker,3,51
+unknown,Meeker,4,51
+white,Meeker,32,51
+asian,Mille Lacs,4,190
+black,Mille Lacs,5,190
+hispanic,Mille Lacs,4,190
+indian,Mille Lacs,46,190
+total,Mille Lacs,1,190
+refused,Mille Lacs,1,190
+unavailable,Mille Lacs,11,190
+unknown,Mille Lacs,7,190
+white,Mille Lacs,111,190
+black,Morrison,3,146
+pacific,Morrison,1,146
+hispanic,Morrison,1,146
+indian,Morrison,10,146
+total,Morrison,1,146
+unavailable,Morrison,9,146
+unknown,Morrison,5,146
+white,Morrison,116,146
+asian,Mower,2,150
+black,Mower,10,150
+hispanic,Mower,24,150
+indian,Mower,1,150
+total,Mower,1,150
+unavailable,Mower,2,150
+unknown,Mower,9,150
+white,Mower,101,150
+hispanic,Murray,1,21
+unavailable,Murray,1,21
+unknown,Murray,1,21
+white,Murray,18,21
+asian,Nicollet,1,58
+black,Nicollet,2,58
+hispanic,Nicollet,4,58
+unavailable,Nicollet,4,58
+unknown,Nicollet,5,58
+white,Nicollet,42,58
+asian,Nobles,17,81
+black,Nobles,4,81
+hispanic,Nobles,21,81
+indian,Nobles,1,81
+total,Nobles,1,81
+unavailable,Nobles,3,81
+unknown,Nobles,4,81
+white,Nobles,30,81
+hispanic,Norman,1,10
+indian,Norman,2,10
+white,Norman,7,10
+asian,Olmsted,8,551
+black,Olmsted,172,551
+pacific,Olmsted,2,551
+hispanic,Olmsted,25,551
+indian,Olmsted,1,551
+multiracial,Olmsted,3,551
+total,Olmsted,6,551
+refused,Olmsted,1,551
+unavailable,Olmsted,19,551
+unknown,Olmsted,35,551
+white,Olmsted,279,551
+asian,Otter Tail,1,157
+black,Otter Tail,15,157
+pacific,Otter Tail,1,157
+hispanic,Otter Tail,4,157
+indian,Otter Tail,11,157
+unavailable,Otter Tail,12,157
+unknown,Otter Tail,6,157
+white,Otter Tail,107,157
+black,Pennington,4,53
+hispanic,Pennington,4,53
+indian,Pennington,2,53
+unavailable,Pennington,4,53
+unknown,Pennington,10,53
+white,Pennington,29,53
+black,Pine,4,187
+hispanic,Pine,1,187
+indian,Pine,17,187
+multiracial,Pine,5,187
+total,Pine,1,187
+unavailable,Pine,11,187
+unknown,Pine,8,187
+white,Pine,140,187
+hispanic,Pipestone,2,25
+indian,Pipestone,2,25
+unavailable,Pipestone,3,25
+unknown,Pipestone,2,25
+white,Pipestone,16,25
+black,Polk,8,312
+hispanic,Polk,47,312
+indian,Polk,29,312
+multiracial,Polk,3,312
+total,Polk,3,312
+refused,Polk,2,312
+unavailable,Polk,23,312
+unknown,Polk,24,312
+white,Polk,173,312
+black,Pope,1,47
+hispanic,Pope,2,47
+indian,Pope,1,47
+unavailable,Pope,3,47
+unknown,Pope,1,47
+white,Pope,39,47
+asian,Ramsey,132,1570
+black,Ramsey,660,1570
+pacific,Ramsey,3,1570
+hispanic,Ramsey,105,1570
+indian,Ramsey,35,1570
+multiracial,Ramsey,4,1570
+total,Ramsey,17,1570
+refused,Ramsey,7,1570
+unavailable,Ramsey,47,1570
+unknown,Ramsey,40,1570
+white,Ramsey,520,1570
+black,Red Lake,1,8
+hispanic,Red Lake,3,8
+unavailable,Red Lake,1,8
+unknown,Red Lake,1,8
+white,Red Lake,2,8
+black,Redwood,5,97
+hispanic,Redwood,7,97
+indian,Redwood,39,97
+multiracial,Redwood,1,97
+unavailable,Redwood,4,97
+unknown,Redwood,1,97
+white,Redwood,40,97
+black,Renville,5,65
+hispanic,Renville,17,65
+indian,Renville,5,65
+multiracial,Renville,1,65
+unavailable,Renville,5,65
+unknown,Renville,4,65
+white,Renville,28,65
+asian,Rice,3,183
+black,Rice,14,183
+hispanic,Rice,12,183
+indian,Rice,1,183
+multiracial,Rice,1,183
+total,Rice,1,183
+refused,Rice,2,183
+unavailable,Rice,9,183
+unknown,Rice,8,183
+white,Rice,132,183
+black,Rock,2,20
+hispanic,Rock,2,20
+unavailable,Rock,2,20
+unknown,Rock,7,20
+white,Rock,7,20
+asian,Roseau,3,32
+hispanic,Roseau,1,32
+indian,Roseau,2,32
+unavailable,Roseau,1,32
+unknown,Roseau,9,32
+white,Roseau,16,32
+asian,Scott,40,658
+black,Scott,49,658
+hispanic,Scott,43,658
+indian,Scott,20,658
+multiracial,Scott,1,658
+total,Scott,5,658
+refused,Scott,1,658
+unavailable,Scott,44,658
+unknown,Scott,31,658
+white,Scott,424,658
+asian,Sherburne,3,320
+black,Sherburne,26,320
+hispanic,Sherburne,4,320
+indian,Sherburne,8,320
+total,Sherburne,2,320
+refused,Sherburne,2,320
+unavailable,Sherburne,16,320
+unknown,Sherburne,15,320
+white,Sherburne,244,320
+hispanic,Sibley,5,26
+unavailable,Sibley,4,26
+white,Sibley,17,26
+asian,St. Louis,5,856
+black,St. Louis,122,856
+hispanic,St. Louis,14,856
+indian,St. Louis,103,856
+multiracial,St. Louis,3,856
+total,St. Louis,3,856
+refused,St. Louis,2,856
+unavailable,St. Louis,32,856
+unknown,St. Louis,33,856
+white,St. Louis,539,856
+asian,Stearns,5,752
+black,Stearns,100,752
+pacific,Stearns,4,752
+hispanic,Stearns,26,752
+indian,Stearns,10,752
+total,Stearns,2,752
+refused,Stearns,10,752
+unavailable,Stearns,36,752
+unknown,Stearns,57,752
+white,Stearns,502,752
+black,Steele,6,145
+hispanic,Steele,13,145
+indian,Steele,2,145
+total,Steele,2,145
+refused,Steele,2,145
+unavailable,Steele,12,145
+unknown,Steele,15,145
+white,Steele,93,145
+black,Stevens,3,16
+total,Stevens,1,16
+unavailable,Stevens,1,16
+unknown,Stevens,2,16
+white,Stevens,9,16
+black,Swift,1,29
+hispanic,Swift,3,29
+total,Swift,1,29
+unavailable,Swift,1,29
+unknown,Swift,2,29
+white,Swift,21,29
+black,Todd,2,57
+hispanic,Todd,2,57
+total,Todd,1,57
+unavailable,Todd,7,57
+unknown,Todd,6,57
+white,Todd,39,57
+white,Traverse,5,5
+black,Wabasha,3,90
+hispanic,Wabasha,2,90
+indian,Wabasha,1,90
+unavailable,Wabasha,3,90
+unknown,Wabasha,6,90
+white,Wabasha,75,90
+asian,Wadena,1,67
+black,Wadena,4,67
+indian,Wadena,3,67
+unavailable,Wadena,3,67
+unknown,Wadena,2,67
+white,Wadena,54,67
+black,Waseca,2,38
+hispanic,Waseca,1,38
+indian,Waseca,1,38
+unavailable,Waseca,1,38
+unknown,Waseca,2,38
+white,Waseca,31,38
+asian,Washington,14,622
+black,Washington,48,622
+pacific,Washington,1,622
+hispanic,Washington,26,622
+indian,Washington,17,622
+multiracial,Washington,7,622
+total,Washington,3,622
+refused,Washington,5,622
+unavailable,Washington,25,622
+unknown,Washington,53,622
+white,Washington,423,622
+hispanic,Watonwan,13,30
+total,Watonwan,1,30
+unavailable,Watonwan,2,30
+unknown,Watonwan,1,30
+white,Watonwan,13,30
+black,Wilkin,1,11
+pacific,Wilkin,1,11
+unknown,Wilkin,2,11
+white,Wilkin,7,11
+asian,Winona,2,172
+black,Winona,22,172
+hispanic,Winona,7,172
+total,Winona,1,172
+refused,Winona,1,172
+unavailable,Winona,2,172
+unknown,Winona,6,172
+white,Winona,131,172
+asian,Wright,1,287
+black,Wright,14,287
+hispanic,Wright,11,287
+indian,Wright,3,287
+total,Wright,2,287
+refused,Wright,1,287
+unavailable,Wright,8,287
+unknown,Wright,17,287
+white,Wright,230,287
+black,Yellow Medicine,1,53
+hispanic,Yellow Medicine,7,53
+indian,Yellow Medicine,3,53
+total,Yellow Medicine,1,53
+unavailable,Yellow Medicine,3,53
+unknown,Yellow Medicine,2,53
+white,Yellow Medicine,36,53
