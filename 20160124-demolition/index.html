@@ -34,6 +34,7 @@
   #demo_toggle.active { background-color:#AD1625; }
   #rebuild_toggle.active { background-color:#777; }
   #parcels_toggle.active { background-color:#801515; }
+  #nb_toggle.active { background-color:#801515; }
   #tornado_toggle.active { background-color:#B35817; }
   #build_toggle.active { background-color:#ddd; }
   #build_toggle { width:10px; height:10px; padding:10px; }
@@ -65,7 +66,8 @@
   .rebuildsBar { background-color:#777; height:20px; display:inline-block; margin-top:5px; margin-left:5px; }
   .yearBar { height:20px; margin:5px; line-height:120%; }
   #parcelPct { display:none !important; }
-  #parcels_toggle { width:100%; }
+  #parcels_toggle { width:48%; }
+  #nb_toggle { width:48%; }
   #tornadoOn { font-size:14px; }
   .stat { display:none; }
 
@@ -82,6 +84,7 @@
       .btn-primary { width: 32% !important; }
       .num { width:32.5%; }
       #parcels_toggle { width:100% !important; }
+      #nb_toggle { width:100% !important; }
   }
 </style>
 </head>
@@ -148,7 +151,10 @@
 
 <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active" id="parcels_toggle">
-        <input type="checkbox" name="options" id="state4">Teardowns by Community
+        <input type="checkbox" name="options" id="state4">Communities
+      </label>
+     <label class="btn btn-primary" id="nb_toggle">
+        <input type="checkbox" name="options" id="state4">Neighborhoods
       </label>
 </div>
 
@@ -495,7 +501,7 @@ $('#demo_toggle input').on('change', function () {
        map.addLayer(statesLayer);
        statesLayer.setStyle({"fillOpacity":0}); 
        map.removeLayer(communityLayer);
-       $("#parcels_toggle").removeClass('active');
+       $("#parcels_toggle, #nb_toggle").removeClass('active');
     } else {
        statesLayer.setStyle({"fillOpacity":0}); 
        map.removeLayer(demos);
@@ -507,7 +513,7 @@ $('#rebuild_toggle input').on('change', function () {
         map.addLayer(statesLayer);
         map.removeLayer(communityLayer);
         statesLayer.setStyle({"fillOpacity":0}); 
-        $("#parcels_toggle").removeClass('active');
+        $("#parcels_toggle, #nb_toggle").removeClass('active');
     } else {
         statesLayer.setStyle({"fillOpacity":0}); 
         map.removeLayer(rebuilds);
@@ -529,12 +535,31 @@ $('#tornado_toggle input').on('change', function () {
 });
 $('#parcels_toggle input').on('change', function () {
     if (this.checked) {
-         $("#rebuild_toggle,#demo_toggle,#tornado_toggle").removeClass('active');
+         $("#nb_toggle, #rebuild_toggle, #demo_toggle, #tornado_toggle").removeClass('active');
          map.removeLayer(demos);
          map.removeLayer(rebuilds);
          map.removeLayer(tornadoLayer);
          map.removeLayer(statesLayer);
          map.addLayer(communityLayer);
+        map.removeLayer(demos);
+        map.removeLayer(rebuilds);
+    } else {
+      $("#rebuild_toggle, #demo_toggle").addClass('active');
+          map.addLayer(rebuilds);
+          map.addLayer(demos);
+        map.removeLayer(communityLayer);
+        map.addLayer(statesLayer);
+    }
+});
+
+$('#nb_toggle input').on('change', function () {
+    if (this.checked) {
+         $("#parcels_toggle, #rebuild_toggle, #demo_toggle, #tornado_toggle").removeClass('active');
+         map.removeLayer(demos);
+         map.removeLayer(rebuilds);
+         map.removeLayer(tornadoLayer);
+         map.removeLayer(communityLayer);
+         map.addLayer(statesLayer);
           statesLayer.eachLayer(function (layer) {    
         layer.setStyle({          
           weight: 2,
@@ -548,17 +573,9 @@ $('#parcels_toggle input').on('change', function () {
         map.removeLayer(rebuilds);
     } else {
       $("#rebuild_toggle,#demo_toggle").addClass('active');
-          map.addLayer(rebuilds);
-          map.addLayer(demos);
-      //     statesLayer.eachLayer(function (layer) {    
-      //   layer.setStyle({          
-      //     weight: 2,
-      //     opacity: 1,
-      //     color: '#333',
-      //     fillOpacity: 0,
-      //     fillColor: getColor(layer.feature.properties.Name,slider.value())
-      //   });  
-      // }); 
+        map.addLayer(rebuilds);
+        map.addLayer(demos);
+        statesLayer.setStyle({"fillOpacity":0}); 
         map.removeLayer(communityLayer);
         map.addLayer(statesLayer);
     }
@@ -615,15 +632,11 @@ $('#parcels_toggle input').on('change', function () {
 
   // get color depending on population density value
   function getColor(d,year) {
-           for (var i=0; i < dataParcels.length; i++){
-         if (dataParcels[i].neighborhood == d) {
-                return dataParcels[i].parcels_torn >= .27  ? '#64000A' :
-          dataParcels[i].parcels_torn >= .12  ? '#8D020F' :
-          dataParcels[i].parcels_torn >= .05  ? '#AD1624' :
-          dataParcels[i].parcels_torn >= 0  ? '#E65B68' :
+          return timeNeighborhoods(year,false,d) >= 100  ? '#550000' :
+          timeNeighborhoods(year,false,d) >= 50  ? '#801515' :
+          timeNeighborhoods(year,false,d) >= 20  ? '#AA3939' :
+          timeNeighborhoods(year,false,d) >= 0  ? '#FFAAAA' :
           '#ddd';
-    }
-   }
   }
 
   function getColor3(d,year) {
@@ -657,7 +670,11 @@ $('#parcels_toggle input').on('change', function () {
 
       popup.setLatLng(e.latlng);
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Not Rebuilt: ' + aggregateNeighborhoods(slider.value(),false,layer.feature.properties.Name) + '</div><div class="rebuild">Rebuilds: ' + aggregateNeighborhoods(slider.value(),true,layer.feature.properties.Name) + '</div>');
+      var wrecked = aggregateNeighborhoods(slider.value(),false,layer.feature.properties.Name);
+      var rebuilt = aggregateNeighborhoods(slider.value(),true,layer.feature.properties.Name);
+      var totals = wrecked + rebuilt;
+
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div>Teardowns: ' + totals + '</div><div class="teardown">Not Rebuilt: ' + d3.format('%')(wrecked / totals) + '</div><div class="rebuild">Rebuilt: ' +  d3.format('%')(rebuilt / totals) + '</div>');
       
 
       if (!popup._map) popup.openOn(map);
@@ -705,7 +722,12 @@ $('#parcels_toggle input').on('change', function () {
 
       popup.setLatLng(e.latlng);
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Not Rebuilt: ' + aggregateCommunities(slider.value(),false,layer.feature.properties.CommName) + '</div><div class="rebuild">Rebuilds: ' + aggregateCommunities(slider.value(),true,layer.feature.properties.CommName) + '</div>');
+      
+      var wrecked = aggregateCommunities(slider.value(),false,layer.feature.properties.CommName);
+      var rebuilt = aggregateCommunities(slider.value(),true,layer.feature.properties.CommName);
+      var totals = wrecked + rebuilt;
+
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div>Teardowns: ' + totals + '</div><div class="teardown">Not Rebuilt: ' + d3.format('%')(wrecked / totals) + '</div><div class="rebuild">Rebuilt: ' +  d3.format('%')(rebuilt / totals) + '</div>');
       
 
       if (!popup._map) popup.openOn(map);
@@ -824,6 +846,27 @@ function timeCommunities(year,status,region){
   } else {
     var count = d3.nest()
     .key(function(d) { return d.year <= year && d.rebuild == status && d.CommName == region; })
+    .rollup(function(v) { return v.length; })
+    .entries(dataTeardowns);
+    if (count.length > 1 && count[1].values > 2000) { return count[0].values; }
+    else if (count.length > 1 && count[1].values < 2000) { return count[1].values; }
+    else { return 0; }
+  }
+
+}
+
+function timeNeighborhoods(year,status,region){
+  if (year == 2001){
+    var count = d3.nest()
+    .key(function(d) { return d.rebuild == status && d.neighborhood == region; })
+    .rollup(function(v) { return v.length; })
+    .entries(dataTeardowns);
+    if (count.length > 1 && count[1].values > 2000) { return count[0].values; }
+    else if (count.length > 1 && count[1].values < 2000) { return count[1].values; }
+    else { return 0; }
+  } else {
+    var count = d3.nest()
+    .key(function(d) { return d.year <= year && d.rebuild == status && d.neighborhood == region; })
     .rollup(function(v) { return v.length; })
     .entries(dataTeardowns);
     if (count.length > 1 && count[1].values > 2000) { return count[0].values; }
