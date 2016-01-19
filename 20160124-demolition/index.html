@@ -16,7 +16,7 @@
 
 <style>
   body { margin:0; padding:0; overflow-x:hidden; }
-  #map { height:800px; width:50%; display:inline-block; float:left !important; }
+  #map { height:900px; width:50%; display:inline-block; float:left !important; }
   .mapbox-logo, .leaflet-control-attribution{ display:none !important; }
   .map-legend .swatch { width:20px; height:20px; float:left; margin-right:10px; }
   .leaflet-popup-close-button { display: none; }
@@ -28,7 +28,7 @@
 
   button:focus { outline:0 !important; }
   .btn-group { margin-left: 0; width:100%; text-align:center; }
-  .btn-primary { width: 130px; text-align: center; background-color: #333; border: 0; border-radius:0; color: #ffffff; cursor: pointer; display: inline-block; font-family: arial; font-size:.9em; font-weight: 900; moz-border-radius:0; padding: 13px 26px; text-decoration: none; webkit-border-radius:0; }
+  .btn-primary { width: 130px; text-align: center; background-color: #333; border: 0; border-radius:0; color: #ffffff; cursor: pointer; display: inline-block; font-family: arial; font-size:.7em; font-weight: 900; moz-border-radius:0; padding: 13px 26px; text-decoration: none; webkit-border-radius:0; }
   .btn-primary input[type=checkbox] { border:none; display:none !important; }
   .btn-primary:hover { background-color: #aaa !important; }
   #demo_toggle.active { background-color:#AD1625; }
@@ -51,13 +51,14 @@
   #legendContainer { width:100%; }
   .legend label, .legend span { display:block; float:left; height:15px; width:35px; text-align:center; font-size:11px; color:#808080; }
   #quantize{ padding:5px; text-align:center; }
-  .legend_title { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+  .legend_title { font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; }
 
   .d3-slider-handle { position: absolute; width: 1.2em; height: 1.2em; border: 1px solid #333; border-radius:0; background: #eee; background: #333; z-index: 3; }
   .d3-slider-handle:hover { background: #5cbf2a; cursor:pointer; }
   #sliderDiv { height:20px; padding:15px; }
 
   #thisYear { float:right; font-weight:900; font-size:1em; font-family:"Poynter Serif RE"; }
+  #total { text-align:center; }
 
   #chart { width:100%; height:300px }
   .teardownsBar { background-color:#AD1625; height:20px; display:inline-block;  }
@@ -75,7 +76,7 @@
   
 <style>
   @media (max-width:845px) {
-      #map { display:block; width:100%; height:300px; }
+      #map { display:block; width:100%; height:390px; }
       #right_rail { display:block; width:100%; }
       #wrapper { width:100%; }
       .btn-primary { width: 32% !important; }
@@ -93,7 +94,7 @@
 
 <div id="sliderDiv"><div id="slider"></div></div>
 <div class="breaker"></div>
-<div id="back"><< previous</div><div id="forward">next >></div>
+<div id="back"><< prev year</div><div id="forward">next year >></div>
 
   <div class="breaker"></div>
 
@@ -105,12 +106,20 @@
 
    <div class="breaker"></div>
 
+<div class="legend_title">Teardowns</div>
+<div id="total" class="bigNum">0</div>
+
+   <div class="breaker"></div>
+
+    <div class="legend_title">Toggle map displays</div>
+     <div class="breaker"></div>
+
       <div class="btn-group" id="menu_main" data-toggle="buttons">
       <label class="btn btn-primary" id="demo_toggle" >
-        <input type="checkbox" name="options" id="state1" checked>Teardowns
+        <input type="checkbox" name="options" id="state1" checked>Not Rebuilt
       </label>
       <label class="btn btn-primary" id="rebuild_toggle">
-        <input type="checkbox" name="options" id="state2" checked>Rebuilds
+        <input type="checkbox" name="options" id="state2" checked>Rebuilt
       </label>
       <label class="btn btn-primary" id="tornado_toggle">
         <input type="checkbox" name="options" id="state3">Tornado
@@ -126,12 +135,15 @@
   
  <div class="breaker"></div>
 
- <div class="legend_title">Building demolition permits by year divided between <span class="teardown">teardowns</span> and <span class="rebuild">rebuilds</span></div>
+ <div class="legend_title">Teardowns <span class="rebuild">rebuilt</span> and <span class="teardown">not rebuilt</span> by year</div>
  <div id="chart"><svg></svg></div>
 
 
 </div>
 
+<div class="breaker"></div>
+
+<div class="legend_title">Accumulated teardowns <span class="teardown">not rebuilt</span> by region</div>
 <div class="breaker"></div>
 
 <div class="btn-group" data-toggle="buttons">
@@ -140,9 +152,6 @@
       </label>
 </div>
 
-<div class="breaker"></div>
-
-<div class="legend_title">Number of buildings <span class="teardown">torn down</span> by community</div>
 <div class="breaker"></div>
 
 <div id="legendContainer">
@@ -200,6 +209,22 @@ d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=9VKeG
 
 d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=rrAoB_wZMecV3cLY65bgAOReFqnPI5XOaf9rlf8OFVTMcQRs3x3vZmVEfCFKV4M3W5kKrqK_VX30vx8D_nO2EBPKsrdt7rEJOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TKT0XypQ53EL7IeizIpPSlbwZKZErRZu3grvwA3jhdCB8rBOMfkuHrr6ocnMDbLZR35iDyrfKhrpBtcwx7r9-pSb-3rH5zIQpyBAf43AAwP8&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataParcelsLoad) {
 
+$("#back").css('visibility', 'hidden');
+
+var zoomification;
+
+if ($(window).width() <= 845) { zoomification = 11; }
+else { zoomification = 12; }
+
+$(window).on('load resize', function(){
+var width = $(window).width();
+
+if (width <= 845) { zoomification = 11; }
+else { zoomification = 12; }
+
+map.setView([44.983333,-93.266667], zoomification);
+});
+
 // var dataTeardownsLoad = <?php echo $jsonDataTeardowns; ?>;
 // var dataParcelsLoad = <?php echo $jsonDataParcels; ?>;
 
@@ -213,7 +238,7 @@ var mapBounds = new L.LatLngBounds(
 
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
   var map = L.mapbox.map('map', 'mapbox.light', { maxZoom: 17, minZoom: 11, bounds: mapBounds})
-    .setView([44.983333,-93.266667], 12);
+    .setView([44.983333,-93.266667], zoomification);
 
 map.dragging.disable();
 map.touchZoom.disable();
@@ -229,7 +254,7 @@ $.getJSON('shapefiles/minneapolis_communities.json', function(data3) {
 
 $(".zoom").click(function() {
   redrawChart("Minneapolis",false);
-  map.setView([44.983333,-93.266667], 12);
+  map.setView([44.983333,-93.266667], zoomification);
   $("#nb_title").html("Minneapolis");
   countRecords(slider.value(),null,false);
 });
@@ -239,8 +264,10 @@ $("#back").click(function() {
   slider.value(slider.value()-1);
   shifting(slider.value());
 }
+if (slider.value() == 2001) { $("#back").css('visibility', 'hidden'); }
 });
 $("#forward").click(function() {
+  $("#back").css("visibility","visible");
   if ((slider.value()+1)< 2016){
   slider.value(slider.value()+1);
   shifting(slider.value());
@@ -264,6 +291,7 @@ var slider = d3.slider().axis(true);
 
 d3.select('#slider').call(slider.min(2001).max(2015).value(slide_spot).axis(d3.svg.axis().tickFormat(d3.format("")).orient("top").ticks(tickLength)).step(1).on("slide", function(evt, value) {
     shifting(value);
+    if (value == 2001) { $("#back").css('visibility', 'hidden'); }
   }));
 
 function shifting(value){
@@ -274,7 +302,7 @@ function shifting(value){
   countRecords("" + value + "",null,false);
   highlightTeardown(demos,"" + value + "");
   highlightTeardown(rebuilds,"" + value + "");
-  map.setView([44.983333,-93.266667], 12);
+  map.setView([44.983333,-93.266667], zoomification);
   communityLayer.eachLayer(function (layer) {    
         layer.setStyle({          
           fillColor: getColor3(layer.feature.properties.CommName,slider.value())
@@ -367,9 +395,11 @@ else {
 if (community == false){
     $("#teardownsNum").html(teardownsTotal);
     $("#rebuildsNum").html(rebuildsTotal);
+    $("#total").html(Number($("#teardownsNum").text()) + Number($("#rebuildsNum").text()));
   } else if  (community == true)  {
     $("#teardownsNum").html(parcelTotal);
     $("#rebuildsNum").html(parcelTotal2);
+    $("#total").html(Number($("#teardownsNum").text()) + Number($("#rebuildsNum").text()));
   }
 }
 
@@ -627,7 +657,7 @@ $('#parcels_toggle input').on('change', function () {
 
       popup.setLatLng(e.latlng);
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Teardowns: ' + aggregateNeighborhoods(slider.value(),false,layer.feature.properties.Name) + '</div><div class="rebuild">Rebuilds: ' + aggregateNeighborhoods(slider.value(),true,layer.feature.properties.Name) + '</div>');
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Not Rebuilt: ' + aggregateNeighborhoods(slider.value(),false,layer.feature.properties.Name) + '</div><div class="rebuild">Rebuilds: ' + aggregateNeighborhoods(slider.value(),true,layer.feature.properties.Name) + '</div>');
       
 
       if (!popup._map) popup.openOn(map);
@@ -659,6 +689,7 @@ $('#parcels_toggle input').on('change', function () {
       map.fitBounds(layer.getBounds());
       $('#nb_title').html(layer.feature.properties.Name);
       countRecords(slider.value(),layer.feature.properties.Name,false);
+      $("#total").html(Number($("#teardownsNum").text()) + Number($("#rebuildsNum").text()));
   }
 
  function onEachFeature3(feature, layer) {
@@ -674,7 +705,7 @@ $('#parcels_toggle input').on('change', function () {
 
       popup.setLatLng(e.latlng);
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Teardowns: ' + aggregateCommunities(slider.value(),false,layer.feature.properties.CommName) + '</div><div class="rebuild">Rebuilds: ' + aggregateCommunities(slider.value(),true,layer.feature.properties.CommName) + '</div>');
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Not Rebuilt: ' + aggregateCommunities(slider.value(),false,layer.feature.properties.CommName) + '</div><div class="rebuild">Rebuilds: ' + aggregateCommunities(slider.value(),true,layer.feature.properties.CommName) + '</div>');
       
 
       if (!popup._map) popup.openOn(map);
@@ -708,6 +739,7 @@ $('#parcels_toggle input').on('change', function () {
       // countRecords(slider.value(),layer.feature.properties.CommName,true);
       $("#teardownsNum").html(aggregateCommunities(slider.value(),false,layer.feature.properties.CommName));
       $("#rebuildsNum").html(aggregateCommunities(slider.value(),true,layer.feature.properties.CommName));
+      $("#total").html(Number($("#teardownsNum").text()) + Number($("#rebuildsNum").text()));
   }
 
 });

@@ -1,9 +1,10 @@
-<p>The Star Tribune obtained construction and wrecking permits from the City of Minneapolis spanning 2002 through 2015 and matched up associated parcel numbers from each dataset to derive the number of teardowns and rebuilds across the city.</p>
 
-<p><span style="color:#801515;font-weight:900;">Teardowns</span> are demolitions without a permit for new construction on that parcel, while <span style="font-weight:900;color:#777;">rebuilds</span> are demolitions on parcels also granted construction permits.</p>
+<p>The city of Minneapolis issued about 2,700 permits to demolish buildings between 2002 and 2015, and about 38 percent of those properties have had new structures built on them since then, according to a Star Tribune analysis of the city's wrecking and new construction permit data.</p>
 
-<p>Due to shifting parcel designations over time, some wrecking and construction permit associations may not be precise.</p>
+<p>Use the map and chart below to see what's happened in each area of the city, by year or across all years. Click on the "Rebuilt" and "Not Rebuilt" buttons, on the right, to change what is displayed, and click on Tornado to display locations of damage from a 2011 tornado. Click on any area of the map for a summary of demolitions and rebuilds in that neighborhood. Use the Reset View button below the chart to return to the default view on the map and chart.</p>
 
-<p>Construction and wrecking data can be vieed either by Minneapolis communities or neighborhoods. Individual years can be selected by moving through the timeline.</p>
+<p>The Star Tribune identified rebuilt properties by matching addresses in the demolition permit data and new construction permit data. It's possible that some of the more recent demolitions are slated to be rebuilt, but did not yet have a permit with the city.</p>
 
 <p>Source: City of Minneapolis, Star Tribune reporting</p>
+
+
