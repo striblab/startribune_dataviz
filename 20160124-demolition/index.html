@@ -643,6 +643,7 @@ $('#nb_toggle input').on('change', function () {
   }
 
   function getColor3(d,year) {
+    console.log(d + " " + timeCommunities(year,false,d));
          return timeCommunities(year,false,d) >= 200  ? '#550000' :
           timeCommunities(year,false,d) >= 100  ? '#801515' :
           timeCommunities(year,false,d) >= 50  ? '#AA3939' :
@@ -677,7 +678,7 @@ $('#nb_toggle input').on('change', function () {
       var rebuilt = aggregateNeighborhoods(slider.value(),true,layer.feature.properties.Name);
       var totals = wrecked + rebuilt;
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div>Teardowns: ' + totals + '</div><div class="teardown">Not Rebuilt: ' + d3.format('%')(wrecked / totals) + '</div><div class="rebuild">Rebuilt: ' +  d3.format('%')(rebuilt / totals) + '</div>');
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div>Teardowns: ' + totals + '</div><div class="teardown">Not Rebuilt: ' + wrecked + " (" + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + rebuilt + " (" + d3.format('%')(rebuilt / totals) + ')</div>');
       
 
       if (!popup._map) popup.openOn(map);
@@ -730,7 +731,7 @@ $('#nb_toggle input').on('change', function () {
       var rebuilt = aggregateCommunities(slider.value(),true,layer.feature.properties.CommName);
       var totals = wrecked + rebuilt;
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div>Teardowns: ' + totals + '</div><div class="teardown">Not Rebuilt: ' + d3.format('%')(wrecked / totals) + '</div><div class="rebuild">Rebuilt: ' +  d3.format('%')(rebuilt / totals) + '</div>');
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div>Teardowns: ' + totals + '</div><div class="teardown">Not Rebuilt: ' + wrecked + " (" + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + rebuilt + " (" +  d3.format('%')(rebuilt / totals) + ')</div>');
       
 
       if (!popup._map) popup.openOn(map);
