@@ -251,12 +251,13 @@
   .d3-slider-handle:hover { background: #333 !important; cursor:pointer; }
 
 /*D3 MAP STYLES*/
-  .background { fill: none; pointer-events: all; }
-  #states { fill: #aaa; }
-  #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; } 
-  .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:Arial; }
-  #states .active { fill: #333 !important; fill-opacity: 1 !important; }
-  .faded { fill-opacity: 0.5 !important; }
+    .background { fill: none; pointer-events: all; }
+    .states { fill: #aaa; }
+    #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; } 
+    .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:Arial; }
+    .states .active { fill: #333 !important; fill-opacity: 1 !important; }
+    .faded { fill-opacity: 0.5 !important; }
+    .states path:hover { fill:#333 !important; cursor:pointer;}
 
 /*C3 TOOLTIPS*/
   th, text { color:#000 !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:11px; }
@@ -385,14 +386,15 @@
   .no-opacity .wrapper-dropdown-1.active .dropdown,
   .no-pointerevents .wrapper-dropdown-1.active .dropdown { display:block; }
 
-  /*DOWNLOAD BUTTON STYLES*/
+/*DOWNLOAD BUTTON STYLES*/
   .downloadButton { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:bold; color:#333333; border:none; font-size:.9em; text-align:center; margin-top:15px; margin-left:1%; padding-top:10px; width: 99%; background-color:#fff; color:#333; border-top: 1px solid #ccc; background-image: url('../_common_resources/img/downloadDoc.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: 2% 50%; }
   .downloadButton:hover {background-color:#fff !important; opacity:.5; cursor:pointer; }
   .downloadButton:active {background-color:#fff !important;}
 
-  /*MAPBOX STYLES*/
+/*MAPBOX STYLES*/
   .mapbox-logo, .leaflet-control-attribution { display:none !important; }
   .map-legend .swatch { width:20px; height:20px; float:left; margin-right:10px; }
   .leaflet-popup-close-button { display: none; }
   .leaflet-popup-content-wrapper { pointer-events: none; }
   .leaflet-tile-pane { opacity: .5; }
+  .leaflet-popup { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
