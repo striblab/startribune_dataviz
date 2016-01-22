@@ -686,9 +686,12 @@ $('#nb_toggle input').on('change', function () {
       var wrecked = aggregateNeighborhoods(slider.value(),false,layer.feature.properties.Name);
       var rebuilt = aggregateNeighborhoods(slider.value(),true,layer.feature.properties.Name);
       var totals = wrecked + rebuilt;
-
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Not Rebuilt: ' + wrecked + " (" + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + rebuilt + " (" + d3.format('%')(rebuilt / totals) + ')</div><div>Total teardowns: ' + totals + '</div>');
       
+      if (slider.value() == 2001) { var year = "Total"; }
+      else { var year = slider.value(); }
+
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Accumlated Not Rebuilt: ' + timeNeighborhoods(slider.value(),false,layer.feature.properties.Name) + '</div><div>Teardowns ' + year + ': ' + totals + '</div><div class="teardown">Not Rebuilt ' + year + ': ' + wrecked + ' (' + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + year + ': ' + rebuilt + ' (' +  d3.format('%')(rebuilt / totals) + ')</div>');
+
 
       if (!popup._map) popup.openOn(map);
       window.clearTimeout(closeTooltip);
@@ -734,13 +737,15 @@ $('#nb_toggle input').on('change', function () {
       var layer = e.target;
 
       popup.setLatLng(e.latlng);
-
       
       var wrecked = aggregateCommunities(slider.value(),false,layer.feature.properties.CommName);
       var rebuilt = aggregateCommunities(slider.value(),true,layer.feature.properties.CommName);
       var totals = wrecked + rebuilt;
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Not Rebuilt: ' + wrecked + " (" + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + rebuilt + " (" +  d3.format('%')(rebuilt / totals) + ')</div><div>Total teardowns: ' + totals + '</div>');
+      if (slider.value() == 2001) { var year = "Total"; }
+      else { var year = slider.value(); }
+
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Accumlated Not Rebuilt: ' + timeCommunities(slider.value(),false,layer.feature.properties.CommName) + '</div><div>Teardowns ' + year + ': ' + totals + '</div><div class="teardown">Not Rebuilt ' + year + ': ' + wrecked + ' (' + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + year + ': ' + rebuilt + ' (' +  d3.format('%')(rebuilt / totals) + ')</div>');
       
 
       if (!popup._map) popup.openOn(map);
