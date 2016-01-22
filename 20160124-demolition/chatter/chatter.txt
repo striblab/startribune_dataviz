@@ -1,10 +1,11 @@
-
 <p>The city of Minneapolis issued about 2,700 permits to demolish buildings between 2002 and 2015, and about 38 percent of those properties have had new structures built on them since then, according to a Star Tribune analysis of the city's wrecking and new construction permit data.</p>
 
 <p>Use the map and chart below to see what's happened in each area of the city, by year or across all years. Click on the "Rebuilt" and "Not Rebuilt" buttons, on the right, to change what is displayed, and click on Tornado to display locations of damage from a 2011 tornado. Click on any area of the map for a summary of demolitions and rebuilds in that neighborhood. Use the Reset View button below the chart to return to the default view on the map and chart.</p>
+
+<p>Regional maps are shaded by the accumulated number of wrecked buildings not rebuilt up to that year. Move through the timeline to watch torn down properties accumulate in Minneapolis communities and neighborhoods.</p>
 
 <p>The Star Tribune identified rebuilt properties by matching addresses in the demolition permit data and new construction permit data. It's possible that some of the more recent demolitions are slated to be rebuilt, but did not yet have a permit with the city.</p>
 
 <p>Source: City of Minneapolis, Star Tribune reporting</p>
 
-
+366234881

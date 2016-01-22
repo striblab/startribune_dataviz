@@ -690,7 +690,7 @@ $('#nb_toggle input').on('change', function () {
       if (slider.value() == 2001) { var year = "Total"; }
       else { var year = slider.value(); }
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Accumlated Not Rebuilt: ' + timeNeighborhoods(slider.value(),false,layer.feature.properties.Name) + '</div><div>Teardowns ' + year + ': ' + totals + '</div><div class="teardown">Not Rebuilt ' + year + ': ' + wrecked + ' (' + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + year + ': ' + rebuilt + ' (' +  d3.format('%')(rebuilt / totals) + ')</div>');
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.Name + '</div><div class="teardown">Accumulated Not Rebuilt: ' + timeNeighborhoods(slider.value(),false,layer.feature.properties.Name) + '</div><div>Teardowns ' + year + ': ' + totals + '</div><div class="teardown">Not Rebuilt ' + year + ': ' + wrecked + ' (' + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + year + ': ' + rebuilt + ' (' +  d3.format('%')(rebuilt / totals) + ')</div>');
 
 
       if (!popup._map) popup.openOn(map);
@@ -745,7 +745,7 @@ $('#nb_toggle input').on('change', function () {
       if (slider.value() == 2001) { var year = "Total"; }
       else { var year = slider.value(); }
 
-      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Accumlated Not Rebuilt: ' + timeCommunities(slider.value(),false,layer.feature.properties.CommName) + '</div><div>Teardowns ' + year + ': ' + totals + '</div><div class="teardown">Not Rebuilt ' + year + ': ' + wrecked + ' (' + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + year + ': ' + rebuilt + ' (' +  d3.format('%')(rebuilt / totals) + ')</div>');
+      popup.setContent('<div class="marker-title">' + layer.feature.properties.CommName + '</div><div class="teardown">Accumulated Not Rebuilt: ' + timeCommunities(slider.value(),false,layer.feature.properties.CommName) + '</div><div>Teardowns ' + year + ': ' + totals + '</div><div class="teardown">Not Rebuilt ' + year + ': ' + wrecked + ' (' + d3.format('%')(wrecked / totals) + ')</div><div class="rebuild">Rebuilt: ' + year + ': ' + rebuilt + ' (' +  d3.format('%')(rebuilt / totals) + ')</div>');
       
 
       if (!popup._map) popup.openOn(map);
