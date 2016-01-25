@@ -442,6 +442,7 @@ function resetMarkers(markers){
 var demos = L.geoJson(null, { pointToLayer: scaledPoint });
 var rebuilds = L.geoJson(null, { pointToLayer: scaledPoint2 });
 
+
 function scaledPoint(feature, latlon) {
         switch (feature.properties.rebuild) {
             case true: return L.circleMarker(latlon, {radius: .05, color:"#fff", weight:1, opacity:0, fillOpacity:0});
