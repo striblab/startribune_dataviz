@@ -1,7 +1,7 @@
 Star Tribune - Minneapolis Demolitions Map
 ================
 
-by Jeff Hargarten
+by Frey Hargarten
 
 Built using Mike Bostock's D3, jQuery and Mapbox.js. Powered by Google Sheets.
 
