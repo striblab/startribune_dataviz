@@ -60,8 +60,9 @@
     .greenNum { color:#61bd1a; font-size:2.5em; line-height:100%;  font-weight:900; }
     .blueNum { color:steelblue; font-size:2.5em; line-height:100%; font-weight:900; }
 
-     @media only screen and (min-width:650px) {
-    .downloadButton:hover { background-color:#378f00 !important; }
+     @media only screen and (max-width:650px) {
+     #blueLRT { float:none; text-align:center; width:100%; }
+     #greenLRT { float:none; text-align:center; width:100%; }
     }
 
     #blueLRT h3, #greenLRT h3 { font-family:Arial, Helvetica, sans-serif !important; font-weight:400 !important; }
