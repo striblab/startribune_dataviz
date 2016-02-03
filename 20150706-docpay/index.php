@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Minnesota Overtime Payments</title>
-  	<meta name="description" content="Minnesota Overtime Payments">
+	<title>Doctor Payment Database</title>
+  	<meta name="description" content="Doctor Payment Database">
  	<meta name="author" content="Jeff Hargarten - StarTribune">
 	<meta name="generator" content="BBEdit 10.5" />
 	
@@ -42,25 +42,38 @@
     #wrapper{ width:98%; }
     div.container { max-width: 1200px }
 
-    input { placeholder: ;}
+    @media only screen and (min-width:650px) {
+        
+    }
 </style>	
+	
 </head>
 <body> 
 
 <div id="wrapper">
 
-<table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Last</th><th>First</th><th>County</th><th>OT Wages</th><th>OT %</th><th>Organization</th><th>Job Title</th><th>Gross Wages</th></tr></thead></table>
+<table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Last</th><th>First</th><th>Address</th><th>Speciality</th><th>Payer</th><th>State</th><th>Paid</th><th>Payments</th><th>Pay Nature</th><th>Pay Form</th></tr></thead></table>
 
-<a href='https://docs.google.com/spreadsheets/d/18fLI7k8yU7t9bGGUqGfwm2RJWrVVwKjnm5pg9gtJ0ac/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+
+<a href='https://docs.google.com/spreadsheets/d/1XBn-4N1Ri_8VjbTNiITlBTYhB-UsL7TiHShvor3zExQ/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
 </div>
 
 </body>
+
 
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src='//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js'></script>
 <script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
 
+
 <script type="text/javascript" charset="utf-8">
+<?php
+// $jsonData = file_get_contents("https://spreadsheets.google.com/feeds/list/1A49qWO70uKF3qfxDHBD3KO5zDNgUbDiSGS9MTHfEgTE/oq15w3o/public/values?&alt=json");
+
+?>
+
+// var data = <?php echo $jsonData ?>
+
       $(document).ready(function() {
 
            var eventsTable = $('#events').DataTable( {
@@ -72,22 +85,21 @@
                 "bServerSide":false,
                 "bProcessing":true,
                 "sAjaxDataProp": "feed.entry",
-                "order": [[ 3, "desc" ]],
                 "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/18fLI7k8yU7t9bGGUqGfwm2RJWrVVwKjnm5pg9gtJ0ac/od6/public/values?&alt=json",
+                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1XBn-4N1Ri_8VjbTNiITlBTYhB-UsL7TiHShvor3zExQ/od6/public/values?&alt=json",
                 "aoColumns": [                 
-                    { "mDataProp": "gsx$lastname.$t" },
-                    { "mDataProp": "gsx$restname.$t" },
-                    { "mDataProp": "gsx$source.$t" },
-                    { "mDataProp": "gsx$otgross.$t" },
-                    { "mDataProp": "gsx$pctot.$t" },
-                    { "mDataProp": "gsx$organization.$t" },
-                    { "mDataProp": "gsx$jobtitle.$t" },
-                    { "mDataProp": "gsx$grosswages.$t" },
+                    { "mDataProp": "gsx$physlname.$t" },
+                    { "mDataProp": "gsx$physfname.$t" },
+                    { "mDataProp": "gsx$docaddress.$t" },
+                    { "mDataProp": "gsx$specialty.$t" },
+                    { "mDataProp": "gsx$payer.$t" },
+                    { "mDataProp": "gsx$payerstate.$t" },
+                    { "mDataProp": "gsx$totalpayments.$t" },
+                    { "mDataProp": "gsx$numpayments.$t" },
+                    { "mDataProp": "gsx$paynature.$t" },
+                    { "mDataProp": "gsx$payform.$t" },
                             ]
             } );
-
-$('.dataTables_filter input').attr("placeholder", "Enter an employee's name or county and click their last name for further information");
 
         } );
     </script>
