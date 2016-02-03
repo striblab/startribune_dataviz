@@ -51,7 +51,7 @@
 
 <table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Last</th><th>First</th><th>County</th><th>OT Wages</th><th>OT %</th><th>Organization</th><th>Job Title</th><th>Gross Wages</th></tr></thead></table>
 
-<a href='https://github.com/jhargarten/dataviz-projects/blob/master/strib/20150718-overtime/data/mnovertime.csv?raw=true' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<a href='https://docs.google.com/spreadsheets/d/18fLI7k8yU7t9bGGUqGfwm2RJWrVVwKjnm5pg9gtJ0ac/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
 </div>
 
 </body>
