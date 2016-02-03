@@ -221,7 +221,7 @@
   #filter { font-family:"Benton Sans"; font-size:.9em;}
   #filter input { width: 95% !important; padding: 0 10px 0 10px; font-family:"Benton Sans"; border-radius:5px !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
     -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);  -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #eee !important; 
-    background-image: url('../img/search-icon.svg'); 
+    background-image: url('../_common_resources/img/search-icon.svg'); 
     background-size: 14px 14px;
     background-repeat: no-repeat; 
     background-position: 98% 50%; }
@@ -234,7 +234,7 @@
   .demographic { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; font-size:.9em; }
   .source { font-size:.5em; color:#ccc; font-family:"Benton Sans",Helvetica,Arial,sans-serif;  }
 
-/*NUMBERS*/
+/*HIGHLIGHTED NUMBERS*/
   .num { font-family:"Popular"; font-weight:900; }
   .bigNum { font-family:"Popular"; font-weight:900; font-size:3.5em; }
 
@@ -251,13 +251,13 @@
   .d3-slider-handle:hover { background: #333 !important; cursor:pointer; }
 
 /*D3 MAP STYLES*/
-    .background { fill: none; pointer-events: all; }
-    .states { fill: #aaa; }
-    #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; } 
-    .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:Arial; }
-    .states .active { fill: #333 !important; fill-opacity: 1 !important; }
-    .faded { fill-opacity: 0.5 !important; }
-    .states path:hover { fill:#333 !important; cursor:pointer;}
+  .background { fill: none; pointer-events: all; }
+  .states { fill: #aaa; }
+  #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; } 
+  .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:Arial; }
+  .states .active { fill: #333 !important; fill-opacity: 1 !important; }
+  .faded { fill-opacity: 0.5 !important; }
+  .states path:hover { fill:#333 !important; cursor:pointer;}
 
 /*C3 TOOLTIPS*/
   th, text { color:#000 !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:11px; }
@@ -294,49 +294,21 @@
   .myButton5:active { background-color:#5cbf2a; }
   .myButton5:hover { background-color:#5cbf2a !important; }
 
-/*KILL BUTTON FOCUS BORDER*/
-   button:focus { outline:0 !important; }
-   :focus { outline:0; }
-
 /*SECONDARY TOGGLE BUTTONS*/
   .myButton_ { background-color:#8B2219; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family:arial; font-size:12px; padding:3px 5px; text-decoration:none; font-weight:900; }
   .myButton_:active { background-color:#ad645e; }
 
+/*KILL BUTTON FOCUS BORDER*/
+   button:focus { outline:0 !important; }
+   :focus { outline:0; }
+
 /*BREAKER*/
   .breaker { clear:both; margin:7px; padding:10px; }
-
-/*DEMOCRATIC PARTY QUANTILE*/
-  .dq1 { fill:#99D0E5; color:#99D0E5; }
-  .dq2 { fill:#79B0C5; color:#79B0C5; }
-  .dq3 { fill:#629ABB; color:#629ABB; }
-  .dq4 { fill:#4B85B1; color:#4B85B1; }
-  .dq5 { fill:#356FA7; color:#356FA7; }
-  .dq6 { fill:#1E5A9D; color:#1E5A9D; }
-
-/*REPUBLICAN PARTY QUANTILE*/
-  .rq1 { fill:#C6A29E; color:#C6A29E;  }
-  .rq2 { fill:#A7706B; color:#A7706B;  }
-  .rq3 { fill:#A45958; color:#A45958;  }
-  .rq4 { fill:#A14345; color:#A14345;  }
-  .rq5 { fill:#9E2C32; color:#9E2C32;  }
-  .rq6 { fill:#9B161F; color:#9B161F;  }
-
-/*GREEN MAP QUANTILE*/
-  .mq1 { fill:#74C476; color:#74C476; }
-  .mq2 { fill:#49ab4b; color:#49ab4b; }
-  .mq3 { fill:#347c36; color:#347c36; }
-  .mq4 { fill:#204c21; color:#204c21; }
-  .mq5 { fill:#1E5A9D; color:#163417; }
-
-/*HIGHLIGHT COLOR SWATCHES*/
-  .b_swatch { color:#1F6D6D; font-weight:900; }
-  .r_swatch { color:#B53434; font-weight:900; }
-  .o_swatch { color:#B56E34; font-weight:900; }
-  .g_swatch { color:#299129; font-weight:900; }
 
 /*RESET BUTTON*/
   .zoom{ text-decoration:none; font-weight:normal !important; color:steelblue; float:right !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
   .zoom:hover { cursor:pointer; }
+
 /*CONTENT WRAPPER*/
   #wrapper{ width:98%; }
 
@@ -387,7 +359,7 @@
   .no-pointerevents .wrapper-dropdown-1.active .dropdown { display:block; }
 
 /*DOWNLOAD BUTTON STYLES*/
-  .downloadButton { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:bold; color:#333333; border:none; font-size:.9em; text-align:center; margin-top:15px; padding-top:10px; width: 100%; background-color:#fff; color:#333; border-top: 1px solid #ccc; background-image: url('../img/downloadDoc.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: 2% 50%; }
+  .downloadButton { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:bold; color:#333333; border:none; font-size:.9em; text-align:center; margin-top:15px; margin-left:1%; padding-top:10px; width: 99%; background-color:#fff; color:#333; border-top: 1px solid #ccc; background-image: url('../_common_resources/img/downloadDoc.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: 2% 50%; }
   .downloadButton:hover {background-color:#fff !important; opacity:.5; cursor:pointer; }
   .downloadButton:active {background-color:#fff !important;}
 
@@ -409,3 +381,95 @@
     @media (max-width:500px) {
       .sources, .branding { width:100%; float:none; }
     }
+
+/*DEMOCRATIC PARTY QUANTILE*/
+  .dq1 { fill:#99D0E5; color:#99D0E5; }
+  .dq2 { fill:#79B0C5; color:#79B0C5; }
+  .dq3 { fill:#629ABB; color:#629ABB; }
+  .dq4 { fill:#4B85B1; color:#4B85B1; }
+  .dq5 { fill:#356FA7; color:#356FA7; }
+  .dq6 { fill:#1E5A9D; color:#1E5A9D; }
+
+/*REPUBLICAN PARTY QUANTILE*/
+  .rq1 { fill:#C6A29E; color:#C6A29E;  }
+  .rq2 { fill:#A7706B; color:#A7706B;  }
+  .rq3 { fill:#A45958; color:#A45958;  }
+  .rq4 { fill:#A14345; color:#A14345;  }
+  .rq5 { fill:#9E2C32; color:#9E2C32;  }
+  .rq6 { fill:#9B161F; color:#9B161F;  }
+
+/*GREEN MAP QUANTILE*/
+  .mq1 { fill:#74C476; color:#74C476; }
+  .mq2 { fill:#49ab4b; color:#49ab4b; }
+  .mq3 { fill:#347c36; color:#347c36; }
+  .mq4 { fill:#204c21; color:#204c21; }
+  .mq5 { fill:#1E5A9D; color:#163417; }
+
+/*HIGHLIGHT COLOR SWATCHES*/
+  .b_swatch { color:#1F6D6D; font-weight:900; }
+  .r_swatch { color:#B53434; font-weight:900; }
+  .o_swatch { color:#B56E34; font-weight:900; }
+  .g_swatch { color:#299129; font-weight:900; }
+
+/*CATEGORICAL CHARTS*/
+  .leaf { fill:#66AF50; color:#66AF50; }
+  .clay { fill:#BF603C; color:#BF603C; }
+  .swedish { fill:#59A897; color:#59A897; }
+  .bark { fill:#4C4C39; color:#4C4C39; }
+
+/*RED SHADED RAMP*/
+  .red1 { fill:#F2AC93; color:#F2AC93; }
+  .red2 { fill:#F28670; color:#F28670; }
+  .red3 { fill:#F2614C; color:#F2614C; }
+  .red4 { fill:#C22A22; color:#C22A22; }
+  .red5 { fill:#9C0004; color:#9C0004; }
+
+/*ORANGE SHADED RAMP*/
+  .orange1 { fill:#F2D2A4; color:#F2D2A4; }
+  .orange2 { fill:#F2AF80; color:#F2AF80; }
+  .orange3 { fill:#E07242; color:#E07242; }
+  .orange4 { fill:#C2421F; color:#C2421F; }
+  .orange5 { fill:#822010; color:#822010; }
+
+/*BLUE SHADED RAMP*/
+  .blue1 { fill:#D1E6E1; color:#D1E6E1; }
+  .blue2 { fill:#A7E6E3; color:#A7E6E3; }
+  .blue3 { fill:#67B4C2; color:#67B4C2; }
+  .blue4 { fill:#3580A3; color:#3580A3; }
+  .blue5 { fill:#0D4673; color:#0D4673; }
+
+/*GREEN SHADED RAMP*/
+  .green1 { fill:#C7E5B5; color:#C7E5B5; }
+  .green2 { fill:#9EE384; color:#9EE384; }
+  .green3 { fill:#5BBF48; color:#5BBF48; }
+  .green4 { fill:#299E3D; color:#299E3D; }
+  .green5 { fill:#118241; color:#118241; }
+
+/*GREY SHADED RAMP*/
+  .gray1 { fill:#F7F7F7; color:#F7F7F7; }
+  .gray2 { fill:#CCC; color:#CCC; }
+  .gray3 { fill:#969696; color:#969696; }
+  .gray4 { fill:#636363; color:#636363; }
+  .gray5 { fill:#252525; color:#252525; }
+
+/*BLUE-GREY SHADED RAMP*/
+  .grayblue1 { fill:#DAE1E7; color:#DAE1E7; }
+  .grayblue2 { fill:#C6D1D9; color:#C6D1D9; }
+  .grayblue3 { fill:#A8B9C5; color:#A8B9C5; }
+  .grayblue4 { fill:#7F98AA; color:#7F98AA; }
+  .grayblue5 { fill:#556E7F; color:#556E7F; }
+  .grayblue6 { fill:#2C3942; color:#2C3942; }
+
+/*POLITICAL SHADED RAMP*/
+  .gopDark { fill:#9C0004; color:#9C0004; }
+  .gopLight { fill:#F2614C; color:#F2614C; }
+  .neutral { fill:#F7F7F7; color:#F7F7F7; }
+  .dflLight { fill:#67B4C2; color:#67B4C2; }
+  .dflDark { fill:#0D4673; color:#0D4673; }
+
+/*COLORBLIND SAFE DIVERGENCE RAMP*/
+  .negDark { fill:#271D42; color:#271D42; }
+  .negLight { fill:#857AAA; color:#857AAA; }
+  .neutral { fill:#F7F7F7; color:#F7F7F7; }
+  .posLight { fill:#5BBF48; color:#5BBF48; }
+  .posDark { fill:#118241; color:#118241; }
