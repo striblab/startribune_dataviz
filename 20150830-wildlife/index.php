@@ -9,7 +9,7 @@
   <meta name="description" content="U.S. Wildlife Imports">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link rel="stylesheet" href="../_common_resources/startribune_dataviz_styles.css" />
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
   <style>
   .rightside { width:45%; float:right; }
@@ -59,8 +59,7 @@
   <div class="chatter">The number of <span class="trophies">African lion hunting trophies</span> legally imported to the United States increased each year across 2011-2014, with most coming from South Africa.</div>
   <div id="topten"><img src="img/1LION083015gr_online.png" width="100%" /></div>
 
-<a href="https://github.com/jhargarten/dataviz-projects/blob/master/strib/20150830-wildlife/data/trophies_data.zip?raw=true" target="new_"><button class="downloadButton">&#9660; Download Data</button></a>
-
+<a href="https://github.com/striblab/startribune_dataviz/blob/master/20150830-wildlife/data/alltrophies.xlsx" target="new_"><button class="downloadButton">&#9660; Download Data</button></a>
  </div>
 
 </body>
