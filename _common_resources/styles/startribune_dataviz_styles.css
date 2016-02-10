@@ -254,7 +254,7 @@
   .background { fill: none; pointer-events: all; }
   .states { fill: #aaa; }
   #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; } 
-  .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:Arial; }
+  .tooltip{ font-family:"Benton Sans",Helvetica,Arial,sans-serif;  background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:Arial; }
   .states .active { fill: #333 !important; fill-opacity: 1 !important; }
   .faded { fill-opacity: 0.5 !important; }
   .states path:hover { fill:#333 !important; cursor:pointer;}
@@ -383,93 +383,93 @@
     }
 
 /*DEMOCRATIC PARTY QUANTILE*/
-  .dq1 { fill:#99D0E5; color:#99D0E5; }
-  .dq2 { fill:#79B0C5; color:#79B0C5; }
-  .dq3 { fill:#629ABB; color:#629ABB; }
-  .dq4 { fill:#4B85B1; color:#4B85B1; }
-  .dq5 { fill:#356FA7; color:#356FA7; }
-  .dq6 { fill:#1E5A9D; color:#1E5A9D; }
+  .dq1 { fill:#99D0E5; background-color:#99D0E5; }
+  .dq2 { fill:#79B0C5; background-color:#79B0C5; }
+  .dq3 { fill:#629ABB; background-color:#629ABB; }
+  .dq4 { fill:#4B85B1; background-color:#4B85B1; }
+  .dq5 { fill:#356FA7; background-color:#356FA7; }
+  .dq6 { fill:#1E5A9D; background-color:#1E5A9D; }
 
 /*REPUBLICAN PARTY QUANTILE*/
-  .rq1 { fill:#C6A29E; color:#C6A29E;  }
-  .rq2 { fill:#A7706B; color:#A7706B;  }
-  .rq3 { fill:#A45958; color:#A45958;  }
-  .rq4 { fill:#A14345; color:#A14345;  }
-  .rq5 { fill:#9E2C32; color:#9E2C32;  }
-  .rq6 { fill:#9B161F; color:#9B161F;  }
+  .rq1 { fill:#C6A29E; background-color:#C6A29E;  }
+  .rq2 { fill:#A7706B; background-color:#A7706B;  }
+  .rq3 { fill:#A45958; background-color:#A45958;  }
+  .rq4 { fill:#A14345; background-color:#A14345;  }
+  .rq5 { fill:#9E2C32; background-color:#9E2C32;  }
+  .rq6 { fill:#9B161F; background-color:#9B161F;  }
 
 /*GREEN MAP QUANTILE*/
-  .mq1 { fill:#74C476; color:#74C476; }
-  .mq2 { fill:#49ab4b; color:#49ab4b; }
-  .mq3 { fill:#347c36; color:#347c36; }
-  .mq4 { fill:#204c21; color:#204c21; }
-  .mq5 { fill:#1E5A9D; color:#163417; }
+  .mq1 { fill:#74C476; background-color:#74C476; }
+  .mq2 { fill:#49ab4b; background-color:#49ab4b; }
+  .mq3 { fill:#347c36; background-color:#347c36; }
+  .mq4 { fill:#204c21; background-color:#204c21; }
+  .mq5 { fill:#1E5A9D; background-color:#163417; }
 
-/*HIGHLIGHT COLOR SWATCHES*/
-  .b_swatch { color:#1F6D6D; font-weight:900; }
-  .r_swatch { color:#B53434; font-weight:900; }
-  .o_swatch { color:#B56E34; font-weight:900; }
-  .g_swatch { color:#299129; font-weight:900; }
+/*HIGHLIGHT background-color SWATCHES*/
+  .b_swatch { background-color:#1F6D6D; font-weight:900; }
+  .r_swatch { background-color:#B53434; font-weight:900; }
+  .o_swatch { background-color:#B56E34; font-weight:900; }
+  .g_swatch { background-color:#299129; font-weight:900; }
 
 /*CATEGORICAL CHARTS*/
-  .leaf { fill:#66AF50; color:#66AF50; }
-  .clay { fill:#BF603C; color:#BF603C; }
-  .swedish { fill:#59A897; color:#59A897; }
-  .bark { fill:#4C4C39; color:#4C4C39; }
+  .leaf { fill:#66AF50; background-color:#66AF50; }
+  .clay { fill:#BF603C; background-color:#BF603C; }
+  .swedish { fill:#59A897; background-color:#59A897; }
+  .bark { fill:#4C4C39; background-color:#4C4C39; }
 
 /*RED SHADED RAMP*/
-  .red1 { fill:#F2AC93; color:#F2AC93; }
-  .red2 { fill:#F28670; color:#F28670; }
-  .red3 { fill:#F2614C; color:#F2614C; }
-  .red4 { fill:#C22A22; color:#C22A22; }
-  .red5 { fill:#9C0004; color:#9C0004; }
+  .red1 { fill:#F2AC93; background-color:#F2AC93; }
+  .red2 { fill:#F28670; background-color:#F28670; }
+  .red3 { fill:#F2614C; background-color:#F2614C; }
+  .red4 { fill:#C22A22; background-color:#C22A22; }
+  .red5 { fill:#9C0004; background-color:#9C0004; }
 
 /*ORANGE SHADED RAMP*/
-  .orange1 { fill:#F2D2A4; color:#F2D2A4; }
-  .orange2 { fill:#F2AF80; color:#F2AF80; }
-  .orange3 { fill:#E07242; color:#E07242; }
-  .orange4 { fill:#C2421F; color:#C2421F; }
-  .orange5 { fill:#822010; color:#822010; }
+  .orange1 { fill:#F2D2A4; background-color:#F2D2A4; }
+  .orange2 { fill:#F2AF80; background-color:#F2AF80; }
+  .orange3 { fill:#E07242; background-color:#E07242; }
+  .orange4 { fill:#C2421F; background-color:#C2421F; }
+  .orange5 { fill:#822010; background-color:#822010; }
 
 /*BLUE SHADED RAMP*/
-  .blue1 { fill:#D1E6E1; color:#D1E6E1; }
-  .blue2 { fill:#A7E6E3; color:#A7E6E3; }
-  .blue3 { fill:#67B4C2; color:#67B4C2; }
-  .blue4 { fill:#3580A3; color:#3580A3; }
-  .blue5 { fill:#0D4673; color:#0D4673; }
+  .blue1 { fill:#D1E6E1; background-color:#D1E6E1; }
+  .blue2 { fill:#A7E6E3; background-color:#A7E6E3; }
+  .blue3 { fill:#67B4C2; background-color:#67B4C2; }
+  .blue4 { fill:#3580A3; background-color:#3580A3; }
+  .blue5 { fill:#0D4673; background-color:#0D4673; }
 
 /*GREEN SHADED RAMP*/
-  .green1 { fill:#C7E5B5; color:#C7E5B5; }
-  .green2 { fill:#9EE384; color:#9EE384; }
-  .green3 { fill:#5BBF48; color:#5BBF48; }
-  .green4 { fill:#299E3D; color:#299E3D; }
-  .green5 { fill:#118241; color:#118241; }
+  .green1 { fill:#C7E5B5; background-color:#C7E5B5; }
+  .green2 { fill:#9EE384; background-color:#9EE384; }
+  .green3 { fill:#5BBF48; background-color:#5BBF48; }
+  .green4 { fill:#299E3D; background-color:#299E3D; }
+  .green5 { fill:#118241; background-color:#118241; }
 
 /*GREY SHADED RAMP*/
-  .gray1 { fill:#F7F7F7; color:#F7F7F7; }
-  .gray2 { fill:#CCC; color:#CCC; }
-  .gray3 { fill:#969696; color:#969696; }
-  .gray4 { fill:#636363; color:#636363; }
-  .gray5 { fill:#252525; color:#252525; }
+  .gray1 { fill:#F7F7F7; background-color:#F7F7F7; }
+  .gray2 { fill:#CCC; background-color:#CCC; }
+  .gray3 { fill:#969696; background-color:#969696; }
+  .gray4 { fill:#636363; background-color:#636363; color:#fff; }
+  .gray5 { fill:#252525; background-color:#252525; color:#fff; }
 
 /*BLUE-GREY SHADED RAMP*/
-  .grayblue1 { fill:#DAE1E7; color:#DAE1E7; }
-  .grayblue2 { fill:#C6D1D9; color:#C6D1D9; }
-  .grayblue3 { fill:#A8B9C5; color:#A8B9C5; }
-  .grayblue4 { fill:#7F98AA; color:#7F98AA; }
-  .grayblue5 { fill:#556E7F; color:#556E7F; }
-  .grayblue6 { fill:#2C3942; color:#2C3942; }
+  .grayblue1 { fill:#DAE1E7; background-color:#DAE1E7; }
+  .grayblue2 { fill:#C6D1D9; background-color:#C6D1D9; }
+  .grayblue3 { fill:#A8B9C5; background-color:#A8B9C5; }
+  .grayblue4 { fill:#7F98AA; background-color:#7F98AA; }
+  .grayblue5 { fill:#556E7F; background-color:#556E7F; }
+  .grayblue6 { fill:#2C3942; background-color:#2C3942; }
 
 /*POLITICAL SHADED RAMP*/
-  .gopDark { fill:#9C0004; color:#9C0004; }
-  .gopLight { fill:#F2614C; color:#F2614C; }
-  .neutral { fill:#F7F7F7; color:#F7F7F7; }
-  .dflLight { fill:#67B4C2; color:#67B4C2; }
-  .dflDark { fill:#0D4673; color:#0D4673; }
+  .gopDark { fill:#9C0004; background-color:#9C0004; }
+  .gopLight { fill:#F2614C; background-color:#F2614C; }
+  .neutral { fill:#F7F7F7; background-color:#F7F7F7; }
+  .dflLight { fill:#67B4C2; background-color:#67B4C2; }
+  .dflDark { fill:#0D4673; background-color:#0D4673; }
 
-/*COLORBLIND SAFE DIVERGENCE RAMP*/
-  .negDark { fill:#271D42; color:#271D42; }
-  .negLight { fill:#857AAA; color:#857AAA; }
-  .neutral { fill:#F7F7F7; color:#F7F7F7; }
-  .posLight { fill:#5BBF48; color:#5BBF48; }
-  .posDark { fill:#118241; color:#118241; }
+/*background-colorBLIND SAFE DIVERGENCE RAMP*/
+  .negDark { fill:#271D42; background-color:#271D42; }
+  .negLight { fill:#857AAA; background-color:#857AAA; }
+  .neutral { fill:#F7F7F7; background-color:#F7F7F7; }
+  .posLight { fill:#5BBF48; background-color:#5BBF48; }
+  .posDark { fill:#118241; background-color:#118241; }
