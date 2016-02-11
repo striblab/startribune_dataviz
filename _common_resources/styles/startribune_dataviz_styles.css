@@ -366,7 +366,7 @@
 /*MAPBOX STYLES*/
   .mapbox-logo, .leaflet-control-attribution { display:none !important; }
   .map-legend .swatch { width:20px; height:20px; float:left; margin-right:10px; }
-  .leaflet-popup-close-button { display: none; }
+  .leaflet-popup-close-button { display: none !important; }
   .leaflet-popup-content-wrapper { pointer-events: none; }
   .leaflet-tile-pane { opacity: .5; }
   .leaflet-popup { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
@@ -446,7 +446,7 @@
   .green5 { fill:#118241; background-color:#118241; }
 
 /*GREY SHADED RAMP*/
-  .gray1 { fill:#F7F7F7; background-color:#F7F7F7; }
+  .gray1 { fill:#ddd; background-color:#ddd; }
   .gray2 { fill:#CCC; background-color:#CCC; }
   .gray3 { fill:#969696; background-color:#969696; }
   .gray4 { fill:#636363; background-color:#636363; color:#fff; }
