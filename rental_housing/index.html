@@ -65,6 +65,8 @@
 
 <div id="infobox">Metro Area</div>
 
+<div id="rentalChange"><div class='negDark'>-8,874 affordable rental units</div></div>
+
 <div class="breaker"></div>
 
   <div class="legends">
@@ -89,8 +91,6 @@
 <div class="breaker"></div>
 
 <div class="zoom">Reset View</div>
-
-<div class="breaker"></div>
 
 <div class="chartTitle">Cost-burdened households 1990-2014</div>
 <div class="chart" id="chart"></div>
@@ -376,6 +376,11 @@ d3.json("shapefiles/" + shape, function(error, us) {
         })
        .on("mousedown", function(d, i){   
         $('#infobox').html(d.properties.COCTU_DESC);
+            for (var i=0; i<dataCompare.length; i++){
+    if (d.properties.COCTU_DESC == dataCompare[i].Citytownship) {
+        $("#rentalChange").html("<div class='" + mapColor(d.properties.COCTU_DESC, race, dataCompare) + "'>" + d3.format("+,")(dataCompare[i].under_50pct_change2014_num) + " affordable rental units</div>")
+      }
+    }
 
         redrawChart(chart,d.properties.COCTU_DESC,dataBurden);
 
@@ -416,6 +421,7 @@ $(".zoom").click(function() {
   clicked2();
   $('#infobox').html("Metro Area");
   $(".card").show();
+  $("#rentalHousing").html("<div class='negDark'>-8,874 affordable rental units</div>");
   redrawChart(chart,"Metro",dataBurden);
 });
 
