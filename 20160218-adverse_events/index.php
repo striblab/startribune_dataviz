@@ -29,12 +29,12 @@
 <body>
 <div id="wrapper">
 
-<div class="chartTitle">Hospitals with 6+ adverse events 2015</div>
+<div class="chartTitle">Hospitals with 6+ adverse events in 2015</div>
 <div class="chatter">Data spans 12-month period ending Oct. 6, 2015</div>
 <div id="chart"></div>
 
-<div class="chartTitle">Database of adverse hospital events</div>
-<div class="chatter">Search through events reported between 2004 and 2016</div>
+<div class="chartTitle">Search the state’s database by hospital or by adverse event</div>
+<div class="chatter">Data contains events reported between 2004 and 2016.</div>
 <table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Year</th><th>Hospital</th><th>City</th><th>Event</th><th>Incidents</th><th>Deaths</th><th>Injuries</th><th>Type</th></tr></thead></table>
 <a href='https://docs.google.com/spreadsheets/d/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
 
@@ -89,7 +89,7 @@ var chartDecade = c3.generate({
                 value: ['count']
             },
             names: {
-              'count': 'Adverse Events'
+              'count': 'Number of Adverse Events'
             },
             types: {
             'count': 'bar'
