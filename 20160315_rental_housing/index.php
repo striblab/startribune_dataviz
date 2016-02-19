@@ -14,12 +14,12 @@
   
   <style>
   #wrapper { text-align:center; width:100%; }
-  #map { width:100%; height:425px; text-align:center; }
+  #map { width:100%; height:342px; text-align:center; }
   .tableHead { display:inline-block; padding:10px; border-bottom:1px solid #ddd; font-weight:900; font-family:"Poynter Serif RE"; }
   .tableCell { display:inline-block; padding:10px; border-bottom:1px solid #ddd; font-family:"Benton Sans"; }
   .tableBreak { clear:both; display:block; }
   .table { text-align:center; width:100%; overflow-x:hidden; overflow-y:auto; height:670px; }
-  #table { font-size:.7em; height:780px; overflow-x:hidden; overflow-y:auto; }
+  #table { font-size:.7em; height:700px; overflow-x:hidden; overflow-y:auto; }
   .change, .pct { font-weight:900; width:20%; }
   .cityCell { width:40%; }
   .rents { width:20%; }
@@ -97,7 +97,7 @@
     <small>Change in affordable rental units</small>
   </div>
 
-<div id="map"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+<div id="map"><svg width="320" height="350" viewBox="0 0 500 450" preserveAspectRatio="xMidYMid"></svg></div>
 
 <div id="infobox">Metro Area</div>
 
@@ -123,11 +123,25 @@
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1rHKgLz3z8LSR-J01DthEeTF9dACUeu07zRrEwZlaZDw&sheet=rentalHousing
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1rHKgLz3z8LSR-J01DthEeTF9dACUeu07zRrEwZlaZDw&sheet=costBurden
 
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=rQzCXJq4rcfGS8yaKn5HXqX8RzF0eqQiSCoJyDp2-LGljUpp8j4hOmu-Wjh8HgLpA0CoDeOPuofM2HNpbQXnRNPSQhlE21exOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Ts_fM-mz4kt323wbruCqK76UkZUXmxMeLKGzzrp83SjM82FqFM4PeCCPY8msxNzbMxcG-w52aeuSk1DkS8Q3sDBV3VJT4khz1&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=uVCkNiIaKC8W8WaTyN8_WVNw5A3ZCdsLJOeTpoReZZdkGo4vMqFTUG9bBBMzlNx2RdJWyx_QQ13M2HNpbQXnRKoeeMadDvy7OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Ts_fM-mz4kt323wbruCqK76UkZUXmxMeLKGzzrp83SjM82FqFM4PeCCPY8msxNzbMW0Ar8EAym2-kGLV5VE4_khu0XK1b9qtD&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json2) {
+// d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=rQzCXJq4rcfGS8yaKn5HXqX8RzF0eqQiSCoJyDp2-LGljUpp8j4hOmu-Wjh8HgLpA0CoDeOPuofM2HNpbQXnRNPSQhlE21exOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Ts_fM-mz4kt323wbruCqK76UkZUXmxMeLKGzzrp83SjM82FqFM4PeCCPY8msxNzbMxcG-w52aeuSk1DkS8Q3sDBV3VJT4khz1&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
+// d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=uVCkNiIaKC8W8WaTyN8_WVNw5A3ZCdsLJOeTpoReZZdkGo4vMqFTUG9bBBMzlNx2RdJWyx_QQ13M2HNpbQXnRKoeeMadDvy7OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Ts_fM-mz4kt323wbruCqK76UkZUXmxMeLKGzzrp83SjM82FqFM4PeCCPY8msxNzbMW0Ar8EAym2-kGLV5VE4_khu0XK1b9qtD&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json2) {
 
-var dataHousing = json.rentalHousing;
-var dataBurden = json2.costBurden;
+// var dataHousing = json.rentalHousing;
+// var dataBurden = json2.costBurden;
+
+<?php
+
+$jsonDataHousing = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=rQzCXJq4rcfGS8yaKn5HXqX8RzF0eqQiSCoJyDp2-LGljUpp8j4hOmu-Wjh8HgLpA0CoDeOPuofM2HNpbQXnRNPSQhlE21exOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Ts_fM-mz4kt323wbruCqK76UkZUXmxMeLKGzzrp83SjM82FqFM4PeCCPY8msxNzbMxcG-w52aeuSk1DkS8Q3sDBV3VJT4khz1&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+$jsonDataBurden = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=uVCkNiIaKC8W8WaTyN8_WVNw5A3ZCdsLJOeTpoReZZdkGo4vMqFTUG9bBBMzlNx2RdJWyx_QQ13M2HNpbQXnRKoeeMadDvy7OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Ts_fM-mz4kt323wbruCqK76UkZUXmxMeLKGzzrp83SjM82FqFM4PeCCPY8msxNzbMW0Ar8EAym2-kGLV5VE4_khu0XK1b9qtD&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+
+?>
+
+//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
+var dataLoadHousing = <?php echo $jsonDataHousing; ?>;
+var dataLoadBurden = <?php echo $jsonDataBurden; ?>;
+
+var dataHousing = dataLoadHousing.rentalHousing;
+var dataBurden = dataLoadBurden.costBurden;
 
 var aspect = 440 / 300, chart = $("#map svg");
 $(window).on("resize", function() {   
@@ -359,7 +373,7 @@ function mapTips(d, subject, dataCompare){
 function mapBuild(container, boxContainer, chartContainer, shape, race, geo, dataCompare, index) {
 
 var width = 450,
-    height = 450,
+    height = 350,
     centered;
 
 if (geo=="us") { var projection = d3.geo.albersUsa().scale(700).translate([330, 200]); }
@@ -555,8 +569,8 @@ d3.selectAll(container + " svg g path")
   mapBuild("#map", "#infoBox", "#chart", "metro_cities.json", "house", "metro", dataHousing, 0);
   tableBuild("#table","house",dataHousing,"Metro","Minneapolis",0);
 
-});
-});
+// });
+// });
 </script>
 
 </html>
