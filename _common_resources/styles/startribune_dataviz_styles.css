@@ -382,7 +382,7 @@
     .branding { font-weight:900; float:right; height:inherit; font-family:"Benton Sans" !important; }
     .branding a { color:#333; }
     .branding a:hover { opacity:.5; }
-    @media (max-width:500px) {
+    @media (max-width:600px) {
       .sources, .branding { width:100%; float:none; }
     }
 
