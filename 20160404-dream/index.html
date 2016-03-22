@@ -1,0 +1,529 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Midwestern Region Economic Mobility</title>
+  <meta name="description" content="Midwestern Region Economic Mobility">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link rel="stylesheet" href="../_common_resources/interfaces/d3.slider-master/d3.slider.css" /> 
+  
+  <style>
+   #wrapper { text-align:center; height:auto; width:100%; }
+   #map { width:800px; margin-right:auto; margin-left:auto; text-align:center;  }
+   #leftSide {  }
+   #rightSide {  }
+   .none { fill:#ddd !important; }
+   .zoom { float:none !important; text-align:center; }
+   #slider { display:none; }
+   .legends { width:318px; height:auto; text-align:center; margin-right:auto; margin-left:auto; }
+
+   .tableHead { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:24%; font-weight:900; font-family:"Poynter Serif RE"; }
+   .tableCell { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:24%; font-family:"Benton Sans"; }
+   .tableBreak { clear:both; display:block; }
+   .table { text-align:center; width:100%; overflow-x:hidden; overflow-y:auto; height:280px; }
+   #filter input { border-radius:0 !important; }
+   .district:hover, .selected, .hSort:hover { background-color:#333; color:#fff !important; cursor:pointer; }
+
+  .negDark { fill:#752304; background-color:#752304; color:#fff; }
+  .negMid { fill:#BF5F3C; background-color:#BF5F3C; color:#fff; }
+  .negLight { fill:#E28765; background-color:#E28765; }
+  .neutral { fill:#ddd; background-color:#ddd; }
+  .posLight { fill:#94D181; background-color:#94D181; }
+  .posMid { fill:#67AF50; background-color:#67AF50; color:#fff; }
+  .posDark { fill:#24680E; background-color:#24680E; color:#fff; }
+
+  small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; }
+
+  .grid { display:inline-block; width:32%; padding:10px; }
+  #tableBlock { float:left; display:inline-block; width:47%; }
+  #chart { float:right; display:inline-block; width:47%; }
+
+   @media (max-width:800px) {
+    #map { width:100%; }
+    #tableBlock, #chart { display:block; width:100%; float:none; }
+   }
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+
+<div id="leftSide">
+<div id="map"><svg width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid"></svg></map>
+</div>
+
+<div class="breaker"></div>
+
+<div class="legendBox">
+<div class="legends">
+    <div class="legendContainer">
+      <span class='legend'>
+        <nav class='legend clearfix'>
+          <span style='background:#fff;'>-20</span>
+          <span class='negDark'></span>
+          <span class='negMid'></span>
+          <span class='negLight'></span>
+          <span class='neutral'></span>
+          <span class='posLight'></span>
+          <span class='posMid'></span>
+          <span class='posDark'></span>
+          <span style='background:#fff;'>+20</span>
+        </nav>
+      </span>
+    </div>
+    <small>Points above/below average AUM</small>
+  </div>
+</div>
+
+<div class="breaker"></div>
+
+<div class="zoom">Reset View</div>
+
+<div class="breaker"></div>
+
+<div id="rightSide">
+<div id="districtName">Midwest</div>
+
+<div id="tableBlock">
+<h3>Someone growing up in</h3>
+<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by keyword"></input></div>
+<div class="table" id="table">
+<div class='tableHead partyBar hSort' data="county">County</div><div class='tableHead hSort selected' data="state">State</div><div class='tableHead hSort' data="aum25">AUM p25</div><div class='tableHead hSort' data="aum75">AUM p75</div>
+</div>
+</div>
+
+<div id="chart">  
+<div id="slider"></div>
+<h3>...with parents earning in the -- percentile</h3>
+<div class="grid start">99th</div><div class="grid end">99th</div><div class="grid pct">0%</div>
+<div class="grid start">80th</div><div class="grid end">80th</div><div class="grid pct">0%</div>
+<div class="grid start">60th</div><div class="grid end">60th</div><div class="grid pct">0%</div>
+<div class="grid start">40th</div><div class="grid end">40th</div><div class="grid pct">0%</div>
+<div class="grid start">20th</div><div class="grid end">20th</div><div class="grid pct">0%</div>
+<div class="grid start">1st</div><div class="grid end">1st</div><div class="grid pct">0%</div>
+<h3>...end up on average in the -- percentile</h3>
+</div>
+
+</div>
+
+
+
+<div id="chatterBox">
+</div>
+
+  </div>
+
+
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/interfaces/d3.slider-master/d3.slider.js"></script>
+
+<script>
+//http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?pagewanted=all
+//http://bl.ocks.org/d3noob/c9b90689c1438f57d649
+
+</script>
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1IA2b2UwsXVyxSN-vyF1wQh12dJjmeB2LzJUK54Mt7qY&sheet=counties
+
+d3.json("https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=dS_dFjBtokFZmtpVrLnmB340u4jqkjpPfux5sdHPLpWImVigfkXoVjA3-a206r1r63ZkyiGf5l4dEOTS90Lc03WHBvSZTUaCOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzI-mtKRf-8plGOUy-lJCxpF2DQLccfmsBGWAyiujVfWxmelbCou2EhfNg1xV69xW9102aPo2dzOFu-xgq3sfjAan3rNPoaOK44tkkG2FCl70L8wGQQEVNypciIdD-G7jjo73e88jfKe79jgqCKHAMMBD8v3tqBuqbyBAf43AAwP8&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
+
+var data = json.counties;
+
+var aspect = 800 / 500, chart = $("#map svg");
+
+$(window).on("resize", function() {   
+  var targetWidth = chart.parent().width();   
+  chart.attr("width", targetWidth);   
+  chart.attr("height", targetWidth / aspect);
+});
+
+$(".hSort").click(function() {
+  $(".hSort").removeClass("selected");
+  $(this).addClass("selected");
+  if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
+  else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
+  tableSort("#table",data,$(this).attr("data"),sorted);
+});
+
+$(".district").click(function() {
+  $(".district").removeClass("selected");
+  $(this).addClass("selected");
+});
+
+//SEARCH
+$( document ).ready(function() {
+     $('#filter input').keyup(function(i){
+        $('.card').hide();
+        var txt = $('#filter input').val();
+        $('.card').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+           }
+        });
+    });
+  });
+
+//SELECTION TABLES
+function tableSort(container,data,column,sorted){
+   
+  d3.select(container).selectAll(".card").sort(function(a, b) {
+          if (column == "county") { 
+        if (sorted == "descend") { return d3.descending(a.county, b.county); }
+        if (sorted == "ascend") { return d3.ascending(a.county, b.county); }
+     }
+          if (column == "state") { 
+        if (sorted == "descend") { return d3.descending(a.state, b.state); }
+        if (sorted == "ascend") { return d3.ascending(a.state, b.state); }
+     }
+          if (column == "aum25") { 
+        if (sorted == "descend") { return d3.descending(a.aum25, b.aum25); }
+        if (sorted == "ascend") { return d3.ascending(a.aum25, b.aum25); }
+     }
+          if (column == "aum75") { 
+        if (sorted == "descend") { return d3.descending(a.aum75, b.aum75); }
+        if (sorted == "ascend") { return d3.ascending(a.aum75, b.aum75); }
+     }
+    })
+    .transition().duration(500);
+}
+
+function tableBuild(container,data,index){
+
+d3.select(container).selectAll(".card")
+.data(data).enter().append("div")
+.attr("class","card")
+.html(function (d){
+  var p25, p75 = 0;
+
+  if (d.aum25 != 0) { 
+    p25 = d3.format("+")(Math.round(d.aum25 - 47)); 
+    p75 = d3.format("+")(Math.round(d.aum75 - 61)); 
+  } 
+  else { 
+    p25 = "No data available"; 
+    p75 = "No data available"; 
+  }
+  
+  return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div><div class='tableCell p25'>" + p25 + "</div><div class='tableCell p75'>" + p75 + "</div><div class='smallbreak'></div>";
+});
+
+$(".district").click(function() {
+ $(".district").removeClass("selected");
+ $(this).addClass("selected");
+
+  $(".districtName").html($(this).text());
+
+  jQuery.fn.d3Click = function () {
+  this.each(function (i, e) {
+    var evt = document.createEvent("MouseEvents");
+    evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+    e.dispatchEvent(evt);
+  });
+};
+
+jQuery.fn.d3Down = function () {
+  this.each(function (i, e) {
+    var evt = document.createEvent("MouseEvents");
+    evt.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+    e.dispatchEvent(evt);
+  });
+};
+
+jQuery.fn.d3Up = function () {
+  this.each(function (i, e) {
+    var evt = document.createEvent("MouseEvents");
+    evt.initMouseEvent("mouseup", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+    e.dispatchEvent(evt);
+  });
+};
+
+    // clicked2();
+    var findDistrict = $(this).text() + "_us";
+    $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Down();
+    $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Up();
+    $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Click();
+});
+
+   $('.p25').each(function() {
+    var num = $(this).text();
+    if (num != "No data available"){
+      if (num >= 15) { $(this).addClass("posDark"); $(this).html(num); }
+      else if (num >= 10) { $(this).addClass("posMid"); $(this).html(num); } 
+      else if (num > 0) { $(this).addClass("posLight"); $(this).html(num); }
+      else if (num <= -15) { $(this).addClass("negDark"); $(this).html(num); }
+      else if (num <= -10) { $(this).addClass("negMid"); $(this).html(num); }
+      else if (num < 0) { $(this).addClass("negLight"); $(this).html(num); }
+      else if (num == 0) { $(this).addClass("neutral"); $(this).html(num); }
+    }
+    });
+   $('.p75').each(function() {
+    var num = $(this).text();
+    if (num != "No data available"){
+      if (num >= 20) { $(this).addClass("posDark"); $(this).html(num); }
+      else if (num >= 10) { $(this).addClass("posMid"); $(this).html(num); } 
+      else if (num > 0) { $(this).addClass("posLight"); $(this).html(num); }
+      else if (num <= -20) { $(this).addClass("negDark"); $(this).html(num); }
+      else if (num <= -10) { $(this).addClass("negMid"); $(this).html(num); }
+      else if (num < 0) { $(this).addClass("negLight"); $(this).html(num); }
+      else if (num == 0) { $(this).addClass("neutral"); $(this).html(num); }
+    }
+    });
+}
+
+// $(document).bind('DOMNodeInserted', function(event) {
+
+// });
+
+//SLIDERS
+if ($(window).width() < 550){
+var tickLength = 4;
+}
+else { 
+var tickLength = 4; 
+}
+
+var slide_spot=2001;
+var slider = d3.slider().axis(true);
+
+d3.select('#slider').call(slider.min(2001).max(2015).value(slide_spot).orientation("vertical").axis(d3.svg.axis().tickFormat(d3.format("")).orient("top").ticks(tickLength)).step(1).on("slide", function(evt, value) {
+
+  }));
+
+
+//MAPS
+function mapReshade(container, shape, subject, race, dataCompare, visible, demoData, demoData2) {
+d3.selectAll(container + " svg g path")
+      .data(us.features)
+      .style("opacity",visible)
+      .attr("class", function(d){
+        return "orange2";
+        });
+}
+
+function mapColor(d, race, dataCompare, demoData, demoData2){
+  for (var i=0; i < data.length; i++){
+    if (d.properties.GEOID == data[i].FIPS){
+      var points = data[i].aum25 - 47;
+      if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "neutral"; }
+      else if (points >= 15 ) { return "posDark"; }
+      else if (points >= 10) { return "posMid"; }
+      else if (points > 0) { return "posLight"; }
+      else if (points <= -15) { return "negDark"; }
+      else if (points <= -10) { return "negMid"; }
+      else if (points < 0) { return "negLight"; }
+      break;
+    }
+  }
+    return "neutral";
+}
+
+function mapTips(d, subject, dataCompare){
+  for (var i=0; i < data.length; i++){
+    if (d.properties.GEOID == data[i].FIPS){
+      if (data[i].aum25 != 0) { 
+        var points = Math.round(data[i].aum25 - 47); 
+        return "<div>" + d.properties.NAME + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " AUM (<span class='" + mapColor(d, subject, dataCompare) + "'>" + d3.format("+")(points) + " from average</span>)</div>";
+      } else {
+         return "<div>" + d.properties.NAME + " County, " + data[i].state + "</div><div>No data available</div>";
+      }
+    }
+  }
+}
+
+function mapBuild(container, boxContainer, chartContainer, shape, race, geo, dataCompare, index, visible) {
+
+if (geo=="us") { var width = 800, height = 500, centered; var projection = d3.geo.albersUsa().scale(2000).translate([330, 430]); }
+else if (geo=="mn") { var width = 350, height = 350, centered; var projection = d3.geo.albersUsa().scale(5037).translate([50, 970]); }
+else if (geo=="metro") { var width = 350, height = 350, centered; var projection = d3.geo.mercator().scale([16500]).center([-92.403259,44.988113]); }
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select(container + " svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height);
+
+var g = svg.append("g");
+
+d3.json("shapefiles/" + shape, function(error, us) {
+
+  g.append("g")
+      .attr("class", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .attr("id", function(d) { var str = d.properties.NAME + "_" + geo; return str.replace(new RegExp(" ", "g"),"-"); })
+      .attr("precinctName", function(d){ return d.properties.NAME })
+      .attr("class", function(d){
+         return mapColor(d, race, dataCompare);
+        })
+       .on("mousedown", function(d, i){ 
+        for (var i=0; i < data.length; i++){
+        if (d.properties.GEOID == data[i].FIPS){
+          $("#districtName").html(d.properties.NAME + " County, " + data[i].state);
+        $('.card').hide();
+        var txt = d.properties.NAME;
+        var txt2 = data[i].state;
+        $('.card').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1){
+               $(this).show();
+           }
+          })
+        }
+      }
+       })
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .call(d3.helper.tooltip(function(d, i){
+        return mapTips(d, race, dataCompare);
+      }));
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+
+});
+
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+$(".zoom").click(function() {
+  clicked2();
+  $("#districtName").html("Midwest");
+  $('.card').show();
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 6;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 3;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      // .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 1;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      // .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+d3.helper = {};
+
+d3.helper.tooltip = function(accessor){
+    return function(selection){
+        var tooltipDiv;
+        var bodyNode = d3.select('body').node();
+        selection.on("mouseover", function(d, i){
+            // Clean up lost tooltips
+            d3.select('body').selectAll('div.tooltip').remove();
+            // Append tooltip
+            tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px')
+                .style('position', 'absolute') 
+                .style('z-index', 1001);
+            // Add text using the accessor function
+            var tooltipText = accessor(d, i) || '';
+            // Crop text arbitrarily
+            //tooltipDiv.style('width', function(d, i){return (tooltipText.length > 80) ? '300px' : null;})
+            //    .html(tooltipText);
+        })
+        .on('mousemove', function(d, i) {
+            // Move tooltip
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px');
+            var tooltipText = accessor(d, i) || '';
+            tooltipDiv.html(tooltipText);
+        })
+        .on("mouseout", function(d, i){
+            // Remove tooltip
+            tooltipDiv.remove();
+        });
+
+    };
+};
+
+}
+
+  mapBuild("#map", "#districtName", "#chart", "us_states.json", "economics", "us", data, 2, 1);
+  mapBuild("#map", "#districtName", "#chart", "midwest_counties.json", "economics", "us", data, 2, 1);
+  tableBuild("#table",data,0)
+
+  var targetWidth = chart.parent().width();   
+  chart.attr("width", targetWidth);
+  chart.attr("height", targetWidth / aspect);
+
+});
+</script>
+
+</html>
