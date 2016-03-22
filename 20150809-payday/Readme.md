@@ -7,3 +7,4 @@ Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [NVD3](http://n
 
 The files can be run in any live server setup. Just open the index.html or index.php file in your browser.
 
+http://www.startribune.com/explore-13-years-of-a-payday-lender-s-political-spending/321085891/
