@@ -176,8 +176,10 @@
 <div class="sort-link" id="scitech">Science and Technology</div>
 <div class="sort-link" id="transit">Transportation and Infrastructure</div>
 <div class="sort-link" id="other">Other</div>
+<div class="sort-link" id="tools">Tools</div>
 <div id="searchMe"><input type="text" id="search-criteria"/></div>
 <div id="links">
+<div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
 <div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure</a></div>
 <div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
 
@@ -261,6 +263,11 @@ $('#allProjects').css("background-color","#ddd");
 $( ".sort-link" ).click(function() {
   $('#search-criteria_m').val("");
   $('#search-criteria').val("");
+  $(".articleEntry").hide();
+  $(".sort-link").css("background-color","#fff");
+  $(this).css("background-color","#ddd");
+  console.log($(this).attr("data"));
+  $("." + $(this).attr("id")).show();
 });
 
 $( "#allProjects" ).click(function() {
@@ -268,72 +275,78 @@ $( "#allProjects" ).click(function() {
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
 });
-$( "#presentations" ).click(function() {
-  $(".articleEntry").hide();
-  $(".presentations").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#crime" ).click(function() {
-  $(".articleEntry").hide();
-  $(".crime").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#education" ).click(function() {
-  $(".articleEntry").hide();
-  $(".education").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#health" ).click(function() {
-  $(".articleEntry").hide();
-  $(".health").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#politics" ).click(function() {
-  $(".articleEntry").hide();
-  $(".politics").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#scitech" ).click(function() {
-  $(".articleEntry").hide();
-  $(".scitech").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#transit" ).click(function() {
-  $(".articleEntry").hide();
-  $(".transit").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#economics" ).click(function() {
-  $(".articleEntry").hide();
-  $(".economics").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#demographics" ).click(function() {
-  $(".articleEntry").hide();
-  $(".demographics").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#other" ).click(function() {
-  $(".articleEntry").hide();
-  $(".other").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
-$( "#environment" ).click(function() {
-  $(".articleEntry").hide();
-  $(".environment").show();
-  $(".sort-link").css("background-color","#fff");
-  $(this).css("background-color","#ddd");
-});
+// $( "#presentations" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".presentations").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#crime" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".crime").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#education" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".education").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#health" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".health").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#politics" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".politics").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#scitech" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".scitech").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#transit" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".transit").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#economics" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".economics").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#demographics" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".demographics").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#other" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".other").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#environment" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".environment").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
+// $( "#environment" ).click(function() {
+//   $(".articleEntry").hide();
+//   $(".environment").show();
+//   $(".sort-link").css("background-color","#fff");
+//   $(this).css("background-color","#ddd");
+// });
 
 $( document ).ready(function() {
  $('#search-criteria').keyup(function(){
