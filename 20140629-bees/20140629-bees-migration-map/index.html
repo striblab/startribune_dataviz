@@ -1,0 +1,753 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bee migrations</title>
+  <meta name="description" content="Bee migrations">
+  <meta name="author" content="Jeff Hargarten - Bee migrations">
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+  <link href="//cloud.webtype.com/css/b3dc427a-b9e7-46a9-b87d-75c23dcd08a6.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+}
+@font-face {
+ font-family: "Poynter Serif RE";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/aa2c2be1-0c80-48f0-93da-d9d2159161f3") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+
+@font-face {
+font-family: "WhitmanDisplay";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/15c93339-5b71-4916-b789-18f2122e901a") format("woff");
+font-style: normal;
+font-weight: bold;
+}
+
+@font-face {
+font-family: "WhitmanDisplay";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/1937142e-5616-4bf8-9309-8a8700525d13") format("woff");
+font-style: normal;
+font-weight: normal;
+}
+
+@font-face {
+font-family: "Benton Sans RE";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/243756cf-a56a-4279-b926-a0d60249a326") format("woff");
+font-style: normal;
+font-weight: normal;
+}
+
+@font-face {
+font-family: "Benton Sans RE";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/d36ad572-8b1d-4551-acfe-52a4dd3f5dd6") format("woff");
+font-style: normal;
+font-weight: bold;
+}
+
+</style>
+<style>
+  body { margin:10px; padding:10px; overflow-x:hidden;}
+  #map { position:absolute; top:0; bottom:10px; width:97.5%; }
+  #chatter{ position: absolute; top: 0; z-index: 9999; font-family: "Benton Sans RE", Helvetica, sans-serif; font-weight: normal; font-size: .9em; line-height: 130%; margin-bottom: 1.5em; text-rendering: optimizeLegibility; width:90%;  }
+  #chatter h1 { font-family: "WhitmanDisplay", Helvetica, sans-serif; font-style: normal; font-weight: normal; font-size: 2em; color: #000; }
+  #sources{ position:absolute; bottom:1.5%; left:1.5%; font-family: "Benton Sans RE", Helvetica, sans-serif; z-index: 9999; font-size:14px; }
+  .leaflet-control-attribution{ display:none; }
+  .leaflet-control-zoom{ visibility: hidden; display: none; }
+  .legend label,
+  .legend span { display:inline; float:left; height:15px; width:10%; text-align:center; font-size:10px; color:#999; padding:0; margin:0; }
+  .menu-ui { background:#fff; position:absolute; top:10px;right:10px; z-index:1; border-radius:3px; width:120px; border:1px solid rgba(0,0,0,0.4); display:none; visibility:hidden; }
+  .menu-ui a { font-size:13px; color:#404040; display:block; margin:0;padding:0; padding:10px; text-decoration:none; border-bottom:1px solid rgba(0,0,0,0.25); text-align:center; }
+  .menu-ui a:first-child { border-radius:3px 3px 0 0; }
+  .menu-ui a:last-child { border:none; border-radius:0 0 3px 3px; }
+  .menu-ui a:hover { background:#f8f8f8; color:#404040; }
+  .menu-ui a.active,
+  .menu-ui a.active:hover { background:#3887BE; color:#FFF; }
+</style>
+</head>
+<body>
+
+
+<div id="chatter"> <h1>FOLLOWING FOUR MIGRANT BEEKEEPERS</h1>
+As America's food system has evolved toward monoculture -- one crop planted across vast fields -- it has been forced to rely on beekeepers and their bees to perform the critical role of pollination. As a result, every year commercial beekeepers follow pollination routes with their bees.</div>
+
+<div id="sources"><small>Source: Pollinator Stewardship Council 2013, Star Tribune</small></div>
+
+<div id='map'></div>
+
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
+
+<script>
+var map = L.mapbox.map('map').setView([39.3003,-97.251], 4),
+red = document.getElementById('red'),
+green = document.getElementById('green '),
+blue = document.getElementById('blue'),
+green = document.getElementById('green'),
+all = document.getElementById('filter-all'),
+clear = document.getElementById('clear');
+
+//var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+var dataTiles = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/bees3.tilejson').addTo(map);
+//var dataGrid = L.mapbox.gridLayer('http://apps.startribune.com/news/tileserver/bees3.tilejson').addTo(map);
+//var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
+
+//dataControl.options.follow = true;
+
+// Start and end points, in x = longitude, y = latitude values
+var generator = new arc.GreatCircle({ x: -121.4944, y: 38.581572 }, { x: -123.035096, y: 44.942898 }, { 'name':'Sacramento to Salem', 'color':'#DAAAA8'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -120.4102, y: 44.7467 }, { x: -121.4944, y: 38.581572 }, { name: 'Salem to Sacramento', 'color':'#DAAAA8'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -117.289765, y: 34.108345 }, { x: -121.4944, y: 38.581572 }, { name: 'Sacramento to San Bernadino', 'color':'#B5C1AF'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -120.4102, y: 44.7467 }, { x: -116.45511, y: 45.0580 }, { name: 'Salem to Idaho', 'color':'#DAAAA8'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+
+var generator = new arc.GreatCircle({ x: -123.035096, y: 44.942898 }, { x: -116.45511, y: 45.0580 }, { name: 'Idaho to Salem', 'color':'#DAAAA8'});var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -117.289765, y: 34.108345 }, { x: -112.074037, y: 33.448377 }, { name: 'San Bernadino to Phoenix', 'color':'#B5C1AF'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -112.074037, y: 33.448377 }, { x: -106.4356, y: 34.198 }, { name: 'Phoenix to New Mexico', 'color':'#B5C1AF', 'color':'#B5C1AF'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -111.0938, y: 32.4356 }, { x: -106.4356, y: 34.198 }, { name: 'Tucson to New Mexico', 'color':'#B5C1AF'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -112.074037, y: 33.448377 }, { x: -121.4944, y: 38.581572 }, { name: 'Phoenix to Sacramento', 'color':'#B5C1AF'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+
+var generator = new arc.GreatCircle({ x: -121.4944, y: 38.581572 }, { x: -93.26667, y: 44.983334 }, { name: 'Sacramento to Minneapolis', 'color':'#A0BAC2'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -121.4944, y: 38.581572 }, { x: -107.2266, y: 41.8040 }, { name: 'Sacramento to Wyoming', 'color':'#A0BAC2'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -93.266675, y: 44.983334 }, { x: -107.2266, y: 41.8040 }, { name: 'Wyoming to Minneapolis', 'color':'#A0BAC2'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -121.4944, y: 38.581572 }, { x: -76.886701, y: 40.273191 }, { name: 'Sacramento to Harrisburg', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -121.4944, y: 38.581572 }, { x: -84.387982, y: 33.748995 }, { name: 'Sacramento to Atlanta', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -84.387982, y: 33.748995 }, { x: -76.886701, y: 40.273191 }, { name: 'Atlanta to Harrisburg', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -84.387982, y: 33.748995 }, { x: -77.436048, y: 37.540725 }, { name: 'Atlanta to Richmond', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -77.436048, y: 37.540725 }, { x: -76.886701, y: 40.273191 }, { name: 'Richmond to Harrisburg', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -73.756232, y: 42.652579 }, { x: -84.387982, y: 33.748995 }, { name: 'Harrisburg to Albany', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -83.0567, y: 39.1982 }, { x: -84.387982, y: 33.748995 }, { name: 'Atlanta to Ohio', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -83.0567, y: 39.1982 }, { x: -73.756232, y: 42.652579 }, { name: 'Ohio to Albany', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -84.387982, y: 33.748995 }, { x: -84.280733, y: 30.438256 }, { name: 'Atlanta to Tallahassee', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -69.77949, y: 44.310624 }, { x: -76.886701, y: 40.273191 }, { name: 'Augusta to Harrisburg', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+var generator = new arc.GreatCircle({ x: -69.77949, y: 44.310624 }, { x: -73.756232, y: 42.652579 }, { name: 'Augusta to Albany', 'color':'#C1BBC9'});
+var line = generator.Arc(100, { offset: 10 });
+L.geoJson(line.json(), {
+                style: function (feature) {
+                  return {color: feature.properties.color};
+                }
+                }).addTo(map);
+
+//map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+if (map.tap) map.tap.disable();
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
+var myLayer2 = L.mapbox.featureLayer().addTo(map);
+var myLayer3 = L.mapbox.featureLayer().addTo(map);
+
+var geoJson = [{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-100.8985,43.9928]
+    },
+    "properties": {
+        "title": "January-April: 2,200 hives to California almonds.",
+        "icon": {
+            "iconUrl": "b1.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-107.2266,41.8040]
+    },
+    "properties": {
+        "title": "May-February: Back to Minnesota to make honey.",
+        "icon": {
+            "iconUrl": "b2.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-117.8613,36.6684]
+    },
+    "properties": {
+        "title": "January-February: 6,000 hives to California almonds.",
+        "icon": {
+            "iconUrl": "g1.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [-3, -3], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-119.4434,36.1733]
+    },
+    "properties": {
+        "title": "March: Cantaloupe in Southern California.",
+        "icon": {
+            "iconUrl": "g2.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [-3, -3], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-114.6533,33.6512]
+    },
+    "properties": {
+        "title": "April-July: Cantaloupe, watermelon, muskmelon and alfalfa in Arizona.",
+        "icon": {
+            "iconUrl": "g3.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-109.5557,33.9433]
+    },
+    "properties": {
+        "title": "August-November: Melons in Arizona.",
+        "icon": {
+            "iconUrl": "g5.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-109.1162,33.0639]
+    },
+    "properties": {
+        "title": "July: Pumpkins in New Mexico.",
+        "icon": {
+            "iconUrl": "g4.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-79.8926,37.9961]
+    },
+    "properties": {
+        "title": "January-February: 400 hives sent to Georgia.",
+        "icon": {
+            "iconUrl": "p1.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-91.2305,35.4606]
+    },
+    "properties": {
+        "title": "March: Move all hives to Georgia for honey and splitting.",
+        "icon": {
+            "iconUrl": "p2.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-92.1533,41.6729] 
+    },
+    "properties": {
+        "title": "January-February: 900 hives to California almonds.",
+        "icon": {
+            "iconUrl": "p1.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-119.2237,45.0890] 
+    },
+    "properties": {
+        "title": "June-August: Central and eastern Oregon, seed for hybrid carrots and onions; Idaho for canola crops.",
+        "icon": {
+            "iconUrl": "r3.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-120.9375,42.0003] 
+    },
+    "properties": {
+        "title": "March-June: 5,000 hives to Oregon for pears, blueberries, seed production, then blackberries and raspberries.",
+        "icon": {
+            "iconUrl": "r2.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-122.3877,42.0329] 
+    },
+    "properties": {
+        "title": "January-February: 5,000 hives to California almonds.",
+        "icon": {
+            "iconUrl": "r1.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-84.375,32.1756] 
+    },
+    "properties": {
+        "title": "September-October: 1,200 to Florida for peppers and honey.",
+        "icon": {
+            "iconUrl": "p8.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-79.6729,36.5626] 
+    },
+    "properties": {
+        "title": "May: Leave 500 hives in Georgia for blueberries; 1,800 to Pennsylvania for apples.",
+        "icon": {
+            "iconUrl": "p3.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-83.4082,39.3682] 
+    },
+    "properties": {
+        "title": "August: 1,200 to Pennsylvania, 2,200 rented hives back to Georgia.",
+        "icon": {
+            "iconUrl": "p7.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-72.5977,43.3251] 
+    },
+    "properties": {
+        "title": "June-August: 3,800 to upstate New York for honey.",
+        "icon": {
+            "iconUrl": "p5.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-74.3994,41.5414] 
+    },
+    "properties": {
+        "title": "May: 1,600, plus 2,200 rented hives, to Maine for blueberries.",
+        "icon": {
+            "iconUrl": "p4.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-75.1465,41.7385] 
+    },
+    "properties": {
+        "title": "July: 1,200 to Pennsylvania for pumpkins.",
+        "icon": {
+            "iconUrl": "p6.png",
+            "iconSize": [20,20], // size of the icon
+            "iconAnchor": [10, 10], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, 0], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+}];
+
+var marker2 = [{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-93.3399,45.7981]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "b.png",
+            "iconSize": [40, 65],
+            "iconAnchor": [20, 20],
+            "popupAnchor": [0, 0]
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-112.0606,34.3071]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "g.png",
+            "iconSize": [40, 65],
+            "iconAnchor": [20, 20],
+            "popupAnchor": [0, 0]
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-76.9043,41.1124]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "p.png",
+            "iconSize": [40, 65],
+            "iconAnchor": [20, 20],
+            "popupAnchor": [0, 0]
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-123.0469,45.6755]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "r.png",
+            "iconSize": [40, 65],
+            "iconAnchor": [20, 20],
+            "popupAnchor": [0, 0]
+        }
+    }
+}];
+
+var marker3 = [{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-93.3399,45.7981]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "MN.png",
+            "iconSize": [190],
+            "iconAnchor": [120, 70],
+            "popupAnchor": [0, 0]
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-112.0606,34.3071]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "AZ.png",
+            "iconSize": [160],
+            "iconAnchor": [30, 90],
+            "popupAnchor": [0, 0]
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-76.9043,41.1124]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "PA.png",
+            "iconSize": [150],
+            "iconAnchor": [120, 90],
+            "popupAnchor": [0, 0]
+        }
+    }
+},{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-123.0469,45.6755]
+    },
+    "properties": {
+        "icon": {
+            "iconUrl": "OR.png",
+            "iconSize": [150],
+            "iconAnchor": [20, 70],
+            "popupAnchor": [0, 0]
+        }
+    }
+}];
+
+// Set a custom icon on each marker based on feature properties.
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    marker.setIcon(L.icon(feature.properties.icon));
+});
+myLayer2.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    marker.setIcon(L.icon(feature.properties.icon));
+});
+myLayer3.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    marker.setIcon(L.icon(feature.properties.icon));
+});
+
+// Add features to the map.
+myLayer.setGeoJSON(geoJson);
+
+myLayer2.setGeoJSON(marker3);
+
+myLayer3.setGeoJSON(marker2);
+
+</script>
+</html>

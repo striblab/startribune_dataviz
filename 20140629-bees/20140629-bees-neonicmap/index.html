@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Neonicotinoid use</title>
+  <meta name="description" content="Neonicotinoid use">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+<style>
+
+}
+@font-face {
+ font-family: "Poynter Serif RE";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/aa2c2be1-0c80-48f0-93da-d9d2159161f3") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+
+@font-face {
+font-family: "WhitmanDisplay";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/15c93339-5b71-4916-b789-18f2122e901a") format("woff");
+font-style: normal;
+font-weight: bold;
+}
+
+@font-face {
+font-family: "WhitmanDisplay";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/1937142e-5616-4bf8-9309-8a8700525d13") format("woff");
+font-style: normal;
+font-weight: normal;
+}
+
+@font-face {
+font-family: "Benton Sans RE";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/243756cf-a56a-4279-b926-a0d60249a326") format("woff");
+font-style: normal;
+font-weight: normal;
+}
+
+@font-face {
+font-family: "Benton Sans RE";
+src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/d36ad572-8b1d-4551-acfe-52a4dd3f5dd6") format("woff");
+font-style: normal;
+font-weight: bold;
+}
+
+</style>
+
+<style>
+body { margin:10px; padding:10px; overflow-x:hidden;}
+#map { position:absolute; left:28%; bottom:20%; width:70.5%; height: 600px;}
+#chatter{ position:absolute; bottom:53%; left:1.5%; float:left; width: 29%; font-family: "Benton Sans RE", Helvetica, sans-serif; font-weight: normal; line-height: 130%; font-size: .9em; margin-bottom: 1.5em; text-rendering: optimizeLegibility; z-index: 800; }
+#chatter h1 { font-family: "WhitmanDisplay", Helvetica, sans-serif; font-style: normal; font-weight: normal; font-size: 2em; color: #000; line-height:120%; }
+#legend{ position:absolute; bottom:40%; padding:12px; left:1.5%; width: 25%; float:left; font-family: 'Helvetica Neue',Arial,Helvetica,sans-serif; font-size:12px; color:rgba(0,0,0,.75); box-sizing: border-box; background-color: #ffffff; line-height:150%; z-index:2; padding-left:0; }
+.leaflet-control-attribution{ display:none; }
+#sources{ position:absolute; bottom:29%; left:1.5%; float:left; font-family: "Benton Sans RE", Helvetica, sans-serif; font-size:14px; width:30%; }
+.legend label, .legend span { display:inline; float:left; height:15px; width:20%; text-align:center; font-size:10px; color:#999; padding:0; margin:0; }
+.leaflet-control-zoom{ visibility: hidden; display: none; }
+.range { position:absolute; width:55.5%; bottom:28%; left:35%; }
+#year{ color:black !important; position:absolute; bottom:31%; right:9.5%; font-family: "Benton Sans RE", Helvetica, sans-serif; }
+#year2{ color:black !important; position:absolute; bottom:31%; left:35.5%; font-family: "Benton Sans RE", Helvetica, sans-serif; }
+#slide{ color:black !important; position:absolute; bottom:24%; line-height:50%; left:56%; font-size:14px; font-family: "Benton Sans RE", Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<label id='year' for='range'>&#8592; 2011</label><br />
+<label id='year2' for='range'>1994 &#8594;</label><br />
+<input id='range' class='range' type='range' min='0' max='1.0' step='any' />
+<div id="chatter"> <h1>A CHANGING LANDSCAPE</h1>
+A new class of insecticides, based on synthetic nicotine and known as neonicotinoids, were introduced in the 1990s. Because they kill insects but are nontoxic for humans and mammals, they won rapid approval by regulators and wide adoption by farmers. But they have become the focus of intense controversy over their effect on bees since colony collapse disorder was first identified in 2006. <strong>Hover over map for county data.</strong></div>
+<div id='legend'><strong>Imidacloprid use in pounds by county</strong><br />
+  <nav class='legend clearfix'>
+    <span style='background:#fff;width:9%;'>52k</span>
+    <span style='background:#C53130;'></span>
+    <span style='background:#CC7C52;'></span>
+    <span style='background:#DCA889;'></span>
+    <span style='background:#E6E7E9;'></span>
+    <span style='background:#fff;width:9%;'>0</span>
+</div>
+<div id="sources"><small>Sources: USDA; National Agricultural Statistics Service (NASS), USGS National Water-Quality Assessment (NAWQA) Program, U. of M. Dept. of Entomology, NIFA, Star Tribune reporting</small></div>
+<div id="slide"><strong>SLIDE TO SEE CHANGE</strong></div>
+
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<script>
+var map = L.mapbox.map('map');
+
+var overlay = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/bees2b.tilejson').addTo(map);
+
+var dataTiles = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/bees2.tilejson').addTo(map);
+var dataGrid = L.mapbox.gridLayer('http://apps.startribune.com/news/tileserver/bees2.tilejson').addTo(map);
+var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
+
+dataControl.options.follow = true;
+
+
+var range = document.getElementById('range');
+
+function clip() {
+  var nw = map.containerPointToLayerPoint([0, 0]),
+      se = map.containerPointToLayerPoint(map.getSize()),
+      clipX = nw.x + (se.x - nw.x) * range.value;
+
+  dataTiles.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+}
+
+range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+map.on('move', clip);
+map.setView([39.9434,-96.3281], 4);
+//map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+if (map.tap) map.tap.disable();
+
+clip();
+</script>
+
+</html>
