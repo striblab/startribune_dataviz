@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>National Honey Production</title>
+  <meta name="description" content="National Honey Production">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+
+<style>
+  body { margin:0; padding:0;}
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .map-legends .wax-legends{ width:600px !important; }
+  .legend label, .legend span { display:inline; float:right; height:15px;
+  width:15%; text-align:center; font-size:10px; color:#999; padding:0; margin:0; }
+  .leaflet-control-zoom{ visibility: hidden; display: none; }
+</style>
+</head>
+<body>
+
+<div id='legend' style="display:none;">
+  <strong>Percent change in honey production since 1987</strong><br />
+The value of pollination to U.S. agricultural production is estimated around $20 billion -- about 75 percent of which is attributable to honey bees. U.S consumption reached 40 million pounds in 2010. Only four states have shown honey production growth as a percentage change between 1987 and 2012.
+  <nav class='legend clearfix'>
+    <span style='background:#cda9a6;width:9%;color:white;'>+</span>
+    <span style='background:#dec7c4;'></span>
+    <span style='background:#ebdfdd;'></span>
+    <span style='background:#fbfbfb;'>0</span>
+    <span style='background:#ecedeb;'></span>
+    <span style='background:#dee1dd;'></span>
+    <span style='background:#c3cac3;width:11%;color:white;'>-</span>
+
+<br />
+    <small>Source: USDA</small>
+</div>
+
+<div id='map'></div>
+
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+<script>
+
+L.mapbox.config.HTTP_URLS = ["http://apps.startribune.com/news/20140629-bees-heatmap/"];
+L.mapbox.config.HTTPS_URLS = ["https://apps.startribune.com/news/20140629-bees-heatmap/"];
+
+var southWest = L.latLng(40.78054, -80.22217),
+    northEast = L.latLng(49.56798, -110.76416),
+    bounds = L.latLngBounds(southWest, northEast);
+
+//Make the map object
+var map = L.mapbox.map('map', 'http://apps.startribune.com/news/20140629-bees-heatmap/bees1.tilejson', {
+      attributionControl: false,
+      infoControl: false,
+      zoomControl: false,
+        maxBounds: bounds
+    });
+
+//Load whatever base map layer you want, whether OpenStreetMap, GoogleMaps, MapBox or something custom and random
+//var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+var osm = L.tileLayer('http://apps.startribune.com/news/20140629-bees-heatmap/1.0.0/bees1/{z}/{x}/{y}.png').addTo(map);
+
+map.setView([39.3003,-97.251], 5);
+
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+if (map.tap) map.tap.disable();
+
+//Pull interactive, data-infused vector layers from the .mbtiles hosted on the server
+var dataTiles = L.mapbox.tileLayer('http://apps.startribune.com/news/20140629-bees-heatmap/bees1.tilejson').addTo(map);
+var dataGrid = L.mapbox.gridLayer('http://apps.startribune.com/news/20140629-bees-heatmap/bees1.tilejson').addTo(map);
+var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
+
+//Add the legend to the map
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+dataControl.options.follow = true;
+</script>
+</html>
