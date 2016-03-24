@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<script src="waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="d3.slider-master/d3.slider.js"></script>
+
+<meta charset=utf-8 />
+<title>Bike Route</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="d3.slider-master/d3.slider.css" /> 
+<style>
+  body { margin:0; padding:0; overflow-x:hidden; overflow-y:scroll;}
+  #map { height:250px; width:100%; }
+  #metrics{text-align:center;}
+  #mapper{background:white;width:630px;}
+  #blog{width:100%;}
+  span{font-size:16px;}
+  h1 span {font-size:30px;}
+  path{stroke:#333 !important; stroke-width:5px !important;}
+  .leaflet-control-attribution{display:none !important;}
+  .mapbox-logo, .leaflet-control, .mapbox-logo-true {display:none !important;}
+  p {font-size: 20px;}
+  .stat{float:left;margin:10px;text-align:center;width:12.8%;}
+  .num{font-weight:900;}
+  .title{font-weight:bold; font-size:18px; font-family:Arial;}
+  #wrapper{width:630px !important;padding:20px;}
+  #photo img{width:50%;float:right;}
+  #slider{margin:10px; width:570px; float:right;}
+  #days_label{float:left;}
+  #title{text-align:center;}
+
+  #bio{float:left !important; width:480px;}
+  #blog_title{text-align:center;}
+  #slug{font-weight:bold;}
+  #headshot_block{float:right; width:150px;}
+  #social_icons{float:right; width:100px;}
+  #dateline{float:left; width:480px;}
+
+.d3-slider-handle {
+position: absolute;
+width: 1.2em;
+height: 1.2em;
+border: 1px solid #66BC45;
+border-radius: 4px;
+background: #eee;
+background: #66BC45;
+z-index: 3;
+}
+
+.d3-slider-handle:hover { background: #5cbf2a; cursor:pointer; }
+
+#container {display: table; width:100% !important;}
+#row  {display: table-row;}
+#left, #right, #middle {display: table-cell; width:30% !important;}
+#prev{float:left;}
+#next{float:right;}
+#top{margin-left:40%;}
+
+</style>
+
+</head>
+<body>
+<div id="wrapper">
+
+<div id="header">
+<h1 id="blog_title">Pedaling America</h1>
+
+<p id="slug">A cross-country adventure with bike blogger Tony Brown</p>
+
+<p id="top_chatter">words words words words words words words words words words words words words words words words words words words words words</p>
+
+<div id="dateline"><h3>Day <span id="day" class="num"></span> &bull; <span id="stop2"></span> &bull; <span id="miles"></span> of 1323 miles</h3></div>
+
+<div id="social_icons">social icons</div>
+
+</div>
+
+<div id="mapper">
+<div id='map'></div>
+
+<p style="clear:both;"></p>
+
+<div id="days_label">Days: </div><div id="slider"></div>
+
+<p style="clear:both;"></p>
+
+</div>
+
+<div id="blog">
+
+<h2 id="title"></h2>
+
+<div id="metrics">
+<div class="stat">
+<img src="location.png" /><br />
+<span class="title">Location</span>
+<p><span id="stop"></span></p>
+</div>
+<div class="stat">
+<img src="distance.png" /><br />
+<span class="title">Distance</span>
+<p><span id="distance" class="num"></span><span> miles</span></p>
+</div>
+<div class="stat">
+<img src="speed.png" /><br />
+<span class="title">Speed</span>
+<p><span><span id="speed" class="num"></span><span> mph</span></p>
+</div>
+<div class="stat">
+<img src="duration.png" /><br />
+<span class="title">Duration</span>
+<p><span><span id="duration" class="num"></span><span> hours</span></p>
+</div>
+<div class="stat">
+<img src="terrain.png" /><br />
+<span class="title">Terrain</span>
+<p><span><span id="terrain"></span></p>
+</div>
+<div class="stat">
+<img src="weather.png" /><br />
+<span class="title">Weather</span>
+<p><span><span id="weather"></span></p>
+</div>
+</div>
+
+<div id="photo"></div>
+
+<div id="date"></div>
+<div class="entry" id="entry"></div>
+
+<div id="video"></div>
+<div id="media"></div>
+
+</div>
+
+<div><a href='#top'></a></div>
+
+<div id="switch"></div>
+
+<div id="headshot_block">
+<p id="headshot">photo</p>
+</div>
+<div id="bio">
+Tony Brown is a Minneapolis-based freelance writer, working largely in journalism and nonprofit development. He is currently riding his bicycle across the country, west to east, with his childhood friend.
+</div>
+
+</div>
+
+
+<script>
+var j = 0;
+
+var waypoint = new Waypoint({
+  element: document.getElementById('entry'),
+  handler: function(direction) {
+    //loadHeader(0);
+  }
+})
+</script>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
+var map = L.mapbox.map('map', 'examples.map-i87786ca').setView([30.7890, -84.7815],6);
+
+var leg1 = L.mapbox.featureLayer()
+    .loadURL('tex.geojson')
+    .addTo(map);
+var leg2 = L.mapbox.featureLayer()
+    .loadURL('sd.geojson')
+    .addTo(map);
+
+var bikeDude;
+var spot;
+</script>
+<script>
+scrubInit(0);
+
+function scrubInit(i){
+$.getJSON( "https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=ccuHergCzNM5prs1468cqo7tJktA0_QXfGRxBLAFHhroUglt1gCBOQFT_4csXlCbMsk_XuyF3UJR3gfCVoRkA02yTZlz4NNTOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzfspDFzQK6GrLM0eoOZ5TIOnqTxsArftO2Po860f-NZwzK-lIuPz36z08hnCfeSab4KwLvAsU0j-LiAXVloloiUAy7e3y2snJuMzfiZ6VcD_L_B4PaW-7gvB6hEsk2j4gZ0b2s6wiAu4sq7x9Ad11ursOF32aUKnl&lib=MMrwE3mIeiG43FmGAYlH5YDbZ7jG6IkQL", function( data ) {
+
+$("#slider").empty();
+
+console.log("scrub " + i);
+
+var switchInfo = document.getElementById('switch');
+var slide_spot;
+var count = +data.Sheet1[0].num;
+loadCrumbs(count);
+
+var day = location.search.split('day=')[1];
+var indexed = Number(day);
+
+if (isFinite(indexed)){slide_spot=indexed; loadHeader(count-indexed); } else {loadHeader(0);  slide_spot=count + i; }
+
+if (slide_spot == count){
+switchInfo.innerHTML = "<div id='container'><div id='row'><div id='left'><div id='prev'><a id='prev_button' href='javascript:void(0)'>Previous</a></div></div><div id='middle'><div id='top'><a href='javascript:void(0)' id='top_button'>Top</a></div></div> <div id='right'><div id='next'>Next</div></div></div></div>"; 
+}
+else if (slide_spot == 1){
+switchInfo.innerHTML = "<div id='container'><div id='row'><div id='left'><div id='prev'>Previous</div></div><div id='middle'><div id='top'><a href='javascript:void(0)' id='top_button'>Top</a></div></div> <div id='right'><div id='next'><a id='next_button' href='javascript:void(0)'>Next</a></div></div></div></div>"; 
+}
+else {
+switchInfo.innerHTML = "<div id='container'><div id='row'><div id='left'><div id='prev'><a id='prev_button' href='javascript:void(0)'>Previous</a></div></div><div id='middle'><div id='top'><a href='javascript:void(0)' id='top_button'>Top</a></div></div> <div id='right'><div id='next'><a id='next_button' href='javascript:void(0)'>Next</a></div></div></div></div>"; 
+}
+
+d3.select('#next_button').on('click', function() { slider.value(++slide_spot);  $("html, body").animate({ scrollTop: 0 }, "slow"); });
+d3.select('#prev_button').on('click', function() { slider.value(--slide_spot);  $("html, body").animate({ scrollTop: 0 }, "slow"); });
+
+$("#top_button").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
+var slider = d3.slider().axis(true);
+
+d3.select('#slider').call(slider.min(1).max(count).value(slide_spot).axis(d3.svg.axis().tickFormat(d3.format(",d0")).orient("top").ticks(count)).step(1).on("slide", function(evt, value) {
+console.log(slide_spot);
+loadHeader(count-value);
+
+if (value == count){
+switchInfo.innerHTML = "<div id='container'><div id='row'><div id='left'><div id='prev'><a id='prev_button' href='javascript:void(0)'>Previous</a></div></div><div id='middle'><div id='top'><a href='javascript:void(0)' id='top_button'>Top</a></div></div> <div id='right'><div id='next'>Next</div></div></div></div>"; 
+}
+else if (value == 1){
+switchInfo.innerHTML = "<div id='container'><div id='row'><div id='left'><div id='prev'>Previous</div></div><div id='middle'><div id='top'><a href='javascript:void(0)' id='top_button'>Top</a></div></div> <div id='right'><div id='next'><a id='next_button' href='javascript:void(0)'>Next</a></div></div></div></div>"; 
+}
+else {
+switchInfo.innerHTML = "<div id='container'><div id='row'><div id='left'><div id='prev'><a id='prev_button' href='javascript:void(0)'>Previous</a></div></div><div id='middle'><div id='top'><a href='javascript:void(0)' id='top_button'>Top</a></div></div> <div id='right'><div id='next'><a id='next_button' href='javascript:void(0)'>Next</a></div></div></div></div>"; 
+}
+
+d3.select('#next_button').on('click', function() { slider.value(++value);  $("html, body").animate({ scrollTop: 0 }, "slow"); });
+d3.select('#prev_button').on('click', function() { slider.value(--value);  $("html, body").animate({ scrollTop: 0 }, "slow"); });
+
+$("#top_button").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+
+}));
+
+});
+}
+
+
+function loadHeader(i){
+var dateInfo = document.getElementById('date');
+var dayInfo = document.getElementById('day');
+var stopInfo = document.getElementById('stop');
+var stop2Info = document.getElementById('stop2');
+var distanceInfo = document.getElementById('distance');
+var speedInfo = document.getElementById('speed');
+var durationInfo = document.getElementById('duration');
+var terrainInfo = document.getElementById('terrain');
+var weatherInfo = document.getElementById('weather');
+var entryInfo = document.getElementById('entry');
+var titleInfo = document.getElementById('title');
+var photoInfo = document.getElementById('photo');
+var milesInfo = document.getElementById('miles');
+var videoInfo = document.getElementById('video');
+var mediaInfo = document.getElementById('media');
+
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=s8YKWie8hVZOFhKmUDNJaXcFpeAM3e85UU9ZJsUBfbTVwr3g620ENOynCyhGXNP2WW7yUhNz9g2FdPn3D1Ig1SKPBheEBw_yOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa6mxe6tDbziZec7grFEEynegH3jwQBCvcC-ThE4ajOWsMftbtrq3RB0ZqpkyQzzZhz3Al4z0cbb6aRIlzoqiWYAclrX4ROTKb1Vj9xjaxJQNltOdXsov6vX_783Tz4FBkFa8RVPDgqZAwqJbeTowOR_fVIgxkfofiQ&lib=MMrwE3mIeiG43FmGAYlH5YDbZ7jG6IkQL", function(error, bikeData) {
+
+if (bikeDude != null){map.removeLayer(bikeDude);}
+
+dateInfo.innerHTML = bikeData.Sheet1[i].date; 
+dayInfo.innerHTML = bikeData.Sheet1[i].day; 
+stopInfo.innerHTML = bikeData.Sheet1[i].last_stop;
+stop2Info.innerHTML = bikeData.Sheet1[i].last_stop;
+distanceInfo.innerHTML = bikeData.Sheet1[i].distance; 
+speedInfo.innerHTML = bikeData.Sheet1[i].speed; 
+durationInfo.innerHTML = bikeData.Sheet1[i].duration;
+terrainInfo.innerHTML = bikeData.Sheet1[i].terrain;
+weatherInfo.innerHTML = bikeData.Sheet1[i].weather; 
+entryInfo.innerHTML = bikeData.Sheet1[i].entry; 
+titleInfo.innerHTML = bikeData.Sheet1[i].title; 
+photoInfo.innerHTML = "<img src='" + bikeData.Sheet1[i].photo + "' />";
+milesInfo.innerHTML = bikeData.Sheet1[i].total_miles; 
+
+var stateObj = { foo: "bar" };
+history.pushState(stateObj, "", "http://jeffhargarten.com/interactives/bike_route/index_style.html?day=" + bikeData.Sheet1[i].day);
+
+if (bikeData.Sheet1[i].video != "null"){videoInfo.innerHTML = "<iframe width='630' height='360' src=" + bikeData.Sheet1[i].video + " frameborder='0' allowfullscreen></iframe>";}
+else {videoInfo.innerHTML = "";}
+
+if (bikeData.Sheet1[i].other_media != "null"){mediaInfo.innerHTML = bikeData.Sheet1[i].other_media; }
+else {mediaInfo.innerHTML = "";}
+
+$(function() {
+    function count($this){
+        var current = parseInt($this.html(), 10);
+        $this.html(++current);
+        if(current < $this.data('count')){
+            setTimeout(function(){count($this)}, 10);
+        }
+    }        
+  $(".num").each(function() {
+      $(this).data('count', parseInt($(this).html(), 10));
+      $(this).html('0');
+      count($(this));
+  });
+});
+
+map.setView([bikeData.Sheet1[i].cx, bikeData.Sheet1[i].cy],6);
+
+bikeDude = L.mapbox.featureLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+    // for the full specification
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        // coordinates here are in longitude, latitude order because
+        // x, y is the standard for GeoJSON and many formats
+        coordinates: [
+          bikeData.Sheet1[i].y,
+          bikeData.Sheet1[i].x 
+        ]
+    },
+    properties: {
+        title: bikeData.Sheet1[i].last_stop,
+        description: bikeData.Sheet1[i].description,
+	image: "http://i.imgur.com/Mv5NZmw.jpg",
+        // one can customize markers by adding simplestyle properties
+        // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+        'marker-size': 'large',
+        'marker-color': '#66BC45',
+        'marker-symbol': 'bicycle'
+    }
+}).addTo(map);
+
+});
+}
+
+function loadCrumbs(max){
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=s8YKWie8hVZOFhKmUDNJaXcFpeAM3e85UU9ZJsUBfbTVwr3g620ENOynCyhGXNP2WW7yUhNz9g2FdPn3D1Ig1SKPBheEBw_yOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa6mxe6tDbziZec7grFEEynegH3jwQBCvcC-ThE4ajOWsMftbtrq3RB0ZqpkyQzzZhz3Al4z0cbb6aRIlzoqiWYAclrX4ROTKb1Vj9xjaxJQNltOdXsov6vX_783Tz4FBkFa8RVPDgqZAwqJbeTowOR_fVIgxkfofiQ&lib=MMrwE3mIeiG43FmGAYlH5YDbZ7jG6IkQL", function(error, bikeData) {
+for (i = 0; i < max; i++){
+spot = L.mapbox.featureLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+    // for the full specification
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        // coordinates here are in longitude, latitude order because
+        // x, y is the standard for GeoJSON and many formats
+        coordinates: [
+          bikeData.Sheet1[i].y,
+          bikeData.Sheet1[i].x 
+        ]
+    },
+    properties: {
+        title: bikeData.Sheet1[i].last_stop,
+        description: bikeData.Sheet1[i].description,
+	image: "http://i.imgur.com/Mv5NZmw.jpg",
+        // one can customize markers by adding simplestyle properties
+        // https://www.mapbox.com/guides/an-open-platform/#simplestyle
+        'marker-size': 'small',
+        'marker-color': '#66BC45',
+        'marker-symbol': 'circle'
+    }
+}).addTo(map);
+}
+});
+}
+
+
+</script>
+</body>
+</html>
