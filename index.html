@@ -23,7 +23,6 @@
 
       p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
       .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
-      .specialContentWrapper{ width:100%; }
       #sorting_mobile { display:none; }
       #leftPane { float:left !important; width:630px !important; }
       #infobox { font-size:16px; margin:10px; }
@@ -59,6 +58,7 @@
       .breaker { clear:both; margin:7px; padding:10px; }
       .article-share, .comments-section { display:none !important; }
       #contributors { display:none; }
+      #top { padding:35px; }
 
       .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#61bd1a; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
       .git:hover { cursor:pointer; background-color:#fff !important; }
@@ -66,7 +66,7 @@
 
   <style type="text/css"> 
 /*page template styles*/
-    #specialContentWrapper{ margin-top:50px !important; width:970px !important; margin-left:auto; margin-right:auto; }
+    #specialContentWrapper{ width:970px !important; margin-left:auto; margin-right:auto; }
     .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
     .nav-section-mod.col-2 li { text-align:center !important; }
     .nav-shortcuts-inner { text-align:center !important; }
@@ -164,8 +164,8 @@
 <div id="articlePane" class="sectionBox">
 </div>
 
-<div class="more"><a  href="javascript:void(0)">See more</a></div>
-
+<!-- <div class="more"><a  href="javascript:void(0)">See more</a></div>
+ -->
 </div>
 
 <div id="dataSidebar">
@@ -281,78 +281,6 @@ $( "#allProjects" ).click(function() {
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
 });
-// $( "#presentations" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".presentations").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#crime" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".crime").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#education" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".education").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#health" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".health").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#politics" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".politics").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#scitech" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".scitech").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#transit" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".transit").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#economics" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".economics").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#demographics" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".demographics").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#other" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".other").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#environment" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".environment").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
-// $( "#environment" ).click(function() {
-//   $(".articleEntry").hide();
-//   $(".environment").show();
-//   $(".sort-link").css("background-color","#fff");
-//   $(this).css("background-color","#ddd");
-// });
 
 $( document ).ready(function() {
  $('#search-criteria').keyup(function(){
@@ -382,21 +310,21 @@ $('#search-criteria_m').keyup(function(){
 
 });
 
-$(document).ready(function () {
-  $(".articleEntry").hide();
-    size_li = $(".articleEntry").size();
-    x=3;
-    $('.articleEntry:lt('+x+')').show();
-    $('.more').click(function () {
-        x= (x+3 <= size_li) ? x+3 : size_li;
-        $('.articleEntry:lt('+x+')').show();
-    });
-    if($(window).scrollTop() + screen.height > $('body').height())
-{
-        x= (x+3 <= size_li) ? x+3 : size_li;
-        $('.articleEntry:lt('+x+')').show();
-}
-});
+// $(document).ready(function () {
+//   $(".articleEntry").hide();
+//     size_li = $(".articleEntry").size();
+//     x=3;
+//     $('.articleEntry:lt('+x+')').show();
+//     $('.more').click(function () {
+//         x= (x+3 <= size_li) ? x+3 : size_li;
+//         $('.articleEntry:lt('+x+')').show();
+//     });
+//     if($(window).scrollTop() + screen.height > $('body').height())
+// {
+//         x= (x+3 <= size_li) ? x+3 : size_li;
+//         $('.articleEntry:lt('+x+')').show();
+// }
+// });
 
 $(document).ready(function () {
 
