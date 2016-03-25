@@ -1,0 +1,141 @@
+<html>
+<head>
+<style>
+body, html {
+    padding: 0, 0;
+    margin: 0 0;
+    overflow: hidden;
+}
+circle:hover{
+stroke-width:5px;
+stroke-color:#333;
+}
+
+.bigNum{
+font-size:48px;
+font-weight:900;
+}
+
+#wrapper{
+width:630px;
+}
+
+#play{
+font-weight:900;
+font-size:30px;
+}
+
+#play a{
+color:black;
+text-decoration:none;
+}
+
+#play a:hover{
+color:black;
+text-decoration:underline;
+}
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+<center><div id="play"><span><a href="#" onclick="return false;">Play</a> </span></div></center>
+<center><canvas id="canvas1" height="630" width="630"></canvas></center>
+<p style="clear:both;"></p>
+<center><span class="bigNum">28000000000</span></center>
+<center><div id="year"> connected devices projected by 2020</div></center>
+<small>Source: Gartner</small>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$("#year").hide();
+$(".bigNum").hide();
+
+
+var mainCanvas = document.getElementById("canvas1");
+var mainContext = mainCanvas.getContext('2d');
+ 
+var canvasWidth = mainCanvas.width;
+var canvasHeight = mainCanvas.height;
+ 
+var angle = 0;
+ 
+var requestAnimationFrame = window.requestAnimationFrame || 
+                            window.mozRequestAnimationFrame || 
+                            window.webkitRequestAnimationFrame || 
+                            window.msRequestAnimationFrame;
+    mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+     
+    // color in the background
+    mainContext.fillStyle = "#fff";
+    mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+     
+    // draw the circle
+    mainContext.beginPath();
+     
+    var radius = 1 + angle * 15;
+    mainContext.arc(315, 315, radius, 0, Math.PI * 2, false);
+    mainContext.closePath();
+     
+    // color in the circle
+    mainContext.fillStyle = "green";
+    mainContext.fill();
+ 
+function drawCircle() {
+    mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+     
+    // color in the background
+    mainContext.fillStyle = "#fff";
+    mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+     
+    // draw the circle
+    mainContext.beginPath();
+     
+    var radius = 1 + angle * 10;
+    mainContext.arc(315, 315, radius, 0, Math.PI * 2, false);
+    mainContext.closePath();
+     
+    // color in the circle
+    mainContext.fillStyle = "green";
+    mainContext.fill();
+      
+    angle += Math.PI / 64;
+    
+if (radius < 260) { 
+    requestAnimationFrame(drawCircle);
+}
+}
+$( "#play a" ).click(function() {
+
+$("#year").show();
+$(".bigNum").show();
+$("#play").hide();
+
+angle = 0;
+drawCircle();
+
+$(function() {
+    function count($this){
+        var current = parseInt($this.html(), 10);
+
+       if(current < $this.data('count')){
+        $this.html(current + 200000000);
+            setTimeout(function(){count($this)}, 60);
+        }
+       else{
+//$("#play").show();
+}
+    }        
+  $(".bigNum").each(function() {
+      $(this).data('count', parseInt($(this).html(), 10));
+      $(this).html('0');
+      count($(this));
+  });
+});
+});
+
+</script>
+</body>
+</html>
