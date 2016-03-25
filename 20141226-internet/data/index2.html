@@ -1,0 +1,84 @@
+<html>
+<head>
+
+  <script src='wax/ext/leaflet-src.js' type='text/javascript'></script>
+  <script src='wax/dist/wax.leaf.js' type='text/javascript'></script>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<style>
+
+#map-div { 
+height: 500px; 
+width:960px; 
+cursor: pointer;
+}
+body {
+  background: #555;
+  margin: 1em auto 4em auto;
+  width: 960px;
+}
+.wax-tooltip {
+	position:absolute;
+	right:10px;
+	top:10px;
+	padding:10px;
+	background-color:#FFFFFF;
+	opacity:1;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	width: 200px;
+	z-index: 5;
+}
+.wax-legend {
+	position:absolute;
+	right:10px;
+	top:300px;
+	padding:10px;
+	background-color:#FFFFFF;
+	opacity:0.9;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	width: 200px;
+	z-index: 5;
+}
+.tooltip_title {
+	font-size: 1.2em;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}</style>
+</head>
+
+<body>
+<div id="map-div"></div>
+<script>
+var map = new L.Map('map-div');
+
+var southWest = L.latLng(40.78054, -80.22217),
+    northEast = L.latLng(49.56798, -110.76416),
+    bounds = L.latLngBounds(southWest, northEast);
+
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors', maxZoom: 10}).addTo(map).setZIndex(-1);
+
+// Load TileJSON
+wax.tilejson('http://www.jeffhargarten.com/interactives/smoking/bandwidth.tilejson', function(tilejson) {
+
+  // Create map and add image tiles
+    map.addLayer(new wax.leaf.connector(tilejson));
+    map.setView(new L.LatLng(45.9703, -94.1748),6);	  
+    map.setMaxBounds(bounds);
+  
+  // Create map legend
+  wax.leaf.legend(map, tilejson).appendTo(map._container);
+
+  // Add map interaction (tooltips)	
+  wax.leaf.interaction()
+    .map(map)
+    .tilejson(tilejson)
+    .on(wax.tooltip().animate(true).parent(map._container).events());
+ 
+});
+</script>
+
+</body>
+</html>

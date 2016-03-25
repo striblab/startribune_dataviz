@@ -1,8 +1,10 @@
-Star Tribune - Birdflu Incidence by Minnesota County Data Visualization
+Star Tribune - Tracking the spread of avian flu
 ================
 
-by Jeff Hargarten
+by Frey Hargarten
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3) and [jQuery](https://github.com/jquery/jquery). Powered by Google Sheets.
 
 The files can be run in any live server setup. Just open the index.php or index.html file in your browser.
+
+http://www.startribune.com/business/299362711.html
