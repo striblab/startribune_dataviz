@@ -59,6 +59,7 @@
       .article-share, .comments-section { display:none !important; }
       #contributors { display:none; }
       #top { padding:35px; }
+      .tools { display:none; }
 
       .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#61bd1a; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
       .git:hover { cursor:pointer; background-color:#fff !important; }
@@ -274,10 +275,12 @@ $( ".sort-link" ).click(function() {
   $(this).css("background-color","#ddd");
   console.log($(this).attr("data"));
   $("." + $(this).attr("id")).show();
+  if ($(this).attr("id") != "tools") { $(".tools").hide(); }
 });
 
 $( "#allProjects" ).click(function() {
   $(".articleEntry").show();
+  $(".tools").hide();
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
 });
