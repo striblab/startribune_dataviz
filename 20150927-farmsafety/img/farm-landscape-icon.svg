@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:#A17A94;}
+	.st2{fill:#B96569;}
+	.st3{fill:#CA7A68;}
+	.st4{fill:#76909F;}
+	.st5{fill:#B1AE68;}
+	.st6{fill:#999999;}
+	.st7{fill:#CF995A;}
+	.st8{fill:#9C8F68;}
+	.st9{fill:#6F9A7C;}
+	.st10{fill:#FFFFFF;}
+</style>
+<g id="gray_icon_linework" class="st0">
+</g>
+<g id="BGs">
+	<path class="st9" d="M276,200H24c-13.255,0-24-10.745-24-24V24C0,10.745,10.745,0,24,0h252c13.255,0,24,10.745,24,24v152
+		C300,189.255,289.255,200,276,200z"/>
+</g>
+<g id="Layer_1">
+	<g id="atv">
+	</g>
+	<g id="silo">
+	</g>
+	<g id="skid-loader">
+	</g>
+	<g id="landscape">
+		<polygon class="st10" points="219.807,80.157 202.854,47.2 215.933,47.2 189.777,11.772 163.62,47.2 176.698,47.2 159.745,80.157 
+			174.761,80.157 159.745,113.094 189.777,113.094 219.807,113.094 204.792,80.157 		"/>
+		<rect x="186.386" y="106.594" class="st10" width="6.781" height="72.572"/>
+		<polygon class="st10" points="281.248,94.693 265.991,65.032 277.761,65.032 254.22,33.147 230.68,65.032 242.45,65.032 
+			227.192,94.693 240.706,94.693 227.192,124.337 254.22,124.337 281.248,124.337 267.734,94.693 		"/>
+		<rect x="250.83" y="119.469" class="st10" width="6.781" height="62.572"/>
+		<path class="st10" d="M223.888,167.03c-58.236,1.089-101.708-34.549-149.33-45.647C30.983,111.227,0,116.52,0,116.52v84.147h300
+			v-44.574C300,156.093,293.477,165.729,223.888,167.03z"/>
+		<path class="st9" d="M51.108,138.076C27.98,135.043,11.353,137.445,0,138.814v41.515c10.569,8.171,25.736,15.359,46.477,18.08
+			c49.897,6.545,97.39-18.067,98.677-27.876C146.441,160.724,101.005,144.62,51.108,138.076z"/>
+	</g>
+	<g id="tractor">
+	</g>
+	<g id="livestock">
+	</g>
+	<g id="truck">
+	</g>
+	<g id="other">
+	</g>
+</g>
+</svg>
