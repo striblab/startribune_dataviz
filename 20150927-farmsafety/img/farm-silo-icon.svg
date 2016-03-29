@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:#A17A94;}
+	.st2{fill:#B96569;}
+	.st3{fill:#CA7A68;}
+	.st4{fill:#76909F;}
+	.st5{fill:#B1AE68;}
+	.st6{fill:#999999;}
+	.st7{fill:#CF995A;}
+	.st8{fill:#9C8F68;}
+	.st9{fill:#6F9A7C;}
+	.st10{fill:#FFFFFF;}
+</style>
+<g id="gray_icon_linework" class="st0">
+</g>
+<g id="BGs">
+	<path class="st1" d="M276,200H24c-13.255,0-24-10.745-24-24V24C0,10.745,10.745,0,24,0h252c13.255,0,24,10.745,24,24v152
+		C300,189.255,289.255,200,276,200z"/>
+</g>
+<g id="Layer_1">
+	<g id="atv">
+	</g>
+	<g id="silo">
+		<polygon class="st10" points="258.597,200 258.597,150.894 269.45,150.894 247.492,96.444 199.989,72.655 152.486,96.444 
+			130.528,150.894 141.381,150.894 141.381,200 		"/>
+		<rect x="192.489" y="100.268" class="st1" width="15" height="25"/>
+		<rect x="177.489" y="159.677" class="st1" width="45" height="40"/>
+		<rect x="41.206" y="59" class="st10" width="85.232" height="30"/>
+		<rect x="41.206" y="95" class="st10" width="85.232" height="30"/>
+		<rect x="41.206" y="131" class="st10" width="85.232" height="30"/>
+		<rect x="41.206" y="167" class="st10" width="85.232" height="33"/>
+		<polygon class="st10" points="41.205,53 83.821,17 126.438,53 		"/>
+	</g>
+	<g id="skid-loader">
+	</g>
+	<g id="landscape">
+	</g>
+	<g id="tractor">
+	</g>
+	<g id="livestock">
+	</g>
+	<g id="truck">
+	</g>
+	<g id="other">
+	</g>
+</g>
+</svg>

@@ -96,6 +96,7 @@
     .fyre .fyre-auth { margin:0px 0 0 0 !important; }
     .fyre .fyre-auth .fyre-login-bar, .fyre .fyre-auth .fyre-user-loggedout { color:#61bf1a !important; text-decoration:none !important; }
     .striblogo { width:100% !important; }
+    .count { float:right; }
 
     @media only screen and (min-width:650px) {
       .sort-link-mid:hover, .sort-link:hover, .link:hover { background-color:#eee !important; cursor:pointer; }
@@ -171,18 +172,18 @@
 
 <div id="dataSidebar">
 <div id="sorting" class="sectionBox">
-<div class="sort-link" id="allProjects">All Projects</div>
-<div class="sort-link" id="economics">Business and Economics</div>
-<div class="sort-link" id="crime">Criminal Justice</div>
-<div class="sort-link" id="demographics">Demographics</div>
-<div class="sort-link" id="education">Education</div>
-<div class="sort-link" id="environment">Environment</div>
-<div class="sort-link" id="health">Health</div>
-<div class="sort-link" id="politics">Politics</div>
-<div class="sort-link" id="scitech">Science and Technology</div>
-<div class="sort-link" id="transit">Transportation and Infrastructure</div>
-<div class="sort-link" id="other">Other</div>
-<div class="sort-link" id="tools">Tools</div>
+<div class="sort-link" id="allProjects">All Projects<div class="count">0</div></div>
+<div class="sort-link" id="economics">Business and Economics<div class="count">0</div></div>
+<div class="sort-link" id="crime">Criminal Justice<div class="count">0</div></div>
+<div class="sort-link" id="demographics">Demographics<div class="count">0</div></div>
+<div class="sort-link" id="education">Education<div class="count">0</div></div>
+<div class="sort-link" id="environment">Environment<div class="count">0</div></div>
+<div class="sort-link" id="health">Health<div class="count">0</div></div>
+<div class="sort-link" id="politics">Politics<div class="count">0</div></div>
+<div class="sort-link" id="scitech">Science and Technology<div class="count">0</div></div>
+<div class="sort-link" id="transit">Transportation and Infrastructure<div class="count">0</div></div>
+<div class="sort-link" id="other">Other<div class="count">0</div></div>
+<div class="sort-link" id="tools">Tools<div class="count">0</div></div>
 <div id="searchMe"><input type="text" id="search-criteria"/></div>
 <div id="links">
 <div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
@@ -266,7 +267,12 @@ else { var git = ""; }
 });
 
 $('#allProjects').css("background-color","#ddd");
+  $( ".sort-link" ).each(function( index ) {
+  var type = "." + $(this).attr("id");
+  $(this).find(".count").html($(type).length);
+});
 
+  $("#allProjects").find(".count").html($(".articleEntry").length);
 $( ".sort-link" ).click(function() {
   $('#search-criteria_m').val("");
   $('#search-criteria').val("");
@@ -286,6 +292,8 @@ $( "#allProjects" ).click(function() {
 });
 
 $( document ).ready(function() {
+   
+
  $('#search-criteria').keyup(function(){
     $('.articleEntry').hide();
     $(".sort-link").css("background-color","#fff");
