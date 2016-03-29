@@ -75,7 +75,7 @@ var llb = new mapboxgl.LngLatBounds(sw, ne);
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
+    style: 'mapbox://styles/shadowflare/cimdyoofx00iv9qkpdj7o0izi',
     center: [-93.266667, 44.983333],
     zoom: 10.2,
     minZoom: 10,
