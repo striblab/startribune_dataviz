@@ -18,7 +18,7 @@
 <body>
 
 <style>
-    .map-overlay-container { position: absolute; width: 25%; top: 0; left: 0; padding: 10px; z-index: 1; }
+    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
     .map-overlay { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
     .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
     .mapboxgl-ctrl-attrib { display:none; }
@@ -26,12 +26,16 @@
     .pause { background-color:#333 !important; color:#fff; }
     #diverse { color:#299129; }
  
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:1em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
+    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
     #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:1em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
+    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
     .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
     .previous { float:left; }
     .next { float:right; }
+
+    @media (max-width:500px) {
+      .map-overlay-container {width:100%; }
+    }
 </style>
 
 <div id='map'></div>
