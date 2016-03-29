@@ -123,11 +123,12 @@ var sourceObj = new mapboxgl.GeoJSONSource({
 var title = document.getElementById('location-title');
 var description = document.getElementById('location-description');
 
-var timer;
+var timer = [];
 
 function playback(index,stream) {
     title.textContent = data[index].title;
-    description.textContent = data[index].description;
+    // description.textContent = data[index].description;
+    $("#location-description").html(data[index].description);
     $("#timestamp").html(data[index].date + " @ " + data[index].time);
     if (data[index].photo != "#") { $("#photo").html("<img src='" + data[index].photo + "' />"); }
 
@@ -142,11 +143,13 @@ function playback(index,stream) {
 }
 
 function play(j,timeout){
- timer = window.setTimeout(function() { playback(j); }, timeout); 
+ timer[j] = window.setTimeout(function() { playback(j); }, timeout); 
 }
 
 function stop(){
-  clearTimeout(timer);
+  for (var i=0; i<data.length; i++){
+     clearTimeout(timer[i]);
+  }
 }
 
 // Display the last title/description first
