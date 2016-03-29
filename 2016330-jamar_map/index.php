@@ -178,7 +178,7 @@ $(document).ready(function() {
           if ($(this).attr("class") == "play myButton2") {
              $(this).attr("class", "pause myButton2");
              $(this).html("&#9724;");
-             for (var j=0; j<data.length; j++){ play(j,j*2000); index++; }
+             for (var j=0; j<data.length; j++){ play(j,j*2000); if (index < data.length) { index++; } }
          }
           else {
              $(this).attr("class", "play myButton2");
