@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>State Comparisons</title>
+  <meta name="description" content="State Comparisons">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="http://apps.startribune.com/news/dataviz-css-master/startribune_dataviz_styles.css" />  
+
+<style>
+	.bucket { position:relative; width:220px; }
+    .bar { width:100; display:inline-block; }
+    .tooltip { border:1px solid #ccc; background-color:#fff; font-family:"Benton Sans"; color:#333; font-weight:bold; padding:10px; }
+    rect:hover { fill:#333 !important; }
+    #wrapper { width:100%; }
+	
+
+body {
+font-family: "Benton Sans RE", Helvetica, Arial, sans-serif;
+font-size: 13px;
+line-height: 16px;
+color: #333;
+}
+
+h1.headline {
+font-family: "Benton Sans RE", Helvetica, Arial, sans-serif;	
+font-size: 16px;
+color: #333;
+/*letter-spacing: .5px;*/
+margin:0 0 5px 0;
+text-transform: uppercase;	
+}
+
+p.intro {
+font-family: "Benton Sans RE", Helvetica, Arial, sans-serif;	
+font-size: 13px;
+line-height: 16px;
+color: #333;
+margin:0 0 15px 0;
+}
+
+p.legend {
+font-family: "Benton Sans RE", Helvetica, Arial, sans-serif;
+font-size: 13px;
+color: #666;
+text-align: left;
+margin:15px 0px 0px 0;
+width:250px;
+}
+
+p.credit {
+font-family: "Benton Sans RE", Helvetica, Arial, sans-serif;
+font-size: 10px;
+color: #666;
+text-align: left;
+margin:5px 0px 0 0;
+width:250px;
+}
+	
+.button {
+width:207px;
+font-family:"Benton Sans";
+font-weight:normal;
+font-size:13px;
+letter-spacing:-.2px;
+line-height:135%;
+color:#666;
+padding:5px 5px 5px 8px;
+margin-bottom:5px;
+border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+-webkit-border-radius: 5px 5px 5px 5px;
+border: 1px solid #ececec;
+background-color: #ececec;	
+}
+
+.button:hover {
+background-color: #cccccc;
+border: 1px solid #cccccc;
+cursor: pointer;
+}	
+	
+.selected {
+font-weight:bold;
+color: #333;
+border: 1px solid #cccccc;
+background-color: #fff;	
+}	
+
+.selected:hover {
+background-color: #fff;
+cursor: pointer;	
+}	
+	
+</style>
+</head>
+<body> 
+
+<div class="bucket">
+	
+<h1 class="headline">OUT OF THE MAINSTREAM</h1>
+
+<p class="intro">More than any other state, Minnesota relies on sheltered workshops to employ people with disabilities, rather than helping them find private-sector jobs in the community.</p>	
+	
+
+<div class="button workers-button selected">Disabled in facility-based 
+work</div>	
+	
+<div class="button expenses-button">State expenditures for 
+facility-based employment</div>
+	
+	
+<p class="legend">In percent, 2013</p>	
+	
+	
+<div id="wrapper">
+
+
+<div id="workers" class="bar"><canvas class="chart" height="750" width="220" id="chart1"></canvas></div>
+<div id="expenses" class="bar"><canvas class="chart" height="750" width="220" id="chart2"></canvas></div>
+	
+</div><!--	close wrapper-->
+	
+<p class="credit">Source: Truven Health Analytics<br />
+RAY GRUMNEY &#8226; Star Tribune</p>
+	
+</div><!--bucket-->
+	
+	
+</body>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/ChartNew.js-master/ChartNew.js"></script>
+
+  <script>
+
+//CUSTOMIZABLE CHART OPTIONS
+var options = {
+    annotateDisplay : true,
+    annotateLabel : "<%=v2+ '  ' + v3%>%",
+    annotateClassName : "tooltip",
+    scaleFontFamily : "'Arial'",
+    scaleFontSize : 12,
+    scaleFontStyle : "normal",
+    scaleGridLinesStep : 1,
+    scaleGridLineStyle : "solid",
+    scaleGridLineWidth : 1,
+    scaleLabel : "<%=value%>",
+    scaleLineColor : "#fff",
+    scaleShowHorizontalLines: false,
+    scaleShowVerticalLines: false,
+    scaleShowGridLines : false,
+    showYLabels : false,
+    showXLabels : true,
+    showTooltips: true,
+    responsive: true,
+    barShowStroke: false,
+    barValueSpacing : 1,
+    barDatasetSpacing : 1,
+    drawXScaleLine: [{position:"bottom",lineWidth:1,lineColor:"black"}],
+    scaleTickSizeLeft : 0,
+    scaleTickSizeBottom : 0
+  }
+
+
+//CHART1 - Percent of disabled in facility-based work
+      var barChartData1 = {
+        labels : ["HI","IL","TX","WV","AL","CT","VA","WA","WY","AZ","CA","NY","RI","NC","MA","NJ","DE","OR","IA","MI","LA","PA","IN","SC","NV","WI","KS","MN","OH","OK","SD"],
+        datasets : [
+          {
+            fillColor : ["#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#dea98b","#ddd","#ddd","#ddd"],
+            strokeColor : "rgba(220,220,220,0.8)",
+            data : [1,1,1,1,2,4,4,8,9,12,13,14,14,19,20,22,24,24,25,25,29,33,34,38,44,44,50,53,54,55,67]
+          }
+        ]
+
+      };
+
+        var ctx1 = document.getElementById("chart1").getContext("2d");
+
+        var chart1 = new Chart(ctx1).HorizontalBar(barChartData1, options);
+      
+
+//CHART2 - PERCENT OF STATE EXPENDITURES FOR FACILITY-BASED EMPLOYMENT, 2013
+      var barChartData2 = {
+        labels : ["IL","AR","MS","RI","AL","WY","CT","NJ","NE","AZ","CA","WA","VA","MA","DE","OH","PA","NC","NY","IN","LA","OK","OR","MI","WI","IA","SC","NV","SD","MN"],
+        datasets : [
+          {
+            fillColor : ["#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#ddd","#dea98b"],
+            strokeColor : "rgba(220,220,220,0.8)",
+            data : [0.6,0.8,1,1.1,1.7,1.8,3.2,3.6,4.1,5.3,6.4,8.2,9.9,11.9,18.2,18.6,19.6,20.7,21.1,22.4,23.6,25.8,26.1,27.9,31.6,33,33.2,34.7,49.7,69.9]
+          }
+        ]
+
+      };
+
+        var ctx2 = document.getElementById("chart2").getContext("2d");
+
+        var chart2 = new Chart(ctx2).HorizontalBar(barChartData2, options);
+
+
+  </script>
+	
+<script>
+
+// nav buttons
+
+$(".workers-button").click(function(){
+
+	$(".button.workers-button").addClass("selected");
+	$(".button.expenses-button").removeClass("selected");
+
+	$("#workers").fadeIn();
+	$("#expenses").fadeOut();
+
+});
+
+$(".expenses-button").click(function(){
+
+	$(".button.workers-button").removeClass("selected");
+	$(".button.expenses-button").addClass("selected");
+
+	$("#workers").fadeOut();
+	$("#expenses").fadeIn();
+
+});
+
+</script>	
+
+</html>
