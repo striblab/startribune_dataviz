@@ -77,8 +77,8 @@
     <div class="breaker"></div>
 
     <div class="chatter">
-      <p>Most -- 123 -- were shot. The rest died after being tased, restrained or sprayed with chemicals.</p>
-      <p>Police reported that at least 60 had guns or gun look-alikes, such as a BB or pellet gun. About 44 others had some other object described as a weapon, including knives, a sword, a baseball bat and in one case, a BIC pen. Some used a vehicle to drag officers or try to ram them.</p>
+      <p>Most -- 125 -- were shot. The rest died after being tased, restrained or sprayed with chemicals.</p>
+      <p>Police reported that at least 61 had guns or gun look-alikes, such as a BB or pellet gun. About 46 others had some other object described as a weapon, including knives, a sword, a baseball bat and in one case, a BIC pen. Some used a vehicle to drag officers or try to ram them.</p>
       <p>Not all of the incidents stemmed from a crime. In some cases, for instance, police were responding to reports about erratic behavior or a potential suicide.</p>
       <p>Officers of the Minneapolis Police Department were involved in the largest share of deaths, 29. Three out of four deaths were in the metro area.</p>
       <p>The Star Tribune compiled a database of these deaths by digging through news reports, law enforcement reports to the Justice Department and FBI, and death certificate data. It is likely incomplete since these deaths are not reliably tracked by any single government agency, nor consistently documented on death certificates.</p>

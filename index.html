@@ -71,6 +71,7 @@
     .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
     .nav-section-mod.col-2 li { text-align:center !important; }
     .nav-shortcuts-inner { text-align:center !important; }
+    #resourcesBlock { display:none; }
 
     #articleHeader {margin-top:40px;}
     .l-container:nth-child(2) { width:100%; }
@@ -164,6 +165,7 @@
 </div>
 
 <div id="articlePane" class="sectionBox">
+  <div id="resourcesBlock" class="resources articleEntry">Resources here</div>
 </div>
 
 <!-- <div class="more"><a  href="javascript:void(0)">See more</a></div>
@@ -184,6 +186,7 @@
 <div class="sort-link" id="transit">Transportation and Infrastructure<div class="count">0</div></div>
 <div class="sort-link" id="other">Other<div class="count">0</div></div>
 <div class="sort-link" id="tools">Tools<div class="count">0</div></div>
+<div class="sort-link" id="resources">Resources</div>
 <div id="searchMe"><input type="text" id="search-criteria"/></div>
 <div id="links">
 <div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
@@ -287,6 +290,7 @@ $( ".sort-link" ).click(function() {
 $( "#allProjects" ).click(function() {
   $(".articleEntry").show();
   $(".tools").hide();
+  $("#resourcesBlock").hide();
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
 });
