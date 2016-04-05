@@ -204,9 +204,9 @@ var pymChild = new pym.Child();
 // var dataLoadYear = <?php echo $jsonDataYear; ?>;
 // var dataLoadRace = <?php echo $jsonDataRace; ?>;
 
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=gzHCZ7kiey1SMM5PgBsM3CMeEa4NGwiyFa2FU8DnUoYjQIKgjsJFAGwT7SqIrwFV-EqtN7Cx_xlY8kVRmstDxBon1OqOrn1NOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrpOMLCYDptcpnMxR0xLFGFK&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadShootings) {
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=tNF6_if_WpQAvlnIwRWIHBHNBcOQ82hB8rzcScLoXpi_4W6d84eUeNWyXA8NKNBB4DWz53L3bhAVl38Pz93wBsrUsEnuNKBWOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx9WKnAm96yZmfHc12uQ5hug&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadYear) {
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=1o5js0t1-i_wvGK8iMjzk2xR5auHvAWz3S9omyswRYuc-g_Zqf9Hd8ftf-teZu-RxUlpYxtPQRoVl38Pz93wBkgelLHZJDxkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxxcG-w52aeuSr4afipWyPHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoadRace) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings", function(error, dataLoadShootings) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart", function(error, dataLoadYear) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart", function(error, dataLoadRace) {
 
 dataShootings = dataLoadShootings.mn_shootings;
 dataYear = dataLoadYear.yearChart;
