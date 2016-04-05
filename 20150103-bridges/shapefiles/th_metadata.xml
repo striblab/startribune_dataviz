@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd"[]><metadata><idinfo><citation><citeinfo><origin>Minnesota Department of Transportation (MnDOT)</origin><title>ROUTE SEGMENTS</title><geoform>vector digital data</geoform><pubdate>20121018</pubdate><onlink>Service=sde:oracle10g:\;local=tgP; User=SDW_TRANS; Version=SDE.DEFAULT</onlink></citeinfo></citation><descript><abstract>Route Segments represent road centerlines for all public roads within the state of Minnesota. The roads are broken from intersection to intersection and attributed with information based on their designated route. A description of the Roads layer is included in Section 5 of this document - Entity and Attribute Overview.  
+
+800 Routes
+800 Routes are route segments that formerly were part of a trunk highway which was turned back. The turn back order did not cover the segments included in the 800 route so a permanent artificial number is assigned in the 800-899 range. 
+
+900 Routes
+900 Routes are for route segments that formerly were part of a trunk highway which was turned back. These are temporary numbers assigned while we wait for an official local designation. These numbers are assigned in the 900-999 range. 
+
+These numbers are not official route numbers but just for assigning data to unnumbered routes.</abstract><purpose>Route Segments was developed to fill a need at Mn/DOT for a continuous, statewide GIS base map of the transportation system.</purpose></descript><timeperd><timeinfo><sngdate><caldate>Fall 2012</caldate></sngdate></timeinfo><current>Route Segments represent the route network as they are reported to MnDOT following the construction season ending in the previous year and throughout the next year.  State Trunk Highways, County State Aid Highways (CSAH) and Municipal State Aid Streets (MSAS) may be updated as they are received from MnDOT's State Aid Office.</current></timeperd><status><progress>In Process</progress><update>Quarterly</update></status><spdom><bounding><westbc>-97.23</westbc><eastbc>-89.53</eastbc><northbc>49.37</northbc><southbc>43.5</southbc></bounding></spdom><keywords><theme><themekt>ISO 19115 Topic Category</themekt><themekey>Roads, TIS Code, Route Number, Route Direction, Routes, Transportation</themekey></theme></keywords><accconst>The BaseMap is available to the public at no charge at &lt;http://www.dot.state.mn.us/maps/gisbase/html/datafiles.html&gt;. The data may also be requested through a submission of a written request to the Contact Person listed below.</accconst><useconst>By accepting this data, the user agrees not to transmit this data or provide access to it or any part of it to another party or the public unless the user shall include with the data a copy of the disclaimer. The disclaimer can be found in Section 6 of this document (Distribution Liability).</useconst><browse><browsen>None available</browsen><browsed>Not applicable</browsed></browse><native>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.2.6.1500</native><ptcontac><cntinfo><cntperp><cntorg>Minnesota Department of Transportation (MnDOT)</cntorg><cntper>Bob Wolbeck</cntper></cntperp><cntpos>MnDOT BaseMap Coordinator</cntpos><cntaddr><address>395 John Ireland Blvd.</address><city>Saint Paul</city><state>MN</state><postal>55155-1899</postal></cntaddr><cntvoice>651-366-3880</cntvoice><cntfax>651-366-3886</cntfax><cntemail>gisinfo@state.mn.us</cntemail></cntinfo></ptcontac></idinfo><dataqual><attracc><attraccr>Unknown</attraccr></attracc><logic>Data have been topologically structured and verified.</logic><complete>The layer is complete for the entire state of Minnesota.</complete><posacc><horizpa><horizpar>Location accuracy for features derived from USGS 7.5-minute quadrangles cannot be assumed to exceed National Map Accuracy Standards for 1:24,000 scale maps (+/- 40 feet or 12 meters).</horizpar></horizpa><vertacc><vertaccr>Not applicable</vertaccr></vertacc></posacc><lineage><srcinfo><srcscale></srcscale></srcinfo><procstep><procdesc>Lineage: 
+Source_Information: 
+Source_Citation: 
+Citation_Information: 
+Originator: Minnesota Department of Transportation (MnDOT) 
+Publication_Date: Quarterly 
+Publication_Time: June 2013 
+Title: Route_Segment_History 
+Geospatial_Data_Presentation_Form: vector digital data 
+Series_Information: 
+Series_Name: Route_Segment_History 
+Publication_Information: 
+Publication_Place: &lt;http://www.dot.state.mn.us/maps/gisbase/html/datafiles.html&gt; 
+Publisher: Minnesota Department of Transportation (MnDOT) 
+Online_Linkage: &lt;http://www.dot.state.mn.us/maps/gisbase/html/datafiles.html&gt; 
+Source_Scale_Denominator: 24000 
+Type_of_Source_Media: online 
+Source_Time_Period_of_Content: 
+Time_Period_Information: 
+Single_Date/Time: 
+Calendar_Date: 7/2013 
+Source_Currentness_Reference: publication date 
+Process_Step: 
+Process_Contact: 
+Contact_Information: 
+Contact_Person_Primary: 
+Contact_Person: Bob Wolbeck 
+Contact_Organization: Minnesota Department of Transportation (MnDOT) 
+Contact_Position: MnDOT BaseMap Coordinator 
+Contact_Voice_Telephone: 651-366-3880 
+Contact_Facsimile_Telephone: 651-366-3886 
+Contact_Electronic_Mail_Address: gisinfo@state.mn.us 
+@dot.state.mn.us</procdesc></procstep><procstep><procdesc>Metadata imported.</procdesc><srcused>C:\Temp\Metadata\Street_History_Base.xml</srcused></procstep><procstep><procdesc>Metadata imported.</procdesc><srcused>W:\Metadata_SDW.TRANS\SDW_TRANS.ROUTE_SEGMENT_HISTORY.xml</srcused></procstep></lineage></dataqual><spdoinfo><indspref></indspref><direct>Vector</direct><ptvctinf><sdtsterm><sdtstype>String</sdtstype><ptvctcnt>432347</ptvctcnt></sdtsterm></ptvctinf></spdoinfo><spref><vertdef><altsys><altres>1.000000</altres><altenc>Explicit elevation coordinate included with horizontal coordinates</altenc></altsys></vertdef><horizsys><planar><gridsys><gridsysn>Universal Transverse Mercator</gridsysn><utm><utmzone>15</utmzone></utm></gridsys><planci><plandu>meters</plandu><coordrep><absres>0.001000</absres><ordres>0.001000</ordres></coordrep></planci></planar><geodetic><horizdn>NAD83</horizdn><ellips>GRS80</ellips></geodetic></horizsys></spref><eainfo><detailed><enttyp><enttypl>SDW_TRANS.ROUTE_SEGMENT_HISTORY</enttypl></enttyp><attr><attrlabl>FID</attrlabl></attr><attr><attrlabl>SHAPE</attrlabl></attr><attr><attrlabl>STR_NAME</attrlabl></attr><attr><attrlabl>STR_PFX</attrlabl></attr><attr><attrlabl>BASE_NAM</attrlabl></attr><attr><attrlabl>STR_TYPE</attrlabl></attr><attr><attrlabl>STR_SFX</attrlabl></attr><attr><attrlabl>E_911</attrlabl></attr><attr><attrlabl>TIS_CODE</attrlabl></attr><attr><attrlabl>RTE_SYST</attrlabl></attr><attr><attrlabl>RTE_NUM</attrlabl></attr><attr><attrlabl>DIVID</attrlabl></attr><attr><attrlabl>TRAF_DIR</attrlabl></attr><attr><attrlabl>TIS_ONE</attrlabl></attr><attr><attrlabl>STATUS</attrlabl></attr><attr><attrlabl>DATE_PRO</attrlabl></attr><attr><attrlabl>DATE_ACT</attrlabl></attr><attr><attrlabl>DATE_RET</attrlabl></attr><attr><attrlabl>DATE_EDT</attrlabl></attr><attr><attrlabl>SHAPE_Leng</attrlabl></attr><attr><attrlabl>BEGM</attrlabl></attr><attr><attrlabl>ENDM</attrlabl></attr><attr><attrlabl>CNTY_CODE</attrlabl></attr><attr><attrlabl>DIRECTIONA</attrlabl></attr></detailed><overview><eaover>Attribute_Label: FID 
+Attribute_Definition: Internal feature number. 
+Attribute_Definition_Source: ESRI 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Sequential unique whole numbers that are automatically generated. 
+Attribute: 
+Attribute_Label: SHAPE 
+Attribute_Definition: Feature geometry. 
+Attribute_Definition_Source: ESRI 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: Coordinates defining the features. 
+Attribute:
+Attribute_Label: STR_NAME 
+Attribute_Definition: Displays the full street name. This is concatenated from STR_PFX, BASE_NAM, STR_TYPE and STR_SFX.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: STR_PFX 
+Attribute_Definition: Displays the prefix portion of the STR_NAME. In the example: "N Jackson St W", the STR_PFX would be "N". No periods are used.
+Attribute_Definition_Source: 
+Attribute_Domain_Values:
+Enumerated_Domain: 
+Enumerated_Domain_Value: N 
+Enumerated_Domain_Value_Definition: North
+Enumerated_Domain: 
+Enumerated_Domain_Value: S 
+Enumerated_Domain_Value_Definition: South
+Enumerated_Domain: 
+Enumerated_Domain_Value: E 
+Enumerated_Domain_Value_Definition: East
+Enumerated_Domain: 
+Enumerated_Domain_Value: W 
+Enumerated_Domain_Value_Definition: West
+Enumerated_Domain: 
+Enumerated_Domain_Value: NE 
+Enumerated_Domain_Value_Definition: Northeast
+Enumerated_Domain: 
+Enumerated_Domain_Value: NW 
+Enumerated_Domain_Value_Definition: Northwest
+Enumerated_Domain: 
+Enumerated_Domain_Value: SE 
+Enumerated_Domain_Value_Definition: Southeast
+Enumerated_Domain: 
+Enumerated_Domain_Value: SW 
+Enumerated_Domain_Value_Definition: Southwest 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: BASE_NAM 
+Attribute_Definition: Displays the name portion of the STR_NAME. In the example: "N Jackson St W", the BASE_NAM would be "Jackson". No periods are used and normally abbreviated words like Saint and Fort are spelled out.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: STR_TYPE 
+Attribute_Definition: Displays the type portion of the STR_NAME. In the example: "N Jackson St W", the STR_TYPE would be "St". No periods are used.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: STR_SFX 
+Attribute_Definition: Displays the suffix portion of the STR_NAME. In the example: "N Jackson St W", the STR_SFX would be "W". No periods are used.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Enumerated_Domain: 
+Enumerated_Domain_Value: N 
+Enumerated_Domain_Value_Definition: North
+Enumerated_Domain: 
+Enumerated_Domain_Value: S 
+Enumerated_Domain_Value_Definition: South
+Enumerated_Domain: 
+Enumerated_Domain_Value: E 
+Enumerated_Domain_Value_Definition: East
+Enumerated_Domain: 
+Enumerated_Domain_Value: W 
+Enumerated_Domain_Value_Definition: West
+Enumerated_Domain: 
+Enumerated_Domain_Value: NE 
+Enumerated_Domain_Value_Definition: Northeast
+Enumerated_Domain: 
+Enumerated_Domain_Value: NW 
+Enumerated_Domain_Value_Definition: Northwest
+Enumerated_Domain: 
+Enumerated_Domain_Value: SE 
+Enumerated_Domain_Value_Definition: Southeast
+Enumerated_Domain: 
+Enumerated_Domain_Value: SW 
+Enumerated_Domain_Value_Definition: Southwest
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: E_911 
+Attribute_Definition: 
+Attribute_Definition_Source:
+Enumerated_Domain_Value: Y
+Enumerated_Domain_Value_Definition: Yes 
+Attribute_Definition: Street name has been verified as being correct
+Enumerated_Domain_Value: N
+Enumerated_Domain_Value_Definition: No 
+Attribute_Definition: No street name found
+Enumerated_Domain_Value: U  
+Enumerated_Domain_Value_Definition: Unverified
+Attribute_Definition: Street name has been placed but not sure if it is E911 verified
+Enumerated_Domain_Value: D 
+Enumerated_Domain_Value_Definition: Derived
+Attribute_Definition:  No street name found but is populated with route number
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute: 
+Attribute_Label: TIS_CODE 
+Attribute_Definition: 
+The unique identifier for the entire route within the state, using the following format: RRJJJJNNNNA where, RR = Route_System, JJJJ = Jurisdiction, defined as below based on Route_System (01, 02, 03 = 0000; 05, 10 = City Census Code; All others = XX00 where XX is XX = TIS County Code), NNNN = Route Number padded with leading zeros, and A = Alpha code on the end of particular routes or blank if none is present. 
+Attribute_Domain_Values: 
+Range_Domain: 
+Range_Domain_Minimum: 0100000001 
+Range_Domain_Maximum: 2386009999Z 
+Attribute: 
+Attribute_Label: RTE_SYST 
+Attribute_Definition: 
+The Route System of the Route. Defined by the jurisdiction of the road. 
+Attribute_Domain_Values: 
+Enumerated_Domain: 
+Enumerated_Domain_Value: 01 
+Enumerated_Domain_Value_Definition: Interstate 
+Enumerated_Domain: 
+Enumerated_Domain_Value: 02 
+Enumerated_Domain_Value_Definition: US Highway 
+Enumerated_Domain: 
+Enumerated_Domain_Value: 03 
+Enumerated_Domain_Value_Definition: MN Highway
+Attribute: 
+Attribute_Label: RTE_NUM 
+Attribute_Definition: 
+This displays the number or letter of the road. For example, the road number for "County Road 22" would be "22", and the road number for "County Road F" would be "F". The ROAD_NUM field also includes trailing letters. For example, the road number for "Interstate 35W" would be "35W". 
+Attribute:  
+Attribute_Label: DIVID 
+Attribute_Definition: Divided or One-way Indicator 
+Attribute_Domain_Values: 
+Enumerated_Domain: 
+Enumerated_Domain_Value: M 
+Enumerated_Domain_Value_Definition: 
+The section of pavement is one half of a route divided by a physical median of some type. 
+Enumerated_Domain: 
+Enumerated_Domain_Value: O 
+Enumerated_Domain_Value_Definition: The section of the route allows one way travel only 
+Enumerated_Domain: 
+Enumerated_Domain_Value: T 
+Enumerated_Domain_Value_Definition: This section of the route allows travel in two directions 
+Attribute_Label: TRAF_DIR 
+Attribute_Definition: The direction of traffic flow along this segment of pavement. 
+Attribute_Domain_Values: 
+Enumerated_Domain: 
+Enumerated_Domain_Value: I 
+Enumerated_Domain_Value_Definition: 
+The traffic flows towards the direction of increasing mileage only 
+Enumerated_Domain: 
+Enumerated_Domain_Value: D 
+Enumerated_Domain_Value_Definition: 
+The traffic flows towards the direction of decreasing mileage only 
+Enumerated_Domain: 
+Enumerated_Domain_Value: B 
+Enumerated_Domain_Value_Definition: The traffic flows both directions 
+Attribute: 
+Attribute_Label: TIS_ONE 
+Attribute_Definition: 
+The unique identifier for the entire route within the state in the increasing direction unless it is a decreasing one way, using the following format: RRJJJJNNNNA where, RR = Route_System, JJJJ = Jurisdiction, defined as below based on Route_System (01, 02, 03 = 0000; 05, 10 = City Census Code; All others = XX00 where XX is XX = TIS County Code), NNNN = Route Number padded with leading zeros, and A = Alpha code on the end of particular routes or blank if none is present. 
+Attribute_Domain_Values: 
+Range_Domain: 
+Range_Domain_Minimum: 0100000001 
+Range_Domain_Maximum: 2386009999Z 
+Attribute: 
+Attribute_Label: SHAPE_Leng 
+Attribute_Definition: Length of feature in internal units. 
+Attribute_Definition_Source: ESRI 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: Positive real numbers that are automatically generated.
+Attribute: 
+Attribute_Label: CNTY_CODE 
+Attribute_Definition: The county number as it is assigned numerical in alphabetical order 
+Attribute_Definition_Source:
+Attribute_Domain_Values:
+Attribute: 
+Attribute_Label: DIRECTIONA 
+Attribute_Definition:The concatenation of TIS_CODE and TRAF_DIR where all B is given an I  
+Attribute_Definition_Source:
+Attribute_Domain_Values:
+Attribute: 
+Attribute_Label: BEGM
+Attribute_Definition:The begin mileage point for that record. 
+Attribute_Definition_Source:
+Attribute_Domain_Values:
+Attribute: 
+Attribute_Label: ENDM 
+Attribute_Definition:The end mileage point for that record. 
+Attribute_Definition_Source:
+Attribute_Domain_Values:</eaover>
+Attribute_Label: BEGM 
+Attribute_Definition: The beginning mileage at that point of that segment.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: ENDM 
+Attribute_Definition: The ending mileage at that point of that segment.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: CNTY_CODE 
+Attribute_Definition: A two digit number assigned in alphabetical order to each county.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:
+Attribute_Label: DIRECTIONA 
+Attribute_Definition: The direction of traffic in correspondence with mileage.
+Attribute_Definition_Source: 
+Attribute_Domain_Values: 
+Unrepresentable_Domain: 
+Attribute:</overview></eainfo><distinfo><resdesc>Downloadable Data</resdesc><distliab>The Minnesota Department of Transportation makes no representation or warranties, express or implied, with respect to the reuse of data provided herewith, regardless of its format or the means of its transmission. There is no guarantee or representation to the user as to the accuracy, currency, suitability, or reliability of this data for any purpose. The user accepts the data 'as is', and assumes all risks associated with its use. By accepting this data, the user agrees not to transmit this data or provide access to it or any part of it to another party unless the user shall include with the data a copy of this disclaimer. The Minnesota Department of Transportation assumes no responsibility for actual or consequential damage incurred as a result of any user's reliance on this data.</distliab><distrib><cntinfo><cntperp><cntorg>Minnesota Department of Transportation (MnDOT)</cntorg><cntper>Bob Wolbeck</cntper></cntperp><cntpos>MnDOT BaseMap Coordinator</cntpos><cntaddr><address>395 John Ireland Blvd.</address><city>Saint Paul</city><state>MN</state><postal>55155-1899</postal></cntaddr><cntvoice>651-366-3880</cntvoice><cntfax>651-366-3886</cntfax><cntemail>gisinfo@state.mn.us</cntemail></cntinfo></distrib></distinfo><metainfo><metd>20121018</metd><metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn><metstdv>FGDC-STD-001-1998</metstdv><mettc>local time</mettc><metextns><onlink>http://www.gis.state.mn.us/stds/metadata.htm</onlink><metprof>ESRI Metadata Profile</metprof></metextns><metextns><onlink>http://www.esri.com/metadata/esriprof80.html</onlink><metprof>ESRI Metadata Profile</metprof></metextns><metc><cntinfo><cntorgp><cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg><cntper>REQUIRED: The person responsible for the metadata information.</cntper></cntorgp><cntaddr><addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype></cntaddr></cntinfo></metc></metainfo></metadata>
