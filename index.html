@@ -63,6 +63,8 @@
 
       .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#61bd1a; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
       .git:hover { cursor:pointer; background-color:#fff !important; }
+
+      h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
     </style>
 
   <style type="text/css"> 
@@ -531,12 +533,12 @@
 //live json magic
 
 //https://script.google.com/a/macros/umn.edu/s/AKfycbzOAHrfmtGJMR9crHeF9zdAhqU9saB9YzKf1Xxivfs/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=Sheet1
-//https://script.google.com/macros/s/AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=Sheet1
+//https://script.google.com/macros/s/AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master
 
 // $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI4TSNmVu370MsVSQB_Uyyblk_gZzoGt5pocAksdR5w4v_f2ujy3Itp6RrgmHu-1uDbWlU06h6dNs9MBqWM2rkCMrzZGwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa3HMflvAE5oEneTLZU5s79KARkcyFDMjX0ewt5-cuI2hRHouKSPCrKRcgufhrII6-M3MleihyRS6Yxs7ziheq_kx8s3fq8FhcV7V45FBz4fadfh_z-4qMMEa0mO-EXf9WyjPuXlbvplVwqJbeTowOR_fVIgxkfofiQ&lib=Mpc9sEUZubx48Zop7g8xYBjbZ7jG6IkQL");
 
 
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI4TSNmVu370MsVSQB_Uyyblk_gZzoGt5pocAksdR5w4v_f2ujy3Itp6RrgmHu-1uDbWlU06h6dNs9MBqWM2rkCMrzZGwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa3HMflvAE5oEneTLZU5s79KARkcyFDMjX0ewt5-cuI2hRHouKSPCrKRcgufhrII6-M3MleihyRS6Yxs7ziheq_kx8s3fq8FhcV7V45FBz4fadfh_z-4qMMEa0mO-EXf9WyjPuXlbvplVwqJbeTowOR_fVIgxkfofiQ&lib=Mpc9sEUZubx48Zop7g8xYBjbZ7jG6IkQL", function(error, json) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master", function(error, json) {
 
 // $(".nav-section-link").text("StribLab");
 // $(document).prop('title', 'Data-driven storytelling, maps, charts and more | Startribune.com');
@@ -544,7 +546,7 @@ d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI
 
 var data = json;
 
-d3.select("#articlePane").selectAll("div").data(data.Sheet1).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
+d3.select("#articlePane").selectAll("div").data(data.published_master).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
 
 if (d.git != '') { var git = "<div class='git'><a href='" + d.git + "' target='new_'>View on Github</a></div>"; }
 else { var git = ""; }
