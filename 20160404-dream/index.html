@@ -10,24 +10,34 @@
   <meta name="author" content="Frey Hargarten - StarTribune">
 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-  <link rel="stylesheet" href="../_common_resources/interfaces/d3.slider-master/d3.slider.css" /> 
+  <link href="../_common_resources/charts/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
   
   <style>
-   #wrapper { text-align:center; height:auto; width:100%; }
-   #map { width:800px; margin-right:auto; margin-left:auto; text-align:center;  }
+   #wrapper { text-align:center; height:auto; width:800px; margin-right:auto; margin-left:auto; }
+   #map, #country { width:800px; margin-right:auto; margin-left:auto; text-align:center;  }
+   #mapMN { width:350px; margin-right:auto; margin-left:auto; text-align:center;  }
    #leftSide {  }
    #rightSide {  }
    .none { fill:#ddd !important; }
-   .zoom { float:none !important; text-align:center; }
+   .zoom { float:none !important; text-align:center; padding:20px; }
    #slider { display:none; }
    .legends { width:318px; height:auto; text-align:center; margin-right:auto; margin-left:auto; }
 
-   .tableHead { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:24%; font-weight:900; font-family:"Poynter Serif RE"; }
-   .tableCell { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:24%; font-family:"Benton Sans"; }
+   .metroSwitch { padding:10px; display:inline-block; text-align:center; width:150px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
+   .metroSwitch:hover { background-color:#333 !important; color:#fff !important; cursor:pointer; }
+   #mapMN, #country { display:none; }
+
+   .tableHead { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:48%; font-weight:900; font-family:"Poynter Serif RE"; }
+   .tableCell { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:48%; font-family:"Benton Sans"; }
    .tableBreak { clear:both; display:block; }
-   .table { text-align:center; width:100%; overflow-x:hidden; overflow-y:auto; height:280px; }
+   .table { text-align:center; width:100%; overflow-x:hidden; overflow-y:auto; height:150px; }
    #filter input { border-radius:0 !important; }
-   .district:hover, .selected, .hSort:hover { background-color:#333; color:#fff !important; cursor:pointer; }
+   .district:hover, .selected, .hSort:hover, .start:hover { background-color:#333; color:#fff !important; cursor:pointer; }
+   #quintile { float:left; width:20%; }
+   #chartBlock { float:right; width:70%; }
+   #chart { width:100%; height:190px; }
+
+   .chatter, .chartTitle { text-align:left; }
 
   .negDark { fill:#752304; background-color:#752304; color:#fff; }
   .negMid { fill:#BF5F3C; background-color:#BF5F3C; color:#fff; }
@@ -36,16 +46,21 @@
   .posLight { fill:#94D181; background-color:#94D181; }
   .posMid { fill:#67AF50; background-color:#67AF50; color:#fff; }
   .posDark { fill:#24680E; background-color:#24680E; color:#fff; }
+  
 
   small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; }
 
-  .grid { display:inline-block; width:32%; padding:10px; }
+  .grid { padding:10px; }
+  #gridBlock   { float:right; width:47%; }
   #tableBlock { float:left; display:inline-block; width:47%; }
-  #chart { float:right; display:inline-block; width:47%; }
+  #districtName { display:none; }
+
+    #tableBlock, #gridBlock, #quintile, #chartBlock, #chart { display:block; width:100%; float:none; }
+    .metroSwitch { width:32%; }
 
    @media (max-width:800px) {
-    #map { width:100%; }
-    #tableBlock, #chart { display:block; width:100%; float:none; }
+    #map, #country { width:100%; }
+    #wrapper { width:100%; }
    }
   </style> 
 </head>
@@ -53,8 +68,18 @@
 <body>
   <div id="wrapper">
 
+<div class="chartTitle">Title</div>
+<div class="chatter">chatter</div>
+<div class="breaker"></div>
+
+<div id="viewSwitch"><div class="metroSwitch" data="country">National</div> <div class="metroSwitch selected" data="map">Midwest</div> <div class="metroSwitch" data="mapMN">MN</div> <!-- <div class="zoom">Reset View</div> --></div>
+
+<div class="breaker"></div>
+
 <div id="leftSide">
-<div id="map"><svg width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid"></svg></map>
+<div id="map" class="map"><svg width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid"></svg></div>
+<div id="mapMN" class="map"><svg width="100%" height="500" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+<div id="country" class="map"><svg width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid"></svg></div>
 </div>
 
 <div class="breaker"></div>
@@ -76,45 +101,56 @@
         </nav>
       </span>
     </div>
-    <small>Points above/below average AUM</small>
+    <small>Points above/below average</small>
   </div>
 </div>
-
-<div class="breaker"></div>
-
-<div class="zoom">Reset View</div>
 
 <div class="breaker"></div>
 
 <div id="rightSide">
 <div id="districtName">Midwest</div>
 
+<div class="chartTitle">Title</div>
+<div class="chatter">chatter</div>
+<div class="breaker"></div>
+
 <div id="tableBlock">
 <h3>Someone growing up in</h3>
-<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by keyword"></input></div>
+<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by county or state"></input></div>
 <div class="table" id="table">
-<div class='tableHead partyBar hSort' data="county">County</div><div class='tableHead hSort selected' data="state">State</div><div class='tableHead hSort' data="aum25">AUM p25</div><div class='tableHead hSort' data="aum75">AUM p75</div>
+<div class='tableHead partyBar hSort' data="county">County</div><div class='tableHead hSort selected' data="state">State</div>
+<!-- <div class='tableHead hSort' data="aum25">AUM p25</div><div class='tableHead hSort' data="aum75">AUM p75</div> -->
 </div>
 </div>
 
-<div id="chart">  
-<div id="slider"></div>
-<h3>...with parents earning in the -- percentile</h3>
-<div class="grid start">99th</div><div class="grid end">99th</div><div class="grid pct">0%</div>
-<div class="grid start">80th</div><div class="grid end">80th</div><div class="grid pct">0%</div>
-<div class="grid start">60th</div><div class="grid end">60th</div><div class="grid pct">0%</div>
-<div class="grid start">40th</div><div class="grid end">40th</div><div class="grid pct">0%</div>
-<div class="grid start">20th</div><div class="grid end">20th</div><div class="grid pct">0%</div>
-<div class="grid start">1st</div><div class="grid end">1st</div><div class="grid pct">0%</div>
-<h3>...end up on average in the -- percentile</h3>
+<div id="gridBlock">  
+<h3 style="text-align:left;">...with parents earning in the <span id="pQ">--</span> quintile</h3> 
+<div id="quintile">
+<div class="grid start" data="p5">5th</div>
+<div class="grid start" data="p4">4th</div>
+<div class="grid start" data="p3">3rd</div>
+<div class="grid start" data="p2">2nd</div>
+<div class="grid start selected" data="p1">1st</div>
+</div>
+<div id="chartBlock">
+<div id="chart"><svg></svg></div>
+</div>
+<div class="breaker"></div>
+<h3 style="text-align:right;">...end up on average in the <span id="cQ">--</span> quintile</h3>
+</div>
 </div>
 
-</div>
+<div class="breaker"></div>
+
+<div class="chartTitle">Title</div>
+<div class="chatter">chatter</div>
+<div class="breaker"></div>
 
 
+<div class="chartTitle">Title</div>
+<div class="chatter">chatter</div>
+<div class="breaker"></div>
 
-<div id="chatterBox">
-</div>
 
   </div>
 
@@ -124,7 +160,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="../_common_resources/interfaces/d3.slider-master/d3.slider.js"></script>
+<script src="../_common_resources/charts/nvd3-master/build/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master/test/stream_layers.js"></script>
 
 <script>
 //http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?pagewanted=all
@@ -132,20 +173,35 @@
 
 </script>
 <script>
+var toggle = "p1";
+
+$(".metroSwitch").click(function() {
+  $(".metroSwitch").removeClass("selected");
+  $(this).addClass("selected");
+  $(".map").hide();
+  $("#" + $(this).attr("data")).show();
+});
+
 //LIVE JSON MAGIC
 
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1IA2b2UwsXVyxSN-vyF1wQh12dJjmeB2LzJUK54Mt7qY&sheet=counties
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1IA2b2UwsXVyxSN-vyF1wQh12dJjmeB2LzJUK54Mt7qY&sheet=countiesAll
 
-d3.json("https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=dS_dFjBtokFZmtpVrLnmB340u4jqkjpPfux5sdHPLpWImVigfkXoVjA3-a206r1r63ZkyiGf5l4dEOTS90Lc03WHBvSZTUaCOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzI-mtKRf-8plGOUy-lJCxpF2DQLccfmsBGWAyiujVfWxmelbCou2EhfNg1xV69xW9102aPo2dzOFu-xgq3sfjAan3rNPoaOK44tkkG2FCl70L8wGQQEVNypciIdD-G7jjo73e88jfKe79jgqCKHAMMBD8v3tqBuqbyBAf43AAwP8&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1RiNtORVIispxDGDxtdDljvs0CEDP94EaV2B3wbcMkXk&sheet=events
 
-var data = json.counties;
+d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=Iiu7d5v7uTzA3A8rDzVrgIny3eTE8z8jaPvVyu04yib0bfX4MpnA0IEMtzTg2qpCFyrWiHjphI6f_UZO-CDZotNiCpgau37DOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TBNazkN1LwDkRgliZDyKih_Q8eB04lcAX-r6YpSSA6aP54X-URYOTRFs3Us1YSAyaW0Ar8EAym2_s8cJgq7PpvZlqkDfXKzXo&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
+
+var data = json.countiesAll;
 
 var aspect = 800 / 500, chart = $("#map svg");
+var aspect2 = 800 / 500, chart2 = $("#country svg");
 
 $(window).on("resize", function() {   
   var targetWidth = chart.parent().width();   
+  var targetWidth2 = chart2.parent().width(); 
   chart.attr("width", targetWidth);   
   chart.attr("height", targetWidth / aspect);
+  chart2.attr("width", targetWidth2);   
+  chart2.attr("height", targetWidth2 / aspect2);
 });
 
 $(".hSort").click(function() {
@@ -215,7 +271,9 @@ d3.select(container).selectAll(".card")
     p75 = "No data available"; 
   }
   
-  return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div><div class='tableCell p25'>" + p25 + "</div><div class='tableCell p75'>" + p75 + "</div><div class='smallbreak'></div>";
+  return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div>";
+
+  // return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div><div class='tableCell p25'>" + p25 + "</div><div class='tableCell p75'>" + p75 + "</div><div class='smallbreak'></div>";
 });
 
 $(".district").click(function() {
@@ -253,9 +311,13 @@ jQuery.fn.d3Up = function () {
 
     // clicked2();
     var findDistrict = $(this).text() + "_us";
+    var findDistrictMN = $(this).text() + "_mn";
     $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Down();
     $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Up();
     $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Click();
+    $("[id='" + findDistrictMN.replace(new RegExp(" ", "g"),"-") + "']").d3Down();
+    $("[id='" + findDistrictMN.replace(new RegExp(" ", "g"),"-") + "']").d3Up();
+    $("[id='" + findDistrictMN.replace(new RegExp(" ", "g"),"-") + "']").d3Click();
 });
 
    $('.p25').each(function() {
@@ -288,23 +350,12 @@ jQuery.fn.d3Up = function () {
 
 // });
 
-//SLIDERS
-if ($(window).width() < 550){
-var tickLength = 4;
-}
-else { 
-var tickLength = 4; 
-}
-
-var slide_spot=2001;
-var slider = d3.slider().axis(true);
-
-d3.select('#slider').call(slider.min(2001).max(2015).value(slide_spot).orientation("vertical").axis(d3.svg.axis().tickFormat(d3.format("")).orient("top").ticks(tickLength)).step(1).on("slide", function(evt, value) {
-
-  }));
-
 
 //MAPS
+function mapStats(d, subject, dataCompare){
+
+}
+
 function mapReshade(container, shape, subject, race, dataCompare, visible, demoData, demoData2) {
 d3.selectAll(container + " svg g path")
       .data(us.features)
@@ -314,9 +365,9 @@ d3.selectAll(container + " svg g path")
         });
 }
 
-function mapColor(d, race, dataCompare, demoData, demoData2){
+function mapColor(d, subject, dataCompare){
   for (var i=0; i < data.length; i++){
-    if (d.properties.GEOID == data[i].FIPS){
+    if (d.properties.GEOID == data[i].FIPS || ("27" + String(d.properties.COUNTYFIPS)) == String(data[i].FIPS)){
       var points = data[i].aum25 - 47;
       if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "neutral"; }
       else if (points >= 15 ) { return "posDark"; }
@@ -333,12 +384,14 @@ function mapColor(d, race, dataCompare, demoData, demoData2){
 
 function mapTips(d, subject, dataCompare){
   for (var i=0; i < data.length; i++){
-    if (d.properties.GEOID == data[i].FIPS){
+    if (d.properties.GEOID == data[i].FIPS || ("27" + String(d.properties.COUNTYFIPS)) == String(data[i].FIPS)){
       if (data[i].aum25 != 0) { 
+       if (d.properties.hasOwnProperty('NAME')) { var name = d.properties.NAME; }
+       else if (d.properties.hasOwnProperty('COUNTYNAME')) { var name = d.properties.COUNTYNAME; }
         var points = Math.round(data[i].aum25 - 47); 
-        return "<div>" + d.properties.NAME + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " AUM (<span class='" + mapColor(d, subject, dataCompare) + "'>" + d3.format("+")(points) + " from average</span>)</div>";
+        return "<div>" + name + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " AUM (<span class='" + mapColor(d, subject, dataCompare) + "'>" + d3.format("+")(points) + " from average</span>)</div>";
       } else {
-         return "<div>" + d.properties.NAME + " County, " + data[i].state + "</div><div>No data available</div>";
+         return "<div>" + name + " County, " + data[i].state + "</div><div>No data available</div>";
       }
     }
   }
@@ -346,8 +399,9 @@ function mapTips(d, subject, dataCompare){
 
 function mapBuild(container, boxContainer, chartContainer, shape, race, geo, dataCompare, index, visible) {
 
-if (geo=="us") { var width = 800, height = 500, centered; var projection = d3.geo.albersUsa().scale(2000).translate([330, 430]); }
-else if (geo=="mn") { var width = 350, height = 350, centered; var projection = d3.geo.albersUsa().scale(5037).translate([50, 970]); }
+if (geo=="country") { var width = 800, height = 500, centered; var projection = d3.geo.albersUsa().scale(1000).translate([400, 260]); }
+else if (geo=="us") { var width = 800, height = 500, centered; var projection = d3.geo.albersUsa().scale(2000).translate([330, 430]); }
+else if (geo=="mn") { var width = 350, height = 500, centered; var projection = d3.geo.albersUsa().scale(5037).translate([50, 970]); }
 else if (geo=="metro") { var width = 350, height = 350, centered; var projection = d3.geo.mercator().scale([16500]).center([-92.403259,44.988113]); }
 
 var path = d3.geo.path()
@@ -378,13 +432,18 @@ d3.json("shapefiles/" + shape, function(error, us) {
       .attr("class", function(d){
          return mapColor(d, race, dataCompare);
         })
-       .on("mousedown", function(d, i){ 
+       .on("mousedown", function(d, i){
+        redrawChart(chartStuff,"#chart","economics",dataCompare,d.properties.GEOID,0,null);
+
         for (var i=0; i < data.length; i++){
-        if (d.properties.GEOID == data[i].FIPS){
+        if (d.properties.GEOID == data[i].FIPS || ("27" + String(d.properties.COUNTYFIPS)) == String(data[i].FIPS)){
           $("#districtName").html(d.properties.NAME + " County, " + data[i].state);
         $('.card').hide();
-        var txt = d.properties.NAME;
-        var txt2 = data[i].state;
+        if (d.properties.hasOwnProperty('NAME')) { var name = d.properties.NAME; var state = data[i].state; }
+        else if (d.properties.hasOwnProperty('COUNTYNAME')) { var name = d.properties.COUNTYNAME; var state = "Minnesota";  }
+
+        var txt = name;
+        var txt2 = state;
         $('.card').each(function(){
            if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1){
                $(this).show();
@@ -417,10 +476,21 @@ var zoom = d3.behavior.zoom()
 
   });
 
+$(".start").click(function() {
+  $(".start").removeClass("selected");
+  $(this).addClass("selected");
+  toggle = $(this).attr("data");
+  clicked2();
+  $("#districtName").html("Midwest");
+  $('.card').show();
+  redrawChart(chartStuff,"#chart","economics",dataCompare,0,0,null);
+});
+
 $(".zoom").click(function() {
   clicked2();
   $("#districtName").html("Midwest");
   $('.card').show();
+  redrawChart(chartStuff,"#chart","economics",dataCompare,0,0,null);
 });
 
 function clicked(d) {
@@ -515,13 +585,236 @@ d3.helper.tooltip = function(accessor){
 
 }
 
+//CHARTAGGEDON
+var chartStuff = [];
+var index = 0;
+// function chartBuild(container,subject,data,county,index){
+  var colorArray = ['#777','#C22A22']; 
+  var formatter = d3.format('%');
+
+nv.addGraph(function() {
+  chartStuff[index] = nv.models.multiBarHorizontalChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .margin({top: 30, right: 30, bottom: 20, left: 130})
+      .showValues(false)
+      .tooltips(true)
+      .stacked(false)
+      .showLegend(false)
+      .color(colorArray)
+      // .width($(container).width()).height($(container).height())
+      .showControls(false);
+
+  chartStuff[index].forceY([0,1]);
+
+   chartStuff[index].yAxis
+      .tickFormat(formatter);
+
+  d3.select('#chart svg')
+      .datum(chartData("tech",data,0,2014))
+      .transition().duration(500)
+      .call(chartStuff[index]);
+
+  nv.utils.windowResize(chart[index].update);
+
+
+// var rects = d3.selectAll(".nv-axis text")
+//               .filter(function(d, i) { return i == 0 || i == 4 || i == 8 || i == 12 || i == 16; })
+//               .style("font-weight","900");
+
+// var rects2 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 0 || i == 4 || i == 8 || i == 12 || i == 16; })
+//               .style("fill","#fff");
+
+// var rects4 = d3.selectAll("text")
+//               .filter(function(d, i) { return i == 6 || i == 7 || i == 8; })
+//               .style("fill","#bbb");
+
+// var rects5 = d3.selectAll("text")
+//               .filter(function(d, i) { return i == 9 || i == 10 || i == 11; })
+//               .style("fill","#666");
+
+// var rects6 = d3.selectAll("text")
+//               .filter(function(d, i) { return i == 12; })
+//               .style("fill","#ddd");
+
+  return chart[index];
+});
+
+
+function redrawChart(chart,container,subject,data,county,index,year){
+  var colorArray = ['#777','#C22A22']; 
+  var formatter = d3.format('%');
+
+    d3.select(container + ' svg').datum(chartData(subject,data,county,year)).transition().duration(300).call(chartStuff[index].color(colorArray));
+    // chart[index].yAxistickFormat(formatter);
+    nv.utils.windowResize(chartStuff[index].update);
+
+// var rects = d3.selectAll(".nv-axis text")
+//               .filter(function(d, i) { return i == 0 || i == 4 || i == 8 || i == 12 || i == 16; })
+//               .style("font-weight","900");
+
+// var rects2 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 18 || i == 22 || i == 26 || i == 30 || i == 34; })
+//               .style("fill","#fff");
+
+// var rects = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 0 || i == 1 || i == 2; })
+//               .style("fill","#000");
+
+// var rects2 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 3 || i == 4 || i == 5; })
+//               .style("fill","#777");
+
+// var rects4 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 6 || i == 7 || i == 8; })
+//               .style("fill","#bbb");
+
+// var rects5 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 9 || i == 10 || i == 11; })
+//               .style("fill","#666");
+
+// var rects6 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 12; })
+//               .style("fill","#ddd");
+
+// var rects7 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 15 || i == 16; })
+//               .style("fill","#2C3942");
+
+// var rects8 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 17 || i == 18 || i == 19; })
+//               .style("fill","#7F98AA");
+
+// var rects9 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 20 || i == 21 || i == 22; })
+//               .style("fill","#556E7F");
+
+// var rects10 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 23 || i == 24 || i == 25; })
+//               .style("fill","#A8B9C5");
+
+// var rects11 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 26 || i == 27 || i == 28; })
+//               .style("fill","#3B576B");
+
+// var rects12 = d3.selectAll("rect")
+//               .filter(function(d, i) { return i == 29; })
+//               .style("fill","#C6D1D9");
+
+}
+
+function chartData(subject,data,county,level) {
+
+ var cq1_pq1, cq2_pq1, cq3_pq1, cq4_pq1, cq5_pq1, cq1_pq2, cq2_pq2, cq3_pq2, cq4_pq2, cq5_pq2, cq1_pq3, cq2_pq3, cq3_pq3, cq4_pq3, cq5_pq3, cq1_pq4, cq2_pq4, cq3_pq4, cq4_pq4, cq5_pq4, cq1_pq5, cq2_pq5, cq3_pq5, cq4_pq5, cq5_pq5 = 0;
+
+  for (var i=0; i<data.length; i++){
+    if (data[i].FIPS == county){
+      cq1_pq1 = data[i].cq1_pq1;
+      cq2_pq1 = data[i].cq2_pq1;
+      cq3_pq1 = data[i].cq3_pq1;
+      cq4_pq1 = data[i].cq4_pq1;
+      cq5_pq1 = data[i].cq5_pq1;
+      cq1_pq2 = data[i].cq1_pq2;
+      cq2_pq2 = data[i].cq2_pq2;
+      cq3_pq2 = data[i].cq3_pq2;
+      cq4_pq2 = data[i].cq4_pq2;
+      cq5_pq2 = data[i].cq5_pq2;
+      cq1_pq3 = data[i].cq1_pq3;
+      cq2_pq3 = data[i].cq2_pq3;
+      cq3_pq3 = data[i].cq3_pq3;
+      cq4_pq3 = data[i].cq4_pq3;
+      cq5_pq3 = data[i].cq5_pq3;
+      cq1_pq4 = data[i].cq1_pq4;
+      cq2_pq4 = data[i].cq2_pq4;
+      cq3_pq4 = data[i].cq3_pq4;
+      cq4_pq4 = data[i].cq4_pq4;
+      cq5_pq4 = data[i].cq5_pq4;
+      cq1_pq5 = data[i].cq1_pq5;
+      cq2_pq5 = data[i].cq2_pq5;
+      cq3_pq5 = data[i].cq3_pq5;
+      cq4_pq5 = data[i].cq4_pq5;
+      cq5_pq5 = data[i].cq5_pq5;
+      break;
+    }
+  };
+
+if (toggle == "p1"){
+  var pct1 = cq1_pq1;
+  var pct2 = cq2_pq1;
+  var pct3 = cq3_pq1;
+  var pct4 = cq4_pq1;
+  var pct5 = cq5_pq1;  
+}
+else if (toggle == "p2"){
+  var pct1 = cq1_pq2;
+  var pct2 = cq2_pq2;
+  var pct3 = cq3_pq2;
+  var pct4 = cq4_pq2;
+  var pct5 = cq5_pq2;  
+}
+else if (toggle == "p3"){
+  var pct1 = cq1_pq3;
+  var pct2 = cq2_pq3;
+  var pct3 = cq3_pq3;
+  var pct4 = cq4_pq3;
+  var pct5 = cq5_pq3;  
+}
+else if (toggle == "p4"){
+  var pct1 = cq1_pq4;
+  var pct2 = cq2_pq4;
+  var pct3 = cq3_pq4;
+  var pct4 = cq4_pq4;
+  var pct5 = cq5_pq4;  
+}
+else if (toggle == "p5"){
+  var pct1 = cq1_pq5;
+  var pct2 = cq2_pq5;
+  var pct3 = cq3_pq5;
+  var pct4 = cq4_pq5;
+  var pct5 = cq5_pq5;  
+}
+
+
+  return [{
+        "key": "PCT",
+        "values": [
+          { 
+            "label" : "5th" ,
+            "value" : pct5
+          },
+          { 
+            "label" : "4th" ,
+            "value" : pct4
+          },
+          { 
+            "label" : "3rd" ,
+            "value" : pct3
+          },
+          { 
+            "label" : "2nd" ,
+            "value" : pct2
+          },
+          { 
+            "label" : "1st" ,
+            "value" : pct1
+          }]
+      }]
+
+}
+
   mapBuild("#map", "#districtName", "#chart", "us_states.json", "economics", "us", data, 2, 1);
   mapBuild("#map", "#districtName", "#chart", "midwest_counties.json", "economics", "us", data, 2, 1);
+  mapBuild("#mapMN", "#districtName", "#chart", "counties.json", "economics", "mn", data, 2, 1);
+  mapBuild("#country", "#districtName", "#chart", "us_counties.json", "economics", "country", data, 2, 1);
   tableBuild("#table",data,0)
 
   var targetWidth = chart.parent().width();   
   chart.attr("width", targetWidth);
   chart.attr("height", targetWidth / aspect);
+  var targetWidth2 = chart2.parent().width();   
+  chart2.attr("width", targetWidth2);
+  chart2.attr("height", targetWidth2 / aspect2);
 
 });
 </script>
