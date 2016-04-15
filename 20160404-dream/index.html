@@ -46,6 +46,8 @@
   .posLight { fill:#94D181; background-color:#94D181; }
   .posMid { fill:#67AF50; background-color:#67AF50; color:#fff; }
   .posDark { fill:#24680E; background-color:#24680E; color:#fff; }
+
+  path:hover { cursor:normal !important; }
   
 
   small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; }
@@ -68,9 +70,9 @@
 <body>
   <div id="wrapper">
 
-<div class="chartTitle">Title</div>
+<!-- <div class="chartTitle">Title</div>
 <div class="chatter">chatter</div>
-<div class="breaker"></div>
+<div class="breaker"></div> -->
 
 <div id="viewSwitch"><div class="metroSwitch" data="country">National</div> <div class="metroSwitch selected" data="map">Midwest</div> <div class="metroSwitch" data="mapMN">MN</div> <!-- <div class="zoom">Reset View</div> --></div>
 
@@ -101,20 +103,16 @@
         </nav>
       </span>
     </div>
-    <small>Points above/below average</small>
+    <small>Points above/below average upward mobility</small>
   </div>
 </div>
 
 <div class="breaker"></div>
 
 <div id="rightSide">
-<div id="districtName">Midwest</div>
+<div id="districtName" style="display:none;">Midwest</div>
 
-<div class="chartTitle">Title</div>
-<div class="chatter">chatter</div>
-<div class="breaker"></div>
-
-<div id="tableBlock">
+<div id="tableBlock" style="display:none;">
 <h3>Someone growing up in</h3>
 <div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by county or state"></input></div>
 <div class="table" id="table">
@@ -123,7 +121,7 @@
 </div>
 </div>
 
-<div id="gridBlock">  
+<div id="gridBlock" style="display:none;">  
 <h3 style="text-align:left;">...with parents earning in the <span id="pQ">--</span> quintile</h3> 
 <div id="quintile">
 <div class="grid start" data="p5">5th</div>
@@ -139,18 +137,6 @@
 <h3 style="text-align:right;">...end up on average in the <span id="cQ">--</span> quintile</h3>
 </div>
 </div>
-
-<div class="breaker"></div>
-
-<div class="chartTitle">Title</div>
-<div class="chatter">chatter</div>
-<div class="breaker"></div>
-
-
-<div class="chartTitle">Title</div>
-<div class="chatter">chatter</div>
-<div class="breaker"></div>
-
 
   </div>
 
@@ -389,9 +375,9 @@ function mapTips(d, subject, dataCompare){
        if (d.properties.hasOwnProperty('NAME')) { var name = d.properties.NAME; }
        else if (d.properties.hasOwnProperty('COUNTYNAME')) { var name = d.properties.COUNTYNAME; }
         var points = Math.round(data[i].aum25 - 47); 
-        return "<div>" + name + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " AUM (<span class='" + mapColor(d, subject, dataCompare) + "'>" + d3.format("+")(points) + " from average</span>)</div>";
+        return "<div style='font-weight:900;'>" + name + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " average upward mobility score</div><div class='" + mapColor(d, subject, dataCompare) + "'>" + d3.format("+")(points) + " from average</div>";
       } else {
-         return "<div>" + name + " County, " + data[i].state + "</div><div>No data available</div>";
+         return "<div style='font-weight:900;'>" + d.properties.NAME + " County, " + data[i].state + "</div><div>No data available</div>";
       }
     }
   }
@@ -426,7 +412,7 @@ d3.json("shapefiles/" + shape, function(error, us) {
       .data(us.features)
     .enter().append("path")
       .attr("d", path)
-      .on("click", clicked)
+      // .on("click", clicked)
       .attr("id", function(d) { var str = d.properties.NAME + "_" + geo; return str.replace(new RegExp(" ", "g"),"-"); })
       .attr("precinctName", function(d){ return d.properties.NAME })
       .attr("class", function(d){

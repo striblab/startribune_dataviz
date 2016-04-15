@@ -40,10 +40,14 @@
    .break { clear:both; }
 /*   .url { display:none; }*/
    .description { font-weight:bold; }
-   #deathsTable { max-height:420px; min-height:420px; overflow-y:hidden !important; overflow-x:hidden !important;  }
+   #deathsTable { /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
    #wrapper { width:100%; }
+
+   .switch { padding:10px; display:inline-block; text-align:center; width:150px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
+   .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; margin-top:4px; }
+   #filterButtons { text-align:center; }
 
    .filterBreak { height:7px; border-bottom:1px solid #333; clear:both; }
    #filter input:focus { width: 100% !important; }
@@ -59,6 +63,8 @@
 
    li:hover { background-color:#ddd !important; cursor:pointer; }
 
+   .chartTitle, .chatter, .navButton { display:none; }
+
    @media (max-width:800px) {
    .leftSide { width:100%; }
    .rightSide { display:none; }
@@ -71,12 +77,12 @@
   <div id="wrapper">
 
     <div class="chart" id="bigNumber">0</div>
-    <div class="chartTitle" id="bottomText">people have died in forceful encounters with law enforcement in Minnesota since 2000</div>
+    <div id="bottomText">people have died in forceful encounters with law enforcement in Minnesota since 2000</div>
 <!--     <div class="chartTitle" id="bottomText">search the Star Tribune's database of fatal incidents</div>
  -->
     <div class="breaker"></div>
 
-    <div class="chatter">
+<!--     <div class="chatter">
       <p>Most -- 125 -- were shot. The rest died after being tased, restrained or sprayed with chemicals.</p>
       <p>Police reported that at least 61 had guns or gun look-alikes, such as a BB or pellet gun. About 46 others had some other object described as a weapon, including knives, a sword, a baseball bat and in one case, a BIC pen. Some used a vehicle to drag officers or try to ram them.</p>
       <p>Not all of the incidents stemmed from a crime. In some cases, for instance, police were responding to reports about erratic behavior or a potential suicide.</p>
@@ -84,25 +90,55 @@
       <p>The Star Tribune compiled a database of these deaths by digging through news reports, law enforcement reports to the Justice Department and FBI, and death certificate data. It is likely incomplete since these deaths are not reliably tracked by any single government agency, nor consistently documented on death certificates.</p>
       <p>If you have questions about the data, please contact Jennifer Bjorhus at <a href="mailto:Jennifer.Bjorhus@startribune.com">Jennifer.Bjorhus@startribune.com</a> or 612-673-4683.</p>
       <p>Scroll through the list of fatal incidents or use the filter menu to view death records by race, gender, location and more. Results are also reflected on the map.</p>
-    </div>
+    </div> -->
 
-     <div class="chartTitle" id="race">Locations of force-related deaths</div>
-     <div class="chatter">Markers represent general locations of incidents.</div>
-     <div class='map' id="map"></div>
+     <div class="chartTitle all">Number of force-related deaths by year</div>
+     <div class="chatter all">Overall, the number of deaths per year is on an upward trend, although that could be due to better media reporting and a heightened public awareness of police force.</div>
 
-     <div class="chartTitle" id="deaths">Explore Minnesota force-related deaths</div>
+     <div class="chartTitle mental">Mental health status</div>
+     <div class="chatter mental">chatter here</div>
 
-<div class="smallerBreak"></div>
+     <div class="chartTitle race">Disproportionate minority deaths</div>
+     <div class="chatter race">The percentage of force-related deaths since 2000 broken down by race and the percentage each race accounts for in Minnesota’s population. The disproportionate representation of blacks and other minorities mirrors data on arrests. Last year, 25 percent of those arrested in Minnesota were black, compared to 67 percent white, five percent American Indian and three percent Asian.</div>
+
+     <div class="chartTitle gender">Overwhelmingly male</div>
+     <div class="chatter gender">chatter here</div>
+
+     <div class="chartTitle manner">Most ruled homicide</div>
+     <div class="chatter manner">chatter here</div>
+
+     <div class="chartTitle weapon">A variety of weapons</div>
+     <div class="chatter weapon">chatter here</div>
+
+     <div class="chartTitle place">Mostly in the metro area</div>
+     <div class="chatter place">chatter here</div>
+
+     <div class="chart" id="yearChart"></div>
+
+<!--      <div class="chart" id="raceChart"></div> -->
 
      <div id="filterBox">
+
+ <div id="filterButtons">
+   <div id="all" class="switch selected" data="all">All</div>
+   <div id="all" class="switch" data="mental">Mental</div>
+   <div id="all" class="switch" data="race">Race</div>
+   <div id="all" class="switch" data="gender">Gender</div>
+   <div id="all" class="switch" data="manner">Manner</div>
+   <div id="all" class="switch" data="weapon">Weapon</div>
+   <div id="all" class="switch" data="place">Place</div>
+ </div>
+
+ <div class="breaker"></div>
+
       <div id="selector">
   <section class="main">
         <div class="wrapper-demo">
           <div id="dd" class="wrapper-dropdown-1" tabindex="1">
-            <span>Filter death reports</span>
+            <span>Filter death reports by <span id="filterWord">all</span> statuses</span>
               <ul class="dropdown race" tabindex="1">
-        <li id="all"><a href="#">All</a></li>
         <div class='filterBreak'></div>
+        <div class="filterSection place">
         <li class='filter3' data="minneapolis" metric="region"><a href="#">Minneapolis</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
         <li class='filter3' data="st. paul" metric="region"><a href="#">St. Paul</a> <div class="count">0</div></li>
@@ -111,6 +147,8 @@
         <div class="breakSmall"></div>
         <li class='filter3' data="outstate" metric="region"><a href="#">Outstate</a> <div class="count">0</div></li>
         <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection race">
         <li class='filter' data="white" metric="race"><a href="#">White</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
         <li class='filter' data="black" metric="race"><a href="#">Black</a> <div class="count">0</div></li>
@@ -119,10 +157,14 @@
         <div class="breakSmall"></div>
         <li class='filter' data="american indian" metric="race"><a href="#">American Indian</a> <div class="count">0</div></li>
         <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection gender">
         <li class='filter' data=" male" metric="gender"><a href="#">Male</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
         <li class='filter' data="female" metric="gender"><a href="#">Female</a> <div class="count">0</div></li>
         <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection manner">
         <li class='filter' data="homicide" metric="manner"><a href="#">Homicide</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
         <li class='filter' data="suicide" metric="manner"><a href="#">Suicide</a> <div class="count">0</div></li>
@@ -135,19 +177,31 @@
         <div class="breakSmall"></div>  
         <li class='filter' data="not available" metric="manner"><a href="#">Manner Not Available</a> <div class="count">0</div></li> 
         <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection weapon">
         <li class='filter2' data="gun" metric="weapon"><a href="#">Gun</a> <div class="count">0</div></li>
         <div class="breakSmall"></div> 
         <li class='filter2' data="knife" metric="weapon"><a href="#">Knife</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
         <li class='filter2' data="other" metric="weapon"><a href="#">Other Weapon</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter2' data="unarmed" metric="weapon"><a href="#">Unarmed</a> <div class="count">0</div></li>  
+        <li class='filter2' data="unarmed" metric="weapon"><a href="#">Unarmed</a> <div class="count">0</div></li> 
+        </div> 
               </ul>
           </div>
         ​</div>
 </section>
 </div>
 
+<div style="display:none">
+     <div class="chartTitle" id="race">Locations of force-related deaths</div>
+     <div class="chatter">Markers represent general locations of incidents.</div>
+     <div class='map' id="map"></div>
+  </div>
+
+     <div class="chartTitle" id="deaths">Explore Minnesota force-related deaths</div>
+
+<div class="smallerBreak"></div>
 
     </div>
 
@@ -162,14 +216,6 @@
 <button id='downClick' class="navButton">&#9660;</button>
 
     <div class="breaker"></div>
-
-     <div class="chartTitle" id="year">Number of force-related deaths by year</div>
-     <div class="chatter">Overall, the number of deaths per year is on an upward trend, although that could be due to better media reporting and a heightened public awareness of police force.</div>
-     <div class="chart" id="yearChart"></div>
-
-     <div class="chartTitle" id="race">Disproportionate minority deaths</div>
-     <div class="chatter">The percentage of force-related deaths since 2000 broken down by race and the percentage each race accounts for in Minnesota’s population. The disproportionate representation of blacks and other minorities mirrors data on arrests. Last year, 25 percent of those arrested in Minnesota were black, compared to 67 percent white, five percent American Indian and three percent Asian.</div>
-     <div class="chart" id="raceChart"></div>
 
 
      <a href="https://docs.google.com/spreadsheets/d/1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA/pub?gid=1024005488&single=true&output=csv" target="new_"><button class="downloadButton">&nbsp;Download data</button></a>
@@ -211,6 +257,73 @@ d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7
 dataShootings = dataLoadShootings.mn_shootings;
 dataYear = dataLoadYear.yearChart;
 dataRace = dataLoadRace.raceChart;
+
+$(".all").show();
+
+$(".switch").click(function() {
+  $(".switch").removeClass("selected");
+  $(this).addClass("selected");
+  $("#filterWord").text($(this).attr("data"));
+  $(".chartTitle, .chatter").hide();
+  if ($(this).attr("data") == "all") { $(".filterSection").show(); $(".all").show(); }
+  else { $(".filterSection").hide(); $("." + $(this).attr("data")).show(); }
+
+  if ($(this).attr("data") == "race") { 
+    chart_year.load( { 
+            data: {
+            json: dataRace,
+            keys: {
+                x: 'race', 
+                value: ["pop_pct","deaths_pct"]
+            },
+            type: 'bar',
+            names: {
+              'pop_pct': 'MN Population',
+              'deaths_pct': 'Deaths'
+            }
+        }, 
+        bar: { width: { ratio: 0.7 } },  
+        color: { pattern: ['#333',"#8C101C"] },
+        axis: {
+            x: {
+               type: 'category'
+            },
+            y : {
+              tick: { format: d3.format("%") },
+              padding: {top: 0, bottom: 0} 
+        }
+       },
+          unload: ['deaths']
+    });
+  }
+
+  if ($(this).attr("data") == "all") { 
+    chart_year.load( { 
+            data: {
+            json: dataYear,
+            keys: {
+                x: 'year', 
+                value: ["deaths"]
+            },
+            type: 'bar',
+            names: {
+              'deaths': 'Deaths'
+            }
+        }, 
+        bar: { width: { ratio: 0.2 } },  
+        color: { pattern: ['#8C101C'] },
+        axis: {
+             y : {
+              tick: {  values: ['2', '4', '6', '10', '8', '12'] },
+              padding: {top: 0, bottom: 0} 
+        }
+       },
+          unload: ['pop_pct','deaths_pct']
+    });
+  }
+
+
+});
 
 $('#bigNumber').html(dataShootings.length);
 $('#results').html(dataShootings.length);
@@ -474,33 +587,33 @@ var chart_year = c3.generate({
        }
     });
 
-var chart_race = c3.generate({
-        bindto: '#raceChart',
-        padding: padding,
-        data: {
-            json: dataRace,
-            keys: {
-                x: 'race', 
-                value: ["pop_pct","deaths_pct"]
-            },
-            type: 'bar',
-            names: {
-              'pop_pct': 'MN Population',
-              'deaths_pct': 'Deaths'
-            }
-        }, 
-        bar: { width: { ratio: 0.7 } },  
-        color: { pattern: ['#333',"#8C101C"] },
-        axis: {
-            x: {
-               type: 'category'
-            },
-            y : {
-              tick: { format: d3.format("%") },
-              padding: {top: 0, bottom: 0} 
-        }
-       }
-    });
+// var chart_race = c3.generate({
+//         bindto: '#raceChart',
+//         padding: padding,
+//         data: {
+//             json: dataRace,
+//             keys: {
+//                 x: 'race', 
+//                 value: ["pop_pct","deaths_pct"]
+//             },
+//             type: 'bar',
+//             names: {
+//               'pop_pct': 'MN Population',
+//               'deaths_pct': 'Deaths'
+//             }
+//         }, 
+//         bar: { width: { ratio: 0.7 } },  
+//         color: { pattern: ['#333',"#8C101C"] },
+//         axis: {
+//             x: {
+//                type: 'category'
+//             },
+//             y : {
+//               tick: { format: d3.format("%") },
+//               padding: {top: 0, bottom: 0} 
+//         }
+//        }
+//     });
 });
 });
 });
