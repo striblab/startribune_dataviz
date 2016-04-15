@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Minnesota Smoking Data</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  
+#map { 
+height: 500px; 
+width:960px; 
+cursor: pointer;
+}
+
+.leaflet-control-attribution{
+visibility: hidden;
+display: none;
+}
+
+.leaflet-control{
+visibility: hidden;
+display: none;
+}
+
+body{
+zoom:85%;
+}
+
+.leaflet-control-zoom{
+visibility: hidden;
+display: none;
+}
+</style>
+</head>
+<body>
+
+<div id='map' class='dark'></div>
+<script>
+
+var map = L.mapbox.map('map')
+    .setView([39.3343, -84.331], 4);
+
+// Pulling multiple layers of interactivity isn't too tricky, it
+// just requires that you don't use compositing, and instead add each
+// layer as its components: a tileLayer, a gridLayer, and a gridControl
+var dataTiles = L.mapbox.tileLayer('http://www.jeffhargarten.com/interactives/smoking/1033.tilejson').addTo(map);
+//var dataGrid = L.mapbox.gridLayer('http://www.jeffhargarten.com/interactives/smoking/1033.tilejson').addTo(map);
+//var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
+//dataControl.options.follow = true;
+
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+if (map.tap) map.tap.disable();
+</script>
+
+</body>
+</html>

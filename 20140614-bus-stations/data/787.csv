@@ -1,0 +1,6 @@
+Route,Dir,Site_id,Name,Group_ID,Latitude,Longitude,XCoordinate,YCoordinate,City,Trips,Trips_Obs,Schedule,Ons,Offs
+787,N,43192,Zachary Sq P&R & 96 Av N,ZAPR,45.129586,-93.426967,466425.4,4997434.59,MAPLE GROVE,2,0,Weekday,,
+787,N,47472,Crosswinds P&R & Weaver Lk Rd,CWPR,45.102121,-93.470238,463004.93,4994402.44,MAPLE GROVE,3,0,Weekday,,
+787,N,47475,Shepherd of Grove & Eagle Lake,SHGP,45.078428,-93.430226,466138.89,4991752.81,MAPLE GROVE,3,0,Weekday,,
+787,N,51442,Maple Grove P&R & Transit Stn,MGTS,45.091432,-93.436994,465614.02,4993200.3,MAPLE GROVE,3,0,Weekday,,
+787,N,53717,Slumberland P&R & 15794 Grove Circle,PKST,45.13516,-93.479139,462326.44,4998076.81,MAPLE GROVE,3,0,Weekday,,

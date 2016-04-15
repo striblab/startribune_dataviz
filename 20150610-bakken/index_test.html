@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bakken Oil Train Safety</title>
+  <meta name="description" content="Oil Train Safety">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+  
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="js/jquery.bxslider.css" rel="stylesheet" />
+
+  <style>
+//Popular Light
+@font-face {
+  font-family: "Popular Light";
+  src: url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot");
+  src: url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot?") format("embedded-opentype"),
+       url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-3.woff") format("woff"),
+       url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Popular";
+  src: url("fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-2.eot");
+  src: url("fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-2.eot?") format("embedded-opentype"),
+       url("fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-3.woff") format("woff"),
+       url("fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+//Popular Medium
+@font-face {
+  font-family: "Popular Medium";
+  src: url("fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot");
+  src: url("fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot?") format("embedded-opentype"),
+       url("fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-3.woff") format("woff"),
+       url("fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+//Popular Bold
+@font-face {
+  font-family: "Popular";
+  src: url("fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-2.eot");
+  src: url("fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-2.eot?") format("embedded-opentype"),
+       url("fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-3.woff") format("woff"),
+       url("fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+  </style>
+
+  <style>
+    body { margin:0; padding:0; overflow:hidden; }
+    #map { width:90%; height:375px; float:left; border: 1px solid black; padding:2px; margin:5px; text-align:center;}
+    #map2 { width:90%; height:375px; float:left; border: 1px solid black; padding:2px; margin:5px; text-align:center;}
+    #map3 { width:90%; height:375px; float:left; border: 1px solid black; padding:2px; margin:5px; text-align:center;}
+    .map-legend .swatch { width:20px; height:20px; float:left; margin-right:10px; }
+    .leaflet-popup-close-button { display: none; }
+    .leaflet-popup-content-wrapper { pointer-events: none; }
+    .leaflet-control-attribution{ display:none !important; }
+    .leaflet-control-mapbox-geocoder, .leaflet-control-mapbox-geocoder-wrap { position:absolute; border-radius: 0 !important; top:351px; margin:0 !important; z-index:900;}
+    .leaflet-control-mapbox-geocoder .leaflet-control-mapbox-geocoder-form input[type=text], .leaflet-control-mapbox-geocoder-form  { background: 0 0; border: 0; width: 100% !important; padding: 0 0 0 10px; height: 26px; outline: 0; }
+  </style>
+</head>
+
+<body>
+
+<div id='map'></div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+<script src='https://cartodb-libs.global.ssl.fastly.net/torque.full.js'></script>
+<script src="js/nvd3-master/lib/d3.v3.js"></script>
+<script src="js/nvd3-master/nv.d3.js"></script>
+<script src="js/nvd3-master/src/utils.js"></script>
+<script src="js/nvd3-master/src/tooltip.js"></script>
+<script src="js/nvd3-master/src/models/legend.js"></script>
+<script src="js/nvd3-master/src/models/axis.js"></script>
+<script src="js/nvd3-master/examples/stream_layers.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+<script>
+
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map = L.mapbox.map('map', 'examples.map-20v6611k')
+    .setView([44.9647979,-93.2272339], 10);
+
+    var output = document.getElementById('output');
+
+var geocoderControl = L.mapbox.geocoderControl('mapbox.places', {
+        keepOpen: true
+    });
+geocoderControl.addTo(map);
+
+geocoderControl.on('found', function(res) {
+    output.innerHTML = JSON.stringify(res.results.features[0]);
+})
+
+    $(document).ready(function() {
+  $.getJSON('buffer.json', function(data) {
+    var buffer = L.geoJson(data, {
+      'style': {fillColor: '#f00', strokeColor: '#f00', fillOpacity: 0, opacity: 1, weight: 1, color: '#f00'},
+      'onEachFeature': null
+    });
+    map.addLayer(buffer);
+})
+    $.getJSON('rail.json', function(data) {
+     var rail = L.geoJson(data, {
+      'style': {fillColor: '#333', strokeColor: '#333', fillOpacity: 0, opacity: 1, weight: 1, color: '#333'},
+      'onEachFeature': null
+    });
+    map.addLayer(rail);
+})
+
+});
+
+</script>
+
+</html>

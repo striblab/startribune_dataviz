@@ -1,0 +1,248 @@
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Minnesota Department of Transportation  Office of Freight and Commercial  Vehicle Operations</origin>
+				<pubdate>2007</pubdate>
+				<title Sync="TRUE">SDW_TRANS.RAIL_ROUTE_ACTIVE</title>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<pubinfo>
+					<publish>Minnesota Department of Transportation  Office of Freight and Commercial  Vehicle Operations</publish>
+				</pubinfo>
+				<onlink Sync="TRUE">Service=sde:oracle10g:/;local=tgp; User=dick1son; Version=SDE.DEFAULT</onlink>
+				<ftname Sync="TRUE">SDW_TRANS.RAIL_ROUTE_ACTIVE</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>This dataset depicts rail lines in Minnesota.
+
+The lines were calibrated from the point feature class "Minnesota Rail Grade Crossings" (RAIL_ADMIN.RAIL_POINT_HISTORY).</abstract>
+			<purpose></purpose>
+			<supplinf>Minnesota</supplinf>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<sngdate>
+					<caldate></caldate>
+				</sngdate>
+			</timeinfo>
+			<current>The original digitization for the main  lines was done from 1990-1995. These lines were edited for accuracy  in 2006-2007 and additional rail lines and rail spurs were created by referencing the 2003 Farm Service Agency (FSA) color orthophotography.</current>
+		</timeperd>
+		<status>
+			<progress>In work</progress>
+			<update>As needed</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc Sync="TRUE">-97.508970</westbc>
+				<eastbc Sync="TRUE">-89.028990</eastbc>
+				<northbc Sync="TRUE">49.652543</northbc>
+				<southbc Sync="TRUE">43.192405</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">174000.000000</leftbc><rightbc Sync="TRUE">787000.000000</rightbc><bottombc Sync="TRUE">4790000.000000</bottombc><topbc Sync="TRUE">5500000.000000</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt></themekt>
+				<themekey>railroad, train, rail, railway, transportation</themekey>
+			</theme>
+			<place>
+				<placekey>Minnesota</placekey>
+			</place>
+		</keywords>
+		<accconst>None</accconst>
+		<useconst>By accepting this data, the user agrees not to transmit this data or provide access to it or any part of it to another party unless the user shall include with the data a copy of the disclaimer.</useconst>
+		<ptcontac>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jon Osmond</cntper>
+					<cntorg>Minnesota Department of Transportation  Office of Freight and Commercial  Vehicle Operations</cntorg>
+				</cntperp>
+				<cntpos>Transportation Planner</cntpos>
+				<cntaddr>
+					<address>395 John Ireland Blvd</address>
+					<city>Saint Paul</city>
+					<state>MN</state>
+					<postal>55155</postal>
+				</cntaddr>
+				<cntvoice>651-366-3693</cntvoice>
+				<cntfax>651-366-3721</cntfax>
+				<cntemail>jonathan.osmond@dot.state.mn.us</cntemail>
+			</cntinfo>
+		</ptcontac>
+		<browse>
+			<browsen>None available</browsen>
+			<browsed></browsed>
+		</browse>
+		<native Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3500</native>
+		<crossref>
+			<citeinfo>
+				<title>Rail Grade Crossings.</title>
+			</citeinfo>
+		</crossref>
+		<natvform Sync="TRUE">SDE Feature Class</natvform></idinfo>
+	<dataqual>
+		<attracc>
+			<attraccr></attraccr>
+		</attracc>
+		<logic></logic>
+		<complete>Entire state</complete>
+		<posacc>
+			<horizpa>
+				<horizpar>Locational accuracy for features derived from USGS 7.5-minute quadrangles cannot be assumed to exceed National Map Accuracy Standards for 1:24,000 scale maps (+/- 40 feet or 12 meters).</horizpar>
+			</horizpa>
+			<vertacc>
+				<vertaccr></vertaccr>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srcscale></srcscale>
+			</srcinfo>
+			<procstep>
+				<procdesc>Data Source: 
+1:24,000-scale USGS 7.5-minute quadrangles 
+
+Processing Steps: 
+During the time period 1990-1995, the BaseMap data layers were digitized from USGS 7.5-minute quadrangles using MicroStation CADD. A total of 1745 quadrangles were digitized. For any given area, Mn/DOT used the most recent quadrangle available at that time. The digital MicroStation CADD files were converted from State Plane Coordinates to UTM and then converted into ARC/INFO coverages. The ARC/INFO files were merged into statewide, seamless coverages and then attributes were added. The coverage has been updated continuously as information has come in to the Geographic Information and Mapping Unit.</procdesc>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\Temp\Metadata\railroute_active.xml</srcused><date Sync="TRUE">20080605</date><time Sync="TRUE">12492800</time></procstep><procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">V:\GIS_Data\MnDOT_Data\Metadata\SDWRail_RouteActivemetadata.xml</srcused><procdate Sync="TRUE">20120306</procdate><proctime Sync="TRUE">10065500</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<indspref></indspref>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf><esriterm Name="oil_corridors_buffers_dissolve_2"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom code="4" Sync="TRUE"></efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">0</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf></spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance Sync="TRUE">coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.001000</absres>
+						<ordres Sync="TRUE">0.001000</ordres>
+					</coordrep>
+					<plandu Sync="TRUE">meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn Sync="TRUE">North American Datum of 1983</horizdn>
+				<ellips Sync="TRUE">Geodetic Reference System 80</ellips>
+				<semiaxis Sync="TRUE">6378137.000000</semiaxis>
+				<denflat Sync="TRUE">298.257222</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><projcsn Sync="TRUE">NAD_1983_UTM_Zone_15N</projcsn></cordsysn></horizsys>
+		<vertdef>
+			<altsys>
+				<altres Sync="TRUE">1.000000</altres>
+				<altenc Sync="TRUE">Explicit elevation coordinate included with horizontal coordinates</altenc>
+			</altsys>
+		</vertdef>
+	</spref>
+	<eainfo>
+		<detailed Name="oil_corridors_buffers_dissolve_2">
+			<enttyp>
+				<enttypl Sync="TRUE">oil_corridors_buffers_dissolve_2</enttypl>
+				<enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">0</enttypc></enttyp>
+			<attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">Esri</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr>
+				<attrlabl>SHAPE</attrlabl>
+				<attrdef>Feature geometry.</attrdef>
+				<attrdefs>ESRI</attrdefs>
+				<attrdomv>
+					<udom>Coordinates defining the features.</udom>
+				</attrdomv>
+				<attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr>
+			<attr><attrlabl Sync="TRUE">Id</attrlabl><attalias Sync="TRUE">Id</attalias><attrtype Sync="TRUE">Integer</attrtype><attwidth Sync="TRUE">6</attwidth><atprecis Sync="TRUE">6</atprecis><attscale Sync="TRUE">0</attscale></attr></detailed>
+		<overview>
+			<eaover>MAIN_RR_OPERATOR_CODE
+RAIL_SECTION_ID
+RR_DIVISION_CODE
+RR_SUBDIVISION_CODE
+RR_SECTION_CODE
+PROPOSED_DATE
+ACTIVE_DATE
+RETIRE_DATE
+EDITED_DATE
+COMMENTS
+SHAPE
+SHAPE_LENGTH</eaover>
+			<eadetcit>MAIN_RR_OPERATOR_CODE: The code representing the name of the Railroad
+RAIL_SECTION_ID: Unique route number field.  Serves as the unique identifier for this data table.
+RR_DIVISION_CODE: The name of the Rail Division
+RR_SUBDIVISION_CODE: The name of the Rail Subdivision
+RR_SECTION_CODE: The name of the Section
+PROPOSED_DATE: The date the rail line was proposed.
+ACTIVE_DATE: The date the rail line was activated.
+RETIRE_DATE: The date the rail line was retired.
+EDITED_DATE: The date the feature was lasted edited.
+COMMENTS: A field to hold miscellaneous comments from editors.
+SHAPE: Geometry field for maintaining the rail line work.
+SHAPE_LENGTH: Geometry field for maintaining the length of the rail line work.</eadetcit>
+		</overview>
+	</eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jon Osmond</cntper>
+					<cntorg>Minnesota Department of Transportation  Office of Freight and Commercial  Vehicle Operations</cntorg>
+				</cntperp>
+				<cntpos>Transportation Planner</cntpos>
+				<cntaddr>
+					<address>395 John Ireland Blvd</address>
+					<city>Saint Paul</city>
+					<state>MN</state>
+					<postal>55155</postal>
+				</cntaddr>
+				<cntvoice>651-366-3693</cntvoice>
+				<cntfax>651-366-3721</cntfax>
+				<cntemail>jonathan.osmond@dot.state.mn.us</cntemail>
+			</cntinfo>
+		</distrib>
+		<resdesc></resdesc>
+		<distliab>The Minnesota Department of Transportation makes no representation or warranties, express or implied, with respect to the reuse of data provided herewith, regardless of its format or the means of its transmission. There is no guarantee or representation to the user as to the accuracy, currency, suitability, or reliability of this data for any purpose. The user accepts the data 'as is', and assumes all risks associated with its use. By accepting this data, the user agrees not to transmit this data or provide access to it or any part of it to another party unless the user shall include with the data a copy of this disclaimer. The Minnesota Department of Transportation assumes no responsibility for actual or consequential damage incurred as a result of any user's reliance on this data.</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname></formname>
+					<formvern></formvern>
+					<transize></transize>
+				</digtinfo>
+			</digform>
+			<ordering></ordering>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20120306</metd>
+		<metc>
+			<cntinfo>
+				<cntperp>
+					<cntper>Jon Osmond</cntper>
+					<cntorg>Minnesota Department of Transportation  Office of Freight and Commercial  Vehicle Operations</cntorg>
+				</cntperp>
+				<cntorgp>
+					<cntorg>REQUIRED: The organization responsible for the metadata information.</cntorg>
+					<cntper>REQUIRED: The person responsible for the metadata information.</cntper>
+				</cntorgp>
+				<cntpos>Transportation Planner</cntpos>
+				<cntaddr>
+					<addrtype>REQUIRED: The mailing and/or physical address for the organization or individual.</addrtype>
+					<address>395 John Ireland Blvd</address>
+					<city>Saint Paul</city>
+					<state>MN</state>
+					<postal>55155</postal>
+				</cntaddr>
+				<cntvoice>651-366-3693</cntvoice>
+				<cntfax>651-366-3721</cntfax>
+				<cntemail>jonathan.osmond@dot.state.mn.us</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<mettc Sync="TRUE">local time</mettc>
+		<metextns>
+			<onlink>http://www.gis.state.mn.us/stds/metadata.htm</onlink>
+		</metextns>
+		<metextns>
+			<onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+			<metprof>ESRI Metadata Profile</metprof>
+		</metextns>
+		<langmeta Sync="TRUE">en</langmeta></metainfo>
+	<Esri><CreaDate>20150427</CreaDate><CreaTime>09414600</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20150511</SyncDate><SyncTime>14583000</SyncTime><ModDate>20150511</ModDate><ModTime>14583000</ModTime><ArcGISFormat>1.0</ArcGISFormat><DataProperties><itemProps><itemLocation><linkage Sync="TRUE">file://\\AD\CO\OFCVO\Data\Freight\GIS\Projects\Freight Rail\Crude Oil\Crude Oil Corridors Population Analysis\Shapefile for public\oil_corridors_buffers_dissolve_2.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></itemLocation><itemName Sync="TRUE">oil_corridors_buffers_dissolve_2</itemName><imsContentType Sync="TRUE">002</imsContentType><itemSize Sync="TRUE">0.000</itemSize></itemProps><coordRef><type Sync="TRUE">Projected</type><geogcsn Sync="TRUE">GCS_North_American_1983</geogcsn><csUnits Sync="TRUE">Linear Unit: Meter (1.000000)</csUnits><projcsn Sync="TRUE">NAD_1983_UTM_Zone_15N</projcsn><peXml Sync="TRUE">&lt;ProjectedCoordinateSystem xsi:type='typens:ProjectedCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.esri.com/schemas/ArcGIS/10.1'&gt;&lt;WKT&gt;PROJCS[&amp;quot;NAD_1983_UTM_Zone_15N&amp;quot;,GEOGCS[&amp;quot;GCS_North_American_1983&amp;quot;,DATUM[&amp;quot;D_North_American_1983&amp;quot;,SPHEROID[&amp;quot;GRS_1980&amp;quot;,6378137.0,298.257222101]],PRIMEM[&amp;quot;Greenwich&amp;quot;,0.0],UNIT[&amp;quot;Degree&amp;quot;,0.0174532925199433]],PROJECTION[&amp;quot;Transverse_Mercator&amp;quot;],PARAMETER[&amp;quot;False_Easting&amp;quot;,500000.0],PARAMETER[&amp;quot;False_Northing&amp;quot;,0.0],PARAMETER[&amp;quot;Central_Meridian&amp;quot;,-93.0],PARAMETER[&amp;quot;Scale_Factor&amp;quot;,0.9996],PARAMETER[&amp;quot;Latitude_Of_Origin&amp;quot;,0.0],UNIT[&amp;quot;Meter&amp;quot;,1.0],AUTHORITY[&amp;quot;EPSG&amp;quot;,26915]]&lt;/WKT&gt;&lt;XOrigin&gt;-5120900&lt;/XOrigin&gt;&lt;YOrigin&gt;-9998100&lt;/YOrigin&gt;&lt;XYScale&gt;450445547.3910538&lt;/XYScale&gt;&lt;ZOrigin&gt;-100000&lt;/ZOrigin&gt;&lt;ZScale&gt;10000&lt;/ZScale&gt;&lt;MOrigin&gt;-100000&lt;/MOrigin&gt;&lt;MScale&gt;10000&lt;/MScale&gt;&lt;XYTolerance&gt;0.001&lt;/XYTolerance&gt;&lt;ZTolerance&gt;0.001&lt;/ZTolerance&gt;&lt;MTolerance&gt;0.001&lt;/MTolerance&gt;&lt;HighPrecision&gt;true&lt;/HighPrecision&gt;&lt;WKID&gt;26915&lt;/WKID&gt;&lt;LatestWKID&gt;26915&lt;/LatestWKID&gt;&lt;/ProjectedCoordinateSystem&gt;</peXml></coordRef></DataProperties></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.2.2.3552</envirDesc><dataLang><languageCode Sync="TRUE" value="eng"></languageCode><countryCode value="USA" Sync="TRUE"></countryCode></dataLang><idCitation><resTitle Sync="TRUE">oil_corridors_buffers_dissolve_2</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">174000</westBL><eastBL Sync="TRUE">787000</eastBL><northBL Sync="TRUE">5500000</northBL><southBL Sync="TRUE">4790000</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-97.50897</westBL><eastBL Sync="TRUE">-89.02899</eastBL><northBL Sync="TRUE">49.652543</northBL><southBL Sync="TRUE">43.192405</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="eng"></languageCode><countryCode value="USA" Sync="TRUE"></countryCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://Service=sde:oracle10g:/;local=tgp; User=dick1son; Version=SDE.DEFAULT</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc></distorTran><distorFormat><formatName Sync="TRUE">SDE Feature Class</formatName></distorFormat></distributor><distFormat><formatName Sync="TRUE">Shapefile</formatName></distFormat><distTranOps><transSize Sync="TRUE">0.000</transSize></distTranOps></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE" code="26915">NAD_1983_UTM_Zone_15N</identCode><idCodeSpace Sync="TRUE">EPSG</idCodeSpace><idVersion Sync="TRUE">8.2.6</idVersion></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><geometObjs Name="oil_corridors_buffers_dissolve_2"><geoObjTyp><GeoObjTypCd value="002" Sync="TRUE"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">0</geoObjCnt></geometObjs><topLvl><TopoLevCd value="001" Sync="TRUE"></TopoLevCd></topLvl></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20150511</mdDateSt></metadata>

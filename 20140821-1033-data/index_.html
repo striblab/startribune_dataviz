@@ -1,0 +1,803 @@
+<html>
+  <head>
+	<title>Minnesota's Municipal Military</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/special/data_tables/media/css/demo_page.css">
+  <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/special/data_tables/media/css/demo_table.css">
+  <script type="text/javascript" language="javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/725b2a2115b/sorting/formatted-numbers.js"></script>
+  <script>    
+  $(document).ready(function(){
+      $('#stuff').dataTable({"iDisplayLength": 25, columnDefs: [{ type: 'formatted-num', targets: 2 }]});
+  });
+  </script>
+	<script>
+	$(document).ready(function() {
+		$('.nav-tabs > li > a').click(function(event){
+		event.preventDefault();//stop browser to take action for clicked anchor
+ 
+		//get displaying tab content jQuery selector
+		var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');					
+ 
+		//find actived navigation and remove 'active' css
+		var actived_nav = $('.nav-tabs > li.active');
+		actived_nav.removeClass('active');
+ 
+		//add 'active' css into clicked navigation
+		$(this).parents('li').addClass('active');
+ 
+		//hide displaying tab content
+		$(active_tab_selector).removeClass('active');
+		$(active_tab_selector).addClass('hide');
+ 
+		//show target tab content
+		var target_tab_selector = $(this).attr('href');
+		$(target_tab_selector).removeClass('hide');
+		$(target_tab_selector).addClass('active');
+	     });
+	  });
+	</script>
+  <style>
+    body {
+    font-family: Helvetic,Arial,sans-serif;
+    font-size:1em;
+    }
+    /** Start: to style navigation tab **/
+    .nav {
+    margin-bottom: 18px;
+    margin-left: 0;
+    list-style: none;
+    }
+
+    .nav > li > a {
+    display: block;
+    }
+
+    .nav-tabs{
+    *zoom: 1;
+    }
+
+    .nav-tabs:before,
+    .nav-tabs:after {
+    display: table;
+    content: "";
+    }
+
+    .nav-tabs:after {
+    clear: both;
+    }
+
+    .nav-tabs > li {
+    float: left;
+    }
+
+    .nav-tabs > li > a {
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: 2px;
+    line-height: 14px;
+    }
+
+    .nav-tabs {
+    border-bottom: 1px solid #efefef;
+    }
+
+    .nav-tabs > li {
+    margin-bottom: -1px;
+    }
+
+    .nav-tabs > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 18px;
+    border: 1px solid transparent;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    }
+
+    .nav-tabs > li > a:hover {
+    border-color: #eeeeee #eeeeee #efefef;
+    }
+
+    .nav-tabs > .active > a,
+    .nav-tabs > .active > a:hover {
+    color: #555555;
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    border-bottom-color: transparent;
+    font-weight:bold;
+    }
+
+    li {
+    line-height: 18px;
+    }
+
+    .tab-content.active{
+    display: block;
+
+    }
+
+    .tab-content.hide{
+    display: none;
+    }
+
+
+    /** End: to style navigation tab **/
+
+    tr.odd td.sorting_1 {
+    background-color: #efefef;
+    }
+    tr.even td.sorting_1 {
+    background-color: #efefef;
+    }
+    tr.even {
+    background-color: white;
+    }
+    tr.odd {
+    background-color: #efefef;
+    }
+
+    /* unvisited link */
+    a:link {
+    color: #9c2726;
+    text-decoration:none;
+    }
+
+    /* visited link */
+    a:visited {
+    color: #9c2726;
+    }
+
+    /* mouse over link */
+    a:hover {
+    color: #9c2726;
+    text-decoration:bold;
+    }
+
+    /* selected link */
+    a:active {
+    color: #9c2726;
+    }
+
+    .next {
+    background: url('forward_enabled.png') no-repeat top right !important;
+    }
+    .next {
+    padding-right: 23px !important;
+    margin-left: 10px !important;
+    }
+
+    .paginate_disabled_next {
+    background: url('http://wcfcourier.com/app/special/data_tables/media/images/forward_disabled.png') no-repeat top right !important;
+    }
+
+    .previous {
+    background: url('back_enabled.png') no-repeat top left !important;
+    }
+    .previous {
+    padding-left: 23px !important;
+    }
+
+    .paginate_button {
+    padding-left:5px;
+    padding-right:5px;
+    }
+
+    td{
+    padding: 9px !important;
+    }
+
+    li{
+    font-size:14px;
+    }
+    #grid{
+    zoom:90%;
+    }
+
+    .header th{padding:9px 0 9px 0;background-color:#999;color:#fff;font-weight:normal !important;}
+    .dataTables_filter{padding-bottom:18px;font-size:1em;}
+    .dataTables_filter label input{margin-left:6px;font-family:helvetica,arial,sans-serif;font-size:1em;padding:2px;}
+    .dataTables_length{display:none;}
+    .dataTables_filter{float:left;text-align:left;font-weight:bold;}
+    .dataTable{margin-bottom:18px;}
+    .sorting_asc {
+    background: #000 url('images/sort_asc.png') no-repeat center right !important;
+    }
+
+    .sorting_desc {
+    background: #000 url('images/sort_desc.png') no-repeat center right !important;
+    }
+  </style>
+	</head>
+	<body>
+    
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#tab1" class="active">2011-2013 Categories</a>
+      </li>
+      <li>
+        <a href="#tab3">MN Agencies</a>
+      </li>
+      <li>
+        <a href="#tab2">National Agencies</a>
+      </li>
+    </ul>
+		
+    <section id="tab1" class="tab-content active">
+
+			<div>
+				<iframe frameborder="0" style="height:540px !important;" src="tally.html" width="100%" scrolling="no"></iframe>
+			</div>
+
+
+    <div id="grid">
+    <table id="stuff" width="100%">
+      <thead>
+        <tr class="header">
+          <th class="party-cell" style="padding-left:12px;">Type</th>
+          <th class="item-cell">Item</th>
+          <th class="value-cell">Value</th>
+          <th class="quantity-cell" style="padding-right:12px;">Quantity</th>
+        </tr>
+      </thead>
+      <tbody style="">
+        <tr class="firstRow">
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Combat boots</td>
+          <td class="value-cell">$151.90 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Hot weather boots</td>
+          <td class="value-cell">$438.63 </td>
+          <td class="quantity-cell">3</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Extreme cold weather parkas</td>
+          <td class="value-cell">$424.19 </td>
+          <td class="quantity-cell">4</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Knee pads</td>
+          <td class="value-cell">$75.24 </td>
+          <td class="quantity-cell">4</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Flyer coveralls</td>
+          <td class="value-cell">$892.08 </td>
+          <td class="quantity-cell">6</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Industrial spectacles</td>
+          <td class="value-cell">$106.10 </td>
+          <td class="quantity-cell">20</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Cold weather overalls</td>
+          <td class="value-cell">$1,285.05 </td>
+          <td class="quantity-cell">30</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Snow camo trousers</td>
+          <td class="value-cell">$3,365.05 </td>
+          <td class="quantity-cell">65</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Cold weather shirts</td>
+          <td class="value-cell">$7,777.90 </td>
+          <td class="quantity-cell">162</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Snow camo parkas</td>
+          <td class="value-cell">$4,165.60 </td>
+          <td class="quantity-cell">80</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Personnel locator radio sets</td>
+          <td class="value-cell">$17,788.00 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Satellite navigation sets</td>
+          <td class="value-cell">$0.00 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Night vision viewer</td>
+          <td class="value-cell">$0.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Night driving viewer</td>
+          <td class="value-cell">$60,251.73 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Thermal imaging system</td>
+          <td class="value-cell">$424,137.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Laser range finder</td>
+          <td class="value-cell">$27,505.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Antilock break control</td>
+          <td class="value-cell">$1,834.21 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Radio pouches</td>
+          <td class="value-cell">$30.60 </td>
+          <td class="quantity-cell">3</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Infrared control sets</td>
+          <td class="value-cell">$22,651.44 </td>
+          <td class="quantity-cell">3</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Binoculars</td>
+          <td class="value-cell">$1,420.00 </td>
+          <td class="quantity-cell">4</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Hoisting harness assemblies</td>
+          <td class="value-cell">$619.20 </td>
+          <td class="quantity-cell">5</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Night vision goggles</td>
+          <td class="value-cell">$22,992.00 </td>
+          <td class="quantity-cell">6</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Field packs</td>
+          <td class="value-cell">$902.08 </td>
+          <td class="quantity-cell">8</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Safety goggles</td>
+          <td class="value-cell">$623.20 </td>
+          <td class="quantity-cell">10</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Utility pouches</td>
+          <td class="value-cell">$298.25 </td>
+          <td class="quantity-cell">25</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Compass Assemblies</td>
+          <td class="value-cell">$1,798.20 </td>
+          <td class="quantity-cell">30</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Krill lamps</td>
+          <td class="value-cell">$1,028.55 </td>
+          <td class="quantity-cell">38</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Infrared illuminators</td>
+          <td class="value-cell">$48,801.47 </td>
+          <td class="quantity-cell">43</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Tech</td>
+          <td class="item-cell">Straight telescopes</td>
+          <td class="value-cell">$46,150.00 </td>
+          <td class="quantity-cell">50</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Industrial goggles</td>
+          <td class="value-cell">$3,942.20 </td>
+          <td class="quantity-cell">70</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Rescue hook strap cutters</td>
+          <td class="value-cell">$1,838.25 </td>
+          <td class="quantity-cell">75</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Clothing</td>
+          <td class="item-cell">Ballistic goggles</td>
+          <td class="value-cell">$4,386.00 </td>
+          <td class="quantity-cell">100</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Safety cap bottle</td>
+          <td class="value-cell">$51.64 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Oxygen management bags</td>
+          <td class="value-cell">$446.88 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">USP Oxidize Regenerated Ceullulose</td>
+          <td class="value-cell">$5,349.58 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Hand-power resucitators</td>
+          <td class="value-cell">$1,979.34 </td>
+          <td class="quantity-cell">6</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Cervical supports</td>
+          <td class="value-cell">$213.20 </td>
+          <td class="quantity-cell">10</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Bandage scissors</td>
+          <td class="value-cell">$385.50 </td>
+          <td class="quantity-cell">50</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Nasopharyngeal airways</td>
+          <td class="value-cell">$657.41 </td>
+          <td class="quantity-cell">52</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">First responder cards</td>
+          <td class="value-cell">$770.73 </td>
+          <td class="quantity-cell">69</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Universal splints</td>
+          <td class="value-cell">$113.16 </td>
+          <td class="quantity-cell">71</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Chest wound seal dressings</td>
+          <td class="value-cell">$983.34 </td>
+          <td class="quantity-cell">81</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Elastic bandage kits</td>
+          <td class="value-cell">$700.00 </td>
+          <td class="quantity-cell">100</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Trauma modules</td>
+          <td class="value-cell">$15,159.76 </td>
+          <td class="quantity-cell">428</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Gauze bandages</td>
+          <td class="value-cell">$840.00 </td>
+          <td class="quantity-cell">500</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Impregnated gauze bandages</td>
+          <td class="value-cell">$4,408.40 </td>
+          <td class="quantity-cell">107</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Compression dressings</td>
+          <td class="value-cell">$2,537.50 </td>
+          <td class="quantity-cell">250</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Climber</td>
+          <td class="value-cell">$27,995.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Battery power conditioner</td>
+          <td class="value-cell">$3,504.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Mechanical vehicular transmission</td>
+          <td class="value-cell">$12,964.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Transfer transmission assembly</td>
+          <td class="value-cell">$15,009.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Emission control sensor</td>
+          <td class="value-cell">$102.10 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Propshift intermediate shaft</td>
+          <td class="value-cell">$697.97 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Propeller shaft</td>
+          <td class="value-cell">$596.85 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Engine accessory generator</td>
+          <td class="value-cell">$4,469.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Refrigeration compressor</td>
+          <td class="value-cell">$612.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Vehicular nondriving axle</td>
+          <td class="value-cell">$20,177.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Power steering pump assembly</td>
+          <td class="value-cell">$311.07 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Spotlights</td>
+          <td class="value-cell">$520.52 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Laser printers</td>
+          <td class="value-cell">$2,800.00 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Armament training devices</td>
+          <td class="value-cell">$55,500.00 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Pneumatic tire wheel segments</td>
+          <td class="value-cell">$6,166.32 </td>
+          <td class="quantity-cell">8</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Electrical cable assemblies</td>
+          <td class="value-cell">$3,400.32 </td>
+          <td class="quantity-cell">11</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Belt riggers</td>
+          <td class="value-cell">$77.40 </td>
+          <td class="quantity-cell">20</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Vehicles</td>
+          <td class="item-cell">Cargo trailer</td>
+          <td class="value-cell">$2,251.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Vehicles</td>
+          <td class="item-cell">Mine resistant vehicles</td>
+          <td class="value-cell">$1,894,000.00 </td>
+          <td class="quantity-cell">4</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Vehicles</td>
+          <td class="item-cell">Armored trucks</td>
+          <td class="value-cell">$325,350.00 </td>
+          <td class="quantity-cell">5</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Vehicles</td>
+          <td class="item-cell">Utility trucks</td>
+          <td class="value-cell">$389,149.00 </td>
+          <td class="quantity-cell">6</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Cartridge receiver</td>
+          <td class="value-cell">$124.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Barrel and sight assembly</td>
+          <td class="value-cell">$331.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Modern army combative kit</td>
+          <td class="value-cell">$15,480.84 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Remote Ordnance Neutralization System</td>
+          <td class="value-cell">$193,058.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">.38 Revolver</td>
+          <td class="value-cell">$89.57 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">12-gage riot shotgun</td>
+          <td class="value-cell">$108.00 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">M4 mounted rail adapter</td>
+          <td class="value-cell">$136.70 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Gun stocks</td>
+          <td class="value-cell">$21.20 </td>
+          <td class="quantity-cell">2</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Handgun guards</td>
+          <td class="value-cell">$84.69 </td>
+          <td class="quantity-cell">3</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Night scopes</td>
+          <td class="value-cell">$17,102.00 </td>
+          <td class="quantity-cell">4</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">.45 Automatic Pistols</td>
+          <td class="value-cell">$469.68 </td>
+          <td class="quantity-cell">8</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">7.62mm rifles</td>
+          <td class="value-cell">$1,242.00 </td>
+          <td class="quantity-cell">9</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Rear sights</td>
+          <td class="value-cell">$622.82 </td>
+          <td class="quantity-cell">11</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">5.56 mm rifles</td>
+          <td class="value-cell">$10,460.00 </td>
+          <td class="quantity-cell">24</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Mace cartridges</td>
+          <td class="value-cell">$161.40 </td>
+          <td class="quantity-cell">30</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Magazine cartridges</td>
+          <td class="value-cell">$279.30 </td>
+          <td class="quantity-cell">30</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Reflex sights</td>
+          <td class="value-cell">$9,840.00 </td>
+          <td class="quantity-cell">99</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Other</td>
+          <td class="item-cell">Assault packs</td>
+          <td class="value-cell">$34,295.30 </td>
+          <td class="quantity-cell">130</td>
+        </tr>
+        <tr>
+          <td class="party-cell">Weaponry</td>
+          <td class="item-cell">Holographic sights</td>
+          <td class="value-cell">$1,589.94 </td>
+          <td class="quantity-cell">3</td>
+        </tr>
+        <tr class="lastRow">
+          <td class="party-cell">Medical</td>
+          <td class="item-cell">Stretcher/Folding Ridgid Pole Litter</td>
+          <td class="value-cell">$314.95 </td>
+          <td class="quantity-cell">1</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+		</section>
+		<section id="tab2" class="tab-content hide">
+
+			<div>
+				<img src="map.png" width="100%" />
+			</div>
+			<div>
+<iframe frameborder="0" height="1020" src="tables_agency.html" width="100%" scrolling="no"></iframe>
+			</div>
+		</section>
+
+		<section id="tab3" class="tab-content hide">
+
+			<div>
+				<iframe frameborder="0" style="height:540px !important;" src="tally2.html" width="100%" scrolling="no"></iframe>
+			</div>
+			<div>
+<iframe frameborder="0" height="1020" src="tables_departments.html" width="100%" scrolling="no"></iframe>
+			</div>
+		</section>
+
+	</body>
+</html>

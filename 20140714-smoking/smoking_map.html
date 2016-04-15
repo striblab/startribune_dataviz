@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Minnesota Smoking Data Map</title>
+  <meta name="description" content="Minnesota Smoking Data Map">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+
+<style>
+  body {  margin:0;  padding:0;  font-family: Popular, sans-serif; }   
+  #map { height: 500px;  width:100%;  cursor: pointer; }
+  .legend label, .legend span { display:block; float:left; height:15px; width:20%; text-align:center; font-size:9px; color:#808080; }
+  .leaflet-control-zoom{ visibility: hidden; display: none; }
+</style>
+</head>
+
+<body>
+
+<div id='legend' style='display:none;'>
+  <strong>Percent of population that smokes (2012)</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#74c476;'></span>
+    <span style='background:#41ab5d;'></span>
+    <span style='background:#238b45;'></span>
+    <span style='background:#005a32;'></span>
+<br />
+    <label>15-19%</label>
+    <label>20-23%</label>
+    <label>24-26%</label>
+    <label>> 26%</label>
+<br />
+    <small>Sources: <a href="http://ghdx.healthdata.org/record/united-states-smoking-prevalence-county-1996-2012" target="_new">IHME</a>, <a href="http://quickfacts.census.gov/qfd/states/27/27173.html" target="_new">U.S. Census Bureau</a></small>
+</div>
+
+<div id='map'></div>
+
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+
+<script>
+L.mapbox.accessToken = 'pk.pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
+
+var southWest = L.latLng(40.78054, -80.22217),
+    northEast = L.latLng(49.56798, -110.76416),
+    bounds = L.latLngBounds(southWest, northEast);
+
+//Make the map object
+var map = L.mapbox.map('map', {
+      attributionControl: false,
+      infoControl: false,
+      zoomControl: false,
+        maxBounds: bounds
+    });
+
+//Load whatever base map layer you want, whether OpenStreetMap, GoogleMaps, MapBox or something custom and random
+var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+map.setView([45.9703, -94.1748], 6);
+
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+if (map.tap) map.tap.disable();
+
+//Pull interactive, data-infused vector layers from the .mbtiles hosted on the server
+var dataTiles = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/smoking.tilejson').addTo(map);
+var dataGrid = L.mapbox.gridLayer('http://apps.startribune.com/news/tileserver/smoking.tilejson').addTo(map);
+var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
+
+//Add the legend to the map
+map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+dataControl.options.follow = true;
+</script>
+
+</html>
