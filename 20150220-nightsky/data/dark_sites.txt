@@ -1,0 +1,67 @@
+site,latitude,longitude
+Albert Lea,43.64733124,-93.36871338
+Fairmont,43.65216064,-94.46011353
+Rochester,44.01934814,-92.45915222
+Meriden,44.07535934,-93.3867569
+Waseca,44.07804108,-93.5074234
+Owatonna,44.09337997,-93.22937775
+Andreas Observatory,44.138311,-93.996633
+Standeford Observatory,44.138535,-93.998168
+Cherry Grove Observatory,44.1971,-92.8623
+Woodland Camp,44.21300125,-92.47019958
+Theilman,44.28910065,-92.19210052
+Kellogg,44.30990982,-92.00421143
+New Ulm,44.31222153,-94.46111298
+Montgomery,44.43825912,-93.58512878
+Northfield,44.47129822,-93.17649841
+Echo,44.6145401,-95.41690826
+Prairie Grass Stargaze,44.638686,-93.36587
+Burnsville,44.76585007,-93.27477264
+Metcalf,44.80031967,-93.22416687
+Chanhassen,44.86320114,-93.53791046
+Hutchinson,44.89054871,-94.36921692
+Joseph J. Casby Observatory,44.92569,-92.800055
+Eisenhower Observatory,44.930769,-93.401692
+Macalester College Observatory,44.93914,-93.168503
+University of Minnesota - Tate Observatory,44.976154,-93.267431
+Rush Lake,45.07969666,-93.19210052
+Darwin,45.09852982,-94.40911865
+Big Bend City,45.14324951,-95.77639008
+Willmar Senior High School,45.152331,-95.003376
+Lee & Rose Warner Nature Center,45.172626,-92.831987
+Anoka-Ramsey Community College,45.17501831,-93.34635162
+Lino Lakes,45.1770401,-93.11177063
+Jackson Middle School Observatory,45.188854,-93.397454
+Cold Spring,45.45526886,-94.42897797
+Glacial Lakes State Park,45.52941895,-95.50569153
+SCSU Observatory,45.550872,-94.152262
+Saint John's University Observatory,45.574901,-94.396357
+Villard,45.71572113,-95.26555634
+Alexandria,45.88938904,-95.36634064
+Little Falls,45.97718048,-94.3707962
+Little Elk River,46.08644104,-94.4900589
+Long Lake Conservation Center,46.09353256,-94.76833344
+Red Top,46.17610168,-93.39749908
+Fergus Falls,46.27862167,-96.0723877
+Goodsell Observatory,44.461333,-93.155606
+Olin Observatory,44.324025,-93.970614
+Paul P. Feder Observatory,46.867018,-96.756695
+Brainerd,46.35316086,-94.20069122
+Eagle Bluff Environmental Learning Center,46.490608,-94.114137
+McGregor,46.6063118,-93.30867004
+Eagle Lake Observatory,46.729553,-94.6859
+Duluth,46.78796005,-92.09985352
+"University of Minnesota, Duluth - Marshall W. alworth Planetarium",46.816383,-92.086478
+Concordia College Observatory,46.8650589,-96.76808929
+Korkki Road,46.95729828,-91.87872314
+Two Harbors,47.02571106,-91.66641998
+Mantrap Lake,47.07155991,-94.91339111
+Grand Rapids,47.23591995,-93.52752686
+Silver Bay,47.29344177,-91.26899719
+Bemidji State University,47.48291016,-94.8755722
+Isabella,47.61753845,-91.36257935
+King Gardens,47.62916565,-95.87333679
+Boundary Waters Canoe Area Wilderness,47.76535416,-91.19008636
+CRUST Observatory,47.799855,-96.607239
+Argyle,48.33456039,-96.81591034
+Voyageurs National Park,48.46640015,-92.81655121

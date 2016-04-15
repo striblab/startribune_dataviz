@@ -1,0 +1,54 @@
+<?xml version="1.0"?><metadata><idinfo><citation><citeinfo><origin>Metropolitan Council and The Lawrence Group (TLG)</origin><pubdate>Periodically revised</pubdate><title>Transit Routes - Twin Cities Metropolitan Area </title><mgmg1cid>N/A</mgmg1cid><pubinfo><publish>Metropolitan Council</publish></pubinfo><onlink>ftp://gisftp.metc.state.mn.us/TransitRoutes.zip</onlink></citeinfo></citation><descript><abstract>The Transit Routes layer contains all fixed routes serving the Twin Cities regional metropolitan area.  One shape and one corresponding record exists for each individual transit route.  
+
+The line work for the dataset was derived from The Lawrence Group's Street Centerline and Address Range dataset.  A small number of line segments have been added to those available from the TLG dataset to completely depict all routes traveled by fixed-route transit vehicles.  
+</abstract><purpose>To identify all locations in the Twin Cities metropolitan area where fixed-route transit routes exist.</purpose><supplinf>Twin Cities metropolitan area</supplinf></descript><timeperd><current>Route geography is updated weekly  and includes linework from the TLG street centerline dataset released in late summer or early spring.</current></timeperd><status><progress>Complete</progress><update>Weekly</update></status><spdom><bounding><westbc>-94.012</westbc><eastbc>-92.732</eastbc><northbc>45.415</northbc><southbc>44.471</southbc></bounding></spdom><keywords><theme><themekt>None</themekt><themekey>transit, buses, routes, streets, roads, transportation</themekey></theme><place><placekey>Twin Cities, Anoka County, Carver County, Dakota County, Hennepin County, Ramsey County, Scott County, Washington County, Sherburn County</placekey></place></keywords><accconst>None</accconst><useconst>None</useconst><browse><browsen>http://www.datafinder.org/metadata/bg/bus_routes_l.jpg</browsen><browsed>Example of bus_routes layer.</browsed></browse><native>ArcView Version 10.x</native><crossref><citeinfo><title>- TLG Street Centerline and Address Range dataset.
+- bus service, segments and stops
+- For information comparing the different transit GIS datasets distributed by the Met. Council, please see http://www.datafinder.org/metadata/transit_data_overview.pdf .</title></citeinfo></crossref><ptcontac><cntinfo><cntperp><cntorg>Metropolitan Council - Metro Transit</cntorg><cntper>Steve Baisden</cntper></cntperp><cntpos>Associate Planner</cntpos><cntaddr><address>560 6th Ave N</address><city>Minneapolis</city><state>MN</state><postal>55411</postal></cntaddr><cntvoice>612.349.7361</cntvoice><cntemail>stephen.baisden@metrotransit.org</cntemail></cntinfo></ptcontac></idinfo><dataqual><attracc><attraccr>line_descr, route_type and route_oper are updated using information provided by Metro Transit's HASTUS scheduling software..  Attributes randomly checked by Metropolitan Council GIS staff.</attraccr></attracc><logic>This dataset contains one record and one PolyLine Shape for each route in the Metro area transit system.</logic><complete>The routes include routes which have service information provided on Metro Transit's website.</complete><posacc><horizpa><horizpar>Positional accuracy varies throughout the dataset.  Most line work in most counties falls within the road right of way, often near the center.  Recent realignments by the TLG Street Centerline database have resulted in increased positional accuracy.
+
+Text below taken from TLG metadata:
+
+There are differing degrees of positional accuracy throughout the file. TLG adjusts the positional accuracy of the data to available sources known to have a greater degrees of accuracy then those used to generate the existing data. However, in all cases (including instances where COGO line work has been the reference) TLG generalizes the street segments to at least 4 feet in order to greatly reduce the number of vertices - thus reducing unnecessary file size and allowing for faster analysis.
+
+TLG's goal is to have 95% of roads located to within the approximate center of digital right-of-way data or pavement centerlines provided from counties, where such digital data is available. In other areas, 95% of roads are intended to be within ten meters of the road or right-of-way center.</horizpar></horizpa></posacc><lineage><srcinfo><srcscale></srcscale></srcinfo><procstep><procdesc>This dataset was created in Giro's Hastus scheduling software and referenced the TLG and Metro Transit street centerline dataset.  See the metadata for the TLG Street Centerline layer for source information.</procdesc></procstep><procstep><procdesc Sync="TRUE">Dataset moved.</procdesc><srcused Sync="TRUE">G:\Docs\Interfaces\VAR_Shape\Metadata\bus_routes_l</srcused><procdate Sync="TRUE">20111209</procdate><proctime Sync="TRUE">10451400</proctime></procstep></lineage></dataqual><spdoinfo><indspref>None</indspref><direct>Vector</direct><mgmg3obj>arcs, nodes</mgmg3obj><mgmg3til>One layer for entire seven county region.</mgmg3til></spdoinfo><eainfo><overview><eaover>LINE ATTRIBUTES:
+ 
+route:       A number identifying the route number associated with the route and 
+             its schedules.
+
+routesort:   A numeric field identifying the route number associated with the
+             route and its schedules
+
+Routedescription (routedscrp): A brief description of the route.
+
+routetype:     A description of the type of route.  
+     
+             1 - Routes that provide a connecting link between urban
+               local routes, and many times serve as suburban circulators.
+             2 - Routes that are radial, crosstown and limited stop 
+               services which primarily operate in the center cities.
+             3 - Routes that provide peak and all-day service traveling 
+               non-stop on highways for four or more miles.
+RouteOperator (route_oper): A description of the operator of the route.  'M' values represent
+               routes are operated by Metro Transit. 'P' values represent routes not
+               operated by Metro Transit.  'MP' values represent routes operated by
+               Metro Transit and another transit provider.
+
+EffectiveDate (effectived): The pick date
+
+payleavedirectionid (payleavedi):  The direction of a route where customers are required to pay when exiting the bus rather than boarding.
+
+routepayleave (routepayle): Routes where customers pay fare when exiting the bus rather than boarding
+
+twelvecolor (twelvecolo): An internal code used for cartographic dispalay
+
+*_ftrip: The first trip time served by route at the the routes first stop per service period (Weekday, Saturday, Sunday)
+
+*_ltrip: The last trip time served by route at the routes last stop per service period (Weekday, Saturday, Sunday)
+
+*_span: The span of service by route in hours and mintues</eaover></overview></eainfo><distinfo><resdesc>TransitRoutes</resdesc><distliab>NOTICE:  The Geographic Information System (GIS) Data to which this notice is attached are made available pursuant to the Minnesota Government Data Practices Act (Minnesota Statutes Chapter 13).  THE GIS DATA ARE PROVIDED TO YOU AS IS AND WITHOUT ANY WARRANTY AS TO THEIR PERFORMANCE, MERCHANTABILITY, OR FITNESS FOR ANY PARTICULAR PURPOSE.  The GIS Data were developed by the Metropolitan Council for its own internal business purposes.  The Metropolitan Council does not represent or warrant that the GIS Data or the data documentation are error-free, complete, current, or accurate.  You are responsible for any consequences resulting from your use of the GIS Data or your reliance on the GIS Data.  You should consult the data documentation for this particular GIS Data to determine the limitations of the GIS Data and the precision with which the GIS Data may depict distance, direction, location, or other geographic features.  If you transmit or provide the GIS Data (or any portion of it) to another user, it is recommended that the GIS Data include a copy of this disclaimer and this metadata.</distliab><stdorder><digform><digtinfo><formname>ArcView Shape File</formname><formvern>ArcView: 10x</formvern><transize>1.2 Meg. for self extracting ZIP file.</transize></digtinfo></digform><ordering>This dataset is distributed on the internet by clicking below after 'Online Linkage'.  Doing so will tell your browser to download a 'ZIP' file which will contain the following:
+
+- ArcView shape files
+- metadata for the dataset (.htm)
+- NOTICE.RTF, an important notice about this dataset that can be read by any word processing software.
+
+ 
+Additionally, this dataset is available for direct use via one or more map services.  More information about what a web mapping service is can be found at http://www.datafinder.org/services/.  The specific map service and layer name for this dataset can be found by clicking the blue or green boxes under the map service column of the DataFinder Catalog at http://www.datafinder.org/catalog/ .</ordering></stdorder><distrib><cntinfo><cntperp><cntorg>Metropolitan Council</cntorg><cntper>Jon Hoekenga</cntper></cntperp><cntpos>GIS System Administrator</cntpos><cntaddr><address>390 Robert Street North</address><city>St. Paul</city><state>MN</state><postal>55101-1805</postal></cntaddr><cntvoice>651.602.1561</cntvoice><cntemail>jonathan.hoekenga@metc.state.mn.us</cntemail></cntinfo></distrib></distinfo><metainfo><metd>20111209</metd><metstdn>Minnesota Geographic Metadata Guidelines</metstdn><metstdv>1.2</metstdv><metextns><onlink>http://www.gis.state.mn.us/stds/metadata.htm</onlink></metextns><metc><cntinfo><cntperp><cntorg>Metropolitan Council - Metro Transit</cntorg><cntper>Steve Baisden</cntper></cntperp><cntpos>Associate Planner</cntpos><cntaddr><address>560 6th Ave N</address><city>Minneapolis</city><state>MN</state><postal>55411</postal></cntaddr><cntvoice>612.349.7361</cntvoice><cntemail>stephen.baisden@metrotransit.org</cntemail></cntinfo></metc></metainfo><Esri><ModDate>20111209</ModDate><ModTime>08474900</ModTime></Esri><mdDateSt Sync="TRUE">20111209</mdDateSt><distInfo><distributor><distorTran><onLineSrc><linkage Sync="TRUE">file://\\hasp\v2007\Docs\Interfaces\VAR_Shape\bus_routes_l</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc></distorTran></distributor></distInfo><spref><horizsys><planar><gridsys><gridsysn>Universal Transverse Mercator</gridsysn><utm><utmzone>15</utmzone></utm></gridsys><planci><plandu>meters</plandu></planci></planar><geodetic><horizdn>NAD83</horizdn><ellips>GRS80</ellips></geodetic></horizsys></spref></metadata>

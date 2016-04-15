@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+  <title>St. Paul Firefighter Deaths</title>
+  <meta name="description" content="St. Paul Firefighter Deaths">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <link rel="stylesheet" href="../_common_resources/startribune_dataviz_styles.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css' rel='stylesheet' />
+
+<style>
+  body { margin:0; padding:0; }
+  #map { height:500px; width:100%; }
+  .leaflet-control-attribution{display:none !important; }
+  .mapbox-logo{display:none !important; }
+  path 
+  #slider{width:100%; display:none;}
+  .ui-brush { background:#f8f8f8; height:100px; width:100%; }
+  .brush .extent { stroke:#fff; fill-opacity:0.125; shape-rendering:crispEdges; }
+  .axis path, .axis line { fill: #ddd !important;  stroke: #ddd !important; shape-rendering: crispEdges;  opacity:1 !important; color: #000 !important; z-index:900;}
+  .axis text { font: 12px sans-serif; stroke: #000 !important; opacity:1 !important; z-index:900;}
+  .clicked{ fill:#333 !important;}
+  .myButton2 { background-color:#8B2219; -moz-border-radius:16px; -webkit-border-radius:16px; border-radius:3px; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family:arial; font-size:14px; padding:10px; text-decoration:none; font-weight:900; width:16%; margin:2px; }
+  .myButton2:hover { background-color:#ad645e !important; }
+  .myButton2:active { background-color:#ad645e; }
+  .helmet { float:right; }
+  button:focus {outline:0 !important;}
+  .topline h1 { float:left;} 
+  .topline { clear:both; }
+  .address { font-size:11px !important; }
+  h4 { clear:both !important; }
+</style>
+</head>
+
+
+<body>
+<div id="controls"></div>
+<div id='map'></div>
+<div id='brush' class='ui-brush'></div>
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js' charset="utf-8"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.js'></script>
+
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1BF_QLhecStHkIAgB5cdLMvhPdHVPZ7RpoIa6gy8YI40&sheet=stpDeaths
+
+
+// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=2-ne4QT0D2G82yfgpK1LA8mBdE-fjdICTmvmHACNjF7Yog2K0hIkAHj1ZLKQpmluvqYg5ruMVsWhXKC0MuGajQpKylkPm0BjOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6T5V2rof4_NXsfGboBkmLxefMNbkBlMXRQlA-3OnSo-27kd4e73-1eY0l2_0BZ3Llqzd_dgT7OAiYD-TWYpPNNbQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1RiNtORVIispxDGDxtdDljvs0CEDP94EaV2B3wbcMkXk&sheet=events", function(error, dataLoad) {
+
+var dataLoad = <?php echo $jsonData; ?>
+
+//var data = dataLoad.stpDeaths;
+
+$( document ).ready(function() {
+  $( ".myButton2" ).click(function() {
+   $(".myButton2").css("background-color","#8B2219");
+   $(this).css("background-color","#333");
+  });
+  $("#brush").click(function() {
+   $(".myButton2").css("background-color","#8B2219");
+  });
+});
+
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map = L.mapbox.map('map', 'examples.map-20v6611k')
+    .setView([44.945604,-93.088703], 11);
+
+
+// var stpLayer = L.mapbox.featureLayer()
+//     .loadURL('stpaul.json')
+//     .addTo(map);
+
+
+var earthquakesLayer = L.geoJson(null, { pointToLayer: scaledPoint })
+    .addTo(map);
+
+function pointColor(feature) {
+    return feature.properties.mag > 5 ? '#f55' : '#a00';
+}
+
+function pointRadius(feature) {
+    return (feature.properties.mag - 4) * 10;
+}
+
+function scaledPoint(feature, latlng) {
+    return L.circleMarker(latlng, {
+        radius: pointRadius(feature),
+        fillColor: pointColor(feature),
+        fillOpacity: 0.7,
+        weight: 0.5,
+        color: '#fff'
+    }).bindPopup(
+        '<div class="topline"><h1>' + feature.properties.name + '</h1> <img src="img/helmet.png" width="40px" class="helmet" /></div>' +
+        '<h4>' + feature.properties.job + ' - ' + (new Date(parseInt(feature.properties.time)).getUTCMonth() + 1) + '/' + new Date(parseInt(feature.properties.time)).getUTCDate() + '/' + new Date(parseInt(feature.properties.time)).getUTCFullYear() + '</h4><p class="address">' + feature.properties.location + ' ' + feature.properties.city + '</p>Cause of death: ' + feature.properties.cause);
+}
+
+d3.json('data/deaths.geojson', function(err, data) {
+    earthquakesLayer.addData(data);
+    setBrush(data);
+});
+
+function setBrush(data) {
+    var container = d3.select('#brush'),
+        width = container.node().offsetWidth,
+        margin = {top: 0, right: 0, bottom: 40, left: 0},
+        height = 100;
+
+    var timeExtent = d3.extent(data.features, function(d) {
+        return new Date(parseInt(d.properties.time));
+    });
+
+    var svg = container.append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom);
+
+    var context = svg.append('g')
+        .attr('class', 'context')
+        .attr('transform', 'translate(' +
+            margin.left + ',' +
+            margin.top + ')');
+
+    var x = d3.time.scale()
+        .range([0, width])
+        .domain(timeExtent);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom");
+
+    var brush = d3.svg.brush()
+        .x(x)
+        .on('brushend', brushend);
+
+    context.selectAll('circle.quake')
+        .data(data.features)
+        .enter()
+        .append('circle')
+        .attr('transform', function(d) {
+            return 'translate(' + [x(new Date(parseInt(d.properties.time))), height / 2] + ')';
+        })
+        .attr('r', pointRadius)
+        .attr('opacity', 0.5)
+        .attr('stroke', '#fff')
+        .attr('stroke-width', 0.5)
+        .attr('fill', pointColor);
+
+    context.append('g')
+        .attr('class', 'x brush')
+        .call(brush)
+        .selectAll('rect')
+        .attr('y', -6)
+        .attr('height', height);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0,100)")
+        .call(xAxis);
+
+   var btns = d3.select("#controls").selectAll("button").data(["1884-1900", "1901-1920", "1921-1940", "1941-1960", "1961-1980", "1980-2009"]);
+   btns = btns.enter().append("button").style("display","inline-block").attr('class','myButton2');
+   btns.each(function (d) { this.innerText = d; });
+
+   btns.on("click", function(d){
+    d3.selectAll("button").style("background-color", "#8B2219");
+    d3.select(this).style("background-color", "#333");
+    if (this.innerText == "1884-1900"){ brush.extent([new Date('1884-01-01'), new Date('1900-12-31')]); brush(d3.select(".brush").transition()); brush.event(d3.select(".brush").transition().delay(1000)); } 
+    else if (this.innerText == "1901-1920"){ brush.extent([new Date('1901-01-01'), new Date('1920-12-31')]); brush(d3.select(".brush").transition()); brush.event(d3.select(".brush").transition().delay(1000)); } 
+    else if (this.innerText == "1921-1940"){ brush.extent([new Date('1921-01-01'), new Date('1940-12-31')]); brush(d3.select(".brush").transition()); brush.event(d3.select(".brush").transition().delay(1000));}
+    else if (this.innerText == "1941-1960"){ brush.extent([new Date('1941-01-01'), new Date('1960-12-31')]); brush(d3.select(".brush").transition()); brush.event(d3.select(".brush").transition().delay(1000));} 
+    else if (this.innerText == "1961-1980"){ brush.extent([new Date('1961-01-01'), new Date('1980-12-31')]); brush(d3.select(".brush").transition()); brush.event(d3.select(".brush").transition().delay(1000));} 
+    else if (this.innerText == "1980-2009"){ brush.extent([new Date('1981-01-01'), new Date('2009-12-31')]); brush(d3.select(".brush").transition()); brush.event(d3.select(".brush").transition().delay(1000)); } 
+  });
+
+
+    function brushend() {
+        var filter;
+            // If the user has selected no brush area, share everything.
+        if (brush.empty()) {
+            filter = function() { return true; }
+        } else {
+            // Otherwise, restrict features to only things in the brush extent.
+            filter = function(feature) {
+                return feature.properties.time > +brush.extent()[0] &&
+                    feature.properties.time < (+brush.extent()[1]);
+            };
+        }
+        var filtered = data.features.filter(filter);
+        earthquakesLayer.clearLayers()
+            .addData(filtered);
+    }
+}
+
+d3.selectAll(".leaflet-clickable").style({"stroke":"#900"});
+
+});
+</script>
+</html>
