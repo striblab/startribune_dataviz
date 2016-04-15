@@ -57,6 +57,12 @@
    .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#8C101C; }
    .weaponType, .region { display:none; }
 
+   .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; }
+
+   #chart { border-bottom:1px solid #000; border-left:1px solid #000; margin:10px; vertical-align:bottom; }
+   .year { width:5%; border-right:1px solid #ddd; height:350px; display:inline-block; vertical-align:bottom; text-align:center; }
+   .yearLabel { width:5%; padding:5px; display:inline-block; }
+
    .smallerBreak { height:10px; }
 
    #map { width:100%; height:200px; margin-top:8px; }
@@ -113,7 +119,46 @@
      <div class="chartTitle place">Mostly in the metro area</div>
      <div class="chatter place">chatter here</div>
 
-     <div class="chart" id="yearChart"></div>
+     <div class="chart" id="chart">
+      <div class="year" id="y2000"></div>
+      <div class="year" id="y2001"></div>
+      <div class="year" id="y2002"></div>
+      <div class="year" id="y2003"></div>
+      <div class="year" id="y2004"></div>
+      <div class="year" id="y2005"></div>
+      <div class="year" id="y2006"></div>
+      <div class="year" id="y2007"></div>
+      <div class="year" id="y2008"></div>
+      <div class="year" id="y2009"></div>
+      <div class="year" id="y2010"></div>
+      <div class="year" id="y2011"></div>
+      <div class="year" id="y2012"></div>
+      <div class="year" id="y2013"></div>
+      <div class="year" id="y2014"></div>
+      <div class="year" id="y2015"></div>
+      <div class="year" id="y2016"></div>
+     </div>
+     <div id="chartLabels">
+      <div class="yearLabel">2000</div>
+      <div class="yearLabel">2001</div>
+      <div class="yearLabel">2002</div>
+      <div class="yearLabel">2003</div>
+      <div class="yearLabel">2004</div>
+      <div class="yearLabel">2005</div>
+      <div class="yearLabel">2006</div>
+      <div class="yearLabel">2007</div>
+      <div class="yearLabel">2008</div>
+      <div class="yearLabel">2009</div>
+      <div class="yearLabel">2010</div>
+      <div class="yearLabel">2011</div>
+      <div class="yearLabel">2012</div>
+      <div class="yearLabel">2013</div>
+      <div class="yearLabel">2014</div>
+      <div class="yearLabel">2015</div>
+      <div class="yearLabel">2016</div>
+     </div>
+
+<!--      <div class="chart" id="yearChart"></div> -->
 
 <!--      <div class="chart" id="raceChart"></div> -->
 
@@ -349,6 +394,15 @@ if ((scrolled-200) >=0) { scrolled=scrolled-200;  }
 .data(dataShootings).enter().append("div")
 .attr("class","card")
 .html(function (d){ return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.Occupation +  " &#8226; " + d.ResCity + " " + d.ResState + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div><div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div></div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>";});
+
+function spitDots(year){
+      d3.select("#y" + year).selectAll(".dot")
+.data(dataShootings.filter(function(d){ return d.year == year; })).enter().append("div")
+.attr("class","dot")
+.html(function (d){ return "";});
+}
+
+for (var i=2000; i <= 2016; i++){ spitDots(i); }
 
 //SEARCH FILTER TABLE
   $( document ).ready(function() {
