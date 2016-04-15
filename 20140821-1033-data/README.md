@@ -1,1 +1,0 @@
-This graphic depicts the extent which military style equipment has been deployed to U.S. police forces. Graphic by Jeff Hargarten.

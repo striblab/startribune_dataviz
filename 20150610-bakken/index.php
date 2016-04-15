@@ -31,7 +31,7 @@
    
     <style type="text/css">
   @import url("https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.7.0/nv.d3.min.css");
-  @import url("styles.css");
+  @import url("./css/styles.css");
   @import url("http://stage-www.startribune.com/static/css/screen.css?d=1429128267");
   @import url("js/jquery.bxslider.css");
   @import url("https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css");
@@ -1513,14 +1513,14 @@ if (here != "") { map.removeLayer(here); }
 });
 
     $(document).ready(function() {
-  $.getJSON('buffer.json', function(data) {
+  $.getJSON('data/buffer.json', function(data) {
     var buffer = L.geoJson(data, {
       'style': {fillColor: '#f00', strokeColor: '#f00', fillOpacity: 0, opacity: 1, weight: 1, color: '#f00'},
       'onEachFeature': null
     });
     map.addLayer(buffer);
 })
-    $.getJSON('rail.json', function(data) {
+    $.getJSON('data/rail.json', function(data) {
      var rail = L.geoJson(data, {
       'style': {fillColor: '#333', strokeColor: '#333', fillOpacity: 0, opacity: 1, weight: 1, color: '#333'},
       'onEachFeature': null
@@ -1629,7 +1629,7 @@ if (here != "") { map.removeLayer(here); }
 
 // });
 
-d3.csv("counties_data.csv", function(error, evacData) {
+d3.csv("data/counties_data.csv", function(error, evacData) {
     evacData.forEach(function(d) {
   d.county = d.county;
   d.count = +d.count;
@@ -1666,7 +1666,7 @@ var q3 = "#C6A29E";
 var q4 = "#210507";
 
 
-d3.json("counties.json", function(error, us) {
+d3.json("data/counties.json", function(error, us) {
 
   g.append("g")
       .attr("id", "states")
@@ -1742,7 +1742,7 @@ $(document).ready(function() {
 
   document.getElementById('image').src = 'img/legend.png'
 
-    $.getJSON('blocks.json', function(data) {
+    $.getJSON('data/blocks.json', function(data) {
     var blocks = L.geoJson(data, {
       'style': {fillColor: '#500', strokeColor: '#333', fillOpacity: 0.5, opacity: 1, weight: 1, color: '#333'},
       'onEachFeature': null
@@ -1764,7 +1764,7 @@ function scaledPoint(feature, latlng) {
     }).bindPopup('<strong>Population:  ' + feature.properties.Sum_POP10 + '</strong>');
 }
 
-d3.json('scenarios.json', function(err, data) {
+d3.json('data/scenarios.json', function(err, data) {
     densityLayer.addData(data);
 });
 
@@ -1772,7 +1772,7 @@ d3.json('scenarios.json', function(err, data) {
 
     map3.addLayer(densityLayer);
 })
-    $.getJSON('rail.json', function(data) {
+    $.getJSON('data/rail.json', function(data) {
      var rail = L.geoJson(data, {
       'style': {fillColor: '#900', strokeColor: '#900', fillOpacity: 1, opacity: 1, weight: 4, color: '#333'},
       'onEachFeature': null
@@ -1982,7 +1982,7 @@ var svg = d3.select("#map4 svg")
     .attr("width", width)
     .attr("height", height);
 
-d3.json("states_gov.json", function(error, json) {
+d3.json("data/states_gov.json", function(error, json) {
     svg.selectAll("path")
            .data(json.features)
            .enter()
