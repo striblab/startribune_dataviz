@@ -39,13 +39,13 @@
 
    .chatter, .chartTitle { text-align:left; }
 
-  .negDark { fill:#752304; background-color:#752304; color:#fff; }
-  .negMid { fill:#BF5F3C; background-color:#BF5F3C; color:#fff; }
-  .negLight { fill:#E28765; background-color:#E28765; }
-  .neutral { fill:#ddd; background-color:#ddd; }
-  .posLight { fill:#94D181; background-color:#94D181; }
-  .posMid { fill:#67AF50; background-color:#67AF50; color:#fff; }
-  .posDark { fill:#24680E; background-color:#24680E; color:#fff; }
+  .negDark { fill:#CC4C02 !important; background-color:#CC4C02 !important; color:#fff; }
+  .negMid { fill:#FE9929 !important; background-color:#FE9929 !important; color:#fff; }
+  .negLight { fill:#FED98E !important; background-color:#FED98E !important; }
+  .neutral { fill:#ddd !important; background-color:#ddd !important; }
+  .posLight { fill:#ECF9B9 !important; background-color:#ECF9B9 !important; }
+  .posMid { fill:#ADDD8E !important; background-color:#ADDD8E !important; color:#fff; }
+  .posDark { fill:#31A354 !important; background-color:#31A354 !important; color:#fff; }
 
   path:hover { cursor:normal !important; }
   
@@ -438,7 +438,7 @@ d3.json("shapefiles/" + shape, function(error, us) {
         }
       }
        })
-      .style("stroke-width", "1px")
+      .style("stroke-width", ".2px")
       .style("stroke", "#fff")
       .call(d3.helper.tooltip(function(d, i){
         return mapTips(d, race, dataCompare);

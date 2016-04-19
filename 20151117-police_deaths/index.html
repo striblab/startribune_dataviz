@@ -17,7 +17,7 @@
   
   <style>
    body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
-   #bigNumber { font-size:8em; color:#8C101C; font-weight:bold; text-align:center; font-family:"Popular" !important; }
+   #bigNumber { font-size:6em; color:#8C101C; font-weight:bold; text-align:center; font-family:"Popular" !important; }
    #bottomText { text-align:center; font-weight:normal; }
    #filter { text-align:center; }
    .filters { display:inline-block; }
@@ -57,11 +57,16 @@
    .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#8C101C; }
    .weaponType, .region { display:none; }
 
-   .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; }
+   .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; }
+   .dot:hover { background-color:#333; cursor:pointer; }
 
+   .chatter { height:70px; }
+    
+   .bigcount { font-size:2em;  color:#8C101C; } 
    #chart { border-bottom:1px solid #000; border-left:1px solid #000; margin:10px; vertical-align:bottom; }
-   .year { width:5%; border-right:1px solid #ddd; height:350px; display:inline-block; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5%; padding:5px; display:inline-block; }
+   #chartAll { width:830px; }
+   .year { width:5%; border-right:1px solid #ddd; height:270px; display:inline-block; vertical-align:bottom; text-align:center; }
+   .yearLabel { width:5%; padding:5px; display:inline-block; text-align:center; }
 
    .smallerBreak { height:10px; }
 
@@ -71,10 +76,11 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
-   @media (max-width:800px) {
+   @media (max-width:830px) {
    .leftSide { width:100%; }
    .rightSide { display:none; }
    .count { font-size:1.4em; }
+   #chartAll { width:100%; }
    }
   </style> 
 </head>
@@ -119,6 +125,27 @@
      <div class="chartTitle place">Mostly in the metro area</div>
      <div class="chatter place">chatter here</div>
 
+     <div class="chart" id="chartAll">
+     <div id="chartLabels">
+      <div class="yearLabel bigcount" id="c2000">0</div>
+      <div class="yearLabel bigcount" id="c2001">0</div>
+      <div class="yearLabel bigcount" id="c2002">0</div>
+      <div class="yearLabel bigcount" id="c2003">0</div>
+      <div class="yearLabel bigcount" id="c2004">0</div>
+      <div class="yearLabel bigcount" id="c2005">0</div>
+      <div class="yearLabel bigcount" id="c2006">0</div>
+      <div class="yearLabel bigcount" id="c2007">0</div>
+      <div class="yearLabel bigcount" id="c2008">0</div>
+      <div class="yearLabel bigcount" id="c2009">0</div>
+      <div class="yearLabel bigcount" id="c2010">0</div>
+      <div class="yearLabel bigcount" id="c2011">0</div>
+      <div class="yearLabel bigcount" id="c2012">0</div>
+      <div class="yearLabel bigcount" id="c2013">0</div>
+      <div class="yearLabel bigcount" id="c2014">0</div>
+      <div class="yearLabel bigcount" id="c2015">0</div>
+      <div class="yearLabel bigcount" id="c2016">0</div>
+     </div>
+     <div class="breaker"></div>
      <div class="chart" id="chart">
       <div class="year" id="y2000"></div>
       <div class="year" id="y2001"></div>
@@ -156,6 +183,7 @@
       <div class="yearLabel">2014</div>
       <div class="yearLabel">2015</div>
       <div class="yearLabel">2016</div>
+     </div>
      </div>
 
 <!--      <div class="chart" id="yearChart"></div> -->
@@ -396,10 +424,22 @@ if ((scrolled-200) >=0) { scrolled=scrolled-200;  }
 .html(function (d){ return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.Occupation +  " &#8226; " + d.ResCity + " " + d.ResState + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div><div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div></div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>";});
 
 function spitDots(year){
-      d3.select("#y" + year).selectAll(".dot")
+d3.select("#y" + year).selectAll(".dot")
 .data(dataShootings.filter(function(d){ return d.year == year; })).enter().append("div")
 .attr("class","dot")
-.html(function (d){ return "";});
+.attr("first", function (d){ return d.FirstName;})
+.attr("last", function (d){ return d.LastName;})
+.attr("gender", function (d){ return d.Gender;})
+.attr("age", function (d){ return d.AgeYears;})
+.attr("year", function (d){ return d.year;})
+.attr("race", function (d){ return d.Race;})
+.attr("city", function (d){ return d.InjuryCity;})
+.attr("occupation", function (d){ return d.Occupation;})
+.attr("manner", function (d){ return d.MannerDeath;})
+.attr("region", function (d){ return d.Region;})
+.attr("weapon", function (d){ return d.Weapon;})
+.attr("mental", function (d){ return d.Mental;})
+.html(function (d){ $("#c" + year).text(dataShootings.filter(function(d){ return d.year == year; }).length); return "";});
 }
 
 for (var i=2000; i <= 2016; i++){ spitDots(i); }
