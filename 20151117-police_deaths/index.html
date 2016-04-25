@@ -38,6 +38,7 @@
    .rightSide { float:right; width:15%; border:0 solid #eee; width:150px; height:150px; }
    .photo, .photo img { width:100%; height:150px; }
    .break { clear:both; }
+   li { list-style:none !important; }
 /*   .url { display:none; }*/
    .description { font-weight:bold; }
    #deathsTable { /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
@@ -45,8 +46,8 @@
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
    #wrapper { width:100%; }
 
-   .switch { padding:10px; display:inline-block; text-align:center; width:150px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
-   .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; margin-top:4px; }
+   .switch { padding:10px; display:inline-block; text-align:center; width:90px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black;  margin-top:4px; }
+   .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; }
    #filterButtons { text-align:center; }
 
    .filterBreak { height:7px; border-bottom:1px solid #333; clear:both; }
@@ -61,12 +62,19 @@
    .dot:hover { background-color:#333; cursor:pointer; }
 
    .chatter { height:70px; }
+
+   #sidebar { width:250px; height:270px; float:right; margin-right:20px; }
+   #selector { display:none; }
+
+   .filterSection { display:none; }
     
-   .bigcount { font-size:2em;  color:#8C101C; } 
-   #chart { border-bottom:1px solid #000; border-left:1px solid #000; margin:10px; vertical-align:bottom; }
-   #chartAll { width:830px; }
+    
+   #chart { border-bottom:1px solid #000; border-left:1px solid #000; margin:10px; vertical-align:bottom;  }
+   #chartAll { width:630px; float:left; }
+   #chartLabels { margin:10px; }
    .year { width:5%; border-right:1px solid #ddd; height:270px; display:inline-block; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5%; padding:5px; display:inline-block; text-align:center; }
+   .yearLabel { width:5%; display:inline-block; text-align:center; font-size:.7em; }
+   .bigcount { font-size:1.5em;  color:#8C101C; }
 
    .smallerBreak { height:10px; }
 
@@ -76,11 +84,19 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
-   @media (max-width:830px) {
+   @media (max-width:920px) {
    .leftSide { width:100%; }
    .rightSide { display:none; }
    .count { font-size:1.4em; }
    #chartAll { width:100%; }
+   #sidebar, #filterButtons { display:none; }
+   #selector { display:block; }
+   .filterSection { display:block; }
+   }
+   @media (max-width:600px) {
+    .year { width:5%; }
+    #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
+    #chartLabels { margin-left:-15px; }
    }
   </style> 
 </head>
@@ -126,7 +142,7 @@
      <div class="chatter place">chatter here</div>
 
      <div class="chart" id="chartAll">
-     <div id="chartLabels">
+     <div id="yearLabels">
       <div class="yearLabel bigcount" id="c2000">0</div>
       <div class="yearLabel bigcount" id="c2001">0</div>
       <div class="yearLabel bigcount" id="c2002">0</div>
@@ -186,9 +202,66 @@
      </div>
      </div>
 
-<!--      <div class="chart" id="yearChart"></div> -->
+<div id="sidebar">
+     <span>Filter death reports by <span id="filterWord">all</span> statuses</span>
+              <ul class="dropdown race" tabindex="1">
+        <div class='filterBreak'></div>
+        <div class="filterSection all">
+          Select filters
+        </div>
+        <div class="filterSection place">
+        <li class='filter3' data="minneapolis" metric="region"><a href="javascript:void(0)">Minneapolis</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="st. paul" metric="region"><a href="javascript:void(0)">St. Paul</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="metro" metric="region"><a href="javascript:void(0)">Metro Suburbs</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="outstate" metric="region"><a href="javascript:void(0)">Outstate</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection race">
+        <li class='filter' data="white" metric="race"><a href="javascript:void(0)">White</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="black" metric="race"><a href="javascript:void(0)">Black</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="asian" metric="race"><a href="javascript:void(0)">Asian</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="american indian" metric="race"><a href="javascript:void(0)">American Indian</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection gender">
+        <li class='filter' data=" male" metric="gender"><a href="javascript:void(0)">Male</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="female" metric="gender"><a href="javascript:void(0)">Female</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection manner">
+        <li class='filter' data="homicide" metric="manner"><a href="javascript:void(0)">Homicide</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="suicide" metric="manner"><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="accident" metric="manner"><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div> 
+        <li class='filter' data="natural" metric="manner"><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="could not be determined" metric="manner"><a href="javascript:void(0)">Manner Not Determined</a> <div class="count">0</div></li> 
+        <div class="breakSmall"></div>  
+        <li class='filter' data="not available" metric="manner"><a href="javascript:void(0)">Manner Not Available</a> <div class="count">0</div></li> 
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection weapon">
+        <li class='filter2' data="gun" metric="weapon"><a href="javascript:void(0)">Gun</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div> 
+        <li class='filter2' data="knife" metric="weapon"><a href="javascript:void(0)">Knife</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter2' data="other" metric="weapon"><a href="javascript:void(0)">Other Weapon</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter2' data="unarmed" metric="weapon"><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></li> 
+        </div> 
+              </ul>
+</div>
 
-<!--      <div class="chart" id="raceChart"></div> -->
+ <div class="breaker"></div>
 
      <div id="filterBox">
 
@@ -212,53 +285,53 @@
               <ul class="dropdown race" tabindex="1">
         <div class='filterBreak'></div>
         <div class="filterSection place">
-        <li class='filter3' data="minneapolis" metric="region"><a href="#">Minneapolis</a> <div class="count">0</div></li>
+        <li class='filter3' data="minneapolis" metric="region"><a href="javascript:void(0)">Minneapolis</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter3' data="st. paul" metric="region"><a href="#">St. Paul</a> <div class="count">0</div></li>
+        <li class='filter3' data="st. paul" metric="region"><a href="javascript:void(0)">St. Paul</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter3' data="metro" metric="region"><a href="#">Metro Suburbs</a> <div class="count">0</div></li>
+        <li class='filter3' data="metro" metric="region"><a href="javascript:void(0)">Metro Suburbs</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter3' data="outstate" metric="region"><a href="#">Outstate</a> <div class="count">0</div></li>
+        <li class='filter3' data="outstate" metric="region"><a href="javascript:void(0)">Outstate</a> <div class="count">0</div></li>
         <div class='filterBreak'></div>
         </div>
         <div class="filterSection race">
-        <li class='filter' data="white" metric="race"><a href="#">White</a> <div class="count">0</div></li>
+        <li class='filter' data="white" metric="race"><a href="javascript:void(0)">White</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="black" metric="race"><a href="#">Black</a> <div class="count">0</div></li>
+        <li class='filter' data="black" metric="race"><a href="javascript:void(0)">Black</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="asian" metric="race"><a href="#">Asian</a> <div class="count">0</div></li>
+        <li class='filter' data="asian" metric="race"><a href="javascript:void(0)">Asian</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="american indian" metric="race"><a href="#">American Indian</a> <div class="count">0</div></li>
+        <li class='filter' data="american indian" metric="race"><a href="javascript:void(0)">American Indian</a> <div class="count">0</div></li>
         <div class='filterBreak'></div>
         </div>
         <div class="filterSection gender">
-        <li class='filter' data=" male" metric="gender"><a href="#">Male</a> <div class="count">0</div></li>
+        <li class='filter' data=" male" metric="gender"><a href="javascript:void(0)">Male</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="female" metric="gender"><a href="#">Female</a> <div class="count">0</div></li>
+        <li class='filter' data="female" metric="gender"><a href="javascript:void(0)">Female</a> <div class="count">0</div></li>
         <div class='filterBreak'></div>
         </div>
         <div class="filterSection manner">
-        <li class='filter' data="homicide" metric="manner"><a href="#">Homicide</a> <div class="count">0</div></li>
+        <li class='filter' data="homicide" metric="manner"><a href="javascript:void(0)">Homicide</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="suicide" metric="manner"><a href="#">Suicide</a> <div class="count">0</div></li>
+        <li class='filter' data="suicide" metric="manner"><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="accident" metric="manner"><a href="#">Accidental Death</a> <div class="count">0</div></li>
+        <li class='filter' data="accident" metric="manner"><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></li>
         <div class="breakSmall"></div> 
-        <li class='filter' data="natural" metric="manner"><a href="#">Natural Causes</a> <div class="count">0</div></li>
+        <li class='filter' data="natural" metric="manner"><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="could not be determined" metric="manner"><a href="#">Manner Not Determined</a> <div class="count">0</div></li> 
+        <li class='filter' data="could not be determined" metric="manner"><a href="javascript:void(0)">Manner Not Determined</a> <div class="count">0</div></li> 
         <div class="breakSmall"></div>  
-        <li class='filter' data="not available" metric="manner"><a href="#">Manner Not Available</a> <div class="count">0</div></li> 
+        <li class='filter' data="not available" metric="manner"><a href="javascript:void(0)">Manner Not Available</a> <div class="count">0</div></li> 
         <div class='filterBreak'></div>
         </div>
         <div class="filterSection weapon">
-        <li class='filter2' data="gun" metric="weapon"><a href="#">Gun</a> <div class="count">0</div></li>
+        <li class='filter2' data="gun" metric="weapon"><a href="javascript:void(0)">Gun</a> <div class="count">0</div></li>
         <div class="breakSmall"></div> 
-        <li class='filter2' data="knife" metric="weapon"><a href="#">Knife</a> <div class="count">0</div></li>
+        <li class='filter2' data="knife" metric="weapon"><a href="javascript:void(0)">Knife</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter2' data="other" metric="weapon"><a href="#">Other Weapon</a> <div class="count">0</div></li>
+        <li class='filter2' data="other" metric="weapon"><a href="javascript:void(0)">Other Weapon</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter2' data="unarmed" metric="weapon"><a href="#">Unarmed</a> <div class="count">0</div></li> 
+        <li class='filter2' data="unarmed" metric="weapon"><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></li> 
         </div> 
               </ul>
           </div>
@@ -331,15 +404,25 @@ dataShootings = dataLoadShootings.mn_shootings;
 dataYear = dataLoadYear.yearChart;
 dataRace = dataLoadRace.raceChart;
 
+if ($(window).width() >= 830) {
+$(".filterSection").hide(); 
 $(".all").show();
+} else { $(".filterSection").show();  }
+
+$(window).resize(function() {
+if ($(window).width() >= 830) {
+$(".filterSection").hide(); 
+$(".all").show();
+} else { $(".filterSection").show();  }
+});
 
 $(".switch").click(function() {
   $(".switch").removeClass("selected");
   $(this).addClass("selected");
   $("#filterWord").text($(this).attr("data"));
   $(".chartTitle, .chatter").hide();
-  if ($(this).attr("data") == "all") { $(".filterSection").show(); $(".all").show(); }
-  else { $(".filterSection").hide(); $("." + $(this).attr("data")).show(); }
+  $(".filterSection").hide(); 
+  $("." + $(this).attr("data")).show();
 
   if ($(this).attr("data") == "race") { 
     chart_year.load( { 
