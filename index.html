@@ -19,7 +19,9 @@
       .native-ad { display:none !important; }
       #js-navigation-menu { display:block !important; }
       .one-half { display:inline-block !important; float:left; }
+      .starlogo { float:left; margin:15px; }
       #testDiv { height:400px; background-color:#ddd; width:85%; float:right; }
+      h1 { font-family:"Popular"; font-weight:900; font-size:3.5em; margin-bottom:10px; }
 
       p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
       .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
@@ -105,6 +107,13 @@
 
     @media only screen and (min-width:650px) {
       .sort-link-mid:hover, .sort-link:hover, .link:hover { background-color:#eee !important; cursor:pointer; }
+
+    }
+
+    @media only screen and (max-width:650px) { 
+      .starlogo { float:none; margin:15px !important; width:150px !important; text-align:center !important; } 
+      #top { text-align:center; padding:0; }
+      .toptext, .topbreaker { text-align:left; display:none; }
     }
 
     @media (max-width: 970px) {
@@ -136,7 +145,7 @@
       .logInBtn { display:none !important; }
       /*.navbar-fixed-top { display:block !important; }*/
       .global-nav-mod { display:none !important; } 
-      #specialContentWrapper { margin-top:50px !important; width:97% !important; }
+      #specialContentWrapper { width:100% !important; }
       .l-section-container { width:100% !important; }
       .l-section-inner { padding-right: 0; width:100%; } 
 
@@ -151,11 +160,14 @@
 <!-- mark me bro -->
 
 <div id="top">
-  <p style="text-align:center;" ><img src="img/striblab_min.png" width="230px" /></p>
-  <div>StribLab is the Star Tribune's aggregation of data-driven and visual storytelling and tools, including maps, charts, investigations and analysis from the Watchdog and Data Team and others across the newsroom.</div>
+<img class="starlogo" src="img/striblab_min.png" width="130px" />
+<p>
+  <h1>StribLab</h1>
+  <div class="toptext">StribLab is the Star Tribune's aggregation of data-driven and visual storytelling and tools, including maps, charts, investigations and analysis from the Watchdog and Data Team and others across the newsroom.</div>
+</p>
 </div>
 
-<div class="breaker"></div>
+<div class="breaker topbreaker"></div>
 
 <div id="leftPane">
 <!-- <div id="infobox">
