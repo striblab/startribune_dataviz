@@ -1,0 +1,318 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Prince's Career by the Numbers</title>
+  <meta name="description" content="Prince's Career by the Numbers">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  
+  <style>
+       #selector { margin-left:auto; margin-right:auto; text-align:center; }
+       .button { padding:10px; display:inline-block; text-align:center; width:200px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
+       .button:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer;  }
+       .button { float:left; }
+       .stat { float:right; }
+       .filterBreak { height:2px; border-top:1px solid #ddd; clear:both; }
+
+       .icon { text-align:center; }
+       .icon img { width:100px; }
+
+       .year { font-size:1.5em; font-family:"Popular"; padding:25px; border-left:3px solid #7F587C; margin:15px; }
+       .year div { margin:15px; }
+
+       .art img { width:300px; }
+       .item.icon img { width:150px !important;  text-align:left !important; }
+       .item.icon { text-align:left !important; }
+
+       .item { border-bottom:1px solid #ddd; }
+
+       .title { font-weight:900; font-size:1em !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+       .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; }
+
+       #filter { text-align:center; margin:15px; clear:both; margin-top:10px; display:block; padding:20px; }
+
+       .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:300px; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+      header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+
+
+      @media (max-width:500px) {
+        #filter { text-align:center; margin:0; clear:both; display:block; padding:0; padding-top:15px; width:100%; }
+        .button, .stat { width:100%; float:none; clear:both; }
+      }
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+
+ <div class="icon"><img src="./img/prince_logo.png" /></div>
+ <div id="selector">
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span>Prince Rogers Nelson (1958-2016)</span>
+            <ul class="dropdown months" tabindex="1">
+        <li class="switch"><a href="#" data="all">Prince Rogers Nelson (1958-2016)</a></li>
+        <li class="switch"><a href="#" data="1958">1958</a></li>
+        <li class="switch"><a href="#" data="1975">1975</a></li>
+        <li class="switch"><a href="#" data="1978">1978</a></li>
+        <li class="switch"><a href="#" data="1979">1979</a></li>
+        <li class="switch"><a href="#" data="1980">1980</a></li>
+        <li class="switch"><a href="#" data="1981">1981</a></li>
+        <li class="switch"><a href="#" data="1982">1982</a></li>
+        <li class="switch"><a href="#" data="1983">1983</a></li>
+        <li class="switch"><a href="#" data="1984">1984</a></li>
+        <li class="switch"><a href="#" data="1985">1985</a></li>
+        <li class="switch"><a href="#" data="1986">1986</a></li>
+        <li class="switch"><a href="#" data="1987">1987</a></li>
+        <li class="switch"><a href="#" data="1988">1988</a></li>
+        <li class="switch"><a href="#" data="1989">1989</a></li>
+        <li class="switch"><a href="#" data="1990">1990</a></li>
+        <li class="switch"><a href="#" data="1991">1991</a></li>
+        <li class="switch"><a href="#" data="1992">1992</a></li>
+        <li class="switch"><a href="#" data="1993">1993</a></li>
+        <li class="switch"><a href="#" data="1994">1994</a></li>
+        <li class="switch"><a href="#" data="1995">1995</a></li>
+        <li class="switch"><a href="#" data="1996">1996</a></li>
+        <li class="switch"><a href="#" data="1997">1997</a></li>
+        <li class="switch"><a href="#" data="1998">1998</a></li>
+        <li class="switch"><a href="#" data="1999">1999</a></li>
+        <li class="switch"><a href="#" data="2000">2000</a></li>
+        <li class="switch"><a href="#" data="2001">2001</a></li>
+        <li class="switch"><a href="#" data="2002">2002</a></li>
+        <li class="switch"><a href="#" data="2003">2003</a></li>
+        <li class="switch"><a href="#" data="2004">2004</a></li>
+        <li class="switch"><a href="#" data="2005">2005</a></li>
+        <li class="switch"><a href="#" data="2006">2006</a></li>
+        <li class="switch"><a href="#" data="2007">2007</a></li>
+        <li class="switch"><a href="#" data="2008">2008</a></li>
+        <li class="switch"><a href="#" data="2009">2009</a></li>
+        <li class="switch"><a href="#" data="2010">2010</a></li>
+        <li class="switch"><a href="#" data="2011">2011</a></li>
+        <li class="switch"><a href="#" data="2012">2012</a></li>
+        <li class="switch"><a href="#" data="2013">2013</a></li>
+        <li class="switch"><a href="#" data="2014">2014</a></li>
+        <li class="switch"><a href="#" data="2015">2015</a></li>
+        <li class="switch"><a href="#" data="2016">2016</a></li>
+          </ul>
+          </div>
+        ​</div>
+</section>
+</div>
+
+<div id="filterBox">
+
+   <div class="switch button" data="album">Albums</div>
+   <div class="stat"></div>
+   <div class="filterBreak"></div>
+
+   <div class="switch button" data="grammy">Grammy Awards</div>
+   <div class="stat"></div>
+   <div class="filterBreak"></div>
+
+   <div class="switch button" data="tour">Tours</div>
+   <div class="stat"></div>
+   <div class="filterBreak"></div>
+
+   <div class="switch button" data="billboard">Billboard Rankings</div>
+   <div class="stat"></div>
+   <div class="filterBreak"></div>
+
+   <div class="switch button" data="tickets">Ticket Sales</div>
+   <div class="stat"></div>
+   <div class="filterBreak"></div>
+
+   <div class="switch button" data="other">Other Milestones</div>
+   <div class="stat"></div>
+</div>
+
+<div id="filter"><input type="search" id="filter_box" placeholder="Search by keyword"></input></div>
+
+
+<div class="resukts" style="display:none;"></div>
+
+<!-- <div id="timeline"> -->
+<div id="y1958" class="year"></div>
+<div id="y1975" class="year"></div>
+<div id="y1978" class="year"></div>
+<div id="y1979" class="year"></div>
+<div id="y1980" class="year"></div>
+<div id="y1981" class="year"></div>
+<div id="y1982" class="year"></div>
+<div id="y1983" class="year"></div>
+<div id="y1984" class="year"></div>
+<div id="y1985" class="year"></div>
+<div id="y1986" class="year"></div>
+<div id="y1987" class="year"></div>
+<div id="y1988" class="year"></div>
+<div id="y1990" class="year"></div>
+<div id="y1991" class="year"></div>
+<div id="y1992" class="year"></div>
+<div id="y1993" class="year"></div>
+<div id="y1994" class="year"></div>
+<div id="y1995" class="year"></div>
+<div id="y1996" class="year"></div>
+<div id="y1997" class="year"></div>
+<div id="y1998" class="year"></div>
+<div id="y1999" class="year"></div>
+<div id="y2000" class="year"></div>
+<div id="y2001" class="year"></div>
+<div id="y2002" class="year"></div>
+<div id="y2003" class="year"></div>
+<div id="y2004" class="year"></div>
+<div id="y2006" class="year"></div>
+<div id="y2007" class="year"></div>
+<div id="y2008" class="year"></div>
+<div id="y2009" class="year"></div>
+<div id="y2010" class="year"></div>
+<div id="y2011" class="year"></div>
+<div id="y2012" class="year"></div>
+<div id="y2013" class="year"></div>
+<div id="y2014" class="year"></div>
+<div id="y2015" class="year"></div>
+<div id="y2016" class="year"></div>
+</div>
+<!--   </div> -->
+</body>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+// $("#headerDiv").sticky({topSpacing:1});
+
+</script>
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=stats", function(error, dataLoad) {
+
+var data = dataLoad.stats;
+
+$(".button").click(function() {
+  $(".switch, .button").removeClass("selected");
+  $(this).addClass("selected");
+  $(".item, .year").hide();
+  if ($(this).attr("data") == "all") { $(".item, .year").show(); }
+  else { $("." + $(this).attr("data")).parent().show(); $("." + $(this).attr("data")).show(); }
+});
+
+$("li.switch").click(function() {
+  $(".switch, .button").removeClass("selected");
+  $(this).addClass("selected");
+  $(".year").hide();
+  $(".item").show();
+  if ($(this).find("a").attr("data") == "all") { $(".item, .year").show(); }
+  else { $("#y" + $(this).find("a").attr("data")).show(); }
+});
+
+//SEARCH FILTER TABLE
+  $( document ).ready(function() {
+     $('#filter_box').keyup(function(i){
+        $('.item, .year').hide();
+        $(".switch, .button").removeClass("selected");
+        var txt = $('#filter_box').val();
+        $('.item, .year').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+               $(this).parent().show();
+           }
+        });
+        var count = $('.item:visible').length;
+        $('#results').html(count);
+    });
+});
+
+function spitFirstItems(year){
+ $("#y" + year).append(function(){ return "<div class='yearLabel'>" + year + "</div>" });
+
+ d3.select("#y" + year).selectAll(".item")
+  .data(data.filter(function(d){ return d.year == year; })).enter().append("div")
+  .attr("class",function(d) { return "item " + d.type; })
+  .html(function(d){ 
+    if (d.type == "other"){
+      return "<div class='title'>" + d.title + "</div><div class='description'>" + d.notes + "</div>" ;
+    }
+    if (d.type == "album"){
+      return "<div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>" + d.rank + "</div><div class='label'>" + d.label + "<div class='description'>" + d.strib_copy + "</div>Score: " + d.strib_score + "</div>" ;
+    }
+    if (d.type == "billboard"){
+      return "<div class='title'>" + d.title + "</div><div class='rank'>Billboard Rank: " + d.rank + "</div>" ;
+    }
+    if (d.type == "grammy"){
+      return  "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Grammy Award</div>" ;
+    }
+    if (d.type == "tour"){
+      return "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Total Tickets Sold: " + d.TicketsSold + "</div><div class='rank'>Average Tickets Sold: " + d.AvgTicketsSold + "</div><div class='rank'>Gross: $" + d.gross_millions + " million</div>";
+    }
+    if (d.type == "tickets"){
+      return "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Total Tickets Sold: " + d.TicketsSold + "</div><div class='rank'>Average Tickets Sold: " + d.AvgTicketsSold + "</div><div class='rank'>Gross: $" + d.gross_millions + " million</div>"
+    }
+ });
+}
+
+spitFirstItems(1958);
+spitFirstItems(1975);
+
+for(var i=1978; i<=2016; i++){ spitFirstItems(i); }
+
+});
+</script>
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+</script>
+</html>
