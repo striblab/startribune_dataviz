@@ -27,6 +27,7 @@
 
        .year { font-size:1em; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border-left:3px solid #7F587C; margin:15px; }
        .year div { margin:15px; }
+       .yearHide { display:none; }
 
        .gold { color:#AAAA39; font-weight:900; }
        .diamond { color:#CBCBB3; font-weight:900; } 
@@ -45,6 +46,7 @@
 
        .item { border-bottom:1px solid #ddd; }
 
+       #selector { display:none; }
         
        #wrapper { width:100%; } 
        .leftSide { float:left; width:30%; position:fixed; }
@@ -78,6 +80,8 @@
 
         @media (max-width:500px) {
           #filter { text-align:center; margin:0; clear:both; display:block; padding:0; padding-top:15px; width:100%; }
+          #filterBox { display:none; }
+          #selector { display:block; }
           .button, .stat { width:100%; float:none; clear:both; }
           .leftSide, .rightSide { width:100%; float:none; position:static; }
         }
@@ -95,7 +99,14 @@
           <div id="dd" class="wrapper-dropdown-1" tabindex="1">
             <span>Prince Rogers Nelson (1958-2016)</span>
             <ul class="dropdown months" tabindex="1">
-        <li class="switch left"><a href="#" data="1958">1958</a></li>
+              <li class="switch button" data="all"><a href="#">All</a></li>
+              <li class="switch button" data="album"><a href="#">Albums (51)</a></li>
+              <li class="switch button" data="grammy"><a href="#">Grammy Awards (7)</a></li>
+              <li class="switch button" data="tour"><a href="#">Tours (25)</a></li>
+              <li class="switch button" data="billboard"><a href="#">Billboard Rankings (40)</a></li>
+              <li class="switch button" data="tickets"><a href="#">Ticket Sales ($166m+)</a></li>
+              <li class="switch button" data="other"><a href="#">Other Events</a></li>
+<!--         <li class="switch left"><a href="#" data="1958">1958</a></li>
         <li class="switch left"><a href="#" data="1975">1975</a></li>
         <li class="switch left"><a href="#" data="1978">1978</a></li>
         <li class="switch left"><a href="#" data="1979">1979</a></li>
@@ -135,14 +146,12 @@
         <li class="switch right"><a href="#" data="2013">2013</a></li>
         <li class="switch right"><a href="#" data="2014">2014</a></li>
         <li class="switch right"><a href="#" data="2015">2015</a></li>
-        <li class="switch right"><a href="#" data="2016">2016</a></li>
+        <li class="switch right"><a href="#" data="2016">2016</a></li> -->
           </ul>
           </div>
         ​</div>
 </section>
 </div>
-
-  <div class="filterBreak"></div>
 
 <div id="filterBox">
    <div class="switch button selected" data="all">All</div>
@@ -175,7 +184,7 @@
 
 <div class="filterBreak"></div>
 
-<div id="filter"><input type="search" id="filter_box" placeholder="Search by keyword"></input></div>
+<div id="filter"><input type="search" id="filter_box" placeholder="Search by keyword or year"></input></div>
 
 <div class="scrollToTop">Return to Top</div>
 </div>
@@ -257,33 +266,15 @@ $(".button").click(function() {
   else { $("." + $(this).attr("data")).parent().show(); $("." + $(this).attr("data")).show(); }
 });
 
-$("li.switch").click(function() {
-  $(".switch, .button").removeClass("selected");
-  $(this).addClass("selected");
-  $(".year").hide();
-  $(".item").show();
-  if ($(this).find("a").attr("data") == "all") { $(".item, .year").show(); }
-  else { $("#y" + $(this).find("a").attr("data")).show(); }
-});
+// $("li.switch").click(function() {
+//   $(".switch, .button").removeClass("selected");
+//   $(this).addClass("selected");
+//   $(".year").hide();
+//   $(".item").show();
+//   if ($(this).find("a").attr("data") == "all") { $(".item, .year").show(); }
+//   else { $("#y" + $(this).find("a").attr("data")).show(); }
+// });
 
-//SEARCH FILTER TABLE
-  $( document ).ready(function() {
-     $('#filter_box').keyup(function(i){
-        $('.item, .year').hide();
-        $(".switch, .button").removeClass("selected");
-        var txt = $('#filter_box').val();
-        $('.item, .year, .title').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
-               $(this).show();
-               $(this).parent().show();
-               $(this).parent().parent().show();
-           }
-        });
-        var count = $('.item:visible').length;
-        // $('.results').show();
-        // $('.results').html(count);
-    });
-});
 
 function spitFirstItems(year){
  $("#y" + year).append(function(){ return "<div class='yearLabel'>" + year + "</div>" });
@@ -293,30 +284,49 @@ function spitFirstItems(year){
   .attr("class",function(d) { return "item " + d.type; })
   .html(function(d){ 
     if (d.type == "other"){
-      return "<div class='title'>" + d.title + "</div><div class='description'>" + d.notes + "</div>" ;
+      return "<div class='yearHide'>" + d.year + "</div><div class='title'>" + d.title + "</div><div class='description'>" + d.notes + "</div>" ;
     }
     if (d.type == "album"){
-      return "<div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Certified : " + d.rank + "</div><div class='label'>Label: " + d.label + "<div class='description'>" + d.strib_copy + "</div>Score: " + d.strib_score + "</div>" ;
+      return "<div class='yearHide'>" + d.year + "</div><div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Certified : " + d.rank + "</div><div class='label'>Label: " + d.label + "<div class='description'>" + d.strib_copy + "</div><div class='author'> ~ " + d.author + "</div><div class='score'>Score: " + d.strib_score + "</div>" ;
     }
     if (d.type == "billboard"){
-      return "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Billboard Rank: #" + d.rank + "</div>" ;
+      return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Billboard Rank: #" + d.rank + "</div>" ;
     }
     if (d.type == "grammy"){
-      return  "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Grammy Award</div>" ;
+      return  "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Grammy Award</div>" ;
     }
     if (d.type == "tour"){
-      return "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div>";
+      return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div>";
     }
     if (d.type == "tickets"){
-      return "<div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Total Tickets Sold: " + d3.format(",")(d.TicketsSold) + "</div><div class='rank'>Average Tickets Sold: " + d3.format(",")(d.AvgTicketsSold) + "</div><div class='rank'>Gross: $" + d.gross_millions + " million</div>"
+      return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Total Tickets Sold: " + d3.format(",")(d.TicketsSold) + "</div><div class='rank'>Average Tickets Sold: " + d3.format(",")(d.AvgTicketsSold) + "</div><div class='rank'>Gross: $" + d.gross_millions + " million</div>"
     }
  });
 }
 
+
+//SEARCH FILTER TABLE
+  $( document ).ready(function() {
+for(var i=1978; i<=2016; i++){ spitFirstItems(i); }
+
 spitFirstItems(1958);
 spitFirstItems(1975);
 
-for(var i=1978; i<=2016; i++){ spitFirstItems(i); }
+     $('#filter_box').keyup(function(i){
+        $('.year').hide();
+        $(".switch, .button").removeClass("selected");
+        var txt = String($('#filter_box').val());
+        $('.tickets, .other, .album, .tour, .billboard, .grammy').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+               $(this).show();
+           }
+        });
+        var count = $('.item:visible').length;
+        // $('.results').show();
+        // $('.results').html(count);
+    });
+});
 
 });
 </script>
