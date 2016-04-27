@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tracking Claims to Prince's Estate</title>
+  <meta name="description" content="Tracking Claims to Prince's Estate">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  
+  <style>
+       body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+   
+
+      @media (max-width:500px) {
+
+       }
+  </style> 
+</head>
+
+<body>
+<div id="wrapper">
+
+</div>
+</body>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+// $("#headerDiv").sticky({topSpacing:1});
+
+</script>
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=family_members", function(error, dataLoad) {
+
+var data = dataLoad.family_members;
+
+
+});
+</script>
+</html>
