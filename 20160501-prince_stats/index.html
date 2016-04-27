@@ -9,6 +9,7 @@
   <meta name="description" content="Prince's Career by the Numbers">
   <meta name="author" content="Frey Hargarten - StarTribune">
 
+  <link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=8eac39b99728296a5d387eebc0f53ade09e9e0e6">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
   <style>
@@ -20,31 +21,40 @@
        .stat { float:right; }
        .filterBreak { height:2px; border-top:1px solid #ddd; clear:both; }
 
-       .icon { text-align:center; }
-       .icon img { width:100px; }
+       .icon { float:left;padding: 0 10px 18px 0; text-align:left;}
+       .icon img { width:50px; }
        .bigicon { text-align:center; }
-       .bigicon img { width:100px; }
+       .bigicon img { width:100px; display:none;}
 
-       .year { font-size:1em; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border-left:3px solid #7F587C; margin:15px; }
-       .year div { margin:15px; }
+       .year { font-size:1em; 
+         font-family:"Benton Sans",Helvetica,Arial,sans-serif; 
+/*         border-left:3px solid #7F587C; */
+         margin:15px 0 15px 0; }
+       .year div { margin:0px; }
        .yearHide { display:none; }
 
        .gold { color:#AAAA39; font-weight:900; }
        .diamond { color:#CBCBB3; font-weight:900; } 
        .platinum { color:#989886; font-weight:900; }
-       .yearLabel { font-size:2em; font-family:"Popular"; }
+       .yearLabel { font-size:2em; font-family:"Popular"; padding-bottom:0px}
 
+       .item.album {min-height: 220px;}
+       .item.billboard {min-height:70px;}
+       .item.tour {min-height: 70px;}
+       .item.other {min-height: 70px;}
+       .item.grammy {min-height: 70px;}
+    
        .left { width:49%; float:left; padding:-2px; }
        .right { width:49%; float:right; padding:-2px; }
 
        .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
        .scrollToTop:hover { color:#333 !important; cursor:pointer; }
 
-       .art img { width:300px; }
+       .art img { width:200px; }
        .item.icon img { width:150px !important;  text-align:left !important; }
        .item.icon { text-align:left !important; }
 
-       .item { border-bottom:1px solid #ddd; }
+       .item { padding-bottom:12px;border-bottom:1px solid #ddd;min-height: 52px;margin-bottom:12px; }
 
        #selector { display:none; }
         
@@ -52,9 +62,13 @@
        .leftSide { float:left; width:30%; position:fixed; }
        .rightSide { float:right; width:67%; height:800px; overflow-x:hidden; overflow-y:auto; }
 
-       .title { font-weight:900; font-size:1em !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; }
-       .art { text-align:center; }
-       .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; }
+       .title { font-weight:900; font-size:1.2em !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:left; margin-top:15px !important; margin-bottom:5px !important;}
+    .rank {margin-bottom:3px !important;}
+    .label {margin-bottom:5px !important;}
+    .author {margin-bottom:5px !important;}
+    
+       .art { float:right; padding: 3px 12px 12px 12px;}
+       .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; line-height:150%;margin-top:5px !important;margin-bottom:5px !important;}
 
         #filter { font-family:"Benton Sans"; font-size:.9em; margin:5px; }
         #filter input { width: 100% !important; padding: 0 10px 0 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
@@ -83,8 +97,21 @@
           #selector { display:block; }
           .button, .stat { width:100%; float:none; clear:both; }
           .leftSide, .rightSide { width:100%; float:none; position:static; }
+    
         body{max-width:525px;}
+    
+    
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+ 
+  .icon { float:left;padding: 0 10px 0px 0; text-align:left;}
+.rightSide {width:90%;padding-right:5%;padding-left:5%}     
+.art { float:right; padding: 3px 12px 12px 12px;}      
+.art img { width:100%;height:100%;margin:0 auto 10px auto;!important}      
+
+}  
+
   </style> 
+  
 </head>
 
 <body>
