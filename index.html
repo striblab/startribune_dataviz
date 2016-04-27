@@ -32,7 +32,7 @@
       #logo_container { width:208px; }
       .datalab-logo { float:left; margin:10px; width:100%;}
       #articlePane { display:inline-block !important;  }
-      .articleEntry { margin:30px; }
+      .articleEntry { margin:20px; }
       .articleName { font-weight:normal; font-size:28px; }
       .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%;  }
       .byline { font-weight:bold; }
@@ -57,16 +57,22 @@
       #links_m { display:none; }
       #contribs { display:none; }
       .article-share { width:100%; }
-      .breaker { clear:both; margin:7px; padding:10px; }
+      .breaker { clear:both; margin:7px; padding:0; }
       .article-share, .comments-section { display:none !important; }
       #contributors { display:none; }
-      #top { padding:35px; }
+      #top { padding:3px; margin-bottom:10px; }
       .tools { display:none; }
 
       .linkage { padding:5px; }
 
-      .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#61bd1a; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
+       .scrollToTop { color:#87C944 !important; text-align:center; padding:15px; }
+       .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+       #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
+
+      .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
       .git:hover { cursor:pointer; background-color:#fff !important; }
+
+      #allProjects .count { font-weight:900; }
 
       h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
     </style>
@@ -92,8 +98,9 @@
     #zone-none-block-3-leaderboard div iframe { width:100% !important; }
     /*.navbar-fixed-top { display:none !important; }*/
     .l-section-inner { padding-right: 0; width:100%; } 
-    a { color: #333; text-decoration: none; }
+    a { color: #87C944; text-decoration: none; }
     a:hover { text-decoration:none !important; color:inherit !important; }
+    .articleName a { color: #333; text-decoration: none; }
     .article-share { position:relative !important; float:left !important; margin-left:0 !important; }
     .fyre .fyre-comment-head .fyre-comment-username { cursor: default !important; font-size: 12px !important; line-height: 25px !important; text-decoration: none !important; color: #000 !important; }
     .fyre-post-button { border-radius:0 !important; }
@@ -185,7 +192,7 @@
 
 </div>
 
-<div id="resourcesBlock" class="resources articleEntry">
+<div id="resourcesBlock" class="resources">
 <div id="foi" class="box">
 <h3 id="foia">Freedom of Information</h3>
 <div class="linkage"><a href="https://www.ifoia.org/#!/" target="new_">iFOIA</a> - Auto-generate FOIA requests</div>
@@ -223,6 +230,7 @@
 <div class="linkage"><a href="http://modestmaps.com/" target="new_">Modest Maps</a> - Free interactive mapping JS library</div>
 <div class="linkage"><a href="https://www.mapbox.com/" target="new_">Mapbox</a> - Free/paid map design service</div>
 <div class="linkage"><a href="https://www.mapbox.com/" target="new_">Mapbox Builder</a> - Downloadable basemap design software</div>
+<div class="linkage"><a href="https://github.com/datadesk/print-map-maker" target="new_">Print Map Maker</a> - Spit vector maps from Mapbox for use in print</div>
 <div class="linkage"><a href="http://polymaps.org/" target="new_">Polymaps</a> - Free interactive mapping JS library</div>
 <div class="linkage"><a href="https://www.mapbox.com/tilemill/" target="new_">Tilemill</a> - Downloadable map tile design software</div>
 <div class="linkage"><a href="http://conveyal.com/transitive.js/" target="new_">Transitive.js</a> - Free JS library for transit maps</div>
@@ -470,6 +478,8 @@
 
 <!-- <div class="more"><a  href="javascript:void(0)">See more</a></div>
  -->
+<div class="scrollToTop">Return to Top</div>
+
 </div>
 
 <div id="dataSidebar">
@@ -512,6 +522,8 @@
 </div>
 
 </div>
+
+<div id="footerBottom">StarTribune 2016</div>
 </body>
 <!--close specialContentWrapper-->
 
@@ -558,6 +570,10 @@ d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL
 // $(".nav-section-link").text("StribLab");
 // $(document).prop('title', 'Data-driven storytelling, maps, charts and more | Startribune.com');
 
+$('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
 
 var data = json;
 
@@ -570,6 +586,8 @@ else { var git = ""; }
 
 });
 
+var killPaging = false;
+
 $('#allProjects').css("background-color","#ddd");
   $( ".sort-link" ).each(function( index ) {
   var type = "." + $(this).attr("id");
@@ -578,6 +596,7 @@ $('#allProjects').css("background-color","#ddd");
 
   $("#allProjects").find(".count").html($(".articleEntry").length);
 $( ".sort-link" ).click(function() {
+  killPaging = true;
   $('#search-criteria_m').val("");
   $('#search-criteria').val("");
   $(".articleEntry").hide();
@@ -585,7 +604,9 @@ $( ".sort-link" ).click(function() {
   $(this).css("background-color","#ddd");
   console.log($(this).attr("data"));
   $("." + $(this).attr("id")).show();
+  $("#resourcesBlock").hide();
   if ($(this).attr("id") != "tools") { $(".tools").hide(); }
+  if ($(this).attr("id") == "resources") { $(".articleEntry").hide(); $("#resourcesBlock").show(); }
 });
 
 $( "#allProjects" ).click(function() {
@@ -626,6 +647,29 @@ $('#search-criteria_m').keyup(function(){
 
 });
 
+$(".articleEntry").hide();
+
+var start = 0;
+var end = 2;
+
+$('.articleEntry').eq(start).show();
+$('.articleEntry').eq(start+1).show();
+$('.articleEntry').eq(end).show();
+
+// $(".tools").hide();
+
+$(window).scroll(function() {
+  if (killPaging == false){
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       start = end + 1;
+       end = end + 3;
+       $('.articleEntry').eq(start).show();
+       $('.articleEntry').eq(start+1).show();
+       $('.articleEntry').eq(end).show();
+   }
+ }
+});
+
 // $(document).ready(function () {
 //   $(".articleEntry").hide();
 //     size_li = $(".articleEntry").size();
@@ -642,39 +686,39 @@ $('#search-criteria_m').keyup(function(){
 // }
 // });
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-    var length = $('#specialContentWrapper').height() - $('#dataSidebar').height() + $('#specialContentWrapper').offset().top;
+//     var length = $('#specialContentWrapper').height() - $('#dataSidebar').height() + $('#specialContentWrapper').offset().top;
 
-    $(window).scroll(function () {
+//     $(window).scroll(function () {
 
-        var scroll = $(this).scrollTop();
-        var height = $('#dataSidebar').height() + 'px';
+//         var scroll = $(this).scrollTop();
+//         var height = $('#dataSidebar').height() + 'px';
 
-        if (scroll < $('#left').offset().top) {
+//         if (scroll < $('#left').offset().top) {
 
-            $('#dataSidebar').css({
-                'position': 'absolute',
-                'top': '0'
-            });
+//             $('#dataSidebar').css({
+//                 'position': 'absolute',
+//                 'top': '0'
+//             });
 
-        } else if (scroll > length) {
+//         } else if (scroll > length) {
 
-            $('#dataSidebar').css({
-                'position': 'absolute',
-                'bottom': '0',
-                'top': 'auto'
-            });
+//             $('#dataSidebar').css({
+//                 'position': 'absolute',
+//                 'bottom': '0',
+//                 'top': 'auto'
+//             });
 
-        } else {
+//         } else {
 
-            $('#dataSidebar').css({
-                'position': 'fixed',
-                'top': '0',
-                'height': height
-            });
-        }
-    });
-});
+//             $('#dataSidebar').css({
+//                 'position': 'fixed',
+//                 'top': '0',
+//                 'height': height
+//             });
+//         }
+//     });
+// });
 });
 </script>
