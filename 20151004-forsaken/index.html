@@ -12,43 +12,51 @@
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
 <style>
-    body{ font-family:Arial;}
-    .background { fill: none; pointer-events: all; }
-    #states { fill: #aaa; }
-    #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; }
-    .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:"Popular"; }
-    #states .active { fill: #333 !important; fill-opacity: 1 !important; }
-    .faded { fill-opacity: 0.5 !important; }
-    #map { float:left; width:525px; }
-    h4 { font-family: "Benton Sans",Helvetica,Arial,sans-serif; }
-    #infobox h4 {  margin-top: 1.83em; margin-bottom: 1em; margin-left: 0; margin-right: 0; font-weight: 900; }
-    #infobox{ width:100%; height:150px; padding:10px; float:right; font-family: "Benton Sans",Helvetica,Arial,sans-serif; }
-    .downloadButton { background-color:#61bd1a; -moz-border-radius:16px; -webkit-border-radius:16px; border-radius:3px; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family:arial; font-size:13px; padding:13px; text-decoration:none; font-weight:900; margin:5px; width:200px; }
-    .downloadButton:active { background-color:#378f00; }
-    #wrapper{ width:96.5%;}
-    .county_name{font-size:20px; font-family:"Popular"; font-weight:900;}
-    .legend label, .legend span { display:block; float:left; height:15px; width:35px; text-align:center; font-size:14px; color:#808080; }
-    #quantize{ padding:5px; text-align:center; float:left; }
-    .prevalence{ float:left; font-weight: bold; }
-    .prevalence a{ text-decoration:none;f ont-weight:bold; color:steelblue; }
-    .num{ float:right; font-size: 1.5em; font-weight: 900; color: #2ca25f; }
-    .bigNum{ font-size: 3.5em; font-weight: 900; color: #2ca25f; }
-    hr{ border:0; border-bottom:1px solid #ccc; background:#999; clear:both; margin-top:5px;}
-    path:hover{ fill:#378f00 !important; cursor:pointer; }
-    #states .active:hover { fill:#333 !important; }
-   .downloadButton { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:bold; color:#333333; font-size:.9em; text-align:center; margin-top:15px; margin-left:1%; width: 99%; background-color:#fff; color:#333; border-top: 1px solid #ccc; background-image: url('img/downloadDoc.svg'); background-size: 20px 20px; background-repeat: no-repeat; background-position: 2% 50%; }
-   .downloadButton:hover {background-color:#fff !important; opacity:.5;}
-   .downloadButton:active {background-color:#fff !important;}
-   .breaker { clear:both; padding:5px; }
-   .swatch { color:#49ab4b; font-weight:900; }
-   .zoom{ float:right !important;}
+  body, p { font-family:"Benton Sans"; font-size: .9em; margin:0px; width:375px; }
+  h1, h2, h3, h4, h5, h6 { font-family:"Benton Sans"; font-weight:bold;}
+  .background { fill: none; pointer-events: all; }
+  #states { fill: #aaa; }
+  #state-borders { fill: none; stroke: #fff; stroke-width: 2px; stroke-linejoin: round; stroke-linecap: round; pointer-events: none; }
+  .tooltip{ background-color:rgba(255,255,255,1); height: auto; width: auto; padding:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:0; border: 1px solid black; font-size:13px; font-family:"Benton Sans",Helvetica,Arial,sans-serif; ; }
+  #states .active { fill: #333 !important; fill-opacity: 1 !important; }
+  .faded { fill-opacity: 0.5 !important; }
+  #map { float:left; }
 
-    @media only screen and (max-width:530px) {
-      #map { float:none; width:100%; }
-    }
+  #infobox h4 {  margin-top: 1.83em; margin-bottom: 1em; margin-left: 0; margin-right: 0; font-weight: 900; }
+  #infobox{ width:100%; height:auto; float:right; font-family: "Benton Sans",Helvetica,Arial,sans-serif; }
+  .downloadButton { background-color:#61bd1a; -moz-border-radius:16px; -webkit-border-radius:16px; border-radius:3px; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family:"Benton Sans"; font-size:13px; padding:13px; text-decoration:none; font-weight:900; margin:5px; width:200px; }
+  .downloadButton:active { background-color:transparent; }
+  #wrapper{ width:100%;}
+  .county_name{font-size:20px; font-family:"Benton Sans"; font-weight:bold;}
+  .legend {}
+  .legend label, .legend span { display:block; font-family:"Benton Sans"; float:left; height:15px; width:35px; text-align:center; font-size:11px; color:#444444; }
+  #quantize p {margin-bottom: 8px;}
+  #quantize{ }
+  .prevalence{ float:left; font-weight: bold; }
+  .prevalence a{ text-decoration:none;font-weight:bold; color:steelblue; }
+  .num{ float:right; font-size: 1.5em; font-weight: 900; color: #2ca25f; }
+  .bigNum{ font-size: 3.5em; font-weight: 900; color: #2ca25f; }
+  hr{ border:0; border-bottom:1px solid #ccc; background:#999; clear:both; margin-top:5px;}
+  path:hover{ /*fill:transparent !important;*/ cursor:pointer; }
+  #states .active:hover { fill:#333 !important; }
+  .downloadButton { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:bold; color:#333333; font-size:.9em; text-align:center; margin-top:10px; margin-left:0; width: 100%; background-color:#fff; color:#333; border-top: 1px solid #ccc; /*background-image: url('img/downloadDoc.svg')*/; background-size: 20px 20px; background-repeat: no-repeat; background-position: 2% 50%; }
+  .downloadButton:hover {background-color:#fff !important; opacity:.5;}
+  .downloadButton:active {background-color:#fff !important;}
+  .breaker { clear:both; padding:5px 0; }
+
+  .swatch { color:#111111; font-weight:900; }
+  .chatter h2 {color: #666;border-bottom: 1px solid #ccc;font-size: 1.2em;}
+  .boxRight{width:160px;float:right;text-align: left;} 
+  .boxLeft {width:180px;float:left;text-align: left;}
+  .zoom { float:none !important;}
+  
     @media only screen and (max-width:950px) {
+      body {width:320px;}
+      .boxRight{width:160px;float:right;text-align: left;} 
+      .boxLeft {width:160px;float:left;text-align: left;}
       #infobox{ width:100% !important; float:none; }
-      #map { float:none; }
+      #map { float: none; left: -30px; position: relative; }
+
     }
 </style>
 
@@ -59,32 +67,33 @@
 
 <div id="wrapper">
 
-<h4>Percent of allocated money unspent by county</h4>
-<div id="map"><svg width="525" height="500" viewBox="0 0 630 550" preserveAspectRatio="xMidYMid"></svg></div>
+  <div id="quantize">
+  <p>Percent of allocated money unspent by county</p>
+  <div class='legend' id="aidQ">
+    <nav class='legend clearfix'>
+
+      <span style='background:#fff;'>-3%&nbsp;</span>
+      <span style='background:#b36e74;'></span>
+      <span style='background:#fff;'>0%</span>
+      <span style='background:#f7bd9c;'></span>
+      <span style='background:#dea98b;'></span>
+      <span style='background:#c4967c;'></span>
+      <span style='background:#ab836c'></span>
+      <span style='background:#916f5c'></span>
+      <span style='background:#fff;'>&nbsp;+37%</span>
+      </nav>
+  </div>
+  </div>
+
+
+<div id="map"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+
+
 
 <div class="breaker"></div>
-
 <a href='javascript:void(0);' class='zoom'>Reset View</a>
-
-<div id="quantize">
-<span class='legend' id="aidQ">
-  <nav class='legend clearfix'>
-    <span style='background:#fff;'>-</span>
-    <span style='background:#AD1625;'></span>
-    <span style='background:#74C476;'></span>
-    <span style='background:#49ab4b;'></span>
-    <span style='background:#347c36;'></span>
-    <span style='background:#204c21'></span>
-    <span style='background:#163417'></span>
-    <span style='background:#fff;'>+</span>
-    </nav>
-</span>
-</div>
-
-<div class="breaker"></div>
-
 <div id="infobox">
-<div class='chatter'>More than <span class='swatch'>$120 million</span> in county aid for group homes remains unspent in Minnesota.</div> 
+<div class='chatter'>Minnesota counties vary widely in spending state &ldquo;waiver&rdquo; money for people with disabilities.</div> 
 </div>
 
 </div>
@@ -118,20 +127,20 @@ d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7
 
 var popData = dataLoad.waitlist;
 
-var aspect = 525 / 550, chart = $("#map svg");
+var aspect = 350 / 350, chart = $("#map svg");
 $(window).on("resize", function() {   
   var targetWidth = chart.parent().width();   
   chart.attr("width", targetWidth);   
   chart.attr("height", targetWidth / aspect);
 });
 
-var width = 525,
-    height = 500,
+var width = 350,
+    height = 350,
     centered;
 
 var projection = d3.geo.albersUsa()
     .scale(5037)
-    .translate([100, 970]);
+    .translate([50, 970]);
 
 var path = d3.geo.path()
     .projection(projection);
@@ -149,12 +158,12 @@ var g = svg.append("g");
 
 var districtInfo = document.getElementById('infobox');
 var none = "#ddd";
-var q0 = "#AD1625";
-var q1 = "#74C476";
-var q2 = "#49ab4b";
-var q3 = "#347c36";
-var q4 = "#204c21";
-var q5 = "#163417";
+var q0 = "#b36e74"; //red
+var q1 = "#f7bd9c";//light
+var q2 = "#dea98b";//
+var q3 = "#c4967c";//
+var q4 = "#ab836c";
+var q5 = "#916f5c";//dark
 
 d3.json("shapefiles/counties.json", function(error, us) {
 
@@ -187,8 +196,9 @@ d3.json("shapefiles/counties.json", function(error, us) {
               else if ((popData[i].pct_unspent) > 10) { var swatch =  q2; }
               else if ((popData[i].pct_unspent) > 0) { var swatch =  q1; }
               else if ((popData[i].pct_unspent) < 0) { var swatch =  q0; }
+          // districtInfo.innerHTML = "<div class='county_name'>" + d.properties.COUNTYNAME + " County</div><div class='boxLeft'><div class='stat'>Region: " + popData[i].name + "</div><div class='stat'>Waiting List: " + popData[i].waiting + "</div></div><div class='boxRight'><div class='stat'>Allocated: " + d3.format("$,")(popData[i].allocated) + "</div><div class='stat'>Percent Unspent: <span style='color:" + swatch + ";font-weight:900;'>" + d3.format(".0")(popData[i].pct_unspent) + "%</span></div>";
 
-          districtInfo.innerHTML = "<div class='county_name'>" + d.properties.COUNTYNAME + " County</div><div class='stat'>Region: " + popData[i].name + "</div><div class='stat'>Allocated: " + d3.format("$,")(popData[i].allocated) + "</div><div class='stat'>Percent Unspent: <span style='color:" + swatch + ";font-weight:900;'>" + d3.format(".0")(popData[i].pct_unspent) + "%</span></div><div class='stat'>Waiting List: " + popData[i].waiting + "</div>" ;
+          districtInfo.innerHTML = "<div class='chatter'><h2>" + d.properties.COUNTYNAME + " County</h2><div class='boxLeft'><div class='stat'>Region: <b>" + popData[i].name + "</b></div><div class='stat'>Waiting List: <b>" + popData[i].waiting + "</b></div></div><div class='boxRight'><div class='stat'>Allocated: <b>" + d3.format("$,")(popData[i].allocated) + "</b></div><div class='stat'>Percent Unspent: <b>" + d3.format(".0")(popData[i].pct_unspent) + "%</b></div></div>";
         }
       }
 })
@@ -217,28 +227,28 @@ var zoom = d3.behavior.zoom()
 $(".zoom").click(function() {
   clicked2();
   var districtInfo = document.getElementById('infobox');
-  districtInfo.innerHTML = "<div class='chatter'>More than <span class='swatch'>$120 million</span> in county aid for group homes remains unspent in Minnesota.</div>"
+  districtInfo.innerHTML = "<div class='chatter'>Minnesota counties vary widely in spending state &ldquo;waiver&rdquo; money for people with disabilities.</div>"
 });
 
 
 function clicked(d) {
   var x, y, k;
 
-  if (d && centered !== d) {
-    var centroid = path.centroid(d);
-    x = centroid[0];
-    y = centroid[1];
-    k = 4;
-    centered = d;
-  } else {
-    x = width / 2;
-    y = height / 2;
-    k = 1;
-    centered = null;
-  }
+  // if (d && centered !== d) {
+  //   var centroid = path.centroid(d);
+  //   x = centroid[0];
+  //   y = centroid[1];
+  //   k = 4;
+  //   centered = d;
+  // } else {
+  //   x = width / 2;
+  //   y = height / 2;
+  //   k = 1;
+  //   centered = null;
+  // }
 
   g.selectAll("path")
-      .classed("faded", true)
+      .classed("faded", false)
       .classed("active", centered && function(d) { return d === centered; });
 
   // g.transition()
@@ -269,11 +279,12 @@ function clicked2(d) {
       .classed("faded", false)
       .classed("active", centered && function(d) { return d === centered; });
 
-//   g.transition()
-//       .duration(750)
-// .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-//       .style("stroke-width", 1.5 / k + "px");
+  g.transition()
+      .duration(750)
+.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
 }
+
 
 d3.helper = {};
 
