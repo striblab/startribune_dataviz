@@ -15,8 +15,9 @@
   <style>
        body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
        #selector { margin-left:auto; margin-right:auto; text-align:center; }
-       .button { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
-       .button:hover, .selected { background-color:#7F587C !important; color:#fff !important; cursor:pointer;  }
+       .button { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #ddd; }
+       .button:hover, .selected { background-color:#bc73bb !important; cursor:pointer;  }
+    
        .button { float:left; }
        .stat { float:right; }
        .filterBreak { height:2px; border-top:1px solid #ddd; clear:both; }
@@ -28,7 +29,7 @@
 
        .year { font-size:1em; 
          font-family:"Benton Sans",Helvetica,Arial,sans-serif; 
-/*         border-left:3px solid #7F587C; */
+/*         border-left:3px solid #bc73bb; */
          margin:15px 0 15px 0; }
        .year div { margin:0px; }
        .yearHide { display:none; }
@@ -39,6 +40,7 @@
        .yearLabel { font-size:2em; font-family:"Popular"; padding-bottom:0px}
 
        .item.album {min-height: 220px;}
+       .item.alt {min-height: 220px;}
        .item.billboard {min-height:70px;}
        .item.tour {min-height: 70px;}
        .item.other {min-height: 70px;}
@@ -70,23 +72,47 @@
        .art { float:right; padding: 3px 12px 12px 12px;}
        .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; line-height:150%;margin-top:5px !important;margin-bottom:5px !important;}
 
-        #filter { font-family:"Benton Sans"; font-size:.9em; margin:5px; }
-        #filter input { width: 100% !important; padding: 0 10px 0 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
+    
+        #filter { font-family:"Benton Sans"; font-size:1.2em; margin:5px; }
+        #filter input { width: 100% !important; padding: 25px 10px 25px 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
           -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);  -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #eee !important; 
           background-size: 14px 14px;
           background-repeat: no-repeat; 
           background-position: 98% 50%; }
-        #filter input:focus { width: 100% !important; font-family:"Benton Sans"; box-shadow: 0 0 5px #999; padding: 1px 10px 1px 10px; border: 1px solid #61bd1a; }
+        #filter input:focus { width: 100% !important; font-family:"Benton Sans"; box-shadow: 0 0 5px #333 !important; padding: 25px 10px 25px 10px; border: 1px solid #61bd1a; }
 
         .wrapper-demo { width:100%; }
-        .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
-        .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
-        ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
-        .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
-        .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+        .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:16px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
+    
+        .wrapper-dropdown-1.active {background:#ddd !important;}
+        .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#ddd;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+        ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; background:#ddd;}
+        .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#ddd;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+        .wrapper-dropdown-1 .dropdown li:hover a { background:#bc73bb; }
         header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
 
+ .wrapper-dropdown-1 .dropdown li a {
+    color: #757575;
+    padding: 5px 18px;
+    }
+.wrapper-dropdown-1 .dropdown li a:hover {
+    color: #fff;
+    }   
+    
+.wrapper-dropdown-1 .dropdown li.selected {
+    color: #fff !important;
+    }     
+    
+/*
+.switch.button.selected {
+    background-color: #bc73bb !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+*/
 
+    
+    
         .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
         .video-container iframe,
         .video-container object,
@@ -314,6 +340,9 @@ function spitFirstItems(year){
     }
     if (d.type == "album"){
       return "<div class='yearHide'>" + d.year + "</div><div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Certified : " + d.rank + "</div><div class='label'>Label: " + d.label + "<div class='description'>" + d.strib_copy + "</div><div class='author'> ~ " + d.author + "</div><div class='score'>Score: " + d.strib_score + "</div>" ;
+    }
+    if (d.type == "alt"){
+      return "<div class='yearHide'>" + d.year + "</div><div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='description'>" + d.notes + "</div>" ;
     }
     if (d.type == "billboard"){
       return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Billboard Rank: #" + d.rank + "</div>" ;
