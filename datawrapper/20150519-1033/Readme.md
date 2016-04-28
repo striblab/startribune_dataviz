@@ -1,0 +1,10 @@
+Star Tribune - What military surplus gear does your police agency have?
+================
+
+by CJ Sinner
+
+Built using [DataWrapper](https://github.com/datawrapper/datawrapper).
+
+The files can be run in any live server setup. Just open the index.html file in your browser.
+
+http://www.startribune.com/what-military-surplus-gear-does-your-police-agency-have/304179281/
