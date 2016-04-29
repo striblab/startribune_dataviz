@@ -329,7 +329,9 @@ function spitFirstItems(year){
       return  "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Grammy Award</div>" ;
     }
     if (d.type == "tour"){
-      return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div>";
+      var textstuff = "";
+      if (d.notes != "#") { textstuff = "<div class='description'>" + d.notes + "</div>"; }
+      return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div>" + textstuff;
     }
     if (d.type == "tickets"){
       return "<div class='yearHide'>" + d.year + "</div><div class='icon'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Total Tickets Sold: " + d3.format(",")(d.TicketsSold) + "</div><div class='rank'>Average Tickets Sold: " + d3.format(",")(d.AvgTicketsSold) + "</div><div class='rank'>Gross: $" + d.gross_millions + " million</div>"
