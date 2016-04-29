@@ -121,7 +121,7 @@ function buildButtons(){
   $(".button").removeClass("selected");
   $(this).addClass("selected");
   $(".profile").hide();
-  if ($(this).attr("data") == "all") { $(".profile").show(); $("#contactsBox").hide(); $("#resultsBox").show(); }
+  if ($(this).attr("data") == "all") { $(".profile").show(); $("#contactsBox, #editbox").hide(); $("#resultsBox").show(); }
   else if ($(this).attr("data") == "contacts") { $("#contactsBox").show(); $("#resultsBox, #editbox").hide(); }
   else if ($(this).attr("data") == "edit") { $("#editbox").show(); $("#resultsBox, #contactsBox").hide(); }
   else { $("." + $(this).attr("data")).show(); $("#contactsBox, #editbox").hide(); $("#resultsBox").show(); }
