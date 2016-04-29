@@ -16,14 +16,19 @@
         .button { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
        .button:hover, .selected { background-color:#7F587C !important; color:#fff !important; cursor:pointer;  }
        .button { float:left; }
+       .person { background-color:#ddd; }
 
        #filterBox { float:right; position:fixed; width:300px; }
        #resultsBox { float:right; width:70%; }
+       #contactsBox { float:right; width:70%; display:none; }
 
-       .profile { border-bottom:1px solid #ddd; }
-       .name { font-weight:900; font-size:1.5em; }
-       .chatter { padding:20px; }
-
+       #resultsBox .profile { border-bottom:1px solid #ddd; }
+       #resultsBox .name { font-weight:900; font-size:1.5em; }
+       #resultsBox .chatter { padding:20px; }
+       .profile { padding:20px; }
+       h3 { margin-top:7px; }
+       .connected:hover { color:#000; cursor:pointer; }
+ 
         #filter { font-family:"Benton Sans"; font-size:.9em; margin:5px; }
         #filter input { width: 100% !important; padding: 0 10px 0 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
           -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);  -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #eee !important; 
@@ -32,6 +37,10 @@
           background-position: 98% 50%; }
         #filter input:focus { width: 100% !important; font-family:"Benton Sans"; box-shadow: 0 0 5px #999; padding: 1px 10px 1px 10px; border: 1px solid #61bd1a; }
 
+        .contactRow { font-size:1em !important; font-weight:normal !important; display:block; border-bottom:1px solid #ddd; }
+        .contactRow td { width:100px; padding:10px; clear:both; word-wrap:break-word; }
+        .contactHeader { font-size:1em !important; font-weight:normal !important; display:block; }
+        .contactHeader th { width:100px; padding:10px; clear:both; font-weight:900;  }
 
       @media (max-width:500px) {
        #filterBox { float:none; position:static; width:100%; }
@@ -52,6 +61,20 @@
 
 </div>
 
+<table id="contactsBox">
+<tr class="contactHeader">
+<th class="th">Name</th>
+<th class="th">Occupation</th>
+<th class="th">Relation</th>
+<th class="th">Email</th>
+<th class="th">Phone</th>
+<th class="th">Other</th>
+<th class="th">Contacted?</th>
+<th class="th">Other Media</th>
+<th class="th">Notes</th>
+</tr>
+</table>
+
 </div>
 </body>
 
@@ -67,46 +90,67 @@
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
 
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=family_members", function(error, dataLoad) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=profiles", function(error, dataLoad) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=contacts", function(error, dataLoadContacts) {
 
-var data = dataLoad.family_members;
-
+var data = dataLoad.profiles;
+var dataContacts = dataLoadContacts.contacts;
 
 
 function buildButtons(){
 
  d3.select("#filterBox").selectAll(".button")
   .data(data).enter().append("div")
-  .attr("class","button")
+  .attr("class","button person")
   .attr("data",function(d){ return d.id; })
   .html(function(d){ return d.name; });
 
   $("#filterBox").append('<div class="button selected" data="all">All</div>');
+  $("#filterBox").append('<div class="button" data="family">Family</div>');
+  $("#filterBox").append('<div class="button" data="circle">Inner Circle</div>');
+  $("#filterBox").append('<div class="button" data="contacts">Contacts</div>');
 
   $(".button").click(function() {
   $(".button").removeClass("selected");
   $(this).addClass("selected");
   $(".profile").hide();
-  if ($(this).attr("data") == "all") { $(".profile").show(); }
-  else { $("." + $(this).attr("data")).show(); }
+  if ($(this).attr("data") == "all") { $(".profile").show(); $("#contactsBox").hide(); $("#resultsBox").show(); }
+  else if ($(this).attr("data") == "contacts") { $("#contactsBox").show(); $("#resultsBox").hide(); }
+  else { $("." + $(this).attr("data")).show(); $("#contactsBox").hide(); $("#resultsBox").show(); }
 });
 }
 
 function buildProfiles(){
  d3.select("#resultsBox").selectAll(".profile")
   .data(data).enter().append("div")
-  .attr("class",function(d) { return "profile " + d.id; })
+  .attr("class",function(d) { return "profile " + d.id + " "  + d.group; })
   .html(function(d){ 
-      return "<div class='photo'><img src='" + d.photo + "' /></div><div class='name'>" + d.name + "</div><div class='stat dob'>DOB: " + d.dob + "</div><div class='stat age'>Age: " + d.age + "</div><div class='stat occupation'>Occupation: " + d.occupation + "</div><div class='stat relation'>Relation to deceased: " + d.relation + "</div><div class='stat gender'>Gender: " + d.gender + "</div><div class='chatter'>Notes: " + d.notes + "</div><div class='connections'>Connections: " + d.connections + "</div>"
+    var addressString = d.address + ", " + d.city + ", " + d.state + " " + d.zip;
+    var connections = String(d.connections).split(",");
+    var documents = String(d.document_names).split(",");
+    var documentURLs = String(d.document_urls).split(",");
+
+    var connectionsString = "";
+    var documentsString = "";
+
+    for (var i=0; i < connections.length; i++){
+      connectionsString += "<div class='connected'>" + connections[i] + "</div>";
+    }
+    
+    for (var i=0; i < documents.length; i++){
+      documentsString += "<div class='linkage'><a target='new_' href='" + documentURLs[i] + "'>" + documents[i] + "</a></div>";
+    }
+
+      return "<div class='photo'><img src='" + d.photo + "' /></div><div class='name'>" + d.name + "</div><div class='stat dob'>DOB: " + d.dob + "</div><div class='stat age'>Age: " + d.age + "</div><div class='stat occupation'>Occupation: " + d.occupation + "</div><div class='stat relation'>Relation to deceased: " + d.relation + "</div><div class='stat relation'>Address: <a href='http://maps.google.com/?q=" + addressString + "' target='new_'>" + addressString + "</a></div><div class='stat gender'>Gender: " + d.gender + "</div><div class='stat gender'>Group: " + d.group + "</div><div class='stat email'>Email: " + d.email + "</div><div class='stat phone'>Phone: " + d.phone + "</div><div class='stat other'>Other Contact: " + d.other_contact + "</div><div class='chatter'>Notes: " + d.notes + "</div><a href='" + d.accurant_profile + "' class='accurant' target='new_'>Accurant Profile</a><div class='connections'><h3>Connections</h3>" + connectionsString + "</div><div class='documents'><h3>Documents</h3>" + documentsString + "</div>"
  });
 
     $( document ).ready(function() {
 
      $('#filter_box').keyup(function(i){
-        $('.profile').hide();
+        $('.profile, .contactRow').hide();
         $(".button").removeClass("selected");
         var txt = String($('#filter_box').val());
-        $('.profile').each(function(){
+        $('.profile, .contactRow').each(function(){
            if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
                $(this).show();
            }
@@ -115,14 +159,40 @@ function buildProfiles(){
         // $('.results').show();
         // $('.results').html(count);
     });
+
+ $(".connected").click(function() {
+        $(".button").removeClass("selected");
+        $('.profile').hide();
+        var txt = String($(this).text());
+        $('.name').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.item:visible').length;
+        // $('.results').show();
+        // $('.results').html(count);
+    });
+
 });
+}
+
+function spitContacts(){
+  d3.select("#contactsBox").selectAll(".contactRow")
+  .data(dataContacts).enter().append("tr")
+  .attr("class",function(d) { return "contactRow " + d.id; })
+  .html(function(d){ 
+    var addressString = d.address + ", " + d.city + ", " + d.state + " " + d.zip;
+
+      return "<td class='name'>" + d.name + "</td><td class='stat occupation'>" + d.occupation + "</td><td class='stat relation'>" + d.relation + "</td><td class='stat email'>" + d.email + "</td><td class='stat phone'>" + d.phone + "</td><td class='stat other'>" + d.other_contact + "</td><td class='stat media'>" + d.contacted + "</td><td class='stat media'>" + d.other_media + "</td><td class='stat notes'>" + d.notes + "</td>"
+ });
 }
 
 buildButtons();
 buildProfiles();
+spitContacts();
 
-
-
+});
 });
 </script>
 </html>

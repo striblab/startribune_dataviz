@@ -21,24 +21,20 @@
        .button { float:left; }
        .stat { float:right; }
        .filterBreak { height:2px; border-top:1px solid #ddd; clear:both; }
-
        .icon { float:left;padding: 0 10px 18px 0; text-align:left;}
        .icon img { width:50px; }
        .bigicon { text-align:center; }
        .bigicon img { width:100px; display:none;}
-
        .year { font-size:1em; 
          font-family:"Benton Sans",Helvetica,Arial,sans-serif; 
 /*         border-left:3px solid #bc73bb; */
          margin:15px 0 15px 0; }
        .year div { margin:0px; }
        .yearHide { display:none; }
-
        .gold { color:#AAAA39; font-weight:900; }
        .diamond { color:#CBCBB3; font-weight:900; } 
        .platinum { color:#989886; font-weight:900; }
        .yearLabel { font-size:2em; font-family:"Popular"; padding-bottom:0px}
-
        .item.album {min-height: 220px;}
        .item.alt {min-height: 220px;}
        .item.billboard {min-height:70px;}
@@ -48,22 +44,17 @@
     
        .left { width:49%; float:left; padding:-2px; }
        .right { width:49%; float:right; padding:-2px; }
-
        .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
        .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-
        .art img { width:200px; }
        .item.icon img { width:150px !important;  text-align:left !important; }
        .item.icon { text-align:left !important; }
-
        .item { padding-bottom:12px;border-bottom:1px solid #ddd;min-height: 52px;margin-bottom:12px; }
-
        #selector { display:none; }
         
        #wrapper { width:100%; } 
        .leftSide { float:left; width:30%; position:fixed; }
        .rightSide { float:right; width:67%; height:24000px; overflow-x:hidden; overflow-y:hidden; }
-
        .title { font-weight:900; font-size:1.2em !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:left; margin-top:15px !important; margin-bottom:5px !important;}
     .rank {margin-bottom:3px !important;}
     .label {margin-bottom:5px !important;}
@@ -71,7 +62,6 @@
     
        .art { float:right; padding: 3px 12px 12px 12px;}
        .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; line-height:150%;margin-top:5px !important;margin-bottom:5px !important;}
-
     
         #filter { font-family:"Benton Sans"; font-size:1.2em; margin:5px; }
         #filter input { width: 100% !important; padding: 25px 10px 25px 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
@@ -80,7 +70,6 @@
           background-repeat: no-repeat; 
           background-position: 98% 50%; }
         #filter input:focus { width: 100% !important; font-family:"Benton Sans"; box-shadow: 0 0 5px #333 !important; padding: 25px 10px 25px 10px; border: 1px solid #61bd1a; }
-
         .wrapper-demo { width:100%; }
         .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:16px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
     
@@ -90,7 +79,6 @@
         .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#ddd;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
         .wrapper-dropdown-1 .dropdown li:hover a { background:#bc73bb; }
         header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
-
  .wrapper-dropdown-1 .dropdown li a {
     color: #757575;
     padding: 5px 18px;
@@ -110,14 +98,12 @@
     cursor: pointer;
 }
 */
-
     
     
         .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
         .video-container iframe,
         .video-container object,
         .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
           #filter { text-align:center; margin:0; clear:both; display:block; padding:0; padding-top:15px; width:100%; }
           #filterBox { display:none; }
           #selector { display:block; }
@@ -134,13 +120,10 @@
 height:800px;
 overflow-x: hidden;
 overflow-y: auto;
-
 }     
 .art { float:right; padding: 3px 12px 12px 12px;}      
 .art img { width:100%;height:100%;margin:0 auto 10px auto;!important}      
-
 }  
-
   </style> 
 
 </head>
@@ -298,23 +281,17 @@ overflow-y: auto;
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 // $("#headerDiv").sticky({topSpacing:1});
-
 </script>
 <script>
 //LIVE JSON MAGIC
-
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
-
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=stats", function(error, dataLoad) {
-
 var data = dataLoad.stats;
-
 $('.scrollToTop').click(function(){
     $('.rightSide').animate({scrollTop : 0},800);
     return false;
   });
-
 $(".button").click(function() {
   $(".switch, .button").removeClass("selected");
   $(this).addClass("selected");
@@ -322,7 +299,6 @@ $(".button").click(function() {
   if ($(this).attr("data") == "all") { $(".item, .year").show(); }
   else { $("." + $(this).attr("data")).parent().show(); $("." + $(this).attr("data")).show(); }
 });
-
 // $("li.switch").click(function() {
 //   $(".switch, .button").removeClass("selected");
 //   $(this).addClass("selected");
@@ -331,11 +307,8 @@ $(".button").click(function() {
 //   if ($(this).find("a").attr("data") == "all") { $(".item, .year").show(); }
 //   else { $("#y" + $(this).find("a").attr("data")).show(); }
 // });
-
-
 function spitFirstItems(year){
  $("#y" + year).append(function(){ return "<div class='yearLabel'>" + year + "</div>" });
-
  d3.select("#y" + year).selectAll(".item")
   .data(data.filter(function(d){ return d.year == year; })).enter().append("div")
   .attr("class",function(d) { return "item " + d.type; })
@@ -363,15 +336,11 @@ function spitFirstItems(year){
     }
  });
 }
-
-
 //SEARCH FILTER TABLE
   $( document ).ready(function() {
 for(var i=1978; i<=2016; i++){ spitFirstItems(i); }
-
 spitFirstItems(1958);
 spitFirstItems(1975);
-
      $('#filter_box').keyup(function(i){
         $('.year').hide();
         $(".switch, .button").removeClass("selected");
@@ -387,7 +356,6 @@ spitFirstItems(1975);
         // $('.results').html(count);
     });
 });
-
 });
 </script>
 <script type="text/javascript">
@@ -403,12 +371,10 @@ spitFirstItems(1975);
       DropDown.prototype = {
         initEvents : function() {
           var obj = this;
-
           obj.dd.on('click', function(event){
             $(this).toggleClass('active');
             return false;
           });
-
           obj.opts.on('click',function(){
             var opt = $(this);
             obj.val = opt.text();
@@ -423,17 +389,13 @@ spitFirstItems(1975);
           return this.index;
         }
       }
-
       $(function() {
-
         var dd = new DropDown( $('#dd') );
         var dd2 = new DropDown( $('#ddY') );
-
         $(document).click(function() {
           // all dropdowns
           $('.wrapper-dropdown-1').removeClass('active');
         });
-
       });
 </script>
 <script src="http://static.startribune.com/js/pym/pym.min.js"></script>
