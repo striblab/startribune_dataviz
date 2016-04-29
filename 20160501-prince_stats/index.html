@@ -8,8 +8,8 @@
   <meta name="author" content="Frey Hargarten - StarTribune">
 <!--   <link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css"> -->
   <link rel="stylesheet" href="http://striblab.github.io/startribune_dataviz/_common_resources/styles/startribune_dataviz_styles.css" />
-  <style>
-    body {
+  <style>  
+    body, p {
       font-family:"Benton Sans",Helvetica,Arial,sans-serif;
       font-size: .85em;
       color:#444;
@@ -30,7 +30,6 @@
     #filterBox{
       display:none;
     }
-
     .filters{
       width:100%;
       background:#fff;
@@ -38,7 +37,6 @@
     #filter{
       margin-top:-9px;
     }
-
     #filter input[type=search]{
       width: 100% !important;
       font-size: 1.2em;
@@ -53,7 +51,6 @@
       border-radius: 0;
       color: rgba(0,0,0,1);
     }
-
     .wrapper-demo{
       display:block;
     }
@@ -127,7 +124,6 @@
       z-index:1000;
       background:#f0f0f0;
     }
-
     .wrapper-dropdown-1 .dropdown li a {
     color: #757575;
     padding: 5px 18px;
@@ -135,7 +131,6 @@
     .wrapper-dropdown-1 .dropdown li a:hover {
     color: #fff;
     }   
-
     .wrapper-dropdown-1 .dropdown li.selected {
       color:#000;
     }
@@ -262,7 +257,6 @@
       height: 100%;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
-
       #wrapper{
         width:100%;
       }
@@ -411,7 +405,7 @@ function spitFirstItems(year){
       return "<div class='yearHide'>" + d.year + "</div><div class='title'>" + d.title + "</div><div class='description'>" + d.notes + "</div>" ;
     }
     if (d.type == "album"){
-      return "<div class='yearHide'>" + d.year + "</div><div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Certified : " + d.rank + "</div><div class='label'>Label: " + d.label + "<div class='description'>" + d.strib_copy + "</div><div class='author'> ~ " + d.author + "</div><div class='score'>Score: " + d.strib_score + "</div>" ;
+      return "<div class='yearHide'>" + d.year + " </div><div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='rank'>Certified : " + d.rank + "</div><div class='label'>Label: " + d.label + "<div class='description'>" + d.strib_copy + "</div><div class='score'>Score: " + d.strib_score + "</div><div class='author'> ~ " + d.author + "</div>" ;
     }
     if (d.type == "alt"){
       return "<div class='yearHide'>" + d.year + "</div><div class='art'><img src='img/" + d.art + "' /></div><div class='title'>" + d.title + "</div><div class='description'>" + d.notes + "</div>" ;
