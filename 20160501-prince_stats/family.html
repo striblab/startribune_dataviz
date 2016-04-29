@@ -21,6 +21,7 @@
        #filterBox { float:right; position:fixed; width:300px; }
        #resultsBox { float:right; width:70%; }
        #contactsBox { float:right; width:70%; display:none; }
+       #editbox { float:right; width:70%; display:none; }
 
        #resultsBox .profile { border-bottom:1px solid #ddd; }
        #resultsBox .name { font-weight:900; font-size:1.5em; }
@@ -28,6 +29,7 @@
        .profile { padding:20px; }
        h3 { margin-top:7px; }
        .connected:hover { color:#000; cursor:pointer; }
+       iframe { width:100%; height:750px; }
  
         #filter { font-family:"Benton Sans"; font-size:.9em; margin:5px; }
         #filter input { width: 100% !important; padding: 0 10px 0 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
@@ -75,6 +77,10 @@
 </tr>
 </table>
 
+<div id="editbox">
+<iframe src="https://docs.google.com/spreadsheets/d/16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI/edit?usp=sharing"></iframe>
+</div>
+
 </div>
 </body>
 
@@ -109,14 +115,16 @@ function buildButtons(){
   $("#filterBox").append('<div class="button" data="family">Family</div>');
   $("#filterBox").append('<div class="button" data="circle">Inner Circle</div>');
   $("#filterBox").append('<div class="button" data="contacts">Contacts</div>');
+  $("#filterBox").append('<div class="button" data="edit">Edit</div>');
 
   $(".button").click(function() {
   $(".button").removeClass("selected");
   $(this).addClass("selected");
   $(".profile").hide();
   if ($(this).attr("data") == "all") { $(".profile").show(); $("#contactsBox").hide(); $("#resultsBox").show(); }
-  else if ($(this).attr("data") == "contacts") { $("#contactsBox").show(); $("#resultsBox").hide(); }
-  else { $("." + $(this).attr("data")).show(); $("#contactsBox").hide(); $("#resultsBox").show(); }
+  else if ($(this).attr("data") == "contacts") { $("#contactsBox").show(); $("#resultsBox, #editbox").hide(); }
+  else if ($(this).attr("data") == "edit") { $("#editbox").show(); $("#resultsBox, #contactsBox").hide(); }
+  else { $("." + $(this).attr("data")).show(); $("#contactsBox, #editbox").hide(); $("#resultsBox").show(); }
 });
 }
 
