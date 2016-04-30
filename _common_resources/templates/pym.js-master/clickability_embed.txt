@@ -1,0 +1,9 @@
+<p><style type="text/css">
+.l-article-body { width:100%; }
+iframe { height:950px; }
+@media (max-width:845px) { iframe { height:1350px; } }
+</style></p>
+<p>Chatter</p>
+
+<p>Source: City of Minneapolis, Star Tribune reporting</p>
+<p><iframe width="100%" frameborder="0" scrolling="no" src="http://apps.startribune.com/news/20160124-demolition/?kshf"></iframe></p>

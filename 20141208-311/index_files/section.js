@@ -1,0 +1,6 @@
+try{googletag.cmd.push(function(){googletag.pubads().addEventListener('slotRenderEnded',function(event){if(event.isEmpty){return;}
+if(event.slot.getAdUnitPath().indexOf('inline_front')!==-1){jQuery('#'+ event.slot.getSlotId().getDomId()).addClass('ad-mod-fix');}});});}catch(e){if(!(e instanceof TypeError)){Bugsnag.notifyException(e);}}
+jQuery(window).load(function(){var zone1=jQuery('.l-section-inner');var zone2=jQuery('.l-section-right');var maxAdSize=800;var pixelsToFill=zone1.height()- zone2.height();var fillAds=[];var pattern=/^zone-2-block-\d-fill$/;for(ad in gptadslots){if(gptadslots.hasOwnProperty(ad)&&pattern.test(ad)){fillAds.push(ad);}}
+var contentBlocks=jQuery('.l-section-right .dfp-ad-container').last().nextAll('div');while(pixelsToFill>maxAdSize&&fillAds.length>0){var adId=fillAds.shift();var adContainer=jQuery('<div>').attr('id',adId).addClass('ad-mod').addClass('dfp-ad-container');if(contentBlocks.length>1){adContainer.insertAfter(contentBlocks.splice(0,1));}else{adContainer.css('margin-top','400px').appendTo('.l-section-right');}
+if(activeAds[adId]['lazy_load']=='true'){adInView(adId);}else{googletag.display(adId);}
+pixelsToFill-=maxAdSize;}});

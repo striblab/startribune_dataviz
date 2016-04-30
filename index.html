@@ -13,105 +13,90 @@
 
 <!-- dataviz and custom styles for this page -->
    <style>
+/*PRIMARY*/
       body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
-      #infobox { font-family:"Poynter Serif RE",Georgia,Times,serif; }
-      .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
-      .native-ad { display:none !important; }
-      #js-navigation-menu { display:block !important; }
-      .one-half { display:inline-block !important; float:left; }
-      .starlogo { float:left; margin:15px; }
+      #infobox { font-family:"Poynter Serif RE",Georgia,Times,serif; font-size:16px; margin:10px; }
+      #infobox p { padding:3px; }
+      #leftPane { float:left !important; width:630px !important; }      
       #testDiv { height:400px; background-color:#ddd; width:85%; float:right; }
       h1 { font-family:"Popular"; font-weight:900; font-size:3.5em; margin-bottom:10px; }
-
+      h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
       p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
-      .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
-      #sorting_mobile { display:none; }
-      #leftPane { float:left !important; width:630px !important; }
-      #infobox { font-size:16px; margin:10px; }
-      #infobox p { padding:3px; }
+      .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
+      .l-container:nth-child(2) { width:100%; }
+      .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
+      .breaker { clear:both; margin:7px; padding:0; }
+      .tools { display:none; }
+      #specialContentWrapper{ width:970px !important; margin-left:auto; margin-right:auto; }
+      a { color: #87C944; text-decoration: none; }
+      a:hover { text-decoration:none !important; color:inherit !important; }
+      
+/*HEADER*/
+      .starlogo { float:left; margin:15px; }
       #logo_container { width:208px; }
       .datalab-logo { float:left; margin:10px; width:100%;}
+      #top { padding:3px; margin-bottom:10px; }
+
+/*ENTRIES*/
       #articlePane { display:inline-block !important;  }
+      .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
+      .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
       .articleEntry { margin:20px; }
       .articleName { font-weight:normal; font-size:28px; }
       .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%;  }
-      .byline { font-weight:bold; }
+      .byline { font-weight:bold; } 
+      .more { font-size:18px; display:block; text-align:center; }
+
+/*SOCIAL*/
+    .social_icons img { width:70px !important; margin:9px !important; }
+    .social_icons img:hover { opacity:0.8; }
+    .social_icons { text-align:center !important; }
+    ul.share-buttons { list-style:none; padding:0 !important; }
+    ul.share-buttons li { display:inline !important; }
+    ul.share-buttons li:hover { opacity:0.8; }
+    #sharing { text-align:center; }
+
+/*SIDEBAR*/
       #dataSidebar { float:right !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
       .sectionBox { margin:7px; }
       .creditBox { width:32%; height:auto; float:left; }
+      #articleHeader { margin-top:40px; }
+      .articleName a { color: #333; text-decoration: none; }
+      .article-share { position:relative !important; float:left !important; margin-left:0 !important; }
       #team { font-weight:bold; clear:both; }
       .sort-link { border-bottom: 1px solid #000; padding:15px; font-size:13px; }
-      #searchMe, #searchMe_m { padding:15px; font-size:14px; }
-      .fixed { position:fixed; top:40px !important;}
-      #github { padding:15px; font-size:14px; }
-      .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }
-      #search-criteria, #search-criteria_m { width:100%; }
-      #search-criteria_m { height:40px; font-size:20px; }
       .links { text-align:center; }
-      .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
-      .l-container:nth-child(2) { width:100%; }
-      .nav-section-mod.col-2 li { text-align:center !important; }
-      .nav-shortcuts-inner { text-align:center !important; }
       .link { width:100%; font-size:1.3em; border-top: 1px solid #ddd; padding:10px; font-weight:bold; vertical-align:middle; }
-      .more { font-size:18px; display:block; text-align:center; }
-      #links_m { display:none; }
-      #contribs { display:none; }
-      .article-share { width:100%; }
-      .breaker { clear:both; margin:7px; padding:0; }
-      .article-share, .comments-section { display:none !important; }
-      #contributors { display:none; }
-      #top { padding:3px; margin-bottom:10px; }
-      .tools { display:none; }
-
-      .linkage { padding:5px; }
-
-       .scrollToTop { color:#87C944 !important; text-align:center; padding:15px; }
-       .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-       #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
-
+      #sorting_mobile { display:none; }
+      #github { padding:15px; font-size:14px; }
+      .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }   
       .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
       .git:hover { cursor:pointer; background-color:#fff !important; }
-
+      .striblogo { width:100% !important; }
       #allProjects .count { font-weight:900; }
+      .count { float:right; }
+      #links_m { display:none; }
+      #contribs { display:none; }
+      #contributors { display:none; }
 
-      h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
-    </style>
+/*SEARCH*/
+      #search-criteria, #search-criteria_m { width:100%; }
+      #search-criteria_m { height:40px; font-size:20px; }
+      #searchMe, #searchMe_m { padding:15px; font-size:14px; }     
 
-  <style type="text/css"> 
-/*page template styles*/
-    #specialContentWrapper{ width:970px !important; margin-left:auto; margin-right:auto; }
-    .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
-    .nav-section-mod.col-2 li { text-align:center !important; }
-    .nav-shortcuts-inner { text-align:center !important; }
-    #resourcesBlock { display:none; }
+      .fixed { position:fixed; top:40px !important;}
 
-    #articleHeader {margin-top:40px;}
-    .l-container:nth-child(2) { width:100%; }
-    .l-navigation-shortnav-container { width:100%; min-width:100%; }
-    .l-section-right { display:none; }
-    .l-section-inner { width:95%; border-right:0;}
-    .l-footer-inner, .l-section-container { width:90% !important; }
-    .nav-branding-mod, .nav-shortcuts-mod { width:100% !important;  }
-    .nav-utility-mod {  width: 100%; margin: 0 auto; max-width: 100% !important; min-width: 100% !important; }
-    #zone-none-block-1-leaderboard iframe { width:100% !important; }
-    #zone-none-block-1-leaderboard, #zone-none-block-3-leaderboard { display: none !important; }
-    #zone-none-block-3-leaderboard div iframe { width:100% !important; }
-    /*.navbar-fixed-top { display:none !important; }*/
-    .l-section-inner { padding-right: 0; width:100%; } 
-    a { color: #87C944; text-decoration: none; }
-    a:hover { text-decoration:none !important; color:inherit !important; }
-    .articleName a { color: #333; text-decoration: none; }
-    .article-share { position:relative !important; float:left !important; margin-left:0 !important; }
-    .fyre .fyre-comment-head .fyre-comment-username { cursor: default !important; font-size: 12px !important; line-height: 25px !important; text-decoration: none !important; color: #000 !important; }
-    .fyre-post-button { border-radius:0 !important; }
-    .fyre { background-color:#fff !important; }
-    .fyre .fyre-comment-article .fyre-comment-wrapper section p, .fyre .fyre-comment-stream .fyre-comment-wrapper section p { font-size:1em !important; }
-    .fyre .fyre-comment-article .fyre-comment-head {  margin-top:0 !important; }
-    .fyre .fyre-auth { margin:0px 0 0 0 !important; }
-    .fyre .fyre-auth .fyre-login-bar, .fyre .fyre-auth .fyre-user-loggedout { color:#61bf1a !important; text-decoration:none !important; }
-    .striblogo { width:100% !important; }
-    .count { float:right; }
+      
+/*RESOURCES*/
+      #resourcesBlock { display:none; }
+      .linkage { padding:5px; }
+      
+/*FOOTER*/
+      .scrollToTop { color:#87C944 !important; text-align:center; padding:15px; }
+      .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+      #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
 
+/*BREAKPOINTS*/
     @media only screen and (min-width:650px) {
       .sort-link-mid:hover, .sort-link:hover, .link:hover { background-color:#eee !important; cursor:pointer; }
 
@@ -126,9 +111,7 @@
     @media (max-width: 970px) {
       .l-container { text-align:left !important; width:100% !important; margin:0; }
       .footer-navigation-mod { display:block !important; margin-top:30px; }
-
       #logo_container { text-align:center; display:block !important; float:none !important; }
-
       #articleHeader {margin-top:40px;}
       .nav-shortcuts-inner { display:none !important; }
       .nav-utility-btn:before { width:30px; height:30px; }
@@ -193,287 +176,91 @@
 </div>
 
 <div id="resourcesBlock" class="resources">
-<div id="foi" class="box">
-<h3 id="foia">Freedom of Information</h3>
-<div class="linkage"><a href="https://www.ifoia.org/#!/" target="new_">iFOIA</a> - Auto-generate FOIA requests</div>
-<div class="linkage"><a href="http://www.ipad.state.mn.us/" target="new_">IPAD</a> - Minnesota DPA rulings</div>
-<div class="linkage"><a href="https://www.muckrock.com/" target="new_">MuckRock</a> - FOIA clearing house</div>
+<h3 id="foi">Freedom of Information</h3>
+<div id="foia" class="box">
+
 </div>
 
 <h3 id="timelines">Timelines and Time Series</h3>
 <div id="timeline" class="box">
-<div class="linkage"><a href="http://timeline.knightlab.com/" class="launch" target="new_">Timeline.js</a>: Google Sheet-powered responsive jQuery timeline from the Knight Lab.</div>
-<div class="linkage"><a href="http://datanews.github.io/tik-tok/" class="launch" target="new_">Tik-tok</a>: Interactive scrolling timeline library.</div>
-<div class="linkage"><a href="https://kamisama.github.io/cal-heatmap/" target="new_">Cal-Heatmap</a> - JS library for creating heatmap-like calendars</div>
-<div class="linkage"><a href="http://square.github.io/cubism/" target="new_">Cubism</a> - D3 plugin to visualize time series</div>
-<div class="linkage"><a href="http://www.dipity.com/" target="new_">Dipity</a> - Online timeline creator</div>
-<div class="linkage"><a href="http://www.humblesoftware.com/envision" target="new_">Envision</a> - HTML5 time series design library</div>
-<div class="linkage"><a href="http://code.shutterstock.com/rickshaw/" target="new_">Rickshaw</a> - JS time series design library</div>
-<div class="linkage"><a href="http://www.tomsnyder.com/timelinerxe/" target="new_">Timeliner</a> - Professional timeline creation software</div>
+
 </div>
 
 <h3 id="carto">Cartography</h3>
-<div id="mapbox" class="box">
-<div class="linkage"><a href="https://www.mapbox.com/mapbox-gl-js/api/" class="launch" target="new_">Mapbox GL</a>: Fancy vector maps service.</div>
-<div class="linkage"><a href="https://www.mapbox.com/mapbox.js/api/v2.2.2/" class="launch" target="new_">Mapbox.js</a>: Leaflet-based Javascript library and free API for mapping and cartography.</div>
-<div class="linkage"><a href="http://turfjs.org/" class="launch" target="new_">Turf.js</a>: Mapbox-based GIS mapping library for Javascript.</div>
-<div class="linkage"><a href="http://www.arcgis.com/features/" target="new_">ArcGIS</a> - Premium shapefile and map editing service</div>
-<div class="linkage"><a href="http://cartodb.com/" target="new_">CartoDB</a> - Free/paid data mapping service</div>
-<div class="linkage"><a href="http://datamaps.github.io/" target="new_">Datamaps</a> - D3-based interactive mapping JS library</div>
-<div class="linkage"><a href="http://geocommons.com/" target="new_">Geocommons</a> - Open data mapping community</div>
-<div class="linkage"><a href="http://geomancer.io/" target="new_">Geomancer</a> - Build maps from data online</div>
-<div class="linkage"><a href="https://developers.google.com/chart/interactive/docs/gallery/map" target="new_">Google Maps</a> - Google's mapping service</div>
-<div class="linkage"><a href="https://developers.google.com/chart/interactive/docs/gallery/geochart" target="new_">Google Geo Chart</a> - Free vector mapping tool</div>
-<div class="linkage"><a href="http://kartograph.org/" target="new_">Kartograph</a> - Free vector mapping JS library</div>
-<div class="linkage"><a href="http://leafletjs.com/" target="new_">Leaflet</a> - Free interactive mapping JS library</div>
-<div class="linkage"><a href="http://cartography.oregonstate.edu/legend/index.html" target="new_">Legend Generator</a> - Auto-generate marker point legends</div>
-<div class="linkage"><a href="http://modestmaps.com/" target="new_">Modest Maps</a> - Free interactive mapping JS library</div>
-<div class="linkage"><a href="https://www.mapbox.com/" target="new_">Mapbox</a> - Free/paid map design service</div>
-<div class="linkage"><a href="https://www.mapbox.com/" target="new_">Mapbox Builder</a> - Downloadable basemap design software</div>
-<div class="linkage"><a href="https://github.com/datadesk/print-map-maker" target="new_">Print Map Maker</a> - Spit vector maps from Mapbox for use in print</div>
-<div class="linkage"><a href="http://polymaps.org/" target="new_">Polymaps</a> - Free interactive mapping JS library</div>
-<div class="linkage"><a href="https://www.mapbox.com/tilemill/" target="new_">Tilemill</a> - Downloadable map tile design software</div>
-<div class="linkage"><a href="http://conveyal.com/transitive.js/" target="new_">Transitive.js</a> - Free JS library for transit maps</div>
-<div class="linkage"><a href="http://www.qgis.org/en/site/" target="new_">QGIS</a> - Free professional-grade shapefile and geomapping design software</div>
-<div class="linkage"><a href="http://unfoldingmaps.org/" target="new_">Unfolding</a> - Free interactive mapping JS library</div>
+<div id="maps" class="box">
+
 </div>
 
-<h3 id="geocoding">Geocoding</h3>
-<div>
-<div class="linkage"><a href="https://batchgeo.com/" target="new_">Batchgeo</a> - Bulk geocode and map spreadsheets of addresses</div>
-<div class="linkage"><a href="http://www.findlatitudeandlongitude.com/batch-geocode/#.VVTdFNpVhBc" target="new_">Batch Geocoding</a> - Quick online geocoder</div>
-<div class="linkage"><a href="http://www.tytai.com/gmap/" target="new_">Coordinate Picker</a> - Pick a set of coordinates with a click</div>
-<div class="linkage"><a href="apps/toolbox/excel-geocoding-tool.xls" target="new_">Excel Geocoding Tool</a> - Magic Excel geolocation spreadsheet</div>
-<div class="linkage"><a href="http://www.gpsvisualizer.com/geocoder/" target="new_">GPS Visualizer</a> - Finds lat/long coordinates</div>
-<div class="linkage"><a href="http://mygeoposition.com/" target="new_">MyGeoPosition</a> - Geocodes location from search</div>
+<h3 id="geo">Geocoding</h3>
+<div id="geocoding">
+
 </div>
 
 <h3 id="datapub">Blogs and Publications</h3>
 <div id="publications" class="box">
-<div class="linkage"><a href="http://blog.blprnt.com/" target="new_">blprnt.blg</a></div>
-<div class="linkage"><a href="http://cartastrophe.wordpress.com/" target="new_">Cartastrophe</a></div>
-<div class="linkage"><a href="http://chartsnthings.tumblr.com/" target="new_">Chartsnthings</a></div>
-<div class="linkage"><a href="http://chartporn.org/" target="new_">Chartporn</a></div>
-<div class="linkage"><a href="http://civilstat.com/" target="new_">Civil Statistician</a></div>
-<div class="linkage"><a href="http://www.jeromecukier.net/" target="new_">Communicating With Data</a></div>
-<div class="linkage"><a href="http://dadaviz.com/" target="new_">Dadaviz</a></div>
-<div class="linkage"><a href="http://datavisualization.ch/" target="new_">Datavisualization.ch</a></div>
-<div class="linkage"><a href="http://eagereyes.org/" target="new_">Eager Eyes</a></div>
-<div class="linkage"><a href="http://www.excelcharts.com/blog/posts/" target="new_">Excel Charts</a></div>
-<div class="linkage"><a href="http://thedailyviz.com/" target="new_">The Daily Viz</a></div>
-<div class="linkage"><a href="http://www.datapointed.net/" target="new_">Data Pointed</a></div>
-<div class="linkage"><a href="http://blogs.forbes.com/naomirobbins/" target="new_">Effective Graphs</a></div>
-<div class="linkage"><a href="http://fathom.info/latest/" target="new_">Fathom</a></div>
-<div class="linkage"><a href="http://feltron.tumblr.com/" target="new_">feltron</a></div>
-<div class="linkage"><a href="http://fivethirtyeight.com/datalab/" target="new_">FiveThirtyEight - DataLab</a></div>
-<div class="linkage"><a href="http://www.floatingsheep.org/" target="new_">Floating Sheep</a></div>
-<div class="linkage"><a href="http://flowingdata.com/" target="new_">FlowingData</a></div>
-<div class="linkage"><a href="http://www.guardian.co.uk/news/datablog" target="new_">The Guardian: Datablog</a></div>
-<div class="linkage"><a href="http://indiemaps.com/blog/" target="new_">indiemaps</a></div>
-<div class="linkage"><a href="http://infographicsnews.blogspot.com/" target="new_">Infographics News</a></div>
-<div class="linkage"><a href="http://infosthetics.com/" target="new_">information aesthetics</a></div>
-<div class="linkage"><a href="http://blog.infochimps.com/" target="new_">Infochimps</a></div>
-<div class="linkage"><a href="http://vallandingham.me/" target="new_">Jim Vallandingham</a></div>
-<div class="linkage"><a href="http://www.juiceanalytics.com/writing/" target="new_">Juice Analytics</a></div>
-<div class="linkage"><a href="http://junkcharts.typepad.com/junk_charts/" target="new_">Junk Charts</a></div>
-<div class="linkage"><a href="http://kelsocartography.com/blog/" target="new_">Kelso's Corner</a></div>
-<div class="linkage"><a href="http://www.ericson.net/content/" target="new_">Matthew Ericson</a></div>
-<div class="linkage"><a href="http://cartonerd.blogspot.com/" target="new_">The Marauding Carto-nerd</a></div>
-<div class="linkage"><a href="http://www.minnpost.com/data" target="new_">MinnPost: Data & Maps</a></div>
-<div class="linkage"><a href="http://neoformix.com/" target="new_">Neoformix</a></div>
-<div class="linkage"><a href="http://now.periscopic.com/" target="new_">Periscopic</a></div>
-<div class="linkage"><a href="http://blog.revolutionanalytics.com/" target="new_">Revolutions</a></div>
-<div class="linkage"><a href="http://reddit.com/r/dataisbeautiful" target="new_">r/dataisbeautiful</a></div>
-<div class="linkage"><a href="http://blogs.wsj.com/numbersguy/" target="new_">The Numbers Guy</a></div>
-<div class="linkage"><a href="http://simplystatistics.tumblr.com/" target="new_">Simply Statistics</a></div>
-<div class="linkage"><a href="http://content.stamen.com/" target="new_">Stamen</a></div>
-<div class="linkage"><a href="http://www.theusrus.de/blog/" target="new_">Statistical graphics and more</a></div>
-<div class="linkage"><a href="http://streets.mn/" target="new_">Streets.mn</a></div>
-<div class="linkage"><a href="http://mike.teczno.com/notes/" target="new_">tecznotes</a></div>
-<div class="linkage"><a href="http://tulpinspiration.tumblr.com/" target="new_">Tulp Inspiration</a></div>
-<div class="linkage"><a href="http://www.nytimes.com/upshot/?_r=0" target="new_">The Upshot</a></div>
-<div class="linkage"><a href="http://vis4.net/blog/" target="new_">viz4</a></div>
-<div class="linkage"><a href="http://www.visualisingdata.com/" target="new_">Visualising Data</a></div>
-<div class="linkage"><a href="http://knowmore.washingtonpost.com/" target="new_">Washington Post: Know More</a></div>
-<div class="linkage"><a href="http://well-formed-data.net/" target="new_">Well-formed data</a></div>
+
 </div>
 
-<h3 id="sources">Data Sources</h3>
-<div id="sources" class="box">
-<div class="linkage"><a href="http://opendata.arcgis.com" target="new_">ArcGIS Open Data</a> - Shapefiles library</div>
-<div class="linkage"><a href="http://www.bls.gov/" target="new_">Bureau of Labor Statistics</a></div>
-<div class="linkage"><a href="http://censusreporter.org/" target="new_">CensusReporter</a></div>
-<div class="linkage"><a href="http://wonder.cdc.gov/" target="new_">CDC Wonder</a></div>
-<div class="linkage"><a href="http://www.cpsc.gov/en/Research--Statistics/NEISS-Injury-Data/" target="new_">Consumer Product Safety Commission</a></div>
-<div class="linkage"><a href="http://dandelon.com/intelligentSEARCH.nsf/frm_home?OpenForm" target="new_">Dandelon</a></div>
-<div class="linkage"><a href="https://www.datafiniti.net/" target="new_">Datafinity</a></div>
-<div class="linkage"><a href="http://www.dispositionservices.dla.mil/EFOIA-Privacy/Pages/ereadingroom.aspx#1033" target="new_">D.O.D. Military surplus data</a></div>
-<div class="linkage"><a href="http://ope.ed.gov/athletics/" target="new_">DOE Athletics</a></div>
-<div class="linkage"><a href="http://eddataexpress.ed.gov/index.cfm" target="new_">ED Data Express</a></div>
-<div class="linkage"><a href="http://www.nhtsa.gov/FARS" target="new_">Fatal Analysis Reporting System</a></div>
-<div class="linkage"><a href="http://nces.ed.gov/ipeds/" target="new_">IPEDS</a></div>
-<div class="linkage"><a href="http://journalistsresource.org/tip-sheets/reporting/local-stories-data-federal-state-agencies" target="new_">IRE Databases</a></div>
-<div class="linkage"><a href="http://education.state.mn.us/MDE/Data/" target="new_">MDE Data</a></div>
-<div class="linkage"><a href="http://www.health.state.mn.us/macros/topics/stats.html" target="new_">MDH Data and Statistics</a></div>
-<div class="linkage"><a href="http://www.metrocouncil.org/Data-and-Maps.aspx" target="new_">Metro Council Data</a></div>
-<div class="linkage"><a href="http://www.cfbreport.state.mn.us/dataViewer/cfbsearch_disclaimer.html" target="new_">Minnesota Campaign Finance</a></div>
-<div class="linkage"><a href="https://gisdata.mn.gov/" target="new_">MN Geospatial Commons</a></div>
-<div class="linkage"><a href="http://electionresults.sos.state.mn.us/" target="new_">Minnesota Election Results</a></div>
-<div class="linkage"><a href="http://opendata.minneapolismn.gov/" target="new_">Minneapolis Open Data</a></div>
-<div class="linkage"><a href="http://mn.gov/admin/demography/" target="new_">MN Demographic Center</a></div>
-<div class="linkage"><a href="http://mn.gov/mmb/transparency-mn/" target="new_">Minnesota Transparency</a></div>
-<div class="linkage"><a href="http://murderdata.blogspot.com/" target="new_">Murder Accountability Project</a></div>
-<div class="linkage"><a href="http://nces.ed.gov/" target="new_">NCES</a></div>
-<div class="linkage"><a href="http://spendingdatabase.knightcommission.org/" target="new_">NCAA Spending</a></div>
-<div class="linkage"><a href="http://ire.org/nicar/" target="new_">NICAR and Data Library</a></div>
-<div class="linkage"><a href="http://www.nfhs.org/ParticipationStatics/ParticipationStatics.aspx/" target="new_">NFHS Participation</a></div>
-<div class="linkage"><a href="http://www.ncdc.noaa.gov/stormevents/" target="new_">NOAA Storm Events</a></div>
-<div class="linkage"><a href="https://www.opensecrets.org/" target="new_">Open Secrets</a></div>
-<div class="linkage"><a href="https://brigades.opendatanetwork.com/brigade?brigade=Open%20Twin%20Cities#" target="new_">Open Twin Cities</a></div>
-<div class="linkage"><a href="https://www.quandl.com/" target="new_">Quandle</a></div>
-<div class="linkage"><a href="http://beta.sqoop.com/" target="new_">Sqoop</a></div>
-<div class="linkage"><a href="http://www.census.gov/#" target="new_">U.S. Census Bureau</a></div>
-<div class="linkage"><a href="http://www.usda.gov/wps/portal/usda/usdahome?navid=DATA_STATISTICS" target="new_">U.S. Dep of Agriculture</a></div>
-<div class="linkage"><a href="http://www.oir.umn.edu/" target="new_">UMN OIR</a></div>
-<div class="linkage"><a href="https://wikileaks.org/index.en.html" target="new_">WikiLeaks</a></div>
-<div class="linkage"><a href="http://www.wolframalpha.com/" target="new_">Wolfram Alpha</a></div>
+<h3 id="source">Data Sources</h3>
+<div id="sources">
+
 </div>
 
-<h3 id="deepweb">Deep Web Searches</h3>
-<div>
-<div class="linkage"><a href="http://torhiddenwiki.com/" target="new_">Darknet Directory</a> - DON'T CLICK ANYTHING ON THIS PAGE</div>
-<div class="linkage"><a href="https://scholar.google.com/" target="new_">Google Scholar</a> - Academic, research and scientific journal paper search</div>
-<div class="linkage"><a href="http://www.google.com/trends/" target="new_">Google Trends</a> - Track trending search data</div>
-<div class="linkage"><a href="https://www.economy.com/freelunch/" target="new_">Free Lunch</a> - Economic data</div>
-<div class="linkage"><a href="http://www.ipl.org/" target="new_">ipl2</a> - Deep Web search engine</div>
-<div class="linkage"><a href="http://onion.city/" target="new_">Onion City</a> - Deep Web search engine</div>
-<div class="linkage"><a href="https://www.torproject.org/" target="new_">TOR</a> - Browser for anonymous surfing onion networks</div>
-<div class="linkage"><a href="https://archive.org/" target="new_">Wayback Machine</a> - Archive of webpages</div>
+<h3 id="deep">Deep Web Searches</h3>
+<div id="deepweb">
+
 </div>
 
-<h3 id="vizgen">Visualization Generators</h3>
-<div id="nvd3" class="box">
-<div class="linkage"><a href="http://c3js.org/" class="launch" target="new_">C3</a>: A chart library based on Mike Bostock's data visualization Javascript library.</div>
-<div class="linkage"><a href="http://nvd3.org/" class="launch" target="new_">NVD3</a>: A chart library based on Mike Bostock's data visualization Javascript library.</div>
-<div class="linkage"><a href="http://jhargarten.github.io/dataviz_resources/library-raw/" class="launch" target="new_">Raw</a>: Basic D3-based Javascript chart generator.</div>
-<div class="linkage"><a href="https://www.datatables.net/" class="launch" target="new_">DataTables</a>: Interactive jQuery searchable tables.</div>
-<div class="linkage"><a href="https://live.amcharts.com/" target="new_">amCharts</a> - Build quick JS charts</div>
-<div class="linkage"><a href="http://arborjs.org/" target="new_">Arbor.js</a> - Build quick JS charts</div>
-<div class="linkage"><a href="http://www.chartjs.org/" target="new_">Chart.js</a> - Build quick JS charts</div>
-<div class="linkage"><a href="http://www.cytoscape.org/" target="new_">Cytoscape</a> - Visualize network relationships</div>
-<div class="linkage"><a href="https://datawrapper.de/" target="new_">Datawrapper</a> - Turn spreadsheets into charts</div>
-<div class="linkage"><a href="https://gephi.github.io/" target="new_">Gephi</a> - Data visulazation software</div>
-<div class="linkage"><a href="https://developers.google.com/chart/interactive/docs/gallery/map" target="new_">Google Charts</a> - Free online chart building tool</div>
-<div class="linkage"><a href="http://www.onlinecharttool.com" target="new_">Online Chart Tool</a> - Build quick JS charts</div>
-<div class="linkage"><a href="http://silk.co" target="new_">Silk.co</a> - Quickly build responsive, mobile-friendly dataviz</div>
-<div class="linkage"><a href="http://www.zingchart.com/" target="new_">ZingCharts</a> - Build quick JS charts</div>
+<h3 id="nvd3">Visualization Generators</h3>
+<div id="vizgen" class="box">
+
 </div>
 
 <h3 id="vizlib">Visualization Scripting Libraries</h3>
-<div>
-<div class="linkage"><a href="http://canvasjs.com/" target="new_">Canvas JS</a> - Free JS visualization library</div>
-<div class="linkage"><a href="http://circos.ca/" target="new_">Circos</a> - Free JS visualization library</div>
-<div class="linkage"><a href="http://marvl.infotech.monash.edu/webcola/" target="new_">Cola.js</a> - Free JS visualization library</div>
-<div class="linkage"><a href="https://github.com/michael/dance" target="new_">Dance</a> - Free JS visualization library</div>
-<div class="linkage"><a href="https://datajs.codeplex.com/" target="new_">Data.js</a> - Free JS data manipulation library</div>
-<div class="linkage"><a href="https://code.google.com/p/degrafa/" target="new_">Degrafa</a></div>
-<div class="linkage"><a href="http://flare.prefuse.org/" target="new_">Flare</a> - Free Flash visualization library</div>
-<div class="linkage"><a href="http://philogb.github.io/jit/" target="new_">Javascript Infoviz Toolkit</a> - Free JS data manipulation library</div>
-<div class="linkage"><a href="http://misoproject.com/" target="new_">Miso</a> - Free D3-based JS data visualization library</div>
-<div class="linkage"><a href="https://www.nodebox.net/" target="new_">Nodebox</a> - Free JS datavisualization library</div>
-<div class="linkage"><a href="http://paperjs.org/" target="new_">Paper.js</a> - Free JS visualization library</div>
-<div class="linkage"><a href="http://benpickles.github.io/peity/" target="new_">Peity</a> - Free jQuery data manipulation library</div>
-<div class="linkage"><a href="http://prefuse.org/" target="new_">Prefuse</a> - Free JS datavisualization library</div>
-<div class="linkage"><a href="https://processing.org/" target="new_">Processing</a> - Free JS datavisualization library</div>
-<div class="linkage"><a href="http://processingjs.org/" target="new_">Process.js</a> - Free JS data visualization library</div>
-<div class="linkage"><a href="http://mbostock.github.io/protovis/" target="new_">Protovis</a> - Free JS data visualization library</div>
-<div class="linkage"><a href="http://raphaeljs.com/" target="new_">Raphaël</a> - Free JS data visualization library</div>
-<div class="linkage"><a href="http://sigmajs.org/" target="new_">Sigma.js</a> - Free JS graph drawing library</div>
-<div class="linkage"><a href="http://trifacta.github.io/vega/" target="new_">Vega</a> - Free JS data visualization library</div>
+<div id="library">
+
 </div>
 
-<h3 id="infographics">Infographics</h3>
-<div>
-<div class="linkage"><a href="https://www.canva.com/create/infographics/" target="new_">Canva</a> - Infographic generator</div>
-<div class="linkage"><a href="http://www.easel.ly/" target="new_">Easel.ly</a> - Infographic generator</div>
-<div class="linkage"><a href="http://infogr.am/" target="new_">Infogr.am</a> - Infographic generator</div>
-<div class="linkage"><a href="https://play.google.com/store/apps/details?id=mariusSoft.InFotoFree&hl=en" target="new_">InFoto Free</a> - Infographic generator</div>
-<div class="linkage"><a href="http://piktochart.com/v3/" target="new_">Piktochart</a> - Infographic generator</div>
-<div class="linkage"><a href="https://venngage.com/" target="new_">Venngage</a> - Infographic generator</div>
-<div class="linkage"><a href="http://www.visage.co/" target="new_">Visage</a> - Infographic generator</div>
-<div class="linkage"><a href="http://visual.ly/" target="new_">Visual.ly</a> - Infographic generator</div>
-<div class="linkage"><a href="http://vizualize.me/" target="new_">Vizualize</a> - Infographic generator</div>
+<h3 id="infographic">Infographics</h3>
+<div id="infographics">
+
 </div>
 
 
-<h3 id="text">Text Manipulation</h3>
-<div>
-<div class="linkage"><a href="http://worrydream.com/Tangle/" target="new_">Tangle</a> - JS library to create reactive text</div>
-<div class="linkage"><a href="https://www.jasondavies.com/wordcloud/#%2F%2Fwww.jasondavies.com%2Fwordcloud%2Fabout%2F" target="new_">Word Cloud Generator</a> - Make wordclouds</div>
-<div class="linkage"><a href="http://worditout.com/word-cloud/make-a-new-one" target="new_">WordItOut</a> - Make wordclouds</div>
-<div class="linkage"><a href="http://www.wordle.net/" target="new_">Wordle</a> - Make wordclouds</div>
+<h3 id="textstuff">Text Manipulation</h3>
+<div id="text">
+
 </div>
 
 <h3 id="fusiontools">Data Fusion Tools</h3>
-<div class="linkage"><a href="https://support.google.com/fusiontables/answer/2571232?hl=en" target="new_">Google Fusion Tables</a> - Combines spreadsheets, maps and pivot tables</div>
-<div class="linkage"><a href="http://www-01.ibm.com/software/analytics/many-eyes/" target="new_">Many Eyes</a> - Open data community and free service</div>
-<div class="linkage"><a href="http://palladio.designhumanities.org/#/" target="new_">Palladio</a> - Visualize multi-dimensional data from spreadsheets</div>
-<div class="linkage"><a href="http://www.quadrigram.com/" target="new_">Quadrigram</a> - Create and publish data-drive pages and websites</div>
-<div class="linkage"><a href="http://www.r-project.org/" target="new_">R</a> - Data visualization and analysis software</div>
-<div class="linkage"><a href="http://okfnlabs.org/recline/" target="new_">Recline.js</a> - Build data applications in HTML and JS</div>
-<div class="linkage"><a href="https://public.tableau.com/s/" target="new_">Tableau Public</a> - Data visualization and analysis software</div>
+<div id="fusion">
+
+</div>
 
 <h3 id="datascraping">Data Scraping</h3>
-<div class="linkage"><a href="http://convextra.com/" target="new_">ConvExtra</a> - Browser plugin to parse data with a click</div>
-<div class="linkage"><a href="https://addons.mozilla.org/en-US/firefox/addon/downthemall/" target="new_">DownloadThemAll</a> - Plugin to rip linked files from a page</div>
-<div class="linkage"><a href="https://import.io/" target="new_">import.io</a> - Data scraping software</div>
-<div class="linkage"><a href="https://www.kimonolabs.com/" target="new_">Kimono Labs</a> - API building service to avoid scraping</div>
-<div class="linkage"><a href="https://addons.mozilla.org/en-us/firefox/addon/outwit-hub/" target="new_">OutwitHub</a> - Website extraction plugin</div>
-<div class="linkage"><a href="https://chrome.google.com/webstore/detail/scraper/mbigbapnjcgaffohmbkdlecaccepngjd" target="new_">Scraper</a> - Browser plugin for scraping</div>
-<div class="linkage"><a href="https://scraperwiki.com/" target="new_">ScraperWiki</a> - Scraping service</div>
-<div class="linkage"><a href="http://www.notprovided.eu/area51/scraper-example.txt" target="new_">Simple PHP Scraper</a> - PHP scraping example code</div>
-<div class="linkage"><a href="http://webscraper.io/" target="new_">Webscraper.io</a> - Browser plugin and scraping service</div>
+<div id="scraping">
+
+</div>
 
 <h3 id="dataconversion">Data Conversion and Validation</h3>
-<div class="linkage"><a href="http://ai2html.org/" target="new_">ai2html</a> - Auto-generate HTML webpages from Adobe Illustrator designs</div>
-<div class="linkage"><a href="http://togeojson.com/" target="new_">CSV to GeoJSON</a> - Convert from CSV to JSON strings</div>
-<div class="linkage"><a href="http://vis.stanford.edu/wrangler/" target="new_">DataWrangler</a> - Clean spreadsheets and datasets</div>
-<div class="linkage"><a href="http://dedupe.datamade.us/" target="new_">Dedupe</a> - Remove duplicates from spreadsheet</div>
-<div class="linkage"><a href="https://shancarter.github.io/distillery/" target="new_">Distillery</a> - Convert shapefiles to GeoJSON</div>
-<div class="linkage"><a href="http://jsonlint.com/" target="new_">JSONLint</a> - Validate JSON strings</div>
-<div class="linkage"><a href="http://mapshaper.org/" target="new_">MapShaper</a> - Convert shapefiles to TopoJSON and GeoJSON</div>
-<div class="linkage"><a href="https://shancarter.github.io/mr-data-converter/" target="new_">Mister Data Converter</a> Convert CSV/Excel to HTML/JSON</div>
-<div class="linkage"><a href="http://bl.ocks.org/shancarter/raw/4748131/" target="new_">Mister Nester</a> - Experiment with JSON data structures</div>
-<div class="linkage"><a href="http://mrpeople.ericson.net/" target="new_">Mr. People</a> - Parse names</div>
-<div class="linkage"><a href="http://ogre.adc4gis.com/" target="new_">Ogre Web Client</a> - Convert shapefiles into valid GeoJSON for D3</div>
-<div class="linkage"><a href="http://openrefine.org/" target="new_">Open Refine</a> - Clean spreadsheets and datasets</div>
-<div class="linkage"><a href="http://pipetree.com/qmacro/blog/2013/10/sheetasjson-google-spreadsheet-data-as-json/" target="new_">SheetAsJSON</a> - Host a Google Sheet as a live JSON data stream</div>
-<div class="linkage"><a href="http://tabula.technology/" target="new_">Tabula</a> - Extract tables from flat PDF documents</div>
-<div class="linkage"><a href="https://parserator.datamade.us/usaddress/bulk/" target="new_">Usaddress Parserator</a> - Parse addresses</div>
-<div class="linkage"><a href="http://kb.tableau.com/articles/knowledgebase/addin-reshaping-data-excel#2010" target="new_">Tableau Reshaper</a> - Spreadsheet cell manipulation</div>
-<div class="linkage"><a href="http://nytimes.github.io/svg-crowbar/" target="new_">SVG Crowbar</a></div>
+<div id="conversion">
 
-<h3 id="database">Database and Data Analysis</h3>
-<div class="linkage"><a href="https://office.live.com/start/Excel.aspx" target="new_">Excel</a></div>
-<div class="linkage"><a href="https://www.documentcloud.org/search/Account:12336-jeff-hargarten" target="new_">Document Cloud</a> - Host, share and search documents</div>
-<div class="linkage"><a href="https://docs.google.com/spreadsheets/u/0/" target="new_">Google Sheets</a> - Online Excel alterative</div>
-<div class="linkage"><a href="http://pandaproject.net/" target="new_">PANDA</a> <span class="instance">| <a href="http://ec2-52-24-14-229.us-west-2.compute.amazonaws.com/#search/all" target="new_">Instance</a></span> - Open source database and data parsing platform</div>
+</div>
 
-<h3 id="colors">Colors</h3>
-<div class="linkage"><a href="http://www.0to255.com/" target="new_">0to255</a> - Color shade picker</div>
-<div class="linkage"><a href="http://colorbrewer2.org/" target="new_">ColorBrewer</a> - Color schemes for maps</div>
-<div class="linkage"><a href="http://old.driven-by-data.net/about/chromajs/#/0" target="new_">Chroma.js</a> - Hue JS library</div>
-<div class="linkage"><a href="http://www.ibm.com/design/language/resources/swatch-book.shtml" target="new_">IBM Color Swatch Book</a> - A listing of color schemes</div>
-<div class="linkage"><a href="http://tools.medialab.sciences-po.fr/iwanthue/" target="new_">I Want Hue</a> - Make palettes of distinct colors</div>
-<div class="linkage"><a href="http://paletton.com/" target="new_">Paletton</a> - Generate color paletts</div>
+<h3 id="db">Database and Data Analysis</h3>
+<div id="database">
+
+</div>
+
+<h3 id="color">Colors</h3>
+<div id="colors">
+
+</div>
 
 <h3 id="graphicdesign">Graphic Design</h3>
-<div class="linkage"><a href="http://www.lonniebest.com/formatcss/" target="new_">CSS Formatter</a> - Custom CSS beautification</div>
-<div class="linkage"><a href="https://inkscape.org/en/" target="new_">Inkscape</a> - Free Adobe Illustrator alternative</div>
-<div class="linkage"><a href="https://pixlr.com/" target="new_">Pixlr</a> - Online Photoshop alternative</div>
-<div class="linkage"><a href="http://site.youidraw.com/" target="new_">YouiDraw</a> - Online vector graphic canvas</div>
-<div class="linkage"><a href="http://svg-edit.googlecode.com/svn/branches/2.5.1/editor/svg-editor.html" target="new_">SVG Edit</a> - Online vector graphic canvas</div>
+<div id="graphics">
 
+</div>
 </div>
 
 <!-- <div class="more"><a  href="javascript:void(0)">See more</a></div>
@@ -504,6 +291,14 @@
 <div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
 <div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure</a></div>
 <div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
+<div id="sharing">
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%striblab.github.io/startribune_dataviz/&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/fbshare.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%striblab.github.io/startribune_dataviz/&text=:%20http%3A%2F%2Fstriblab.github.io/startribune_dataviz/g&via=jeffhargarten" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/twshare.png"></a></li>
+  <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="./img/tshare.png"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="./img/rshare.png"></a></li>
+</ul>
+</div>
 
 <div id="contributors">
 
@@ -566,6 +361,7 @@
 
 
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master", function(error, json) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=resources", function(error, json2) {
 
 // $(".nav-section-link").text("StribLab");
 // $(document).prop('title', 'Data-driven storytelling, maps, charts and more | Startribune.com');
@@ -576,6 +372,7 @@ $('.scrollToTop').click(function(){
   });
 
 var data = json;
+var dataResources = json2.resources;
 
 d3.select("#articlePane").selectAll("div").data(data.published_master).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
 
@@ -585,6 +382,31 @@ else { var git = ""; }
   return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>by " + d.byline + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
 
 });
+
+function spitResources(type){
+  d3.select("#" + type).selectAll("div").data(dataResources.filter(function(d){ return d.type == type; })).enter().append("div").attr("class",function (d){ return "linkage " + d.type }).html(function (d){
+  return '<a href="' + d.url + '" target="new_">' + d.name + '</a><div class="describe">' + d.description + '</div>';
+
+});
+}
+
+spitResources("foia");
+spitResources("timeline");
+spitResources("maps");
+spitResources("geocoding");
+spitResources("publications");
+spitResources("sources");
+spitResources("deepweb");
+spitResources("vizgen");
+spitResources("library");
+spitResources("infographics");
+spitResources("text");
+spitResources("fusion");
+spitResources("scraping");
+spitResources("conversion");
+spitResources("database");
+spitResources("colors");
+spitResources("graphics");
 
 var killPaging = false;
 
@@ -621,11 +443,11 @@ $( document ).ready(function() {
    
 
  $('#search-criteria').keyup(function(){
-    $('.articleEntry').hide();
+    $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria').val();
-    if (txt == '') { $('#allProjects').css("background-color","#ddd"); }
-    $('.articleName, .byline').each(function(){
+    if (txt == '') { $('#allProjects').css("background-color","#ddd"); $("#resourcesBlock").hide(); }
+    $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
            $(this).show();
@@ -634,10 +456,11 @@ $( document ).ready(function() {
 });
 
 $('#search-criteria_m').keyup(function(){
-    $('.articleEntry').hide();
+    $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria_m').val();
-    $('.articleName, .byline, #tags').each(function(){
+    if (txt == '') { $('#allProjects').css("background-color","#ddd"); $("#resourcesBlock").hide(); }
+    $('.articleName, .byline, #tags, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
            $(this).show();
@@ -720,5 +543,6 @@ $(window).scroll(function() {
 //         }
 //     });
 // });
+});
 });
 </script>

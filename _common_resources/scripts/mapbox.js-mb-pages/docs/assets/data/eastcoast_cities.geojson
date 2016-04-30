@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#f76565",
+        "title": "DC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.038879394531,
+          38.89530825492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#f76565",
+        "title": "Baltimore"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.632385253906,
+          39.302424560415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#f76565",
+        "title": "Philadelphia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.140991210938,
+          39.962385549176
+        ]
+      }
+    }
+  ]
+}

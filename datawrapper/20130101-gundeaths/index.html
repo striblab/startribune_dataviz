@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://apps.startribune.com/news/young-victims-of-gun-violence-in-minnesota/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style type="text/css">
+/*
+This CSS resource incorporates links to font software which is
+the valuable copyrighted property of WebType LLC, The Font Bureau,
+Ascender Corporation and/or their suppliers. You may not
+attempt to copy, install, redistribute, convert, modify or reverse
+engineer this font software. Please contact WebType with any
+questions: http://www.webtype.com
+*/
+
+/*
+@font-face syntax based on Fontspring @font-face syntax.
+*/
+
+@font-face {
+	font-family: Popular;
+	src: url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-2.eot?") format("embedded-opentype"),
+		 url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-3.woff") format("woff"),
+		 url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-1.ttf") format("truetype"),
+		 url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-4.svg#web") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Popular-medium;
+	src: url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-2.eot?") format("embedded-opentype"),
+		 url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-3.woff") format("woff"),
+		 url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-1.ttf") format("truetype"),
+		 url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-4.svg#web") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Popular-bold;
+	src: url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-2.eot?") format("embedded-opentype"),
+	url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-3.woff") format("woff"),
+	url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-1.ttf") format("truetype"),
+	url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-4.svg#web") format("svg");
+	font-style: normal;
+	font-weight: bold;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" media="screen" href="./index_files/RedesignadStyles011108.css">
+<link rel="stylesheet" href="./index_files/style.css" type="text/css">
+<!--[if lt IE 9]><link rel="stylesheet" href="http://www.startribune.com/includes/low-ie-styles.css?2" type="text/css" /><!--<![endif]-->
+<script src="./index_files/jquery-1.4.4.min.js" type="text/javascript" language="javascript"></script>
+<script src="./index_files/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="./index_files/globalJquery.js" language="javascript"></script>
+<script type="text/javascript" src="./index_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="./index_files/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="./index_files/jquery.tools.min.js"></script>
+
+	<title></title>
+</head>
+<body style="background-image:none;">
+
+<link rel="stylesheet" href="./index_files/leaflet-0.5.css">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.ie.css" />
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="./index_files/victims-style.css">
+
+<div id="victimsProject">
+    <div id="victimSort">
+        <div class="sort-group exclusive" id="sort-group-metro">
+            <div class="sort-item" id="sort-in-metro">Metro</div>
+            <div class="sort-item" id="sort-out-metro">Out of metro</div>
+        </div>
+        <div class="sort-group exclusive" id="sort-group-age">
+            <div class="sort-item facet-active" id="sort-age-asc">Sort by age ascending</div>
+            <div class="sort-item" id="sort-age-desc">Sort by age descending</div>
+            <div class="sort-item" id="sort-date-asc">Sort by date ascending</div>
+            <div class="sort-item" id="sort-date-desc">Sort by date descending</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="victimFaces">
+        <script type="text/template" id="victim-template">
+            <% _.each(items, function(victim, i) { %>
+                <div class="smallThumb" id="item-<%- i %>">
+                    <% var photo_url = victim.Photo_URL || "http://stmedia.startribune.com/images/gunVics_noPhoto.png"; %>
+                    <img id="item-<%- i %>" src="<%- photo_url %>" />
+                </div>
+            <% }); %>
+        </script>
+        <div id="victim-target">
+            
+                <div class="smallThumb victim-active" id="item-0" style="top: 0px; left: 150px; position: absolute;">
+                    
+                    <img id="item-0" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-1" style="top: 96px; left: 438px; position: absolute;">
+                    
+                    <img id="item-1" src="./index_files/lauralee_terrell.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-2" style="top: 96px; left: 486px; position: absolute;">
+                    
+                    <img id="item-2" src="./index_files/adam_otto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-3" style="top: 48px; left: 822px; position: absolute;">
+                    
+                    <img id="item-3" src="./index_files/zackrey_peterson.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-4" style="top: 144px; left: 678px; position: absolute;">
+                    
+                    <img id="item-4" src="./index_files/aaron_rollins.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-5" style="top: 0px; left: 246px; position: absolute;">
+                    
+                    <img id="item-5" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-6" style="top: 0px; left: 774px; position: absolute;">
+                    
+                    <img id="item-6" src="./index_files/seth_bartell.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-7" style="top: 192px; left: 486px; position: absolute;">
+                    
+                    <img id="item-7" src="./index_files/daniel_fleischhacker.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-8" style="top: 0px; left: 870px; position: absolute;">
+                    
+                    <img id="item-8" src="./index_files/alicia_white.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-9" style="top: 48px; left: 534px; position: absolute;">
+                    
+                    <img id="item-9" src="./index_files/chanelle_rosebear.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-10" style="top: 48px; left: 198px; position: absolute;">
+                    
+                    <img id="item-10" src="./index_files/chase_lussier.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-11" style="top: 48px; left: 150px; position: absolute;">
+                    
+                    <img id="item-11" src="./index_files/dewayne_lewis_jr.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-12" style="top: 48px; left: 102px; position: absolute;">
+                    
+                    <img id="item-12" src="./index_files/thurlene_stillday.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-13" style="top: 144px; left: 822px; position: absolute;">
+                    
+                    <img id="item-13" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-14" style="top: 96px; left: 150px; position: absolute;">
+                    
+                    <img id="item-14" src="./index_files/everette_armstrong.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-15" style="top: 0px; left: 678px; position: absolute;">
+                    
+                    <img id="item-15" src="./index_files/brandon_lanie.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-16" style="top: 0px; left: 534px; position: absolute;">
+                    
+                    <img id="item-16" src="./index_files/alec_kruger.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-17" style="top: 48px; left: 726px; position: absolute;">
+                    
+                    <img id="item-17" src="./index_files/molly_rice.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-18" style="top: 0px; left: 342px; position: absolute;">
+                    
+                    <img id="item-18" src="./index_files/hunter_klaseus.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-19" style="top: 0px; left: 486px; position: absolute;">
+                    
+                    <img id="item-19" src="./index_files/natasha_skorczewski.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-20" style="top: 0px; left: 54px; position: absolute;">
+                    
+                    <img id="item-20" src="./index_files/anthony_brastad.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-21" style="top: 240px; left: 390px; position: absolute;">
+                    
+                    <img id="item-21" src="./index_files/robert_erie.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-22" style="top: 192px; left: 582px; position: absolute;">
+                    
+                    <img id="item-22" src="./index_files/estavon_gonzalez_licht.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-23" style="top: 144px; left: 534px; position: absolute;">
+                    
+                    <img id="item-23" src="./index_files/joseph_carl.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-24" style="top: 48px; left: 54px; position: absolute;">
+                    
+                    <img id="item-24" src="./index_files/lisa_grijalva.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-25" style="top: 96px; left: 678px; position: absolute;">
+                    
+                    <img id="item-25" src="./index_files/tabitha_belmonte.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-26" style="top: 48px; left: 486px; position: absolute;">
+                    
+                    <img id="item-26" src="./index_files/william_showers.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-27" style="top: 192px; left: 150px; position: absolute;">
+                    
+                    <img id="item-27" src="./index_files/haile_kifer.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-28" style="top: 144px; left: 774px; position: absolute;">
+                    
+                    <img id="item-28" src="./index_files/nicholas_brady.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-29" style="top: 96px; left: 582px; position: absolute;">
+                    
+                    <img id="item-29" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-30" style="top: 48px; left: 870px; position: absolute;">
+                    
+                    <img id="item-30" src="./index_files/abdullah_simmons_muhammad.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-31" style="top: 96px; left: 726px; position: absolute;">
+                    
+                    <img id="item-31" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-32" style="top: 96px; left: 6px; position: absolute;">
+                    
+                    <img id="item-32" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-33" style="top: 240px; left: 294px; position: absolute;">
+                    
+                    <img id="item-33" src="./index_files/tommie_milon.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-34" style="top: 0px; left: 390px; position: absolute;">
+                    
+                    <img id="item-34" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-35" style="top: 192px; left: 6px; position: absolute;">
+                    
+                    <img id="item-35" src="./index_files/jonathan_easterling.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-36" style="top: 192px; left: 246px; position: absolute;">
+                    
+                    <img id="item-36" src="./index_files/blake_rogers.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-37" style="top: 144px; left: 438px; position: absolute;">
+                    
+                    <img id="item-37" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-38" style="top: 240px; left: 150px; position: absolute;">
+                    
+                    <img id="item-38" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-39" style="top: 0px; left: 438px; position: absolute;">
+                    
+                    <img id="item-39" src="./index_files/tyesha_edwards.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-40" style="top: 240px; left: 726px; position: absolute;">
+                    
+                    <img id="item-40" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-41" style="top: 144px; left: 54px; position: absolute;">
+                    
+                    <img id="item-41" src="./index_files/xai_vang.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-42" style="top: 240px; left: 678px; position: absolute;">
+                    
+                    <img id="item-42" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-43" style="top: 240px; left: 582px; position: absolute;">
+                    
+                    <img id="item-43" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-44" style="top: 96px; left: 198px; position: absolute;">
+                    
+                    <img id="item-44" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-45" style="top: 240px; left: 630px; position: absolute;">
+                    
+                    <img id="item-45" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-46" style="top: 192px; left: 342px; position: absolute;">
+                    
+                    <img id="item-46" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-47" style="top: 144px; left: 6px; position: absolute;">
+                    
+                    <img id="item-47" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-48" style="top: 240px; left: 486px; position: absolute;">
+                    
+                    <img id="item-48" src="./index_files/christopher_little.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-49" style="top: 192px; left: 294px; position: absolute;">
+                    
+                    <img id="item-49" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-50" style="top: 48px; left: 246px; position: absolute;">
+                    
+                    <img id="item-50" src="./index_files/courtney_williams.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-51" style="top: 0px; left: 198px; position: absolute;">
+                    
+                    <img id="item-51" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-52" style="top: 192px; left: 870px; position: absolute;">
+                    
+                    <img id="item-52" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-53" style="top: 192px; left: 822px; position: absolute;">
+                    
+                    <img id="item-53" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-54" style="top: 144px; left: 582px; position: absolute;">
+                    
+                    <img id="item-54" src="./index_files/shawn_ferber.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-55" style="top: 0px; left: 582px; position: absolute;">
+                    
+                    <img id="item-55" src="./index_files/pa_houa_yang.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-56" style="top: 48px; left: 390px; position: absolute;">
+                    
+                    <img id="item-56" src="./index_files/gary_parker.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-57" style="top: 240px; left: 534px; position: absolute;">
+                    
+                    <img id="item-57" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-58" style="top: 288px; left: 54px; position: absolute;">
+                    
+                    <img id="item-58" src="./index_files/emmanuel_sieh.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-59" style="top: 144px; left: 294px; position: absolute;">
+                    
+                    <img id="item-59" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-60" style="top: 144px; left: 726px; position: absolute;">
+                    
+                    <img id="item-60" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-61" style="top: 48px; left: 342px; position: absolute;">
+                    
+                    <img id="item-61" src="./index_files/michael_bluntson.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-62" style="top: 192px; left: 726px; position: absolute;">
+                    
+                    <img id="item-62" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-63" style="top: 240px; left: 198px; position: absolute;">
+                    
+                    <img id="item-63" src="./index_files/brian_t_cole.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-64" style="top: 144px; left: 102px; position: absolute;">
+                    
+                    <img id="item-64" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-65" style="top: 48px; left: 294px; position: absolute;">
+                    
+                    <img id="item-65" src="./index_files/courtney_brown.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-66" style="top: 96px; left: 390px; position: absolute;">
+                    
+                    <img id="item-66" src="./index_files/gennaro_knox.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-67" style="top: 144px; left: 486px; position: absolute;">
+                    
+                    <img id="item-67" src="./index_files/trevor_marsh.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-68" style="top: 192px; left: 102px; position: absolute;">
+                    
+                    <img id="item-68" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-69" style="top: 144px; left: 390px; position: absolute;">
+                    
+                    <img id="item-69" src="./index_files/sohail_azizi.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-70" style="top: 144px; left: 630px; position: absolute;">
+                    
+                    <img id="item-70" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-71" style="top: 240px; left: 6px; position: absolute;">
+                    
+                    <img id="item-71" src="./index_files/ja_naurri_allen.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-72" style="top: 96px; left: 822px; position: absolute;">
+                    
+                    <img id="item-72" src="./index_files/bryant_garroutte.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-73" style="top: 48px; left: 630px; position: absolute;">
+                    
+                    <img id="item-73" src="./index_files/brittany_kekedakis.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-74" style="top: 96px; left: 774px; position: absolute;">
+                    
+                    <img id="item-74" src="./index_files/earl_freeman.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-75" style="top: 48px; left: 6px; position: absolute;">
+                    
+                    <img id="item-75" src="./index_files/charez_jones.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-76" style="top: 48px; left: 678px; position: absolute;">
+                    
+                    <img id="item-76" src="./index_files/montrell_burbridge.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-77" style="top: 240px; left: 342px; position: absolute;">
+                    
+                    <img id="item-77" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-78" style="top: 240px; left: 774px; position: absolute;">
+                    
+                    <img id="item-78" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-79" style="top: 240px; left: 822px; position: absolute;">
+                    
+                    <img id="item-79" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-80" style="top: 144px; left: 342px; position: absolute;">
+                    
+                    <img id="item-80" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-81" style="top: 0px; left: 822px; position: absolute;">
+                    
+                    <img id="item-81" src="./index_files/autustin_andrade_navarro.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-82" style="top: 192px; left: 678px; position: absolute;">
+                    
+                    <img id="item-82" src="./index_files/gustavo_ortega_cerrito.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-83" style="top: 192px; left: 198px; position: absolute;">
+                    
+                    <img id="item-83" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-84" style="top: 192px; left: 438px; position: absolute;">
+                    
+                    <img id="item-84" src="./index_files/abdullahi_awil_abdi.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-85" style="top: 48px; left: 438px; position: absolute;">
+                    
+                    <img id="item-85" src="./index_files/joquese_loyd.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-86" style="top: 48px; left: 774px; position: absolute;">
+                    
+                    <img id="item-86" src="./index_files/joshua_wilson_shaw.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-87" style="top: 192px; left: 390px; position: absolute;">
+                    
+                    <img id="item-87" src="./index_files/jesse_mickelson.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-88" style="top: 192px; left: 630px; position: absolute;">
+                    
+                    <img id="item-88" src="./index_files/jaques_dortch.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-89" style="top: 288px; left: 6px; position: absolute;">
+                    
+                    <img id="item-89" src="./index_files/emmanuel_bartuoh.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-90" style="top: 48px; left: 582px; position: absolute;">
+                    
+                    <img id="item-90" src="./index_files/jacob_mackenzie.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-91" style="top: 240px; left: 54px; position: absolute;">
+                    
+                    <img id="item-91" src="./index_files/dionte_montantes.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-92" style="top: 192px; left: 774px; position: absolute;">
+                    
+                    <img id="item-92" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-93" style="top: 144px; left: 246px; position: absolute;">
+                    
+                    <img id="item-93" src="./index_files/gunVics_noPhoto.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-94" style="top: 240px; left: 102px; position: absolute;">
+                    
+                    <img id="item-94" src="./index_files/haywood_eaton.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-95" style="top: 96px; left: 54px; position: absolute;">
+                    
+                    <img id="item-95" src="./index_files/darion_j_smith.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-96" style="top: 144px; left: 198px; position: absolute;">
+                    
+                    <img id="item-96" src="./index_files/justin_boecker.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-97" style="top: 96px; left: 342px; position: absolute;">
+                    
+                    <img id="item-97" src="./index_files/marvin_maynard_iii.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-98" style="top: 192px; left: 54px; position: absolute;">
+                    
+                    <img id="item-98" src="./index_files/alisha_neeley.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-99" style="top: 144px; left: 150px; position: absolute;">
+                    
+                    <img id="item-99" src="./index_files/marquise_woodbury.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-100" style="top: 240px; left: 246px; position: absolute;">
+                    
+                    <img id="item-100" src="./index_files/decari_starr.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-101" style="top: 240px; left: 438px; position: absolute;">
+                    
+                    <img id="item-101" src="./index_files/cedric_hunter.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-102" style="top: 96px; left: 294px; position: absolute;">
+                    
+                    <img id="item-102" src="./index_files/andrew_j_battees.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-103" style="top: 96px; left: 102px; position: absolute;">
+                    
+                    <img id="item-103" src="./index_files/anthony_titus.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-104" style="top: 96px; left: 870px; position: absolute;">
+                    
+                    <img id="item-104" src="./index_files/charles_kentrell_jones.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-105" style="top: 192px; left: 534px; position: absolute;">
+                    
+                    <img id="item-105" src="./index_files/keontrell_govan.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-106" style="top: 144px; left: 870px; position: absolute;">
+                    
+                    <img id="item-106" src="./index_files/jennifer_scott.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-107" style="top: 240px; left: 870px; position: absolute;">
+                    
+                    <img id="item-107" src="./index_files/david_w_raisch_day.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-108" style="top: 0px; left: 726px; position: absolute;">
+                    
+                    <img id="item-108" src="./index_files/quantrell_braxton.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-109" style="top: 0px; left: 630px; position: absolute;">
+                    
+                    <img id="item-109" src="./index_files/rayjon_gomez.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-110" style="top: 96px; left: 246px; position: absolute;">
+                    
+                    <img id="item-110" src="./index_files/juwon_osborne.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-111" style="top: 0px; left: 102px; position: absolute;">
+                    
+                    <img id="item-111" src="./index_files/terrell_mayes.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-112" style="top: 96px; left: 630px; position: absolute;">
+                    
+                    <img id="item-112" src="./index_files/terrence_creamer.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-113" style="top: 96px; left: 534px; position: absolute;">
+                    
+                    <img id="item-113" src="./index_files/trequan_sykes.png">
+                </div>
+            
+                <div class="smallThumb victim-active" id="item-114" style="top: 0px; left: 294px; position: absolute;">
+                    
+                    <img id="item-114" src="./index_files/nizzel_george.png">
+                </div>
+            
+                <div class="smallThumb victim-active victim-activated" id="item-115" style="top: 0px; left: 6px; position: absolute;">
+                    
+                    <img id="item-115" src="./index_files/neegnco_xiong.png">
+                </div>
+            
+        </div>
+    </div>
+    <div class="victimInfo">
+        <h2 class="victimName" id="details-name">Neegnco Xiong</h2>
+            <table class="detailInfo">
+            <tbody>
+                <tr class="details-row">
+                    <td class="detailLabel">Date of birth:</td>
+                    <td class="details" id="details-dob">1/12/2010</td>          
+                </tr>
+                <tr class="details-row">
+                    <td class="detailLabel">Date of death:</td>
+                    <td class="details" id="details-dod">12/5/2012</td>          
+                </tr>
+                <tr class="details-row">
+                    <td class="detailLabel">Age:</td>
+                    <td class="details" id="details-age">2</td>          
+                </tr>
+                <tr class="details-row">
+                    <td class="detailLabel">About:</td>
+                    <td class="details" id="details-about">Neegnco's 4-year-old brother found their father's gun behind a pillow and played with it. The gun went off, and Neegnco was killed.</td>            
+                </tr>
+                <tr class="details-row">
+                    <td class="detailLabel">Full story:</td>
+                    <td class="details" id="details-article"><a target="_&quot;blank&quot;" href="http://www.startribune.com/local/minneapolis/182478551.html">Loaded gun that killed 2-year-old was stored behind pillow</a></td>          
+                </tr>           
+            </tbody>
+            </table>
+            <div id="details-photo"><img class="bigPhoto" src="./index_files/neegnco_xiong.png"></div>
+            <div class="mapContainer">
+                <div class="map leaflet-container leaflet-fade-anim" id="map" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -92px; top: -51px;" src="./index_files/368.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 164px; top: -51px;" src="./index_files/368(1).png"></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"><img src="./index_files/leaflet-0.5-marker-shadow.png" class="leaflet-marker-shadow  leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; transform: translate3d(105px, 75px, 0px);"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"><img src="./index_files/leaflet-0.5-marker-icon.png" class="leaflet-marker-icon  leaflet-clickable leaflet-zoom-animated" style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(105px, 75px, 0px); z-index: 75;"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in leaflet-bar-part leaflet-bar-part-top" href="http://apps.startribune.com/news/young-victims-of-gun-violence-in-minnesota/index.html#" title="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-bar-part leaflet-bar-part-bottom" href="http://apps.startribune.com/news/young-victims-of-gun-violence-in-minnesota/index.html#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control">Powered by <a href="http://leafletjs.com/">Leaflet</a></div></div></div></div>
+                <h3><b>Where:</b></h3>
+                <p id="details-location">1907 7th St. S.<br>Minneapolis</p>
+            </div>
+        </div>
+    </div>
+    <div id="disclaimer">
+<p style="float:left;"><a href="javascript:location.href=&#39;mailto:&#39;+String.fromCharCode(74, 97, 109, 101, 115, 46, 83, 104, 105, 102, 102, 101, 114, 64, 115, 116, 97, 114, 116, 114, 105, 98, 117, 110, 101, 46, 99, 111, 109)+&#39;?&#39;">Contact us</a></p>
+        <p>Photos obtained from family members, Star Tribune archives and law enforcement agencies.</p>
+        <p>Data source: <a target="_blank" href="http://www.health.state.mn.us/">Minnesota Department of Health</a></p>
+    </div>
+
+
+<script type="text/javascript" src="./index_files/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./index_files/underscore-1.4.3.min.js"></script>
+<script type="text/javascript" src="./index_files/leaflet-0.5.min.js"></script>
+
+<script type="text/javascript" src="./index_files/victims-logic.js"></script>
+
+
+
+</body></html>
