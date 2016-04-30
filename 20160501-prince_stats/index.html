@@ -10,299 +10,310 @@
   <link rel="stylesheet" href="http://striblab.github.io/startribune_dataviz/_common_resources/styles/startribune_dataviz_styles.css" />
   <style>
     body {
-      font-family:"Benton Sans",Helvetica,Arial,sans-serif;
-      font-size: .85em;
-      color:#444;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility:;
-      padding:2px;
-      width:516px;
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+        font-size: .85em;
+        color: #444;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility: ;
+        padding: 2px;
+        width: 516px;
     }
-
     ::selection {
-      background: #e1c0e1;
+        background: #e1c0e1;
     }
     ::-moz-selection {
-      background: #e1c0e1;
+        background: #e1c0e1;
     }
-
-    #filterBox{
-      display:none;
+    #filterBox {
+        display: none;
     }
-
-    .filters{
-      width:100%;
-      z-index:10000;
-      position:fixed;
-      top:0;
-      background:/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+82,ffffff+100&1+84,0+100 */
-background: -moz-linear-gradient(top,  rgba(255,255,255,1) 82%, rgba(255,255,255,1) 84%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 82%,rgba(255,255,255,1) 84%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(255,255,255,1) 82%,rgba(255,255,255,1) 84%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-;
-padding-bottom:36px;
-      width: 502px;
-    left: 2px;
+    .filters {
+        width: 100%;
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        background:
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+82,ffffff+100&1+84,0+100 */
+        
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 82%, rgba(255, 255, 255, 1) 84%, rgba(255, 255, 255, 0) 100%);
+        /* FF3.6-15 */
+        
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 82%, rgba(255, 255, 255, 1) 84%, rgba(255, 255, 255, 0) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 82%, rgba(255, 255, 255, 1) 84%, rgba(255, 255, 255, 0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+        /* IE6-9 */
+        
+        ;
+        padding-bottom: 36px;
+        width: 502px;
+        left: 2px;
     }
-    #filter{
-      margin-top:-9px;
+    #filter {
+        margin-top: -9px;
     }
-
-    .content{margin-top:135px;}
-
-    #filter input[type=search]{
-      width: 100% !important;
-      font-size: 1.2em;
-      color: #000;
-      padding: 24px 6px;
-      margin: 0;
-      outline: none;
-      width: 100%;
-      font-size: 1.25em;
-      -webkit-appearance: none;
-      -webkit-border-radius: 0;
-      border-radius: 0;
-      color: rgba(0,0,0,1);
+    .content {
+        margin-top: 135px;
     }
-
-    .wrapper-demo{
-      display:block;
+    #filter input[type=search] {
+        width: 100% !important;
+        font-size: 1.2em;
+        color: #000;
+        padding: 24px 6px;
+        margin: 0;
+        outline: none;
+        width: 100%;
+        font-size: 1.25em;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        color: rgba(0, 0, 0, 1);
+    }
+    .wrapper-demo {
+        display: block;
     }
     .wrapper-dropdown-1 {
-      display:block;
-      z-index:900;
-      background:#bc74bb;
-      color:#000;
-      cursor:pointer;
-      font-weight:bold;
-      outline:none;
-      padding:16px;
-      position:relative;
-      width:100%;
-      box-shadow:1px 2px 2px rgba(0, 0, 0, .25);
-      font-size:1.25em;
-      width:100%;
+        display: block;
+        z-index: 900;
+        background: #bc74bb;
+        color: #000;
+        cursor: pointer;
+        font-weight: bold;
+        outline: none;
+        padding: 16px;
+        position: relative;
+        width: 100%;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, .25);
+        font-size: 1.25em;
+        width: 100%;
     }
     .wrapper-dropdown-1.active {
-      background:#bc74bb;
+        background: #bc74bb;
     }
     .wrapper-dropdown-1.active ul {
-      border:none;
+        border: none;
     }
     .wrapper-dropdown-1 .dropdown {
-      font-weight:normal;
-      left:0;
-      list-style:none;
-      opacity:0;
-      pointer-events:none;
-      position:absolute;
-      right:0;
-      top:100%;
-      background:#ddd;
-      box-shadow:1px 2px 2px rgba(0, 0, 0, 0.25);
-      margin-top:0px;
+        font-weight: normal;
+        left: 0;
+        list-style: none;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: #ddd;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+        margin-top: 0px;
     }
     ul.dropdown.months {
-      box-sizing:border-box;
-      margin:0;
-      -moz-box-sizing:border-box;
-      padding:0;
-      --webkit-box-sizing:border-box;
-      margin-top:-1px;
-      border-radius:0 0 4px 4px;
-      background-clip:padding-box;
-      background:#ddd;
+        box-sizing: border-box;
+        margin: 0;
+        -moz-box-sizing: border-box;
+        padding: 0;
+        --webkit-box-sizing: border-box;
+        margin-top: -1px;
+        border-radius: 0 0 4px 4px;
+        background-clip: padding-box;
+        background: #ddd;
     }
     .wrapper-dropdown-1 .dropdown {
-      left:0;
-      list-style:none;
-      opacity:0;
-      pointer-events:none;
-      position:absolute;
-      right:0;
-      top:100%;
-      border:none;
-      background:#ddd;
-      box-shadow:1px 2px 2px rgba(0, 0, 0, 0.15);
-      margin-top:0px;
+        left: 0;
+        list-style: none;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        border: none;
+        background: #ddd;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+        margin-top: 0px;
     }
-    .wrapper-dropdown-1 .dropdown li:hover a { 
-      background:#efefef;
-      color:#000;
+    .wrapper-dropdown-1 .dropdown li:hover a {
+        background: #efefef;
+        color: #000;
     }
-    .wrapper-dropdown-1 .dropdown li:hover a:hover { 
-      color:#000;
+    .wrapper-dropdown-1 .dropdown li:hover a:hover {
+        color: #000;
     }
-    header[role="banner"] { 
-      width:100%;height:40px;
-      z-index:1000;
-      background:#f0f0f0;
+    header[role="banner"] {
+        width: 100%;
+        height: 40px;
+        z-index: 1000;
+        background: #f0f0f0;
     }
-
     .wrapper-dropdown-1 .dropdown li a {
-    color: #757575;
-    padding: 5px 18px;
+        color: #757575;
+        padding: 5px 18px;
     }
     .wrapper-dropdown-1 .dropdown li a:hover {
-    color: #fff;
-    }   
-
+        color: #fff;
+    }
     .wrapper-dropdown-1 .dropdown li.selected {
-      color:#000;
+        color: #000;
     }
     .wrapper-dropdown-1 .dropdown li.selected a {
-      color:#000;
-    }  
+        color: #000;
+    }
     #selector {
-      margin:0 auto;
-      text-align:center;
+        margin: 0 auto;
+        text-align: center;
     }
     .button {
-      padding:10px;
-      display:inline-block;
-      text-align:center;
-      width:100%;
-      background-color:#fff;
-      border:solid #ddd;
-      border-width:0 0 1px 1px;
-      float:left;
+        padding: 10px;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        background-color: #fff;
+        border: solid #ddd;
+        border-width: 0 0 1px 1px;
+        float: left;
     }
-    .button:hover, .selected {
-      background-color:#efefef;
-      cursor:pointer;
+    .button:hover,
+    .selected {
+        background-color: #efefef;
+        cursor: pointer;
     }
-    .button, .stat {
-      width:100%;
-      float:none;
-      clear:both;
+    .button,
+    .stat {
+        width: 100%;
+        float: none;
+        clear: both;
     }
     .filterBreak {
-      height:2px;
-      clear:both;
+        height: 2px;
+        clear: both;
     }
     .stat {
-      float:right;
+        float: right;
     }
     .item {
-      padding-bottom:12px;
-      border-bottom:1px solid #ddd;
-      min-height: 52px;
-      margin-bottom:12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #ddd;
+        min-height: 52px;
+        margin-bottom: 12px;
     }
     .item.album {
-      min-height: 220px;
+        min-height: 220px;
     }
     .item.alt {
-      min-height: 220px;
+        min-height: 220px;
     }
     .item.billboard {
-      min-height:70px;
+        min-height: 70px;
     }
     .item.tour {
-      min-height: 70px;
+        min-height: 70px;
     }
     .item.other {
-      min-height: 70px;
+        min-height: 70px;
     }
     .item.grammy {
-      min-height: 70px;
+        min-height: 70px;
     }
-    .year{
-      display:block;
-      margin-top:15px;
+    .year {
+        display: block;
+        margin-top: 15px;
     }
-    .yearLabel{
-      font-size:2em;
-      font-family:"Popular";
+    .yearLabel {
+        font-size: 2em;
+        font-family: "Popular";
     }
     .yearHide {
-      display:none;
+        display: none;
     }
     .title {
-      font-weight:bold;
-      font-size:1.2em;
-      margin:15px 0 15px 0;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 15px 0 15px 0;
     }
     .description {
-      line-height:150%;
-      margin:5px 0;
+        line-height: 150%;
+        margin: 5px 0;
     }
     .gold {
-      color:#AAAA39;
+        color: #AAAA39;
     }
     .diamond {
-      color:#CBCBB3;
-    } 
-    .platinum {
-      color:#989886;
+        color: #CBCBB3;
     }
-    .gold,.platinum,.diamond{
-      font-weight:bold;
+    .platinum {
+        color: #989886;
+    }
+    .gold,
+    .platinum,
+    .diamond {
+        font-weight: bold;
     }
     .rank {
-      margin-bottom:3px;
+        margin-bottom: 3px;
     }
     .art {
-      float:right;
-      padding: 3px 0px 12px 12px;
+        float: right;
+        padding: 3px 0px 12px 12px;
     }
     .art img {
-      width:200px;
+        width: 200px;
     }
     .icon img {
-      width:50px;
-      text-align:left;
+        width: 50px;
+        text-align: left;
     }
     .icon {
-      float:left;
-      padding: 0 10px 18px 0;
-      text-align:left;
+        float: left;
+        padding: 0 10px 18px 0;
+        text-align: left;
     }
     .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      padding-top: 30px;
-      height: 0;
-      overflow: hidden;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
     }
-    .video-container iframe,.video-container object,.video-container embed {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
-
-      body {width:100%;}
-
-      .filters{
-        width:98.5%;
-        padding:0 .5% 0 .5%;
-      }
-      #filter{
-        margin-top:-9px;
-      }
-      .icon {
-        float:left;
-        padding: 0 10px 0px 0;
-      }
-      .title{
-        margin-top:6px;
-      }
-      .art {
-        float:none;
-        padding: 18px 0 0 0;
-      }      
-      .art img {
-        width:100%;
-        margin:0 auto 10px auto;
-      }
-      .wrapper-dropdown-1{
-        font-size: 1em;
-      } 
-    }  
+        body {
+            width: 100%;
+        }
+        .filters {
+            width: 98.5%;
+            padding: 0 .5% 0 .5%;
+        }
+        #filter {
+            margin-top: -9px;
+        }
+        .icon {
+            float: left;
+            padding: 0 10px 0px 0;
+        }
+        .title {
+            margin-top: 6px;
+        }
+        .art {
+            float: none;
+            padding: 18px 0 0 0;
+        }
+        .art img {
+            width: 100%;
+            margin: 0 auto 10px auto;
+        }
+        .wrapper-dropdown-1 {
+            font-size: 1em;
+        }
+    } 
   </style> 
 
 </head>
