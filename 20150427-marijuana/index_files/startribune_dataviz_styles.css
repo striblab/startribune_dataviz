@@ -1,0 +1,311 @@
+/*LOAD WEBSITE FONTS*/
+@font-face{
+    font-family:"Benton Sans";
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-2.eot");
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Benton Sans";
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-2.eot");
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-1.ttf") format("truetype");
+    font-style:italic;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Benton Sans";
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-2.eot");
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Benton Sans Condensed Medium";
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-2.eot");
+    src:url("http://apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Popular Light";
+    src:url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot");
+    src:url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Popular";
+    src:url("http://apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-2.eot");
+    src:url("http://apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Popular Medium";
+    src:url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot");
+    src:url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Popular";
+    src:url("http://apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-2.eot");
+    src:url("http://apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Poynter Serif RE";
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-2.eot");
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Poynter Serif RE";
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-2.eot");
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-1.ttf") format("truetype");
+    font-style:italic;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Poynter Serif RE";
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-2.eot");
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Poynter Serif RE";
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-2.eot");
+    src:url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-1.ttf") format("truetype");
+    font-style:italic;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Whitman Display Compressed Bold";
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Whitman Display Condensed Bold";
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Whitman Display";
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Whitman Display";
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-1.ttf") format("truetype");
+    font-style:italic;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Whitman Display";
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Whitman OSF";
+    src:url("http://apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:normal
+}
+
+@font-face{
+    font-family:"Whitman OSF";
+    src:url("http://apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-3.woff") format("woff"),
+    url("http://apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-1.ttf") format("truetype");
+    font-style:normal;
+    font-weight:bold
+}
+
+@font-face{
+    font-family:"Whitman OSF";
+    src:url("http://apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-2.eot");
+    src:url("http://apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-2.eot?") format("embedded-opentype"),
+    url("http://apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-3.woff") format("woff"),url("http://apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-1.ttf") format("truetype");
+    font-style:italic;
+    font-weight:normal
+}
+
+@font-face {
+  font-family: "Popular Light";
+  src: url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot");
+  src: url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot?") format("embedded-opentype"),
+       url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-3.woff") format("woff"),
+       url("http://apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*DOWNLOAD BUTTON STYLES*/
+  .downloadButton { background-color:#ddd; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#000; font-family:arial; font-size:13px; padding:13px; text-decoration:none; font-weight:900; width:100%; }
+  .downloadButton:active { background-color:#5cbf2a; }
+  .downloadButton:hover { background-color:#5cbf2a !important; }
+
+/*BOOTSTRAP BUTTON CHECKBOX STYLES*/
+  .btn-group { margin-left:0; width:100%; text-align:center; }
+  .btn-primary { width:19.6%; text-align:center; background-color: #333; border: 0; border-radius:0; color: #ffffff; cursor: pointer; display: inline-block; font-family: arial; font-size: 13px; font-weight: 900; moz-border-radius:0; padding: 13px 26px; text-decoration: none; webkit-border-radius:0; }
+  .btn-primary input[type=checkbox] { border:none; display:none !important; }
+  .btn-primary:hover { background-color:#5cbf2a; }
+  .active { background-color:#5cbf2a; }
+
+/*D3 SLIDER STYLES*/
+   #sliderDiv { height:20px; padding:15px; }
+  .d3-slider-handle { position: absolute; width: 1.2em; height: 1.2em; border: 1px solid #333; border-radius: 4px; background: #eee; background: #333; z-index: 3; }
+  .d3-slider-handle:hover { background: #5cbf2a; cursor:pointer; }
+
+/*NAV BUTTONS*/
+  .myButtonNav { background-color: #ddd; border: 0; border-radius: 0; color: #000; cursor: pointer; display:block; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: 1em; font-weight: 900; moz-border-radius:0; padding: 6px; text-decoration: none; webkit-border-radius:0; width:100%; margin:5px;}
+  .myButtonNav:hover { background-color: #378f00 !important; }
+  .myButtonNav:active { background-color: #5cbf2a; }
+
+/*STANDARD TOGGLE BUTTONS*/
+  .myButton { background-color:#61bd1a; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0;  display:inline-block; cursor:pointer; color:#000; font-family:arial; font-size:1em; padding:13px 26px; text-decoration:none; font-weight:900; } 
+  .myButton:active { background-color:#5cbf2a; }
+  .myButton:hover { background-color:#5cbf2a !important; }
+  .myButton2 { background-color:#61bd1a; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0;  display:inline-block; cursor:pointer; color:#000; font-family:arial; font-size:1em; padding:13px 26px; text-decoration:none; font-weight:900; } 
+  .myButton2:active { background-color:#5cbf2a; }
+  .myButton2:hover { background-color:#5cbf2a !important; }
+  .myButton3 { background-color:#61bd1a; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0;  display:inline-block; cursor:pointer; color:#000; font-family:arial; font-size:1em; padding:13px 26px; text-decoration:none; font-weight:900; } 
+  .myButton3:active { background-color:#5cbf2a; }
+  .myButton3:hover { background-color:#5cbf2a !important; }
+  .myButton4 { background-color:#61bd1a; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0;  display:inline-block; cursor:pointer; color:#000; font-family:arial; font-size:1em; padding:13px 26px; text-decoration:none; font-weight:900; } 
+  .myButton4:active { background-color:#5cbf2a; }
+  .myButton4:hover { background-color:#5cbf2a !important; }
+  .myButton5 { background-color:#61bd1a; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0;  display:inline-block; cursor:pointer; color:#000; font-family:arial; font-size:1em; padding:13px 26px; text-decoration:none; font-weight:900; } 
+  .myButton5:active { background-color:#5cbf2a; }
+  .myButton5:hover { background-color:#5cbf2a !important; }
+
+/*KILL BUTTON FOCUS BORDER*/
+   button:focus { outline:0 !important; }
+
+/*SECONDARY TOGGLE BUTTONS*/
+  .myButton_tax { background-color:#8B2219; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family:arial; font-size:12px; padding:3px 5px; text-decoration:none; font-weight:900; }
+  .myButton_tax:active { background-color:#ad645e; }
+
+/*DEMOCRATIC PARTY QUANTILE*/
+  .dq1 { fill:#99D0E5; color:#99D0E5; }
+  .dq2 { fill:#79B0C5; color:#79B0C5; }
+  .dq3 { fill:#629ABB; color:#629ABB; }
+  .dq4 { fill:#4B85B1; color:#4B85B1; }
+  .dq5 { fill:#356FA7; color:#356FA7; }
+  .dq6 { fill:#1E5A9D; color:#1E5A9D; }
+
+/*REPUBLICAN PARTY QUANTILE*/
+  .rq1 { fill:#C6A29E; color:#C6A29E;  }
+  .rq2 { fill:#A7706B; color:#A7706B;  }
+  .rq3 { fill:#A45958; color:#A45958;  }
+  .rq4 { fill:#A14345; color:#A14345;  }
+  .rq5 { fill:#9E2C32; color:#9E2C32;  }
+  .rq6 { fill:#9B161F; color:#9B161F;  }
+
+/*GREEN MAP QUANTILE*/
+  .mq1 { fill:#74C476; color:#74C476; }
+  .mq2 { fill:#49ab4b; color:#49ab4b; }
+  .mq3 { fill:#347c36; color:#347c36; }
+  .mq4 { fill:#204c21; color:#204c21; }
+  .mq5 { fill:#1E5A9D; color:#163417; }
+
+/*RESET BUTTON*/
+  .zoom{ text-decoration:none;font-weight:bold;color:steelblue; float:right !important;}
+
+/*CONTENT WRAPPER*/
+#wrapper{ width:98%; }
+
+/*DATATABLE STYLES*/
+  tr.odd td.sorting_1 { background-color: #efefef; }
+  tr.even td.sorting_1 { background-color: #efefef; }
+  tr.even { background-color: #fff !important; }
+  tr.odd { background-color: #fff !important; }
+  .dataTables_length{ display:none; }
+  .dataTable{ margin-bottom:18px; }
+  .dataTables_wrapper .dataTables_paginate { text-align:center; }
+  .dataTables_length, .dataTables_info { display:none; }
+  .dataTables_info { display:none; }
+  .dataTables_scrollHead { display:none;}
+  .dataTables_wrapper .dataTables_filter { float: left; }
+  input { margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
+    -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);   -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #ddd !important; }
+  #events_filter { width:100%; height:50px; }
+  input:focus {outline:0 !important;}
+  input:focus { box-shadow: 0 0 5px #61bd1a; padding: 3px 0px 3px 3px; border: 1px solid #61bd1a; }
+  td { padding: 8.88px !important; font-family:Arial; font-size:10px !important; }
+  th { background: #ccc !important; font-size:1em; font-family:Popular; }
+  table.dataTable.no-footer{ margin-bottom:0 !important; }
+  table { font-size:12px; }
+  .dataTables_scrollBody thead{ visibility:hidden;height:0 !important; }
+  th.sorting_asc, th.sorting_desc { background:#333 !important; font-weight:bold; color:#fff;}
+  th { display: table-cell;vertical-align: initial; }
+  th { padding:5px !important; }
+  table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before { height: 20px; width: 20px; display: block; color: white; border: 2px solid white; position:static !important; border-radius: 16px; text-align: center; line-height: 20px; box-shadow: 0 0 0 #444; box-sizing: content-box; content: ''; float: left; font-weight: bold; margin-right: 6px; background-color: #61bd1a; font-size: 16px; }

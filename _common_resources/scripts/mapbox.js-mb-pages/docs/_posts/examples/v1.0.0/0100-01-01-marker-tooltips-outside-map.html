@@ -1,0 +1,85 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Marker tooltips outside the map
+description: Display tooltip content from a container outside of a map.
+tags:
+  - markers
+---
+<style>
+.info {
+  position:absolute;
+  top:10px;
+  right:10px;
+  }
+  .info div {
+    background:#fff;
+    padding:10px;
+    border-radius:3px;
+    }
+</style>
+
+<div id='map'></div>
+<div id='info' class='info'></div>
+
+<script>
+var info = document.getElementById('info');
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([37.9, -77], 6);
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
+
+var geoJson = [
+    {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [-77, 37.9]
+        },
+        properties: {
+            title: 'Marker one',
+            description: '<em>Wow</em>, this tooltip is breaking all the rules.',
+            'marker-color': '#548cba'
+        }
+    },
+    {
+        type: 'Feature',
+        geometry: {
+            type: 'Point',
+            coordinates: [-78, 36.5]
+        },
+        properties: {
+            title: 'Marker two',
+            description: 'Another marker, including <a href="http://mapbox.com">a link</a>.',
+            'marker-color': '#548cba'
+        }
+    }
+];
+
+myLayer.setGeoJSON(geoJson);
+
+// Listen for individual marker clicks.
+myLayer.on('click',function(e) {
+    // Force the popup closed.
+    e.layer.closePopup();
+
+    var feature = e.layer.feature;
+    var content = '<div><strong>' + feature.properties.title + '</strong>' +
+                  '<p>' + feature.properties.description + '</p></div>';
+
+    info.innerHTML = content;
+});
+
+// Clear the tooltip when map is clicked.
+map.on('move', empty);
+
+// Trigger empty contents when the script
+// has loaded on the page.
+empty();
+
+function empty() {
+  info.innerHTML = '<div><strong>Click a marker</strong></div>';
+  }
+
+</script>

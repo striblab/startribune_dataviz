@@ -1,0 +1,45 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Custom legend
+description: Add a custom legend to your map from HTML contained in your code.
+tags:
+  - legend
+---
+<style>
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:15px;
+  width:20%;
+  text-align:center;
+  font-size:9px;
+  color:#808080;
+  }
+</style>
+
+<!-- Set the display of this container to none so we can
+     add it programmatically to `legendControl` -->
+<div id='legend' style='display:none;'>
+  <strong>The Title or Explanation of your Map</strong>
+  <nav class='legend clearfix'>
+    <span style='background:#F1EEF6;'></span>
+    <span style='background:#BDC9E1;'></span>
+    <span style='background:#74A9CF;'></span>
+    <span style='background:#2B8CBE;'></span>
+    <span style='background:#045A8D;'></span>
+    <label>0 - 20%</label>
+    <label>40%</label>
+    <label>60%</label>
+    <label>80%</label>
+    <label>100%</label>
+    <small>Source: <a href="#link to source">Name of source</a></small>
+</div>
+<div id='map' class='dark'></div>
+
+<script>
+  var map = L.mapbox.map('map', 'mapbox.dark');
+  map.legendControl.addLegend(document.getElementById('legend').innerHTML);
+</script>

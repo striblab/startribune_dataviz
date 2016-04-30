@@ -1,0 +1,2491 @@
+#OAS_topleaderboard,#OAS_bottomleaderboard
+{
+    background-color: #ECF3F6;
+    padding: 12px 0 12px 104px;
+}
+
+#OAS_bottomleaderboard iframe,#OAS_bottomleaderboard object,#OAS_bottomleaderboard embed,#OAS_bottomleaderboard img,#OAS_topleaderboard iframe,#OAS_topleaderboard object,#OAS_topleaderboard embed,#OAS_topleaderboard img { }
+
+.adSpace iframe,.adSpace object,.adSpace embed,.adSpace img
+{
+    position: relative;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.buttonStack td #adSpace iframe, .buttonStack td #adSpace object, .buttonStack td #adSpace embed, .buttonStack td #adSpace img { margin: 0 0 9px 0; }
+.buttonStack td.left #adSpace iframe, .buttonStack td.left #adSpace object, .buttonStack td.left #adSpace embed, .buttonStack td.left #adSpace img { margin-right: 8px; }
+
+.buttonStack.twoColumn
+{
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
+
+/*hides OAS spacer gifs - must be last OAS declaration*/
+.OAS_adspace
+{
+    visibility: hidden;
+    margin: 0;
+    position: absolute;
+    top: -5000;
+    left: -5000;
+}
+
+.OAS_bigad { margin-bottom: 12px; }
+.OAS_bigad iframe { width: 300px; }
+
+.boxD
+{
+    width: 298px;
+    margin: 0 0 8px 0;
+    border: solid black 1px;
+}
+
+.boxDbody { padding: 8px; }
+.boxDbody .productbox p { margin: 0; }
+
+#productbox
+{
+    background-color: #F4F2ED;
+    padding: 29px 8px 8px 8px;
+    background-image: url(http://stmedia.startribune.com/designimages/171917.l.gif);
+    background-repeat: repeat-x;
+    border: solid #7C7C7C 1px;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+    margin-bottom: 12px;
+}
+
+#productbox.boxD { padding: 0; }
+#productbox .boxDbody { padding: 29px 8px 8px 8px; }
+
+.productbox
+{
+    float: left;
+    width: 282px;
+    margin: 0 0 0 0;
+}
+
+.productboxleft
+{
+    float: left;
+    width: 133px;
+    padding: 0 8px 0 0;
+    border: solid #D4CCBA;
+    border-width: 0 1px 0 0;
+}
+
+.productboxright
+{
+    margin: 0 0 0 141px;
+    border: solid #D4CCBA;
+    border-width: 0 0 0 1px;
+}
+
+.productboxright img
+{
+    display: block;
+    margin: 0 auto 6px auto;
+}
+
+.productboxleft img
+{
+    display: block;
+    margin: 0 auto 6px auto;
+}
+
+.productboxrightcontent { padding: 0 0 0 8px; }
+* html .productboxrightcontent { padding: 0 0 0 5px; }
+
+#productbox hr
+{
+    border-width: 0;
+    color: #D4CCBA;
+    background-color: #D4CCBA;
+    height: 1px;
+}
+
+#productbox h3
+{
+    margin: 6px 0 3px 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.productboxheader { position: relative; }
+
+.productboxheader img
+{
+    position: absolute;
+    top: -25px;
+    left: -2px;
+    border-width: 0;
+}
+
+#productbox.box
+{
+    padding: 29px 8px 8px 8px;
+    background-image: url(http://stmedia.startribune.com/designimages/171917.l.gif);
+    background-repeat: repeat-x;
+    border-color: #7C7C7C;
+    border-width: 1px;
+    background-color: #F4F2ED;
+}
+
+.productboxiframebody
+{
+    background-color: #F4F2ED;
+    width: 130px;
+}
+
+.productboxiframebody .docLayout { width: 130px; }
+
+/*ad links support*/
+.textads
+{
+    border: solid #7C7C7C 1px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.twocol { width: 300px; }
+.onecol { width: 146px; }
+
+.textadheader
+{
+    background-color: #EAE7DE;
+    padding: 3px 6px 2px 6px;
+    border: solid #D4CCBA;
+    border-width: 0 0 1px 0;
+}
+
+.textadheader .rightlink
+{
+    float: right;
+    font-size: 11px;
+}
+
+.textadcontainer { padding: 0 4px 2px 4px; }
+
+.textads .premrightlink
+{
+    text-align: right;
+    font-size: 11px;
+    padding: 2px;
+    border-bottom: 0 solid #7C7C7C;
+}
+
+.premadlink
+{
+    border-style: solid;
+    border-color: #EDE9E1;
+    border-width: 0;
+    margin: 4px 0 4px 0;
+    padding: 0 4px 4px 0;
+}
+
+.premadlink img
+{
+    border: solid #7C7C7C 1px;
+    float: left;
+    margin-right: 3px;
+    width: 50px;
+}
+
+.premadlink .tinytext { font-size: .85em; }
+
+/*end ad links support*/
+.mostReadSponsor
+{
+    border: solid #9BB4BF;
+    border-width: 0 1px 1px 1px;
+    padding: 0;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.storyToolSponsor
+{
+    position: absolute;
+    top: -3px;
+    left: 122px;
+}
+
+#story .textAds
+{
+    width: 442px;
+    overflow: hidden;
+    margin: 24px 0 9px 0;
+}
+
+.bcbsBox
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #B5C6CD;
+    width: 298px;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+}
+
+.bcbsBox ul
+{
+    list-style-type: square;
+    font-size: .95em;
+    margin: 0 0 0 15px;
+    padding: 9px;
+    line-height: 120%;
+    color: #73919F;
+}
+
+.oasTwoColButtonRow
+{
+    height: 60px;
+    width: 300px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+
+.oasTwoColButtonRow .buttonLeft
+{
+    width: 146px;
+    height: 60px;
+    float: left;
+}
+
+.oasTwoColButtonRow .buttonRight
+{
+    width: 146px;
+    height: 60px;
+    margin-left: 154px;
+}
+
+* html .oasTwoColButtonRow .buttonRight { margin-left: 151px; }
+#homepage .adButtonStack { margin-top: 18px; }
+
+.adButtonStack iframe,.adButtonStack object,.adButtonStack embed,.adButtonStack img
+{
+    display: block;
+    margin-top: 9px;
+}
+
+#contestbox { clear: left; }
+
+#contestbox.boxD
+{
+    border-color: #7C7C7C;
+    background-color: #F4F2ED;
+    margin-bottom: 12px;
+}
+
+#contestbox .boxDbody
+{
+    padding: 29px 8px 8px 8px;
+    background-image: url(http://stmedia.startribune.com/designimages/171917.l.gif);
+    background-repeat: repeat-x;
+}
+
+#contestbox .productboxleft
+{
+    width: 100px;
+    padding: 0;
+    border-width: 0;
+}
+
+#contestbox .productboxright
+{
+    margin: 0 0 0 108px;
+    border-width: 0;
+}
+
+.contestimage
+{
+    width: 100px;
+    height: 66px;
+    border: solid 1px;
+    display: block;
+}
+
+.blockclear
+{
+    clear: both;
+    display: inline;
+}
+
+.rightclear
+{
+    clear: right;
+    display: inline;
+}
+
+.OAS_buttonbox2col
+{
+    width: 300px;
+    overflow: hidden;
+    float: left;
+}
+
+.OAS_buttonbox2colbody
+{
+    width: 308px;
+    margin-left: -8px;
+}
+
+.OAS_buttonbox2col object,.OAS_buttonbox2col iframe,.OAS_buttonbox2col img
+{
+    float: left;
+    margin: 0 0 6px 8px;
+}
+
+.columnContent .OAS_adstack
+{
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+/*-------------------------- COUPON DEALS START ------------------------*/
+#coupondeals_sc
+{
+    width: 130px;
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#coupondeals_vitamn
+{
+    width: 137px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0;
+}
+
+#coupondeals_ef
+{
+    width: 130px;
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.coupondeals_scissors
+{
+    background-image: url(http://www.startribune.com/mcu/shopminnesota/images/scissors.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.coupondeals_coupon
+{
+    border: 1px #cccccc dashed;
+    padding: 0 0 0 0;
+    margin-left: 13px;
+    background-color: #FFFFFF;
+}
+
+.coupondeals_coupon img
+{
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.coupondeals_ad
+{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+.coupondeals_ad img
+{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    line-height: normal;
+}
+
+.coupondeals_ad h1
+{
+    text-align: center;
+    color: #003399;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0 0 0 0;
+    padding: 4px 0 4px 0;
+}
+
+.coupondeals_logo_diningdeals
+{
+    background-image: url(http://ww2.startribune.com/mcu/shopminnesota/coupons/dining_deals_logo_small.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 115px;
+    height: 40px;
+    margin: 0 0 0 0;
+    padding: 10px 0 0 0;
+}
+
+.coupondeals_logo_diningdeals_ef
+{
+    background-image: url(http://ww2.startribune.com/mcu/shopminnesota/coupons/dining_deals_logo_small.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 115px;
+    height: 40px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.coupondeals_footer
+{
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+/*-------------------------- COUPON DEALS END ------------------------*/
+/*-------------------------- FEATURED CLASSIFIEDS START ------------------------*/
+#fc
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #333333;
+    width: 298px;
+}
+
+#fc .fc_header
+{
+    padding: 0;
+    margin: 0;
+    background-image: url(http://ww2.startribune.com/mcu/projects/f/featuredclassifieds/featuredclassifieds_header.gif);
+    background-repeat: no-repeat;
+    width: 298px;
+    height: 50px;
+}
+
+#fc .fc_content
+{
+    padding: 10px;
+    margin: 0;
+    background-image: url(http://ww2.startribune.com/mcu/projects/f/featuredclassifieds/featuredclassifieds_border.gif);
+    background-repeat: repeat-y;
+    width: 278px;
+}
+
+#fc .fc_ad
+{
+    padding: 6px 0 0 0;
+    margin: 0;
+    width: 278px;
+}
+
+#fc .fc_ad h1
+{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: #aeaeae;
+    font-size: 14px;
+}
+
+#fc .fc_ad p
+{
+    padding: 0;
+    margin: 0;
+    color: #333333;
+    font-size: 11px;
+}
+
+#fc .fc_ad img
+{
+    padding: 0 6px 6px 0;
+    margin: 0;
+    border: none;
+    float: left;
+}
+
+#fc .fc_more, #fc .fc_more a:link, #fc .fc_more a:visited, #fc .fc_more a:active
+{
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    color: #aaaaaa;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#fc .fc_more a:hover { text-decoration: underline; }
+
+#fc .fc_search
+{
+    padding: 10px 0 0 0;
+    margin: 0;
+    width: 278px;
+    text-align: center;
+    color: #73919f;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#fc .fc_search a:link, #fc .fc_search a:visited, #fc .fc_search a:active
+{
+    text-align: center;
+    color: #73919f;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#fc .fc_search a:hover { text-decoration: underline; }
+
+#fc .fc_footer
+{
+    padding: 0;
+    margin: 0;
+    background-image: url(http://ww2.startribune.com/mcu/projects/f/featuredclassifieds/featuredclassifieds_footer.gif);
+    background-repeat: no-repeat;
+    width: 298px;
+    height: 48px;
+}
+
+#fc .fc_divider
+{
+    border-bottom: 1px solid #ebebeb;
+    clear: both;
+    margin: 0;
+    padding: 4px 0 0 0;
+}
+
+/*-------------------------- FEATURED CLASSIFIEDS END ------------------------*/
+/*-------------------------- FEATURED CLASSIFIEDS WIDE START ------------------------*/
+#fc2
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #333333;
+    width: 393px;
+    background-image: url(http://ww2.startribune.com/mcu/projects/f/featuredclassifieds/featuredclassifieds2_border.gif);
+    background-repeat: repeat-y;
+}
+
+#fc2 .fc2_header
+{
+    padding: 0;
+    margin: 0;
+    background-image: url(http://ww2.startribune.com/mcu/projects/f/featuredclassifieds/featuredclassifieds2_header.gif);
+    background-repeat: no-repeat;
+    width: 393px;
+    height: 29px;
+}
+
+#fc2 .fc2_content
+{
+    padding: 10px;
+    margin: 0;
+    width: 373px;
+}
+
+#fc2 .fc2_ad
+{
+    padding: 0 6px 0 0;
+    margin: 0;
+    width: 111px;
+    float: left;
+    text-align: left;
+}
+
+#fc2 .fc2_ad h1
+{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: #aeaeae;
+    font-size: 14px;
+}
+
+#fc2 .fc2_ad p
+{
+    padding: 0;
+    margin: 0;
+    color: #333333;
+    font-size: 12px;
+}
+
+#fc2 .fc2_ad img
+{
+    padding: 0 0 6px 0;
+    margin: 0;
+    border: none;
+    text-align: center;
+}
+
+#fc2 .fc2_more, #fc2 .fc2_more a:link, #fc2 .fc2_more a:visited, #fc2 .fc2_more a:active
+{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#fc2 .fc2_more a:hover { text-decoration: underline; }
+
+#fc2 .fc2_search
+{
+    padding: 10px 0 0 0;
+    margin: 0;
+    width: 373px;
+    text-align: center;
+    color: #73919f;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#fc2 .fc2_search a:link, #fc2 .fc2_search a:visited, #fc2 .fc2_search a:active
+{
+    text-align: center;
+    color: #73919f;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#fc2 .fc2_search a:hover { text-decoration: underline; }
+
+#fc2 .fc2_footer
+{
+    padding: 0;
+    margin: 0;
+    background-image: url(http://ww2.startribune.com/mcu/projects/f/featuredclassifieds/featuredclassifieds2_footer.gif);
+    background-repeat: no-repeat;
+    width: 393px;
+    height: 18px;
+}
+
+#fc2 .fc2_divider
+{
+    margin: 0;
+    padding: 0 4px 0 4px;
+    float: left;
+    border-left: 1px solid #ebebeb;
+    height: 150px;
+}
+
+/*-------------------------- FEATURED CLASSIFIEDS WIDE END ------------------------*/
+/* --------------------------- Graphic Ad Link style  ---------------------- */
+/* 1 col 144px */
+#featured_businesses_container_1col
+{
+    visibility: visible;
+    width: 144px;
+    margin: 10px 0px 10px 0px;
+}
+
+#featured_businesses_container_1col .twocol { width: 144px; }
+#featured_businesses_container .onecol { width: 144px; }
+
+#featured_businesses_container_1col .box
+{
+    background: url(http://stmedia.startribune.com/images/gal_1col_st_border.png);
+    background-position: left top;
+}
+
+#featured_businesses_container_1col .header_1col
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/gal_1col_st_header.png);
+    height: 30px;
+    width: 144px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container_1col .fb_footer
+{
+    background-image: url(http://stmedia.startribune.com/images/gal_1col_st_footer.png);
+    height: 50px;
+    width: 144px;
+    background-repeat: no-repeat;
+    margin: 0px;
+    font-size: 12px;
+    color: red;
+}
+
+#featured_businesses_container_1col .fb_footer  li
+{
+    margin: 0px;
+    padding: 18px 0px 0px 0px;
+    color: red;
+    list-style-position: inside;
+}
+
+#featured_businesses_container_1col .fb_footer  ul
+{
+    margin: 0px;
+    padding-left: 15px;
+}
+
+#featured_businesses_container_1col .premadlink img
+{
+    border: solid #a8c0e2 1px;
+    float: left;
+    margin: 4px 4px 0px 0px;
+    width: 50px;
+}
+
+#featured_businesses_container_1col .premadlink .tinytext
+{
+    color: #aaaaaa;
+    font-size: 10px;
+    display: block;
+    border-bottom: solid #a8c0e2 1px;
+    margin-bottom: 0px;
+    padding-bottom: 4px;
+}
+
+#featured_businesses_container_1col .textadcontainer, .ad_tableCell
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 4px;
+    line-height: 9pt;
+}
+
+#featured_businesses_container_1col .ad_tableCell
+{
+    color: black;
+    font-size: 10px;
+    line-height: 13px;
+    word-spacing: 0px;
+}
+
+#featured_businesses_container_1col .fb_footer a:hover { text-decoration: underline; }
+#featured_businesses_container_1col .premadlink a:link,  #featured_businesses_container .premadlink a:visited, #featured_businesses_container .premadlink a:active { color: #00365B; }
+
+#featured_businesses_container_1col .premadlink b
+{
+    font-size: 11px;
+    color: #00365B;
+    text-transform: uppercase;
+}
+
+#featured_businesses_container_1col .premadlink
+{
+    border: 0pt solid #EDE9E1;
+    margin: 0px 0pt;
+    padding: 0pt 0px 0px 0pt;
+}
+
+/*  end of 1 col 144px */
+#featured_businesses_container
+{
+    visibility: visible;
+    width: 300px;
+    margin: 10px 0px 10px 0px;
+}
+
+#featured_businesses_container .box
+{
+    background: url(http://stmedia.startribune.com/images/gal_2col_border.gif);
+    background-position: left top;
+}
+
+#featured_businesses_container .twocol { width: 300px; }
+
+#featured_businesses_container .header_southmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/sm_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_northmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/nm_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_eastmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/em_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_local
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/gal_header_localB.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_stpaul
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/sb_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_minneapolis
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/mb_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_westmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/wm_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .fb_footer
+{
+    background-image: url(http://stmedia.startribune.com/images/gal_footer.gif);
+    height: 50px;
+    width: 300px;
+    background-repeat: no-repeat;
+    margin: 0px;
+    font-size: 12px;
+    color: red;
+}
+
+#featured_businesses_container .footer_links, { padding: 10px 0px 0px 20px; }
+
+#featured_businesses_container .premadlink img
+{
+    border: solid #a8c0e2 1px;
+    float: left;
+    margin: 4px 4px 0px 0px;
+    width: 50px;
+}
+
+#featured_businesses_container .premadlink .tinytext
+{
+    color: #aaaaaa;
+    font-size: 10px;
+    display: block;
+    border-bottom: solid #a8c0e2 1px;
+    margin-bottom: 0px;
+    padding-bottom: 4px;
+}
+
+#featured_businesses_container .textadcontainer, .ad_tableCell
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 4px;
+    line-height: 9pt;
+}
+
+#featured_businesses_container .ad_tableCell
+{
+    color: black;
+    font-size: 10px;
+    line-height: 13px;
+    word-spacing: 0px;
+}
+
+#featured_businesses_container .fb_footer  li
+{
+    margin: 0px;
+    padding: 10px 0px;
+    color: red;
+    list-style-position: inside;
+}
+
+#featured_businesses_container .fb_footer a:hover { text-decoration: underline; }
+#featured_businesses_container .premadlink a:link,  #featured_businesses_container .premadlink a:visited, #featured_businesses_container .premadlink a:active { color: #00365B; }
+
+#featured_businesses_container .premadlink b
+{
+    font-size: 11px;
+    color: #00365B;
+    text-transform: uppercase;
+}
+
+#featured_businesses_container .premadlink
+{
+    border: 0pt solid #EDE9E1;
+    margin: 0px 0pt;
+    padding: 0pt 0px 0px 0pt;
+}
+
+/* ------------------------ End of Graphic Ad Link style -----------------------  */
+/*Daily Deals*/
+.dailydeals
+{
+    background-color: #9bb4bf;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.dailydeals img
+{
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.dailydeals .item
+{
+    background-color: white;
+    border-color: #dbe3e7;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    margin: 0;
+    padding: 6px 4px 6px 4px;
+}
+
+.dailydeals .item p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.dailydeals .item .headline { font-weight: bold; }
+.dailydeals .item .small { font-size: 10px; }
+
+.dailydeals .viewall
+{
+    text-align: center;
+    margin: 3px;
+    padding: 3px;
+}
+
+.dailydeals .viewall a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*End Daily Deals*/
+margin-bottom: 9px;
+}
+
+.buttonStack td #adSpace iframe, .buttonStack td #adSpace object, .buttonStack td #adSpace embed, .buttonStack td #adSpace img { margin: 0 0 9px 0; }
+.buttonStack td.left #adSpace iframe, .buttonStack td.left #adSpace object, .buttonStack td.left #adSpace embed, .buttonStack td.left #adSpace img { margin-right: 8px; }
+
+.buttonStack.twoColumn
+{
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
+
+/*hides OAS spacer gifs - must be last OAS declaration*/
+.OAS_adspace
+{
+    visibility: hidden;
+    margin: 0;
+    position: absolute;
+    top: -5000;
+    left: -5000;
+}
+
+.OAS_bigad { margin-bottom: 12px; }
+
+.boxD
+{
+    width: 298px;
+    margin: 0 0 8px 0;
+    border: solid black 1px;
+}
+
+.boxDbody { padding: 8px; }
+.boxDbody .productbox p { margin: 0; }
+
+#productbox
+{
+    background-color: #F4F2ED;
+    padding: 29px 8px 8px 8px;
+    background-image: url(http://stmedia.startribune.com/designimages/171917.l.gif);
+    background-repeat: repeat-x;
+    border: solid #7C7C7C 1px;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+    margin-bottom: 12px;
+}
+
+#productbox.boxD { padding: 0; }
+#productbox .boxDbody { padding: 29px 8px 8px 8px; }
+
+.productbox
+{
+    float: left;
+    width: 282px;
+    margin: 0 0 0 0;
+}
+
+.productboxleft
+{
+    float: left;
+    width: 133px;
+    padding: 0 8px 0 0;
+    border: solid #D4CCBA;
+    border-width: 0 1px 0 0;
+}
+
+.productboxright
+{
+    margin: 0 0 0 141px;
+    border: solid #D4CCBA;
+    border-width: 0 0 0 1px;
+}
+
+.productboxright img
+{
+    display: block;
+    margin: 0 auto 6px auto;
+}
+
+.productboxleft img
+{
+    display: block;
+    margin: 0 auto 6px auto;
+}
+
+.productboxrightcontent { padding: 0 0 0 8px; }
+* html .productboxrightcontent { padding: 0 0 0 5px; }
+
+#productbox hr
+{
+    border-width: 0;
+    color: #D4CCBA;
+    background-color: #D4CCBA;
+    height: 1px;
+}
+
+#productbox h3
+{
+    margin: 6px 0 3px 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.productboxheader { position: relative; }
+
+.productboxheader img
+{
+    position: absolute;
+    top: -25px;
+    left: -2px;
+    border-width: 0;
+}
+
+#productbox.box
+{
+    padding: 29px 8px 8px 8px;
+    background-image: url(http://stmedia.startribune.com/designimages/171917.l.gif);
+    background-repeat: repeat-x;
+    border-color: #7C7C7C;
+    border-width: 1px;
+    background-color: #F4F2ED;
+}
+
+.productboxiframebody
+{
+    background-color: #F4F2ED;
+    width: 130px;
+}
+
+.productboxiframebody .docLayout { width: 130px; }
+
+.OAS_buttonBox
+{
+    float: left;
+    margin-bottom: 12px;
+}
+
+.OAS_buttonBox .columnOne
+{
+    width: 146px;
+    float: left;
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.OAS_buttonBox .columnTwo
+{
+    border-width: 0;
+    padding: 0;
+    width: 146px;
+    float: right;
+    margin: 0;
+}
+
+/*ad links support*/
+.textads
+{
+    border: solid #7C7C7C 1px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.twocol { width: 300px; }
+.onecol { width: 146px; }
+
+.textadheader
+{
+    background-color: #EAE7DE;
+    padding: 3px 6px 2px 6px;
+    border: solid #D4CCBA;
+    border-width: 0 0 1px 0;
+}
+
+.textadheader .rightlink
+{
+    float: right;
+    font-size: 11px;
+}
+
+.textadcontainer { padding: 0 4px 2px 4px; }
+
+.textads .premrightlink
+{
+    text-align: right;
+    font-size: 11px;
+    padding: 2px;
+    border-bottom: 0 solid #7C7C7C;
+}
+
+.premadlink
+{
+    border-style: solid;
+    border-color: #EDE9E1;
+    border-width: 0;
+    margin: 4px 0 4px 0;
+    padding: 0 4px 4px 0;
+}
+
+.premadlink img
+{
+    border: solid #7C7C7C 1px;
+    float: left;
+    margin-right: 3px;
+    width: 50px;
+}
+
+.premadlink .tinytext { font-size: .85em; }
+
+/*end ad links support*/
+.tj
+{
+    color: #55534F;
+    border: solid 1px #7C7C7C;
+    background-color: #F4F2ED;
+    margin: 0;
+    font-size: 11px;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.tjheader { background-color: #EAE7DE; }
+
+.tj td
+{
+    padding: 4px 6px 4px 6px;
+    width: 137px;
+}
+
+.tjleft
+{
+    border: solid #E2DED5;
+    border-width: 0 1px 0 0;
+}
+
+.tj a img, .tj a:hover img
+{
+    float: left;
+    margin-top: 1px;
+    width: 15px;
+    height: 15px;
+    border-width: 0;
+}
+
+.tj .tjdetail
+{
+    display: block;
+    margin: 1px 0 0 19px;
+}
+
+.tj p
+{
+    margin: 2px 0 4px 0;
+    padding: 0;
+}
+
+.tj A:link
+{
+    color: #344147;
+    text-decoration: none;
+}
+
+.tj A:active
+{
+    color: #68828E;
+    text-decoration: none;
+}
+
+.tj A:visited
+{
+    color: #344147;
+    text-decoration: none;
+}
+
+.tj A:hover
+{
+    color: #68828E;
+    text-decoration: underline;
+}
+
+.tj a img { background: url(http://stmedia.startribune.com/designimages/icon_topjobs_off.gif) top left no-repeat; }
+.tj a:hover img { background: url(http://stmedia.startribune.com/designimages/icon_topjobs_over.gif) top left no-repeat; }
+
+/*end topjobs styles*/
+.mostReadSponsor
+{
+    border: solid #9BB4BF;
+    border-width: 0 1px 1px 1px;
+    padding: 0;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.storyToolSponsor
+{
+    position: absolute;
+    top: -3px;
+    left: 122px;
+}
+
+#story .textAds
+{
+    width: 442px;
+    overflow: hidden;
+    margin: 24px 0 9px 0;
+}
+
+.bcbsBox
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #B5C6CD;
+    width: 298px;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+}
+
+.bcbsBox ul
+{
+    list-style-type: square;
+    font-size: .95em;
+    margin: 0 0 0 15px;
+    padding: 9px;
+    line-height: 120%;
+    color: #73919F;
+}
+
+.oasTwoColButtonRow
+{
+    height: 60px;
+    width: 300px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+
+.oasTwoColButtonRow .buttonLeft
+{
+    width: 146px;
+    height: 60px;
+    float: left;
+}
+
+.oasTwoColButtonRow .buttonRight
+{
+    width: 146px;
+    height: 60px;
+    margin-left: 154px;
+}
+
+* html .oasTwoColButtonRow .buttonRight { margin-left: 151px; }
+#homepage .adButtonStack { margin-top: 18px; }
+
+.adButtonStack iframe,.adButtonStack object,.adButtonStack embed,.adButtonStack img
+{
+    display: block;
+    margin-top: 9px;
+}
+
+#contestbox.boxD
+{
+    border-color: #7C7C7C;
+    background-color: #F4F2ED;
+    margin-bottom: 12px;
+}
+
+#contestbox .boxDbody
+{
+    padding: 29px 8px 8px 8px;
+    background-image: url(http://stmedia.startribune.com/designimages/171917.l.gif);
+    background-repeat: repeat-x;
+}
+
+#contestbox .productboxleft
+{
+    width: 100px;
+    padding: 0;
+    border-width: 0;
+}
+
+#contestbox .productboxright
+{
+    margin: 0 0 0 108px;
+    border-width: 0;
+}
+
+.contestimage
+{
+    width: 100px;
+    height: 66px;
+    border: solid 1px;
+    display: block;
+}
+
+.blockclear
+{
+    clear: both;
+    display: inline;
+}
+
+.rightclear
+{
+    clear: right;
+    display: inline;
+}
+
+.OAS_buttonbox2col
+{
+    width: 300px;
+    overflow: hidden;
+    float: left;
+}
+
+.OAS_buttonbox2colbody
+{
+    width: 308px;
+    margin-left: -8px;
+}
+
+.OAS_buttonbox2col object,.OAS_buttonbox2col iframe,.OAS_buttonbox2col img
+{
+    float: left;
+    margin: 0 0 6px 8px;
+}
+
+/*-------------------------- COUPON DEALS START ------------------------*/
+#coupondeals_sc
+{
+    width: 130px;
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#coupondeals_vitamn
+{
+    width: 137px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0;
+}
+
+#coupondeals_ef
+{
+    width: 130px;
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.coupondeals_scissors
+{
+    background-image: url(http://www.startribune.com/mcu/shopminnesota/images/scissors.gif);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.coupondeals_coupon
+{
+    border: 1px #cccccc dashed;
+    padding: 0 0 0 0;
+    margin-left: 13px;
+    background-color: #FFFFFF;
+}
+
+.coupondeals_coupon img
+{
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.coupondeals_ad
+{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+.coupondeals_ad img
+{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+    line-height: normal;
+}
+
+.coupondeals_ad h1
+{
+    text-align: center;
+    color: #003399;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0 0 0 0;
+    padding: 4px 0 4px 0;
+}
+
+.coupondeals_logo_diningdeals
+{
+    background-image: url(http://ww2.startribune.com/mcu/shopminnesota/coupons/dining_deals_logo_small.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 115px;
+    height: 40px;
+    margin: 0 0 0 0;
+    padding: 10px 0 0 0;
+}
+
+.coupondeals_logo_diningdeals_ef
+{
+    background-image: url(http://ww2.startribune.com/mcu/shopminnesota/coupons/dining_deals_logo_small.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 115px;
+    height: 40px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.coupondeals_footer
+{
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+/*-------------------------- COUPON DEALS END ------------------------*/
+/* ------------ Graphic Ad Link style  ---------- */
+#featured_businesses_container
+{
+    visibility: visible;
+    width: 300px;
+    margin: 10px 0px 10px 0px;
+}
+
+#featured_businesses_container .box
+{
+    background: url(http://stmedia.startribune.com/images/gal_2col_border.gif);
+    background-position: left top;
+}
+
+#featured_businesses_container .twocol { width: 300px; }
+
+#featured_businesses_container .header_southmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/sm_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_northmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/nm_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_eastmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/em_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_local
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/gal_header_localB.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_stpaul
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/sb_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_minneapolis
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/mb_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .header_westmetro
+{
+    font-family: Lucida Grande, helvetica, Arial, sans-serif;
+    background-image: url(http://stmedia.startribune.com/images/wm_2col_gal_header.png);
+    height: 30px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-color: none;
+    border-color: none;
+    border-style: none;
+    border-width: 0pt;
+    padding: 0;
+}
+
+#featured_businesses_container .fb_footer
+{
+    background-image: url(http://stmedia.startribune.com/images/gal_footer.gif);
+    height: 50px;
+    width: 300px;
+    background-repeat: no-repeat;
+    margin: 0px;
+    font-size: 12px;
+    color: red;
+}
+
+#featured_businesses_container .footer_links { padding: 10px 0px 0px 20px; }
+
+#featured_businesses_container .premadlink img
+{
+    border: solid #a8c0e2 1px;
+    float: left;
+    margin: 4px 4px 0px 0px;
+    width: 50px;
+}
+
+#featured_businesses_container .premadlink .tinytext
+{
+    color: #910000;
+    font-size: 10px;
+    display: block;
+    border-bottom: solid #a8c0e2 1px;
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+}
+
+#featured_businesses_container .textadcontainer, .ad_tableCell
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    padding: 4px;
+    line-height: 9pt;
+}
+
+#featured_businesses_container .ad_tableCell
+{
+    color: black;
+    font-size: 10px;
+    line-height: 13px;
+    word-spacing: 0px;
+}
+
+#featured_businesses_container .fb_footer  li
+{
+    margin: 0px;
+    padding: 10px 0px;
+    color: red;
+    list-style-position: inside;
+}
+
+#featured_businesses_container .fb_footer a:link,.fb_footer a:visited,.fb_footer a:active
+{
+    text-decoration: underline;
+    color: red;
+}
+
+#featured_businesses_container .fb_footer a:hover { text-decoration: none; }
+#featured_businesses_container .premadlink a:link, premadlink a:visited, premadlink a:active { color: #00365B; }
+
+#featured_businesses_container .premadlink a:hover
+{
+    text-decoration: none;
+    color: #00365B;
+}
+
+#featured_businesses_container .premadlink b
+{
+    font-size: 11px;
+    color: #00365B;
+    text-transform: uppercase;
+}
+
+/* ------------------------ End of Graphic Ad Link style -----------------------  */
+/*Daily Deals*/
+.dailydeals
+{
+    background-color: #9bb4bf;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.dailydeals img
+{
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.dailydeals .item
+{
+    background-color: white;
+    border-color: #dbe3e7;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    margin: 0;
+    padding: 6px 4px 6px 4px;
+}
+
+.dailydeals .item p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.dailydeals .item .headline { font-weight: bold; }
+.dailydeals .item .small { font-size: 10px; }
+
+.dailydeals .viewall
+{
+    text-align: center;
+    margin: 3px;
+    padding: 3px;
+}
+
+.dailydeals .viewall a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*End Daily Deals*/
+/* NEW Top Jobs styles */
+.topjobsheader
+{
+    margin: 0;
+    padding: 0;
+}
+
+#topjobs
+{
+    width: 298px;
+    margin: 0pt;
+    padding: 0pt;
+    background-image: url(http://ww2.startribune.com/mcu/projects/t/topjobs/041808/topjobsbg.gif);
+    background-repeat: repeat-y;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #09723c;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+#topjobs a { font-weight: bold; }
+
+#topjobs A:link
+{
+    color: #09723c;
+    text-decoration: underline;
+}
+
+#topjobs A:active
+{
+    color: #09723c;
+    text-decoration: none;
+}
+
+#topjobs A:visited
+{
+    color: #09723c;
+    text-decoration: underline;
+}
+
+#topjobs A:hover
+{
+    color: #09723c;
+    text-decoration: none;
+}
+
+#topjobs p { margin: 8px 4px 4px 8px; }
+
+#topjobs .bottomlinks
+{
+    text-align: center;
+    font-size: 11px;
+    font-weight: normal;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #09723c;
+    padding: 6px 0 4px 0;
+}
+
+#topjobs .bottomlinks a
+{
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* end NEW Top Jobs styles*/
+#homepageSlider { padding-left: 0px; }
+
+/*-------------------------- TOP JOBS MINI LEFT RAIL ------------------------*/
+#topjobsmini
+{
+    width: 120px;
+    margin: 0pt;
+    padding: 0pt;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #09723c;
+    font-family: sans-serif;
+    font-size: 11px;
+    background-color: #FFFFFF;
+}
+
+#topjobsmini a { font-weight: bold; }
+
+#topjobsmini a:link
+{
+    color: 09723c;
+    text-decoration: underline;
+}
+
+#topjobsmini a:active
+{
+    color: #09723c;
+    text-decoration: none;
+}
+
+#topjobsmini a:visited
+{
+    color: 09723c;
+    text-decoration: underline;
+}
+
+#topjobsmini a:hover
+{
+    color: #09723c;
+    text-decoration: none;
+}
+
+#topjobsmini p { margin: 8px 4px 4px 8px; }
+
+#topjobsmini .bottomlinks
+{
+    text-align: center;
+    font-size: 11px;
+    font-weight: normal;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #09723c;
+    padding: 6px 0 4px 0;
+    line-height: 1.5em;
+}
+
+#topjobsmini .bottomlinks a
+{
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*-------------------------- END TOP JOBS MINI LEFT RAIL ------------------------*/
+/*-------------------- BENING QUICK LINKS MODULE - LOCATED ON HOME PAGE AND SHOPPING -----------------------*/
+#ql_container
+{
+    width: 134px;
+    text-align: center;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: solid 1px #666633;
+}
+
+#ql_container img,#ql_container img a
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#ql_container a:link,#ql_container a:visited,#ql_container a:active,#ql_container a:active
+{
+    color: #b74a00;
+    margin: 0px;
+    padding: 0px;
+}
+
+#ql_container h1
+{
+    color: #b74a00;
+    font-size: 12px;
+    margin: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+#ql_container .text_block h1
+{
+    text-align: left;
+    /*display:inline*/
+}
+
+#ql_container .text_block .top { border-bottom: solid 1px #CCCC99; }
+#ql_container .text_block a { font-size: 10px; }
+#ql_container .text_block span { font-size: 12px; }
+
+#ql_container .ql_footer
+{
+    font-size: 10px;
+    margin: 0;
+    text-align: left;
+    color: #333333;
+    height: 0px;
+    line-height: 0px;
+}
+
+#ql_container .text_block { text-align: left; }
+
+#ql_container .premium_block h1
+{
+    color: #b74a00;
+    font-size: 14px;
+}
+
+#ql_container .premium_block
+{
+    background-image: url(http://stmedia.startribune.com/designimages/quicklink_bg.jpg);
+    background-repeat: repeat-x;
+    background-color: #f0f7fc;
+    margin: 0px;
+}
+
+#ql_container .premium_block img
+{
+    border: solid 1px #cccc91;
+    width: 115px;
+    height: 65px;
+}
+
+#ql_container span
+{
+    color: #4c4d4d;
+    font-size: 10px;
+    margin: 5px 5px 5px 5px;
+    display: block;
+    text-align: left;
+}
+
+#ql_container .premium_block span { font-size: 12px; }
+
+#ql_container .premium_block .link
+{
+    background-image: url(http://stmedia.startribune.com/designimages/ql_arrow_tpr.gif);
+    height: 20px;
+    width: 123px;
+    margin: 5px 5px 5px 5px;
+    font-size: 12px;
+    padding-top: 1px;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader;
+}
+
+#ql_container .bg_color { background-color: #f0f7fc; }
+
+#ql_container .dropshadow
+{
+    background-color: #f0f7fc;
+    background-image: url(http://stmedia.startribune.com/designimages/quicklink_dropshadow.jpg);
+    background-repeat: repeat-x;
+    height: 9px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#ql_container .header
+{
+    font-size: 10px;
+    background: #f0f7fc;
+}
+
+#ql_container .header span
+{
+    font-size: 10px;
+    background: #f0f7fc;
+    line-height: 11px;
+}
+
+#ql_container .header img
+{
+    float: left;
+    margin-left: 5px;
+    margin-right: 3px;
+    border: none;
+}
+
+#ql_container .header h1 { font-size: 14px; }
+
+/*--------------------- END QUICK LINKS MODULE - LOCATED ON HOME PAGE AND SHOPPING --------------------------*/
+#google_ads_div_Commenting_Sponsorship_210x81 { margin-bottom: 12px; }
+
+/*-------------------------- [BEGIN] FEATURE PROMO MODULE [HORIZONTAL] LOCATED ON HP AND SECTION FRONTS-----------------------*/
+#featurePromo_module
+{
+    width: 280px;
+    min-height: 140px;
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+#featurePromo_module .featurePromo_inner h3
+{
+    font-family: Popular-bold, sans-serif;
+    font-weight: bold;
+    font-size: 1.67em;
+    color: #666;
+    padding: 10px 0 0 10px;
+}
+
+#featurePromo_module .featurePromo_inner h3 a
+{
+    color: #666;
+    text-decoration: none;
+}
+
+#featurePromo_module .featurePromo_descr
+{
+    float: left;
+    width: 170px;
+    word-wrap: break-word;
+    margin: 12px 0 0 0;
+}
+
+#featurePromo_module .featurePromo_descr h4
+{
+    font: normal bold 1.167em/1.167em Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+#featurePromo_module .featurePromo_descr h4 a { color: #0B478D; }
+
+#featurePromo_module .featurePromo_descr p, #featurePromo_module .featurePromo_Image p
+{
+    font: normal normal 1em/1.3em Arial, Helvetica, sans-serif;
+    padding: 5px 0;
+}
+
+#featurePromo_module .featurePromo_Image p
+{
+    font-size: .8em;
+    font-style: italic;
+}
+
+#featurePromo_module .featurePromo_descr p.descrComplete
+{
+    font: normal normal 1em/1em Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+#featurePromo_module .featurePromo_Image
+{
+    float: left;
+    margin: 12px 12px 0 0;
+    padding: 0 0 0 10px;
+}
+
+/*-------------------------- [END] FEATURE PROMO MODULE [HORIZONTAL] LOCATED ON HP AND SECTION FRONTS------------------------*/
+/*-------------------------- [BEGIN] FEATURE PROMO MODULE [VERTICAL] LOCATED ON STORY PAGES-----------------------*/
+#vertical_featurePromo_container
+{
+    width: 102px;
+    height: 582px;
+    background: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border: 9px solid #F0F0F0;
+}
+
+#vertical_featurePromo_container .innerPromo_container
+{
+    width: 90px;
+    height: 195px;
+    border-bottom: 1px solid #777;
+    margin: 6px;
+    padding: 0;
+    overflow: hidden;
+}
+
+#vertical_featurePromo_container .middlePromo_container
+{
+    width: 90px;
+    height: 205px;
+    border-bottom: 1px solid #777;
+    margin: 6px;
+    padding: 0;
+    overflow: hidden;
+}
+
+#vertical_featurePromo_container .innerPromo_container_btm
+{
+    width: 90px;
+    height: 160px;
+    border: none;
+    margin: 0 6px;
+    padding: 0;
+    overflow: hidden;
+}
+
+#vertical_featurePromo_container h3
+{
+    font-family: Popular-bold, sans-serif;
+    font-weight: bold;
+    font-size: 1.40em;
+    color: #333;
+    margin: 5px 0 10px 0;
+    padding: 0;
+}
+
+#vertical_featurePromo_container h3 a
+{
+    color: #333;
+    text-decoration: none;
+}
+
+#vertical_featurePromo_container .innerPromo_descr
+{
+    width: 90px;
+    word-wrap: break-word;
+}
+
+#vertical_featurePromo_container .innerPromo_descr p, #vertical_featurePromo_container .innerPromo_descr p a
+{
+    font: bold .95em/1.3em Arial, Helvetica, sans-serif;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#vertical_featurePromo_container .innerPromo_descr p a:hover { text-decoration: underline; }
+
+#vertical_featurePromo_container .innerPromo_image img
+{
+    width: 88px;
+    height: 88px;
+    border: 1px solid #777;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------- [END] FEATURE PROMO MODULE [VERTICAL] LOCATED ON STORY PAGES------------------------*/
+/*-------------------------- BEGIN DYNAMIC STEALS BIG AD STYLES ------------------------*/
+div.stealsBigAd_container
+{
+    width: 300px;
+    height: 250px;
+    margin: 0 0 12px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div.stealsBigAd_header, div.stealsBigAd_content, div.stealsBigAd_footer
+{
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+div.stealsBigAd_header
+{
+    height: 67px;
+    background: url(http://adimages.startribune.com/mcu/projects/s/steals/dynamic_ads/bigAd_header.png) no-repeat;
+}
+
+/* p tag can handle more than 3 lines of content w/o breaking, however only 3 lines will be visable */
+p.stealsBigAd_catchPhrase
+{
+    color: #e6ede4;
+    font: normal normal 16px/19px Popular-medium, sans-serif;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 27px 15px 0 0;
+    padding: 0;
+}
+
+div.stealsBigAd_content
+{
+    height: 123px;
+    background: url(http://adimages.startribune.com/mcu/projects/s/steals/dynamic_ads/bigAd_content_bg.png) no-repeat;
+}
+
+h3.dblDigit_prices, h3.trplDigit_prices, p.stealsBigAd_dealInfo, span.small_stealHeading { text-align: center; }
+
+h3.dblDigit_prices, h3.dblDigit_prices a
+{
+    color: #202020;
+    font: normal bold 46px/49px Popular-bold, sans-serif;
+    margin: 0;
+    padding: 10px 5px 0 5px;
+    text-decoration: none;
+}
+
+h3.trplDigit_prices, h3.trplDigit_prices a
+{
+    color: #202020;
+    font: normal bold 40px/49px Popular-bold, sans-serif;
+    margin: 0;
+    padding: 10px 5px 0 5px;
+    text-decoration: none;
+}
+
+/* p tag can handle more than 3 lines of content w/o breaking, however only 3 lines will be visable */
+p.stealsBigAd_dealInfo
+{
+    color: #333;
+    font: normal normal 16px/20px Popular, sans-serif;
+    margin: 0 15px;
+    padding: 0;
+}
+
+span.small_stealHeading, span.small_stealHeading a
+{
+    color: #202020;
+    font: normal bold 35px/49px Popular-bold, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+div.stealsBigAd_footer
+{
+    height: 60px;
+    background: url(http://adimages.startribune.com/mcu/projects/s/steals/dynamic_ads/bigAd_footer.png) no-repeat;
+}
+
+div.stealsBigAd_advLogo
+{
+    float: left;
+    width: 162px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+p.stealsBigAd_advLogo_img
+{
+    text-align: center;
+    margin: 0;
+    padding: 5px 0 5px 12px;
+}
+
+div.stealsBigAd_getDeal
+{
+    float: right;
+    width: 138px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+p.stealsBigAd_getDeal_btn
+{
+    text-align: left;
+    margin: 0;
+    padding: 3px 0 0 0;
+}
+
+/*-------------------------- END DYNAMIC STEALS BIG AD STYLES ------------------------*/
+/*-------------------------- BEGIN DYNAMIC STEALS FLAG AD STYLES ------------------------*/
+div.stealsFlagAd_container
+{
+    width: 300px;
+    height: 70px;
+    margin: 0 0 12px 0;
+    padding: 0;
+    background: url(http://adimages.startribune.com/mcu/projects/s/steals/dynamic_ads/flagAd_content_bg.png) no-repeat;
+    overflow: hidden;
+}
+
+div.stealsFlagAd_content
+{
+    float: right;
+    width: 180px;
+    height: 70px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+p.stealsFlagAd_dealTitle
+{
+    color: #FFF;
+    font: normal normal 16px/19px Popular-medium, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #999;
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+p.stealsFlagAd_dealInfo, p.stealsFlagAd_dealInfo a
+{
+    color: #333;
+    font: normal normal 12px/13px Popular, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+/*-------------------------- END DYNAMIC STEALS FLAG AD STYLES ------------------------*/
+/*-------------------------- BEGIN OUTBRAIN AGGREGATION BLOCK ------------------------*/
+.OUTBRAIN
+{
+    clear: both;
+    width: 100%;
+    padding: 0;
+    float: left;
+    margin-top: 12px;
+}
+
+.ob_org_header, .obpd_header
+{
+    font-size: 1.17em;
+    font-weight: bold;
+    border-bottom: 1px dotted #D7D7D7;
+    display: block;
+    width: 100%;
+    padding: 0 0 6px 0;
+    margin: 0 0 6px 0;
+    text-transform: lowercase;
+}
+
+.ob_dual_container.AR_1
+{
+    background: url(http://stmedia.startribune.com/designimages/graySeparator.gif) 50% top repeat-y;
+    float: left;
+    position: relative;
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.ob_dual_left,.ob_dual_right
+{
+    padding: 0 !important;
+    width: 48% !important;
+}
+
+.wide .ob_dual_right,.wide .ob_dual_left { width: 468px !important; }
+.ob_dual_right { margin-left: 4%; }
+
+.odb_li
+{
+    font-size: 0.75em/16px;
+    font-weight: bold;
+    border-bottom: 1px dotted #D7D7D7;
+    display: block;
+    width: 100%;
+    padding: 0 0 6px 0;
+    margin: 0 0 6px 0;
+}
+
+.ob_dual_container ul li:last-child
+{
+    border-bottom: 0;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.ob_dual_left .ob_source { display: none; }
+
+.ob_dual_right .ob_source
+{
+    font-weight: normal;
+    color: #7e7e7e;
+}
+
+.AR_1 .ob_what
+{
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    padding: 0 !important;
+}
+
+.rec-src-link
+{
+    padding-right: 22px;
+    background: url(http://stmedia.startribune.com/designimages/highSchoolArrow.gif) no-repeat right top;
+}
+
+/*-------------------------- END OUTBRAIN AGGREGATION BLOCK ------------------------*/
+/*-------------------------- DPP scrollable ------------------------*/
+.dpp.scrollable
+{
+    position: absolute !important;
+    bottom: 8px;
+    overflow: hidden;
+    height: 24px;
+    left: 6px;
+    z-index: 10000;
+    width: 87px;
+}
+
+.dpp.scrollable .items
+{
+    width: 3000px;
+    position: absolute;
+    clear: both;
+}
+
+.dpp .items div
+{
+    float: left;
+    width: 87px;
+}
+
+.dpp.scrollable img
+{
+    float: left;
+    width: 98px;
+    height: 24px;
+}
+
+.dpp.scrollable .active
+{
+    position: relative;
+    cursor: pointer;
+}

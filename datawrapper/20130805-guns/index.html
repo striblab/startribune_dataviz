@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://apps.startribune.com/news/guns-and-deadly-streets/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style type="text/css">
+/*
+This CSS resource incorporates links to font software which is
+the valuable copyrighted property of WebType LLC, The Font Bureau,
+Ascender Corporation and/or their suppliers. You may not
+attempt to copy, install, redistribute, convert, modify or reverse
+engineer this font software. Please contact WebType with any
+questions: http://www.webtype.com
+*/
+
+/*
+@font-face syntax based on Fontspring @font-face syntax.
+*/
+
+@font-face {
+	font-family: Popular;
+	src: url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-2.eot?") format("embedded-opentype"),
+		 url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-3.woff") format("woff"),
+		 url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-1.ttf") format("truetype"),
+		 url("http://apps.startribune.com/fonts/popular/regular/851caebd-2961-4fd9-a500-2b38452b1ec9-4.svg#web") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Popular-medium;
+	src: url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-2.eot?") format("embedded-opentype"),
+		 url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-3.woff") format("woff"),
+		 url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-1.ttf") format("truetype"),
+		 url("http://apps.startribune.com/fonts/popular/medium/96c3bd87-fed5-419d-a1cf-d947b17d6ab7-4.svg#web") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Popular-bold;
+	src: url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-2.eot?") format("embedded-opentype"),
+	url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-3.woff") format("woff"),
+	url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-1.ttf") format("truetype"),
+	url("http://apps.startribune.com/fonts/popular/bold/9a23c9ca-82fe-417a-9070-5f5daeaf6214-4.svg#web") format("svg");
+	font-style: normal;
+	font-weight: bold;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" media="screen" href="./index_files/RedesignadStyles011108.css">
+<link rel="stylesheet" href="./index_files/style.css" type="text/css">
+<!--[if lt IE 9]><link rel="stylesheet" href="/includes/low-ie-styles.css?2" type="text/css" /><!--<![endif]-->
+<script src="./index_files/jquery-1.4.4.min.js" type="text/javascript" language="javascript"></script>
+<script src="./index_files/jquery.carouFredSel-5.5.0-packed.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="./index_files/globalJquery.js" language="javascript"></script>
+<script type="text/javascript" src="./index_files/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="./index_files/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="./index_files/jquery.tools.min.js"></script>
+
+	<title></title>
+</head>
+<body style="background-image:none;">
+
+<link rel="stylesheet" type="text/css" href="./index_files/gun_map.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://www.startribune.com/includes/leaflet-0.5.ie.css" />
+    <![endif]-->
+
+
+   <div id="homicides_wrapper">
+        <div id="homicides_part1_wrapper">
+            <div id="map-outer-wrapper">
+                <div id="controls">
+                    <div class="controls-arrow homicides_button_inactive" id="controls-prev">
+                        &lt;
+                    </div>
+                    <div id="controls-stage-indicator">
+                        
+                            <div class="indicator homicides_stage_active" id="homicides_stage_0"></div>
+                        
+                            <div class="indicator" id="homicides_stage_1"></div>
+                        
+                            <div class="indicator" id="homicides_stage_2"></div>
+                        
+                            <div class="indicator" id="homicides_stage_3"></div>
+                        
+                            <div class="indicator" id="homicides_stage_4"></div>
+                        
+                    </div>
+                    <script type="text/template" id="stage_numbers_template">
+                        <% jQuery.each(stages, function(i, s) { %>
+                            <div class="indicator" id="homicides_stage_<%- i %>"></div>
+                        <% }); %>
+                    </script>
+                    <div class="controls-arrow homicides_button_active" id="controls-next">
+                        &gt;
+                    </div>
+                    <div id="controls-text"><p>Authorities seized these guns in a variety of situations: a drug bust, an arrest after a drive-by shooting, a welfare check on a suicidal man, serving a warrant, catching a felon carrying a weapon, an impounded vehicle, a man making terroristic threats, and firearms turned in by people who no longer want them.</p></div>
+                    <div class="clear"></div>
+                </div>
+                <div id="map-inner-wrapper">
+                    <div id="homicides_map" class="leaflet-container leaflet-fade-anim" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 520px; top: 3px;" src="./index_files/736.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 264px; top: 3px;" src="./index_files/736(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 520px; top: -253px;" src="./index_files/735.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 520px; top: 259px;" src="./index_files/737.png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 264px; top: -253px;" src="./index_files/735(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 264px; top: 259px;" src="./index_files/737(1).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 8px; top: 3px;" src="./index_files/736(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 776px; top: 3px;" src="./index_files/736(3).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 776px; top: 259px;" src="./index_files/737(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 776px; top: -253px;" src="./index_files/735(2).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 8px; top: 259px;" src="./index_files/737(3).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 8px; top: -253px;" src="./index_files/735(3).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 1032px; top: 3px;" src="./index_files/736(4).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -248px; top: 3px;" src="./index_files/736(5).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 1032px; top: -253px;" src="./index_files/735(4).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -248px; top: 259px;" src="./index_files/737(4).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: -248px; top: -253px;" src="./index_files/735(5).png"><img class="leaflet-tile leaflet-tile-loaded" style="height: 256px; width: 256px; left: 1032px; top: 259px;" src="./index_files/737(5).png"></div><div class="leaflet-layer" style="opacity: 0.8;"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 520px; top: 3px;" src="./index_files/736(6).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 264px; top: 3px;" src="./index_files/736(7).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 520px; top: -253px;" src="./index_files/735(6).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 520px; top: 259px;" src="./index_files/737(6).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 264px; top: -253px;" src="./index_files/735(7).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 264px; top: 259px;" src="./index_files/737(7).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 8px; top: 3px;" src="./index_files/736(8).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 776px; top: 3px;" src="./index_files/736(9).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 776px; top: 259px;" src="./index_files/737(8).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 776px; top: -253px;" src="./index_files/735(8).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 8px; top: 259px;" src="./index_files/737(9).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 8px; top: -253px;" src="./index_files/735(9).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 1032px; top: 3px;" src="./index_files/736(10).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: -248px; top: 3px;" src="./index_files/736(11).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 1032px; top: -253px;" src="./index_files/735(10).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: -248px; top: 259px;" src="./index_files/737(10).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: -248px; top: -253px;" src="./index_files/735(11).png"><img class="leaflet-tile" style="height: 256px; width: 256px; left: 1032px; top: 259px;" src="./index_files/737(11).png"></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in leaflet-bar-part leaflet-bar-part-top" href="http://apps.startribune.com/news/guns-and-deadly-streets/#" title="Zoom in">+</a><a class="leaflet-control-zoom-out leaflet-bar-part leaflet-bar-part-bottom" href="http://apps.startribune.com/news/guns-and-deadly-streets/#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control">Powered by <a href="http://leafletjs.com/">Leaflet</a> — Map tiles by <a href="http://stamen.com/">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>.<br>Data by <a href="http://openstreetmap.org/">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.</div></div></div></div>
+                    <div id="homicides_map_tooltip"></div>
+                    <div id="homicides_map_legend">
+                       <div class="legend_item">
+                            <img id="legend_homicide_dot" src="./index_files/homicide.png">
+                            <div class="legend_label">Youth homicide (2001-12)</div>
+                        </div>
+                        <div class="legend_item">
+                            <span class="legend_box" id="legend_box_2"></span>
+                            <div class="legend_label">1 - 2 gun seizures</div>
+                        </div>
+                        <div class="legend_item">
+                            <span class="legend_box" id="legend_box_3"></span>
+                            <div class="legend_label">3 - 8</div>
+                        </div>
+                        <div class="legend_item">
+                            <span class="legend_box" id="legend_box_4"></span>
+                            <div class="legend_label">9 - 26</div>
+                        </div>
+                        <div class="legend_item">
+                            <span class="legend_box" id="legend_box_5"></span>
+                            <div class="legend_label">27 - 90</div>
+                        </div>
+                        <div class="legend_item">
+                            <span class="legend_box" id="legend_box_6"></span>
+                            <div class="legend_label">91+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>Source: Minneapolis Police Department, St. Paul Police Department and <a target="_blank" href="http://www.health.state.mn.us/">Minnesota Department of Health</a></p>
+            </div>
+           <script type="text/template" id="bubble-template">
+                <div class="homicides_victim">
+                    <div class="homicides_victim_name">
+                        <%- name %>
+                    </div>
+                    <div class="homicides_victim_years">
+                        <%- birth_year %> &ndash; <%- death_year %>
+                    </div>
+                    <% if (img_url) { %>
+                        <div class="homicides_victim_img_wrapper">
+                            <img class="homicides_victim_img" src="<%- img_url %>" />
+                        </div>
+                    <% } %>
+                    <% if (text) { %>
+                        <div class="homicides_victim_text">
+                            <%- text %>
+                        </div>
+                    <% } %>
+                    <% if (false && url && headline) { %>
+                        <div class="homicides_victim_article">
+                            Star Tribune coverage: <a target="_blank" href="<%- url %>"><%- headline %></a>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                    <a class="homicides_victim_more" href="http://www.startribune.com/gunvictims">Juvenile homicides</a>
+                </div>
+            </script>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="./index_files/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./index_files/underscore-1.4.3.min.js"></script>
+    <script type="text/javascript" src="./index_files/leaflet-0.5.min.js"></script>
+    
+    
+<script type="text/javascript" src="./index_files/guns-map.min.js"></script>
+
+
+
+</body></html>

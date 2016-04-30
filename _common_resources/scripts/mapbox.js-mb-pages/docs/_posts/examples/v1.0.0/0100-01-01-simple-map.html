@@ -1,0 +1,16 @@
+---
+layout: example
+categories: example/v1.0.0
+permalink: /example/v1.0.0
+version: v1.0.0
+title: A simple map
+description: Initialize a map in an HTML element with Mapbox.js.
+tags:
+  - layers
+---
+
+<div id='map'></div>
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([40, -74.50], 9);
+</script>
