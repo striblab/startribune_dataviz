@@ -27,10 +27,10 @@
    .metroSwitch:hover { background-color:#333 !important; color:#fff !important; cursor:pointer; }
    #mapMN, #country { display:none; }
 
-   .tableHead { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:48%; font-weight:900; font-family:"Poynter Serif RE"; }
-   .tableCell { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:48%; font-family:"Benton Sans"; }
+   .tableHead { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:32%; font-weight:900; font-family:"Poynter Serif RE"; }
+   .tableCell { display:inline-block; padding:10px; border-bottom:1px solid #ddd; width:32%; font-family:"Benton Sans"; }
    .tableBreak { clear:both; display:block; }
-   .table { text-align:center; width:100%; overflow-x:hidden; overflow-y:auto; height:150px; }
+   .table { text-align:center; width:100%; overflow-x:hidden; overflow-y:auto; height:400px; }
    #filter input { border-radius:0 !important; }
    .district:hover, .selected, .hSort:hover, .start:hover { background-color:#333; color:#fff !important; cursor:pointer; }
    #quintile { float:left; width:20%; }
@@ -57,7 +57,7 @@
   #tableBlock { float:left; display:inline-block; width:47%; }
   #districtName { display:none; }
 
-    #tableBlock, #gridBlock, #quintile, #chartBlock, #chart { display:block; width:100%; float:none; }
+    #tableBlock, #gridBlock, #quintile, #chartBlock, #chart { width:100%; float:none; display:block !important; }
     .metroSwitch { width:32%; }
 
    @media (max-width:800px) {
@@ -74,7 +74,7 @@
 <div class="chatter">chatter</div>
 <div class="breaker"></div> -->
 
-<div id="viewSwitch"><div class="metroSwitch" data="country">National</div> <div class="metroSwitch selected" data="map">Midwest</div> <div class="metroSwitch" data="mapMN">MN</div> <!-- <div class="zoom">Reset View</div> --></div>
+<div id="viewSwitch"><div class="metroSwitch" data="country">National</div> <div class="metroSwitch selected" data="map">Midwest</div> <div class="metroSwitch" data="mapMN">MN</div> <div class="zoom">Reset View</div></div>
 
 <div class="breaker"></div>
 
@@ -112,16 +112,16 @@
 <div id="rightSide">
 <div id="districtName" style="display:none;">Midwest</div>
 
-<div id="tableBlock" style="display:none;">
-<h3>Someone growing up in</h3>
+<div id="tableBlock">
+<!-- <h3>Someone growing up in</h3> -->
 <div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by county or state"></input></div>
 <div class="table" id="table">
 <div class='tableHead partyBar hSort' data="county">County</div><div class='tableHead hSort selected' data="state">State</div>
-<!-- <div class='tableHead hSort' data="aum25">AUM p25</div><div class='tableHead hSort' data="aum75">AUM p75</div> -->
+<div class='tableHead hSort' data="aum25">AUM</div>
 </div>
 </div>
 
-<div id="gridBlock" style="display:none;">  
+<!-- <div id="gridBlock" style="display:none;">  
 <h3 style="text-align:left;">...with parents earning in the <span id="pQ">--</span> quintile</h3> 
 <div id="quintile">
 <div class="grid start" data="p5">5th</div>
@@ -135,7 +135,7 @@
 </div>
 <div class="breaker"></div>
 <h3 style="text-align:right;">...end up on average in the <span id="cQ">--</span> quintile</h3>
-</div>
+</div> -->
 </div>
 
   </div>
@@ -257,9 +257,9 @@ d3.select(container).selectAll(".card")
     p75 = "No data available"; 
   }
   
-  return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div>";
+  // return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div>";
 
-  // return "<div class='tableCell district' data='county'>" + d.county + "</div><div class='tableCell' data='state'>" + d.state + "</div><div class='tableCell p25'>" + p25 + "</div><div class='tableCell p75'>" + p75 + "</div><div class='smallbreak'></div>";
+  return "<div class='tableCell district' data='county'>" + d.county + "<span style='display:none'>" + d.FIPS + "</span></div><div class='tableCell' data='state'>" + d.state + "</div><div class='tableCell p25'>" + p25 + "</div>";
 });
 
 $(".district").click(function() {
@@ -298,12 +298,16 @@ jQuery.fn.d3Up = function () {
     // clicked2();
     var findDistrict = $(this).text() + "_us";
     var findDistrictMN = $(this).text() + "_mn";
+    var findDistrictMN = $(this).text() + "_country";
     $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Down();
     $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Up();
     $("[id='" + findDistrict.replace(new RegExp(" ", "g"),"-") + "']").d3Click();
     $("[id='" + findDistrictMN.replace(new RegExp(" ", "g"),"-") + "']").d3Down();
     $("[id='" + findDistrictMN.replace(new RegExp(" ", "g"),"-") + "']").d3Up();
     $("[id='" + findDistrictMN.replace(new RegExp(" ", "g"),"-") + "']").d3Click();
+    $("[id='" + findDistrictMW.replace(new RegExp(" ", "g"),"-") + "']").d3Down();
+    $("[id='" + findDistrictMW.replace(new RegExp(" ", "g"),"-") + "']").d3Up();
+    $("[id='" + findDistrictMW.replace(new RegExp(" ", "g"),"-") + "']").d3Click();
 });
 
    $('.p25').each(function() {
@@ -412,8 +416,8 @@ d3.json("shapefiles/" + shape, function(error, us) {
       .data(us.features)
     .enter().append("path")
       .attr("d", path)
-      // .on("click", clicked)
-      .attr("id", function(d) { var str = d.properties.NAME + "_" + geo; return str.replace(new RegExp(" ", "g"),"-"); })
+      .on("click", clicked)
+      .attr("id", function(d) { var str = d.properties.NAME + "" + d.properties.GEOID + "_" + geo; return str.replace(new RegExp(" ", "g"),"-"); })
       .attr("precinctName", function(d){ return d.properties.NAME })
       .attr("class", function(d){
          return mapColor(d, race, dataCompare);
