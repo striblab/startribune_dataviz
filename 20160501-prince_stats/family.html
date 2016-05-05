@@ -10,6 +10,7 @@
   <meta name="author" content="Frey Hargarten - StarTribune">
 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
   
   <style>
        body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
@@ -22,7 +23,7 @@
        #filterBox { float:right; position:fixed; width:300px; }
        #resultsBox { float:right; width:70%; display:none; }
        #contactsBox { float:right; width:70%; }
-       #editbox, #tree { float:right; width:70%; display:none; }
+       #editbox, #tree, #timeline { float:right; width:70%; display:none; }
 
        #resultsBox .profile { border-bottom:1px solid #ddd; }
        #resultsBox .name { font-weight:900; font-size:1.5em; }
@@ -88,14 +89,23 @@
 <iframe src="https://docs.google.com/spreadsheets/d/16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI/edit?usp=sharing"></iframe>
 </div>
 
+<div id="timeline">
+<div id='timeline-embed' style="width: 100%; height: 600px"></div>
+</div>
+
 </div>
 </body>
 
 <script src="//code.jquery.com/jquery-latest.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-// $("#headerDiv").sticky({topSpacing:1});
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+<script type="text/javascript">
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=timeline", function(error, dataLoadTime) {
 
+  dataTime = dataLoadTime.timeline;
+      timeline = new TL.Timeline('timeline-embed',
+        dataTime);
+    });
 </script>
 <script>
 //LIVE JSON MAGIC
@@ -160,23 +170,24 @@ function buildButtons(){
   .attr("data",function(d){ return d.id; })
   .html(function(d){ return d.name; });
 
+  $("#filterBox").append('<div class="breaker"></div><div class="button page selected" data="contacts">Contacts</div>');
+  $("#filterBox").append('<div class="button page" data="profiles">Profiles</div>');
+  $("#filterBox").append('<div class="button page" data="timeline">Timeline</div>');
+  $("#filterBox").append('<div class="button page" data="tree">Tree</div>');
+  $("#filterBox").append('<div class="button page" data="edit">Edit</div><div class="breaker"></div>');
   $("#filterBox").append('<p></p><div class="button selected2 sort" data="all">All</div>');
   $("#filterBox").append('<div class="button sort" data="family">Family</div>');
   $("#filterBox").append('<div class="button sort" data="circle">Inner Circle</div>');
- $("#filterBox").append('<div class="button sort" data="musician">Musicians</div><p></p>');
-  $("#filterBox").append('<div class="button page selected" data="contacts">Contacts</div>');
-  $("#filterBox").append('<div class="button page" data="profiles">Profiles</div>');
-  $("#filterBox").append('<div class="button page" data="tree">Tree</div>');
-  $("#filterBox").append('<div class="button page" data="edit">Edit</div>');
-
+  $("#filterBox").append('<div class="button sort" data="musician">Musicians</div>');
 
   $(".page").click(function() {
     $(".page").removeClass("selected");
     $(this).addClass("selected");
-    if ($(this).attr("data") == "contacts") { $(".profile").show(); $("#resultsBox, #editbox, #tree").hide(); $("#contactsBox").show(); }
-    else if ($(this).attr("data") == "profiles") { $("#resultsBox").show(); $("#contactsBox, #editbox, #tree").hide(); }
-    else if ($(this).attr("data") == "edit") { $("#editbox").show(); $("#resultsBox, #contactsBox, #tree").hide(); }
-    else if ($(this).attr("data") == "tree") { $("#tree").show(); $("#resultsBox, #contactsBox, .editbox").hide(); }
+    if ($(this).attr("data") == "contacts") { $(".profile").show(); $("#resultsBox, #editbox, #tree, #timeline").hide(); $("#contactsBox").show(); }
+    else if ($(this).attr("data") == "profiles") { $("#resultsBox").show(); $("#contactsBox, #editbox, #tree, #timeline").hide(); }
+    else if ($(this).attr("data") == "edit") { $("#editbox").show(); $("#resultsBox, #contactsBox, #tree, #timeline").hide(); }
+    else if ($(this).attr("data") == "tree") { $("#tree").show(); $("#resultsBox, #contactsBox, #timeline, #editbox").hide(); }
+    else if ($(this).attr("data") == "timeline") { $("#timeline").show(); $("#resultsBox, #contactsBox, #tree, #editbox").hide(); }
   });
   $(".sort").click(function() {
     $(".sort").removeClass("selected2");
