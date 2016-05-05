@@ -164,11 +164,11 @@ function tableSort(container,party,data,col,sorted){
 
 function buildButtons(){
 
- d3.select("#filterBox").selectAll(".button")
-  .data(data).enter().append("div")
-  .attr("class","button person")
-  .attr("data",function(d){ return d.id; })
-  .html(function(d){ return d.name; });
+ // d3.select("#filterBox").selectAll(".button")
+ //  .data(data).enter().append("div")
+ //  .attr("class","button person")
+ //  .attr("data",function(d){ return d.id; })
+ //  .html(function(d){ return d.name; });
 
   $("#filterBox").append('<div class="breaker"></div><div class="button page selected" data="contacts">Contacts</div>');
   $("#filterBox").append('<div class="button page" data="profiles">Profiles</div>');
