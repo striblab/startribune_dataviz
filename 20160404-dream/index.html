@@ -42,7 +42,7 @@
   .negDark { fill:#CC4C02 !important; background-color:#CC4C02 !important; color:#fff; }
   .negMid { fill:#FE9929 !important; background-color:#FE9929 !important; color:#fff; }
   .negLight { fill:#FED98E !important; background-color:#FED98E !important; }
-  .neutral { fill:#ddd !important; background-color:#ddd !important; }
+  .neutral { fill:#ddd !important; background-color:#fff !important; }
   .posLight { fill:#ECF9B9 !important; background-color:#ECF9B9 !important; }
   .posMid { fill:#ADDD8E !important; background-color:#ADDD8E !important; color:#fff; }
   .posDark { fill:#31A354 !important; background-color:#31A354 !important; color:#fff; }
@@ -361,7 +361,7 @@ function mapColor(d, subject, dataCompare){
   for (var i=0; i < data.length; i++){
     if (d.properties.GEOID == data[i].FIPS || ("27" + String(d.properties.COUNTYFIPS)) == String(data[i].FIPS)){
       var points = data[i].aum25 - 47;
-      if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "#ddd"; }
+      if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "#fff"; }
       else { 
         var color_scale = d3.scale.linear().domain([-25, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
         return color_scale(points);
@@ -377,7 +377,7 @@ function mapColor(d, subject, dataCompare){
       // return color_scale(d['properties']['CENSUSAREA']);
     }
   }
-    return "#ddd";
+    return "#fff";
 }
 
 function mapTips(d, subject, dataCompare){
