@@ -10,7 +10,6 @@
   <meta name="author" content="Frey Hargarten - StarTribune">
 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
   
   <style>
        body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
@@ -47,6 +46,11 @@
         .contactRow td { width:100px; padding:10px; clear:both; word-wrap:break-word !important; text-align:center; }
         .contactHeader { font-size:1em !important; font-weight:normal !important; display:block; }
         .contactHeader th { width:100px; padding:10px; clear:both; font-weight:900; word-wrap:break-word !important;  }
+
+        #timeline { border-left:3px solid #333; }
+        .time { padding:20px; }
+        .event { font-weight:900; font-size:1.2em; }
+        .notes { padding:7px; }
 
       @media (max-width:500px) {
        #filterBox { float:none; position:static; width:100%; }
@@ -90,7 +94,7 @@
 </div>
 
 <div id="timeline">
-<div id='timeline-embed' style="width: 100%; height: 600px"></div>
+
 </div>
 
 </div>
@@ -98,15 +102,6 @@
 
 <script src="//code.jquery.com/jquery-latest.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-<script type="text/javascript">
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=timeline", function(error, dataLoadTime) {
-
-  dataTime = dataLoadTime.timeline;
-      timeline = new TL.Timeline('timeline-embed',
-        dataTime);
-    });
-</script>
 <script>
 //LIVE JSON MAGIC
 
@@ -115,9 +110,12 @@ d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7
 
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=profiles", function(error, dataLoad) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=contacts", function(error, dataLoadContacts) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=timeline", function(error, dataLoadTime) {
 
 var data = dataLoad.profiles;
 var dataContacts = dataLoadContacts.contacts;
+var dataTime = dataLoadTime.timeline;
+
 
 function tableSort(container,party,data,col,sorted){
    
@@ -281,11 +279,25 @@ $(".th").click(function() {
 
 }
 
+function spitTimeline(){
+  d3.select("#timeline").selectAll(".time")
+  .data(dataTime).enter().append("div")
+  .attr("class",function(d) { return "time"; })
+  .html(function(d){ 
+    if (d.time != null){ var time = d.time; }
+    else { var time = ""; }
+    var datestring = new Date(d.date).getFullYear() + "-" + (Number(new Date(d.date).getMonth()) + 1) + "-" + new Date(d.date).getDate();
+
+      return "<div class='event'>" + d.event + "</div><div class='date'>" + datestring + "</div><div class='notes'>" + d.notes + "</div>";
+ });
+}
+
 buildButtons();
 buildProfiles();
 spitContacts();
+spitTimeline();
 
-
+});
 });
 });
 </script>
