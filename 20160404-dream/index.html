@@ -426,7 +426,6 @@ d3.json("shapefiles/" + shape, function(error, us) {
       .attr("d", path)
       .on("click", clicked)
       .attr("id", function(d) { var str = d.properties.NAME + "" + d.properties.GEOID + "_" + geo; return str.replace(new RegExp(" ", "g"),"-"); })
-      .attr("precinctName", function(d){ return d.properties.NAME })
       .style("fill", function(d){
          return mapColor(d, race, dataCompare);
         })
@@ -450,7 +449,7 @@ d3.json("shapefiles/" + shape, function(error, us) {
         }
       }
        })
-      .style("stroke-width", ".2px")
+      .style("stroke-width", ".5px")
       .style("stroke", "#fff")
       .call(d3.helper.tooltip(function(d, i){
         return mapTips(d, race, dataCompare);
