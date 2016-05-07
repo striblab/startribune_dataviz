@@ -18,7 +18,8 @@
 
       #wrapper { text-align:center; }
 
-      #viewSwitch { padding:20px; }
+      #viewSwitch, #current { padding:20px; }
+      .stat { font-weight:900; }
 
       .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; }
       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -42,8 +43,10 @@
 
 <div id="chart"></div>
 
+<div id="current" class="chatter"><span class="stat" id="rate"></span> <span id="gender"></span> babies per 10k people in <span class="stat" id="year"></span> were named <span class="stat" id="named2"></span></div>
+
 <div id="filter"><input type="search" id="filter_box" placeholder="Search by name"></input></div>
-<div id="namebank"></div>
+
 
     <div id="viewSwitch">
 <div id="selector">
@@ -103,7 +106,12 @@ function switchChart(name,gender,colors){
       for (var k=1; k < dataStream.length; k++){
         // console.log(axis[k] + " " + data[index].year);
         if (data[index].name != name || data[index].gender != gender){ break; }
-        if (axis[k] == data[index].year) { dataStream[k] = data[index].rate; index++; }
+        if (axis[k] == data[index].year) { 
+          dataStream[k] = data[index].rate; 
+          $("#rate").html(data[index].rate);
+          $("#year").html(data[index].year);
+          index++; 
+        }
       }
       // break;
     }
@@ -184,10 +192,11 @@ $.urlParam = function(name){
 if ($.urlParam('name') != 0 ) { 
   var name = toTitleCase($.urlParam('name')); 
   var gender = String($.urlParam('gender')).toUpperCase(); 
-  if (gender == "M") { var colorMe = "#67B4C2"; }
-  else  { var colorMe = "#AA6666"; }
-  $("#named").html(name);
-  $("#named").css("color",colorMe);
+  if (gender == "M") { var colorMe = "#67B4C2"; var sex = "boy"; }
+  else  { var colorMe = "#AA6666";  var sex = "girl"; }
+  $("#named, #named2").html(name);
+  $("#gender").html(sex);
+  $("#named, #rate, #named2").css("color",colorMe);
   switchChart(name,gender,colorMe);
 } 
 
