@@ -13,22 +13,16 @@
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
   <style>
-
+      body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       #chart .c3-line { stroke-width:6px !important; }
 
       #wrapper { text-align:center; }
 
-      #viewSwitch, #current { padding:20px; }
+      #viewSwitch, #current { padding:10px; }
       .stat { font-weight:900; }
 
-      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; }
-      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
-      ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
-      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
-      .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
-      header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
-      .c3-tooltip th { background-color:#aaa;font-size:12px;padding:2px 5px;text-align:left;color:#FFF;font-family:"Benton Sans"; }
-      .card { display:none; }
+      .switch { padding:10px; display:inline-block; text-align:center; width:48.5%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; color:#000 !important; }
+      .switch:hover, .selected, .step:hover { background-color:#4C4C39 !important; color:#fff !important; cursor:pointer; }
 
       @media (max-width:500px) {
       }
@@ -45,24 +39,12 @@
 
 <div id="current" class="chatter"><span class="stat" id="rate"></span> <span id="gender"></span> babies per 10k people in <span class="stat" id="year"></span> were named <span class="stat" id="named2"></span></div>
 
-<div id="filter"><input type="search" id="filter_box" placeholder="Search by name"></input></div>
-
-
-    <div id="viewSwitch">
-<div id="selector">
-  <section class="main">
-        <div class="wrapper-demo">
-          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
-            <span>Male</span>
-              <ul class="dropdown months" tabindex="1">
-              <li class="switch"><a href="#" data="M">Male</a></li>
-              <li class="switch"><a href="#" data="F">Female</a></li>
-              </ul>
-          </div>
-        ​</div>
-</section>
+<div id="viewSwitch">
+<li class="switch" id="M" data="M">Male</li>
+<li class="switch" id="F" data="F">Female</li>
 </div>
-</div>
+
+<div id="filter"><input type="search" id="filter_box" placeholder="Type name and press enter"></input></div>
 
   </div>
 </body>
@@ -192,6 +174,7 @@ $.urlParam = function(name){
 if ($.urlParam('name') != 0 ) { 
   var name = toTitleCase($.urlParam('name')); 
   var gender = String($.urlParam('gender')).toUpperCase(); 
+  $("#" + gender).addClass("selected");
   if (gender == "M") { var colorMe = "#67B4C2"; var sex = "boy"; }
   else  { var colorMe = "#AA6666";  var sex = "girl"; }
   $("#named, #named2").html(name);
@@ -202,8 +185,10 @@ if ($.urlParam('name') != 0 ) {
 
   $( document ).ready(function() {
     var genderStatus = "M";
-    $(".switch a").click(function()  { 
+    $(".switch").click(function()  { 
        genderStatus = $(this).attr("data");
+       $(".switch").removeClass("selected");
+       $(this).addClass("selected");
     });
 
    $('#filter_box').keyup(function(e){
@@ -216,52 +201,5 @@ if ($.urlParam('name') != 0 ) {
 });   
 
 });
-</script>
-<script type="text/javascript">
-      
-      function DropDown(el) {
-        this.dd = el;
-        this.placeholder = this.dd.children('span');
-        this.opts = this.dd.find('ul.dropdown > li');
-        this.val = '';
-        this.index = -1;
-        this.initEvents();
-      }
-      DropDown.prototype = {
-        initEvents : function() {
-          var obj = this;
-
-          obj.dd.on('click', function(event){
-            $(this).toggleClass('active');
-            return false;
-          });
-
-          obj.opts.on('click',function(){
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-          });
-        },
-        getValue : function() {
-          return this.val;
-        },
-        getIndex : function() {
-          return this.index;
-        }
-      }
-
-      $(function() {
-
-        var dd = new DropDown( $('#dd') );
-        var dd2 = new DropDown( $('#ddY') );
-
-        $(document).click(function() {
-          // all dropdowns
-          $('.wrapper-dropdown-1').removeClass('active');
-        });
-
-      });
-
 </script>
 </html>
