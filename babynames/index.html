@@ -173,7 +173,8 @@ $.urlParam = function(name){
 
 if ($.urlParam('name') != 0 ) { 
   var name = toTitleCase($.urlParam('name')); 
-  var gender = String($.urlParam('gender')).toUpperCase(); 
+  var gender = String($.urlParam('gender')).toUpperCase();
+  var genderStatus = gender; 
   $("#" + gender).addClass("selected");
   if (gender == "M") { var colorMe = "#67B4C2"; var sex = "boy"; }
   else  { var colorMe = "#AA6666";  var sex = "girl"; }
@@ -184,7 +185,6 @@ if ($.urlParam('name') != 0 ) {
 } 
 
   $( document ).ready(function() {
-    var genderStatus = "M";
     $(".switch").click(function()  { 
        genderStatus = $(this).attr("data");
        $(".switch").removeClass("selected");
