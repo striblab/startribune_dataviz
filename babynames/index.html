@@ -82,7 +82,7 @@ function switchChart(name,gender,colors){
   var index = 0;
 
   for (var i=0; i < data.length; i++){
-    if (name == data[i].name || gender == data[i].gender){
+    if (name == data[i].name && gender == data[i].gender){
       found = true;
       index = i;
       for (var k=1; k < dataStream.length; k++){
@@ -157,6 +157,7 @@ var chart = c3.generate({
         }
 });
 }
+else { $("#current").html("Name not found"); }
 
 }
 
