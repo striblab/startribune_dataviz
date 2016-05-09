@@ -33,12 +33,13 @@
   <div id="wrapper">
 
 <div class="chartTitle">How popular is the name <span id="named"></span> in Minnesota?</div>
-<div class="chatter">Rate per 10,000 people by year</div>
+<div class="chatter">Rate per 10,000 <span class="stat sex"></span> births by year</div>
 
 <div id="chart"></div>
 
-<div id="current" class="chatter"><span class="stat" id="rate"></span> <span id="gender"></span> babies per 10k people in <span class="stat" id="year"></span> were named <span class="stat" id="named2"></span></div>
+<div id="current" class="chatter"><span class="stat" id="rate"></span> <span id="gender"></span> babies per 10,000 <span class="stat sex"></span> births in <span class="stat" id="year"></span> were named <span class="stat" id="named2"></span></div>
 
+<h4>Select gender:</h4>
 <div id="viewSwitch">
 <li class="switch" id="M" data="M">Male</li>
 <li class="switch" id="F" data="F">Female</li>
@@ -177,11 +178,12 @@ if ($.urlParam('name') != 0 ) {
   var gender = String($.urlParam('gender')).toUpperCase();
   var genderStatus = gender; 
   $("#" + gender).addClass("selected");
-  if (gender == "M") { var colorMe = "#67B4C2"; var sex = "boy"; }
-  else  { var colorMe = "#AA6666";  var sex = "girl"; }
+  if (gender == "M") { var colorMe = "#67B4C2"; var sex = "boy"; var genderfull="male" }
+  else  { var colorMe = "#AA6666";  var sex = "girl"; var genderfull = "female"; }
   $("#named, #named2").html(name);
   $("#gender").html(sex);
-  $("#named, #rate, #named2").css("color",colorMe);
+  $(".sex").html(genderfull);
+  $("#named, #rate, #named2, .sex").css("color",colorMe);
   switchChart(name,gender,colorMe);
 } 
 
