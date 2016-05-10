@@ -1,0 +1,1132 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Minnesota Police Involved Deaths</title>
+  <meta name="description" content="Minnesota Police Involved Deaths">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
+  <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
+
+  
+  <style>
+   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
+   #wrapper { width:920px; margin-left:auto; margin-right:auto; }
+   #deathsHead { font-size:2.5em; color:#8C101C; font-weight:bold; font-family:"Popular" !important; }
+   #bottomText { text-align:center; font-weight:normal; }
+   #filter { text-align:center; }
+   .filters { display:inline-block; }
+   #filterBox { width:100%; }
+   .wrapper-dropdown-1 { width:100%; }
+   .wrapper-demo { width:100%; }
+   #resultBar { text-align:center; font-size:1.6em; }
+   .easyPaginateNav { text-align:center; }
+   .easyPaginateNav a { padding:5px; text-decoration:none; color:steelblue; width:100%; }
+   .easyPaginateNav a.current { font-weight:bold; text-decoration:underline; }
+   #jump { text-align:center; width:100%; padding:10px; }
+   a { text-decoration:none; color:steelblue; }
+   a:hover { color:#aaa !important; }
+   .name { text-transform: capitalize !important; font-weight:900; }
+
+   .card { padding:10px; height:250px; border-bottom:1px solid #ddd; width:48%; font-size:.9em; display:inline-block; vertical-align:top; }
+   .card div { padding:3px; }
+   .card:hover { opacity:.5; cursor:pointer; }
+   .description_chatter { display:none; }
+   .featherlight-content .description_chatter { display:block !important; }
+   .featherlight-content .card { width:100% !important; }
+   .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
+
+   .leftSide { float:left; width:63%; }
+   .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:150px; }
+   .photo, .photo img { width:100%; height:150px; }
+   .break { clear:both; }
+   li { list-style:none !important; }
+/*   .url { display:none; }*/
+   .description { font-weight:bold; }
+   #deathsTable { /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
+   .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
+   .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
+
+   .switch { padding:10px; display:inline-block; text-align:center; width:127px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black;  margin-top:4px; }
+   .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; }
+   #filterButtons { text-align:center; }
+
+   .filterBreak { height:7px; border-bottom:1px solid #333; clear:both; }
+   #filter input:focus { width: 100% !important; }
+   #filter input { width: 100% !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
+   .filter a, .filter2 a, .filter3 a { float:left; width:80%; white-space:nowrap; display:inline-block; }
+   .breakSmall { height:0; clear:both; }
+   .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#8C101C; }
+      
+   #mainFilters .filter a, #mainFilters .filter2 a, #mainFilters .filter3 a { float:none; width:100%; white-space:nowrap; display:inline-block; }
+   #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; width:18%; white-space:nowrap; display:inline-block; }
+   #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#8C101C; }
+
+   .hideThis { visibility:hidden; }
+
+   .weaponType, .region { display:none; }
+
+   .bigDot { border-radius:50%; width:35px; float:left; height:35px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin:6px; }
+   .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; }
+   .dot:hover, .mentalSwatch, .bigDot:hover, .selected { background-color:#333 !important; cursor:pointer; }
+   .mentalSwatch { background-color:#8C101C !important; color:white !important; padding:5px; font-weight:900; }
+   .circle { border:3px solid #333; }
+   .faded { opacity:.4 !important; }
+   .active { opacity:1 !important; background-color:#333 !important; }
+
+   .chatter { height:70px; }
+
+   #sidebar { width:250px; height:270px; float:left; margin-right:20px; }
+   #selector { display:none; }
+
+   .filterSection { display:none; }
+    
+   #chart { border-bottom:1px solid #000; border-left:1px solid #000; margin:10px; vertical-align:bottom;  }
+   #chartAll { width:630px; float:right; }
+   #chartLabels { margin:10px; }
+   .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
+   .yearLabel { width:5.15%; display:inline-block; text-align:center; font-size:.7em; }
+   .bigcount { font-size:1.5em;  color:#8C101C; }
+
+   .smallerBreak { height:10px; }
+
+   .scrollToTop { color:#ddd !important; text-align:center; padding:15px; }
+   .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+
+   .zoom { float:none !important; text-align:left !important; }
+   #mobileZoom { display:none; text-align:center !important; width:100%; }
+
+   #map { width:100%; height:200px; margin-top:8px; }
+
+   li:hover { background-color:#ddd !important; cursor:pointer; }
+
+   .chartTitle, .chatter, .navButton { display:none; }
+
+   @media (max-width:920px) {
+    #mainFilters { display:none; }
+    #wrapper { width:100%; }
+   .leftSide { width:100%; }
+   .card { padding:20px; height:auto !important; width:100%; display:block; }
+   .rightSide { display:none; }
+   .count { font-size:1.4em; }
+   #chartAll { width:100%; }
+   #sidebar, #filterButtons { display:none; }
+   #selector { display:block; }
+   .filterSection { display:block; }
+   }
+   @media (max-width:600px) {
+    .year { width:5%; }
+    .yearLabel { width:4.6%; }
+    #mobileZoom { display:block; }
+    .dot { width:15px !important; height:15px !important; }
+    #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
+    #chartLabels { margin-left:-15px; }
+   }
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+
+     <div class="chartTitle all">Number of force-related deaths by year</div>
+     <div class="chatter all">Overall, the number of deaths per year is on an upward trend, although that could be due to better media reporting and a heightened public awareness of police force.</div>
+
+     <div class="chartTitle mental">Mental health status</div>
+     <div class="chatter mental">chatter here</div>
+
+     <div class="chartTitle race">Disproportionate minority deaths</div>
+     <div class="chatter race">The percentage of force-related deaths since 2000 broken down by race and the percentage each race accounts for in Minnesota’s population. The disproportionate representation of blacks and other minorities mirrors data on arrests. Last year, 25 percent of those arrested in Minnesota were black, compared to 67 percent white, five percent American Indian and three percent Asian.</div>
+
+     <div class="chartTitle gender">Overwhelmingly male</div>
+     <div class="chatter gender">chatter here</div>
+
+     <div class="chartTitle manner">Most ruled homicide</div>
+     <div class="chatter manner">chatter here</div>
+
+     <div class="chartTitle weapon">A variety of weapons</div>
+     <div class="chatter weapon">chatter here</div>
+
+     <div class="chartTitle place">Mostly in the metro area</div>
+     <div class="chatter place">chatter here</div>
+
+          <div id="filterBox">
+
+ <div id="filterButtons">
+   <div id="all" class="switch selected" data="all">All</div>
+   <div id="mentalB" class="switch" data="mental">Mental</div>
+   <div id="raceB" class="switch" data="race">Race</div>
+   <div id="genderB" class="switch" data="gender">Gender</div>
+   <div id="mannerB" class="switch" data="manner">Manner</div>
+   <div id="weaponB" class="switch" data="weapon">Weapon</div>
+   <div id="placeB" class="switch" data="place">Place</div>
+ </div>
+
+ <div class="breaker"></div>
+
+      <div id="selector">
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span>Filter death reports by <span id="filterWord">all</span> statuses</span>
+              <ul class="dropdown race" tabindex="1">
+        <div class='filterBreak'></div>
+        <div class="filterSection mental">
+        <li class='filter' data="Yes" metric="region"><a href="javascript:void(0)">Mental Health Crisis</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="No" metric="region"><a href="javascript:void(0)">No Mental Health Crisis</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection place">
+        <li class='filter3' data="Minneapolis" metric="region"><a href="javascript:void(0)">Minneapolis</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="St. Paul" metric="region"><a href="javascript:void(0)">St. Paul</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="Metro" metric="region"><a href="javascript:void(0)">Metro Suburbs</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="Outstate" metric="region"><a href="javascript:void(0)">Outstate</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection race">
+        <li class='filter' data="WHITE" metric="race"><a href="javascript:void(0)">White</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="BLACK" metric="race"><a href="javascript:void(0)">Black</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="ASIAN" metric="race"><a href="javascript:void(0)">Asian</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="AMERICAN INDIAN" metric="race"><a href="javascript:void(0)">American Indian</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection gender">
+        <li class='filter' data=" MALE" metric="gender"><a href="javascript:void(0)">Male</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data=" FEMALE" metric="gender"><a href="javascript:void(0)">Female</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection manner">
+        <li class='filter' data="HOMICIDE" metric="manner"><a href="javascript:void(0)">Homicide</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="SUICIDE" metric="manner"><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="ACCIDENT" metric="manner"><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div> 
+        <li class='filter' data="NATURAL" metric="manner"><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="COULD NOT BE DETERMINED" metric="manner"><a href="javascript:void(0)">Manner Not Determined</a> <div class="count">0</div></li> 
+        <div class="breakSmall"></div>  
+        <li class='filter' data="not available" metric="manner"><a href="javascript:void(0)">Manner Not Available</a> <div class="count">0</div></li> 
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection weapon">
+        <li class='filter2' data="GUN" metric="weapon"><a href="javascript:void(0)">Gun</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div> 
+        <li class='filter2' data="BLADED WEAPON" metric="weapon"><a href="javascript:void(0)">Bladed Weapon</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter2' data="OTHER" metric="weapon"><a href="javascript:void(0)">Other Weapon</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter2' data="UNARMED" metric="weapon"><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></li> 
+        </div> 
+              </ul>
+          </div>
+        ​</div>
+</section>
+</div>
+
+     <div class="chart" id="chartAll">
+     <div id="yearLabels" style="display:none;">
+      <div class="yearLabel bigcount" id="c2000">0</div>
+      <div class="yearLabel bigcount" id="c2001">0</div>
+      <div class="yearLabel bigcount" id="c2002">0</div>
+      <div class="yearLabel bigcount" id="c2003">0</div>
+      <div class="yearLabel bigcount" id="c2004">0</div>
+      <div class="yearLabel bigcount" id="c2005">0</div>
+      <div class="yearLabel bigcount" id="c2006">0</div>
+      <div class="yearLabel bigcount" id="c2007">0</div>
+      <div class="yearLabel bigcount" id="c2008">0</div>
+      <div class="yearLabel bigcount" id="c2009">0</div>
+      <div class="yearLabel bigcount" id="c2010">0</div>
+      <div class="yearLabel bigcount" id="c2011">0</div>
+      <div class="yearLabel bigcount" id="c2012">0</div>
+      <div class="yearLabel bigcount" id="c2013">0</div>
+      <div class="yearLabel bigcount" id="c2014">0</div>
+      <div class="yearLabel bigcount" id="c2015">0</div>
+      <div class="yearLabel bigcount" id="c2016">0</div>
+     </div>
+     <div class="breaker"></div>
+     <div class="chart" id="chart">
+      <div class="year" id="y2000"></div>
+      <div class="year" id="y2001"></div>
+      <div class="year" id="y2002"></div>
+      <div class="year" id="y2003"></div>
+      <div class="year" id="y2004"></div>
+      <div class="year" id="y2005"></div>
+      <div class="year" id="y2006"></div>
+      <div class="year" id="y2007"></div>
+      <div class="year" id="y2008"></div>
+      <div class="year" id="y2009"></div>
+      <div class="year" id="y2010"></div>
+      <div class="year" id="y2011"></div>
+      <div class="year" id="y2012"></div>
+      <div class="year" id="y2013"></div>
+      <div class="year" id="y2014"></div>
+      <div class="year" id="y2015"></div>
+      <div class="year" id="y2016"></div>
+     </div>
+     <div id="chartLabels">
+      <div class="yearLabel">2000</div>
+      <div class="yearLabel">2001</div>
+      <div class="yearLabel">2002</div>
+      <div class="yearLabel">2003</div>
+      <div class="yearLabel">2004</div>
+      <div class="yearLabel">2005</div>
+      <div class="yearLabel">2006</div>
+      <div class="yearLabel">2007</div>
+      <div class="yearLabel">2008</div>
+      <div class="yearLabel">2009</div>
+      <div class="yearLabel">2010</div>
+      <div class="yearLabel">2011</div>
+      <div class="yearLabel">2012</div>
+      <div class="yearLabel">2013</div>
+      <div class="yearLabel">2014</div>
+      <div class="yearLabel">2015</div>
+      <div class="yearLabel">2016</div>
+     </div>
+     </div>
+
+<div id="sidebar">
+  <div id="deathsHead"><span id="bigNumber">0</span> deaths</div>
+    <div>people have died in forceful encounters with law enforcement in Minnesota since 2000</div>
+</div>
+
+ <div class="breaker"></div>
+
+ <div id="mobileZoom" class="zoom">Reset View</div>
+
+<div id="mainFilters">
+ <span>FILTER DEATH REPORTS | <span class="zoom">RESET VIEW</span>
+              <ul class="dropdown race" tabindex="1">
+        <div class='filterBreak'></div>
+        <div class="filterSection all">
+        </div>
+        <div class="filterSection mental">
+        <div class='filter' data="Yes" metric="region"><span id="mentalDot" class="bigDot"></span><a href="javascript:void(0)">Mental Health Crisis</a> <div class="count">0</div></div>
+        <div class='filter' data="No" metric="region"><span class="bigDot"></span><a href="javascript:void(0)">No Mental Health Crisis</a> <div class="count">0</div></div>
+        </div>
+        <div class="filterSection place">
+        <div class='filter3' data="Minneapolis" metric="region"><span class="bigDot"></span><a href="javascript:void(0)">Minneapolis</a> <div class="count">0</div></div>
+        <div class='filter3' data="St. Paul" metric="region"><span class="bigDot"></span><a href="javascript:void(0)">St. Paul</a> <div class="count">0</div></div>
+        <div class='filter3' data="Metro" metric="region"><span id="placeDot" class="bigDot"></span><a href="javascript:void(0)">Metro Suburbs</a> <div class="count">0</div></div>
+        <div class='filter3' data="Outstate" metric="region"><span class="bigDot"></span><a href="javascript:void(0)">Outstate</a> <div class="count">0</div></div>
+        </div>
+        <div class="filterSection race">
+        <div class='filter' data="WHITE" metric="race"><span class="bigDot"></span><a href="javascript:void(0)">White</a> <div class="count">0</div></div>
+        <div class='filter' data="BLACK" metric="race"><span id="raceDot" class="bigDot"></span><a href="javascript:void(0)">Black</a> <div class="count">0</div></div>
+        <div class='filter' data="ASIAN" metric="race"><span class="bigDot"></span><a href="javascript:void(0)">Asian</a> <div class="count">0</div></div>
+        <div class='filter' data="AMERICAN INDIAN" metric="race"><span class="bigDot"></span><a href="javascript:void(0)">American Indian</a> <div class="count">0</div></div>
+        </div>
+        <div class="filterSection gender">
+        <div class='filter' data=" MALE" metric="gender"><span id="genderDot" class="bigDot"></span><a href="javascript:void(0)">Male</a> <div class="count">0</div></div>
+        <div class='filter' data=" FEMALE" metric="gender"><span class="bigDot"></span><a href="javascript:void(0)">Female</a> <div class="count">0</div></div>
+        </div>
+        <div class="filterSection manner">
+        <div class='filter' data="HOMICIDE" metric="manner"><span id="mannerDot" class="bigDot"></span><a href="javascript:void(0)">Homicide</a> <div class="count">0</div></div>
+        <div class='filter' data="SUICIDE" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></div>
+        <div class='filter' data="ACCIDENT" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></div>
+        <div class='filter' data="NATURAL" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></div>
+        <div class='filter' data="COULD NOT BE DETERMINED" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Manner Not Determined</a> <div class="count">0</div></div>  
+        <div class='filter' data="not available" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Manner Not Available</a> <div class="count">0</div></div> 
+        </div>
+        <div class="filterSection weapon">
+        <div class='filter2' data="GUN" metric="weapon"><span id="weaponDot" class="bigDot"></span><a href="javascript:void(0)">Gun</a> <div class="count">0</div></div>
+        <div class='filter2' data="BLADED WEAPON" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Bladed Weapon</a> <div class="count">0</div></div>
+        <div class='filter2' data="OTHER" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Other Weapon</a> <div class="count">0</div></div>
+        <div class='filter2' data="UNARMED" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></div> 
+        </div> 
+              </ul>
+</div>
+
+<div style="display:none">
+     <div class="chartTitle" id="race">Locations of force-related deaths</div>
+     <div class="chatter">Markers represent general locations of incidents.</div>
+     <div class='map' id="map"></div>
+  </div>
+
+     <div class="chartTitle" id="deaths">Explore Minnesota force-related deaths</div>
+
+<div class="smallerBreak"></div>
+
+    </div>
+
+    <div id="resultBar"> <span id="results"></span> <span>results</span></div>
+
+     <div class="breaker"></div>
+
+     <div id="filter"><input type="search" id="filter_box" placeholder="Search list of deaths by name, year or keyword"></input></div>
+
+<button id='upClick' class="navButton">&#9650;</button>
+     <div id="deathsTable"></div>
+<button id='downClick' class="navButton">&#9660;</button>
+
+    <div class="breaker"></div>
+
+<div class="scrollToTop">Return to Top</div>
+
+     <a href="https://docs.google.com/spreadsheets/d/1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA/pub?gid=1024005488&single=true&output=csv" target="new_"><button class="downloadButton">&nbsp;Download data</button></a>
+
+  </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script src="js/featherlight-master/src/featherlight.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
+
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart
+
+//THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
+
+// $jsonDataShootings = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=gzHCZ7kiey1SMM5PgBsM3CMeEa4NGwiyFa2FU8DnUoYjQIKgjsJFAGwT7SqIrwFV-EqtN7Cx_xlY8kVRmstDxBon1OqOrn1NOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrpOMLCYDptcpnMxR0xLFGFK&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataYear = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=tNF6_if_WpQAvlnIwRWIHBHNBcOQ82hB8rzcScLoXpi_4W6d84eUeNWyXA8NKNBB4DWz53L3bhAVl38Pz93wBsrUsEnuNKBWOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx9WKnAm96yZmfHc12uQ5hug&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+// $jsonDataRace = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=1o5js0t1-i_wvGK8iMjzk2xR5auHvAWz3S9omyswRYuc-g_Zqf9Hd8ftf-teZu-RxUlpYxtPQRoVl38Pz93wBkgelLHZJDxkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxxcG-w52aeuSr4afipWyPHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
+
+
+//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
+// var dataLoadShootings = <?php echo $jsonDataShootings; ?>;
+// var dataLoadYear = <?php echo $jsonDataYear; ?>;
+// var dataLoadRace = <?php echo $jsonDataRace; ?>;
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings", function(error, dataLoadShootings) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart", function(error, dataLoadYear) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart", function(error, dataLoadRace) {
+
+dataShootings = dataLoadShootings.mn_shootings;
+dataYear = dataLoadYear.yearChart;
+dataRace = dataLoadRace.raceChart;
+
+$('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+
+function addBoxes() {
+  $('.card').each(function(i, obj) {
+    $(this).addClass("lightbox");
+  });
+  $('.card.lightbox').each(function(i, obj) {
+    $(this).attr("data-featherlight","#" + $(this).attr("id"));
+  }); 
+}
+
+if ($(window).width() >= 830) {
+$(".filterSection").hide(); 
+$(".all").show();
+} else { $(".filterSection").show();  }
+
+$(window).resize(function() {
+if ($(window).width() >= 830) {
+$(".filterSection").hide(); 
+$(".all").show();
+} else { $(".filterSection").show();  }
+});
+
+$(".switch").click(function() {
+  $(".switch").removeClass("selected");
+  $(this).addClass("selected");
+  $("#filterWord").text($(this).attr("data"));
+  $(".chartTitle, .chatter").hide();
+  $(".filterSection").hide(); 
+  $("." + $(this).attr("data")).show();
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+});
+
+$('#bigNumber').html(dataShootings.length);
+$('#results').html(dataShootings.length);
+
+//SCROLLBOX
+var scrolled=0;
+$(document).ready(function(){
+
+$("#downClick").on("click" ,function(){
+if ((scrolled+200) <= 27800) { scrolled=scrolled+200; }
+ $("#deathsTable").animate({ scrollTop: scrolled });
+    });
+
+$("#upClick").on("click" ,function(){
+if ((scrolled-200) >=0) { scrolled=scrolled-200;  }
+ $("#deathsTable").animate({ scrollTop: scrolled });
+  });
+
+});
+
+//POPULATE TABLE
+    d3.select("#deathsTable").selectAll(".card")
+.data(dataShootings).enter().append("div")
+.attr("id",function (d) { return d.doch; })
+.attr("class","card")
+.html(function (d){ 
+
+  var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
+  if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health crisis</div>"; }
+
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.Occupation +  " &#8226; " + d.ResCity + " " + d.ResState + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "<div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div></div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>";});
+
+addBoxes();
+
+function spitDots(year){
+d3.select("#y" + year).selectAll(".dot")
+.data(dataShootings.filter(function(d){ return d.year == year; }).sort(function(a, b) { return d3.ascending(a.Mental, b.Mental); })).enter().append("div")
+.attr("class", function (d){ if (d.Mental == "Yes") { return "circle dot"; } else { return "dot"; } })
+.attr("first", function (d){ return d.FirstName;})
+.attr("last", function (d){ return d.LastName;})
+.attr("gender", function (d){ return " " + d.Gender;})
+.attr("age", function (d){ return d.AgeYears;})
+.attr("year", function (d){ return d.year;})
+.attr("race", function (d){ return d.Race;})
+.attr("city", function (d){ return d.InjuryCity;})
+.attr("occupation", function (d){ return d.Occupation;})
+.attr("manner", function (d){ return d.MannerDeath;})
+.attr("region", function (d){ return d.Region;})
+.attr("weapon", function (d){ return d.WeaponCategory;})
+.attr("mental", function (d){ return d.Mental;})
+.on("mousedown", function(d, i){ 
+
+        $(".dot").removeClass("faded, active");
+        $(".dot").addClass("faded");
+        d3.select(this).classed("faded", false);
+        d3.select(this).classed("active", true);
+
+        $('.card').hide();
+        var txt = d.FirstName + " " + d.LastName;
+        $('.card').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  })
+.html(function (d){ return "";})
+.call(d3.helper.tooltip(function(d, i){
+  var mentalStatus = "";
+  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health crisis</div>"; }
+    return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div><div class='weapon'>Race: " + d.Race + "</div><div class='weapon'>Weapon: " + d.Weapon + "</div>" + mentalStatus;
+}));
+
+}
+
+$(".zoom").click(function() {
+  $('.card').show();
+  var count = $('.card:visible').length;
+  $('#results').html(count);
+  $(".dot").removeClass("faded, active");
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+});
+
+
+d3.helper = {};
+
+d3.helper.tooltip = function(accessor){
+    return function(selection){
+        var tooltipDiv;
+        var bodyNode = d3.select('body').node();
+        selection.on("mouseover", function(d, i){
+            // Clean up lost tooltips
+            d3.select('body').selectAll('div.tooltip').remove();
+            // Append tooltip
+            tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px')
+                .style('position', 'absolute') 
+                .style('z-index', 1001);
+            // Add text using the accessor function
+            var tooltipText = accessor(d, i) || '';
+            // Crop text arbitrarily
+            //tooltipDiv.style('width', function(d, i){return (tooltipText.length > 80) ? '300px' : null;})
+            //    .html(tooltipText);
+        })
+        .on('mousemove', function(d, i) {
+            // Move tooltip
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px');
+            var tooltipText = accessor(d, i) || '';
+            tooltipDiv.html(tooltipText);
+        })
+        .on("mouseout", function(d, i){
+            // Remove tooltip
+            tooltipDiv.remove();
+        });
+
+    };
+};
+
+for (var i=2000; i <= 2016; i++){ spitDots(i); }
+
+//SEARCH FILTER TABLE
+  $( document ).ready(function() {
+     $('#filter_box').keyup(function(i){
+        $('.card').hide();
+        var txt = $('#filter_box').val();
+        $('.card').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+    });
+});
+
+$.getJSON('shapefiles/counties.json', function(counties) {
+
+//FILTER STUFF
+$( document ).ready(function() {
+$( ".filter" ).each(function( index ) {
+  if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
+    $(this).find(".count").text(countStats(".card .hideThis",$(this).attr("data"))); 
+  }
+  else { $(this).find(".count").text(countStats(".card .stats, .card .ruling",$(this).attr("data"))); }
+
+  var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
+  $(this).find("a").css("background","#ddd");
+  $(this).find("a").css("color","#333");
+  $(this).find("a").css("margin-right",(70 - pct) + "%");
+  $(this).find("a").css("width",(pct) + "%");
+  $(this).css("margin","5px");
+});
+
+$( ".filter2" ).each(function( index ) {
+  $(this).find(".count").text(countStats(".weaponType",$(this).attr("data")));
+  var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
+  $(this).find("a").css("background","#ddd");
+  $(this).find("a").css("color","#333");
+  $(this).find("a").css("margin-right",(70 - pct) + "%");
+  $(this).find("a").css("width",(pct) + "%");
+  $(this).css("margin","5px");
+});
+
+$( ".filter3" ).each(function( index ) {
+  $(this).find(".count").text(countStats(".region",$(this).attr("data")));
+  var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
+  $(this).find("a").css("background","#ddd");
+  $(this).find("a").css("color","#333");
+  $(this).find("a").css("margin-right",(70 - pct) + "%");
+  $(this).find("a").css("width",(pct) + "%");
+  $(this).css("margin","5px");
+});
+
+$( "#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a" ).css("background","#fff");
+
+$(".bigDot").on('click',function(){
+  $(".bigDot").removeClass("selected");
+  $(this).addClass("selected");
+});
+
+function countStats(target, text){
+ return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 }).length;
+}
+});
+
+$(".filter").on('click',function(){
+
+  highlightMarkers(deaths,$(this).attr("metric"),$(this).attr("data"));
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  var datapoint = $(this).attr("data");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+  });
+
+   $('#filter_box').val("");
+
+  if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
+    $('.card').hide();
+        var txt = $(this).attr("data");
+        $('.hideThis').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+  } else {
+
+        $('.card').hide();
+        var txt = $(this).attr("data");
+        $('.card .stats, .card .ruling').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+      }
+  });
+
+$(".filter2").on('click',function(){
+
+  highlightMarkers(deaths,$(this).attr("metric"),$(this).attr("data"));
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  var datapoint = $(this).attr("data");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("weapon") == datapoint) { $(this).addClass("mentalSwatch"); }
+  });
+
+   $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = $(this).attr("data");
+        $('.weaponType').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+  });
+
+$(".filter3").on('click',function(){
+
+  highlightMarkers(deaths,$(this).attr("metric"),$(this).attr("data"));
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  var datapoint = $(this).attr("data");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("region") == datapoint) { $(this).addClass("mentalSwatch"); }
+  });
+
+   $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = $(this).attr("data");
+        $('.region').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+  });
+
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1]; }
+  else { return 0; }
+}
+
+if ($.urlParam('mental') != 0 ) { 
+  var page = $.urlParam('mental');
+  if (page = "yes") { 
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot, .switch").removeClass("selected");
+  $("#mentalDot, #mentalB").addClass("selected");
+  $(".chatter, .chartTitle").hide();
+  $(".mental").show();
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
+  });
+
+  }
+} 
+
+
+$("#all").on('click',function(){
+  highlightMarkers(deaths,"all","")
+
+        $('.card').show();
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+  });
+$("#mentalB").on('click',function(){
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot").removeClass("selected");
+  $("#mentalDot").addClass("selected");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
+  });
+
+     $('#filter_box').val("");
+
+    $('.card').hide();
+        var txt = "Yes";
+        $('.hideThis').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  });
+$("#weaponB").on('click',function(){
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot").removeClass("selected");
+  $("#weaponDot").addClass("selected");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("weapon") == "GUN") { $(this).addClass("mentalSwatch"); }
+  });
+
+   $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = "GUN";
+        $('.weaponType').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  });
+$("#raceB").on('click',function(){
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot").removeClass("selected");
+  $("#raceDot").addClass("selected");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("race") == "BLACK") { $(this).addClass("mentalSwatch"); }
+  });
+
+ $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = "BLACK";
+        $('.card .stats, .card .ruling').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  });
+$("#placeB").on('click',function(){
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot").removeClass("selected");
+  $("#placeDot").addClass("selected");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("region") == "Metro") { $(this).addClass("mentalSwatch"); }
+  });
+
+  $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = "Metro";
+        $('.region').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  });
+$("#mannerB").on('click',function(){
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot").removeClass("selected");
+  $("#mannerDot").addClass("selected");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("manner") == "HOMICIDE") { $(this).addClass("mentalSwatch"); }
+  });
+
+ $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = "HOMICIDE";
+        $('.card .stats, .card .ruling').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  });
+$("#genderB").on('click',function(){
+
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
+
+  $(".bigDot").removeClass("selected");
+  $("#genderDot").addClass("selected");
+
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("gender") == " MALE") { $(this).addClass("mentalSwatch"); }
+  });
+
+ $('#filter_box').val("");
+
+        $('.card').hide();
+        var txt = " MALE";
+        $('.card .stats, .card .ruling').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+
+  });
+//INITIALIZE MAP
+var mapBounds = new L.LatLngBounds(
+              new L.LatLng(39.1982, -128.1445),
+              new L.LatLng(50.5414, -68.2031));
+
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
+  var map = L.mapbox.map('map', 'mapbox.light', { maxZoom: 10, minZoom: 5, bounds: mapBounds})
+    .setView([46.358056, -94.200833], 5);
+
+// map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+
+var deaths = L.geoJson(null, { pointToLayer: scaledPoint }).addTo(map);
+
+function scaledPoint(feature, latlon) {
+        return L.circleMarker(latlon, {radius: 5, color:"#8C101C", weight:1, opacity:1});
+  }
+
+for (var i = 0; i < dataShootings.length; i++){
+  var geojson = [
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [dataShootings[i].Longitude, dataShootings[i].Latitude]
+    },
+    "properties": {
+      "region": dataShootings[i].Region,
+      "name": dataShootings[i].FirstName + " " + dataShootings[i].LastName,
+      "address": dataShootings[i].IncidentAddress,
+      "race": dataShootings[i].Race,
+      "date": dataShootings[i].InjuryDate,
+      "department": dataShootings[i].Agency,
+      "weapon": dataShootings[i].WeaponCategory,
+      "gender": dataShootings[i].Gender,
+      "manner": dataShootings[i].MannerDeath
+    }
+  }
+];
+
+  deaths.addData(geojson);
+}
+
+countyLayer = L.geoJson(counties,  {
+      style: getStyle
+  }).addTo(map);
+
+  function getStyle(feature,year) {
+      return {
+          weight: .2,
+          opacity: 1,
+          color: '#333',
+          fillOpacity: 0,
+          fillColor: '#fff'
+      };
+  }
+
+  function highlightMarkers(markers,metric,value){
+ markers.eachLayer(function (layer) { 
+  if (metric=="all"){ layer.setStyle({radius: 5, color:"#8C101C", weight:1, opacity:1, "fillOpacity":.3});  }
+  else {
+    if (metric=="region") { var string = layer.feature.properties.region; }
+    else if (metric=="race") { var string = layer.feature.properties.race; }
+    else if (metric=="weapon") { var string = layer.feature.properties.weapon; }
+    else if (metric=="manner") { var string = layer.feature.properties.manner; }
+    else if (metric=="gender") { var string = layer.feature.properties.gender; }
+
+    if(string.toUpperCase() == value.toUpperCase()) {    
+        layer.setStyle({"opacity":1,"fillOpacity":.3}); 
+      }
+    else {    
+        layer.setStyle({"opacity":0,"fillOpacity":.0}); 
+      }
+  }
+
+    });
+
+   if (value == "minneapolis") { map.setView([44.983333, -93.266667], 10); }
+   else if ((value == "st. paul") || (value == "black")) { map.setView([44.944167, -93.093611], 9); }
+   else if ((value == "metro") || (value == "asian") ) { map.setView([44.944167, -93.093611], 8); }
+   else { map.setView([46.358056, -94.200833], 5); }
+}
+
+});
+
+var padding = {
+        top: 40,
+        right: 40,
+        bottom: 30,
+        left: 60
+    };
+
+var chart_year = c3.generate({
+        bindto: '#yearChart',
+        padding: padding,
+        data: {
+            json: dataYear,
+            keys: {
+                x: 'year', 
+                value: ["deaths"]
+            },
+            type: 'bar',
+            names: {
+              'deaths': 'Deaths'
+            }
+        }, 
+        bar: { width: { ratio: 0.2 } },  
+        color: { pattern: ['#8C101C'] },
+        axis: {
+            x: {
+               // type: 'category',
+               tick: { fit: true, values: ['2003', '2008', '2012', '2015'] }
+            },
+             y : {
+              tick: {  values: ['2', '4', '6', '10', '8', '12'] },
+              padding: {top: 0, bottom: 0} 
+        }
+       }
+    });
+
+// var chart_race = c3.generate({
+//         bindto: '#raceChart',
+//         padding: padding,
+//         data: {
+//             json: dataRace,
+//             keys: {
+//                 x: 'race', 
+//                 value: ["pop_pct","deaths_pct"]
+//             },
+//             type: 'bar',
+//             names: {
+//               'pop_pct': 'MN Population',
+//               'deaths_pct': 'Deaths'
+//             }
+//         }, 
+//         bar: { width: { ratio: 0.7 } },  
+//         color: { pattern: ['#333',"#8C101C"] },
+//         axis: {
+//             x: {
+//                type: 'category'
+//             },
+//             y : {
+//               tick: { format: d3.format("%") },
+//               padding: {top: 0, bottom: 0} 
+//         }
+//        }
+//     });
+});
+});
+});
+</script>
+
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
+</script>
+
+</html>
