@@ -27,7 +27,7 @@
       .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
       .breaker { clear:both; margin:7px; padding:0; }
       .tools { display:none; }
-      #specialContentWrapper{ width:970px !important; margin-left:auto; margin-right:auto; }
+      #specialContentWrapper{ width:960px !important; margin-left:auto; margin-right:auto; }
       a { color: #87C944; text-decoration: none; }
       a:hover { text-decoration:none !important; color:inherit !important; }
       
@@ -36,6 +36,9 @@
       #logo_container { width:208px; }
       .datalab-logo { float:left; margin:10px; width:100%;}
       #top { padding:3px; margin-bottom:10px; }
+      #viewSwitch { display:none; }
+      .dash { display:none; }
+      .main { text-align:center; }
 
 /*ENTRIES*/
       #articlePane { display:inline-block !important;  }
@@ -79,6 +82,14 @@
       #contribs { display:none; }
       #contributors { display:none; }
 
+/*DROPDOWN*/
+      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative; width:200px; border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; margin-right:auto; margin-left:auto; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+      header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+
 /*SEARCH*/
       #search-criteria, #search-criteria_m { width:100%; }
       #search-criteria_m { height:40px; font-size:20px; }
@@ -109,7 +120,7 @@
       .toptext, .topbreaker { text-align:left; display:none; }
     }
 
-    @media (max-width: 970px) {
+    @media (max-width: 940px) {
       .l-container { text-align:left !important; width:100% !important; margin:0; }
       .footer-navigation-mod { display:block !important; margin-top:30px; }
       #logo_container { text-align:center; display:block !important; float:none !important; }
@@ -141,6 +152,7 @@
       .l-section-inner { padding-right: 0; width:100%; } 
 
       #dataSidebar{ display:none !important;}
+      #viewSwitch { display:block !important; }
       #leftPane, #articlePane, #infobox { width:100% !important; }
       #searchMe_m, #sorting_mobile { display:block !important; }
     }
@@ -160,6 +172,34 @@
 
 <div class="breaker topbreaker"></div>
 
+    <div id="viewSwitch">
+<div id="selector">
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span>All Projects</span>
+              <ul class="dropdown months" tabindex="1">
+              <li class="sort-link" id="allProjects_m"><strong>All Projects <span class='dash'>-</span> </strong><div class="count"><strong>0</strong></div></li>
+              <li class="sort-link" id="datadrop">Data Drop <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="economics">Business and Economics <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="crime">Criminal Justice <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="demographics">Demographics <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="education">Education <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="environment">Environment <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="health">Health <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="politics">Politics <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="scitech">Science and Technology <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="transit">Transportation and Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="resources">Resources </li>
+              </ul>
+          </div>
+        ​</div>
+</section>
+</div>
+</div>
+
 <div id="leftPane">
 <!-- <div id="infobox">
 <p></p>
@@ -168,7 +208,7 @@
 </div> -->
 
 <div id="sorting_mobile" class="sectionBox">
-<div id="searchMe_m"><input type="text" id="search-criteria_m"/></div>
+<div id="searchMe_m"><input type="text" id="search-criteria_m" placeholder="Search projects" /></div>
 </div>
 
 <div id="articlePane" class="sectionBox">
@@ -413,13 +453,13 @@ spitResources("graphics");
 
 var killPaging = false;
 
-$('#allProjects').css("background-color","#ddd");
+$('#allProjects, #allProjects_m').css("background-color","#ddd");
   $( ".sort-link" ).each(function( index ) {
   var type = "." + $(this).attr("id");
   $(this).find(".count").html($(type).length);
 });
 
-  $("#allProjects").find(".count").html($(".articleEntry").length);
+  $("#allProjects, #allProjects_m").find(".count").html($(".articleEntry").length);
 $( ".sort-link" ).click(function() {
   killPaging = true;
   $('#search-criteria_m').val("");
@@ -434,7 +474,7 @@ $( ".sort-link" ).click(function() {
   if ($(this).attr("id") == "resources") { $(".articleEntry").hide(); $("#resourcesBlock").show(); }
 });
 
-$( "#allProjects" ).click(function() {
+$( "#allProjects, #allProjects_m" ).click(function() {
   $(".articleEntry").show();
   $(".tools").hide();
   $("#resourcesBlock").hide();
@@ -496,56 +536,53 @@ $(window).scroll(function() {
  }
 });
 
-// $(document).ready(function () {
-//   $(".articleEntry").hide();
-//     size_li = $(".articleEntry").size();
-//     x=3;
-//     $('.articleEntry:lt('+x+')').show();
-//     $('.more').click(function () {
-//         x= (x+3 <= size_li) ? x+3 : size_li;
-//         $('.articleEntry:lt('+x+')').show();
-//     });
-//     if($(window).scrollTop() + screen.height > $('body').height())
-// {
-//         x= (x+3 <= size_li) ? x+3 : size_li;
-//         $('.articleEntry:lt('+x+')').show();
-// }
-// });
-
-// $(document).ready(function () {
-
-//     var length = $('#specialContentWrapper').height() - $('#dataSidebar').height() + $('#specialContentWrapper').offset().top;
-
-//     $(window).scroll(function () {
-
-//         var scroll = $(this).scrollTop();
-//         var height = $('#dataSidebar').height() + 'px';
-
-//         if (scroll < $('#left').offset().top) {
-
-//             $('#dataSidebar').css({
-//                 'position': 'absolute',
-//                 'top': '0'
-//             });
-
-//         } else if (scroll > length) {
-
-//             $('#dataSidebar').css({
-//                 'position': 'absolute',
-//                 'bottom': '0',
-//                 'top': 'auto'
-//             });
-
-//         } else {
-
-//             $('#dataSidebar').css({
-//                 'position': 'fixed',
-//                 'top': '0',
-//                 'height': height
-//             });
-//         }
-//     });
-// });
 });
 });
+</script>
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
 </script>
