@@ -50,6 +50,8 @@
 
 <div id="current" class="chatter"><span class="stat" id="rate"></span> <span id="gender"></span> babies per 10,000 <span class="stat sex"></span> births in <span class="stat" id="year"></span> were named <span class="stat" id="named2"></span></div>
 
+<small class="source">Result reflects the last year when the name's rate reached above zero.</small>
+
   </div>
 </body>
 
@@ -73,7 +75,7 @@ var dataStream = [];
 axis[0] = 'x';
 var indexYear = 1;
 
-for (var j=1910; j<2015; j++){
+for (var j=1910; j<2016; j++){
   axis[indexYear] = j;
   dataStream[indexYear] = 0;
   indexYear++;
