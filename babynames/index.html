@@ -21,6 +21,8 @@
       #viewSwitch, #current { padding:10px; }
       .stat { font-weight:900; }
 
+      #filter { padding:12px; }
+
       .switch { padding:10px; display:inline-block; text-align:center; width:48.5%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; color:#000 !important; }
       .switch:hover, .selected, .step:hover { background-color:#4C4C39 !important; color:#fff !important; cursor:pointer; }
 
@@ -30,6 +32,15 @@
 </head>
 
 <body>
+<h3>1.) Select gender:</h3>
+<div id="viewSwitch">
+<li class="switch" id="M" data="M">Male</li>
+<li class="switch" id="F" data="F">Female</li>
+</div>
+
+<h3>2.) Enter name:</h3>
+<div id="filter"><input type="search" id="filter_box" placeholder="Type name and press enter"></input></div>
+
   <div id="wrapper">
 
 <div class="chartTitle">How popular is the name <span id="named"></span> in Minnesota?</div>
@@ -38,14 +49,6 @@
 <div id="chart"></div>
 
 <div id="current" class="chatter"><span class="stat" id="rate"></span> <span id="gender"></span> babies per 10,000 <span class="stat sex"></span> births in <span class="stat" id="year"></span> were named <span class="stat" id="named2"></span></div>
-
-<h4>Select gender:</h4>
-<div id="viewSwitch">
-<li class="switch" id="M" data="M">Male</li>
-<li class="switch" id="F" data="F">Female</li>
-</div>
-
-<div id="filter"><input type="search" id="filter_box" placeholder="Type name and press enter"></input></div>
 
   </div>
 </body>
