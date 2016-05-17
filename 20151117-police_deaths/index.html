@@ -59,6 +59,14 @@
 
    li:hover { background-color:#ddd !important; cursor:pointer; }
 
+    .wrapper-demo { width:100%; }
+    .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
+    .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+    ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+    .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+    .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+    header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+
    @media (max-width:800px) {
    .leftSide { width:100%; }
    .rightSide { display:none; }
@@ -75,16 +83,6 @@
 <!--     <div class="chartTitle" id="bottomText">search the Star Tribune's database of fatal incidents</div>
  -->
     <div class="breaker"></div>
-
-    <div class="chatter">
-      <p>Most -- 125 -- were shot. The rest died after being tased, restrained or sprayed with chemicals.</p>
-      <p>Police reported that at least 61 had guns or gun look-alikes, such as a BB or pellet gun. About 46 others had some other object described as a weapon, including knives, a sword, a baseball bat and in one case, a BIC pen. Some used a vehicle to drag officers or try to ram them.</p>
-      <p>Not all of the incidents stemmed from a crime. In some cases, for instance, police were responding to reports about erratic behavior or a potential suicide.</p>
-      <p>Officers of the Minneapolis Police Department were involved in the largest share of deaths, 29. Three out of four deaths were in the metro area.</p>
-      <p>The Star Tribune compiled a database of these deaths by digging through news reports, law enforcement reports to the Justice Department and FBI, and death certificate data. It is likely incomplete since these deaths are not reliably tracked by any single government agency, nor consistently documented on death certificates.</p>
-      <p>If you have questions about the data, please contact Jennifer Bjorhus at <a href="mailto:Jennifer.Bjorhus@startribune.com">Jennifer.Bjorhus@startribune.com</a> or 612-673-4683.</p>
-      <p>Scroll through the list of fatal incidents or use the filter menu to view death records by race, gender, location and more. Results are also reflected on the map.</p>
-    </div>
 
      <div class="chartTitle" id="race">Locations of force-related deaths</div>
      <div class="chatter">Markers represent general locations of incidents.</div>
@@ -162,14 +160,6 @@
 <button id='downClick' class="navButton">&#9660;</button>
 
     <div class="breaker"></div>
-
-     <div class="chartTitle" id="year">Number of force-related deaths by year</div>
-     <div class="chatter">Overall, the number of deaths per year is on an upward trend, although that could be due to better media reporting and a heightened public awareness of police force.</div>
-     <div class="chart" id="yearChart"></div>
-
-     <div class="chartTitle" id="race">Disproportionate minority deaths</div>
-     <div class="chatter">The percentage of force-related deaths since 2000 broken down by race and the percentage each race accounts for in Minnesota’s population. The disproportionate representation of blacks and other minorities mirrors data on arrests. Last year, 25 percent of those arrested in Minnesota were black, compared to 67 percent white, five percent American Indian and three percent Asian.</div>
-     <div class="chart" id="raceChart"></div>
 
 
      <a href="https://docs.google.com/spreadsheets/d/1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA/pub?gid=1024005488&single=true&output=csv" target="new_"><button class="downloadButton">&nbsp;Download data</button></a>
