@@ -19,14 +19,14 @@
   <style>
    body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
    #wrapper { width:920px; margin-left:auto; margin-right:auto; }
-   #deathsHead { font-size:2.5em; color:#8C101C; font-weight:bold; font-family:"Popular" !important; }
+   #deathsHead, #resultBar_m { font-size:2.5em; color:#8C101C; font-weight:bold; font-family:"Popular" !important; }
    #bottomText { text-align:center; font-weight:normal; }
    #filter { text-align:center; }
    .filters { display:inline-block; }
    #filterBox { width:100%; }
    .wrapper-dropdown-1 { width:100%; }
    .wrapper-demo { width:100%; }
-   #resultBar { text-align:center; font-size:1.6em; }
+   #resultBar { font-size:2.5em; color:#8C101C; font-weight:bold; font-family:"Popular" !important; }
    .easyPaginateNav { text-align:center; }
    .easyPaginateNav a { padding:5px; text-decoration:none; color:steelblue; width:100%; }
    .easyPaginateNav a.current { font-weight:bold; text-decoration:underline; }
@@ -54,26 +54,28 @@
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
 
-   .switch { padding:10px; display:inline-block; text-align:center; width:127px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black;  margin-top:4px; }
-   .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; }
+   .switch, .bigswitch { padding:10px; display:inline-block; text-align:center; width:127px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black;  margin-top:4px; }
+   .switch:hover, .bigswitch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; }
    #filterButtons { text-align:center; }
 
    .filterBreak { height:7px; border-bottom:1px solid #333; clear:both; }
    #filter input:focus { width: 100% !important; }
    #filter input { width: 100% !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
-   .filter a, .filter2 a, .filter3 a { float:left; width:80%; white-space:nowrap; display:inline-block; }
+   .filter a, .filter2 a, .filter3 a { float:left; width:80%; margin-top:7px !important; white-space:nowrap; display:inline-block; }
    .breakSmall { height:0; clear:both; }
    .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#8C101C; }
       
    #mainFilters .filter a, #mainFilters .filter2 a, #mainFilters .filter3 a { float:none; width:100%; white-space:nowrap; display:inline-block; }
-   #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; width:18%; white-space:nowrap; display:inline-block; }
+   #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; white-space:nowrap; display:inline-block; }
    #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#8C101C; }
 
    .hideThis { visibility:hidden; }
 
+   .count { display:none !important; }
+
    .weaponType, .region { display:none; }
 
-   .bigDot { border-radius:50%; width:35px; float:left; height:35px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin:6px; }
+   .bigDot { border-radius:50%; width:20px; float:left; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin:6px; }
    .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; }
    .dot:hover, .mentalSwatch, .bigDot:hover, .selected { background-color:#333 !important; cursor:pointer; }
    .mentalSwatch { background-color:#8C101C !important; color:white !important; padding:5px; font-weight:900; }
@@ -84,16 +86,18 @@
    .chatter { height:70px; }
 
    #sidebar { width:250px; height:270px; float:left; margin-right:20px; }
-   #selector { display:none; }
+   #selector { display:none; text-align:center; }
+   #selector .bigswitch { width:49%;}
 
    .filterSection { display:none; }
     
-   #chart { border-bottom:1px solid #000; border-left:1px solid #000; margin:10px; vertical-align:bottom;  }
+   #chart { margin:10px; vertical-align:bottom;  }
    #chartAll { width:630px; float:right; }
    #chartLabels { margin:10px; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5.15%; display:inline-block; text-align:center; font-size:.7em; }
+   .yearLabel { width:5.25%; display:inline-block; text-align:center; font-size:.7em; font-weight:900; }
    .bigcount { font-size:1.5em;  color:#8C101C; }
+
 
    .smallerBreak { height:10px; }
 
@@ -109,6 +113,16 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
+    .wrapper-demo { width:100%; }
+    .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
+    .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+    ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+    .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+    .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+    header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+
+    #mainFilters .count { display:none !important; }
+
    @media (max-width:920px) {
     #mainFilters { display:none; }
     #wrapper { width:100%; }
@@ -123,7 +137,7 @@
    }
    @media (max-width:600px) {
     .year { width:5%; }
-    .yearLabel { width:4.6%; }
+    .yearLabel { width:4.75%; }
     #mobileZoom { display:block; }
     .dot { width:15px !important; height:15px !important; }
     #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
@@ -135,32 +149,13 @@
 <body>
   <div id="wrapper">
 
-     <div class="chartTitle all">Number of force-related deaths by year</div>
-     <div class="chatter all">Overall, the number of deaths per year is on an upward trend, although that could be due to better media reporting and a heightened public awareness of police force.</div>
-
-     <div class="chartTitle mental">Mental health status</div>
-     <div class="chatter mental">chatter here</div>
-
-     <div class="chartTitle race">Disproportionate minority deaths</div>
-     <div class="chatter race">The percentage of force-related deaths since 2000 broken down by race and the percentage each race accounts for in Minnesota’s population. The disproportionate representation of blacks and other minorities mirrors data on arrests. Last year, 25 percent of those arrested in Minnesota were black, compared to 67 percent white, five percent American Indian and three percent Asian.</div>
-
-     <div class="chartTitle gender">Overwhelmingly male</div>
-     <div class="chatter gender">chatter here</div>
-
-     <div class="chartTitle manner">Most ruled homicide</div>
-     <div class="chatter manner">chatter here</div>
-
-     <div class="chartTitle weapon">A variety of weapons</div>
-     <div class="chatter weapon">chatter here</div>
-
-     <div class="chartTitle place">Mostly in the metro area</div>
-     <div class="chatter place">chatter here</div>
-
           <div id="filterBox">
 
  <div id="filterButtons">
-   <div id="all" class="switch selected" data="all">All</div>
-   <div id="mentalB" class="switch" data="mental">Mental</div>
+   
+   <div id="mentalB" class="bigswitch selected" data="mental">Mental</div>
+   <div id="all" class="bigswitch" data="all">All deaths</div>
+
    <div id="raceB" class="switch" data="race">Race</div>
    <div id="genderB" class="switch" data="gender">Gender</div>
    <div id="mannerB" class="switch" data="manner">Manner</div>
@@ -171,18 +166,18 @@
  <div class="breaker"></div>
 
       <div id="selector">
+   <div id="mentalB_m" class="bigswitch selected" data="mental">Mental</div>
+   <div id="all_m" class="bigswitch" data="all">All deaths</div>
+
+<div id="resultBar_m"><span class="results"></span> <span>deaths</span></div>
+<div class="chatterThing"></div>
+
   <section class="main">
         <div class="wrapper-demo">
-          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
-            <span>Filter death reports by <span id="filterWord">all</span> statuses</span>
+          <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
+            <span>Filter death reports</span>
               <ul class="dropdown race" tabindex="1">
         <div class='filterBreak'></div>
-        <div class="filterSection mental">
-        <li class='filter' data="Yes" metric="region"><a href="javascript:void(0)">Mental Health Crisis</a> <div class="count">0</div></li>
-        <div class="breakSmall"></div>
-        <li class='filter' data="No" metric="region"><a href="javascript:void(0)">No Mental Health Crisis</a> <div class="count">0</div></li>
-        <div class='filterBreak'></div>
-        </div>
         <div class="filterSection place">
         <li class='filter3' data="Minneapolis" metric="region"><a href="javascript:void(0)">Minneapolis</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
@@ -218,9 +213,9 @@
         <div class="breakSmall"></div> 
         <li class='filter' data="NATURAL" metric="manner"><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></li>
         <div class="breakSmall"></div>
-        <li class='filter' data="COULD NOT BE DETERMINED" metric="manner"><a href="javascript:void(0)">Manner Not Determined</a> <div class="count">0</div></li> 
+        <li class='filter' data="COULD NOT BE DETERMINED" metric="manner"><a href="javascript:void(0)">Not Determined</a> <div class="count">0</div></li> 
         <div class="breakSmall"></div>  
-        <li class='filter' data="not available" metric="manner"><a href="javascript:void(0)">Manner Not Available</a> <div class="count">0</div></li> 
+        <li class='filter' data="not available" metric="manner"><a href="javascript:void(0)">Not Available</a> <div class="count">0</div></li> 
         <div class='filterBreak'></div>
         </div>
         <div class="filterSection weapon">
@@ -279,29 +274,30 @@
       <div class="year" id="y2016"></div>
      </div>
      <div id="chartLabels">
-      <div class="yearLabel">2000</div>
-      <div class="yearLabel">2001</div>
-      <div class="yearLabel">2002</div>
-      <div class="yearLabel">2003</div>
-      <div class="yearLabel">2004</div>
-      <div class="yearLabel">2005</div>
-      <div class="yearLabel">2006</div>
-      <div class="yearLabel">2007</div>
-      <div class="yearLabel">2008</div>
-      <div class="yearLabel">2009</div>
-      <div class="yearLabel">2010</div>
-      <div class="yearLabel">2011</div>
-      <div class="yearLabel">2012</div>
-      <div class="yearLabel">2013</div>
-      <div class="yearLabel">2014</div>
-      <div class="yearLabel">2015</div>
-      <div class="yearLabel">2016</div>
+      <div class="yearLabel">'00</div>
+      <div class="yearLabel">'01</div>
+      <div class="yearLabel">'02</div>
+      <div class="yearLabel">'03</div>
+      <div class="yearLabel">'04</div>
+      <div class="yearLabel">'05</div>
+      <div class="yearLabel">'06</div>
+      <div class="yearLabel">'07</div>
+      <div class="yearLabel">'08</div>
+      <div class="yearLabel">'09</div>
+      <div class="yearLabel">'10</div>
+      <div class="yearLabel">'11</div>
+      <div class="yearLabel">'12</div>
+      <div class="yearLabel">'13</div>
+      <div class="yearLabel">'14</div>
+      <div class="yearLabel">'15</div>
+      <div class="yearLabel">'16</div>
      </div>
      </div>
 
 <div id="sidebar">
-  <div id="deathsHead"><span id="bigNumber">0</span> deaths</div>
-    <div>people have died in forceful encounters with law enforcement in Minnesota since 2000</div>
+<!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
+<div id="resultBar"><span class="results"></span> <span>deaths</span></div>
+    <div class="chatterThing">=</div>
 </div>
 
  <div class="breaker"></div>
@@ -339,8 +335,8 @@
         <div class='filter' data="SUICIDE" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></div>
         <div class='filter' data="ACCIDENT" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></div>
         <div class='filter' data="NATURAL" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></div>
-        <div class='filter' data="COULD NOT BE DETERMINED" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Manner Not Determined</a> <div class="count">0</div></div>  
-        <div class='filter' data="not available" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Manner Not Available</a> <div class="count">0</div></div> 
+        <div class='filter' data="COULD NOT BE DETERMINED" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Undetermined</a> <div class="count">0</div></div>  
+        <div class='filter' data="not available" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Unavailable</a> <div class="count">0</div></div> 
         </div>
         <div class="filterSection weapon">
         <div class='filter2' data="GUN" metric="weapon"><span id="weaponDot" class="bigDot"></span><a href="javascript:void(0)">Gun</a> <div class="count">0</div></div>
@@ -362,8 +358,6 @@
 <div class="smallerBreak"></div>
 
     </div>
-
-    <div id="resultBar"> <span id="results"></span> <span>results</span></div>
 
      <div class="breaker"></div>
 
@@ -409,10 +403,14 @@
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings", function(error, dataLoadShootings) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart", function(error, dataLoadYear) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart", function(error, dataLoadRace) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=viz_chatter", function(error, dataLoadChatter) {
 
 dataShootings = dataLoadShootings.mn_shootings;
 dataYear = dataLoadYear.yearChart;
 dataRace = dataLoadRace.raceChart;
+dataChatter = dataLoadChatter.viz_chatter;
+
+var mentalLoad = false;
 
 $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
@@ -420,11 +418,11 @@ $('.scrollToTop').click(function(){
   });
 
 function addBoxes() {
-  $('.card').each(function(i, obj) {
+  $('#deathsTable .leftSide').each(function(i, obj) {
     $(this).addClass("lightbox");
   });
-  $('.card.lightbox').each(function(i, obj) {
-    $(this).attr("data-featherlight","#" + $(this).attr("id"));
+  $('#deathsTable .leftSide.lightbox').each(function(i, obj) {
+    $(this).attr("data-featherlight","#" + $(this).parent().attr("id"));
   }); 
 }
 
@@ -440,8 +438,11 @@ $(".all").show();
 } else { $(".filterSection").show();  }
 });
 
+$('#mainFilters').hide();
+
 $(".switch").click(function() {
   $(".switch").removeClass("selected");
+  $('#mainFilters').show();
   $(this).addClass("selected");
   $("#filterWord").text($(this).attr("data"));
   $(".chartTitle, .chatter").hide();
@@ -452,24 +453,16 @@ $(".switch").click(function() {
   d3.selectAll(".dot").classed("mentalSwatch", false);
 });
 
-$('#bigNumber').html(dataShootings.length);
-$('#results').html(dataShootings.length);
-
-//SCROLLBOX
-var scrolled=0;
-$(document).ready(function(){
-
-$("#downClick").on("click" ,function(){
-if ((scrolled+200) <= 27800) { scrolled=scrolled+200; }
- $("#deathsTable").animate({ scrollTop: scrolled });
-    });
-
-$("#upClick").on("click" ,function(){
-if ((scrolled-200) >=0) { scrolled=scrolled-200;  }
- $("#deathsTable").animate({ scrollTop: scrolled });
-  });
-
+$(".bigswitch").click(function() {
+  $(".bigswitch").removeClass("selected");
+  $(this).addClass("selected");
+  $(".switch").removeClass("selected");
+  $('#mainFilters').hide();
 });
+
+$('#bigNumber').html(dataShootings.length);
+$('.results').html(dataShootings.length);
+
 
 //POPULATE TABLE
     d3.select("#deathsTable").selectAll(".card")
@@ -481,9 +474,16 @@ if ((scrolled-200) >=0) { scrolled=scrolled-200;  }
   var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health crisis</div>"; }
 
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.Occupation +  " &#8226; " + d.ResCity + " " + d.ResState + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "<div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div></div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>";});
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.Occupation +  " &#8226; " + d.ResCity + " " + d.ResState + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div><div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div>";});
 
 addBoxes();
+
+$(".clickies").on("click" ,function(){
+  $(document).bind('DOMNodeInserted', function(event) {
+$(".featherlight-content .clickies").removeClass("lightbox");
+$(".featherlight-content .clickies").removeClass("featherlight-inner");
+});
+});
 
 function spitDots(year){
 d3.select("#y" + year).selectAll(".dot")
@@ -516,7 +516,7 @@ d3.select("#y" + year).selectAll(".dot")
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   })
 .html(function (d){ return "";})
@@ -531,11 +531,34 @@ d3.select("#y" + year).selectAll(".dot")
 $(".zoom").click(function() {
   $('.card').show();
   var count = $('.card:visible').length;
-  $('#results').html(count);
+  $('.results').html(count);
+  $('#mainFilters').hide();
   $(".dot").removeClass("faded, active");
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
+  if (mentalLoad == true) { 
+  $(".bigswitch, .switch").removeClass("selected");
+  $("#mentalB_m, #mentalB").addClass("selected");
+  $('.dot').each(function(i, obj) {
+    if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
+  });
+       $('#filter_box').val("");
+
+    $('.card').hide();
+        var txt = "Yes";
+        $('.hideThis').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('.results').html(count);
+ } else {
+  $(".bigswitch, .switch").removeClass("selected");
+  $("#all_m, #all").addClass("selected"); 
+  d3.selectAll(".dot").classed("mentalSwatch", true);
+ }
 });
 
 
@@ -590,7 +613,7 @@ for (var i=2000; i <= 2016; i++){ spitDots(i); }
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
     });
 });
 
@@ -598,39 +621,39 @@ $.getJSON('shapefiles/counties.json', function(counties) {
 
 //FILTER STUFF
 $( document ).ready(function() {
-$( ".filter" ).each(function( index ) {
-  if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
-    $(this).find(".count").text(countStats(".card .hideThis",$(this).attr("data"))); 
-  }
-  else { $(this).find(".count").text(countStats(".card .stats, .card .ruling",$(this).attr("data"))); }
+// $( ".filter" ).each(function( index ) {
+//   if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
+//     $(this).find(".count").text(countStats(".card .hideThis",$(this).attr("data"))); 
+//   }
+//   else { $(this).find(".count").text(countStats(".card .stats, .card .ruling",$(this).attr("data"))); }
 
-  var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-  $(this).find("a").css("background","#ddd");
-  $(this).find("a").css("color","#333");
-  $(this).find("a").css("margin-right",(70 - pct) + "%");
-  $(this).find("a").css("width",(pct) + "%");
-  $(this).css("margin","5px");
-});
+//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
+//   $(this).find("a").css("background","#ddd");
+//   $(this).find("a").css("color","#333");
+//   $(this).find("a").css("margin-right",(70 - pct) + "%");
+//   $(this).find("a").css("width",(pct) + "%");
+//   $(this).css("margin","5px");
+// });
 
-$( ".filter2" ).each(function( index ) {
-  $(this).find(".count").text(countStats(".weaponType",$(this).attr("data")));
-  var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-  $(this).find("a").css("background","#ddd");
-  $(this).find("a").css("color","#333");
-  $(this).find("a").css("margin-right",(70 - pct) + "%");
-  $(this).find("a").css("width",(pct) + "%");
-  $(this).css("margin","5px");
-});
+// $( ".filter2" ).each(function( index ) {
+//   $(this).find(".count").text(countStats(".weaponType",$(this).attr("data")));
+//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
+//   $(this).find("a").css("background","#ddd");
+//   $(this).find("a").css("color","#333");
+//   $(this).find("a").css("margin-right",(70 - pct) + "%");
+//   $(this).find("a").css("width",(pct) + "%");
+//   $(this).css("margin","5px");
+// });
 
-$( ".filter3" ).each(function( index ) {
-  $(this).find(".count").text(countStats(".region",$(this).attr("data")));
-  var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-  $(this).find("a").css("background","#ddd");
-  $(this).find("a").css("color","#333");
-  $(this).find("a").css("margin-right",(70 - pct) + "%");
-  $(this).find("a").css("width",(pct) + "%");
-  $(this).css("margin","5px");
-});
+// $( ".filter3" ).each(function( index ) {
+//   $(this).find(".count").text(countStats(".region",$(this).attr("data")));
+//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
+//   $(this).find("a").css("background","#ddd");
+//   $(this).find("a").css("color","#333");
+//   $(this).find("a").css("margin-right",(70 - pct) + "%");
+//   $(this).find("a").css("width",(pct) + "%");
+//   $(this).css("margin","5px");
+// });
 
 $( "#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a" ).css("background","#fff");
 
@@ -638,9 +661,17 @@ $(".bigDot").on('click',function(){
   $(".bigDot").removeClass("selected");
   $(this).addClass("selected");
 });
+$(".filter, .filter2, .filter3").on('click',function(){
+  $(".bigDot").removeClass("selected");
+  $(this).find(".bigDot").addClass("selected");
+});
 
 function countStats(target, text){
- return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 }).length;
+  if (mentalLoad == true){
+ return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length}).length;
+} else {
+   return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 }).length;
+}
 }
 });
 
@@ -655,21 +686,27 @@ $(".filter").on('click',function(){
   var datapoint = $(this).attr("data");
 
   $('.dot').each(function(i, obj) {
-    if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+    if (mentalLoad == true){
+      if ($(this).attr("mental") == "Yes"){
+      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      }
+    } else {
+      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+    }
   });
 
    $('#filter_box').val("");
 
-  if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
+if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
-        $('.hideThis').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+        $('.card .stats, .card .ruling').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
   } else {
 
         $('.card').hide();
@@ -680,7 +717,7 @@ $(".filter").on('click',function(){
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
       }
   });
 
@@ -695,10 +732,28 @@ $(".filter2").on('click',function(){
   var datapoint = $(this).attr("data");
 
   $('.dot').each(function(i, obj) {
-    if ($(this).attr("weapon") == datapoint) { $(this).addClass("mentalSwatch"); }
+    if (mentalLoad == true){
+      if ($(this).attr("mental") == "Yes"){
+      if ($(this).attr("weapon") == datapoint) { $(this).addClass("mentalSwatch"); }
+      }
+    } else {
+      if ($(this).attr("weapon") == datapoint) { $(this).addClass("mentalSwatch"); }
+    }
   });
 
-   $('#filter_box').val("");
+$('#filter_box').val("");
+
+if (mentalLoad == true){
+    $('.card').hide();
+        var txt = $(this).attr("data");
+        $('.weaponType').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('.results').html(count);
+  } else {
 
         $('.card').hide();
         var txt = $(this).attr("data");
@@ -708,7 +763,8 @@ $(".filter2").on('click',function(){
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
+      }
   });
 
 $(".filter3").on('click',function(){
@@ -722,10 +778,29 @@ $(".filter3").on('click',function(){
   var datapoint = $(this).attr("data");
 
   $('.dot').each(function(i, obj) {
-    if ($(this).attr("region") == datapoint) { $(this).addClass("mentalSwatch"); }
+    if (mentalLoad == true){
+      if ($(this).attr("mental") == "Yes"){
+      if ($(this).attr("region") == datapoint) { $(this).addClass("mentalSwatch"); }
+      }
+    } else {
+      if ($(this).attr("region") == datapoint) { $(this).addClass("mentalSwatch"); }
+    }
   });
 
+
    $('#filter_box').val("");
+
+if (mentalLoad == true){
+    $('.card').hide();
+        var txt = $(this).attr("data");
+        $('.region').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('.results').html(count);
+  } else {
 
         $('.card').hide();
         var txt = $(this).attr("data");
@@ -735,7 +810,9 @@ $(".filter3").on('click',function(){
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
+      }
+
   });
 
 $.urlParam = function(name){
@@ -747,12 +824,14 @@ $.urlParam = function(name){
 if ($.urlParam('mental') != 0 ) { 
   var page = $.urlParam('mental');
   if (page = "yes") { 
+  mentalLoad = true;
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
+  for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
 
-  $(".bigDot, .switch").removeClass("selected");
-  $("#mentalDot, #mentalB").addClass("selected");
+  $(".bigswitch, .switch").removeClass("selected");
+  $("#mentalB_m, #mentalB").addClass("selected");
   $(".chatter, .chartTitle").hide();
   $(".mental").show();
 
@@ -760,22 +839,40 @@ if ($.urlParam('mental') != 0 ) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
 
+     $('#filter_box').val("");
+
+    $('.card').hide();
+        var txt = "Yes";
+        $('.hideThis').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('.results').html(count);
+  } 
+} else {
+    $(".bigswitch, .switch").removeClass("selected");
+    $("#all_m, #all").addClass("selected");
+    d3.selectAll(".dot").classed("mentalSwatch", true);
+    for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "all") { $(".chatterThing").html(dataChatter[i].chatter) } }
   }
-} 
 
-
-$("#all").on('click',function(){
+$("#all, #all_m").on('click',function(){
   highlightMarkers(deaths,"all","")
-
+        mentalLoad = false;
         $('.card').show();
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
+        d3.selectAll(".dot").classed("mentalSwatch", true);
+        for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "all") { $(".chatterThing").html(dataChatter[i].chatter) } }
   });
-$("#mentalB").on('click',function(){
-
+$("#mentalB, #mentalB_m").on('click',function(){
+  mentalLoad = true;
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
+  for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
 
   $(".bigDot").removeClass("selected");
   $("#mentalDot").addClass("selected");
@@ -794,7 +891,7 @@ $("#mentalB").on('click',function(){
            }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   });
 $("#weaponB").on('click',function(){
@@ -807,7 +904,16 @@ $("#weaponB").on('click',function(){
   $("#weaponDot").addClass("selected");
 
   $('.dot').each(function(i, obj) {
-    if ($(this).attr("weapon") == "GUN") { $(this).addClass("mentalSwatch"); }
+    if (mentalLoad == true) { 
+      if ($(this).attr("weapon") == "GUN" && $(this).attr("mental") == "Yes") { 
+        $(this).addClass("mentalSwatch"); 
+        for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "weapon_mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
+      }
+    } else {
+      if ($(this).attr("weapon") == "GUN") { $(this).addClass("mentalSwatch"); }
+      for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "weapon_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
+    }
+    
   });
 
    $('#filter_box').val("");
@@ -815,12 +921,18 @@ $("#weaponB").on('click',function(){
         $('.card').hide();
         var txt = "GUN";
         $('.weaponType').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          if (mentalLoad == true) {
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length){
                $(this).parent().show();
            }
+         } else {
+          if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+             }
+         }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   });
 $("#raceB").on('click',function(){
@@ -832,8 +944,17 @@ $("#raceB").on('click',function(){
   $(".bigDot").removeClass("selected");
   $("#raceDot").addClass("selected");
 
-  $('.dot').each(function(i, obj) {
-    if ($(this).attr("race") == "BLACK") { $(this).addClass("mentalSwatch"); }
+    $('.dot').each(function(i, obj) {
+    if (mentalLoad == true) { 
+      if ($(this).attr("race") == "BLACK" && $(this).attr("mental") == "Yes") { 
+        $(this).addClass("mentalSwatch"); 
+        for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "race_mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
+      }
+    } else {
+      if ($(this).attr("race") == "BLACK") { $(this).addClass("mentalSwatch"); }
+      for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "race_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
+    }
+    
   });
 
  $('#filter_box').val("");
@@ -841,12 +962,18 @@ $("#raceB").on('click',function(){
         $('.card').hide();
         var txt = "BLACK";
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          if (mentalLoad == true) {
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
+         } else {
+          if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+             }
+         }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   });
 $("#placeB").on('click',function(){
@@ -858,21 +985,36 @@ $("#placeB").on('click',function(){
   $(".bigDot").removeClass("selected");
   $("#placeDot").addClass("selected");
 
-  $('.dot').each(function(i, obj) {
-    if ($(this).attr("region") == "Metro") { $(this).addClass("mentalSwatch"); }
+    $('.dot').each(function(i, obj) {
+    if (mentalLoad == true) { 
+      if ($(this).attr("region") == "Metro" && $(this).attr("mental") == "Yes") { 
+        $(this).addClass("mentalSwatch"); 
+        for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "place_mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
+      }
+    } else {
+      if ($(this).attr("region") == "Metro") { $(this).addClass("mentalSwatch"); }
+      for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "place_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
+    }
+    
   });
 
-  $('#filter_box').val("");
+ $('#filter_box').val("");
 
         $('.card').hide();
         var txt = "Metro";
         $('.region').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          if (mentalLoad == true) {
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length){
                $(this).parent().show();
            }
+         } else {
+          if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+             }
+         }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   });
 $("#mannerB").on('click',function(){
@@ -884,8 +1026,17 @@ $("#mannerB").on('click',function(){
   $(".bigDot").removeClass("selected");
   $("#mannerDot").addClass("selected");
 
-  $('.dot').each(function(i, obj) {
-    if ($(this).attr("manner") == "HOMICIDE") { $(this).addClass("mentalSwatch"); }
+    $('.dot').each(function(i, obj) {
+    if (mentalLoad == true) { 
+      if ($(this).attr("manner") == "HOMICIDE" && $(this).attr("mental") == "Yes") { 
+        $(this).addClass("mentalSwatch"); 
+        for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "place_mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
+      }
+    } else {
+      if ($(this).attr("manner") == "HOMICIDE") { $(this).addClass("mentalSwatch"); }
+      for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "place_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
+    }
+    
   });
 
  $('#filter_box').val("");
@@ -893,12 +1044,18 @@ $("#mannerB").on('click',function(){
         $('.card').hide();
         var txt = "HOMICIDE";
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          if (mentalLoad == true) {
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
+         } else {
+          if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+             }
+         }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   });
 $("#genderB").on('click',function(){
@@ -910,8 +1067,18 @@ $("#genderB").on('click',function(){
   $(".bigDot").removeClass("selected");
   $("#genderDot").addClass("selected");
 
-  $('.dot').each(function(i, obj) {
-    if ($(this).attr("gender") == " MALE") { $(this).addClass("mentalSwatch"); }
+
+    $('.dot').each(function(i, obj) {
+    if (mentalLoad == true) { 
+      if ($(this).attr("gender") == " MALE" && $(this).attr("mental") == "Yes") { 
+        $(this).addClass("mentalSwatch"); 
+        for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "place_mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
+      }
+    } else {
+      if ($(this).attr("gender") == " MALE") { $(this).addClass("mentalSwatch"); }
+      for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "place_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
+    }
+    
   });
 
  $('#filter_box').val("");
@@ -919,12 +1086,18 @@ $("#genderB").on('click',function(){
         $('.card').hide();
         var txt = " MALE";
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          if (mentalLoad == true) {
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
+         } else {
+          if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().parent().show();
+             }
+         }
         });
         var count = $('.card:visible').length;
-        $('#results').html(count);
+        $('.results').html(count);
 
   });
 //INITIALIZE MAP
@@ -1079,6 +1252,7 @@ var chart_year = c3.generate({
 });
 });
 });
+});
 </script>
 
 <script type="text/javascript">
@@ -1118,7 +1292,7 @@ var chart_year = c3.generate({
       $(function() {
 
         var dd = new DropDown( $('#dd') );
-        var dd2 = new DropDown( $('#ddY') );
+        var dd2 = new DropDown( $('#dd2') );
 
         $(document).click(function() {
           // all dropdowns

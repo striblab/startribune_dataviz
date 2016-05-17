@@ -107,6 +107,7 @@
       .scrollToTop { color:#87C944 !important; text-align:center; padding:15px; }
       .scrollToTop:hover { color:#333 !important; cursor:pointer; }
       #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
+      #footerStuff { display:none; }
 
 /*BREAKPOINTS*/
     @media only screen and (min-width:650px) {
@@ -155,6 +156,8 @@
       #viewSwitch { display:block !important; }
       #leftPane, #articlePane, #infobox { width:100% !important; }
       #searchMe_m, #sorting_mobile { display:block !important; }
+      #footerStuff { display:block; }
+      #footerStuff .link:hover { background-color:#fff !important; cursor:pointer; }
     }
    </style>
 
@@ -359,6 +362,20 @@
 
 </div>
 
+</div>
+
+<div id="footerStuff">
+<div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure</a></div>
+<div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
+<div id="sharing">
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%striblab.github.io/startribune_dataviz/&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/fbshare.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%striblab.github.io/startribune_dataviz/&text=:%20http%3A%2F%2Fstriblab.github.io/startribune_dataviz/g&via=jeffhargarten" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/twshare.png"></a></li>
+  <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="./img/tshare.png"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="./img/rshare.png"></a></li>
+</ul>
+</div>
 </div>
 
 <div id="footerBottom">StarTribune 2016</div>
