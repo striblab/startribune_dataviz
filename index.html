@@ -47,16 +47,18 @@
       .articleEntry { margin:20px; }
       .articleName { font-weight:normal; font-size:28px; }
       .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%;  }
-      .byline { font-weight:bold; } 
+      .byline { font-weight:bold; float:left; } 
       .more { font-size:18px; display:block; text-align:center; }
+      .date { float:right; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
 
 /*SOCIAL*/
-    .social_icons img { width:70px !important; margin:9px !important; }
+    .social_icons img { width:100px !important; margin:9px !important; }
     .social_icons img:hover { opacity:0.8; }
     .social_icons { text-align:center !important; }
     ul.share-buttons { list-style:none; padding:0 !important; }
     ul.share-buttons li { display:inline !important; }
     ul.share-buttons li:hover { opacity:0.8; }
+/*    ul.share-buttons li img { width:30px; }*/
     #sharing { text-align:center; margin-left:auto; margin-right:auto; padding:20px; }
 
 /*SIDEBAR*/
@@ -83,7 +85,8 @@
       #contributors { display:none; }
 
 /*DROPDOWN*/
-      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative; width:200px; border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; margin-right:auto; margin-left:auto; }
+      .wrapper-dropdown { width:100% !important; }
+      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative; border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; margin-right:auto; margin-left:auto; }
       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
       ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -119,6 +122,8 @@
       .starlogo { float:none; margin:15px !important; width:150px !important; text-align:center !important; } 
       #top { text-align:center; padding:0; }
       .toptext, .topbreaker { text-align:left; display:none; }
+      .byline { font-weight:bold; float:none; } 
+      .date { float:none; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; margin-top:2px; margin-bottom:2px; }
     }
 
     @media (max-width: 940px) {
@@ -439,7 +444,9 @@ d3.select("#articlePane").selectAll("div").data(data.published_master).enter().a
 if (d.git != '') { var git = "<div class='git'><a href='" + d.git + "' target='new_'>View on Github</a></div>"; }
 else { var git = ""; }
 
-  return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>by " + d.byline + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
+var dateString = (new Date(d.dateUpdated).getMonth() + 1) + "/" + (new Date(d.dateUpdated).getDate()) + "/" + new Date(d.dateUpdated).getFullYear()
+
+  return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>by " + d.byline + "</div><div class='date'>" + dateString + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
 
 });
 
