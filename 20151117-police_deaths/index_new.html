@@ -55,10 +55,10 @@
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
 
-   .switch { padding:10px; display:inline-block; text-align:center; width:130px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; margin-top:0 !important; }
-   .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black;  margin-top:4px; width:132px; }
+   .switch { padding:10px; display:inline-block; text-align:center; width:126px; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999; margin-top:0 !important; }
+   .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999;  margin-top:4px; width:140px; }
    .switch:hover, .bigswitch:hover, .selected { background-color:#8C101C !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
-   #filterButtons { text-align:center; }
+   #filterButtons { text-align:left; }
 
    .filterBreak { clear:both; }
    #filter { width:75%  !important; float:left; }
@@ -82,6 +82,9 @@
 
    #all, #all_m, #raceB { border-top-left-radius:.8em; border-bottom-left-radius:.8em; }
    #mentalB, #mentalB_m, #weaponB { border-top-right-radius:.8em; border-bottom-right-radius:.8em; }
+   #mentalB, #mentalB_m { margin-left:-1px;margin-right:8px; } 
+   #raceB, #genderB, #mannerB, #placeB, #weaponB { margin-left:-1px; }
+    
 
    .bigDot { border-radius:50%; width:18px; float:left; height:18px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin:6px; }
    .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin-bottom:3px; }
@@ -93,14 +96,14 @@
 
    .chatter { height:70px; }
 
-   #sidebar { width:250px; height:270px; float:left; margin-right:20px; }
+   #sidebar { width:260px; height:290px; float:left; margin-right:20px; background-color: lemonchiffon}
    #selector { display:none; text-align:center; }
    #selector .bigswitch { width:49%;}
 
    .filterSection { display:none; }
     
    #chart { margin:10px; vertical-align:bottom;  }
-   #chartAll { width:630px; float:right; }
+   #chartAll { width:630px; float:right; background-color:beige;}
    #chartLabels { margin:10px; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
    .yearLabel { width:5.25%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
@@ -163,7 +166,7 @@
 <body>
   <div id="wrapper">
 
-          <div id="filterBox">
+          <div id="filterBox" style="background-color:pink">
 
  <div id="filterButtons">
    
