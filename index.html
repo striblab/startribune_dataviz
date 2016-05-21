@@ -72,7 +72,7 @@
       .sort-link { border-bottom: 1px solid #000; padding:15px; font-size:13px; }
       .links { text-align:center; }
       .link { width:100%; font-size:1.3em; border-top: 1px solid #ddd; padding:10px; font-weight:bold; vertical-align:middle; }
-      #sorting_mobile { display:none; }
+      /*#sorting_mobile { display:none; }*/
       #github { padding:15px; font-size:14px; }
       .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }   
       .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
@@ -97,7 +97,6 @@
       #search-criteria, #search-criteria_m { width:100%; }
       #search-criteria_m { height:40px; font-size:20px; }
       #searchMe, #searchMe_m { padding:15px; font-size:14px; }     
-
       .fixed { position:fixed; top:40px !important;}
 
       
@@ -124,6 +123,7 @@
       .toptext, .topbreaker { text-align:left; display:none; }
       .byline { font-weight:bold; float:none; } 
       .date { float:none; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; margin-top:2px; margin-bottom:2px; }
+      .articleName { font-size:18px !important; }
     }
 
     @media (max-width: 940px) {
@@ -161,6 +161,7 @@
       #viewSwitch { display:block !important; }
       #leftPane, #articlePane, #infobox { width:100% !important; }
       #searchMe_m, #sorting_mobile { display:block !important; }
+      .sectionBox { margin:0; }
       #footerStuff { display:block; }
       #footerStuff .link:hover { background-color:#fff !important; cursor:pointer; }
     }
@@ -336,7 +337,7 @@
 <div class="sort-link" id="other">Other<div class="count">0</div></div>
 <div class="sort-link" id="tools">Tools<div class="count">0</div></div>
 <div class="sort-link" id="resources">Resources</div>
-<div id="searchMe"><input type="text" id="search-criteria" placeholder="Search projects" /></div>
+<!-- <div id="searchMe"><input type="text" id="search-criteria" placeholder="Search projects" /></div> -->
 <div id="links">
 <div class="link"><a href="https://startribune.com" target="new_"><img class="striblogo" src="img/striblogo.png" class="gitlogo" /></a></div>
 <div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
@@ -527,7 +528,7 @@ $('#search-criteria_m').keyup(function(){
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria_m').val();
     if (txt == '') { $('#allProjects').css("background-color","#ddd"); $("#resourcesBlock").hide(); }
-    $('.articleName, .byline, #tags, .linkage').each(function(){
+    $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
            $(this).show();
