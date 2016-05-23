@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
+ 
+<!--b75b60-->
   
   <style>
    body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
@@ -22,7 +24,7 @@
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
    #bottomText { text-align:center; font-weight:normal; }
    #filter { text-align:center; }
-   .filters { display:inline-block; }
+   .filters { display:inline-block;}
    #filterBox { width:100%; }
    .wrapper-dropdown-1 { width:100%; }
    .wrapper-demo { width:100%; }
@@ -30,13 +32,15 @@
    .easyPaginateNav a { padding:5px; text-decoration:none; color:steelblue; width:100%; }
    .easyPaginateNav a.current { font-weight:bold; text-decoration:underline; }
    #jump { text-align:center; width:100%; padding:10px; }
-   a { text-decoration:none; color:#8C101C; }
+   a { text-decoration:none; color:#b75b60; }
    a:hover { color:#333 !important; }
    .name { text-transform: capitalize !important; font-weight:900; }
 
-   .card { padding:10px; height:250px; border-bottom:1px solid #ddd; width:48%; font-size:.7em; display:inline-block; vertical-align:top; }
+   .card { padding:10px; height:205px; border-bottom:1px solid #ddd; width:450px; font-size:.7em; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
    .card div { padding:3px; }
    .card:hover { opacity:.5; cursor:pointer; }
+   .card .mentalSwatch { background-color:#fff !important; color:#b75b60 !important; padding:5px; font-weight:900; text-transform: uppercase;}
+    
    .description_chatter { display:none; }
    .featherlight-content .description_chatter { display:block !important; }
    .featherlight-content .card { width:100% !important; }
@@ -45,33 +49,38 @@
    .url { font-weight:900; }
 
    .leftSide { float:left; width:63%; }
-   .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:150px; }
-   .photo, .photo img { width:100%; height:150px; }
+   .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:155px; overflow:hidden; background-size: cover;}
+   .photo, .photo img { max-width:100%; max-height:100%; vertical-align: middle;}
    .break { clear:both; }
    li { list-style:none !important; }
 /*   .url { display:none; }*/
    .description { font-weight:bold; }
-   #deathsTable { /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
+    #deathsTable { width: 980px; margin-left:-20px;}
+     
+     
+     
+     
+     /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
 
-   .switch { padding:10px; display:inline-block; text-align:center; width:100px; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999; margin-top:0 !important; }
-   .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999;  margin-top:4px; width:130px; }
-   .switch:hover, .bigswitch:hover, .selected { background-color:#8C101C !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
+   .switch { padding:10px; display:inline-block; text-align:center; width:123px; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999; margin-top:0 !important; }
+   .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999;  margin-top:4px; width:150px; }
+   .switch:hover, .bigswitch:hover, .selected { background-color:#b75b60 !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
    #filterButtons { text-align:left; }
 
    .filterBreak { clear:both; }
-   #filter { width:75%  !important; float:left; }
-   #method { width:20%; float:right; }
+   #filter { width:80%  !important; float:left; margin-bottom: 20px;}
+   #method { width:15%; float:right; font-size:12px; margin-top:8px; text-align:right;}
    #filter input:focus { width: 100%; }
    #filter input { width: 100% !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
    .filter a, .filter2 a, .filter3 a { float:left; width:80%; margin-top:7px !important; white-space:nowrap; display:inline-block; color:#000 !important; }
    .breakSmall { height:0; clear:both; }
-   .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#8C101C; }
+   .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#b75b60; }
       
-   #mainFilters .filter a, #mainFilters .filter2 a, #mainFilters .filter3 a { float:none; width:100%; white-space:nowrap; display:inline-block; }
+   #mainFilters .filter a, #mainFilters .filter2 a, #mainFilters .filter3 a { float:none; width:100%; white-space:nowrap; display:inline-block; margin-right:8px;}
    #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; white-space:nowrap; display:inline-block; }
-   #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#8C101C; }
+   #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#b75b60; }
    #topClickies { height:32px; }
 
    .hideThis { visibility:hidden; }
@@ -82,37 +91,41 @@
 
    #all, #all_m, #raceB { border-top-left-radius:.8em; border-bottom-left-radius:.8em; }
    #mentalB, #mentalB_m, #weaponB { border-top-right-radius:.8em; border-bottom-right-radius:.8em; }
-   #mentalB, #mentalB_m { margin-left:-1px;margin-right:5px; } 
+   #mentalB, #mentalB_m { margin-left:-1px;margin-right:7px; } 
    #raceB, #genderB, #mannerB, #placeB, #weaponB { margin-left:-1px; }
     
 
-   .bigDot { border-radius:50%; width:15px; float:left; height:15px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin:6px; }
-   .dot { border-radius:50%; width:15px; height:15px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin-bottom:3px; }
-   .dot:hover, .mentalSwatch, .bigDot:hover { background-color:#333 !important; cursor:pointer; }
-   .mentalSwatch { background-color:#8C101C !important; color:white !important; padding:5px; font-weight:900; }
+   .bigDot { border-radius:50%; width:20px; float:left; height:20px; text-align:center; background-color:#fff; display:inline-block; vertical-align:bottom; margin:6px; border:2px solid #ddd}
+    
+   .bigDot:hover {background-color:#ddd;}
+    
+  
+   .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin-bottom:3px; }
+   .dot:hover, .mentalSwatch { background-color:#333 !important; cursor:pointer; }
+   .mentalSwatch { background-color:#b75b60 !important; color:#fff !important; padding:5px; font-weight:900; text-transform: uppercase;}
 /*   .circle { border:3px solid #333; }*/
    .faded { opacity:.4 !important; }
-   .active { opacity:1 !important; background-color:#333 !important; width:15px;height:15px;}
+   .active { opacity:1 !important; background-color:#333 !important; width:20px;height:20px;}
 
    .chatter { height:70px; }
 
-   #sidebar { width:260px; height:290px; float:left; margin: 15px 20px 0 0; background-color: lemonchiffon}
+   #sidebar { width:260px; height:290px; float:left;}
    #selector { display:none; text-align:center; }
    #selector .bigswitch { width:49%;}
 
    .filterSection { display:none; }
     
-   #chart { margin:10px; vertical-align:bottom;  }
-   #chartAll { width:610px; float:right; background-color:beige; margin: 15px 0 15px 0}
-   #chartLabels { margin:10px; }
+   #chart { margin:10px 0 10px 0; vertical-align:bottom;  }
+   #chartAll { width:610px; float:right;}
+   #chartLabels { margin:10px 0 10px 0; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
    .yearLabel { width:5.25%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
-   .bigcount { font-size:1.5em;  color:#8C101C; }
+   .bigcount { font-size:1.5em;  color:#b75b60; }
 
 
    .smallerBreak { height:10px; }
 
-   .scrollToTop { color:#8C101C !important; text-align:center; padding:15px; }
+   .scrollToTop { color:#b75b60 !important; text-align:center; padding:15px; }
    .scrollToTop:hover { color:#333 !important; cursor:pointer; }
 
    .zoom { float:none !important; text-align:left !important; }
@@ -166,7 +179,7 @@
 <body>
   <div id="wrapper">
 
-          <div id="filterBox" style="background-color:pink">
+          <div id="filterBox">
 
  <div id="filterButtons">
    
@@ -362,7 +375,7 @@
 
     </div>
 
-     <div class="breaker"></div>
+<!--     <div class="breaker"></div>-->
 
 <div id="filter"><input type="search" id="filter_box" placeholder="Search list of all deaths by name, year or keyword"></input></div>
 <div id="method"><a href="#" target="new_">READ METHODOLOGY</a></div>
