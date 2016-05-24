@@ -137,6 +137,8 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
+   .featherlight-content .card { background-color:#fff !important; border:0 !important; }
+
     .wrapper-demo { width:100%; }
     .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -146,6 +148,8 @@
     header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
 
     #mainFilters .count { display:none !important; }
+
+    #method { visibility:hidden !important; }
 
    @media (max-width:920px) {
 /*    #mainFilters { display:none; }*/
@@ -366,7 +370,7 @@
 <div id="sidebar">
 <!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
 <div id="resultBar"><span class="results"></span> <span>deaths</span></div>
-    <div class="chatterThing">=</div>
+    <div class="chatterThing"></div>
 </div>
 
  <div class="breaker"></div>
@@ -489,11 +493,12 @@ $('.results').html(dataShootings.length);
 .attr("id",function (d) { return d.doch; })
 .attr("class","card")
 .html(function (d){ 
-
+  var linkString = "";
   var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health crisis</div>"; }
+  if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div>"; }
 
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div><div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div>";});
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString;});
 
 addBoxes();
 
@@ -893,19 +898,21 @@ $("#all, #all_m").on('click',function(){
         $('.card').show();
         var count = $('.card:visible').length;
         $('.results').html(count);
+        d3.selectAll(".dot").classed("active", false);
         d3.selectAll(".dot").classed("mentalSwatch", true);
+        d3.selectAll(".dot").classed("faded", false);
         for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "all") { $(".chatterThing").html(dataChatter[i].chatter) } }
   });
 $("#mentalB, #mentalB_m").on('click',function(){
   $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
   mentalLoad = true;
-  d3.selectAll(".dot").classed("faded", false);
-  d3.selectAll(".dot").classed("active", false);
-  d3.selectAll(".dot").classed("mentalSwatch", false);
   for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
 
   $(".bigDot").removeClass("selected");
   $("#mentalDot").addClass("selected");
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
 
   $('.dot').each(function(i, obj) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
