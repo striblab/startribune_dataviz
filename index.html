@@ -88,7 +88,7 @@
       .count { float:right; }
       #links_m { display:none; }
       #contribs { display:none; }
-      #contributors { display:none; }
+      #contributorsBlock { display:none; }
       .linkSelect { background-color:#ddd !important; }
 
 /*DROPDOWN*/
@@ -209,7 +209,8 @@
               <li class="sort-link" id="transit">Transportation and Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="resources">Resources </li>
+              <li class="sort-link" id="resources">Resources</li>
+              <li class="sort-link" id="contributors">Contributors</li>
               </ul>
           </div>
         ​</div>
@@ -231,6 +232,24 @@
 <div id="articlePane" class="sectionBox">
 
 
+</div>
+
+<div id="contributorsBlock">
+<h3>Regular Contributors</h3>
+<div class="link"><a href="http://www.startribune.com/andy-mannix/366674391/" target="new_">Andy Mannix</a></div>
+<div class="link">Billy Steve Clayton</div>
+<div class="link"><a href="http://www.startribune.com/brandon-stahl/186499941/" target="new_">Brandon Stahl</a></div>
+<div class="link"><a href="http://www.startribune.com/cj-sinner/284976151/" target="new_">CJ Sinner</a></div>
+<div class="link"><a href="http://www.startribune.com/dan-browning/10644516/" target="new_">Dan Browning</a></div>
+<div class="link"><a href="http://www.startribune.com/dave-braunger/10644491/" target="new_">Dave Braunger</a></div>
+<div class="link"><a href="http://www.startribune.com/eric-roper/62906482/" target="new_">Eric Roper</a></div>
+<div class="link"><a href="http://www.startribune.com/jamie-hutt/10645101/" target="new_">Jamie Hutt</a></div>
+<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_">James Eli Shiffer</a></div>
+<div class="link"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></div>
+<div class="link"><a href="http://www.startribune.com/jennifer-bjorhus/34031274/" target="new_">Jennifer Bjorhus</a></div>
+<div class="link"><a href="http://www.startribune.com/matt-delong/285386351/" target="new_">Matt DeLong</a></div>
+<div class="link"><a href="http://www.startribune.com/maryjo-webster/303594441/" target="new_">MaryJo Webster</a></div>
+<div class="link">Michael Grant</div>
 </div>
 
 <div id="resourcesBlock" class="resources">
@@ -345,6 +364,7 @@
 <div class="sort-link" id="other">Other<div class="count">0</div></div>
 <div class="sort-link" id="tools">Tools<div class="count">0</div></div>
 <div class="sort-link" id="resources">Resources</div>
+<div class="sort-link" id="contributors">Contributors</div>
 <!-- <div id="searchMe"><input type="text" id="search-criteria" placeholder="Search projects" /></div> -->
 <div id="links">
 <div class="link"><a href="https://startribune.com" target="new_"><img class="striblogo" src="img/striblogo.png" class="gitlogo" /></a></div>
@@ -358,19 +378,6 @@
   <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="./img/tshare.png"></a></li>
   <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="./img/rshare.png"></a></li>
 </ul>
-</div>
-
-<div id="contributors">
-
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/">James Eli Shiffer</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/matt-delong/285386351/">Matt DeLong</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/dan-browning/10644516/">Dan Browning</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/cj-sinner/284976151/">CJ Sinner</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><a href="http://www.startribune.com/brandon-stahl/186499941/">Brandon Stahl</a></div>
-
 </div>
 </div>
 
@@ -505,7 +512,8 @@ $( ".sort-link" ).click(function() {
   if ($(this).attr("id") != "allProjects" && $(this).attr("id") != "allProjects_m") { window.history.pushState(null, null, '/?cat=' + $(this).attr("id")); }
   $("#resourcesBlock").hide();
   if ($(this).attr("id") != "tools") { $(".tools").hide(); }
-  if ($(this).attr("id") == "resources") { $(".articleEntry").hide(); $("#resourcesBlock").show(); }
+  if ($(this).attr("id") == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show(); }
+  if ($(this).attr("id") == "contributors") { $("#resourcesBlock, .articleEntry").hide(); $(" #contributorsBlock").show(); }
 });
 
 $( "#allProjects, #allProjects_m" ).click(function() {
@@ -521,7 +529,7 @@ $( document ).ready(function() {
     $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria').val();
-    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock").hide(); }
+    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
     $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
@@ -534,7 +542,7 @@ $('#search-criteria_m').keyup(function(){
     $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria_m').val();
-    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock").hide(); }
+    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
     $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
@@ -592,6 +600,11 @@ if ($.urlParam('page') != 0 ) {
     $(".articleEntry").hide(); 
     $("#resourcesBlock").show(); 
     $("#dataSidebar #resources").addClass("linkSelect");
+  }
+  if (pageTerm == "contributors") { 
+    $(".articleEntry").hide(); 
+    $("#contributorsBlock").show(); 
+    $("#dataSidebar #contributors").addClass("linkSelect");
   }
 }
 
