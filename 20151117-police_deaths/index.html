@@ -142,7 +142,8 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
-   .load { width:100px; text-align:center; margin-left:auto; margin-right:auto; }
+   .load { text-align:center; margin-left:auto; margin-right:auto; }
+   .load img { width:100px; }
 
        .wrapper-demo { width:100%; }
     .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
@@ -191,6 +192,7 @@
     #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
     #filter input { font-size:0.6em; }
     .card { padding:20px; height:auto !important; width:32%; display:block; }
+    #sidebar { text-align:center !important; height:200px; }
    }
 
    @media (max-width:320px) {
@@ -217,7 +219,7 @@
    <div id="all_m" class="bigswitch" data="all">All deaths</div><div id="mentalB_m" class="bigswitch selected" data="mental">Mental health</div>
 
 <div id="resultBar_m"><span class="results"></span> <span>deaths</span></div>
-<div class="chatterThing"><img src="img/loading.gif" class="load" /></div>
+<div class="chatterThing"><p class="load"><img src="img/loading.gif" /></p></div>
 </div>
 
      <div class="chart" id="chartAll">
@@ -331,7 +333,7 @@
 <div id="sidebar">
 <!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
 <div id="resultBar"><span class="results"></span> <span>deaths</span></div>
-    <div class="chatterThing"><img src="img/loading.gif" class="load" /></div>
+    <div class="chatterThing"><p class="load"><img src="img/loading.gif" class="load" /><p></div>
 </div>
 
  <div class="breaker"></div>
@@ -340,7 +342,8 @@
 
     </div>
 
-<!--     <div class="breaker"></div>-->
+<!--      <div class="breaker"></div> -->
+
 
 <div id="filter"><input type="search" id="filter_box" placeholder="Search list of all deaths by name, year or keyword"></input></div>
 <div id="method"><a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/" target="new_">READ METHODOLOGY</a></div>
