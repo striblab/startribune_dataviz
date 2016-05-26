@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
   <style>
-   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
+  body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
    #wrapper { width:920px; margin-left:auto; margin-right:auto; }
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
    #bottomText { text-align:center; font-weight:normal; }
@@ -38,11 +38,14 @@
    .card:hover { opacity:.5; cursor:pointer; }
    .card .mentalSwatch { background-color:#fff !important; color:#b75b60 !important; padding:5px 8px 5px 8px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
    
-    .featherlight .featherlight-content {background-color: #eee;overflow:hidden;}
-    .featherlight-content { width:750px; height:300px;}
+    .featherlight .featherlight-content {background-color: #eee; overflow:hidden;}
+    .featherlight-content { width:750px; height:350px; }
     
-   .description_chatter { display:none; }
+   .description_chatter, .url { display:none; }
    .featherlight-content .description_chatter { display:block !important; }
+   .featherlight-content .readmore { display:none; }
+   .readmore { text-align:center; }
+   .featherlight-content .url { display:block !important; }
    .featherlight-content .card { width:100% !important; background-color: #eee; !important; border:0 !important;}
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
 
@@ -139,6 +142,8 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
+   .load { width:100px; text-align:center; margin-left:auto; margin-right:auto; }
+
        .wrapper-demo { width:100%; }
     .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -200,7 +205,7 @@
    <div id="all_m" class="bigswitch" data="all">All deaths</div><div id="mentalB_m" class="bigswitch selected" data="mental">Mental health</div>
 
 <div id="resultBar_m"><span class="results"></span> <span>deaths</span></div>
-<div class="chatterThing"></div>
+<div class="chatterThing"><img src="img/loading.gif" class="load" /></div>
 </div>
 
      <div class="chart" id="chartAll">
@@ -314,7 +319,7 @@
 <div id="sidebar">
 <!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
 <div id="resultBar"><span class="results"></span> <span>deaths</span></div>
-    <div class="chatterThing"></div>
+    <div class="chatterThing"><img src="img/loading.gif" class="load" /></div>
 </div>
 
  <div class="breaker"></div>
@@ -326,7 +331,7 @@
 <!--     <div class="breaker"></div>-->
 
 <div id="filter"><input type="search" id="filter_box" placeholder="Search list of all deaths by name, year or keyword"></input></div>
-<div id="method"><a href="#" target="new_">READ METHODOLOGY</a></div>
+<div id="method"><a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/" target="new_">READ METHODOLOGY</a></div>
 
 <button id='upClick' class="navButton">&#9650;</button>
      <div id="deathsTable"></div>
@@ -430,7 +435,7 @@ $('.results').html(dataShootings.length);
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health crisis</div>"; }
   if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
 
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString;});
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
 
 addBoxes();
 
@@ -899,6 +904,7 @@ $("#weaponB").on('click',function(){
           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
                $(this).parent().show();
              }
+
          }
         });
         var count = $('.card:visible').length;
