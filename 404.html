@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StribLab: 404 Not Found">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+  <meta name="generator" content="BBEdit 10.5" />
+
+  <meta property="og:title" content="StribLab: 404 Not Found"/>
+  <meta property="og:image" content="http://striblab.github.io/startribune_dataviz/img/dataviz_banner.png"/>
+  <meta property="og:site_name" content="StribLab"/>
+  <meta property="og:description" content="Data-driven storytelling, maps, charts and more | Startribune.com" />
+
+  <title>StribLab: 404 Not Found</title>
+
+<!-- load common dataviz styles -->
+<link rel="stylesheet" href="_common_resources/styles/startribune_dataviz_styles.css" /> 
+
+<!-- dataviz and custom styles for this page -->
+   <style>
+/*PRIMARY*/
+      body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+      #infobox { font-family:"Poynter Serif RE",Georgia,Times,serif; font-size:16px; margin:10px; }
+      #infobox p { padding:3px; }
+      #leftPane { float:left !important; width:630px !important; }      
+      #testDiv { height:400px; background-color:#ddd; width:85%; float:right; }
+      h1 { font-family:"Popular"; font-weight:900; font-size:3.5em; margin-bottom:10px; }
+      h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
+      p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
+      .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
+      .l-container:nth-child(2) { width:100%; }
+      .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
+      .breaker { clear:both; margin:7px; padding:0; }
+      .tools { display:none; }
+      #specialContentWrapper{ width:960px !important; margin-left:auto; margin-right:auto; }
+      a { color: #87C944; text-decoration: none; }
+      a:hover { text-decoration:none !important; color:inherit !important; }
+      
+/*HEADER*/
+      .starlogo { float:left; margin:15px; }
+      #logo_container { width:208px; }
+      .datalab-logo { float:left; margin:10px; width:100%;}
+      #top { padding:3px; margin-bottom:10px; }
+      #viewSwitch { display:none; }
+      .dash { display:none; }
+      .main { text-align:center; }
+
+/*ENTRIES*/
+      #articlePane { display:inline-block !important;  }
+      .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
+      .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
+      .articleEntry { margin:20px; }
+      .articleName { font-weight:normal; font-size:28px; }
+      .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%;  }
+      .byline { font-weight:bold; float:left; } 
+      .more { font-size:18px; display:block; text-align:center; }
+      .date { float:right; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
+
+/*SOCIAL*/
+    .social_icons img { width:100px !important; margin:9px !important; }
+    .social_icons img:hover { opacity:0.8; }
+    .social_icons { text-align:center !important; }
+    ul.share-buttons { list-style:none; padding:0 !important; }
+    ul.share-buttons li { display:inline !important; }
+    ul.share-buttons li:hover { opacity:0.8; }
+/*    ul.share-buttons li img { width:30px; }*/
+    #sharing { text-align:center; margin-left:auto; margin-right:auto; padding:20px; }
+
+/*SIDEBAR*/
+      #dataSidebar { float:right !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
+      .sectionBox { margin:7px; }
+      .creditBox { width:32%; height:auto; float:left; }
+      #articleHeader { margin-top:40px; }
+      .articleName a { color: #333; text-decoration: none; }
+      .article-share { position:relative !important; float:left !important; margin-left:0 !important; }
+      #team { font-weight:bold; clear:both; }
+      .sort-link { border-bottom: 1px solid #000; padding:15px; font-size:13px; }
+      .links { text-align:center; }
+      .link { width:100%; font-size:1.3em; border-top: 1px solid #ddd; padding:10px; font-weight:bold; vertical-align:middle; }
+      /*#sorting_mobile { display:none; }*/
+      #github { padding:15px; font-size:14px; }
+      .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }   
+      .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
+      .git:hover { cursor:pointer; background-color:#fff !important; }
+      .striblogo { width:100% !important; }
+      #allProjects .count { font-weight:900; }
+      .count { float:right; }
+      #links_m { display:none; }
+      #contribs { display:none; }
+      #contributorsBlock { display:none; }
+      .linkSelect { background-color:#ddd !important; }
+
+/*DROPDOWN*/
+      .wrapper-dropdown { width:100% !important; }
+      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative; border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; margin-right:auto; margin-left:auto; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+      header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+
+/*SEARCH*/
+      #search-criteria, #search-criteria_m { width:100%; }
+      #search-criteria_m { height:40px; font-size:20px; }
+      #searchMe, #searchMe_m { padding:15px; font-size:14px; }     
+      .fixed { position:fixed; top:40px !important;}
+
+      
+/*RESOURCES*/
+      #resourcesBlock { display:none; }
+      .linkage { padding:5px; }
+      .databankLink { font-weight:900; margin-right:auto; margin-left:auto; padding:20px; text-align:center; }
+      .source { font-size:1em !important; }
+      
+/*FOOTER*/
+      .scrollToTop { color:#87C944 !important; text-align:center; padding:15px; }
+      .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+      #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
+      #footerStuff { display:none; }
+
+/*BREAKPOINTS*/
+    @media only screen and (min-width:650px) {
+      .sort-link-mid:hover, .sort-link:hover, .link:hover { background-color:#eee !important; cursor:pointer; }
+
+    }
+
+    @media only screen and (max-width:650px) { 
+      .starlogo { float:none; margin:15px !important; width:150px !important; text-align:center !important; } 
+      #top { text-align:center; padding:0; }
+      .toptext, .topbreaker { text-align:left; display:none; }
+      .byline { font-weight:bold; float:none; } 
+      .date { float:none; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; margin-top:2px; margin-bottom:2px; }
+      .articleName { font-size:18px !important; }
+    }
+
+    @media (max-width: 940px) {
+      .l-container { text-align:left !important; width:100% !important; margin:0; }
+      .footer-navigation-mod { display:block !important; margin-top:30px; }
+      #logo_container { text-align:center; display:block !important; float:none !important; }
+      #articleHeader {margin-top:40px;}
+      .nav-shortcuts-inner { display:none !important; }
+      .nav-utility-btn:before { width:30px; height:30px; }
+      .nav-utility-mod { height:50px; }
+      .nav-utility-inner-right { float: right !important;  width:auto !important}
+      .nav-utility-inner-center { float:right !important; text-align: right; width:auto !important; margin-top:10px !important; }
+      .nav-utility-mod { width:100% !important; min-width:auto !important; max-width:auto!important; float:left !important; border-bottom: 1px solid #000; }
+      .nav-branding-mod {/* margin-top:0 !important;*/ display:none !important; }
+      .nav-utility-inner { width:auto; }
+      .nav-utility-inner .btn-subscribe { display:none !important; }
+      .btn-eedition { display:none !important; }
+      .js-nav-subscriptions-dropdown { display:none !important; }
+      .dpp, .navigation-shortnav-ad { display:none !important; }
+      .show-divider { border-left:0 !important; }
+      .nav-logo-link { height: 38px !important; width: 260px !important; }
+      .nav-utility-btn.show-divider:after { display:none; }
+      #wrapper { padding:0; }
+      /*.nav-utility-btn { text-indent:-5000px; }
+      .nav-utility-btn::before { text-indent:2px; }*/
+      .nav-weather-mod, .nav-section-mod { margin-top:40px !important; }
+      .logInBtn { display:none !important; }
+      /*.navbar-fixed-top { display:block !important; }*/
+      .global-nav-mod { display:none !important; } 
+      #specialContentWrapper { width:100% !important; }
+      .l-section-container { width:100% !important; }
+      .l-section-inner { padding-right: 0; width:100%; } 
+
+      #dataSidebar{ display:none !important;}
+      #viewSwitch { display:block !important; }
+      #leftPane, #articlePane, #infobox { width:100% !important; }
+      #searchMe_m, #sorting_mobile { display:block !important; }
+      .sectionBox { margin:0; }
+      #footerStuff { display:block; }
+      #footerStuff .link:hover { background-color:#fff !important; cursor:pointer; }
+    }
+   </style>
+
+<body>
+<div id="specialContentWrapper">
+<!-- mark me bro -->
+
+<div style="text-align:center">
+
+<h2>404 PAGE NOT FOUND</h2>
+<p></p>
+<img src="img/striblab_min.png" width="250" />
+<p></p>
+<h2>You have travelled far, but it's all for naught. 
+<p></p>
+<h2><a href="http://striblab.github.io/startribune_dataviz">Turn back now</a></h2>
+<p></p>
+<div class="breaker"></div>
+</div>
+</div>
+<!--close specialContentWrapper-->
+
+<div id="footerBottom">StarTribune 2016</div>
+</body>
+
+
+<!-- custom scripts calls for this page -->
+
+
+<!-- custom script coding for this page -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+// $(window).on('resize', function(event){
+//     var windowWidth = $(window).width();
+// if(windowWidth < 933){
+//     $(".nav-utility-btn").text("");
+// }
+// });
+
+// $(document).ready(function() {
+//     var windowWidth = $(window).width();
+// if(windowWidth < 933){
+//     $(".nav-utility-btn").text("");
+// }
+// });
+</script>
+
+<script>
+//menu magic
+
+</script>
+
+<script>
+//live json magic
+
+//https://script.google.com/a/macros/umn.edu/s/AKfycbzOAHrfmtGJMR9crHeF9zdAhqU9saB9YzKf1Xxivfs/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=Sheet1
+//https://script.google.com/macros/s/AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master
+
+// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI4TSNmVu370MsVSQB_Uyyblk_gZzoGt5pocAksdR5w4v_f2ujy3Itp6RrgmHu-1uDbWlU06h6dNs9MBqWM2rkCMrzZGwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa3HMflvAE5oEneTLZU5s79KARkcyFDMjX0ewt5-cuI2hRHouKSPCrKRcgufhrII6-M3MleihyRS6Yxs7ziheq_kx8s3fq8FhcV7V45FBz4fadfh_z-4qMMEa0mO-EXf9WyjPuXlbvplVwqJbeTowOR_fVIgxkfofiQ&lib=Mpc9sEUZubx48Zop7g8xYBjbZ7jG6IkQL");
+
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master", function(error, json) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=resources", function(error, json2) {
+
+// $(".nav-section-link").text("StribLab");
+// $(document).prop('title', 'Data-driven storytelling, maps, charts and more | Startribune.com');
+
+$('.scrollToTop').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+
+var data = json;
+var dataResources = json2.resources;
+
+d3.select("#articlePane").selectAll("div").data(data.published_master).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
+
+if (d.git != '') { var git = "<div class='git'><a href='" + d.git + "' target='new_'>View on Github</a></div>"; }
+else { var git = ""; }
+
+var dateString = (new Date(d.dateUpdated).getMonth() + 1) + "/" + (new Date(d.dateUpdated).getDate()) + "/" + new Date(d.dateUpdated).getFullYear()
+
+  return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>by " + d.byline + "</div><div class='date'>" + dateString + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
+
+});
+
+function spitResources(type){
+  d3.select("#" + type).selectAll("div").data(dataResources.filter(function(d){ return d.type == type; })).enter().append("div").attr("class",function (d){ return "linkage " + d.type }).html(function (d){
+  return '<a href="' + d.url + '" target="new_">' + d.name + '</a><div class="describe">' + d.description + '</div>';
+
+});
+}
+
+spitResources("foia");
+spitResources("timeline");
+spitResources("maps");
+spitResources("geocoding");
+spitResources("publications");
+spitResources("source");
+spitResources("deepweb");
+spitResources("vizgen");
+spitResources("library");
+spitResources("infographics");
+spitResources("text");
+spitResources("fusion");
+spitResources("scraping");
+spitResources("conversion");
+spitResources("database");
+spitResources("colors");
+spitResources("graphics");
+
+var killPaging = false;
+
+$('#allProjects, #allProjects_m').addClass("linkSelect");
+  $( ".sort-link" ).each(function( index ) {
+  var type = "." + $(this).attr("id");
+  $(this).find(".count").html($(type).length);
+});
+
+$("#allProjects, #allProjects_m").find(".count").html($(".articleEntry").length);
+
+$( ".sort-link" ).click(function() {
+  killPaging = true;
+  $('#search-criteria_m').val("");
+  $('#search-criteria').val("");
+  $(".articleEntry").hide();
+  $(".sort-link").removeClass("linkSelect");
+  $(this).addClass("linkSelect");
+  $("." + $(this).attr("id")).show();
+  if ($(this).attr("id") != "allProjects" && $(this).attr("id") != "allProjects_m") { window.history.pushState(null, null, '/?cat=' + $(this).attr("id")); }
+  $("#resourcesBlock").hide();
+  if ($(this).attr("id") != "tools") { $(".tools").hide(); }
+  if ($(this).attr("id") == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show(); }
+  if ($(this).attr("id") == "contributors") { $("#resourcesBlock, .articleEntry").hide(); $(" #contributorsBlock").show(); }
+});
+
+$( "#allProjects, #allProjects_m" ).click(function() {
+  $(".articleEntry").show();
+  $(".tools").hide();
+  $("#resourcesBlock").hide();
+  $(".sort-link").css("background-color","#fff");
+  $(this).addClass("linkSelect");
+});
+
+$( document ).ready(function() {
+ $('#search-criteria').keyup(function(){
+    $('.articleEntry, .linkage').hide();
+    $(".sort-link").css("background-color","#fff");
+    var txt = $('#search-criteria').val();
+    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
+    $('.articleName, .byline, .linkage').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).parent().show();
+           $(this).show();
+       }
+    });
+});
+
+$('#search-criteria_m').keyup(function(){
+    $('.articleEntry, .linkage').hide();
+    $(".sort-link").css("background-color","#fff");
+    var txt = $('#search-criteria_m').val();
+    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
+    $('.articleName, .byline, .linkage').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).parent().show();
+           $(this).show();
+       }
+    });
+});
+
+});
+
+$(".articleEntry").hide();
+
+var start = 0;
+var end = 2;
+
+$('.articleEntry').eq(start).show();
+$('.articleEntry').eq(start+1).show();
+$('.articleEntry').eq(end).show();
+
+// $(".tools").hide();
+
+$(window).scroll(function() {
+  if (killPaging == false){
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       start = end + 1;
+       end = end + 3;
+       $('.articleEntry').eq(start).show();
+       $('.articleEntry').eq(start+1).show();
+       $('.articleEntry').eq(end).show();
+   }
+ }
+});
+
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1]; }
+  else { return 0; }
+}
+
+if ($.urlParam('cat') != 0 ) {
+  var catTerm = $.urlParam('cat'); 
+  $(".articleEntry").hide();
+  $(".sort-link").removeClass("linkSelect");
+  $("#dataSidebar #" + catTerm).addClass("linkSelect");
+  $("." + catTerm).show();
+  killPaging = true;
+}
+
+
+if ($.urlParam('page') != 0 ) {
+  var pageTerm = $.urlParam('page'); 
+  $(".sort-link").removeClass("linkSelect");
+  killPaging = true;
+  if (pageTerm == "resources") { 
+    $(".articleEntry").hide(); 
+    $("#resourcesBlock").show(); 
+    $("#dataSidebar #resources").addClass("linkSelect");
+  }
+  if (pageTerm == "contributors") { 
+    $(".articleEntry").hide(); 
+    $("#contributorsBlock").show(); 
+    $("#dataSidebar #contributors").addClass("linkSelect");
+  }
+}
+
+});
+});
+</script>
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
+</script>
