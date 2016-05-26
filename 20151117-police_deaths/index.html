@@ -449,7 +449,7 @@ $('.results').html(dataShootings.length);
 .html(function (d){ 
   var linkString = "";
   var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
-  if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health crisis</div>"; }
+  if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health issues</div>"; }
   if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
 
   return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
@@ -500,7 +500,7 @@ d3.select("#y" + year).selectAll(".dot")
 .html(function (d){ return "";})
 .call(d3.helper.tooltip(function(d, i){
   var mentalStatus = "";
-  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health crisis</div>"; }
+  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health issues</div>"; }
     return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div>" + mentalStatus;
 }));
 
