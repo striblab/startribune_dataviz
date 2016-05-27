@@ -39,7 +39,7 @@
    .card .mentalSwatch { background-color:#fff !important; color:#b75b60 !important; padding:5px 8px 5px 8px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
    
     .featherlight .featherlight-content {background-color: #eee; overflow-y:scroll;overflow-x:hidden;}
-    .featherlight-content { width:750px; height:350px; }
+    .featherlight-content { width:750px; height:420px; }
     
    .description_chatter, .url { display:none; }
    .featherlight-content .description_chatter { display:block !important; }
@@ -405,11 +405,11 @@ $('.scrollToTop').click(function(){
   });
 
 function addBoxes() {
-  $('#deathsTable .leftSide').each(function(i, obj) {
+  $('#deathsTable .card').each(function(i, obj) {
     $(this).addClass("lightbox");
   });
-  $('#deathsTable .leftSide.lightbox').each(function(i, obj) {
-    $(this).attr("data-featherlight","#" + $(this).parent().attr("id"));
+  $('#deathsTable .card.lightbox').each(function(i, obj) {
+    $(this).attr("data-featherlight","#" + $(this).attr("id"));
   }); 
 }
 
