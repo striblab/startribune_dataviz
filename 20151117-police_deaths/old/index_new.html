@@ -15,13 +15,14 @@
   <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
+  
   <style>
-  body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
+   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
    #wrapper { width:920px; margin-left:auto; margin-right:auto; }
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
    #bottomText { text-align:center; font-weight:normal; }
    #filter { text-align:center; }
-   .filters { display:inline-block;}
+   .filters { display:inline-block; }
    #filterBox { width:100%; }
    .wrapper-dropdown-1 { width:100%; }
    .wrapper-demo { width:100%; }
@@ -29,61 +30,48 @@
    .easyPaginateNav a { padding:5px; text-decoration:none; color:steelblue; width:100%; }
    .easyPaginateNav a.current { font-weight:bold; text-decoration:underline; }
    #jump { text-align:center; width:100%; padding:10px; }
-   a { text-decoration:none; color:#b75b60; }
+   a { text-decoration:none; color:#8C101C; }
    a:hover { color:#333 !important; }
-   .name { text-transform: capitalize !important; font-weight:900; font-size:1.25em; }
+   .name { text-transform: capitalize !important; font-weight:900; }
 
-   .card { position:relative;padding:10px; height:230px; width:450px; font-size:.7em; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
+   .card { padding:10px; height:250px; border-bottom:1px solid #ddd; width:48%; font-size:.7em; display:inline-block; vertical-align:top; }
    .card div { padding:3px; }
    .card:hover { opacity:.5; cursor:pointer; }
-   .card .mentalSwatch { background-color:#fff !important; color:#b75b60 !important; padding:5px 8px 5px 8px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
-   
-    .featherlight .featherlight-content {background-color: #eee; overflow-y:scroll;overflow-x:hidden;}
-    .featherlight-content { width:750px; height:420px; }
-    
-   .description_chatter, .url { display:none; }
+   .description_chatter { display:none; }
    .featherlight-content .description_chatter { display:block !important; }
-   .featherlight-content .readmore { display:none; }
-   .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
-   .featherlight-content .url { display:block !important; }
-   .featherlight-content .card { width:100% !important; background-color: #eee; !important; border:0 !important;}
+   .featherlight-content .card { width:100% !important; }
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
 
-    .tooltip .name {font-size:1em;color:#333;margin-bottom:4px;}
-    .tooltip .mentalSwatch { font-size:.9em;color:#b75b60 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
-    
-   .url { font-weight:900; padding-left:6px !important;}
+   .url { font-weight:900; }
 
    .leftSide { float:left; width:63%; }
-   .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:155px; overflow:hidden; background-size: cover;}
-   .photo, .photo img { max-width:100%; max-height:100%; vertical-align: middle;}
+   .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:150px; }
+   .photo, .photo img { width:100%; height:150px; }
    .break { clear:both; }
    li { list-style:none !important; }
 /*   .url { display:none; }*/
    .description { font-weight:bold; }
-    #deathsTable { width: 980px; margin-left:-20px;}
-     
-     /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
+   #deathsTable { /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
 
-   .switch { padding:10px; display:inline-block; text-align:center; width:122px; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999; margin-top:0 !important; }
-   .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999;  margin-top:4px; width:150px; }
-   .switch:hover, .bigswitch:hover, .selected { background-color:#b75b60 !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
-   #filterButtons { text-align:left; }
+   .switch { padding:10px; display:inline-block; text-align:center; width:130px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; margin-top:0 !important; }
+   .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black;  margin-top:4px; width:132px; }
+   .switch:hover, .bigswitch:hover, .selected { background-color:#8C101C !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
+   #filterButtons { text-align:center; }
 
    .filterBreak { clear:both; }
-   #filter { width:80%  !important; float:left; margin-bottom: 20px;}
-   #method { width:15%; float:right; font-size:12px; margin-top:8px; text-align:right;}
+   #filter { width:75%  !important; float:left; }
+   #method { width:20%; float:right; }
    #filter input:focus { width: 100%; }
    #filter input { width: 100% !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
    .filter a, .filter2 a, .filter3 a { float:left; width:80%; margin-top:7px !important; white-space:nowrap; display:inline-block; color:#000 !important; }
    .breakSmall { height:0; clear:both; }
-   .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#b75b60; }
+   .count { float:right; width:5%; margin-right:8%; font-size:2em;  color:#8C101C; }
       
-   #mainFilters .filter a, #mainFilters .filter2 a, #mainFilters .filter3 a { float:none; width:100%; white-space:nowrap; display:inline-block; margin-right:8px;}
+   #mainFilters .filter a, #mainFilters .filter2 a, #mainFilters .filter3 a { float:none; width:100%; white-space:nowrap; display:inline-block; }
    #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; white-space:nowrap; display:inline-block; }
-   #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#b75b60; }
+   #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#8C101C; }
    #topClickies { height:32px; }
 
    .hideThis { visibility:hidden; }
@@ -94,43 +82,34 @@
 
    #all, #all_m, #raceB { border-top-left-radius:.8em; border-bottom-left-radius:.8em; }
    #mentalB, #mentalB_m, #weaponB { border-top-right-radius:.8em; border-bottom-right-radius:.8em; }
-   #mentalB, #mentalB_m { margin-left:-1px;margin-right:7px; } 
-   #raceB, #genderB, #mannerB, #placeB, #weaponB { margin-left:-1px; }
-    
 
-   .bigDot { border-radius:50%; width:20px; float:left; height:20px; text-align:center; background-color:#fff; display:inline-block; vertical-align:bottom; margin:6px; border:2px solid #ddd}
-    
-   .bigDot:hover {background-color:#ddd;}
-    
-  
+   .bigDot { border-radius:50%; width:18px; float:left; height:18px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin:6px; }
    .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin-bottom:3px; }
-   .dot:hover, .mentalSwatch { background-color:#333 !important; cursor:pointer; }
-   .mentalSwatch { background-color:#b75b60 !important; color:#fff !important; padding:5px; font-weight:900; text-transform: uppercase;}
-    
-    
+   .dot:hover, .mentalSwatch, .bigDot:hover { background-color:#333 !important; cursor:pointer; }
+   .mentalSwatch { background-color:#8C101C !important; color:white !important; padding:5px; font-weight:900; }
 /*   .circle { border:3px solid #333; }*/
    .faded { opacity:.4 !important; }
-   .active { opacity:1 !important; background-color:#333 !important; width:20px;height:20px;}
+   .active { opacity:1 !important; background-color:#333 !important; }
 
    .chatter { height:70px; }
 
-   #sidebar { width:260px; height:290px; float:left;}
+   #sidebar { width:250px; height:270px; float:left; margin-right:20px; }
    #selector { display:none; text-align:center; }
    #selector .bigswitch { width:49%;}
 
    .filterSection { display:none; }
     
-   #chart { margin:10px 0 10px 0; vertical-align:bottom;  }
-   #chartAll { width:610px; float:right;}
-   #chartLabels { margin:10px 0 10px 0; }
+   #chart { margin:10px; vertical-align:bottom;  }
+   #chartAll { width:630px; float:right; }
+   #chartLabels { margin:10px; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5.15%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
-   .bigcount { font-size:1.5em;  color:#b75b60; }
+   .yearLabel { width:5.25%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
+   .bigcount { font-size:1.5em;  color:#8C101C; }
 
 
    .smallerBreak { height:10px; }
 
-   .scrollToTop { color:#b75b60 !important; text-align:center; padding:15px; }
+   .scrollToTop { color:#8C101C !important; text-align:center; padding:15px; }
    .scrollToTop:hover { color:#333 !important; cursor:pointer; }
 
    .zoom { float:none !important; text-align:left !important; }
@@ -142,9 +121,6 @@
 
    .chartTitle, .chatter, .navButton { display:none; }
 
-   .load { text-align:center; margin-left:auto; margin-right:auto; }
-   .load img { width:100px; }
-
     .wrapper-demo { width:100%; }
     .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -155,28 +131,23 @@
 
     #mainFilters .count { display:none !important; }
 
-    /*#method { visibility:hidden !important; }*/
-
    @media (max-width:920px) {
-    #wrapper { width:600px; }
-    .chatterThing { text-align:left !important; height:180px; }
-    .chatterThing img { margin-left:auto; margin-right:auto; }
-    .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
-    #sidebar { width:100%; height:160px; text-align:center; margin-top:9px; }
-    .card { padding:20px; height:auto !important; width:62%; display:block; }
-    #method { text-align:center; }
+/*    #mainFilters { display:none; }*/
+    #wrapper { width:100%; }
+   .leftSide { width:100%; }
+   .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
+   .card { padding:20px; height:auto !important; width:100%; display:block; }
+   .rightSide { display:none; }
+   .count { font-size:1.4em; }
+   #chartAll { width:100%; }
+   #sidebar/*, #filterButtons */{ display:none; }
+   /*#selector { display:block; }*/
    }
-   @media (max-width:605px) {
-    #wrapper { width:434px; }
-    .leftSide { width:100%; }
-    .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
-    .rightSide { display:none; }
-    .count { font-size:1.4em; }
-    #chartAll { width:100%; }
-    .card { padding:20px; height:auto !important; width:44%; display:block; }
-    .featherlight-content { width:98%; height:auto; }
+   @media (max-width:600px) {
     #wrapper { text-align:left !important; }
     #clickyStuff { visibility:hidden; }
+    .chatterThing { text-align:left !important; height:180px; }
+    .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
     #filter { width:100% !important; float:none; }
     #method { width:100%; float:none; text-align:center; padding:10px; }
     .year { width:5%; }
@@ -185,18 +156,6 @@
     .dot { width:15px !important; height:15px !important; }
     #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
     #chartLabels { margin-left:-15px; }
-   }
-
-   @media (max-width:400px) {
-    #wrapper { width:90%; }
-    #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
-    #filter input { font-size:0.6em; }
-    .card { padding:20px; height:auto !important; width:32%; display:block !important; }
-    #sidebar { text-align:center !important; height:200px; }
-   }
-
-   @media (max-width:320px) {
-    #wrapper { width:100%; }
    }
   </style> 
 </head>
@@ -219,13 +178,71 @@
    <div id="all_m" class="bigswitch" data="all">All deaths</div><div id="mentalB_m" class="bigswitch selected" data="mental">Mental health</div>
 
 <div id="resultBar_m"><span class="results"></span> <span>deaths</span></div>
-<div class="chatterThing"><p class="load"><img src="img/loading.gif" /></p></div>
+<div class="chatterThing"></div>
+
+ <!--  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
+            <span>Filter death reports</span>
+              <ul class="dropdown race" tabindex="1">
+        <div class='filterBreak'></div>
+        <div class="filterSection place">
+        <li class='filter3' data="Minneapolis" metric="region"><a href="javascript:void(0)">Minneapolis</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="St. Paul" metric="region"><a href="javascript:void(0)">St. Paul</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="Metro" metric="region"><a href="javascript:void(0)">Metro Suburbs</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter3' data="Outstate" metric="region"><a href="javascript:void(0)">Outstate</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection race">
+        <li class='filter' data="WHITE" metric="race"><a href="javascript:void(0)">White</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="BLACK" metric="race"><a href="javascript:void(0)">Black</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="ASIAN" metric="race"><a href="javascript:void(0)">Asian</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="AMERICAN INDIAN" metric="race"><a href="javascript:void(0)">American Indian</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection gender">
+        <li class='filter' data=" MALE" metric="gender"><a href="javascript:void(0)">Male</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data=" FEMALE" metric="gender"><a href="javascript:void(0)">Female</a> <div class="count">0</div></li>
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection manner">
+        <li class='filter' data="HOMICIDE" metric="manner"><a href="javascript:void(0)">Homicide</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="SUICIDE" metric="manner"><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter' data="ACCIDENT" metric="manner"><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div> 
+        <li class='filter' data="NATURAL" metric="manner"><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>  
+        <li class='filter' data="NA" metric="manner"><a href="javascript:void(0)">NA</a> <div class="count">0</div></li> 
+        <div class='filterBreak'></div>
+        </div>
+        <div class="filterSection weapon">
+        <li class='filter2' data="GUN" metric="weapon"><a href="javascript:void(0)">Gun</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div> 
+        <li class='filter2' data="BLADED WEAPON" metric="weapon"><a href="javascript:void(0)">Bladed Weapon</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter2' data="OTHER" metric="weapon"><a href="javascript:void(0)">Other Weapon</a> <div class="count">0</div></li>
+        <div class="breakSmall"></div>
+        <li class='filter2' data="UNARMED" metric="weapon"><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></li> 
+        </div> 
+              </ul>
+          </div>
+        ​</div>
+</section> -->
 </div>
 
      <div class="chart" id="chartAll">
 
 <div id="topClickies">
-<div id="clickyStuff">Roll over each dot to see individuals</div>
+<div id="clickyStuff">Roll over each dot to see individual victims</div>
 
 <div id="mainFilters">
 <!--  <span>FILTER DEATH REPORTS | <span class="zoom">RESET VIEW</span> -->
@@ -333,7 +350,7 @@
 <div id="sidebar">
 <!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
 <div id="resultBar"><span class="results"></span> <span>deaths</span></div>
-    <div class="chatterThing"><p class="load"><img src="img/loading.gif" class="load" /><p></div>
+    <div class="chatterThing">=</div>
 </div>
 
  <div class="breaker"></div>
@@ -342,13 +359,10 @@
 
     </div>
 
-<!--      <div class="breaker"></div> -->
-
+     <div class="breaker"></div>
 
 <div id="filter"><input type="search" id="filter_box" placeholder="Search list of all deaths by name, year or keyword"></input></div>
-<div id="method"><a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/" target="new_">READ METHODOLOGY</a></div>
-
-<div class="breaker"></div>
+<div id="method"><a href="#" target="new_">READ METHODOLOGY</a></div>
 
 <button id='upClick' class="navButton">&#9650;</button>
      <div id="deathsTable"></div>
@@ -405,13 +419,25 @@ $('.scrollToTop').click(function(){
   });
 
 function addBoxes() {
-  $('#deathsTable .card').each(function(i, obj) {
+  $('#deathsTable .leftSide').each(function(i, obj) {
     $(this).addClass("lightbox");
   });
-  $('#deathsTable .card.lightbox').each(function(i, obj) {
-    $(this).attr("data-featherlight","#" + $(this).attr("id"));
+  $('#deathsTable .leftSide.lightbox').each(function(i, obj) {
+    $(this).attr("data-featherlight","#" + $(this).parent().attr("id"));
   }); 
 }
+
+// if ($(window).width() >= 830) {
+// // $(".filterSection").hide(); 
+// $(".all").show();
+// // } else { $(".filterSection").show();  }
+
+// $(window).resize(function() {
+// if ($(window).width() >= 830) {
+// // $(".filterSection").hide(); 
+// $(".all").show();
+// // } else { $(".filterSection").show();  }
+// });
 
 $('#mainFilters').hide();
 
@@ -447,12 +473,11 @@ $('.results').html(dataShootings.length);
 .attr("id",function (d) { return d.doch; })
 .attr("class","card")
 .html(function (d){ 
-  var linkString = "";
-  var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
-  if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health issues</div>"; }
-  if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
 
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
+  var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
+  if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health crisis</div>"; }
+
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident date " + d3.time.format("%Y-%m-%d")(new Date(d.DeathDate)) + " &#8226; " + d.InjuryCity + " &#8226; " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div><div class='url'><a href='" + d.URL + "' target='new_'>Read more</a></div>";});
 
 addBoxes();
 
@@ -500,7 +525,7 @@ d3.select("#y" + year).selectAll(".dot")
 .html(function (d){ return "";})
 .call(d3.helper.tooltip(function(d, i){
   var mentalStatus = "";
-  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health issues</div>"; }
+  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health crisis</div>"; }
     return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div>" + mentalStatus;
 }));
 
@@ -852,21 +877,19 @@ $("#all, #all_m").on('click',function(){
         $('.card').show();
         var count = $('.card:visible').length;
         $('.results').html(count);
-        d3.selectAll(".dot").classed("active", false);
         d3.selectAll(".dot").classed("mentalSwatch", true);
-        d3.selectAll(".dot").classed("faded", false);
         for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "all") { $(".chatterThing").html(dataChatter[i].chatter) } }
   });
 $("#mentalB, #mentalB_m").on('click',function(){
   $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
   mentalLoad = true;
+  d3.selectAll(".dot").classed("faded", false);
+  d3.selectAll(".dot").classed("active", false);
+  d3.selectAll(".dot").classed("mentalSwatch", false);
   for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
 
   $(".bigDot").removeClass("selected");
   $("#mentalDot").addClass("selected");
-  d3.selectAll(".dot").classed("faded", false);
-  d3.selectAll(".dot").classed("active", false);
-  d3.selectAll(".dot").classed("mentalSwatch", false);
 
   $('.dot').each(function(i, obj) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
@@ -921,7 +944,6 @@ $("#weaponB").on('click',function(){
           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
                $(this).parent().show();
              }
-
          }
         });
         var count = $('.card:visible').length;
