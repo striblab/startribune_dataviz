@@ -88,12 +88,8 @@
       .count { float:right; }
       #links_m { display:none; }
       #contribs { display:none; }
-<<<<<<< HEAD
       #contributorsBlock { display:none; }
       .linkSelect { background-color:#ddd !important; }
-=======
-      #contributors { display:none; }
->>>>>>> parent of 4229751... mental updates
 
 /*DROPDOWN*/
       .wrapper-dropdown { width:100% !important; }
@@ -197,7 +193,7 @@
 <div id="selector">
   <section class="main">
         <div class="wrapper-demo">
-          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+          <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
             <span>All Projects</span>
               <ul class="dropdown months" tabindex="1">
               <li class="sort-link" id="allProjects_m"><strong>All Projects <span class='dash'>-</span> </strong><div class="count"><strong>0</strong></div></li>
@@ -210,7 +206,7 @@
               <li class="sort-link" id="health">Health <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="politics">Politics <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="scitech">Science and Technology <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="transit">Transportation and Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="transit">Transport/Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="resources">Resources</li>
@@ -257,6 +253,8 @@
 </div>
 
 <div id="resourcesBlock" class="resources">
+<a href="http://journalismtools.io/tools/" target="new_"><img src="./img/jtools.png" width="100%" /></a>
+
 <h3 id="foi">Freedom of Information</h3>
 <div id="foia">
 
@@ -343,7 +341,7 @@
 
 </div>
 
-<div class="databankLink"><a href="https://drive.google.com/a/umn.edu/folderview?id=0B01GwdexvA5PSjlSc0VlQlZkdE0&usp=sharing" target="new_">StarTribune Databank</a> | <a href="http://panda.star.local/#search/all" target="new_">Panda Database</a></div>
+<!-- <div class="databankLink"><a href="https://drive.google.com/a/umn.edu/folderview?id=0B01GwdexvA5PSjlSc0VlQlZkdE0&usp=sharing" target="new_">StarTribune Databank</a> | <a href="http://panda.star.local/#search/all" target="new_">Panda Database</a></div> -->
 </div>
 
 <!-- <div class="more"><a  href="javascript:void(0)">See more</a></div>
@@ -354,7 +352,29 @@
 
 <div id="dataSidebar">
 <div id="sorting" class="sectionBox">
-<div class="sort-link" id="allProjects"><strong>All Projects</strong><div class="count"><strong>0</strong></div></div>
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span>All Projects</span>
+              <ul class="dropdown months" tabindex="1">
+              <li class="sort-link" id="allProjects_m"><strong>All Projects <span class='dash'>-</span> </strong><div class="count"><strong>0</strong></div></li>
+              <li class="sort-link" id="datadrop">Data Drop <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="economics">Business and Economics <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="crime">Criminal Justice <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="demographics">Demographics <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="education">Education <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="environment">Environment <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="health">Health <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="politics">Politics <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="scitech">Science and Technology <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="transit">Transport/Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
+              <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
+              </ul>
+          </div>
+        ​</div>
+</section>
+<!-- <div class="sort-link" id="allProjects"><strong>All Projects</strong><div class="count"><strong>0</strong></div></div>
 <div class="sort-link" id="datadrop">Data Drop<div class="count">0</div></div>
 <div class="sort-link" id="economics">Business and Economics<div class="count">0</div></div>
 <div class="sort-link" id="crime">Criminal Justice<div class="count">0</div></div>
@@ -366,7 +386,7 @@
 <div class="sort-link" id="scitech">Science and Technology<div class="count">0</div></div>
 <div class="sort-link" id="transit">Transportation and Infrastructure<div class="count">0</div></div>
 <div class="sort-link" id="other">Other<div class="count">0</div></div>
-<div class="sort-link" id="tools">Tools<div class="count">0</div></div>
+<div class="sort-link" id="tools">Tools<div class="count">0</div></div> -->
 <div class="sort-link" id="resources">Resources</div>
 <div class="sort-link" id="contributors">Contributors</div>
 <!-- <div id="searchMe"><input type="text" id="search-criteria" placeholder="Search projects" /></div> -->
@@ -534,11 +554,7 @@ $( document ).ready(function() {
     $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria').val();
-<<<<<<< HEAD
     if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
-=======
-    if (txt == '') { $('#allProjects').css("background-color","#ddd"); $("#resourcesBlock").hide(); }
->>>>>>> parent of 4229751... mental updates
     $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
@@ -551,11 +567,7 @@ $('#search-criteria_m').keyup(function(){
     $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria_m').val();
-<<<<<<< HEAD
     if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
-=======
-    if (txt == '') { $('#allProjects').css("background-color","#ddd"); $("#resourcesBlock").hide(); }
->>>>>>> parent of 4229751... mental updates
     $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).parent().show();
@@ -589,7 +601,6 @@ $(window).scroll(function() {
  }
 });
 
-<<<<<<< HEAD
 $.urlParam = function(name){
   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
   if (results != null) { return results[1]; }
@@ -622,8 +633,6 @@ if ($.urlParam('page') != 0 ) {
   }
 }
 
-=======
->>>>>>> parent of 4229751... mental updates
 });
 });
 </script>
@@ -664,7 +673,7 @@ if ($.urlParam('page') != 0 ) {
       $(function() {
 
         var dd = new DropDown( $('#dd') );
-        var dd2 = new DropDown( $('#ddY') );
+        var dd2 = new DropDown( $('#dd2') );
 
         $(document).click(function() {
           // all dropdowns
