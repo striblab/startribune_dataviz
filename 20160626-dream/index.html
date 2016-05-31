@@ -23,7 +23,7 @@
    #slider { display:none; }
    .legends { width:318px; height:auto; text-align:center; margin-right:auto; margin-left:auto; }
 
-   .metroSwitch { padding:10px; display:inline-block; text-align:center; width:48% !important; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
+   .metroSwitch { padding:10px; display:inline-block; text-align:center; width:49.5% !important; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
    .metroSwitch:hover { background-color:#333 !important; color:#fff !important; cursor:pointer; }
    #map, #mapMN { display:none; }
 
@@ -42,27 +42,27 @@
 
    .chatter, .chartTitle { text-align:left; }
 
-  .negDark { fill:#CC4C02 !important; background-color:#CC4C02 !important; color:#fff; }
-  .negMid { fill:#FE9929 !important; background-color:#FE9929 !important; color:#fff; }
-  .negLight { fill:#FED98E !important; background-color:#FED98E !important; }
-  .neutral { fill:#ddd !important; background-color:#fff !important; }
-  .posLight { fill:#ECF9B9 !important; background-color:#ECF9B9 !important; }
-  .posMid { fill:#ADDD8E !important; background-color:#ADDD8E !important; color:#fff; }
-  .posDark { fill:#31A354 !important; background-color:#31A354 !important; color:#fff; }
+   .negDark { fill:#CC4C02 !important; background-color:#CC4C02 !important; color:#fff; }
+   .negMid { fill:#FE9929 !important; background-color:#FE9929 !important; color:#fff; }
+   .negLight { fill:#FED98E !important; background-color:#FED98E !important; }
+   .neutral { fill:#ddd !important; background-color:#fff !important; }
+   .posLight { fill:#ECF9B9 !important; background-color:#ECF9B9 !important; }
+   .posMid { fill:#ADDD8E !important; background-color:#ADDD8E !important; color:#fff; }
+   .posDark { fill:#31A354 !important; background-color:#31A354 !important; color:#fff; } 
 
-  .state-boundary { fill: none; stroke: #fff; stroke-width:2.3px; }
+   .state-boundary { fill: none; stroke: #fff; stroke-width:2.3px; } 
 
-  path:hover { cursor:normal !important; }
+   path:hover { cursor:normal !important; } 
 
-  #mapChatter { display:none; }
+   #mapChatter { display:none; } 
 
-  .city-label { font-size:8px !important; margin-left:3px !important; text-anchor:left !important; }
+   .city-label { font-size:8px !important; margin-left:3px !important; text-anchor:left !important; } 
 
-  small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; }
+   small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; } 
 
-  .grid { padding:10px; }
-  #gridBlock   { float:right; width:47%; }
-  #tableBlock { float:left; display:inline-block; width:47%; }
+   .grid { padding:10px; }
+   #gridBlock   { float:right; width:47%; }
+   #tableBlock { float:left; display:inline-block; width:47%; }
   #districtName { display:none; }
 
     #tableBlock, #gridBlock, #quintile, #chartBlock, #chart { width:100%; float:none; display:block !important; }
@@ -82,10 +82,10 @@
 <div class="chatter">chatter</div>
 <div class="breaker"></div> -->
 
-<div id="viewSwitch"><div class="metroSwitch selected" id="usfilter" data="country">National</div> <div class="metroSwitch" id="mwfilter" data="map">Midwest</div> <!-- <div class="metroSwitch" data="mapMN">MN</div> --> <div class="zoom">Reset View</div></div>
+<div id="viewSwitch"><div class="metroSwitch selected" id="usfilter" data="country">National</div> <div class="metroSwitch" id="mwfilter" data="map">Midwest</div> <!-- <div class="metroSwitch" data="mapMN">MN</div> --> 
 
-<div class="chatter" id="countryChatter">National chatter</div>
-<div class="chatter" id="mapChatter">Midwest chatter</div>
+<div class="chatter" id="countryChatter">The Upper Midwest has been the bestplace in the country for upward mobility in the last 30 years, and the Deep South is the worst.</div>
+<div class="chatter" id="mapChatter">In the Midwest, the states west of the Mississippi offer the most opportunity to children from lower-income families, but even  in Minnesota, Iowa, Nebraska and the Dakotas, large urban centers rank well below rural areas.</div>
 
 <div id="leftSide">
 <div id="map" class="map"><svg width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid"></svg></div>
@@ -94,6 +94,8 @@
 </div>
 
 <div class="breaker"></div>
+
+<div class="zoom">Reset View</div></div>
 
 <div class="legendBox">
 <div class="legends">
@@ -252,7 +254,7 @@ d3.select(container).selectAll(".card")
   var p25, p75 = 0;
 
   if (d.aum25 != 0) { 
-    p25 = d3.format("+")(Math.round(d.aum25 - 47)); 
+    p25 = d3.format("+")(Math.round(d.aum25 - 42)); 
     p75 = d3.format("+")(Math.round(d.aum75 - 61)); 
   } 
   else { 
@@ -370,7 +372,7 @@ jQuery.fn.d3Up = function () {
    $('.p25').each(function() {
     var num = $(this).text();
     if (num != "No data available"){
-      var color_scale = d3.scale.linear().domain([-25, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
+      var color_scale = d3.scale.linear().domain([-20, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
       $(this).css('background-color', color_scale(num));
     }
     });
@@ -402,10 +404,10 @@ d3.selectAll(container + " svg g path")
 function mapColor(d, subject, dataCompare){
   for (var i=0; i < data.length; i++){
     if (d.properties.GEOID == data[i].FIPS || ("27" + String(d.properties.COUNTYFIPS)) == String(data[i].FIPS)){
-      var points = data[i].aum25 - 47;
+      var points = data[i].aum25 - 42;
       if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "#fff"; }
       else { 
-        var color_scale = d3.scale.linear().domain([-25, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
+        var color_scale = d3.scale.linear().domain([-20, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
         return color_scale(points);
       }
       // break;
@@ -461,12 +463,7 @@ var g = svg.append("g");
 d3.json("shapefiles/" + shape, function(error, us) {
 d3.json("shapefiles/us_states_topo.json", function(error, st) {
 
-  var marks = [{long:-93.266667, lat:44.983333, name:"Minneapolis"},{long:-74.0059, lat:40.7127, name:"New York"},{long: -122.416667, lat: 37.783333, name:"San Francisco"}];
-
-   svg.insert("path", ".graticule")
-      .datum(topojson.mesh(st, st.objects.us_states, function(a, b) { return a !== b; }))
-      .attr("class", "state-boundary")
-      .attr("d", path);
+  var marks = [{long:-93.266667, lat:44.983333, name:"Minneapolis"},{long:-74.0059, lat:40.7127, name:"New York"},{long: -122.416667, lat: 37.783333, name:"San Francisco"},{long: -87.955833, lat: 43.052222, name:"Milwaukee"},{long: -87.684722, lat: 41.836944, name:"Chicago"},{long: -93.620833, lat: 41.590833, name:"Des Moines"},{long: -83.045833, lat: 42.331389, name:"Detroit"},{long: -86.15, lat: 39.766667, name:"Indiana"},{long: -96.731667, lat: 43.536389, name:"Sioux Falls"}];
 
   g.append("g")
       .attr("class", "states")
@@ -478,8 +475,8 @@ d3.json("shapefiles/us_states_topo.json", function(error, st) {
       .attr("id", function(d) { var str = d.properties.NAME + "" + d.properties.GEOID + "_" + geo; return str.replace(new RegExp(" ", "g"),"-"); })
       .style("fill", function(d){
          return mapColor(d, race, dataCompare);
-        })
-       .on("mousedown", function(d, i){
+      })
+      .on("mousedown", function(d, i){
         for (var i=0; i < data.length; i++){
         if (d.properties.GEOID == data[i].FIPS || ("27" + String(d.properties.COUNTYFIPS)) == String(data[i].FIPS)){
           $("#districtName").html(d.properties.NAME + " County, " + data[i].state);
@@ -498,7 +495,7 @@ d3.json("shapefiles/us_states_topo.json", function(error, st) {
           })
         }
       }
-       })
+      })
       .style("stroke-width", ".5px")
       .style("stroke", "#fff")
       .call(d3.helper.tooltip(function(d, i){
@@ -521,13 +518,21 @@ d3.json("shapefiles/us_states_topo.json", function(error, st) {
     .attr("fill", "#333")
     .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
 
+    svg.insert("path", ".graticule")
+      .datum(topojson.mesh(st, st.objects.us_states, function(a, b) { return a !== b; }))
+      .attr("class", "state-boundary")
+      .style("stroke-width", "1.2px")
+      .attr("d", path);
+
   svg.selectAll("text")
     .data(marks)
     .enter()
     .append("text")
     .attr('class','city-label')
-    .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";})
-    .text(function(d) { return d.name; });
+    .attr("transform", function(d) {return "translate(" + projection([d.long+.23,d.lat-.09]) + ")";})
+    .text(function(d) { return " " + d.name; });
+
+
 
 });
 });
