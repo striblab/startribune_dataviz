@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
-   <style>
+    <style>
   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
    #wrapper { width:920px; margin-left:auto; margin-right:auto; }
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
@@ -124,7 +124,7 @@
    #chartAll { width:610px; float:right;}
    #chartLabels { margin:10px 0 10px 0; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5.15%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
+   .yearLabel { width:5.27%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
    .bigcount { font-size:1.5em;  color:#b75b60; }
 
 
@@ -552,7 +552,7 @@ d3.helper.tooltip = function(accessor){
             // Append tooltip
             tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
             var absoluteMousePos = d3.mouse(bodyNode);
-            tooltipDiv.style('right', (absoluteMousePos[0] + 10)+'px')
+            tooltipDiv.style('left', (absoluteMousePos[0] - 180)+'px')
                 .style('top', (absoluteMousePos[1] - 15)+'px')
                 .style('position', 'absolute') 
                 .style('z-index', 1001);
@@ -565,7 +565,7 @@ d3.helper.tooltip = function(accessor){
         .on('mousemove', function(d, i) {
             // Move tooltip
             var absoluteMousePos = d3.mouse(bodyNode);
-            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+            tooltipDiv.style('left', (absoluteMousePos[0] - 180)+'px')
                 .style('top', (absoluteMousePos[1] - 15)+'px');
             var tooltipText = accessor(d, i) || '';
             tooltipDiv.html(tooltipText);

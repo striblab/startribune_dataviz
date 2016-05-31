@@ -463,7 +463,7 @@ var g = svg.append("g");
 d3.json("shapefiles/" + shape, function(error, us) {
 d3.json("shapefiles/us_states_topo.json", function(error, st) {
 
-  var marks = [{long:-93.266667, lat:44.983333, name:"Minneapolis"},{long:-74.0059, lat:40.7127, name:"New York"},{long: -122.416667, lat: 37.783333, name:"San Francisco"},{long: -87.955833, lat: 43.052222, name:"Milwaukee"},{long: -87.684722, lat: 41.836944, name:"Chicago"},{long: -93.620833, lat: 41.590833, name:"Des Moines"},{long: -83.045833, lat: 42.331389, name:"Detroit"},{long: -86.15, lat: 39.766667, name:"Indiana"},{long: -96.731667, lat: 43.536389, name:"Sioux Falls"}];
+  var marks = [{long:-93.266667, lat:44.983333, name:"Minneapolis"},{long:-74.0059, lat:40.7127, name:"New York"},{long: -122.416667, lat: 37.783333, name:"San Francisco"},{long: -87.955833, lat: 43.052222, name:"Milwaukee"},{long: -87.684722, lat: 41.836944, name:"Chicago"},{long: -93.620833, lat: 41.590833, name:"Des Moines"},{long: -83.045833, lat: 42.331389, name:"Detroit"},{long: -86.15, lat: 39.766667, name:"Indiana"},{long: -96.731667, lat: 43.536389, name:"Sioux Falls"},{long: -118.25, lat: 34.05, name:"Los Angeles"},{long: -80.208889, lat: 25.775278, name:"Miami"},{long: -95.383056, lat: 29.762778, name:"Houston"},{long: -96.796667, lat: 32.775833, name:"Dallas"},{long: -71.063611, lat: 42.358056, name:"Boston"}];
 
   g.append("g")
       .attr("class", "states")
