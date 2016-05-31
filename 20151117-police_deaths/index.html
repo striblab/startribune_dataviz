@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
-  <style>
+   <style>
   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
    #wrapper { width:920px; margin-left:auto; margin-right:auto; }
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
@@ -258,7 +258,7 @@
         <div class='filter' data="SUICIDE" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></div>
         <div class='filter' data="ACCIDENT" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></div>
         <div class='filter' data="NATURAL" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></div>
-        <div class='filter' data="Ruling: NA" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">NA</a> <div class="count">0</div></div> 
+        <div class='filter' data="UNDETERMINED" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">NA</a> <div class="count">0</div></div> 
         </div>
         <div class="filterSection weapon">
         <div class='filter2' data="GUN" metric="weapon"><span id="weaponDot" class="bigDot"></span><a href="javascript:void(0)">Gun</a> <div class="count">0</div></div>
@@ -442,7 +442,7 @@ $('.results').html(dataShootings.length);
 
 
 //POPULATE TABLE
-    d3.select("#deathsTable").selectAll(".card")
+d3.select("#deathsTable").selectAll(".card")
 .data(dataShootings).enter().append("div")
 .attr("id",function (d) { return d.doch; })
 .attr("class","card")
