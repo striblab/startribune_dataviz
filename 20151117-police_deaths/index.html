@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
-   <style>
+    <style>
   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
    #wrapper { width:920px; margin-left:auto; margin-right:auto; }
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
@@ -49,7 +49,7 @@
    .featherlight-content .card { width:100% !important; background-color: #eee; !important; border:0 !important;}
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
 
-    .tooltip .name {font-size:1em;color:#333;margin-bottom:4px;}
+    .tooltip .name { font-size:1em; color:#333; margin-bottom:4px; width:150px; }
     .tooltip .mentalSwatch { font-size:.9em;color:#999 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
     
    .url { font-weight:900; padding-left:6px !important;}
@@ -552,7 +552,7 @@ d3.helper.tooltip = function(accessor){
             // Append tooltip
             tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
             var absoluteMousePos = d3.mouse(bodyNode);
-            tooltipDiv.style('right', (absoluteMousePos[0] + 10)+'px')
+            tooltipDiv.style('left', (absoluteMousePos[0] - 180)+'px')
                 .style('top', (absoluteMousePos[1] - 15)+'px')
                 .style('position', 'absolute') 
                 .style('z-index', 1001);
@@ -565,7 +565,7 @@ d3.helper.tooltip = function(accessor){
         .on('mousemove', function(d, i) {
             // Move tooltip
             var absoluteMousePos = d3.mouse(bodyNode);
-            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+            tooltipDiv.style('left', (absoluteMousePos[0] - 180)+'px')
                 .style('top', (absoluteMousePos[1] - 15)+'px');
             var tooltipText = accessor(d, i) || '';
             tooltipDiv.html(tooltipText);
