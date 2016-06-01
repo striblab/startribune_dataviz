@@ -158,7 +158,7 @@
     /*#method { visibility:hidden !important; }*/
 
     .featherlight-content { pointer-events:none !important; }
-    .featherlight-content.url { pointer-events:all !important; }
+    .featherlight-content .url, .url a { pointer-events:all !important; }
 
    @media (max-width:920px) {
     #wrapper { width:600px; }
@@ -464,8 +464,15 @@ $(".card").on("click" ,function(){
 $(".featherlight-content .card").removeClass("lightbox");
 $(".featherlight-content .card").removeClass("featherlight-inner");
 $(".featherlight-content .card").attr("data-featherlight","");
+
 });
+
 });
+
+  $(".url").on("click" ,function(){
+    window.open($(this).find("a").attr("href"), '_new');
+    return false;
+  });
 
 function spitDots(year){
 d3.select("#y" + year).selectAll(".dot")
@@ -586,6 +593,8 @@ for (var i=2000; i <= 2016; i++){ spitDots(i); }
 
 //SEARCH FILTER TABLE
   $( document ).ready(function() {
+
+
      $('#filter_box').keyup(function(i){
       if (mentalLoad == true){
         $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
