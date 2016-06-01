@@ -157,6 +157,9 @@
 
     /*#method { visibility:hidden !important; }*/
 
+    .featherlight-content { pointer-events:none !important; }
+    .featherlight-content.url { pointer-events:all !important; }
+
    @media (max-width:920px) {
     #wrapper { width:600px; }
     .chatterThing { text-align:left !important; height:180px; }
@@ -456,10 +459,11 @@ d3.select("#deathsTable").selectAll(".card")
 
 addBoxes();
 
-$(".clickies").on("click" ,function(){
+$(".card").on("click" ,function(){
   $(document).bind('DOMNodeInserted', function(event) {
-$(".featherlight-content .clickies").removeClass("lightbox");
-$(".featherlight-content .clickies").removeClass("featherlight-inner");
+$(".featherlight-content .card").removeClass("lightbox");
+$(".featherlight-content .card").removeClass("featherlight-inner");
+$(".featherlight-content .card").attr("data-featherlight","");
 });
 });
 
@@ -1152,5 +1156,10 @@ $("#genderB").on('click',function(){
       });
 
 </script>
-
+<script src="http://static.startribune.com/js/pym/pym.min.js"></script>
+<script> 
+ function sizeNow(){pymChild.sendHeight();}
+ setTimeout(sizeNow, 500);
+ var pymChild = new pym.Child();
+</script>
 </html>
