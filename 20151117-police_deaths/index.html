@@ -281,7 +281,7 @@
 
     <style>
       
-    .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; } 
+    .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important;} 
 
     .arrow-down {background-color:transparent !important;}  
     .arrow-down.selected {background-color:transparent !important;}      
@@ -431,18 +431,65 @@
     .featherlight-content { pointer-events:none !important; }
     .featherlight-content .url, .url a { pointer-events:all !important; }
 
+      
+      
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+  
+    #wrapper { width:90%; }  
+    .leftSide { width:40% !important; }
+    .rightSide { display:none; width:0%;}
+    .chatterThing { text-align:left !important; height:auto; }
+    .chatterThing img { margin-left:auto; margin-right:auto; }
+    .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0;}
+  #topClickies {
+    height: 60px;
+}
+  #clickyStuff { visibility:hidden; }
+  
+  .breaker {padding: 0 0 5px 0;margin:0px}
+    #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
+    .card { padding:20px; height:auto !important; width:62%; display:block; }
+    #method { width:100%; float:none; text-align:center; padding:10px; }
+    .year { width:5%; }
+    #mobileZoom { display:block; }
+    .dot { width:14px !important; height:14px !important; }
+    #chartLabels { margin-left:-12px;width:100%}
+    #chartLabels .yearLabel { 
+      font-size:10px; 
+      width:4.6%;
+      transform: rotate(-90deg); 
+      transform-origin: right top 0; 
+      vertical-align: top; }
+    #filter { width:100% !important; float:none; margin-bottom:0px;}
+    #chartAll { width:100%; }
+
+  
+
+/*
+   #mentalB, #mentalB_m { margin-left:2px;margin-right:0px; } 
+   #raceB, #genderB, #mannerB, #placeB, #weaponB { margin-left:2px; }
+  
+*/
+  
+
+      }      
+      
+      
+/*
+      
+      
    @media (max-width:920px) {
     #wrapper { width:600px; }
-    .chatterThing { text-align:left !important; height:180px; }
+    .chatterThing { text-align:left !important; height:auto; }
     .chatterThing img { margin-left:auto; margin-right:auto; }
     .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
-    #sidebar { width:100%; height:160px; text-align:center; margin-top:9px; }
+    #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
     .card { padding:20px; height:auto !important; width:62%; display:block; }
     #method { text-align:center; }
    }
    @media (max-width:605px) {
     #wrapper { width:434px; }
-    .leftSide { width:100%; }
+    .leftSide { width:90%; }
     .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
     .rightSide { display:none; }
     .count { font-size:1.4em; }
@@ -453,7 +500,7 @@
     #clickyStuff { visibility:hidden; }
     #filter { width:100% !important; float:none; }
     #method { width:100%; float:none; text-align:center; padding:10px; }
-    .year { width:5%; }
+    .year { width:5.25%; }
     .yearLabel { width:4.75%; }
     #mobileZoom { display:block; }
     .dot { width:15px !important; height:15px !important; }
@@ -463,15 +510,24 @@
 
    @media (max-width:400px) {
     #wrapper { width:90%; }
-    #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
+    .year { width:5.25%; } 
+    #chartLabels .yearLabel { font-size:10px; width:4.6%; }
     #filter input { font-size:0.6em; }
     .card { padding:20px; height:auto !important; width:32%; display:block !important; }
-    #sidebar { text-align:center !important; height:200px; }
+    #sidebar { text-align:center !important; height:auto; }
    }
 
    @media (max-width:320px) {
-    #wrapper { width:100%; }
+    #wrapper { width:90%; }
+    .year { width:5.25%; }
+    .yearLabel { width:4.75%; }
+    #chartLabels .yearLabel { font-size:10px; width:4.6%; }
+    #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
+     
    }
+      
+*/
+      
   </style>
 </head>
 <body class=" storyid380298861 page-article">
@@ -1951,15 +2007,19 @@ $("#genderB").on('click',function(){
     
                                   
                                                                 <section class="comments-section" id="comments">
+<!--
     <script type="text/javascript">
         if (typeof commentQueryStrings === 'undefined') {
             var commentQueryStrings = {};
         }
     </script>
+-->
     
+<!--
     <script type="text/javascript">
         commentQueryStrings[window.location.pathname] = JSON.parse('{"pageName":"pageName=Fatal%20police%20encounters","channel":"channel=","server":"server=startribune.com","prop1":"c1=D%3Dg","prop2":"c2=V20160601","prop3":"c3=story","prop5":"c5=","prop7":"c7=comments","prop16":"c16=","prop71":"c71=websites"}');
     </script>
+-->
 
     <div class="comments">
         <a href="#" class="js-comments-show comments-count-link">
