@@ -1,15 +1,279 @@
-<!doctype html>
 
-<html lang="en">
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html dir="ltr" lang="en-US" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script
+      src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
+      data-apikey="57098e87943fb0b8bcf51a8ffc9ca41a">
+    </script>
+          <script type="text/javascript" src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d=1463599109"></script>
+    
 
-  <title>Minnesota Police Involved Deaths</title>
-  <meta name="description" content="Minnesota Police Involved Deaths">
-  <meta name="author" content="Jeff Hargarten - StarTribune">
+          <script type="text/javascript">
+        // Variables for optimizely
+        window.opt_target = {
+            contentType: 'story',
+            sectionPath: '/protected/',
+            minorSection: '/protected/',
+            majorSection: '/protected/'
+        };
+      </script>
+    
+    <script src="//cdn.optimizely.com/js/3104270409.js"></script>
+     
+    <script type="text/javascript">
+        function isWelcomeShowing() {
+            var welcomeModuleElement = jQuery('#WelcomeModule');
+            if (welcomeModuleElement.length > 0 && welcomeModuleElement.css('display') === 'block') {
+                return true;
+            }
+            return false;
+        }
 
-  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+        function isPhone() {
+            return /Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        var twigJsDomain = 'www.startribune.com';
+        var assetDomain = 'assets.startribune.com';
+        if (assetDomain != '' && typeof assetDomain == 'string') {
+          twigJsDomain = assetDomain;
+        }
+        twigJsDomain = 'http://' + twigJsDomain;
+    </script>
+
+                    <script type="text/javascript">
+            var overlayRes = "";
+
+            function overlayInterstitial(string, leftPosition, creativeWidth, creativeHeight, topPosition, leftPositionButton, Buttonwidth, ButtonHeight) {
+                if (leftPosition == "centeredpx") {  // set left position if centered
+                    var dcw = 0;
+                    if (!window.innerWidth)  //IE
+                        if (!(document.documentElement.clientWidth == 0))dcw = document.documentElement.clientWidth;  //strict mode
+                        else dcw = document.body.clientWidth;  //quirks mode
+                    else dcw = window.innerWidth;  //w3c
+                    leftPosition = (dcw - creativeWidth) / 2 + "px";
+                    leftPositionButton = Number(creativeWidth) + Number((dcw - creativeWidth) / 2) - Number(Buttonwidth);
+                    leftPositionButton = leftPositionButton + "px";
+                }
+                if (topPosition == "centeredpx") {  // set top position if centered
+                    var dch = 0;
+                    if (!window.innerWidth)  //IE
+                        if (!(document.documentElement.clientWidth == 0)) dch = document.documentElement.clientHeight;  //strict mode
+                        else dch = document.body.clientHeight;  //quirks mode
+                    else dch = window.innerHeight;  //w3c
+                    topPosition = (dch - creativeHeight) / 2 + "px";
+                }
+
+                var topPosNum = parseFloat(topPosition.replace('px', ''));
+                var buttonTop = (topPosNum - ButtonHeight);
+                if (buttonTop < 0) {
+                    buttonTop = 0;
+                }
+
+                var res = string.replace(/\**BTOP/g, buttonTop + 'px');
+                res = res.replace(/\**TOP/g, topPosition);
+                res = res.replace(/\**BLEFT/g, leftPositionButton);
+                res = res.replace(/\**LEFT/g, leftPosition);
+                res += '<\/div>';
+
+                window.overlayRes = res;
+
+                $(document).ready(function () {
+                    if (!isPhone() && !isWelcomeShowing()) {
+                        jQuery( '<div>' ).attr( 'id', 'interstitial-overlay' ).html( window.overlayRes ).appendTo( jQuery( 'body' ) );
+                    }
+                });
+            }
+
+            function dclk_hide_overlay() {
+                jQuery( '#interstitial-overlay').empty().css( 'display', 'none' );
+            }
+        </script>
+    
+    <title>Fatal police encounters - StarTribune.com</title>
+    <meta name="google-site-verification" content="bLXTXkzm4dJ8hcJy1LXawtxXxGP3JhInARj69uCiMiM" />
+            <meta name="robots" content="noindex" />
+            
+    <link rel="apple-touch-icon" href="http://www.startribune.com/img/touch-icon-iphone-retina.png?d=1464807266">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.startribune.com/img/touch-icon-ipad.png?d=1464807266">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.startribune.com/img/touch-icon-iphone-retina.png?d=1464807266">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.startribune.com/img/touch-icon-ipad-retina.png?d=1464807266">
+    
+                <link rel="canonical" href="http://www.startribune.com/fatal-police-encounters/380298861/" />
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.startribune.com/fatal-police-encounters/380298861/" />
+    
+              <meta itemprop="name" content="Fatal police encounters" /><!-- g+ -->
+    <meta name="description" content="mental health, law enforcemnet, police, death" />
+    <meta itemprop="description" content="mental health, law enforcemnet, police, death" /><!-- g+ -->
+                            <meta itemprop="image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- g+ -->
+            
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <meta property="og:site_name" content="Star Tribune" />
+
+            <meta property="og:type" content="article" />
+    <meta property="og:title" content="Fatal police encounters" /><!-- fb, linkedin, pinterest -->
+    <meta property="og:description" content="mental health, law enforcemnet, police, death" /><!-- fb, linkedin, pinterest -->
+            <meta property="og:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" />
+                            <meta property="og:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+            <meta property="og:image:url" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+            <meta property="og:image:width" content="1200" /><!-- fb, linkedin, pinterest -->
+            <meta property="og:image:height" content="630" /><!-- fb, linkedin, pinterest -->
+            
+        <meta name="twitter:site" content="@StarTribune" />
+        <meta name="twitter:card" content="summary">
+
+            <meta name="twitter:title" content="Fatal police encounters" /><!-- twitter -->
+    <meta name="twitter:description" content="mental health, law enforcemnet, police, death" /><!-- twitter -->
+                <meta name="twitter:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" /><!-- twitter -->
+                            <meta name="twitter:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
+            <meta name="twitter:image:src" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
+            
+                <script type="text/javascript">
+    if( typeof window.console === 'undefined' ) {
+      var noOp = function() {};    // no-op function
+      console = {
+        log: noOp,
+        warn: noOp,
+        info: noOp,
+        error: noOp,
+        debug: noOp
+      };
+    }
+
+    reloadTimerActive = true;
+    var FeatureAPI_JS_TipsNavigation = false;
+      </script>
+    <link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=adde85c5c9f0f29daea3dd1e92f490d00d055c43">
+  <link rel="shortcut icon" href="http://stmedia.startribune.com/designimages/favicon.ico" type="image/x-icon" />
+
+    <script type="text/javascript" src="http://assets.startribune.com/static/min/header.min.js?d=1464807624"></script>
+  <script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/AppMeasurement.js?d=1464807266"></script>
+  
+  
+  <script type="text/javascript">
+      //
+      // If user is already logged in to member center but not here, get their info from SAML
+      //
+      if( jQuery.cookie( 'st_usr_plat' ) && !jQuery.cookie( 'st_usr_name' ) && !jQuery.cookie( 'login_attempt_strib' ) ) {
+          jQuery.cookie( 'login_attempt_strib', true );
+          window.location.href = '/login?path=' + encodeURIComponent( document.location );
+      }
+  </script>
+
+      <!--start embed -->
+<script src="https://users.startribune.com/place/1/3/config/8e2ebcdf5774bfadf1f67494b69667d90c03a417" type="text/javascript"></script>
+
+
+<script>
+  var rskunkRequireConfig = {
+        paths: {
+            "mainapp": "https://users.startribune.com/embed/mainapp.build.js?c=1460040713"
+        },
+    baseUrl: 'https://users.startribune.com/embed'
+  };
+</script>
+<script src="https://users.startribune.com/embed/third-party/rskunkRequire.js"></script>
+<script>
+  (function(require){
+    require(["mainapp"]);
+  })(rskunkRequire.require);
+</script>
+<link rel="stylesheet" href="https://users.startribune.com/embed/third-party/growl.css">
+<link rel="stylesheet" href="https://users.startribune.com/embed/third-party/colorbox.css">
+        <script type="text/javascript">
+        var meteredElement = {
+            "contentID": "380298861",
+            "meteredContent": true,
+            "sectionPath": "/protected",
+            "user_state": "guest",
+            "products": null
+        };
+        function rskunkCookieMonster(k) {
+            return(r=RegExp('(^|; )'+encodeURIComponent(k)+'=([^;]*)').exec(document.cookie))?r[2]:null;
+        }
+        if(null !== rskunkCookieMonster('st_usr_name')) meteredElement.user_state = "logged_in";
+        if(null !== rskunkCookieMonster('st_usr_products')) meteredElement.products = JSON.parse(unescape(rskunkCookieMonster('st_usr_products')));
+
+        if( typeof optimizelyMeterOverrides == 'object' ) {
+            jQuery.extend( true, rSkunkConfig, optimizelyMeterOverrides );
+        }
+
+        rsInit = function( rs ) {
+            var exemptReferrers = (typeof window.opt_meter_exempt_referrers != 'undefined') ? window.opt_meter_exempt_referrers : [];
+            rs.calculate( rSkunkConfig, meteredElement, function() {
+                $(document).ready(function() {
+                    if ( $.inArray('newsletters', exemptReferrers) !== -1 && window.location.search.match('ref=nl') !== null) {
+                        return;
+                    }
+
+                    for (ref in exemptReferrers) {
+                        if (document.referrer.match(ref) !== null) {
+                            return;
+                        }
+                    }
+
+                    rs.enforce(function(count) {
+
+                    });
+                });
+            });
+        }
+  </script>
+
+            
+          <script type="text/javascript" src="http://assets.startribune.com/static/js/st.welcome.js?d=1464807570"></script>
+    
+                            <script type="text/javascript" src="//nexus.ensighten.com/startribune/Bootstrap.js"></script>
+            
+  
+  <script src="http://assets.startribune.com/static/js/ads/article.js?d=1464807570"></script>
+              
+  
+      <script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({
+                  article:'auto'
+              });
+      !function (e, f, u) {
+        e.async = 1;
+        e.src = u;
+        f.parentNode.insertBefore(e, f);
+      }(document.createElement('script'),
+        document.getElementsByTagName('script')[0],
+        'http://cdn.taboola.com/libtrc/startribune/loader.js');
+    </script>
+    <script>
+      window._newsroom = window._newsroom || [];
+      !function (e, f, u) {
+        e.async = 1;
+        e.src = u;
+        f.parentNode.insertBefore(e, f);
+      }(document.createElement('script'),
+      document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/startribune/newsroom.js');
+   </script>
+   <script src="http://assets.startribune.com/static/vendor/pym.js/dist/pym.min.js?d=1463599104"></script>
+  
+        <link rel="stylesheet" href="http://assets.startribune.com/static/vendor/swiper/dist/idangerous.swiper.css?d=95bf8dfea48f53373131996be7821f295b42de30">
+    <link rel="stylesheet" href="http://assets.startribune.com/static/vendor/magnific-popup/dist/magnific-popup.css?d=f387dcc908778095b11b10bfc01dff47ae1e8f67">
+
+  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/article-project-nav.css?d=77ded1ee5f1db42a479e3e632ba9fa152240e9ae">
+  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/project-globals.css?d=20c4d031baaae680381dd39f14070638223be8b1">
+  <link rel="stylesheet" href="http://static.startribune.com/css/news/mentalWorkflow/style.css?d=2016060209">
+
+      <script type="text/javascript">
+        var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","primary_section_path":"\/protected"};
+    </script>
+
+
+    <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
@@ -203,8 +467,499 @@
    }
   </style>
 </head>
+<body class=" storyid380298861 page-article">
 
-<body>
+ 
+
+
+        <script type="text/javascript">
+            function ourDomain() {
+                var parts = location.hostname.split('.');
+                var subdomain = parts.shift();
+                var upperleveldomain = parts.join('.');
+
+                return (upperleveldomain == 'startribune.com');
+            }
+
+            function are_cookies_enabled() {
+                var date = new Date();
+                date.setTime(date.getTime()+(60*1000));
+                var expires = "; expires="+date.toUTCString();
+                document.cookie= "testcookie = ytubrute" + expires; //iPad does not create the cookie without a value.
+                var cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+
+                return (cookieEnabled);
+            }
+
+            if (ourDomain() && are_cookies_enabled() && !isPhone()) {
+                var welcomeCookieVal = document.cookie.indexOf("st_welcome");
+                if(welcomeCookieVal == undefined ||  welcomeCookieVal == null || welcomeCookieVal < 0){
+                    setTimeout(populateWelcome, 10);
+                }
+            }
+
+        </script>
+    
+
+          
+<!-- Start Omniture Tag -->
+<script type="text/javascript">
+    //For omniture impressions. We don't want to access s until the very end.
+    var impression_data = [];
+
+    function analyticsClickTracking($this, linkname, linktype, modulename, moduletype, positions, custom ) {
+        // IE8 throws error on console.log
+        // console.log("Click event triggered");
+        linkname = typeof linkname !== 'undefined' ? linkname : null;
+        if ($this !== false && linkname == null) {
+            linkname = $this.data('linkname');
+        }
+        //If linkname doesn't exist, don't bother with the rest
+        if (typeof linkname !== 'undefined' && linkname !== null && linkname !== '') {
+            linktype = typeof linktype !== 'undefined' ? linktype : null;
+            if ($this !== false && linktype == null) {
+                linktype = $this.data('linktype');
+            }
+            var events = [
+                'event3'
+            ];
+            custom = typeof custom !== 'undefined' ? custom : {};
+            custom.events = typeof custom.events !== 'undefined' ? custom.events : '';
+            var customEvents = custom.events !== '' ? custom.events : null;
+            if ($this !== false && customEvents == null) {
+                 customEvents = $this.data('customevents');
+            }
+            if (customEvents !== '' && typeof customEvents  !== 'undefined') {
+                customEvents = customEvents.split(',');
+                for (var i = 0; i < customEvents.length; i++) {
+                    switch (customEvents[i]) {
+                        case 'search-featured-click':
+                            events.push('event56');
+                        break;
+                        case 'search-click':
+                            events.push('event55');
+                        break;
+                        default:
+                        break;
+                    }
+                }
+            }
+            var modulename = typeof modulename !== 'undefined' ? modulename : null;
+            if ($this !== false && modulename == null) {
+                modulename = $this.data('modulename');
+            }
+            var moduletype = typeof moduletype !== 'undefined' ? moduletype.split('-') : null;
+            if ($this !== false && moduletype == null) {
+                moduletype = $this.data('moduletype').split('-');
+            } else if (moduletype == null) {
+                moduletype = '-'.split('-');
+            }
+            var zonetype = moduletype.shift();
+            moduletype = moduletype.join('-');
+            var positions = typeof positions !== 'undefined' ? positions.split('-') : null;
+            if ($this !== false && positions == null) {
+                positions = $this.data('position').split('-');
+            } else if (positions == null) {
+                positions = '0-0'.split('-');
+            }
+            var modulePosition = positions.shift();
+            var linkPosition = positions.shift();
+            if (isNaN(Number(linkPosition))) {
+                modulePosition += '-' + linkPosition;
+                linkPosition = positions.shift();
+            }
+            if (positions.length) {
+                linkPosition += '-' + positions.join('-');
+            }
+            var key = zonetype + '-' + moduletype + '-' + modulename;
+            trackClick( {
+                'key':key,
+                'linkname':linkname,
+                'linktype':linktype,
+                'modulename':modulename,
+                'moduletype':moduletype,
+                'zonetype':zonetype,
+                'modulePosition':modulePosition,
+                'linkPosition':linkPosition,
+                'events':events
+            } );
+        }
+    }
+
+    function updateOmnitureBeaconParameter(queryString, analytic, value) {
+        queryString[analytic] = value;
+        return queryString;
+    }
+    function addUsernameToOmnitureBeaconParameters(queryString, includeUsername, includeLoggedInStatus) {
+        var originalQueryString = queryString;
+        if (includeUsername) {
+            if (typeof getUsername  === 'function') {
+                queryString = updateOmnitureBeaconParameter(queryString, 'prop16', 'c16=' + (getUsername() != 'Not Logged In' ? getUsername() : '') );
+            }
+        }
+
+        if (includeLoggedInStatus) {
+            if (typeof getUsername === 'function') {
+                if (getUsername() == 'Not Logged In') {
+                    queryString = updateOmnitureBeaconParameter(queryString, 'prop33', 'c33=' + encodeURIComponent('Not Logged In'));
+                } else {
+                    queryString = updateOmnitureBeaconParameter(queryString, 'prop33', 'c33=' + encodeURIComponent('Logged In'));
+                }
+            }
+        }
+
+        return queryString;
+    }
+</script>
+<!-- End Omniture Tag -->
+
+<!-- Start Chartbeat Tag -->
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<!-- End Chartbeat Tag -->
+
+<!-- Start Quantcast Tag -->
+<script type="text/javascript">
+    _qoptions={
+    qacct:"p-0fEc9CMkDiJ2g"
+    };
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+    <img src="http://pixel.quantserve.com/pixel/p-0fEc9CMkDiJ2g.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast Tag -->
+
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "8428425" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=8428425&cv=2.0&cj=1" alt=""/>
+</noscript>
+<!-- End comScore Tag -->
+
+
+<script type="text/javascript">
+
+    if (readCookie('daily') == '') {
+        if(readCookie('monthlyCounter') == '' || parseInt(readCookie('monthlyCounter')) <= 30){
+            var expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 1);
+            document.cookie = 'daily = 1; expires=' + expiryDate.toGMTString();
+            document.cookie = 'isDailyCounted = false; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        }
+    }
+
+    if (readCookie('monthly') == '') {
+        var expiryDate = new Date();
+        expiryDate.setMonth(expiryDate.getMonth() + 1);
+        document.cookie = 'monthly = 1; expires=' + expiryDate.toGMTString();
+        document.cookie = 'isDailyCounted = true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        document.cookie = "monthlyCounter=1; expires=Fri, 31 Dec 9999 23:59:59 GMT'" ;
+    }
+    else if(readCookie('isDailyCounted') === 'false' && parseInt(readCookie('monthlyCounter')) <= 30){
+        document.cookie = 'isDailyCounted = true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        document.cookie = "monthlyCounter=" + (parseInt(readCookie('monthlyCounter')) + 1) + "; expires=Fri, 31 Dec 9999 23:59:59 GMT'" ;
+    }
+
+</script>
+    <div class="l-container">
+
+      <div class="global-nav-mod js-global-nav-mod">
+            <nav class="nav">
+  <ul>
+    <li class="nav-block nav-logo">
+      <a href="http://www.startribune.com">&nbsp;</a>
+    </li>
+    <li class="nav-block">
+      
+<a href="#/" class="nav-title project-title">
+  A CRY FOR HELP
+  <div class="nav-indicator">
+                                                                                      <div class="day arrow-down"></div>
+  </div>
+</a>
+
+<ul class="project-nav">       <li><a href="http://www.startribune.com/x/374523971?preview=1"><b>Introduction</b></a></li>
+    
+          <li>
+      <span class="project-link day-1">
+        <a href="http://www.startribune.com/x/374510841?preview=1" >          <span class="part-num">
+                          Part 1
+                        :&nbsp;</span>the officer
+        </a>              </span>
+    </li>
+          <li>
+      <span class="project-link day-2">
+        <a href="http://www.startribune.com/x/374523171?preview=1" >          <span class="part-num">
+                          Part 2
+                        :&nbsp;</span>the mother
+        </a>                   <span class="coming-soon">
+            <span class="part-num">
+                              Part 2
+                            &nbsp;</span>the mother
+          </span>
+              </span>
+    </li>
+          <li>
+      <span class="project-link day-3">
+        <a href="http://www.startribune.com/x/374523401?preview=1" >          <span class="part-num">
+                          Part 3
+                        :&nbsp;</span>the survivor
+        </a>                   <span class="coming-soon">
+            <span class="part-num">
+                              Part 3
+                            &nbsp;</span>the survivor
+          </span>
+              </span>
+    </li>
+          <li>
+      <span class="project-link day-4">
+        <a href="http://www.startribune.com/x/380298861?preview=1" >          <span class="part-num">
+                          Part 4
+                        :&nbsp;</span>fatal encounters
+        </a>                   <span class="coming-soon">
+            <span class="part-num">
+                              Part 4
+                            &nbsp;</span>fatal encounters
+          </span>
+              </span>
+    </li>
+  
+
+       
+      
+        <li class="share__facebook clickQS mobile">
+          <a class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="" data-moduletype="-" data-position="--share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">share</span>
+              <span class="share-count share-count-facebook"></span>
+            </div>
+          </a>
+                  </li>
+        <li class="share__twitter clickQS mobile">
+          <a class="st-share-link" data-st-share-count-selector=".share-count-twitter" data-st-share-image="http://stmedia.startribune.com/images/Screen+Shot+2016-06-01+at+7.28.45+AM.png" data-st-share-title="Fatal police encounters" data-st-share-service="twitter" data-st-share-url="http://strib.mn/240g1US" data-st-count-url="http://www.startribune.com/fatal-police-encounters/380298861/" target="_blank" data-linkname="Share on Twitter" data-linktype="share-twitter" data-modulename="" data-moduletype="-" data-position="-1-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">tweet</span>
+              <span class="share-count share-count-twitter"></span>
+            </div>
+          </a>
+                  </li>
+                <li class="share__comments clickQS mobile">
+          <a href="#comments" data-linkname="Comment on this story" data-linktype="share-comment" data-modulename="" data-moduletype="-" data-position="-2-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">comment</span><span class="share-count"></span>
+            </div>
+          </a>
+                  </li>
+        
+      
+      </ul>
+    </li>
+    <li class="nav-block share">
+      <a href="#/" class="icn-share">&nbsp;</a>
+      <div class="nav-indicator">
+          <div class="arrow-down"></div>
+        </div>
+      <ul>
+        <li class="share__facebook clickQS">
+          <a class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="" data-moduletype="-" data-position="-3-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">share</span>
+              <span class="share-count share-count-facebook"></span>
+            </div>
+          </a>
+                  </li>
+        <li class="share__twitter clickQS">
+          <a class="st-share-link" data-st-share-count-selector=".share-count-twitter" data-st-share-image="http://stmedia.startribune.com/images/Screen+Shot+2016-06-01+at+7.28.45+AM.png" data-st-share-title="Fatal police encounters" data-st-share-service="twitter" data-st-share-url="http://strib.mn/240g1US" data-st-count-url="http://www.startribune.com/fatal-police-encounters/380298861/" target="_blank" data-linkname="Share on Twitter" data-linktype="share-twitter" data-modulename="" data-moduletype="-" data-position="-4-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">tweet</span>
+              <span class="share-count share-count-twitter"></span>
+            </div>
+          </a>
+                  </li>
+        <li class="share__email clickQS">
+          <a href="http://scripts.startribune.com/email_article/?section=%2Fprotected&amp;story_id=380298861&amp;headline=Fatal+police+encounters" id="js-email-share-btn" data-id="380298861" data-linkname="Email" data-linktype="share-email" data-modulename="" data-moduletype="-" data-position="-5-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span>email</span>
+            </div>
+          </a>
+        </li>
+        <li class="share-more-group">
+          <div class="copy-link">
+            <span class="share-more-label">Copy shortlink:</span>
+            <input style="height:30px;" class="share-more-link-input" type="text" value="http://strib.mn/240g1US"/>
+          </div>
+        </li>
+      </ul>
+    </li>
+          <li class="nav-block comment clickQS">
+        <a class="icn-comment" href="#comments" data-linkname="Comment on this story" data-linktype="share-comment" data-modulename="" data-moduletype="-" data-position="-5-share"></a>
+      </li>
+      </ul>
+</nav>
+
+<script>
+$("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("selected")}),$("ul.project-nav").mouseout(function(){$(".nav-title,.arrow-down").removeClass("selected")}),$("li.nav-block.share").mouseover(function(){$(".nav-block.share .arrow-down").addClass("selected")}),$("li.nav-block.share").mouseout(function(){$(".nav-block.share .arrow-down").removeClass("selected")}),$(".share ul").mouseover(function(){$(".navblock-share").addClass("selected")}),$(".share ul").mouseout(function(){$(".icn-share").removeClass("selected")}),$(".share-more-link-input").mouseenter(function(){$(".nav-block.share").addClass("open")}),$(".share-more-link-input").mouseleave(function(){$(".nav-block.share").removeClass("open")}),$("a.nav-title,.project-nav a").click(function(){$("a.nav-title,.project-nav").toggleClass("open");});
+</script>      </div>
+
+            
+    
+    
+                
+    <div class="l-article-container" itemscope itemtype="http://schema.org/Article">
+             <div class="l-section-container clearfix">
+                </div>
+            
+        <div class="l-article article p402_premium article">
+                                                                 <div class="l-article-topper wide">
+                        
+                        <span class="article-id-highlight">380298861</span>
+                                                                            <h1 class="article-headline" itemprop="headline">Fatal police encounters</h1>
+                                                            <div class="article-subhead" itemprop="description"> The Star Tribune <a href="/x/380709141/?preview=1" target="_new" style="text-decoration:underline;">collected the names and stories</a> of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016. A disproportionate share — at least 45 percent — were people with a history of mental illness or who were having a mental health crisis when they died.&nbsp;</div>
+                                                    
+                 
+
+                        
+                                                    <div class="article-byline-mod">
+                                                                    <div class="article-byline">
+                                        
+                                                                                    Star Tribune
+                                                                            </div>
+                                                                <div class="article-dateline">
+                                    June 1, 2016 &mdash; 6:29pm
+                                </div>
+                            </div>
+                                            </div>
+                                                <div class="l-article-body wide">
+                                                                                           
+                                                                                                    <aside class="article-share">
+                <div class="share__textsize">
+      <a id="js-textsize-btn" data-linkname="Text size" data-linktype="text-resize" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
+        <div class="share-icon"></div>
+        <div class="share-label">
+          <span>Text size</span>
+        </div>
+      </a>
+          </div>
+      
+          <div class="share__comments clickQS">
+      <a href="#comments" data-linkname="Comment on this story" data-linktype="share-comment" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
+        <div class="share-icon"></div>
+        <div class="share-label">
+          <span class="share-txt">comment</span><span class="share-count"></span>
+        </div>
+      </a>
+            </div>
+      
+  <div class="share__facebook clickQS">
+      <a class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
+      <div class="share-icon"></div>
+      <div class="share-label">
+        <span class="share-txt">share</span><span class="share-count-facebook"></span>
+      </div>
+    </a>
+      </div>
+  <div class="share__twitter clickQS">
+      <a class="st-share-link" data-st-share-count-selector=".share-count-twitter" data-st-share-image="http://stmedia.startribune.com/images/Screen+Shot+2016-06-01+at+7.28.45+AM.png" data-st-share-title="Fatal police encounters" data-st-share-service="twitter" data-st-share-url="http://strib.mn/240g1US" data-st-count-url="http://www.startribune.com/fatal-police-encounters/380298861/" target="_blank" data-linkname="Share on Twitter" data-linktype="share-twitter" data-modulename="Article" data-moduletype="zone1-content" data-position="0-2-share">
+      <div class="share-icon"></div>
+      <div class="share-label">
+        <span class="share-txt">tweet</span><span class="share-count-twitter"></span>
+      </div>
+    </a>
+      </div>
+  
+      <div class="share__email clickQS">
+      <a href="http://scripts.startribune.com/email_article/?section=%2Fprotected&amp;story_id=380298861&amp;headline=Fatal+police+encounters" id="js-email-share-btn" data-id="380298861" data-linkname="Email" data-linktype="share-email" data-modulename="Article" data-moduletype="zone1-content" data-position="0-3-share">
+        <div class="share-icon"></div>
+        <div class="share-label">
+          <span>email</span>
+        </div>
+      </a>
+          </div>
+    
+      <div class="share__print clickQS">
+      <a id="js-print-btn" data-linkname="Print" data-linktype="share-comment" data-modulename="Article" data-moduletype="zone1-content" data-position="0-3-share">
+        <div class="share-icon"></div>
+        <div class="share-label">
+          <span>Print</span>
+        </div>
+      </a>
+          </div>
+  
+      <div class="share-more">
+      <div class="share-label">more</div>
+      <div class="share-more-popover">
+        <div class="share-more-group">
+          <span class="share-more-label">Share on:</span>
+          <a class="st-share-link linkedin-pw-placeholder"  data-st-share-service="linkedin" data-st-share-url="http://strib.mn/240g1US" data-st-share-title="Fatal police encounters" data-st-share-summary="The Star Tribune collected the names and stories of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016." data-st-share-source="Star Tribune" target="_blank" data-linkname="Share on LinkedIn" data-linktype="share-linkedin" data-modulename="Article" data-moduletype="zone1-content" data-position="0-3-share"><span class="share-more-icon share__linkedin">Share on LinkedIn</span></a>
+                    <a class="st-share-link googleplus-pw-placeholder" data-st-share-service="googleplus" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Google+" data-linktype="share-linkedin" data-modulename="Article" data-moduletype="zone1-content" data-position="0-4-share"><span class="share-more-icon share__googleplus">Share on Google+</span></a>
+                    <a class="st-share-link pinterest-pw-placeholder" data-st-share-service="pinterest" data-st-share-image="http://stmedia.startribune.com/images/Screen+Shot+2016-06-01+at+7.28.45+AM.png" data-st-share-description="The Star Tribune collected the names and stories of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016." data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Pinterest" data-linktype="share-pinterest" data-modulename="Article" data-moduletype="zone1-content" data-position="0-5-share"><span class="share-more-icon share__pinterest">Share on Pinterest</span></a>
+                  </div>
+        <div class="share-more-group">
+          <span class="share-more-label">Copy shortlink:</span>
+          <input class="share-more-link-input" id="MoreShortlink" type="text" value="http://strib.mn/240g1US"/>
+        </div>
+        <div class="share-more-group">
+          <span class="share-more-label">Purchase:</span>
+                   <a href="http://reprints.ygsgroup.com/m/startribune/" target="_blank" class="share-more-tool tool__orderreprint" data-linkname="Order Reprint" data-linktype="share-reprint" data-modulename="Article" data-moduletype="zone1-content" data-position="0-6-share" >Order Reprint</a>
+                  </div>
+      </div>
+    </div>
+  
+</aside>
+  <script type="text/javascript">
+    var pwidget_config = {
+      copypaste: false,
+      shareQuote: false
+    };
+  </script>
+  <script src="http://i.po.st/share/script/post-widget.js#publisherKey=56d2hkmk6d6lmd6llqb2" type="text/javascript"></script>
+  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/post-share-widget.css?d=112050278b3198b1c1080626c4cedc7f74a70b43">
+                                            
+                                            <div class="article-body resizeFont" itemprop="articleBody">
+                                                
+                                                  
+                                                                                                                                                                                        
+                                                                          
+                                                                                                                                                                                        
+                                                                          
+                                                                                                
+                                                                                        <p><style type="text/css"> .embed {margin-top:50px; width: 100%; overflow: hidden; }
+.mental-vis {margin-top:80px;}
+h1.article-headline {
+text-shadow:none;font-style:normal;
+font-weight:bold;
+text-transform: uppercase;
+}
+.mobile {display:none;} .article-byline-mod {padding:15px 0 15px 0;} .article-id-highlight {display:none;} .article-headline { text-align: center; color: #333; font-family: "Whitman Display",Georgia,Times,serif; font-size: 4em; line-height: 60px; margin-top: 30px; padding-top:10px; margin-bottom: 16px; font-weight: normal; letter-spacing:-1.5px; } .article-subhead {padding-right:0; width:80%; margin:auto; @include media("≥phone", "≤tablet") { width:90%; } } .l-article-topper.wide {text-align:center; }
+.l-article-topper.wide .article-section{display:none} h2 {text-align:center; font-size:1.4em; margin-top:50px;} /*STYLING SHARING FOR HORIZONTAL*/ aside.article-share { position:absolute; width:100%; margin:0 300px; } aside.article-share div {float:left;} .l-article { margin-left:0px;} .l-article-body.wide{ width:970px; } .article-share-item, .share__comments, .share__facebook, .share__twitter, .share__email, .share__print, .share__textsize, .share-more {padding-right:5px;border-right:1px solid #e8e8e8} .share-more{ padding-left:5px;border-right:none; } .article-share-item:before, .share__comments:before, .share__facebook:before, .share__twitter:before, .share__email:before, .share__print:before, .share__textsize:before, .share-more:before { border-bottom:none; ;width:100%; } @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { body.page-article{width:970px;} .mobile {display:block;} .l-article-body.wide {width: 100%!important; overflow:hidden;} #zone-none-block-3-leaderboard, #zone-none-block-1-leaderboard { width: 100%; overflow: hidden; } aside.article-share { position:relative; width:100%;margin:0 0 0 250px;} } @media only screen and (min-device-width: 320px) and (max-device-width: 640px) { body.page-article { width: 100%; }
+.l-article-topper.wide .article-section{display:block} .home-logo { margin: 9px auto; } .recirc {display:none;} .article-headline { margin-top: 0; font-size: 70px; line-height: 60px; margin-top: 30px; } .l-article-body.wide { width: 100%; overflow:hidden; } aside.article-share { position: relative; margin-left: 0px; width: 100%; max-width: 640px; height: 35px; clear: both; margin-bottom: 18px; } aside .share__textsize {visibility:hidden} .share__email {border-right:none;display:inline-block !important} aside .share__twitter .share-txt {display:inline-block !important} aside .share-more, aside .share__print, aside .share-txt, aside .share__textsize .share-label {display:none} .mobile {display:block;} .mobile p{padding:10px 10px;text-align:center;} #zone-none-block-3-leaderboard, #zone-none-block-1-leaderboard { width: 100%; overflow: hidden; } }
+</style></p>
+
+                                                                                                                                                      
+                                            
+                                                                                                                                    
+                        
+                                                                                        <p>&nbsp;</p>
+
+                                                                                                                                                      
+                                            
+                                                                                                                                    
+                        
+                                                                                       
   <div id="wrapper">
 
           <div id="filterBox">
@@ -1165,10 +1920,477 @@ $("#genderB").on('click',function(){
       });
 
 </script>
-<script src="http://static.startribune.com/js/pym/pym.min.js"></script>
-<script> 
- function sizeNow(){pymChild.sendHeight();}
- setTimeout(sizeNow, 2000);
- var pymChild = new pym.Child();
+
+ <p>&nbsp;</p>
+
+                                                                                                                                                                    
+                        
+                                                                                        
+
+                                                                                                                                                                    
+                                                </div>
+                    
+                    
+                                            
+    
+                                  
+                                                                <section class="comments-section" id="comments">
+    <script type="text/javascript">
+        if (typeof commentQueryStrings === 'undefined') {
+            var commentQueryStrings = {};
+        }
+    </script>
+    
+    <script type="text/javascript">
+        commentQueryStrings[window.location.pathname] = JSON.parse('{"pageName":"pageName=Fatal%20police%20encounters","channel":"channel=","server":"server=startribune.com","prop1":"c1=D%3Dg","prop2":"c2=V20160601","prop3":"c3=story","prop5":"c5=","prop7":"c7=comments","prop16":"c16=","prop71":"c71=websites"}');
+    </script>
+
+    <div class="comments">
+        <a href="#" class="js-comments-show comments-count-link">
+            <div class="comments-count"></div>
+            <span class="comments-show js-comments-show-txt"
+                  data-analytics-url="http://metrics.startribune.com/b/ss/nmminneapolis/1/JS-1.5.3/83600"
+                  data-analytics-querystring="pageName=Fatal%20police%20encounters&channel=&server=startribune.com&c1=D%3Dg&c2=V20160601&c3=story&c5=&c7=comments&c16=&c71=websites">View Comments</span>
+        </a>
+    </div>
+
+    <script src='//cdn.livefyre.com/Livefyre.js'></script>
+    <script type="text/javascript">
+        var networkConfig = {"network": "startribune.fyre.co"}
+        var convConfig = {"siteId":"356396","articleId":"380298861","el":"livefyre","collectionMeta":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkZhdGFsIHBvbGljZSBlbmNvdW50ZXJzIiwidXJsIjoiaHR0cDpcL1wvd3d3LnN0YXJ0cmlidW5lLmNvbVwvcHJvdGVjdGVkXC8zODAyOTg4NjEuaHRtbCIsInRhZ3MiOiJcL3Byb3RlY3RlZCIsImNoZWNrc3VtIjoiZTNjOGM0NDY4NGRjNzcxOTQ0MWJlM2YzMmIwNzk1MDciLCJhcnRpY2xlSWQiOiIzODAyOTg4NjEifQ.wUJME5grdl4YsGxtQ4eKlT_JuRz9F4d2mXQfJDWib18","datetimeFormat":{"minutesUntilAbsoluteTime":1,"absoluteFormat":"MMM. d, yy<br>h:mm a"}};
+        var commentLoginText = "Log in/register to comment";
+        var commentEmailOnly = 0;
+        var commentPage = {};
+        commentPage.userToken = null;
+        commentPage.userAuth = false;
+        commentPage.registerUsername = false;
+
+        commentPage.onCommentCountUpdated = function (number) {
+            commentCount.checkLivefyreLoaded(number);
+        };
+
+        var checkUserToken = function (cb) {
+            if (jQuery.cookie('st_usr_livefyre_token')) {
+                commentPage.userAuth = true;
+                commentPage.userToken = jQuery.cookie('st_usr_livefyre_token');
+            }
+            cb();
+        };
+
+        if (jQuery.cookie('register_st_user_name')) {
+            if (jQuery.cookie('st_usr_livefyre_token')) {
+                jQuery.removeCookie('register_st_user_name');
+            } else {
+                commentPage.registerUsername = true;
+            }
+        }
+
+        var customStrings = {
+            signIn: (commentPage.registerUsername ? "Please create a username for your account." : commentLoginText),
+            postButton: "Post your comment",
+            postReplyButton: "Post your comment",
+            flagButton: "Report as inappropriate"
+        };
+
+        networkConfig["strings"] = customStrings;
+
+        Livefyre.require(['fyre.conv#3', 'auth'], function(Conv, auth) {
+            new Conv( networkConfig, [convConfig], function(commentsWidget){
+                checkUserToken(function () {
+                    if (commentPage.userToken) {
+                        auth.authenticate({livefyre: commentPage.userToken});
+                    }
+                });
+
+                commentsWidget.on('commentCountUpdated', commentPage.onCommentCountUpdated);
+
+                commentsWidget.on('initialRenderComplete', function () {
+                    jQuery('.fyre-comment a').contents().unwrap();
+                    commentCount.checkLivefyreLoaded(false, false);
+                });
+            });
+
+            auth.delegate({
+                login: function(cb) {
+                    if (commentPage.registerUsername) {
+                        window.location.href = 'http://users.startribune.com/';
+                    } else if (commentPage.userToken) {
+                        cb(null, {livefyre: commentPage.userToken});
+                    } else {
+                        window.location.href = 'http://' + document.domain + '/login?commentRedirect=true&path=' + encodeURIComponent( document.URL );
+                    }
+                }
+            });
+        });
+
+    </script>
+    <div id='livefyre-cont'>
+        <div id='livefyre'>
+            <div class="comment-standards-mod">
+                <a href="#" class="comment-standards-btn js-show-comment-standards">Read our comment standards</a>
+                <div class="comment-standards-txt">
+                    <p>StarTribune.com welcomes and encourages readers to comment and engage in substantive, mutually
+                        respectful exchanges over news topics. Commenters must follow our <a
+                                href="http://www.startribune.com/terms/">Terms of Use</a>.</p>
+                    <ol>
+                        <li>Keep it civil and stay on topic.</li>
+                        <li>No profanity, vulgarity, racial slurs or personal attacks.</li>
+                        <li>Comments with web links are not permitted.</li>
+                        <li>Comments that violate the above will be removed. Repeat violators may lose their commenting
+                            privileges on StarTribune.com.
+                        </li>
+                    </ol>
+                    <p>Comments will be reviewed before being published.</p>
+                </div>
+                <!--eo comment-standards-txt-->
+            </div>
+            <!--eo comments-standards-mod-->
+            <!--LiveFyre gets injected here-->
+        </div>
+        <div id="powered_by_livefyre_new"><a href="http://livefyre.com/" target="_blank">Powered by Livefyre</a></div>
+        <img class="comments-image-tracking" style="height: 0px;" alt=""
+             src="http://apps.startribune.com/circulars/images/blank.gif"/>
+        <script type="text/javascript">
+        <!--if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')//-->
+        </script>
+        <noscript>
+                        <img src="http://metrics.startribune.com/b/ss/nmminneapolis/1/JS-1.5.3--NS/52086?pageName=Fatal%20police%20encounters&channel=&server=startribune.com&c1=D%3Dg&c2=V20160601&c3=story&c5=noscript&c7=comments&c16=&c71=websites"
+                 height="1" width="1" border="0" alt=""/>
+            }
+        </noscript>
+        <!--/DO NOT REMOVE/-->
+    </div>
+</section>
+                    
+                                    </div><!-- l-article-body -->
+             
+                    </div>
+
+        
+            </div><!-- l-article-container -->
+
+      
+
+            <img class="trackerImage" src="http://apps.startribune.com/most_popular/?cmd=inc&amp;type=view&amp;section=%2Fprotected&amp;story_id=380298861">
+    
+  </div>
+
+      
+<div class="l-footer-container">
+    <nav class="l-footer-inner" role="navigation">
+        <div class="footer-top-mod">
+            <a class="footer-branding-mod" href="http://www.startribune.com/" data-linkname="StarTribune" data-linktype="logo navigation" data-modulename="Page Navigation Bottom logo navigation" data-moduletype="footer-page-nav" data-position="0-1">
+                <h4 class="footer-st-branding">StarTribune</h4>
+            </a>
+            <div class="footer-social-mod">
+                <ul class="footer-social-links">
+                    <li><span class="footer-social-links-label">Follow Us On:</span></li>
+                    <li><a href="https://www.facebook.com/startribune/" class="footer-social-facebook" data-linkname="Facebook" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-2" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/StarTribune/" class="footer-social-twitter" data-linkname="Twitter" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-3" target="_blank">Twitter</a></li>
+                    <li><a href="https://plus.google.com/+startribune/" class="footer-social-gplus" data-linkname="Google+" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-4" target="_blank">Google+</a></li>
+                    <li><a href="http://pinterest.com/startribune/" class="footer-social-pinterest" data-linkname="Pinterest" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-5" target="_blank">Pinterest</a></li>
+                    <li><a href="http://www.instagram.com/startribune/" class="footer-social-instagram" data-linkname="Instagram" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-6" target="_blank">Instagram</a></li>
+                    <li><a href="http://startribune.tumblr.com/" class="footer-social-tumblr" data-linkname="Tumblr" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-7" target="_blank">Tumblr</a></li>
+                </ul>
+            </div><!-- footer-social-mod-->
+
+            
+        </div><!-- footer-top-mod -->
+
+                <div class="footer-navigation-mod">
+                                        <div class="footer-navigation-col col-1">
+                                            <h4 class="footer-group-h">Company</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribunecompany.com/" data-linkname="About the Star Tribune" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-7">About the Star Tribune</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/contact-us/" data-linkname="Contact us" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-8">Contact us</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/work-for-us/" data-linkname="Jobs" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-9">Jobs</a></li>
+                                                                                                        <li><a href="http://nieonline.com/startribune/" data-linkname="News in Education" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-10">News in Education</a></li>
+                                                                                                        <li><a href="http://www.citypages.com/" data-linkname="City Pages" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-11">City Pages</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/sports/preps/" data-linkname="High school sports hubs" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-12">High school sports hubs</a></li>
+                                                                                                        <li><a href="http://apps.startribune.com/news/mobile-products/" data-linkname="Mobile and tablet apps" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-13">Mobile and tablet apps</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-2">
+                                            <h4 class="footer-group-h">Advertise with us</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribunecompany.com/mediakit/contact.php" data-linkname="Talk with a business consultant" data-linktype="advertise navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-14">Talk with a business consultant</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/mediakit/" data-linkname="Media kit" data-linktype="advertise navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-15">Media kit</a></li>
+                                                                                                        <li><a href="http://startribune.adperfect.com/" data-linkname="Classifieds" data-linktype="advertise navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-16">Classifieds</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-3">
+                                            <h4 class="footer-group-h">Buy</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://shop.startribune.com/" data-linkname="Star Tribune Store" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-17">Star Tribune Store</a></li>
+                                                                                                        <li><a href="https://shop.startribune.com/product/photo-print-request/" data-linkname="Photo Reprints" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-18">Photo Reprints</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/archives/" data-linkname="Archived articles" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-19">Archived articles</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/contact-us/#_newspaper_back" data-linkname="Back Copies" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-20">Back Copies</a></li>
+                                                                                                        <li><a href="http://reprints.ygsgroup.com/m/startribune/" data-linkname="Commercial reprints" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-21">Commercial reprints</a></li>
+                                                                                                        <li><a href="https://secure.startribune.com/company/ic/home/newspaper/permission_new.htm" data-linkname="Licensing" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-22">Licensing</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-4">
+                                            <h4 class="footer-group-h">Customer support</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribune.com/contactus/" data-linkname="Feedback" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-23">Feedback</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/membercenter/" data-linkname="Manage your account" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-24">Manage your account</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/subscriptionservices/" data-linkname="Newspaper subscription" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-25">Newspaper subscription</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/digitalaccess/" data-linkname="Digital access" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-26">Digital access</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/eedition/" data-linkname="eEdition" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-27">eEdition</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/subscriptionservices/" data-linkname="Vacation hold/billing" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-28">Vacation hold/billing</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-5">
+                                            <h4 class="footer-group-h">Website</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribune.com/terms/" data-linkname="Terms of use" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-29">Terms of use</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/privacy/" data-linkname="Privacy policy" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-30">Privacy policy</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/siteindex/" data-linkname="Site index" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-31">Site index</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/rss-index/112994779/" data-linkname="RSS" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-32">RSS</a></li>
+                                                                                                </ul>
+                                                            </div>
+                    </div><!--footer-navigation-mod -->
+    </nav><!-- l-footer-inner -->
+</div><!--l-footer-container-->
+
+<div class="l-footer-container footer-copyright-mod">
+    <div class="l-footer-inner">
+        <p class="footer-copyright">&copy; 2016 StarTribune. All rights reserved.</p>
+    </div><!-- l-footer-inner -->
+</div><!--l-footer-container-->
+
+
+    
+  
+  
+    <script type="text/javascript" src="http://assets.startribune.com/static/min/footer.min.js?d=1464807625"></script>
+  
+  <!-- our JS modules -->
+  <!-- <script type="text/javascript" src="http://assets.startribune.com/static/js/ad.js"></script> -->
+
+  <!-- per-page JS modules -->
+          <script type="text/javascript" src="http://assets.startribune.com/static/min/article.min.js?d=1464807624"></script>
+    
+    <script>
+        $(function() {
+            ST_sharetools.init('.l-article-body');
+        });
+    </script>
+
+            <script type="text/javascript">
+            if( typeof( $.cookie( 'session_cookie_set' ) ) === 'undefined' ) {
+                jQuery.get( 'http://' + document.domain + '/login/session' );
+            }
+        </script>
+    
+            <script type="text/javascript">
+            var st_reload = 1200000;
+        </script>
+    
+        
+  <!-- housing page JS modules // this placement resolves script conflicts -->
+  
+  
+<!-- Start Omniture Tag -->
+    <script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/StarTribunePageConfiguration.js?d=1464807266"></script>
+
+<script>
+    // Optimizely Adobe Analytics SiteCatalyst Integration code
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push('activateSiteCatalyst');
 </script>
+<script type="text/javascript">
+    //Impression Tracking
+    var impression_map = {};
+    var evar_map = {};
+    //Code removed because we are not currently doing impression tracking.
+
+    //Pageload Tracking
+                                        s.prop1 = 'D=g';
+                                                            s.prop2 = 'V20160601';
+                                
+            s.events = 'event31,event32';
+                                                s.channel = '';
+                                                            s.server = 'startribune.com';
+                                                            s.eVar61 = '+1';
+                                                            s.prop22 = '1';
+                                                            s.prop23 = '';
+                                                            s.prop56 = '';
+                                                            s.prop7 = '';
+                                                            s.prop3 = 'story';
+                                                            s.prop4 = 'Star Tribune';
+                                                            s.prop24 = 'article';
+                                                            s.prop35 = ' Star Tribune';
+                                                            s.prop45 = '';
+                                                            s.prop65 = 'May 20, 2016';
+                                                            s.prop74 = '4';
+                                                            s.prop75 = '2995';
+                                                            s.pageName = 'Fatal police encounters';
+                        
+          var storyExists = 'true';
+      var sidewaysEligible = 'false';
+
+      if(storyExists == 'true' && sidewaysEligible == 'true' && typeof referrerCheck != 'undefined' && referrerCheck()) {
+        s.prop56 = "PerfectMarket";
+      }
+    
+    
+    //
+    // Special check for override templates to track whether they have ads
+    //
+
+    (function($, s) {
+
+        var adCount = 0;
+
+        //
+        // If we aren't on sideways, don't count those ads
+        // (Sideways ads are built client-side; the scaffolding always exists.)
+        //
+
+        if( typeof s.prop56 === 'undefined' || s.prop56 === '' ) {
+            var adDivs = $('.dfp-ad-container').not( '.sideways-ad' );
+        } else {
+            var adDivs = $('.dfp-ad-container');
+        }
+
+        for( var i = 0, j = adDivs.length; i < j; i++ ) {
+
+            //
+            // CSS is hiding ad, skip it
+            //
+
+            if( $(adDivs[i]).is(':hidden' ) ) {
+                continue;
+            }
+
+            //
+            // Don't count ads in the navigation bar
+            //
+
+            var adDivIdParts = adDivs[i].id.split('-');
+            var adNameParts = adDivIdParts.slice(4, adDivIdParts.length);
+            var adName = adNameParts.join('-');
+            if( $.inArray( adName, [ 'navtab', 'nav-flag' ] ) !== -1 ) {
+                continue;
+            }
+
+            //
+            // Whatever is left is a valid ad
+            //
+
+            adCount++;
+        }
+
+        s.prop54 = ( adCount > 0 ) ? 'Override Template Ads' : 'Override Template No Ads';
+
+    })(jQuery, s);
+
+    
+
+  if(isWelcomeShowing()){
+    s.prop21 = "Welcome Screen";
+  }
+
+    var s_code=s.t();if(s_code)document.write(s_code);
+
+    //Click Tracking
+    function userInteraction(events, vars, linkName) {
+        try {
+            s.linkTrackEvents = events.join(',');
+            s.events = s.linkTrackEvents;
+            s.linkTrackVars = 'events';
+            if (typeof vars === 'object') {
+                for (var key in vars) {
+                    if (vars.hasOwnProperty(key)) {
+                        s[key] = vars[key];
+                        s.linkTrackVars += ',' + key;
+                    }
+                }
+            }
+            s.tl(this, 'o', 'user interaction: ' + linkName);
+        } catch (e) {}
+    }
+
+    function trackClick( clickData ) {
+        //var impression = impression_map[clickData.key];
+        //var impressionEvar = evar_map[clickData.key];
+        userInteraction(clickData.events, {
+            'eVar44':'startribune.com',
+            'eVar45':clickData.modulename,
+            'eVar46':'D=pageName',
+            'eVar47':clickData.linkPosition,
+            'eVar48':clickData.linkname,
+            'eVar50':clickData.zonetype,
+            'eVar58':clickData.linktype,
+            'eVar73':clickData.moduletype,
+            'eVar74':'story',
+            'eVar75':clickData.modulePosition,
+            //'products':'D="' + impression + '"'
+        }, clickData.linkname );
+    }
+    $(document).ready(function() {
+        $("a, input[type=submit]").on('click', function() {
+            analyticsClickTracking($(this));
+
+            return true;
+        });
+        if ( $('.fly-in').length > 0 ) {
+            // Add a data attribute to the meter fly-in so it will be detected by click tracking
+            $('.fly-in-start-btn').attr('data-linkname', 'fly-in');
+        }
+    });
+</script>
+<!-- End Omniture Tag -->
+
+<!-- Begin Chartbeat Tag -->
+<script type="text/javascript">
+    var _sf_async_config={uid:19787,domain:"startribune.com",sections:s.channel,authors:s.prop35,useCanonical:true};
+    var chartBeatAwesomeUser;
+    var samlId = readCookie('st_usr_saml_id');
+    if (!isNaN( parseInt(samlId) )) {
+        chartBeatAwesomeUser = 'lgdin';
+    }
+    else {
+        chartBeatAwesomeUser = 'anon';
+    }
+    if (!isNaN( parseInt(getUserSubscriptionId()) )) {
+        chartBeatAwesomeUser = 'paid';
+    }
+    var _cbq=window._cbq||[];
+    _cbq.push(['_acct',chartBeatAwesomeUser]);
+    (function(){
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+                (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+                "js/chartbeat_pub.js");
+            document.body.appendChild(e);
+        }
+        jQuery(function(){loadChartbeat();});
+    })();
+</script>
+<!-- End Chartbeat Tag -->
+
+
+    
+
+  <script type="text/javascript">
+var reloadTimerLong = null;
+if(typeof reloadTimerActive === 'undefined') {
+  var reloadTimerActive = true;
+}
+reloadTimerLong = window.setTimeout(function() { if(reloadTimerActive) { window.location.reload(false); } } , 3600000 );
+</script>
+
+      <script type="text/javascript">
+            window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
+      </script>
+      
+</body>
 </html>
+
