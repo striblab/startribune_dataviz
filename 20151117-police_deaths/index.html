@@ -280,8 +280,12 @@
   <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
     <style>
+      
+    .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; } 
+      
+      
   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
-   #wrapper { width:920px; margin-left:auto; margin-right:auto; }
+   #wrapper { width:920px; margin-left:auto; margin-right:auto; margin-top:30px;}
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
    #bottomText { text-align:center; font-weight:normal; }
    #filter { text-align:center; }
@@ -297,10 +301,10 @@
    a:hover { color:#333 !important; }
    .name { text-transform: capitalize !important; font-weight:900; font-size:1.25em; }
 
-   .card { position:relative;padding:10px; height:230px; width:450px; font-size:.7em; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
+   .card { position:relative;padding:10px; height:235px; width:450px; font-size:.85em; line-height:140%; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
    .card div { padding:3px; }
    .card:hover { opacity:.5; cursor:pointer; }
-   .card .mentalSwatch { background-color:#fff !important; color:#999 !important; padding:5px 8px 5px 8px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
+   .card .mentalSwatch { background-color:#fff !important; color:#999 !important; font-size:.8em; padding:4px 6px 4px 6px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
    
     .featherlight .featherlight-content {background-color: #eee; overflow-y:scroll;overflow-x:hidden;}
     .featherlight-content { width:750px; height:420px; }
@@ -310,11 +314,11 @@
    .featherlight-content .readmore { display:none; }
    .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
    .featherlight-content .url { display:block !important; }
-   .featherlight-content .card { width:100% !important; background-color: #eee; !important; border:0 !important;}
+   .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:1em; border:0 !important;}
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
 
-    .tooltip .name { font-size:1em; color:#333; margin-bottom:4px; width:150px; }
-    .tooltip .mentalSwatch { font-size:.9em;color:#999 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
+    .tooltip .name { font-size:1.1em; color:#333; margin-bottom:4px; width:150px; }
+    .tooltip .mentalSwatch { font-size:1em;color:#999 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
     
    .url { font-weight:900; padding-left:6px !important;}
 
@@ -388,7 +392,7 @@
    #chartAll { width:610px; float:right;}
    #chartLabels { margin:10px 0 10px 0; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5.27%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
+   .yearLabel { width:5.37%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
    .bigcount { font-size:1.5em;  color:#b75b60; }
 
 
@@ -834,6 +838,8 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
 
                         
                                                     <div class="article-byline-mod">
+                                                      
+                                                      Jeff Hartgarten, 
                                                                     <div class="article-byline">
                                         
                                                                                     Star Tribune
@@ -1210,7 +1216,7 @@ d3.select("#deathsTable").selectAll(".card")
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health issues</div>"; }
   if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
 
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "?h=155&w=150&fit=crop&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
 
 addBoxes();
 
