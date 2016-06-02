@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IE 8 ]>    <html dir="ltr" lang="en-US" class="no-js ie8 oldie"> <![endif]-->
 <!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
@@ -281,7 +280,7 @@
 
     <style>
       
-    .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; } 
+    .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; } 
 
     .arrow-down {background-color:transparent !important;}  
     .arrow-down.selected {background-color:transparent !important;}      
@@ -430,8 +429,10 @@
 
     .featherlight-content { pointer-events:none !important; }
     .featherlight-content .url, .url a { pointer-events:all !important; }
+    .l-article-body.wide { width:970px; } 
 
    @media (max-width:920px) {
+    .l-article-body.wide { width:100% !important; } 
     #wrapper { width:600px; }
     .chatterThing { text-align:left !important; height:180px; }
     .chatterThing img { margin-left:auto; margin-right:auto; }
@@ -846,11 +847,13 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
         <div class="article-byline">
 <strong>By<a href="http://www.startribune.com/jeff-hargarten/274254381/" title="Jeff Hargarten" data-linkname="Jeff Hargarten" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author"> Jeff Hargarten,</a></strong>
 
+<strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/" title="Jennifer Bjorhus" data-linkname="Jennifer Bjorhus" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author">Jennifer Bjorhus,</a></strong>
+
 <strong><a href="http://www.startribune.com/maryjo-webster/303594441/" title="MaryJo Webster" data-linkname="MaryJo Webster" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-2-author" rel="author"> MaryJo Webster,</a></strong>
 
-<strong><a href="http://www.startribune.com/kelly-smith/101372379/" title="Kelly Smith" data-linkname="Kelly Smith" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author"> Kelly Smith</a></strong>
+<strong>and <a href="http://www.startribune.com/kelly-smith/101372379/" title="Kelly Smith" data-linkname="Kelly Smith" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author"> Kelly Smith</a></strong>
 
-<strong>and <a href="http://www.startribune.com/jennifer-bjorhus/34031274/" title="Jennifer Bjorhus" data-linkname="Jennifer Bjorhus" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author">Jennifer Bjorhus </a></strong>
+
                                         
                                                                                     Star Tribune
                                                                             </div>
@@ -1397,43 +1400,10 @@ for (var i=2000; i <= 2016; i++){ spitDots(i); }
 $.getJSON('shapefiles/counties.json', function(counties) {
 
 //FILTER STUFF
-$( document ).ready(function() {
-// $( ".filter" ).each(function( index ) {
-//   if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
-//     $(this).find(".count").text(countStats(".card .hideThis",$(this).attr("data"))); 
-//   }
-//   else { $(this).find(".count").text(countStats(".card .stats, .card .ruling",$(this).attr("data"))); }
-
-//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-//   $(this).find("a").css("background","#ddd");
-//   $(this).find("a").css("color","#333");
-//   $(this).find("a").css("margin-right",(70 - pct) + "%");
-//   $(this).find("a").css("width",(pct) + "%");
-//   $(this).css("margin","5px");
-// });
-
-// $( ".filter2" ).each(function( index ) {
-//   $(this).find(".count").text(countStats(".weaponType",$(this).attr("data")));
-//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-//   $(this).find("a").css("background","#ddd");
-//   $(this).find("a").css("color","#333");
-//   $(this).find("a").css("margin-right",(70 - pct) + "%");
-//   $(this).find("a").css("width",(pct) + "%");
-//   $(this).css("margin","5px");
-// });
-
-// $( ".filter3" ).each(function( index ) {
-//   $(this).find(".count").text(countStats(".region",$(this).attr("data")));
-//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-//   $(this).find("a").css("background","#ddd");
-//   $(this).find("a").css("color","#333");
-//   $(this).find("a").css("margin-right",(70 - pct) + "%");
-//   $(this).find("a").css("width",(pct) + "%");
-//   $(this).css("margin","5px");
-// });
 
 $( "#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a" ).css("background","#fff");
 
+// $(document).bind('DOMNodeInserted', function(event) {
 $(".bigDot").on('click',function(){
   $(".bigDot").removeClass("selected");
   $(this).addClass("selected");
@@ -1442,6 +1412,7 @@ $(".filter, .filter2, .filter3").on('click',function(){
   $(".bigDot").removeClass("selected");
   $(this).find(".bigDot").addClass("selected");
 });
+// });
 
 function countStats(target, text){
   if (mentalLoad == true){
@@ -1450,7 +1421,6 @@ function countStats(target, text){
    return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 }).length;
 }
 }
-});
 
 $(".filter").on('click',function(){
 
@@ -2409,4 +2379,3 @@ reloadTimerLong = window.setTimeout(function() { if(reloadTimerActive) { window.
       
 </body>
 </html>
-
