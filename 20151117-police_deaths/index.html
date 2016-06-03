@@ -2,286 +2,65 @@
 <!--[if IE 8 ]>    <html dir="ltr" lang="en-US" class="no-js ie8 oldie"> <![endif]-->
 <!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script
-      src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
-      data-apikey="57098e87943fb0b8bcf51a8ffc9ca41a">
-    </script>
-          <script type="text/javascript" src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d=1463599109"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d=1463599109"></script>    
+<title>Fatal police encounters - StarTribune.com</title>
+<meta name="google-site-verification" content="bLXTXkzm4dJ8hcJy1LXawtxXxGP3JhInARj69uCiMiM" />
     
+<link rel="canonical" href="http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes" />
 
-          <script type="text/javascript">
-        // Variables for optimizely
-        window.opt_target = {
-            contentType: 'story',
-            sectionPath: '/protected/',
-            minorSection: '/protected/',
-            majorSection: '/protected/'
-        };
-      </script>
-    
-    <script src="//cdn.optimizely.com/js/3104270409.js"></script>
-     
-    <script type="text/javascript">
-        function isWelcomeShowing() {
-            var welcomeModuleElement = jQuery('#WelcomeModule');
-            if (welcomeModuleElement.length > 0 && welcomeModuleElement.css('display') === 'block') {
-                return true;
-            }
-            return false;
-        }
+<meta itemprop="name" content="Fatal police encounters" /><!-- g+ -->
+<meta name="description" content="mental health, law enforcemnet, police, death" />
+<meta itemprop="description" content="mental health, law enforcemnet, police, death" /><!-- g+ -->
+<meta itemprop="image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- g+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:site_name" content="Star Tribune" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fatal police encounters" /><!-- fb, linkedin, pinterest -->
+<meta property="og:description" content="mental health, law enforcemnet, police, death" /><!-- fb, linkedin, pinterest -->
+<meta property="og:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" />
+<meta property="og:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:url" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:width" content="1200" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:height" content="630" /><!-- fb, linkedin, pinterest -->
 
-        function isPhone() {
-            return /Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
-        }
+<meta name="twitter:site" content="@StarTribune" />
+<meta name="twitter:card" content="summary">
 
-        var twigJsDomain = 'www.startribune.com';
-        var assetDomain = 'assets.startribune.com';
-        if (assetDomain != '' && typeof assetDomain == 'string') {
-          twigJsDomain = assetDomain;
-        }
-        twigJsDomain = 'http://' + twigJsDomain;
-    </script>
+<meta name="twitter:title" content="Fatal police encounters" /><!-- twitter -->
+<meta name="twitter:description" content="mental health, law enforcemnet, police, death" /><!-- twitter -->
+<meta name="twitter:url" content="http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes" /><!-- twitter -->
+<meta name="twitter:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
+<meta name="twitter:image:src" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
 
-                    <script type="text/javascript">
-            var overlayRes = "";
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=adde85c5c9f0f29daea3dd1e92f490d00d055c43">
+<link rel="shortcut icon" href="http://stmedia.startribune.com/designimages/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="http://assets.startribune.com/static/min/header.min.js?d=1464807624"></script>
+<script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/AppMeasurement.js?d=1464807266"></script>
 
-            function overlayInterstitial(string, leftPosition, creativeWidth, creativeHeight, topPosition, leftPositionButton, Buttonwidth, ButtonHeight) {
-                if (leftPosition == "centeredpx") {  // set left position if centered
-                    var dcw = 0;
-                    if (!window.innerWidth)  //IE
-                        if (!(document.documentElement.clientWidth == 0))dcw = document.documentElement.clientWidth;  //strict mode
-                        else dcw = document.body.clientWidth;  //quirks mode
-                    else dcw = window.innerWidth;  //w3c
-                    leftPosition = (dcw - creativeWidth) / 2 + "px";
-                    leftPositionButton = Number(creativeWidth) + Number((dcw - creativeWidth) / 2) - Number(Buttonwidth);
-                    leftPositionButton = leftPositionButton + "px";
-                }
-                if (topPosition == "centeredpx") {  // set top position if centered
-                    var dch = 0;
-                    if (!window.innerWidth)  //IE
-                        if (!(document.documentElement.clientWidth == 0)) dch = document.documentElement.clientHeight;  //strict mode
-                        else dch = document.body.clientHeight;  //quirks mode
-                    else dch = window.innerHeight;  //w3c
-                    topPosition = (dch - creativeHeight) / 2 + "px";
-                }
-
-                var topPosNum = parseFloat(topPosition.replace('px', ''));
-                var buttonTop = (topPosNum - ButtonHeight);
-                if (buttonTop < 0) {
-                    buttonTop = 0;
-                }
-
-                var res = string.replace(/\**BTOP/g, buttonTop + 'px');
-                res = res.replace(/\**TOP/g, topPosition);
-                res = res.replace(/\**BLEFT/g, leftPositionButton);
-                res = res.replace(/\**LEFT/g, leftPosition);
-                res += '<\/div>';
-
-                window.overlayRes = res;
-
-                $(document).ready(function () {
-                    if (!isPhone() && !isWelcomeShowing()) {
-                        jQuery( '<div>' ).attr( 'id', 'interstitial-overlay' ).html( window.overlayRes ).appendTo( jQuery( 'body' ) );
-                    }
-                });
-            }
-
-            function dclk_hide_overlay() {
-                jQuery( '#interstitial-overlay').empty().css( 'display', 'none' );
-            }
-        </script>
-    
-    <title>Fatal police encounters - StarTribune.com</title>
-    <meta name="google-site-verification" content="bLXTXkzm4dJ8hcJy1LXawtxXxGP3JhInARj69uCiMiM" />
-            <meta name="robots" content="noindex" />
-            
-    <link rel="apple-touch-icon" href="http://www.startribune.com/img/touch-icon-iphone-retina.png?d=1464807266">
-
-    <link rel="apple-touch-icon" sizes="76x76" href="http://www.startribune.com/img/touch-icon-ipad.png?d=1464807266">
-
-    <link rel="apple-touch-icon" sizes="120x120" href="http://www.startribune.com/img/touch-icon-iphone-retina.png?d=1464807266">
-
-    <link rel="apple-touch-icon" sizes="152x152" href="http://www.startribune.com/img/touch-icon-ipad-retina.png?d=1464807266">
-    
-                <link rel="canonical" href="http://www.startribune.com/fatal-police-encounters/380298861/" />
-    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.startribune.com/fatal-police-encounters/380298861/" />
-    
-              <meta itemprop="name" content="Fatal police encounters" /><!-- g+ -->
-    <meta name="description" content="mental health, law enforcemnet, police, death" />
-    <meta itemprop="description" content="mental health, law enforcemnet, police, death" /><!-- g+ -->
-                            <meta itemprop="image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- g+ -->
-            
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <meta property="og:site_name" content="Star Tribune" />
-
-            <meta property="og:type" content="article" />
-    <meta property="og:title" content="Fatal police encounters" /><!-- fb, linkedin, pinterest -->
-    <meta property="og:description" content="mental health, law enforcemnet, police, death" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" />
-                            <meta property="og:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:image:url" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:image:width" content="1200" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:image:height" content="630" /><!-- fb, linkedin, pinterest -->
-            
-        <meta name="twitter:site" content="@StarTribune" />
-        <meta name="twitter:card" content="summary">
-
-            <meta name="twitter:title" content="Fatal police encounters" /><!-- twitter -->
-    <meta name="twitter:description" content="mental health, law enforcemnet, police, death" /><!-- twitter -->
-                <meta name="twitter:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" /><!-- twitter -->
-                            <meta name="twitter:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
-            <meta name="twitter:image:src" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
-            
-                <script type="text/javascript">
-    if( typeof window.console === 'undefined' ) {
-      var noOp = function() {};    // no-op function
-      console = {
-        log: noOp,
-        warn: noOp,
-        info: noOp,
-        error: noOp,
-        debug: noOp
-      };
-    }
-
-    reloadTimerActive = true;
-    var FeatureAPI_JS_TipsNavigation = false;
-      </script>
-    <link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=adde85c5c9f0f29daea3dd1e92f490d00d055c43">
-  <link rel="shortcut icon" href="http://stmedia.startribune.com/designimages/favicon.ico" type="image/x-icon" />
-
-    <script type="text/javascript" src="http://assets.startribune.com/static/min/header.min.js?d=1464807624"></script>
-  <script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/AppMeasurement.js?d=1464807266"></script>
   
-  
-  <script type="text/javascript">
-      //
-      // If user is already logged in to member center but not here, get their info from SAML
-      //
-      if( jQuery.cookie( 'st_usr_plat' ) && !jQuery.cookie( 'st_usr_name' ) && !jQuery.cookie( 'login_attempt_strib' ) ) {
-          jQuery.cookie( 'login_attempt_strib', true );
-          window.location.href = '/login?path=' + encodeURIComponent( document.location );
-      }
-  </script>
+<link rel="stylesheet" href="http://assets.startribune.com/static/vendor/swiper/dist/idangerous.swiper.css?d=95bf8dfea48f53373131996be7821f295b42de30">
+<link rel="stylesheet" href="http://assets.startribune.com/static/vendor/magnific-popup/dist/magnific-popup.css?d=f387dcc908778095b11b10bfc01dff47ae1e8f67">
 
-      <!--start embed -->
-<script src="https://users.startribune.com/place/1/3/config/8e2ebcdf5774bfadf1f67494b69667d90c03a417" type="text/javascript"></script>
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/article-project-nav.css?d=77ded1ee5f1db42a479e3e632ba9fa152240e9ae">
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/project-globals.css?d=20c4d031baaae680381dd39f14070638223be8b1">
+<link rel="stylesheet" href="http://static.startribune.com/css/news/mentalWorkflow/style.css?d=2016060209">
 
-
-<script>
-  var rskunkRequireConfig = {
-        paths: {
-            "mainapp": "https://users.startribune.com/embed/mainapp.build.js?c=1460040713"
-        },
-    baseUrl: 'https://users.startribune.com/embed'
-  };
+<script type="text/javascript">
+var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","primary_section_path":"\/protected"};
 </script>
-<script src="https://users.startribune.com/embed/third-party/rskunkRequire.js"></script>
-<script>
-  (function(require){
-    require(["mainapp"]);
-  })(rskunkRequire.require);
-</script>
-<link rel="stylesheet" href="https://users.startribune.com/embed/third-party/growl.css">
-<link rel="stylesheet" href="https://users.startribune.com/embed/third-party/colorbox.css">
-        <script type="text/javascript">
-        var meteredElement = {
-            "contentID": "380298861",
-            "meteredContent": true,
-            "sectionPath": "/protected",
-            "user_state": "guest",
-            "products": null
-        };
-        function rskunkCookieMonster(k) {
-            return(r=RegExp('(^|; )'+encodeURIComponent(k)+'=([^;]*)').exec(document.cookie))?r[2]:null;
-        }
-        if(null !== rskunkCookieMonster('st_usr_name')) meteredElement.user_state = "logged_in";
-        if(null !== rskunkCookieMonster('st_usr_products')) meteredElement.products = JSON.parse(unescape(rskunkCookieMonster('st_usr_products')));
-
-        if( typeof optimizelyMeterOverrides == 'object' ) {
-            jQuery.extend( true, rSkunkConfig, optimizelyMeterOverrides );
-        }
-
-        rsInit = function( rs ) {
-            var exemptReferrers = (typeof window.opt_meter_exempt_referrers != 'undefined') ? window.opt_meter_exempt_referrers : [];
-            rs.calculate( rSkunkConfig, meteredElement, function() {
-                $(document).ready(function() {
-                    if ( $.inArray('newsletters', exemptReferrers) !== -1 && window.location.search.match('ref=nl') !== null) {
-                        return;
-                    }
-
-                    for (ref in exemptReferrers) {
-                        if (document.referrer.match(ref) !== null) {
-                            return;
-                        }
-                    }
-
-                    rs.enforce(function(count) {
-
-                    });
-                });
-            });
-        }
-  </script>
-
-            
-          <script type="text/javascript" src="http://assets.startribune.com/static/js/st.welcome.js?d=1464807570"></script>
-    
-                            <script type="text/javascript" src="//nexus.ensighten.com/startribune/Bootstrap.js"></script>
-            
-  
-  <script src="http://assets.startribune.com/static/js/ads/article.js?d=1464807570"></script>
-              
-  
-      <script type="text/javascript">
-      window._taboola = window._taboola || [];
-      _taboola.push({
-                  article:'auto'
-              });
-      !function (e, f, u) {
-        e.async = 1;
-        e.src = u;
-        f.parentNode.insertBefore(e, f);
-      }(document.createElement('script'),
-        document.getElementsByTagName('script')[0],
-        'http://cdn.taboola.com/libtrc/startribune/loader.js');
-    </script>
-    <script>
-      window._newsroom = window._newsroom || [];
-      !function (e, f, u) {
-        e.async = 1;
-        e.src = u;
-        f.parentNode.insertBefore(e, f);
-      }(document.createElement('script'),
-      document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/startribune/newsroom.js');
-   </script>
-   <script src="http://assets.startribune.com/static/vendor/pym.js/dist/pym.min.js?d=1463599104"></script>
-  
-        <link rel="stylesheet" href="http://assets.startribune.com/static/vendor/swiper/dist/idangerous.swiper.css?d=95bf8dfea48f53373131996be7821f295b42de30">
-    <link rel="stylesheet" href="http://assets.startribune.com/static/vendor/magnific-popup/dist/magnific-popup.css?d=f387dcc908778095b11b10bfc01dff47ae1e8f67">
-
-  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/article-project-nav.css?d=77ded1ee5f1db42a479e3e632ba9fa152240e9ae">
-  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/project-globals.css?d=20c4d031baaae680381dd39f14070638223be8b1">
-  <link rel="stylesheet" href="http://static.startribune.com/css/news/mentalWorkflow/style.css?d=2016060209">
-
-      <script type="text/javascript">
-        var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","primary_section_path":"\/protected"};
-    </script>
 
 
-    <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-  <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
-  <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
+<link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+<link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
+<link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
     <style>
       
     .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; } 
-
     .arrow-down {background-color:transparent !important;}  
     .arrow-down.selected {background-color:transparent !important;}      
       
@@ -302,7 +81,6 @@
    a { text-decoration:none; color:#b75b60; }
    a:hover { color:#333 !important; }
    .name { text-transform: capitalize !important; font-weight:900; font-size:1.25em; }
-
    .card { position:relative;padding:10px; height:235px; width:450px; font-size:.85em; line-height:140%; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
    .card div { padding:3px; }
    .card:hover { opacity:.5; cursor:pointer; }
@@ -318,12 +96,10 @@
    .featherlight-content .url { display:block !important; }
    .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
-
     .tooltip .name { font-size:1.1em; color:#333; margin-bottom:4px; width:150px; }
     .tooltip .mentalSwatch { font-size:1em;color:#999 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
     
    .url { font-weight:900; padding-left:6px !important;}
-
    .leftSide { float:left; width:63%; }
    .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:155px; overflow:hidden; background-size: cover;}
    .photo, .photo img { max-width:100%; max-height:100%; vertical-align: middle;}
@@ -336,12 +112,10 @@
      /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
-
    .switch { padding:10px; display:inline-block; text-align:center; width:122px; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999; margin-top:0 !important; }
    .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999;  margin-top:4px; width:150px; }
    .switch:hover, .bigswitch:hover, .selected { background-color:#b75b60 !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
    #filterButtons { text-align:left; }
-
    .filterBreak { clear:both; }
    #filter { width:80%  !important; float:left; margin-bottom: 20px;}
    #method { width:15%; float:right; font-size:12px; margin-top:8px; text-align:right;}
@@ -355,19 +129,14 @@
    #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; white-space:nowrap; display:inline-block; }
    #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#b75b60; }
    #topClickies { height:32px; }
-
    .hideThis { visibility:hidden; }
-
    .count { display:none !important; }
-
    .weaponType, .region { display:none; }
-
    #all, #all_m, #raceB { border-top-left-radius:.8em; border-bottom-left-radius:.8em; }
    #mentalB, #mentalB_m, #weaponB { border-top-right-radius:.8em; border-bottom-right-radius:.8em; }
    #mentalB, #mentalB_m { margin-left:-1px;margin-right:7px; } 
    #raceB, #genderB, #mannerB, #placeB, #weaponB { margin-left:-1px; }
     
-
    .bigDot { border-radius:50%; width:20px; float:left; height:20px; text-align:center; background-color:#fff; display:inline-block; vertical-align:bottom; margin:6px; border:2px solid #ddd}
     
    .bigDot:hover {background-color:#ddd;}
@@ -381,13 +150,10 @@
 /*   .circle { border:3px solid #333; }*/
    .faded { opacity:.4 !important; }
    .active { opacity:1 !important; background-color:#333 !important; width:20px;height:20px;}
-
    .chatter { height:70px; }
-
    #sidebar { width:260px; height:290px; float:left;}
    #selector { display:none; text-align:center; }
    #selector .bigswitch { width:49%;}
-
    .filterSection { display:none; }
     
    #chart { margin:10px 0 10px 0; vertical-align:bottom;  }
@@ -396,25 +162,16 @@
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
    .yearLabel { width:5.37%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
    .bigcount { font-size:1.5em;  color:#b75b60; }
-
-
    .smallerBreak { height:10px; }
-
    .scrollToTop { color:#b75b60 !important; text-align:center; padding:15px; }
    .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-
    .zoom { float:none !important; text-align:left !important; }
    #mobileZoom { display:none; text-align:center !important; width:100%; }
-
    #map { width:100%; height:200px; margin-top:8px; }
-
    li:hover { background-color:#ddd !important; cursor:pointer; }
-
    .chartTitle, .chatter, .navButton { display:none; }
-
    .load { text-align:center; margin-left:auto; margin-right:auto; }
    .load img { width:100px; }
-
     .wrapper-demo { width:100%; }
     .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -422,11 +179,8 @@
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
     .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
     header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
-
     #mainFilters .count { display:none !important; }
-
     /*#method { visibility:hidden !important; }*/
-
     .featherlight-content { pointer-events:none !important; }
     .featherlight-content .url, .url a { pointer-events:all !important; }
     .l-article-body.wide { width:970px; } 
@@ -436,8 +190,6 @@
     .mobileNumbers {display:none;}  
       
     .article-share a {color:#999 !important;}  
-
-
    @media (max-width:920px) {
     .l-article-body.wide { width:100% !important; } 
     .l-container { margin-top:150px; }
@@ -477,7 +229,6 @@
     #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
     #chartLabels { margin-left:-15px; }
    }
-
    @media (max-width:400px) {
     #wrapper { width:90%; }
     #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
@@ -485,13 +236,10 @@
     .card { padding:20px; height:auto !important; width:32%; display:block; }
     #sidebar { text-align:center !important; height:200px; }
    }
-
    @media (max-width:320px) {
     #wrapper { width:100%; }
    }
-
   @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
-
     #wrapper { width:90%; }
     .card { 
       padding:10px; 
@@ -519,11 +267,8 @@
     #topClickies {height: 60px;}
     #clickyStuff { visibility:hidden; }
     #deathsTable {width:100%}
-
     .breaker {padding: 0 0 5px 0;margin:0px}
     #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
-
-
      
     #method { width:100%; float:none; text-align:center; padding:10px; }
     .year { width:5%; }
@@ -540,7 +285,6 @@
     #filter { width:100% !important; float:none; margin-bottom:0px;}
     #chartAll { width:100%; }
     .readmore {position:relative;display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
-
   /*HEADER  */
     
   .article-headline {display:none;} 
@@ -566,7 +310,6 @@
     
     
   /*OVERLAY  */
-
       .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
       .featherlight-content { width:90%; height:auto; margin:0 auto;}
       
@@ -578,7 +321,6 @@
      .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
      .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
     .card.featherlight-inner {margin:0 !important;}
-
     
   .mobileNumbers {
       display:block;
@@ -599,27 +341,22 @@
                 var parts = location.hostname.split('.');
                 var subdomain = parts.shift();
                 var upperleveldomain = parts.join('.');
-
                 return (upperleveldomain == 'startribune.com');
             }
-
             function are_cookies_enabled() {
                 var date = new Date();
                 date.setTime(date.getTime()+(60*1000));
                 var expires = "; expires="+date.toUTCString();
                 document.cookie= "testcookie = ytubrute" + expires; //iPad does not create the cookie without a value.
                 var cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
-
                 return (cookieEnabled);
             }
-
             if (ourDomain() && are_cookies_enabled() && !isPhone()) {
                 var welcomeCookieVal = document.cookie.indexOf("st_welcome");
                 if(welcomeCookieVal == undefined ||  welcomeCookieVal == null || welcomeCookieVal < 0){
                     setTimeout(populateWelcome, 10);
                 }
             }
-
         </script>
     
 
@@ -628,7 +365,6 @@
 <script type="text/javascript">
     //For omniture impressions. We don't want to access s until the very end.
     var impression_data = [];
-
     function analyticsClickTracking($this, linkname, linktype, modulename, moduletype, positions, custom ) {
         // IE8 throws error on console.log
         // console.log("Click event triggered");
@@ -707,7 +443,6 @@
             } );
         }
     }
-
     function updateOmnitureBeaconParameter(queryString, analytic, value) {
         queryString[analytic] = value;
         return queryString;
@@ -719,7 +454,6 @@
                 queryString = updateOmnitureBeaconParameter(queryString, 'prop16', 'c16=' + (getUsername() != 'Not Logged In' ? getUsername() : '') );
             }
         }
-
         if (includeLoggedInStatus) {
             if (typeof getUsername === 'function') {
                 if (getUsername() == 'Not Logged In') {
@@ -729,7 +463,6 @@
                 }
             }
         }
-
         return queryString;
     }
 </script>
@@ -768,7 +501,6 @@
 
 
 <script type="text/javascript">
-
     if (readCookie('daily') == '') {
         if(readCookie('monthlyCounter') == '' || parseInt(readCookie('monthlyCounter')) <= 30){
             var expiryDate = new Date();
@@ -777,7 +509,6 @@
             document.cookie = 'isDailyCounted = false; expires=Fri, 31 Dec 9999 23:59:59 GMT';
         }
     }
-
     if (readCookie('monthly') == '') {
         var expiryDate = new Date();
         expiryDate.setMonth(expiryDate.getMonth() + 1);
@@ -789,7 +520,6 @@
         document.cookie = 'isDailyCounted = true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
         document.cookie = "monthlyCounter=" + (parseInt(readCookie('monthlyCounter')) + 1) + "; expires=Fri, 31 Dec 9999 23:59:59 GMT'" ;
     }
-
 </script>
     <div class="l-container">
 
@@ -822,7 +552,7 @@
     </li>
           <li>
       <span class="project-link day-2">
-        <a href="http://www.startribune.com/x/374523171?preview=1" >          <span class="part-num">
+        <a href="" >          <span class="part-num">
                           Part 2
                         :&nbsp;</span>the mother
         </a>                   <span class="coming-soon">
@@ -834,7 +564,7 @@
     </li>
           <li>
       <span class="project-link day-3">
-        <a href="http://www.startribune.com/x/374523401?preview=1" >          <span class="part-num">
+        <a href="" >          <span class="part-num">
                           Part 3
                         :&nbsp;</span>the survivor
         </a>                   <span class="coming-soon">
@@ -846,7 +576,7 @@
     </li>
           <li>
       <span class="project-link day-4">
-        <a href="http://www.startribune.com/x/380298861?preview=1" >          <span class="part-num">
+        <a href="" >          <span class="part-num">
                           Part 4
                         :&nbsp;</span>fatal encounters
         </a>                   <span class="coming-soon">
@@ -960,7 +690,7 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
                                                                    
 <h1 class="article-headline" itemprop="headline">Fatal police encounters</h1> <h1 class="mobile-hedline">Fatal police encounters</h1>
                                                                    
-<div class="article-subhead" itemprop="description"> The Star Tribune <a href="/x/380709141/?preview=1" target="_new" style="text-decoration:underline;">collected the names and stories</a> of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016. A disproportionate share — at least 45 percent — were people with a history of mental illness or who were having a mental health crisis when they died.&nbsp;</div>
+<div class="article-subhead" itemprop="description"> The Star Tribune <a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/?preview=1" target="_new" style="text-decoration:underline;">collected the names and stories</a> of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016. A disproportionate share — at least 45 percent — were people with a history of mental illness or who were having a mental health crisis when they died.&nbsp;</div>
                                                     
                  
 
@@ -1274,40 +1004,30 @@ text-transform: uppercase;
 
 <script>
 //LIVE JSON MAGIC
-
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart
-
 //THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-
 // $jsonDataShootings = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=gzHCZ7kiey1SMM5PgBsM3CMeEa4NGwiyFa2FU8DnUoYjQIKgjsJFAGwT7SqIrwFV-EqtN7Cx_xlY8kVRmstDxBon1OqOrn1NOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrpOMLCYDptcpnMxR0xLFGFK&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
 // $jsonDataYear = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=tNF6_if_WpQAvlnIwRWIHBHNBcOQ82hB8rzcScLoXpi_4W6d84eUeNWyXA8NKNBB4DWz53L3bhAVl38Pz93wBsrUsEnuNKBWOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx9WKnAm96yZmfHc12uQ5hug&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
 // $jsonDataRace = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=1o5js0t1-i_wvGK8iMjzk2xR5auHvAWz3S9omyswRYuc-g_Zqf9Hd8ftf-teZu-RxUlpYxtPQRoVl38Pz93wBkgelLHZJDxkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxxcG-w52aeuSr4afipWyPHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
 //THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
 // var dataLoadShootings = <?php echo $jsonDataShootings; ?>;
 // var dataLoadYear = <?php echo $jsonDataYear; ?>;
 // var dataLoadRace = <?php echo $jsonDataRace; ?>;
-
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings", function(error, dataLoadShootings) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart", function(error, dataLoadYear) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart", function(error, dataLoadRace) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=viz_chatter", function(error, dataLoadChatter) {
-
 dataShootings = dataLoadShootings.mn_shootings;
 dataYear = dataLoadYear.yearChart;
 dataRace = dataLoadRace.raceChart;
 dataChatter = dataLoadChatter.viz_chatter;
-
 var mentalLoad = false;
-
 $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });
-
 function addBoxes() {
   $('#deathsTable .card').each(function(i, obj) {
     $(this).addClass("lightbox");
@@ -1316,9 +1036,7 @@ function addBoxes() {
     $(this).attr("data-featherlight","#" + $(this).attr("id"));
   }); 
 }
-
 $('#mainFilters').hide();
-
 $(".switch").click(function() {
   $(".switch").removeClass("selected");
   $('#mainFilters').show();
@@ -1332,7 +1050,6 @@ $(".switch").click(function() {
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
 });
-
 $(".bigswitch").click(function() {
   $(".bigswitch").removeClass("selected");
   $(this).addClass("selected");
@@ -1340,11 +1057,8 @@ $(".bigswitch").click(function() {
   $('#mainFilters').hide();
   $('#clickyStuff').show();
 });
-
 $('#bigNumber').html(dataShootings.length);
 $('.results').html(dataShootings.length);
-
-
 //POPULATE TABLE
 d3.select("#deathsTable").selectAll(".card")
 .data(dataShootings).enter().append("div")
@@ -1355,26 +1069,19 @@ d3.select("#deathsTable").selectAll(".card")
   var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health issues</div>"; }
   if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
-
   return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Read more</div>";});
-
 addBoxes();
-
 $(".card").on("click" ,function(){
   $(document).bind('DOMNodeInserted', function(event) {
 $(".featherlight-content .card").removeClass("lightbox");
 $(".featherlight-content .card").removeClass("featherlight-inner");
 $(".featherlight-content .card").attr("data-featherlight","");
-
 });
-
 });
-
   $(".url").on("click" ,function(){
     window.open($(this).find("a").attr("href"), '_new');
     return false;
   });
-
 function spitDots(year){
 d3.select("#y" + year).selectAll(".dot")
 .data(dataShootings.filter(function(d){ return d.year == year; }).sort(function(a, b) { return d3.ascending(a.Mental, b.Mental); })).enter().append("div")
@@ -1392,12 +1099,10 @@ d3.select("#y" + year).selectAll(".dot")
 .attr("weapon", function (d){ return d.WeaponCategory;})
 .attr("mental", function (d){ return d.Mental;})
 .on("mousedown", function(d, i){ 
-
         $(".dot").removeClass("faded, active");
         $(".dot").addClass("faded");
         d3.select(this).classed("faded", false);
         d3.select(this).classed("active", true);
-
         $('.card').hide();
         var txt = d.FirstName + " " + d.LastName;
         $('.card').each(function(){
@@ -1407,7 +1112,6 @@ d3.select("#y" + year).selectAll(".dot")
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   })
 .html(function (d){ return "";})
 .call(d3.helper.tooltip(function(d, i){
@@ -1415,9 +1119,7 @@ d3.select("#y" + year).selectAll(".dot")
   if (d.Mental == "Yes") { mentalStatus = "<div class='mentallabel' style='color:#999;font-weight:900;font-size:.8em;'>MENTAL HEALTH ISSUES</div>"; }
     return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div>" + mentalStatus;
 }));
-
 }
-
 $(".zoom").click(function() {
   $('.card').show();
   var count = $('.card:visible').length;
@@ -1434,7 +1136,6 @@ $(".zoom").click(function() {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
        $('#filter_box').val("");
-
     $('.card').hide();
         var txt = "Yes";
         $('.hideThis').each(function(){
@@ -1450,10 +1151,7 @@ $(".zoom").click(function() {
   d3.selectAll(".dot").classed("mentalSwatch", true);
  }
 });
-
-
 d3.helper = {};
-
 d3.helper.tooltip = function(accessor){
     return function(selection){
         var tooltipDiv;
@@ -1486,16 +1184,11 @@ d3.helper.tooltip = function(accessor){
             // Remove tooltip
             tooltipDiv.remove();
         });
-
     };
 };
-
 for (var i=2000; i <= 2016; i++){ spitDots(i); }
-
 //SEARCH FILTER TABLE
   // $( document ).ready(function() {
-
-
      $('#filter_box').keyup(function(i){
       if (mentalLoad == true){
         $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
@@ -1523,13 +1216,9 @@ for (var i=2000; i <= 2016; i++){ spitDots(i); }
       }
     });
 // });
-
 $.getJSON('shapefiles/counties.json', function(counties) {
-
 //FILTER STUFF
-
 $( "#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a" ).css("background","#fff");
-
 // $(document).bind('DOMNodeInserted', function(event) {
 $(".bigDot").on('click',function(){
   $(".bigDot").removeClass("selected");
@@ -1540,7 +1229,6 @@ $(".filter, .filter2, .filter3").on('click',function(){
   $(this).find(".bigDot").addClass("selected");
 });
 // });
-
 function countStats(target, text){
   if (mentalLoad == true){
  return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length}).length;
@@ -1548,15 +1236,11 @@ function countStats(target, text){
    return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 }).length;
 }
 }
-
 $(".filter").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   var datapoint = $(this).attr("data");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
@@ -1566,9 +1250,7 @@ $(".filter").on('click',function(){
       if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
     }
   });
-
    $('#filter_box').val("");
-
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
@@ -1580,7 +1262,6 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
   } else {
-
         $('.card').hide();
         var txt = $(this).attr("data");
         $('.card .stats, .card .ruling').each(function(){
@@ -1592,15 +1273,11 @@ if (mentalLoad == true){
         $('.results').html(count);
       }
   });
-
 $(".filter2").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   var datapoint = $(this).attr("data");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
@@ -1610,9 +1287,7 @@ $(".filter2").on('click',function(){
       if ($(this).attr("weapon") == datapoint) { $(this).addClass("mentalSwatch"); }
     }
   });
-
 $('#filter_box').val("");
-
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
@@ -1624,7 +1299,6 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
   } else {
-
         $('.card').hide();
         var txt = $(this).attr("data");
         $('.weaponType').each(function(){
@@ -1636,15 +1310,11 @@ if (mentalLoad == true){
         $('.results').html(count);
       }
   });
-
 $(".filter3").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   var datapoint = $(this).attr("data");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
@@ -1654,10 +1324,7 @@ $(".filter3").on('click',function(){
       if ($(this).attr("region") == datapoint) { $(this).addClass("mentalSwatch"); }
     }
   });
-
-
    $('#filter_box').val("");
-
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
@@ -1669,7 +1336,6 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
   } else {
-
         $('.card').hide();
         var txt = $(this).attr("data");
         $('.region').each(function(){
@@ -1680,15 +1346,12 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
       }
-
   });
-
 $.urlParam = function(name){
   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
   if (results != null) { return results[1]; }
   else { return 0; }
 }
-
 if ($.urlParam('mental') != 0 ) { 
   var page = $.urlParam('mental');
   if (page = "yes") { 
@@ -1698,18 +1361,14 @@ if ($.urlParam('mental') != 0 ) {
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
   for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
-
   $(".bigswitch, .switch").removeClass("selected");
   $("#mentalB_m, #mentalB").addClass("selected");
   $(".chatter, .chartTitle").hide();
   $(".mental").show();
-
   $('.dot').each(function(i, obj) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
-
      $('#filter_box').val("");
-
     $('.card').hide();
         var txt = "Yes";
         $('.hideThis').each(function(){
@@ -1726,7 +1385,6 @@ if ($.urlParam('mental') != 0 ) {
     d3.selectAll(".dot").classed("mentalSwatch", true);
     for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "all") { $(".chatterThing").html(dataChatter[i].chatter) } }
   }
-
 $("#all, #all_m").on('click',function(){
   $('#filter_box').attr("placeholder","Search list of all deaths by name, year or keyword");
         mentalLoad = false;
@@ -1742,19 +1400,15 @@ $("#mentalB, #mentalB_m").on('click',function(){
   $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
   mentalLoad = true;
   for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
-
   $(".bigDot").removeClass("selected");
   $("#mentalDot").addClass("selected");
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $('.dot').each(function(i, obj) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
-
      $('#filter_box').val("");
-
     $('.card').hide();
         var txt = "Yes";
         $('.hideThis').each(function(){
@@ -1764,17 +1418,13 @@ $("#mentalB, #mentalB_m").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#weaponB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#weaponDot").addClass("selected");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("weapon") == "GUN" && $(this).attr("mental") == "Yes") { 
@@ -1783,14 +1433,11 @@ $("#weaponB").on('click',function(){
       }
     } else {
       if ($(this).attr("weapon") == "GUN") { $(this).addClass("mentalSwatch"); }
-
       for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "weapon_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
     }
     
   });
-
    $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "GUN";
         $('.weaponType').each(function(){
@@ -1802,22 +1449,17 @@ $("#weaponB").on('click',function(){
           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
                $(this).parent().show();
              }
-
          }
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#raceB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#raceDot").addClass("selected");
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("race") == "BLACK" && $(this).attr("mental") == "Yes") { 
@@ -1830,9 +1472,7 @@ $("#raceB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "BLACK";
         $('.card .stats, .card .ruling').each(function(){
@@ -1848,17 +1488,13 @@ $("#raceB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#placeB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#placeDot").addClass("selected");
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("region") == "Metro" && $(this).attr("mental") == "Yes") { 
@@ -1871,9 +1507,7 @@ $("#placeB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "Metro";
         $('.region').each(function(){
@@ -1889,17 +1523,13 @@ $("#placeB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#mannerB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#mannerDot").addClass("selected");
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("manner") == "HOMICIDE" && $(this).attr("mental") == "Yes") { 
@@ -1912,9 +1542,7 @@ $("#mannerB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "HOMICIDE";
         $('.card .stats, .card .ruling').each(function(){
@@ -1930,18 +1558,13 @@ $("#mannerB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#genderB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#genderDot").addClass("selected");
-
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("gender") == " MALE" && $(this).attr("mental") == "Yes") { 
@@ -1954,9 +1577,7 @@ $("#genderB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = " MALE";
         $('.card .stats, .card .ruling').each(function(){
@@ -1972,14 +1593,8 @@ $("#genderB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
-
-
-
 });
-
-
 });
 });
 });
@@ -1999,12 +1614,10 @@ $("#genderB").on('click',function(){
       DropDown.prototype = {
         initEvents : function() {
           var obj = this;
-
           obj.dd.on('click', function(event){
             $(this).toggleClass('active');
             return false;
           });
-
           obj.opts.on('click',function(){
             var opt = $(this);
             obj.val = opt.text();
@@ -2019,19 +1632,14 @@ $("#genderB").on('click',function(){
           return this.index;
         }
       }
-
       $(function() {
-
         var dd = new DropDown( $('#dd') );
         var dd2 = new DropDown( $('#dd2') );
-
         $(document).click(function() {
           // all dropdowns
           $('.wrapper-dropdown-1').removeClass('active');
         });
-
       });
-
 </script>
 
  <p>&nbsp;</p>
@@ -2079,11 +1687,9 @@ $("#genderB").on('click',function(){
         commentPage.userToken = null;
         commentPage.userAuth = false;
         commentPage.registerUsername = false;
-
         commentPage.onCommentCountUpdated = function (number) {
             commentCount.checkLivefyreLoaded(number);
         };
-
         var checkUserToken = function (cb) {
             if (jQuery.cookie('st_usr_livefyre_token')) {
                 commentPage.userAuth = true;
@@ -2091,7 +1697,6 @@ $("#genderB").on('click',function(){
             }
             cb();
         };
-
         if (jQuery.cookie('register_st_user_name')) {
             if (jQuery.cookie('st_usr_livefyre_token')) {
                 jQuery.removeCookie('register_st_user_name');
@@ -2099,16 +1704,13 @@ $("#genderB").on('click',function(){
                 commentPage.registerUsername = true;
             }
         }
-
         var customStrings = {
             signIn: (commentPage.registerUsername ? "Please create a username for your account." : commentLoginText),
             postButton: "Post your comment",
             postReplyButton: "Post your comment",
             flagButton: "Report as inappropriate"
         };
-
         networkConfig["strings"] = customStrings;
-
         Livefyre.require(['fyre.conv#3', 'auth'], function(Conv, auth) {
             new Conv( networkConfig, [convConfig], function(commentsWidget){
                 checkUserToken(function () {
@@ -2116,15 +1718,12 @@ $("#genderB").on('click',function(){
                         auth.authenticate({livefyre: commentPage.userToken});
                     }
                 });
-
                 commentsWidget.on('commentCountUpdated', commentPage.onCommentCountUpdated);
-
                 commentsWidget.on('initialRenderComplete', function () {
                     jQuery('.fyre-comment a').contents().unwrap();
                     commentCount.checkLivefyreLoaded(false, false);
                 });
             });
-
             auth.delegate({
                 login: function(cb) {
                     if (commentPage.registerUsername) {
@@ -2137,7 +1736,6 @@ $("#genderB").on('click',function(){
                 }
             });
         });
-
     </script>
     <div id='livefyre-cont'>
         <div id='livefyre'>
@@ -2319,7 +1917,6 @@ $("#genderB").on('click',function(){
     var impression_map = {};
     var evar_map = {};
     //Code removed because we are not currently doing impression tracking.
-
     //Pageload Tracking
                                         s.prop1 = 'D=g';
                                                             s.prop2 = 'V20160601';
@@ -2344,7 +1941,6 @@ $("#genderB").on('click',function(){
                         
           var storyExists = 'true';
       var sidewaysEligible = 'false';
-
       if(storyExists == 'true' && sidewaysEligible == 'true' && typeof referrerCheck != 'undefined' && referrerCheck()) {
         s.prop56 = "PerfectMarket";
       }
@@ -2353,62 +1949,45 @@ $("#genderB").on('click',function(){
     //
     // Special check for override templates to track whether they have ads
     //
-
     (function($, s) {
-
         var adCount = 0;
-
         //
         // If we aren't on sideways, don't count those ads
         // (Sideways ads are built client-side; the scaffolding always exists.)
         //
-
         if( typeof s.prop56 === 'undefined' || s.prop56 === '' ) {
             var adDivs = $('.dfp-ad-container').not( '.sideways-ad' );
         } else {
             var adDivs = $('.dfp-ad-container');
         }
-
         for( var i = 0, j = adDivs.length; i < j; i++ ) {
-
             //
             // CSS is hiding ad, skip it
             //
-
             if( $(adDivs[i]).is(':hidden' ) ) {
                 continue;
             }
-
             //
             // Don't count ads in the navigation bar
             //
-
             var adDivIdParts = adDivs[i].id.split('-');
             var adNameParts = adDivIdParts.slice(4, adDivIdParts.length);
             var adName = adNameParts.join('-');
             if( $.inArray( adName, [ 'navtab', 'nav-flag' ] ) !== -1 ) {
                 continue;
             }
-
             //
             // Whatever is left is a valid ad
             //
-
             adCount++;
         }
-
         s.prop54 = ( adCount > 0 ) ? 'Override Template Ads' : 'Override Template No Ads';
-
     })(jQuery, s);
-
     
-
   if(isWelcomeShowing()){
     s.prop21 = "Welcome Screen";
   }
-
     var s_code=s.t();if(s_code)document.write(s_code);
-
     //Click Tracking
     function userInteraction(events, vars, linkName) {
         try {
@@ -2426,7 +2005,6 @@ $("#genderB").on('click',function(){
             s.tl(this, 'o', 'user interaction: ' + linkName);
         } catch (e) {}
     }
-
     function trackClick( clickData ) {
         //var impression = impression_map[clickData.key];
         //var impressionEvar = evar_map[clickData.key];
@@ -2447,7 +2025,6 @@ $("#genderB").on('click',function(){
     $(document).ready(function() {
         $("a, input[type=submit]").on('click', function() {
             analyticsClickTracking($(this));
-
             return true;
         });
         if ( $('.fly-in').length > 0 ) {
