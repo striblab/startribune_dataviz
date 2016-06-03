@@ -210,11 +210,12 @@ var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","pri
       z-index: 2;
       text-shadow: none;
   } 
+     
     .l-article-body.wide { width:100% !important; } 
     .l-container { margin-top:10px; }
     .article-byline { border-right: none; margin-top: 8px; line-height: 140%; }
     aside.article-share { position:static !important; width:90% !important; text-align: center; margin:0 !important; margin-left: auto; margin-right: auto; display:none; }
-    #wrapper { width:600px; }
+    #wrapper { width:600px; margin-top:0px;}
     .chatterThing { text-align:left !important; height:180px; }
     .chatterThing img { margin-left:auto; margin-right:auto; }
     .switch, .bigswitch { border-radius:0 !important; width:49.% !important; }
@@ -243,7 +244,7 @@ var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","pri
     .featherlight .featherlight-content, .featherlight-content .card {background-color: #eee; overflow-y:auto !important; overflow-x:hidden; }
     h1.mobile-hedline { display:block; position:relative; font-family: "Whitman Display",serif; font-weight: 400; color: #333; margin: 80px auto 0px auto; font-size: 3.2em; width: 100%; height: auto;text-align: center; line-height: 90%; padding: 0 10px; z-index: 2; text-shadow: none; } 
     .article-headline { display:none !important; } 
-    #wrapper { width:434px; }
+    #wrapper { width:434px; margin-top:0px;}
     .nav-logo { width: 100%; text-align:center; }
     .nav ul>li { width: 100%; }
     .nav a.project-title {  width: 100%; }
@@ -266,17 +267,17 @@ var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","pri
     #chartLabels { margin-left:-15px; }
    }
    @media (max-width:400px) {
-    #wrapper { width:90%; }
+    #wrapper { width:90%; margin-top:0px;}
     #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
     #filter input { font-size:0.6em; }
     .card { padding:20px; height:auto !important; width:32%; display:block; }
     #sidebar { text-align:center !important; height:200px; }
    }
    @media (max-width:320px) {
-    #wrapper { width:100%; }
+    #wrapper { width:100%; margin-top:0px;}
    }
   @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
-    #wrapper { width:90%; }
+    #wrapper { width:90%; margin-top:0px;}
     .card { 
       padding:10px; 
       height:auto !important; 
@@ -1199,18 +1200,26 @@ $(".filter").on('click',function(){
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
-      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      if (datapoint == "WHITE") { if ($(this).attr("race") == "HISPANIC" || $(this).attr("race") == "WHITE") { $(this).addClass("mentalSwatch");  } }
+      else if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { 
+        $(this).addClass("mentalSwatch");  
+      }
       }
     } else {
-      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      if (datapoint == "WHITE") { if ($(this).attr("race") == "HISPANIC" || $(this).attr("race") == "WHITE") { $(this).addClass("mentalSwatch");  } }
+      else if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { 
+        $(this).addClass("mentalSwatch");  
+      }
     }
   });
    $('#filter_box').val("");
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
+        var txt2 = $(this).attr("data");
+        if (txt == "WHITE") { txt2 = "HISPANIC"; }
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
+           if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 || $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1) && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
         });
@@ -1219,8 +1228,10 @@ if (mentalLoad == true){
   } else {
         $('.card').hide();
         var txt = $(this).attr("data");
+        var txt2 = $(this).attr("data");
+        if (txt == "WHITE") { txt2 = "HISPANIC"; }
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 || $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1)){
                $(this).parent().parent().show();
            }
         });
