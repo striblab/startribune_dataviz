@@ -431,7 +431,12 @@
     .featherlight-content .url, .url a { pointer-events:all !important; }
     .l-article-body.wide { width:970px; } 
       
-    h1.mobile-hedline {display:none;}    
+    h1.mobile-hedline {display:none;}   
+      
+    .mobileNumbers {display:none;}  
+      
+    .article-share a {color:#999 !important;}  
+      
       
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
 
@@ -472,7 +477,8 @@
   .year { width:5%; }
   #mobileZoom { display:block; }
   .dot { width:14px !important; height:14px !important; }
-  #chartLabels { margin-left:-12px;width:100%}
+  #chart {margin:10px 0 0 0;}
+  #chartLabels { display:none; margin-left:-12px;width:100%}
   #chartLabels .yearLabel { 
   font-size:10px; 
   width:4.6%;
@@ -503,6 +509,8 @@ h1.mobile-hedline {
     text-shadow: none;
 } 
 .article-byline {width:100%;margin:0;}
+  
+/*OVERLAY  */
 
     .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
     .featherlight-content { width:90%; height:450px; margin:0 auto;}
@@ -516,6 +524,15 @@ h1.mobile-hedline {
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
   
 
+.mobileNumbers {
+    display:block;
+    width:100%;
+    height:auto;
+    margin: 0 auto 12px auto;
+  } 
+
+
+  
       }      
       
 
@@ -966,7 +983,7 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
                                             </div>
                                                 <div class="l-article-body wide">
                                                                                            
-                                                                                                    <aside class="article-share">
+                                                                                                    <aside class="article-share" style="color:#999 !important;">
                 <div class="share__textsize">
       <a id="js-textsize-btn" data-linkname="Text size" data-linktype="text-resize" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
         <div class="share-icon"></div>
@@ -1207,6 +1224,9 @@ text-transform: uppercase;
       <div class="yearLabel">'15</div>
       <div class="yearLabel">'16</div>
      </div>
+       
+       <div class="mobileNumbers"><img width="100%" height="auto" alt="" src="http://stmedia.startribune.com/images/mentalNumbers.png"></div>
+       
      </div>
 
 <div id="sidebar">
