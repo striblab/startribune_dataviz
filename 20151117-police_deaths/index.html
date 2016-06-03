@@ -2,281 +2,61 @@
 <!--[if IE 8 ]>    <html dir="ltr" lang="en-US" class="no-js ie8 oldie"> <![endif]-->
 <!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script
-      src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js"
-      data-apikey="57098e87943fb0b8bcf51a8ffc9ca41a">
-    </script>
-          <script type="text/javascript" src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d=1463599109"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d=1463599109"></script>    
+<title>Fatal police encounters - StarTribune.com</title>
+<meta name="google-site-verification" content="bLXTXkzm4dJ8hcJy1LXawtxXxGP3JhInARj69uCiMiM" />
     
+<link rel="canonical" href="http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes" />
 
-          <script type="text/javascript">
-        // Variables for optimizely
-        window.opt_target = {
-            contentType: 'story',
-            sectionPath: '/protected/',
-            minorSection: '/protected/',
-            majorSection: '/protected/'
-        };
-      </script>
-    
-    <script src="//cdn.optimizely.com/js/3104270409.js"></script>
-     
-    <script type="text/javascript">
-        function isWelcomeShowing() {
-            var welcomeModuleElement = jQuery('#WelcomeModule');
-            if (welcomeModuleElement.length > 0 && welcomeModuleElement.css('display') === 'block') {
-                return true;
-            }
-            return false;
-        }
+<meta itemprop="name" content="Fatal police encounters" /><!-- g+ -->
+<meta name="description" content="mental health, law enforcemnet, police, death" />
+<meta itemprop="description" content="mental health, law enforcemnet, police, death" /><!-- g+ -->
+<meta itemprop="image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- g+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:site_name" content="Star Tribune" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fatal police encounters" /><!-- fb, linkedin, pinterest -->
+<meta property="og:description" content="mental health, law enforcemnet, police, death" /><!-- fb, linkedin, pinterest -->
+<meta property="og:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" />
+<meta property="og:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:url" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:width" content="1200" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:height" content="630" /><!-- fb, linkedin, pinterest -->
 
-        function isPhone() {
-            return /Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent);
-        }
+<meta name="twitter:site" content="@StarTribune" />
+<meta name="twitter:card" content="summary">
 
-        var twigJsDomain = 'www.startribune.com';
-        var assetDomain = 'assets.startribune.com';
-        if (assetDomain != '' && typeof assetDomain == 'string') {
-          twigJsDomain = assetDomain;
-        }
-        twigJsDomain = 'http://' + twigJsDomain;
-    </script>
+<meta name="twitter:title" content="Fatal police encounters" /><!-- twitter -->
+<meta name="twitter:description" content="mental health, law enforcemnet, police, death" /><!-- twitter -->
+<meta name="twitter:url" content="http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes" /><!-- twitter -->
+<meta name="twitter:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
+<meta name="twitter:image:src" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
 
-                    <script type="text/javascript">
-            var overlayRes = "";
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=adde85c5c9f0f29daea3dd1e92f490d00d055c43">
+<link rel="shortcut icon" href="http://stmedia.startribune.com/designimages/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="http://assets.startribune.com/static/min/header.min.js?d=1464807624"></script>
+<script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/AppMeasurement.js?d=1464807266"></script>
 
-            function overlayInterstitial(string, leftPosition, creativeWidth, creativeHeight, topPosition, leftPositionButton, Buttonwidth, ButtonHeight) {
-                if (leftPosition == "centeredpx") {  // set left position if centered
-                    var dcw = 0;
-                    if (!window.innerWidth)  //IE
-                        if (!(document.documentElement.clientWidth == 0))dcw = document.documentElement.clientWidth;  //strict mode
-                        else dcw = document.body.clientWidth;  //quirks mode
-                    else dcw = window.innerWidth;  //w3c
-                    leftPosition = (dcw - creativeWidth) / 2 + "px";
-                    leftPositionButton = Number(creativeWidth) + Number((dcw - creativeWidth) / 2) - Number(Buttonwidth);
-                    leftPositionButton = leftPositionButton + "px";
-                }
-                if (topPosition == "centeredpx") {  // set top position if centered
-                    var dch = 0;
-                    if (!window.innerWidth)  //IE
-                        if (!(document.documentElement.clientWidth == 0)) dch = document.documentElement.clientHeight;  //strict mode
-                        else dch = document.body.clientHeight;  //quirks mode
-                    else dch = window.innerHeight;  //w3c
-                    topPosition = (dch - creativeHeight) / 2 + "px";
-                }
-
-                var topPosNum = parseFloat(topPosition.replace('px', ''));
-                var buttonTop = (topPosNum - ButtonHeight);
-                if (buttonTop < 0) {
-                    buttonTop = 0;
-                }
-
-                var res = string.replace(/\**BTOP/g, buttonTop + 'px');
-                res = res.replace(/\**TOP/g, topPosition);
-                res = res.replace(/\**BLEFT/g, leftPositionButton);
-                res = res.replace(/\**LEFT/g, leftPosition);
-                res += '<\/div>';
-
-                window.overlayRes = res;
-
-                $(document).ready(function () {
-                    if (!isPhone() && !isWelcomeShowing()) {
-                        jQuery( '<div>' ).attr( 'id', 'interstitial-overlay' ).html( window.overlayRes ).appendTo( jQuery( 'body' ) );
-                    }
-                });
-            }
-
-            function dclk_hide_overlay() {
-                jQuery( '#interstitial-overlay').empty().css( 'display', 'none' );
-            }
-        </script>
-    
-    <title>Fatal police encounters - StarTribune.com</title>
-    <meta name="google-site-verification" content="bLXTXkzm4dJ8hcJy1LXawtxXxGP3JhInARj69uCiMiM" />
-            <meta name="robots" content="noindex" />
-            
-    <link rel="apple-touch-icon" href="http://www.startribune.com/img/touch-icon-iphone-retina.png?d=1464807266">
-
-    <link rel="apple-touch-icon" sizes="76x76" href="http://www.startribune.com/img/touch-icon-ipad.png?d=1464807266">
-
-    <link rel="apple-touch-icon" sizes="120x120" href="http://www.startribune.com/img/touch-icon-iphone-retina.png?d=1464807266">
-
-    <link rel="apple-touch-icon" sizes="152x152" href="http://www.startribune.com/img/touch-icon-ipad-retina.png?d=1464807266">
-    
-                <link rel="canonical" href="http://www.startribune.com/fatal-police-encounters/380298861/" />
-    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.startribune.com/fatal-police-encounters/380298861/" />
-    
-              <meta itemprop="name" content="Fatal police encounters" /><!-- g+ -->
-    <meta name="description" content="mental health, law enforcemnet, police, death" />
-    <meta itemprop="description" content="mental health, law enforcemnet, police, death" /><!-- g+ -->
-                            <meta itemprop="image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- g+ -->
-            
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <meta property="og:site_name" content="Star Tribune" />
-
-            <meta property="og:type" content="article" />
-    <meta property="og:title" content="Fatal police encounters" /><!-- fb, linkedin, pinterest -->
-    <meta property="og:description" content="mental health, law enforcemnet, police, death" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" />
-                            <meta property="og:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:image:url" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:image:width" content="1200" /><!-- fb, linkedin, pinterest -->
-            <meta property="og:image:height" content="630" /><!-- fb, linkedin, pinterest -->
-            
-        <meta name="twitter:site" content="@StarTribune" />
-        <meta name="twitter:card" content="summary">
-
-            <meta name="twitter:title" content="Fatal police encounters" /><!-- twitter -->
-    <meta name="twitter:description" content="mental health, law enforcemnet, police, death" /><!-- twitter -->
-                <meta name="twitter:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" /><!-- twitter -->
-                            <meta name="twitter:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
-            <meta name="twitter:image:src" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
-            
-                <script type="text/javascript">
-    if( typeof window.console === 'undefined' ) {
-      var noOp = function() {};    // no-op function
-      console = {
-        log: noOp,
-        warn: noOp,
-        info: noOp,
-        error: noOp,
-        debug: noOp
-      };
-    }
-
-    reloadTimerActive = true;
-    var FeatureAPI_JS_TipsNavigation = false;
-      </script>
-    <link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=adde85c5c9f0f29daea3dd1e92f490d00d055c43">
-  <link rel="shortcut icon" href="http://stmedia.startribune.com/designimages/favicon.ico" type="image/x-icon" />
-
-    <script type="text/javascript" src="http://assets.startribune.com/static/min/header.min.js?d=1464807624"></script>
-  <script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/AppMeasurement.js?d=1464807266"></script>
   
-  
-  <script type="text/javascript">
-      //
-      // If user is already logged in to member center but not here, get their info from SAML
-      //
-      if( jQuery.cookie( 'st_usr_plat' ) && !jQuery.cookie( 'st_usr_name' ) && !jQuery.cookie( 'login_attempt_strib' ) ) {
-          jQuery.cookie( 'login_attempt_strib', true );
-          window.location.href = '/login?path=' + encodeURIComponent( document.location );
-      }
-  </script>
+<link rel="stylesheet" href="http://assets.startribune.com/static/vendor/swiper/dist/idangerous.swiper.css?d=95bf8dfea48f53373131996be7821f295b42de30">
+<link rel="stylesheet" href="http://assets.startribune.com/static/vendor/magnific-popup/dist/magnific-popup.css?d=f387dcc908778095b11b10bfc01dff47ae1e8f67">
 
-      <!--start embed -->
-<script src="https://users.startribune.com/place/1/3/config/8e2ebcdf5774bfadf1f67494b69667d90c03a417" type="text/javascript"></script>
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/article-project-nav.css?d=77ded1ee5f1db42a479e3e632ba9fa152240e9ae">
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/project-globals.css?d=20c4d031baaae680381dd39f14070638223be8b1">
+<link rel="stylesheet" href="http://static.startribune.com/css/news/mentalWorkflow/style.css?d=2016060209">
 
-
-<script>
-  var rskunkRequireConfig = {
-        paths: {
-            "mainapp": "https://users.startribune.com/embed/mainapp.build.js?c=1460040713"
-        },
-    baseUrl: 'https://users.startribune.com/embed'
-  };
+<script type="text/javascript">
+var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","primary_section_path":"\/protected"};
 </script>
-<script src="https://users.startribune.com/embed/third-party/rskunkRequire.js"></script>
-<script>
-  (function(require){
-    require(["mainapp"]);
-  })(rskunkRequire.require);
-</script>
-<link rel="stylesheet" href="https://users.startribune.com/embed/third-party/growl.css">
-<link rel="stylesheet" href="https://users.startribune.com/embed/third-party/colorbox.css">
-        <script type="text/javascript">
-        var meteredElement = {
-            "contentID": "380298861",
-            "meteredContent": true,
-            "sectionPath": "/protected",
-            "user_state": "guest",
-            "products": null
-        };
-        function rskunkCookieMonster(k) {
-            return(r=RegExp('(^|; )'+encodeURIComponent(k)+'=([^;]*)').exec(document.cookie))?r[2]:null;
-        }
-        if(null !== rskunkCookieMonster('st_usr_name')) meteredElement.user_state = "logged_in";
-        if(null !== rskunkCookieMonster('st_usr_products')) meteredElement.products = JSON.parse(unescape(rskunkCookieMonster('st_usr_products')));
-
-        if( typeof optimizelyMeterOverrides == 'object' ) {
-            jQuery.extend( true, rSkunkConfig, optimizelyMeterOverrides );
-        }
-
-        rsInit = function( rs ) {
-            var exemptReferrers = (typeof window.opt_meter_exempt_referrers != 'undefined') ? window.opt_meter_exempt_referrers : [];
-            rs.calculate( rSkunkConfig, meteredElement, function() {
-                $(document).ready(function() {
-                    if ( $.inArray('newsletters', exemptReferrers) !== -1 && window.location.search.match('ref=nl') !== null) {
-                        return;
-                    }
-
-                    for (ref in exemptReferrers) {
-                        if (document.referrer.match(ref) !== null) {
-                            return;
-                        }
-                    }
-
-                    rs.enforce(function(count) {
-
-                    });
-                });
-            });
-        }
-  </script>
-
-            
-          <script type="text/javascript" src="http://assets.startribune.com/static/js/st.welcome.js?d=1464807570"></script>
-    
-                            <script type="text/javascript" src="//nexus.ensighten.com/startribune/Bootstrap.js"></script>
-            
-  
-  <script src="http://assets.startribune.com/static/js/ads/article.js?d=1464807570"></script>
-              
-  
-      <script type="text/javascript">
-      window._taboola = window._taboola || [];
-      _taboola.push({
-                  article:'auto'
-              });
-      !function (e, f, u) {
-        e.async = 1;
-        e.src = u;
-        f.parentNode.insertBefore(e, f);
-      }(document.createElement('script'),
-        document.getElementsByTagName('script')[0],
-        'http://cdn.taboola.com/libtrc/startribune/loader.js');
-    </script>
-    <script>
-      window._newsroom = window._newsroom || [];
-      !function (e, f, u) {
-        e.async = 1;
-        e.src = u;
-        f.parentNode.insertBefore(e, f);
-      }(document.createElement('script'),
-      document.getElementsByTagName('script')[0], '//c2.taboola.com/nr/startribune/newsroom.js');
-   </script>
-   <script src="http://assets.startribune.com/static/vendor/pym.js/dist/pym.min.js?d=1463599104"></script>
-  
-        <link rel="stylesheet" href="http://assets.startribune.com/static/vendor/swiper/dist/idangerous.swiper.css?d=95bf8dfea48f53373131996be7821f295b42de30">
-    <link rel="stylesheet" href="http://assets.startribune.com/static/vendor/magnific-popup/dist/magnific-popup.css?d=f387dcc908778095b11b10bfc01dff47ae1e8f67">
-
-  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/article-project-nav.css?d=77ded1ee5f1db42a479e3e632ba9fa152240e9ae">
-  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/project-globals.css?d=20c4d031baaae680381dd39f14070638223be8b1">
-  <link rel="stylesheet" href="http://static.startribune.com/css/news/mentalWorkflow/style.css?d=2016060209">
-
-      <script type="text/javascript">
-        var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","primary_section_path":"\/protected"};
-    </script>
 
 
-    <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-  <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
-  <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
+<link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+<link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
+<link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
     <style>
       
@@ -821,7 +601,7 @@
     </li>
           <li>
       <span class="project-link day-2">
-        <a href="http://www.startribune.com/x/374523171?preview=1" >          <span class="part-num">
+        <a href="" >          <span class="part-num">
                           Part 2
                         :&nbsp;</span>the mother
         </a>                   <span class="coming-soon">
@@ -833,7 +613,7 @@
     </li>
           <li>
       <span class="project-link day-3">
-        <a href="http://www.startribune.com/x/374523401?preview=1" >          <span class="part-num">
+        <a href="" >          <span class="part-num">
                           Part 3
                         :&nbsp;</span>the survivor
         </a>                   <span class="coming-soon">
@@ -845,7 +625,7 @@
     </li>
           <li>
       <span class="project-link day-4">
-        <a href="http://www.startribune.com/x/380298861?preview=1" >          <span class="part-num">
+        <a href="" >          <span class="part-num">
                           Part 4
                         :&nbsp;</span>fatal encounters
         </a>                   <span class="coming-soon">
