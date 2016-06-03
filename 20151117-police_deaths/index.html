@@ -452,22 +452,7 @@
     #method { text-align:center; }
    }
    @media (max-width:605px) {
-      h1.mobile-hedline {
-      display:block;
-      position:relative;
-      font-family: "Whitman Display",serif;
-      font-weight: 400;
-      color: #333;
-      margin: 80px auto 0px auto;
-      font-size: 3.2em;
-      width: 100%;
-      height: auto;
-      text-align: center;
-      line-height: 90%;
-      padding: 0 10px;
-      z-index: 2;
-      text-shadow: none;
-  } 
+    h1.mobile-hedline { display:block; position:relative; font-family: "Whitman Display",serif; font-weight: 400; color: #333; margin: 80px auto 0px auto; font-size: 3.2em; width: 100%; height: auto;text-align: center; line-height: 90%; padding: 0 10px; z-index: 2; text-shadow: none; } 
     .article-headline { display:none !important; } 
     #wrapper { width:434px; }
     .nav-logo { width: 100%; text-align:center; }
@@ -1392,7 +1377,7 @@ $(".featherlight-content .card").attr("data-featherlight","");
 function spitDots(year){
 d3.select("#y" + year).selectAll(".dot")
 .data(dataShootings.filter(function(d){ return d.year == year; }).sort(function(a, b) { return d3.ascending(a.Mental, b.Mental); })).enter().append("div")
-.attr("class", function (d){ if (d.Mental == "Yes") { return "circle dot"; } else { return "dot"; } })
+.attr("class", "dot")
 .attr("first", function (d){ return d.FirstName;})
 .attr("last", function (d){ return d.LastName;})
 .attr("gender", function (d){ return " " + d.Gender;})
@@ -1426,7 +1411,7 @@ d3.select("#y" + year).selectAll(".dot")
 .html(function (d){ return "";})
 .call(d3.helper.tooltip(function(d, i){
   var mentalStatus = "";
-  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health issues</div>"; }
+  if (d.Mental == "Yes") { mentalStatus = "<div class='mentallabel' style='color:#999;font-weight:900;font-size:.8em;'>MENTAL HEALTH ISSUES</div>"; }
     return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div>" + mentalStatus;
 }));
 
