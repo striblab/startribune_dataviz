@@ -440,7 +440,7 @@
       
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
 
-  #wrapper { width:90%; }
+  #wrapper { width:90%; margin-top: 0px;}
   .card { 
     padding:10px; 
     height:auto !important; 
@@ -471,8 +471,6 @@
   .breaker {padding: 0 0 5px 0;margin:0px}
   #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
 
-
-   
   #method { width:100%; float:none; text-align:center; padding:10px; }
   .year { width:5%; }
   #mobileZoom { display:block; }
@@ -510,9 +508,11 @@ h1.mobile-hedline {
 } 
 .article-byline {width:100%;margin:0;}
   
-.project-nav {font-family: "Benton Sans",Helvetica,Arial,sans-serif; !important;} 
+.nav-title.project-title {font-family: "Benton Sans",Helvetica,Arial,sans-serif; !important;} 
   
+.article-share { margin: 0 0 0 20px !important; width: 90%; max-width: 640px; height: 35px; clear: both;}
   
+ 
 /*OVERLAY  */
 
     .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
@@ -988,6 +988,7 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
                                                 <div class="l-article-body wide">
                                                                                            
                                                                                                     <aside class="article-share" style="color:#999 !important;">
+<!--
                 <div class="share__textsize">
       <a id="js-textsize-btn" data-linkname="Text size" data-linktype="text-resize" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
         <div class="share-icon"></div>
@@ -996,7 +997,9 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
         </div>
       </a>
           </div>
+-->
       
+<!--
           <div class="share__comments clickQS">
       <a href="#comments" data-linkname="Comment on this story" data-linktype="share-comment" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
         <div class="share-icon"></div>
@@ -1005,6 +1008,7 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
         </div>
       </a>
             </div>
+-->
       
   <div class="share__facebook clickQS">
       <a class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
