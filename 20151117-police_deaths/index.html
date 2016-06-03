@@ -436,114 +436,154 @@
     .mobileNumbers {display:none;}  
       
     .article-share a {color:#999 !important;}  
-      
-      
-@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
 
-  #wrapper { width:90%; margin-top: 0px;}
-  .card { 
-    padding:10px; 
-    height:auto !important; 
-    width:100%; 
-    display:block; 
-  }
-  .card .mentalSwatch { 
-    display:block;
-    background-color:#fff !important; 
-    color:#999 !important; 
-    font-size:.8em; 
-    padding:2px 6px 2px 6px; 
-    font-weight:900; text-transform: uppercase;
-    text-align:center;
-    border-radius:5px;
-    width:150px;
-    margin-bottom:20px
-  }
-  .leftSide { width:100% !important; }
-  .rightSide { display:none; width:0%;}
-  .chatterThing { text-align:left !important; height:auto; }
-  .chatterThing img { margin-left:auto; margin-right:auto; }
-  .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0 !important;}
-  #topClickies {height: 60px;}
-  #clickyStuff { visibility:hidden; }
-  #deathsTable {width:100%}
 
-  .breaker {padding: 0 0 5px 0;margin:0px}
-  #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
+   @media (max-width:920px) {
+    .l-article-body.wide { width:100% !important; } 
+    .l-container { margin-top:150px; }
+    .article-byline { border-right: none; margin-top: 8px; line-height: 140%; }
+    aside.article-share { position:static !important; width:90% !important; text-align: center; margin:0 !important; margin-left: auto; margin-right: auto; display:none; }
+    #wrapper { width:600px; }
+    .chatterThing { text-align:left !important; height:180px; }
+    .chatterThing img { margin-left:auto; margin-right:auto; }
+    .switch, .bigswitch { border-radius:0 !important; width:49.% !important; }
+    #sidebar { width:100%; height:160px; text-align:center; margin-top:9px; }
+    .card { padding:20px; height:auto !important; width:62%; display:block; }
+    #method { text-align:center; }
+   }
+   @media (max-width:605px) {
+    #wrapper { width:434px; }
+    .nav-logo { width: 100%; text-align:center; }
+    .nav ul>li { width: 100%; }
+    .nav a.project-title {  width: 100%; }
+    .leftSide { width:100%; }
+    .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
+    .rightSide { display:none; }
+    .count { font-size:1.4em; }
+    #chartAll { width:100%; }
+    .card { padding:20px; height:auto !important; width:44%; display:block; }
+    .featherlight-content { width:98%; height:auto; }
+    #wrapper { text-align:left !important; }
+    #clickyStuff { visibility:hidden; }
+    #filter { width:100% !important; float:none; }
+    #method { width:100%; float:none; text-align:center; padding:10px; }
+    .year { width:5%; }
+    .yearLabel { width:4.75%; }
+    #mobileZoom { display:block; }
+    .dot { width:15px !important; height:15px !important; }
+    #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
+    #chartLabels { margin-left:-15px; }
+   }
 
-  #method { width:100%; float:none; text-align:center; padding:10px; }
-  .year { width:5%; }
-  #mobileZoom { display:block; }
-  .dot { width:14px !important; height:14px !important; }
-  #chart {margin:10px 0 0 0;}
-  #chartLabels { display:none; margin-left:-12px;width:100%}
-  #chartLabels .yearLabel { 
-  font-size:10px; 
-  width:4.6%;
-  transform: rotate(-90deg); 
-  transform-origin: right top 0; 
-  vertical-align: top; }
-  #filter { width:100% !important; float:none; margin-bottom:0px;}
-  #chartAll { width:100%; }
-  .readmore {position:relative;display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
+   @media (max-width:400px) {
+    #wrapper { width:90%; }
+    #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
+    #filter input { font-size:0.6em; }
+    .card { padding:20px; height:auto !important; width:32%; display:block; }
+    #sidebar { text-align:center !important; height:200px; }
+   }
 
-/*HEADER  */
-  
-.article-headline {display:none;} 
-h1.mobile-hedline {
-    display:block;
-    position:relative;
-    font-family: "Whitman Display",serif;
-    font-weight: 400;
-    color: #333;
-    margin: 80px auto 0px auto;
-    font-size: 3.2em;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    line-height: 90%;
-    padding: 0 10px;
-    z-index: 2;
-    text-shadow: none;
-} 
-  
-.article-subhead {font-size:15px; !important;line-height: 18px !importants;}  
-  
-.article-byline {width:100%;margin:0;}
-  
-.project-title {font-family: "Benton Sans",Helvetica,Arial,sans-serif; !important;} 
-  
-.article-share { margin: 0 0 0 20px !important; width: 90%; max-width: 640px; height: 35px; clear: both;}
-  
- 
-/*OVERLAY  */
+   @media (max-width:320px) {
+    #wrapper { width:100%; }
+   }
 
-    .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
-    .featherlight-content { width:90%; height:auto; margin:0 auto;}
+  @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+
+    #wrapper { width:90%; }
+    .card { 
+      padding:10px; 
+      height:auto !important; 
+      width:100%; 
+      display:block; 
+    }
+    .card .mentalSwatch { 
+      display:block;
+      background-color:#fff !important; 
+      color:#999 !important; 
+      font-size:.8em; 
+      padding:2px 6px 2px 6px; 
+      font-weight:900; text-transform: uppercase;
+      text-align:center;
+      border-radius:5px;
+      width:150px;
+      margin-bottom:20px
+    }
+    .leftSide { width:100% !important; }
+    .rightSide { display:none; width:0%;}
+    .chatterThing { text-align:left !important; height:auto; }
+    .chatterThing img { margin-left:auto; margin-right:auto; }
+    .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0 !important;}
+    #topClickies {height: 60px;}
+    #clickyStuff { visibility:hidden; }
+    #deathsTable {width:100%}
+
+    .breaker {padding: 0 0 5px 0;margin:0px}
+    #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
+
+
+     
+    #method { width:100%; float:none; text-align:center; padding:10px; }
+    .year { width:5%; }
+    #mobileZoom { display:block; }
+    .dot { width:14px !important; height:14px !important; }
+    #chart {margin:10px 0 0 0;}
+    #chartLabels { display:none; margin-left:-12px;width:100%}
+    #chartLabels .yearLabel { 
+    font-size:10px; 
+    width:4.6%;
+    transform: rotate(-90deg); 
+    transform-origin: right top 0; 
+    vertical-align: top; }
+    #filter { width:100% !important; float:none; margin-bottom:0px;}
+    #chartAll { width:100%; }
+    .readmore {position:relative;display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
+
+  /*HEADER  */
     
-   .description_chatter, .url { display:none; }
-   .featherlight-content .description_chatter { display:block !important;}
-   .featherlight-content .readmore { display:none; }
-   .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
-   .featherlight-content .url { display:block !important; }
-   .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
-   .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
-  .card.featherlight-inner {margin:0 !important;}
-
-  
-.mobileNumbers {
-    display:block;
-    width:100%;
-    height:auto;
-    margin: 0 auto 12px auto;
+  .article-headline {display:none;} 
+  h1.mobile-hedline {
+      display:block;
+      position:relative;
+      font-family: "Whitman Display",serif;
+      font-weight: 400;
+      color: #333;
+      margin: 80px auto 0px auto;
+      font-size: 3.2em;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      line-height: 90%;
+      padding: 0 10px;
+      z-index: 2;
+      text-shadow: none;
   } 
+  .article-byline {width:100%;margin:0;}
+    
+  .project-nav {font-family: "Benton Sans",Helvetica,Arial,sans-serif; !important;} 
+    
+    
+  /*OVERLAY  */
 
-
-  
-      }      
+      .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
+      .featherlight-content { width:90%; height:auto; margin:0 auto;}
       
+     .description_chatter, .url { display:none; }
+     .featherlight-content .description_chatter { display:block !important;}
+     .featherlight-content .readmore { display:none; }
+     .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
+     .featherlight-content .url { display:block !important; }
+     .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
+     .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
+    .card.featherlight-inner {margin:0 !important;}
 
-      
+    
+  .mobileNumbers {
+      display:block;
+      width:100%;
+      height:auto;
+      margin: 0 auto 12px auto;
+    } 
+  }    
   </style>
 </head>
 <body class=" storyid380298861 page-article">
@@ -757,21 +797,12 @@ h1.mobile-hedline {
       <a href="http://www.startribune.com">&nbsp;</a>
     </li>
     <li class="nav-block">
- 
+
 <style>
-@font-face {
-  font-family: "Popular Medium";
-  src: url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot");
-  src: url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot?") format("embedded-opentype"), url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-3.woff") format("woff"), url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-1.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }      
-</style>      
-      
-      
-      
-      
-<a href="#/" class="nav-title project-title"  style="font-family: Popular Medium !important;font-weight: normal !important;text-transform: uppercase;">
-  A CRY FOR HELP
+@font-face { font-family: "Popular Medium"; src: url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot"); src: url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot?") format("embedded-opentype"), url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-3.woff") format("woff"), url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-1.ttf") format("truetype"); font-style: normal; font-weight: normal; }      
+</style> 
+
+<a href="#/" class="nav-title project-title" style="font-family: Popular Medium !important;font-weight: normal !important;text-transform: uppercase;">A CRY FOR HELP
   <div class="nav-indicator">
                                                                                       <div class="day arrow-down"></div>
   </div>
@@ -939,7 +970,7 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
 
 <strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/" title="Jennifer Bjorhus" data-linkname="Jennifer Bjorhus" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author">Jennifer Bjorhus,</a></strong>
 
-<strong><a href="http://www.startribune.com/maryjo-webster/303594441/" title="MaryJo Webster" data-linkname="MaryJo Webster" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-2-author" rel="author"> MaryJo Webster,</a></strong>
+<strong><a href="http://www.startribune.com/maryjo-webster/303594441/" title="MaryJo Webster" data-linkname="MaryJo Webster" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-2-author" rel="author"> MaryJo Webster </a></strong>
 
 <strong>and <a href="http://www.startribune.com/kelly-smith/101372379/" title="Kelly Smith" data-linkname="Kelly Smith" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author"> Kelly Smith</a></strong>
 
@@ -955,7 +986,6 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
                                                 <div class="l-article-body wide">
                                                                                            
                                                                                                     <aside class="article-share" style="color:#999 !important;">
-<!--
                 <div class="share__textsize">
       <a id="js-textsize-btn" data-linkname="Text size" data-linktype="text-resize" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
         <div class="share-icon"></div>
@@ -964,9 +994,7 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
         </div>
       </a>
           </div>
--->
       
-<!--
           <div class="share__comments clickQS">
       <a href="#comments" data-linkname="Comment on this story" data-linktype="share-comment" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
         <div class="share-icon"></div>
@@ -975,7 +1003,6 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
         </div>
       </a>
             </div>
--->
       
   <div class="share__facebook clickQS">
       <a class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-share">
@@ -1071,8 +1098,8 @@ text-transform: uppercase;
                                                                                                                                                       
                                             
                                                                                                                                     
-                        
-                                                                                       
+                      
+
   <div id="wrapper">
 
           <div id="filterBox">
@@ -1206,7 +1233,7 @@ text-transform: uppercase;
 
 <div id="sidebar">
 <!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
-<div id="resultBar"><span class="results"></span> <span>deaths</span></div>
+<div id="resultBar"><span>Deaths: </span> <span class="results"></span></div>
     <div class="chatterThing"><p class="load"><img src="img/loading.gif" class="load" /><p></div>
 </div>
 
@@ -1326,7 +1353,7 @@ d3.select("#deathsTable").selectAll(".card")
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health issues</div>"; }
   if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
 
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Read more</div>";});
 
 addBoxes();
 
