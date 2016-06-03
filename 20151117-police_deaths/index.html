@@ -435,26 +435,38 @@
       
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
 
-  #wrapper { width:90%; }  
+  #wrapper { width:90%; }
+  .card { 
+    padding:10px; 
+    height:auto !important; 
+    width:100%; 
+    display:block; 
+  }
+  .card .mentalSwatch { 
+    display:block;
+    background-color:#fff !important; 
+    color:#999 !important; 
+    font-size:.8em; 
+    padding:2px 6px 2px 6px; 
+    font-weight:900; text-transform: uppercase;
+    text-align:center;
+    border-radius:5px;
+    width:150px;
+    margin-bottom:20px
+  }
   .leftSide { width:100% !important; }
   .rightSide { display:none; width:0%;}
   .chatterThing { text-align:left !important; height:auto; }
   .chatterThing img { margin-left:auto; margin-right:auto; }
-  .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0;}
+  .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0 !important;}
   #topClickies {height: 60px;}
   #clickyStuff { visibility:hidden; }
   #deathsTable {width:100%}
 
   .breaker {padding: 0 0 5px 0;margin:0px}
   #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
-  .card { 
-    padding:10px; 
-    height:auto !important; 
-    width:100%; 
-    display:block; 
-  margin: 0 auto 20px auto;
-  }
-  .card .mentalSwatch { display:block;background-color:#fff !important; color:#999 !important; font-size:.8em; padding:2px 6px 2px 6px; font-weight:900; text-transform: uppercase;text-align:center;border-radius:5px;width:150px;margin-bottom:20px}
+
+
    
   #method { width:100%; float:none; text-align:center; padding:10px; }
   .year { width:5%; }
@@ -471,9 +483,10 @@
   #chartAll { width:100%; }
   .readmore {position:relative;display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
 
-.article-headline {display:none;} 
+/*HEADER  */
   
- h1.mobile-hedline {
+.article-headline {display:none;} 
+h1.mobile-hedline {
     display:block;
     position:relative;
     font-family: "Whitman Display",serif;
@@ -489,12 +502,20 @@
     z-index: 2;
     text-shadow: none;
 } 
+.article-byline {width:100%;margin:0;}
+
+    .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
+    .featherlight-content { width:90%; height:450px; margin:0 auto;}
+    
+   .description_chatter, .url { display:none; }
+   .featherlight-content .description_chatter { display:block !important; }
+   .featherlight-content .readmore { display:none; }
+   .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
+   .featherlight-content .url { display:block !important; }
+   .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
+   .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
   
-/*
-    .article-byline {width:100%;margin:0;}
-  
-  
-*/
+
       }      
       
 
