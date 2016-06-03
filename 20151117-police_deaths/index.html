@@ -431,43 +431,52 @@
     .featherlight-content .url, .url a { pointer-events:all !important; }
     .l-article-body.wide { width:970px; } 
       
-      
+    h1.mobile-hedline {display:none;}    
       
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
-  
-    #wrapper { width:90%; }  
-    .leftSide { width:100% !important; }
-    .rightSide { display:none; width:0%;}
-    .chatterThing { text-align:left !important; height:auto; }
-    .chatterThing img { margin-left:auto; margin-right:auto; }
-    .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0;}
-  #topClickies {
-    height: 60px;
-}
+
+  #wrapper { width:90%; }  
+  .leftSide { width:100% !important; }
+  .rightSide { display:none; width:0%;}
+  .chatterThing { text-align:left !important; height:auto; }
+  .chatterThing img { margin-left:auto; margin-right:auto; }
+  .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0;}
+  #topClickies {height: 60px;}
   #clickyStuff { visibility:hidden; }
   #deathsTable {width:100%}
-  
-  .breaker {padding: 0 0 5px 0;margin:0px}
-    #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
-    .card { padding:10px; height:auto !important; width:100%; display:block; }
-    #method { width:100%; float:none; text-align:center; padding:10px; }
-    .year { width:5%; }
-    #mobileZoom { display:block; }
-    .dot { width:14px !important; height:14px !important; }
-    #chartLabels { margin-left:-12px;width:100%}
-    #chartLabels .yearLabel { 
-      font-size:10px; 
-      width:4.6%;
-      transform: rotate(-90deg); 
-      transform-origin: right top 0; 
-      vertical-align: top; }
-    #filter { width:100% !important; float:none; margin-bottom:0px;}
-    #chartAll { width:100%; }
-  .readmore {display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
 
- h1.mobille-hed {
-  position:relative;
-  font-family: "Whitman Display",serif;
+  .breaker {padding: 0 0 5px 0;margin:0px}
+  #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
+  .card { 
+    padding:10px; 
+    height:auto !important; 
+    width:100%; 
+    display:block; 
+  margin: 0 auto 20px auto;
+  }
+  .card .mentalSwatch { display:block;background-color:#fff !important; color:#999 !important; font-size:.8em; padding:2px 6px 2px 6px; font-weight:900; text-transform: uppercase;text-align:center;border-radius:5px;width:150px;margin-bottom:20px}
+   
+  #method { width:100%; float:none; text-align:center; padding:10px; }
+  .year { width:5%; }
+  #mobileZoom { display:block; }
+  .dot { width:14px !important; height:14px !important; }
+  #chartLabels { margin-left:-12px;width:100%}
+  #chartLabels .yearLabel { 
+  font-size:10px; 
+  width:4.6%;
+  transform: rotate(-90deg); 
+  transform-origin: right top 0; 
+  vertical-align: top; }
+  #filter { width:100% !important; float:none; margin-bottom:0px;}
+  #chartAll { width:100%; }
+  .readmore {position:relative;display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
+
+.article-headline {display:none;} 
+  
+ h1.mobile-hedline {
+    display:block;
+    position:relative;
+    font-family: "Whitman Display",serif;
     font-weight: 400;
     color: #333;
     margin: 80px auto 0px auto;
@@ -478,15 +487,14 @@
     line-height: 90%;
     padding: 0 10px;
     z-index: 2;
-   text-shadow: none;
-
+    text-shadow: none;
 } 
   
-  .article-byline {width:100%;margin:0;}
+/*
+    .article-byline {width:100%;margin:0;}
   
   
-  .card .mentalSwatch {display:block;}
-
+*/
       }      
       
 
@@ -907,8 +915,8 @@ $("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("s
                                                                    
                                                                    
                                                                    
+<h1 class="article-headline" itemprop="headline">Fatal police encounters</h1>                                         <h1 class="mobile-hedline">Fatal police encounters</h1>
                                                                    
-<h1 class="mobille-hed">Fatal police encounters</h1>
 <div class="article-subhead" itemprop="description"> The Star Tribune <a href="/x/380709141/?preview=1" target="_new" style="text-decoration:underline;">collected the names and stories</a> of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016. A disproportionate share — at least 45 percent — were people with a history of mental illness or who were having a mental health crisis when they died.&nbsp;</div>
                                                     
                  
