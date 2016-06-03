@@ -857,9 +857,11 @@ text-transform: uppercase;
 .l-article-topper.wide .article-section{display:block} .home-logo { margin: 9px auto; } .recirc {display:none;} .article-headline { margin-top: 0; font-size: 70px; line-height: 60px; margin-top: 30px; } .l-article-body.wide { width: 100%; overflow:hidden; } aside.article-share { position: relative; margin-left: 0px; width: 100%; max-width: 640px; height: 35px; clear: both; margin-bottom: 18px; } aside .share__textsize {visibility:hidden} .share__email {border-right:none;display:inline-block !important} aside .share__twitter .share-txt {display:inline-block !important} aside .share-more, aside .share__print, aside .share-txt, aside .share__textsize .share-label {display:none} .mobile {display:block;} .mobile p{padding:10px 10px;text-align:center;} #zone-none-block-3-leaderboard, #zone-none-block-1-leaderboard { width: 100%; overflow: hidden; } }
 </style></p>
 
-      
+                                                                                                                                                      
+                                            
+                                                                                                                                    
                         
-<!-- <p>&nbsp;</p>-->
+                                                                                        <p>&nbsp;</p>
 
                                                                                                                                                       
                                             
@@ -1277,18 +1279,26 @@ $(".filter").on('click',function(){
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
-      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      if (datapoint == "WHITE") { if ($(this).attr("race") == "HISPANIC" || $(this).attr("race") == "WHITE") { $(this).addClass("mentalSwatch");  } }
+      else if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { 
+        $(this).addClass("mentalSwatch");  
+      }
       }
     } else {
-      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      if (datapoint == "WHITE") { if ($(this).attr("race") == "HISPANIC" || $(this).attr("race") == "WHITE") { $(this).addClass("mentalSwatch");  } }
+      else if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { 
+        $(this).addClass("mentalSwatch");  
+      }
     }
   });
    $('#filter_box').val("");
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
+        var txt2 = $(this).attr("data");
+        if (txt == "WHITE") { txt2 = "HISPANIC"; }
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
+           if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 || $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1) && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
         });
@@ -1297,8 +1307,10 @@ if (mentalLoad == true){
   } else {
         $('.card').hide();
         var txt = $(this).attr("data");
+        var txt2 = $(this).attr("data");
+        if (txt == "WHITE") { txt2 = "HISPANIC"; }
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 || $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1)){
                $(this).parent().parent().show();
            }
         });
