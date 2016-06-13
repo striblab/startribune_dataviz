@@ -1,23 +1,74 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html dir="ltr" lang="en-US" class="no-js ie8 oldie"> <![endif]-->
+<!--[if IE 9]><html lang="en" class="ie ie9"><![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d=1463599109"></script>    
+<title>Fatal police encounters - StarTribune.com</title>
+<meta name="google-site-verification" content="bLXTXkzm4dJ8hcJy1LXawtxXxGP3JhInARj69uCiMiM" />
+    
+<link rel="canonical" href="http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes" />
 
-  <title>Minnesota Police Involved Deaths</title>
-  <meta name="description" content="Minnesota Police Involved Deaths">
-  <meta name="author" content="Jeff Hargarten - StarTribune">
+<meta itemprop="name" content="Fatal police encounters" /><!-- g+ -->
+<meta name="description" content="mental health, law enforcemnet, police, death" />
+<meta itemprop="description" content="mental health, law enforcemnet, police, death" /><!-- g+ -->
+<meta itemprop="image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- g+ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:site_name" content="Star Tribune" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fatal police encounters" /><!-- fb, linkedin, pinterest -->
+<meta property="og:description" content="Since 2000, about 45 percent of those killed in MN police encounters had mental illnesses or had mental health crises when they died." /><!-- fb, linkedin, pinterest -->
+<meta property="og:url" content="http://www.startribune.com/fatal-police-encounters/380298861/" />
+<meta property="og:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:url" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:width" content="1200" /><!-- fb, linkedin, pinterest -->
+<meta property="og:image:height" content="630" /><!-- fb, linkedin, pinterest -->
 
-  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-  <link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
-  <link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
+<meta name="twitter:site" content="@StarTribune" />
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:title" content="Fatal police encounters" /><!-- twitter -->
+<meta name="twitter:description" content="Since 2000, about 45 percent of those killed in MN police encounters had mental illnesses or had mental health crises when they died." /><!-- twitter -->
+<meta name="twitter:url" content="http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes" /><!-- twitter -->
+<meta name="twitter:image" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
+<meta name="twitter:image:src" content="http://stmedia.stimg.co/Screen+Shot+2016-06-01+at+7.28.45+AM.png?h=560&amp;w=750&amp;fit=crop&amp;bg=999&amp;crop=faces"><!-- twitter -->
+
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css?d=adde85c5c9f0f29daea3dd1e92f490d00d055c43">
+<link rel="shortcut icon" href="http://stmedia.startribune.com/designimages/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="http://assets.startribune.com/static/min/header.min.js?d=1464807624"></script>
+<script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/AppMeasurement.js?d=1464807266"></script>
+
+  
+<link rel="stylesheet" href="http://assets.startribune.com/static/vendor/swiper/dist/idangerous.swiper.css?d=95bf8dfea48f53373131996be7821f295b42de30">
+<link rel="stylesheet" href="http://assets.startribune.com/static/vendor/magnific-popup/dist/magnific-popup.css?d=f387dcc908778095b11b10bfc01dff47ae1e8f67">
+
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/article-project-nav.css?d=77ded1ee5f1db42a479e3e632ba9fa152240e9ae">
+<link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/news/project-globals.css?d=20c4d031baaae680381dd39f14070638223be8b1">
+<link rel="stylesheet" href="http://static.startribune.com/css/news/mentalWorkflow/style.css?d=2016060209">
+
+<script type="text/javascript">
+var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","primary_section_path":"\/protected"};
+</script>
+
+
+<link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+<link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
+<link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
 
     <style>
+      
+    .article-body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; } 
+    .arrow-down {background-color:transparent !important;}  
+    .arrow-down.selected {background-color:transparent !important;}  
+    .icn-share{width:100% !important;}  
+    a.icn-share, a:hover.icn-share{background-position:8px 12px;}  
+      
+      
   body { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; overflow-x:hidden !important; }
-   #wrapper { width:920px; margin-left:auto; margin-right:auto; }
+   #wrapper { width:920px; margin-left:auto; margin-right:auto; margin-top:30px;}
    #resultBar_m, #resultBar { font-size:1.5em; color:#000; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; margin-bottom:7px; }
    #bottomText { text-align:center; font-weight:normal; }
    #filter { text-align:center; }
@@ -32,28 +83,25 @@
    a { text-decoration:none; color:#b75b60; }
    a:hover { color:#333 !important; }
    .name { text-transform: capitalize !important; font-weight:900; font-size:1.25em; }
-
-   .card { position:relative;padding:10px; height:230px; width:450px; font-size:.7em; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
+   .card { position:relative;padding:10px; height:235px; width:450px; font-size:.85em; line-height:140%; display:inline-block; vertical-align:top; background-color: #eee; margin-bottom:20px; margin-left: 20px;}
    .card div { padding:3px; }
    .card:hover { opacity:.5; cursor:pointer; }
-   .card .mentalSwatch { background-color:#fff !important; color:#b75b60 !important; padding:5px 8px 5px 8px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
+   .card .mentalSwatch { background-color:#fff !important; color:#999 !important; font-size:.8em; padding:2px 6px 2px 6px; font-weight:900; text-transform: uppercase;border-radius:5px;display:table;}
    
-    .featherlight .featherlight-content {background-color: #eee; overflow-y:scroll;overflow-x:hidden;}
-    .featherlight-content { width:750px; height:420px; }
+    .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
+    .featherlight-content { width:750px; height:450px; }
     
    .description_chatter, .url { display:none; }
    .featherlight-content .description_chatter { display:block !important; }
    .featherlight-content .readmore { display:none; }
    .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
    .featherlight-content .url { display:block !important; }
-   .featherlight-content .card { width:100% !important; background-color: #eee; !important; border:0 !important;}
+   .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
    .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
-
-    .tooltip .name { font-size:1em; color:#333; margin-bottom:4px; width:150px; }
-    .tooltip .mentalSwatch { font-size:.9em;color:#999 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
+    .tooltip .name { font-size:1.1em; color:#333; margin-bottom:4px; width:150px; }
+    .tooltip .mentalSwatch { font-size:1em;color:#999 !important; background-color:#fff !important;font-weight:900; text-transform: uppercase;padding:0;border-radius:none;}
     
    .url { font-weight:900; padding-left:6px !important;}
-
    .leftSide { float:left; width:63%; }
    .rightSide { float:right; width:15%; border:0 solid #eee; width:150px !important; height:155px; overflow:hidden; background-size: cover;}
    .photo, .photo img { max-width:100%; max-height:100%; vertical-align: middle;}
@@ -66,12 +114,10 @@
      /*max-height:420px; min-height:420px;*/ /*overflow-y:hidden !important; overflow-x:hidden !important; */ }
    .navButton { width:100%; background-color:#ddd; padding:15px; border:none; font-size:1.4em; font-weight:900;  }
    .navButton:hover { color:#fff; background-color:#333; cursor:pointer;  }
-
    .switch { padding:10px; display:inline-block; text-align:center; width:122px; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999; margin-top:0 !important; }
    .bigswitch { padding:10px; display:inline-block; text-align:center; background-color:#fff; font-weight:bold; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #999;  margin-top:4px; width:150px; }
    .switch:hover, .bigswitch:hover, .selected { background-color:#b75b60 !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
    #filterButtons { text-align:left; }
-
    .filterBreak { clear:both; }
    #filter { width:80%  !important; float:left; margin-bottom: 20px;}
    #method { width:15%; float:right; font-size:12px; margin-top:8px; text-align:right;}
@@ -85,66 +131,49 @@
    #mainFilters .filter, #mainFilters .filter2, #mainFilters .filter3 { float:none; white-space:nowrap; display:inline-block; }
    #mainFilters .count { float:none; width:5%; margin-right:8%; font-size:2em; display:block; color:#b75b60; }
    #topClickies { height:32px; }
-
    .hideThis { visibility:hidden; }
-
    .count { display:none !important; }
-
    .weaponType, .region { display:none; }
-
    #all, #all_m, #raceB { border-top-left-radius:.8em; border-bottom-left-radius:.8em; }
    #mentalB, #mentalB_m, #weaponB { border-top-right-radius:.8em; border-bottom-right-radius:.8em; }
    #mentalB, #mentalB_m { margin-left:-1px;margin-right:7px; } 
    #raceB, #genderB, #mannerB, #placeB, #weaponB { margin-left:-1px; }
     
-
    .bigDot { border-radius:50%; width:20px; float:left; height:20px; text-align:center; background-color:#fff; display:inline-block; vertical-align:bottom; margin:6px; border:2px solid #ddd}
     
    .bigDot:hover {background-color:#ddd;}
     
   
    .dot { border-radius:50%; width:20px; height:20px; text-align:center; background-color:#ddd; display:inline-block; vertical-align:bottom; margin-bottom:3px; }
-   .dot:hover, .mentalSwatch { background-color:#333 !important; cursor:pointer; }
-   .mentalSwatch { background-color:#b75b60 !important; color:#fff !important; padding:5px; font-weight:900; text-transform: uppercase;}
+   .dot:hover, .mentalSwatch:hover { background-color:#333 !important; cursor:pointer; pointer-events:all !important; }
+   .mentalSwatch { background-color:#b75b60 !important; color:#fff !important; padding:5px; font-weight:900; text-transform: uppercase; }
     
     
 /*   .circle { border:3px solid #333; }*/
    .faded { opacity:.4 !important; }
    .active { opacity:1 !important; background-color:#333 !important; width:20px;height:20px;}
-
    .chatter { height:70px; }
-
    #sidebar { width:260px; height:290px; float:left;}
    #selector { display:none; text-align:center; }
    #selector .bigswitch { width:49%;}
-
    .filterSection { display:none; }
     
    #chart { margin:10px 0 10px 0; vertical-align:bottom;  }
    #chartAll { width:610px; float:right;}
    #chartLabels { margin:10px 0 10px 0; }
    .year { width:5%; height:270px; display:table-cell; vertical-align:bottom; text-align:center; }
-   .yearLabel { width:5.27%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
+   .yearLabel { width:5.37%; display:inline-block; text-align:center; font-size:.9em; font-weight:600; }
    .bigcount { font-size:1.5em;  color:#b75b60; }
-
-
    .smallerBreak { height:10px; }
-
    .scrollToTop { color:#b75b60 !important; text-align:center; padding:15px; }
    .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-
    .zoom { float:none !important; text-align:left !important; }
    #mobileZoom { display:none; text-align:center !important; width:100%; }
-
    #map { width:100%; height:200px; margin-top:8px; }
-
    li:hover { background-color:#ddd !important; cursor:pointer; }
-
    .chartTitle, .chatter, .navButton { display:none; }
-
    .load { text-align:center; margin-left:auto; margin-right:auto; }
    .load img { width:100px; }
-
     .wrapper-demo { width:100%; }
     .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -152,22 +181,73 @@
     .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
     .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
     header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
-
     #mainFilters .count { display:none !important; }
-
     /*#method { visibility:hidden !important; }*/
-
+    .featherlight-content { pointer-events:none !important; }
+    .featherlight-content .url, .url a { pointer-events:all !important; }
+    .l-article-body.wide { width:970px; } 
+      
+    h1.mobile-hedline {display:none;}   
+      
+    .mobileNumbers {display:none;}  
+      
+    .article-share a {color:#999 !important;}  
    @media (max-width:920px) {
-    #wrapper { width:600px; }
+       .article-headline {display:none;} 
+  h1.mobile-hedline {
+      display:block;
+      position:relative;
+      font-family: "Whitman Display",serif;
+      font-weight: 400;
+      color: #333;
+      margin: 10px auto 20px auto;
+      font-size: 3.2em;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      line-height: 90%;
+      padding: 0 10px;
+      z-index: 2;
+      text-shadow: none;
+  } 
+     
+    .l-article-body.wide { width:100% !important; } 
+    .l-container { margin-top:10px; }
+    .article-byline { border-right: none; margin-top: 8px; line-height: 140%; }
+    aside.article-share { position:static !important; width:90% !important; text-align: center; margin:0 !important; margin-left: auto; margin-right: auto; display:none; }
+    #wrapper { width:600px; margin-top:0px;}
     .chatterThing { text-align:left !important; height:180px; }
     .chatterThing img { margin-left:auto; margin-right:auto; }
-    .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
+    .switch, .bigswitch { border-radius:0 !important; width:49.% !important; }
     #sidebar { width:100%; height:160px; text-align:center; margin-top:9px; }
     .card { padding:20px; height:auto !important; width:62%; display:block; }
     #method { text-align:center; }
    }
    @media (max-width:605px) {
-    #wrapper { width:434px; }
+       .article-headline {display:none;} 
+  h1.mobile-hedline {
+      display:block;
+      position:relative;
+      font-family: "Whitman Display",serif;
+      font-weight: 400;
+      color: #333;
+      margin: 80px auto 0px auto;
+      font-size: 3.2em;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      line-height: 90%;
+      padding: 0 10px;
+      z-index: 2;
+      text-shadow: none;
+  } 
+    .featherlight .featherlight-content, .featherlight-content .card {background-color: #eee; overflow-y:auto !important; overflow-x:hidden; }
+    h1.mobile-hedline { display:block; position:relative; font-family: "Whitman Display",serif; font-weight: 400; color: #333; margin: 80px auto 0px auto; font-size: 3.2em; width: 100%; height: auto;text-align: center; line-height: 90%; padding: 0 10px; z-index: 2; text-shadow: none; } 
+    .article-headline { display:none !important; } 
+    #wrapper { width:434px; margin-top:0px;}
+    .nav-logo { width: 100%; text-align:center; }
+    .nav ul>li { width: 100%; }
+    .nav a.project-title {  width: 100%; }
     .leftSide { width:100%; }
     .switch, .bigswitch { border-radius:0 !important; width:48% !important; }
     .rightSide { display:none; }
@@ -186,22 +266,529 @@
     #chartLabels .yearLabel { transform: rotate(-90deg); transform-origin: right top 0; vertical-align: middle; }
     #chartLabels { margin-left:-15px; }
    }
-
    @media (max-width:400px) {
-    #wrapper { width:90%; }
+    #wrapper { width:90%; margin-top:0px;}
     #chartLabels .yearLabel { font-size:0.5em; width:4.6%; }
     #filter input { font-size:0.6em; }
-    .card { padding:20px; height:auto !important; width:32%; display:block !important; }
+    .card { padding:20px; height:auto !important; width:32%; display:block; }
     #sidebar { text-align:center !important; height:200px; }
    }
-
    @media (max-width:320px) {
-    #wrapper { width:100%; }
+    #wrapper { width:100%; margin-top:0px;}
    }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+    #wrapper { width:90%; margin-top:0px;}
+    .card { 
+      padding:10px; 
+      height:auto !important; 
+      width:100%; 
+      display:block; 
+    }
+    .card .mentalSwatch { 
+      display:block;
+      background-color:#fff !important; 
+      color:#999 !important; 
+      font-size:.8em; 
+      padding:2px 6px 2px 6px; 
+      font-weight:900; text-transform: uppercase;
+      text-align:center;
+      border-radius:5px;
+      width:150px;
+      margin-bottom:20px
+    }
+    .leftSide { width:100% !important; }
+    .rightSide { display:none; width:0%;}
+    .chatterThing { text-align:left !important; height:auto; }
+    .chatterThing img { margin-left:auto; margin-right:auto; }
+    .switch, .bigswitch { border-radius:0 !important; width:48% !important; margin:0 2px 2px 0 !important;}
+    #topClickies {height: 60px;}
+    #clickyStuff { visibility:hidden; }
+    #deathsTable {width:100%}
+    .breaker {padding: 0 0 5px 0;margin:0px}
+    #sidebar { width:100%; height:auto; text-align:center; margin-top:9px; }
+     
+    #method { width:100%; float:none; text-align:center; padding:10px; }
+    .year { width:5%; }
+    #mobileZoom { display:block; }
+    .dot { width:14px !important; height:14px !important; }
+    #chart {margin:10px 0 0 0;}
+    #chartLabels { display:none; margin-left:-12px;width:100%}
+    #chartLabels .yearLabel { 
+    font-size:10px; 
+    width:4.6%;
+    transform: rotate(-90deg); 
+    transform-origin: right top 0; 
+    vertical-align: top; }
+    #filter { width:100% !important; float:none; margin-bottom:0px;}
+    #chartAll { width:100%; }
+    .readmore {position:relative;display:block;text-align:center; width: 100%; font-size:12px; padding:5px;}
+  /*HEADER  */
+    
+  .article-headline {display:none;} 
+  h1.mobile-hedline {
+      display:block;
+      position:relative;
+      font-family: "Whitman Display",serif;
+      font-weight: 400;
+      color: #333;
+      margin: 80px auto 0px auto;
+      font-size: 3.2em;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      line-height: 90%;
+      padding: 0 10px;
+      z-index: 2;
+      text-shadow: none;
+  } 
+  .article-byline {width:100%;margin:0;}
+    
+  .project-nav {font-family: "Benton Sans",Helvetica,Arial,sans-serif; !important;} 
+    
+    
+  /*OVERLAY  */
+      .featherlight .featherlight-content {background-color: #eee; overflow-y:hidden;overflow-x:hidden;}
+      .featherlight-content { width:90%; height:auto; margin:0 auto;}
+      
+     .description_chatter, .url { display:none; }
+     .featherlight-content .description_chatter { display:block !important;}
+     .featherlight-content .readmore { display:none; }
+     .readmore { position:absolute;text-align:center; width: 100%; text-decoration:none; color:#b75b60; font-weight:bold; bottom:12px;}
+     .featherlight-content .url { display:block !important; }
+     .featherlight-content .card { width:100% !important; background-color: #eee; !important; font-size:.9em; border:0 !important;}
+     .featherlight-content .card:hover { opacity:1 !important; cursor:normal !important; }
+    .card.featherlight-inner {margin:0 !important;}
+    
+  .mobileNumbers {
+      display:block;
+      width:100%;
+      height:auto;
+      margin: 0 auto 12px auto;
+    } 
+  }    
   </style>
 </head>
+<body class=" storyid380298861 page-article">
 
-<body>
+ 
+
+
+        <script type="text/javascript">
+            function ourDomain() {
+                var parts = location.hostname.split('.');
+                var subdomain = parts.shift();
+                var upperleveldomain = parts.join('.');
+                return (upperleveldomain == 'startribune.com');
+            }
+            function are_cookies_enabled() {
+                var date = new Date();
+                date.setTime(date.getTime()+(60*1000));
+                var expires = "; expires="+date.toUTCString();
+                document.cookie= "testcookie = ytubrute" + expires; //iPad does not create the cookie without a value.
+                var cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+                return (cookieEnabled);
+            }
+            if (ourDomain() && are_cookies_enabled() && !isPhone()) {
+                var welcomeCookieVal = document.cookie.indexOf("st_welcome");
+                if(welcomeCookieVal == undefined ||  welcomeCookieVal == null || welcomeCookieVal < 0){
+                    setTimeout(populateWelcome, 10);
+                }
+            }
+        </script>
+    
+
+          
+<!-- Start Omniture Tag -->
+<script type="text/javascript">
+    //For omniture impressions. We don't want to access s until the very end.
+    var impression_data = [];
+    function analyticsClickTracking($this, linkname, linktype, modulename, moduletype, positions, custom ) {
+        // IE8 throws error on console.log
+        // console.log("Click event triggered");
+        linkname = typeof linkname !== 'undefined' ? linkname : null;
+        if ($this !== false && linkname == null) {
+            linkname = $this.data('linkname');
+        }
+        //If linkname doesn't exist, don't bother with the rest
+        if (typeof linkname !== 'undefined' && linkname !== null && linkname !== '') {
+            linktype = typeof linktype !== 'undefined' ? linktype : null;
+            if ($this !== false && linktype == null) {
+                linktype = $this.data('linktype');
+            }
+            var events = [
+                'event3'
+            ];
+            custom = typeof custom !== 'undefined' ? custom : {};
+            custom.events = typeof custom.events !== 'undefined' ? custom.events : '';
+            var customEvents = custom.events !== '' ? custom.events : null;
+            if ($this !== false && customEvents == null) {
+                 customEvents = $this.data('customevents');
+            }
+            if (customEvents !== '' && typeof customEvents  !== 'undefined') {
+                customEvents = customEvents.split(',');
+                for (var i = 0; i < customEvents.length; i++) {
+                    switch (customEvents[i]) {
+                        case 'search-featured-click':
+                            events.push('event56');
+                        break;
+                        case 'search-click':
+                            events.push('event55');
+                        break;
+                        default:
+                        break;
+                    }
+                }
+            }
+            var modulename = typeof modulename !== 'undefined' ? modulename : null;
+            if ($this !== false && modulename == null) {
+                modulename = $this.data('modulename');
+            }
+            var moduletype = typeof moduletype !== 'undefined' ? moduletype.split('-') : null;
+            if ($this !== false && moduletype == null) {
+                moduletype = $this.data('moduletype').split('-');
+            } else if (moduletype == null) {
+                moduletype = '-'.split('-');
+            }
+            var zonetype = moduletype.shift();
+            moduletype = moduletype.join('-');
+            var positions = typeof positions !== 'undefined' ? positions.split('-') : null;
+            if ($this !== false && positions == null) {
+                positions = $this.data('position').split('-');
+            } else if (positions == null) {
+                positions = '0-0'.split('-');
+            }
+            var modulePosition = positions.shift();
+            var linkPosition = positions.shift();
+            if (isNaN(Number(linkPosition))) {
+                modulePosition += '-' + linkPosition;
+                linkPosition = positions.shift();
+            }
+            if (positions.length) {
+                linkPosition += '-' + positions.join('-');
+            }
+            var key = zonetype + '-' + moduletype + '-' + modulename;
+            trackClick( {
+                'key':key,
+                'linkname':linkname,
+                'linktype':linktype,
+                'modulename':modulename,
+                'moduletype':moduletype,
+                'zonetype':zonetype,
+                'modulePosition':modulePosition,
+                'linkPosition':linkPosition,
+                'events':events
+            } );
+        }
+    }
+    function updateOmnitureBeaconParameter(queryString, analytic, value) {
+        queryString[analytic] = value;
+        return queryString;
+    }
+    function addUsernameToOmnitureBeaconParameters(queryString, includeUsername, includeLoggedInStatus) {
+        var originalQueryString = queryString;
+        if (includeUsername) {
+            if (typeof getUsername  === 'function') {
+                queryString = updateOmnitureBeaconParameter(queryString, 'prop16', 'c16=' + (getUsername() != 'Not Logged In' ? getUsername() : '') );
+            }
+        }
+        if (includeLoggedInStatus) {
+            if (typeof getUsername === 'function') {
+                if (getUsername() == 'Not Logged In') {
+                    queryString = updateOmnitureBeaconParameter(queryString, 'prop33', 'c33=' + encodeURIComponent('Not Logged In'));
+                } else {
+                    queryString = updateOmnitureBeaconParameter(queryString, 'prop33', 'c33=' + encodeURIComponent('Logged In'));
+                }
+            }
+        }
+        return queryString;
+    }
+</script>
+<!-- End Omniture Tag -->
+
+<!-- Start Chartbeat Tag -->
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<!-- End Chartbeat Tag -->
+
+<!-- Start Quantcast Tag -->
+<script type="text/javascript">
+    _qoptions={
+    qacct:"p-0fEc9CMkDiJ2g"
+    };
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript>
+    <img src="http://pixel.quantserve.com/pixel/p-0fEc9CMkDiJ2g.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+</noscript>
+<!-- End Quantcast Tag -->
+
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "8428425" });
+    (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=8428425&cv=2.0&cj=1" alt=""/>
+</noscript>
+<!-- End comScore Tag -->
+
+
+<script type="text/javascript">
+    if (readCookie('daily') == '') {
+        if(readCookie('monthlyCounter') == '' || parseInt(readCookie('monthlyCounter')) <= 30){
+            var expiryDate = new Date();
+            expiryDate.setDate(expiryDate.getDate() + 1);
+            document.cookie = 'daily = 1; expires=' + expiryDate.toGMTString();
+            document.cookie = 'isDailyCounted = false; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        }
+    }
+    if (readCookie('monthly') == '') {
+        var expiryDate = new Date();
+        expiryDate.setMonth(expiryDate.getMonth() + 1);
+        document.cookie = 'monthly = 1; expires=' + expiryDate.toGMTString();
+        document.cookie = 'isDailyCounted = true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        document.cookie = "monthlyCounter=1; expires=Fri, 31 Dec 9999 23:59:59 GMT'" ;
+    }
+    else if(readCookie('isDailyCounted') === 'false' && parseInt(readCookie('monthlyCounter')) <= 30){
+        document.cookie = 'isDailyCounted = true; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+        document.cookie = "monthlyCounter=" + (parseInt(readCookie('monthlyCounter')) + 1) + "; expires=Fri, 31 Dec 9999 23:59:59 GMT'" ;
+    }
+</script>
+    <div class="l-container">
+
+      <div class="global-nav-mod js-global-nav-mod">
+            <nav class="nav">
+  <ul>
+    <li class="nav-block nav-logo">
+      <a href="http://www.startribune.com">&nbsp;</a>
+    </li>
+    <li class="nav-block">
+
+<style>
+@font-face { font-family: "Popular Medium"; src: url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot"); src: url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot?") format("embedded-opentype"), url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-3.woff") format("woff"), url("http://apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-1.ttf") format("truetype"); font-style: normal; font-weight: normal; }      
+</style> 
+
+<a href="#/" class="nav-title project-title" style="font-family: Popular Medium !important;font-weight: normal !important;text-transform: uppercase;">A CRY FOR HELP
+  <div class="nav-indicator">
+                                                                                      <div class="day arrow-down"></div>
+  </div>
+</a>
+
+<ul class="project-nav">       <li><a href="http://www.startribune.com/x/374523971?preview=1"><b>Introduction</b></a></li>
+    
+          <li>
+      <span class="project-link day-1">
+        <a href="http://www.startribune.com/x/374510841?preview=1" >          <span class="part-num">
+                          Part 1
+                        :&nbsp;</span>the officer
+        </a>              </span>
+    </li>
+          <li>
+      <span class="project-link day-2">
+        <a href="" >          <span class="part-num">
+                          Part 2
+                        :&nbsp;</span>the mother
+        </a>                   <span class="coming-soon">
+            <span class="part-num">
+                              Part 2
+                            &nbsp;</span>the mother
+          </span>
+              </span>
+    </li>
+          <li>
+      <span class="project-link day-3">
+        <a href="" >          <span class="part-num">
+                          Part 3
+                        :&nbsp;</span>the survivor
+        </a>                   <span class="coming-soon">
+            <span class="part-num">
+                              Part 3
+                            &nbsp;</span>the survivor
+          </span>
+              </span>
+    </li>
+          <li>
+      <span class="project-link day-4">
+        <a href="" >          <span class="part-num">
+                          Part 4
+                        :&nbsp;</span>fatal encounters
+        </a>                   <span class="coming-soon">
+            <span class="part-num">
+                              Part 4
+                            &nbsp;</span>fatal encounters
+          </span>
+              </span>
+    </li>
+  
+
+       
+      
+        <li class="share__facebook clickQS mobile">
+          <a class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http://strib.mn/240g1US" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="" data-moduletype="-" data-position="--share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">share</span>
+              <span class="share-count share-count-facebook"></span>
+            </div>
+          </a>
+                  </li>
+        <li class="share__twitter clickQS mobile">
+          <a class="st-share-link" data-st-share-count-selector=".share-count-twitter" data-st-share-image="http://stmedia.startribune.com/images/Screen+Shot+2016-06-01+at+7.28.45+AM.png" data-st-share-title="Fatal police encounters" data-st-share-service="twitter" data-st-share-url="http://strib.mn/240g1US" data-st-count-url="http://www.startribune.com/fatal-police-encounters/380298861/" target="_blank" data-linkname="Share on Twitter" data-linktype="share-twitter" data-modulename="" data-moduletype="-" data-position="-1-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">tweet</span>
+              <span class="share-count share-count-twitter"></span>
+            </div>
+          </a>
+                  </li>
+                
+        
+      
+      </ul>
+    </li>
+    <li class="nav-block share">
+      <a href="#/" class="icn-share">&nbsp;</a>
+      <div class="nav-indicator">
+          <div class="arrow-down"></div>
+        </div>
+      <ul>
+        <li class="share__facebook clickQS">
+        
+
+
+          <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fstrib.mn%2F1PsndYu" onclick="return fbs_click()" target="_blank" class="st-share-link" data-st-share-count-selector=".share-count-facebook" data-st-share-service="facebook" data-st-share-url="http%3A%2F%2Fstrib.mn%2F1PsndYu" target="_blank" data-linkname="Share on Facebook" data-linktype="share-facebook" data-modulename="" data-moduletype="-" data-position="-3-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">share</span>
+              <span class="share-count share-count-facebook"></span>
+            </div>
+          </a>
+                  </li>
+        <li class="share__twitter clickQS">
+
+
+        
+
+
+
+          <a id="twitterbtn-link" onclick="return twitter_click('https://twitter.com/share?url=http%3A%2F%2Fstrib.mn%2F1PsndYu&amp;counturl=ENCODEDURL&amp;text=Since%202000%2C%20about%2045%20percent%20of%20those%20killed%20in%20MN%20police%20encounters%20had%20mental%20illnesses%20or%20had%20mental%20health%20crises%20when%20they%20died.&amp;via=StarTribune')"class="st-share-link" data-st-share-count-selector=".share-count-twitter" data-st-share-image="http://stmedia.startribune.com/images/Screen+Shot+2016-06-01+at+7.28.45+AM.png" data-st-share-title="Fatal police encounters" data-st-share-service="twitter" data-st-share-url="http%3A%2F%2Fstrib.mn%2F1PsndYu" data-st-count-url="http%3A%2F%2Fstrib.mn%2F1PsndYu" target="_blank" data-linkname="Share on Twitter" data-linktype="share-twitter" data-modulename="" data-moduletype="-" data-position="-4-share">
+            <div class="share-icon"></div>
+            <div class="share-label">
+              <span class="share-txt">tweet</span>
+              <span class="share-count share-count-twitter"></span>
+            </div>
+          </a>
+                  </li>
+
+      </ul>
+    </li>
+         
+      </ul>
+</nav>
+
+<script>
+$("ul.project-nav").mouseover(function(){$(".nav-title,.arrow-down").addClass("selected")}),$("ul.project-nav").mouseout(function(){$(".nav-title,.arrow-down").removeClass("selected")}),$("li.nav-block.share").mouseover(function(){$(".nav-block.share .arrow-down").addClass("selected")}),$("li.nav-block.share").mouseout(function(){$(".nav-block.share .arrow-down").removeClass("selected")}),$(".share ul").mouseover(function(){$(".navblock-share").addClass("selected")}),$(".share ul").mouseout(function(){$(".icn-share").removeClass("selected")}),$(".share-more-link-input").mouseenter(function(){$(".nav-block.share").addClass("open")}),$(".share-more-link-input").mouseleave(function(){$(".nav-block.share").removeClass("open")}),$("a.nav-title,.project-nav a").click(function(){$("a.nav-title,.project-nav").toggleClass("open");});
+function fbs_click() {
+u=location.href;t=document.title;window.open('http://www.facebook.com/share.php?u=http%3A%2F%2Fstriblab.github.io%2Fstartribune_dataviz%2F20151117-police_deaths%2Findex.html%3Fmental%3Dyes&t=http://www.facebook.com/share.php?u=http%3A%2F%2Fstriblab.github.io%2Fstartribune_dataviz%2F20151117-police_deaths%2Findex.html%3Fmental%3Dyes','sharer','toolbar=0,status=0,width=520,height=350');return false;
+}
+function twitter_click(url){newwindow=window.open(url,'name','height=350,width=520');
+    if (window.focus) {newwindow.focus()}
+    return false;
+}
+</script>      </div>
+
+            
+  
+    
+                
+    <div class="l-article-container" itemscope itemtype="http://schema.org/Article">
+             <div class="l-section-container clearfix">
+                </div>
+            
+        <div class="l-article article p402_premium article">
+                                                                 <div class="l-article-topper wide">
+                        
+                        <span class="article-id-highlight">380298861</span>
+                                                                   
+
+                                                        
+                                                                   
+                                                                   
+                                                                   
+<h1 class="article-headline" itemprop="headline">Fatal police encounters</h1> <h1 class="mobile-hedline">Fatal police encounters</h1>
+                                                                   
+<div class="article-subhead" itemprop="description"> The Star Tribune <a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/?preview=1" target="_new" style="text-decoration:underline;">collected the names and stories</a> of everyone who died after a physical confrontation with law enforcement in Minnesota from 2000 through May 2016. A disproportionate share — at least 45 percent — were people with a history of mental illness or who were having a mental health crisis when they died.&nbsp;</div>
+                                                    
+                 
+
+<style>.article-byline a {color:#333 !important; font-size:12px;}</style>                                                                                 
+      <div class="article-byline-mod">
+                                                      
+                                                      
+        <div class="article-byline">
+<strong>By<a href="http://www.startribune.com/jeff-hargarten/274254381/" title="Jeff Hargarten" data-linkname="Jeff Hargarten" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author"> Jeff Hargarten,</a></strong>
+
+<strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/" title="Jennifer Bjorhus" data-linkname="Jennifer Bjorhus" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author">Jennifer Bjorhus,</a></strong>
+
+<strong><a href="http://www.startribune.com/maryjo-webster/303594441/" title="MaryJo Webster" data-linkname="MaryJo Webster" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-2-author" rel="author"> MaryJo Webster </a></strong>
+
+<strong>and <a href="http://www.startribune.com/kelly-smith/101372379/" title="Kelly Smith" data-linkname="Kelly Smith" data-linktype="author" data-modulename="Article" data-moduletype="zone1-content" data-position="0-1-author" rel="author"> Kelly Smith</a></strong>
+
+
+                                        
+                                                                                    Star Tribune
+                                                                            </div>
+                                                                <div class="article-dateline">
+                                    June 1, 2016 &mdash; 6:29pm
+                                </div>
+    </div>
+                                            </div>
+                                                <div class="l-article-body wide">
+                                                                                    
+  <script type="text/javascript">
+    var pwidget_config = {
+      copypaste: false,
+      shareQuote: false
+    };
+  </script>
+  <script src="http://i.po.st/share/script/post-widget.js#publisherKey=56d2hkmk6d6lmd6llqb2" type="text/javascript"></script>
+  <link rel="stylesheet" href="http://assets.startribune.com/static/css/vendor/post-share-widget.css?d=112050278b3198b1c1080626c4cedc7f74a70b43">
+                                            
+                                            <div class="article-body resizeFont" itemprop="articleBody">
+                                                
+                                                  
+                                                                                                                                                                                        
+                                                                          
+                                                                                                                                                                                        
+                                                                          
+                                                                                                
+                                                                                        <p><style type="text/css"> .embed {margin-top:50px; width: 100%; overflow: hidden; }
+.mental-vis {margin-top:80px;}
+h1.article-headline {
+text-shadow:none;font-style:normal;
+font-weight:bold;
+text-transform: uppercase;
+}
+.mobile {display:none;} .article-byline-mod {padding:15px 0 15px 0;} .article-id-highlight {display:none;} .article-headline { text-align: center; color: #333; font-family: "Whitman Display",Georgia,Times,serif; font-size: 4em; line-height: 60px; margin-top: 30px; padding-top:10px; margin-bottom: 16px; font-weight: normal; letter-spacing:-1.5px; } .article-subhead {padding-right:0; width:80%; margin:auto; @include media("≥phone", "≤tablet") { width:90%; } } .l-article-topper.wide {text-align:center; }
+.l-article-topper.wide .article-section{display:none} h2 {text-align:center; font-size:1.4em; margin-top:50px;} /*STYLING SHARING FOR HORIZONTAL*/ aside.article-share { position:absolute; width:100%; margin:0 300px; } aside.article-share div {float:left;} .l-article { margin-left:0px;} .l-article-body.wide{ width:970px; } .article-share-item, .share__comments, .share__facebook, .share__twitter, .share__email, .share__print, .share__textsize, .share-more {padding-right:5px;border-right:1px solid #e8e8e8} .share-more{ padding-left:5px;border-right:none; } .article-share-item:before, .share__comments:before, .share__facebook:before, .share__twitter:before, .share__email:before, .share__print:before, .share__textsize:before, .share-more:before { border-bottom:none; ;width:100%; } @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { body.page-article{width:970px;} .mobile {display:block;} .l-article-body.wide {width: 100%!important; overflow:hidden;} #zone-none-block-3-leaderboard, #zone-none-block-1-leaderboard { width: 100%; overflow: hidden; } aside.article-share { position:relative; width:100%;margin:0 0 0 250px;} } @media only screen and (min-device-width: 320px) and (max-device-width: 640px) { body.page-article { width: 100%; }
+.l-article-topper.wide .article-section{display:block} .home-logo { margin: 9px auto; } .recirc {display:none;} .article-headline { margin-top: 0; font-size: 70px; line-height: 60px; margin-top: 30px; } .l-article-body.wide { width: 100%; overflow:hidden; } aside.article-share { position: relative; margin-left: 0px; width: 100%; max-width: 640px; height: 35px; clear: both; margin-bottom: 18px; } aside .share__textsize {visibility:hidden} .share__email {border-right:none;display:inline-block !important} aside .share__twitter .share-txt {display:inline-block !important} aside .share-more, aside .share__print, aside .share-txt, aside .share__textsize .share-label {display:none} .mobile {display:block;} .mobile p{padding:10px 10px;text-align:center;} #zone-none-block-3-leaderboard, #zone-none-block-1-leaderboard { width: 100%; overflow: hidden; } }
+</style></p>
+
+                                                                                                                                                      
+                                            
+                                                                                                                                    
+                        
+                                                                                        <p>&nbsp;</p>
+
+                                                                                                                                                      
+                                            
+                                                                                                                                    
+                      
+
   <div id="wrapper">
 
           <div id="filterBox">
@@ -328,11 +915,14 @@
       <div class="yearLabel">'15</div>
       <div class="yearLabel">'16</div>
      </div>
+       
+       <div class="mobileNumbers"><img width="100%" height="auto" alt="" src="http://stmedia.startribune.com/images/mentalNumbers.png"></div>
+       
      </div>
 
 <div id="sidebar">
 <!--   <div id="deathsHead" style="display:none;"><span id="bigNumber">0</span> deaths</div> -->
-<div id="resultBar"><span class="results"></span> <span>deaths</span></div>
+<div id="resultBar"><span>Deaths: </span> <span class="results"></span></div>
     <div class="chatterThing"><p class="load"><img src="img/loading.gif" class="load" /><p></div>
 </div>
 
@@ -346,7 +936,7 @@
 
 
 <div id="filter"><input type="search" id="filter_box" placeholder="Search list of all deaths by name, year or keyword"></input></div>
-<div id="method"><a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/" target="new_">READ METHODOLOGY</a></div>
+<div id="method"><a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141/?preview=1" target="new_">READ METHODOLOGY</a></div>
 
 <div class="breaker"></div>
 
@@ -370,40 +960,30 @@
 
 <script>
 //LIVE JSON MAGIC
-
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart
-
 //THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-
 // $jsonDataShootings = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=gzHCZ7kiey1SMM5PgBsM3CMeEa4NGwiyFa2FU8DnUoYjQIKgjsJFAGwT7SqIrwFV-EqtN7Cx_xlY8kVRmstDxBon1OqOrn1NOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrpOMLCYDptcpnMxR0xLFGFK&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
 // $jsonDataYear = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=tNF6_if_WpQAvlnIwRWIHBHNBcOQ82hB8rzcScLoXpi_4W6d84eUeNWyXA8NKNBB4DWz53L3bhAVl38Pz93wBsrUsEnuNKBWOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx9WKnAm96yZmfHc12uQ5hug&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
 // $jsonDataRace = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=1o5js0t1-i_wvGK8iMjzk2xR5auHvAWz3S9omyswRYuc-g_Zqf9Hd8ftf-teZu-RxUlpYxtPQRoVl38Pz93wBkgelLHZJDxkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxxcG-w52aeuSr4afipWyPHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
 //THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
 // var dataLoadShootings = <?php echo $jsonDataShootings; ?>;
 // var dataLoadYear = <?php echo $jsonDataYear; ?>;
 // var dataLoadRace = <?php echo $jsonDataRace; ?>;
-
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings", function(error, dataLoadShootings) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart", function(error, dataLoadYear) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart", function(error, dataLoadRace) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=viz_chatter", function(error, dataLoadChatter) {
-
 dataShootings = dataLoadShootings.mn_shootings;
 dataYear = dataLoadYear.yearChart;
 dataRace = dataLoadRace.raceChart;
 dataChatter = dataLoadChatter.viz_chatter;
-
 var mentalLoad = false;
-
 $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
   });
-
 function addBoxes() {
   $('#deathsTable .card').each(function(i, obj) {
     $(this).addClass("lightbox");
@@ -412,9 +992,7 @@ function addBoxes() {
     $(this).attr("data-featherlight","#" + $(this).attr("id"));
   }); 
 }
-
 $('#mainFilters').hide();
-
 $(".switch").click(function() {
   $(".switch").removeClass("selected");
   $('#mainFilters').show();
@@ -428,7 +1006,6 @@ $(".switch").click(function() {
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
 });
-
 $(".bigswitch").click(function() {
   $(".bigswitch").removeClass("selected");
   $(this).addClass("selected");
@@ -436,11 +1013,8 @@ $(".bigswitch").click(function() {
   $('#mainFilters').hide();
   $('#clickyStuff').show();
 });
-
 $('#bigNumber').html(dataShootings.length);
 $('.results').html(dataShootings.length);
-
-
 //POPULATE TABLE
 d3.select("#deathsTable").selectAll(".card")
 .data(dataShootings).enter().append("div")
@@ -451,22 +1025,23 @@ d3.select("#deathsTable").selectAll(".card")
   var mentalStatus = "<span class='hideThis'>" + d.Mental + "</span>";
   if (d.Mental == "Yes") { mentalStatus = "<span class='hideThis'>" + d.Mental + "</span><div class='mentalSwatch'>Mental health issues</div>"; }
   if (d.URL != "#") { linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>"; }
-
-  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='" + d.photo + "' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Click to read more</div>";});
-
+  return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender +  " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Read more</div>";});
 addBoxes();
-
-$(".clickies").on("click" ,function(){
+$(".card").on("click" ,function(){
   $(document).bind('DOMNodeInserted', function(event) {
-$(".featherlight-content .clickies").removeClass("lightbox");
-$(".featherlight-content .clickies").removeClass("featherlight-inner");
+$(".featherlight-content .card").removeClass("lightbox");
+$(".featherlight-content .card").removeClass("featherlight-inner");
+$(".featherlight-content .card").attr("data-featherlight","");
 });
 });
-
+  $(".url").on("click" ,function(){
+    window.open($(this).find("a").attr("href"), '_new');
+    return false;
+  });
 function spitDots(year){
 d3.select("#y" + year).selectAll(".dot")
 .data(dataShootings.filter(function(d){ return d.year == year; }).sort(function(a, b) { return d3.ascending(a.Mental, b.Mental); })).enter().append("div")
-.attr("class", function (d){ if (d.Mental == "Yes") { return "circle dot"; } else { return "dot"; } })
+.attr("class", "dot")
 .attr("first", function (d){ return d.FirstName;})
 .attr("last", function (d){ return d.LastName;})
 .attr("gender", function (d){ return " " + d.Gender;})
@@ -480,12 +1055,10 @@ d3.select("#y" + year).selectAll(".dot")
 .attr("weapon", function (d){ return d.WeaponCategory;})
 .attr("mental", function (d){ return d.Mental;})
 .on("mousedown", function(d, i){ 
-
         $(".dot").removeClass("faded, active");
         $(".dot").addClass("faded");
         d3.select(this).classed("faded", false);
         d3.select(this).classed("active", true);
-
         $('.card').hide();
         var txt = d.FirstName + " " + d.LastName;
         $('.card').each(function(){
@@ -495,17 +1068,14 @@ d3.select("#y" + year).selectAll(".dot")
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   })
 .html(function (d){ return "";})
 .call(d3.helper.tooltip(function(d, i){
   var mentalStatus = "";
-  if (d.Mental == "Yes") { mentalStatus = "<div class='mentalSwatch'>Mental health issues</div>"; }
+  if (d.Mental == "Yes") { mentalStatus = "<div class='mentallabel' style='color:#999;font-weight:900;font-size:.8em;'>MENTAL HEALTH ISSUES</div>"; }
     return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div>" + mentalStatus;
 }));
-
 }
-
 $(".zoom").click(function() {
   $('.card').show();
   var count = $('.card:visible').length;
@@ -522,7 +1092,6 @@ $(".zoom").click(function() {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
        $('#filter_box').val("");
-
     $('.card').hide();
         var txt = "Yes";
         $('.hideThis').each(function(){
@@ -538,10 +1107,7 @@ $(".zoom").click(function() {
   d3.selectAll(".dot").classed("mentalSwatch", true);
  }
 });
-
-
 d3.helper = {};
-
 d3.helper.tooltip = function(accessor){
     return function(selection){
         var tooltipDiv;
@@ -574,14 +1140,11 @@ d3.helper.tooltip = function(accessor){
             // Remove tooltip
             tooltipDiv.remove();
         });
-
     };
 };
-
 for (var i=2000; i <= 2016; i++){ spitDots(i); }
-
 //SEARCH FILTER TABLE
-  $( document ).ready(function() {
+  // $( document ).ready(function() {
      $('#filter_box').keyup(function(i){
       if (mentalLoad == true){
         $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
@@ -608,48 +1171,11 @@ for (var i=2000; i <= 2016; i++){ spitDots(i); }
         $('.results').html(count);
       }
     });
-});
-
+// });
 $.getJSON('shapefiles/counties.json', function(counties) {
-
 //FILTER STUFF
-$( document ).ready(function() {
-// $( ".filter" ).each(function( index ) {
-//   if ($(this).attr("data") == "No" || $(this).attr("data") == "Yes"){ 
-//     $(this).find(".count").text(countStats(".card .hideThis",$(this).attr("data"))); 
-//   }
-//   else { $(this).find(".count").text(countStats(".card .stats, .card .ruling",$(this).attr("data"))); }
-
-//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-//   $(this).find("a").css("background","#ddd");
-//   $(this).find("a").css("color","#333");
-//   $(this).find("a").css("margin-right",(70 - pct) + "%");
-//   $(this).find("a").css("width",(pct) + "%");
-//   $(this).css("margin","5px");
-// });
-
-// $( ".filter2" ).each(function( index ) {
-//   $(this).find(".count").text(countStats(".weaponType",$(this).attr("data")));
-//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-//   $(this).find("a").css("background","#ddd");
-//   $(this).find("a").css("color","#333");
-//   $(this).find("a").css("margin-right",(70 - pct) + "%");
-//   $(this).find("a").css("width",(pct) + "%");
-//   $(this).css("margin","5px");
-// });
-
-// $( ".filter3" ).each(function( index ) {
-//   $(this).find(".count").text(countStats(".region",$(this).attr("data")));
-//   var pct = Math.round((Number($(this).find(".count").text()) / dataShootings.length) * 100);
-//   $(this).find("a").css("background","#ddd");
-//   $(this).find("a").css("color","#333");
-//   $(this).find("a").css("margin-right",(70 - pct) + "%");
-//   $(this).find("a").css("width",(pct) + "%");
-//   $(this).css("margin","5px");
-// });
-
 $( "#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a" ).css("background","#fff");
-
+// $(document).bind('DOMNodeInserted', function(event) {
 $(".bigDot").on('click',function(){
   $(".bigDot").removeClass("selected");
   $(this).addClass("selected");
@@ -658,7 +1184,7 @@ $(".filter, .filter2, .filter3").on('click',function(){
   $(".bigDot").removeClass("selected");
   $(this).find(".bigDot").addClass("selected");
 });
-
+// });
 function countStats(target, text){
   if (mentalLoad == true){
  return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 && $(this).parent().find(".mentalSwatch").length}).length;
@@ -666,44 +1192,46 @@ function countStats(target, text){
    return $(target).filter(function() { return $(this).text().toUpperCase().indexOf(text.toUpperCase()) != -1 }).length;
 }
 }
-});
-
 $(".filter").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   var datapoint = $(this).attr("data");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
-      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      if (datapoint == "WHITE") { if ($(this).attr("race") == "HISPANIC" || $(this).attr("race") == "WHITE") { $(this).addClass("mentalSwatch");  } }
+      else if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { 
+        $(this).addClass("mentalSwatch");  
+      }
       }
     } else {
-      if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("mental") == datapoint || $(this).attr("manner") == datapoint) { $(this).addClass("mentalSwatch"); }
+      if (datapoint == "WHITE") { if ($(this).attr("race") == "HISPANIC" || $(this).attr("race") == "WHITE") { $(this).addClass("mentalSwatch");  } }
+      else if ($(this).attr("gender") == datapoint || $(this).attr("race") == datapoint || $(this).attr("manner") == datapoint) { 
+        $(this).addClass("mentalSwatch");  
+      }
     }
   });
-
    $('#filter_box').val("");
-
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
+        var txt2 = $(this).attr("data");
+        if (txt == "WHITE") { txt2 = "HISPANIC"; }
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 && $(this).parent().parent().find(".mentalSwatch").length){
+           if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 || $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1) && $(this).parent().parent().find(".mentalSwatch").length){
                $(this).parent().parent().show();
            }
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
   } else {
-
         $('.card').hide();
         var txt = $(this).attr("data");
+        var txt2 = $(this).attr("data");
+        if (txt == "WHITE") { txt2 = "HISPANIC"; }
         $('.card .stats, .card .ruling').each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1 || $(this).text().toUpperCase().indexOf(txt2.toUpperCase()) != -1)){
                $(this).parent().parent().show();
            }
         });
@@ -711,15 +1239,11 @@ if (mentalLoad == true){
         $('.results').html(count);
       }
   });
-
 $(".filter2").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   var datapoint = $(this).attr("data");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
@@ -729,9 +1253,7 @@ $(".filter2").on('click',function(){
       if ($(this).attr("weapon") == datapoint) { $(this).addClass("mentalSwatch"); }
     }
   });
-
 $('#filter_box').val("");
-
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
@@ -743,7 +1265,6 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
   } else {
-
         $('.card').hide();
         var txt = $(this).attr("data");
         $('.weaponType').each(function(){
@@ -755,15 +1276,11 @@ if (mentalLoad == true){
         $('.results').html(count);
       }
   });
-
 $(".filter3").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   var datapoint = $(this).attr("data");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true){
       if ($(this).attr("mental") == "Yes"){
@@ -773,10 +1290,7 @@ $(".filter3").on('click',function(){
       if ($(this).attr("region") == datapoint) { $(this).addClass("mentalSwatch"); }
     }
   });
-
-
    $('#filter_box').val("");
-
 if (mentalLoad == true){
     $('.card').hide();
         var txt = $(this).attr("data");
@@ -788,7 +1302,6 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
   } else {
-
         $('.card').hide();
         var txt = $(this).attr("data");
         $('.region').each(function(){
@@ -799,15 +1312,12 @@ if (mentalLoad == true){
         var count = $('.card:visible').length;
         $('.results').html(count);
       }
-
   });
-
 $.urlParam = function(name){
   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
   if (results != null) { return results[1]; }
   else { return 0; }
 }
-
 if ($.urlParam('mental') != 0 ) { 
   var page = $.urlParam('mental');
   if (page = "yes") { 
@@ -817,18 +1327,14 @@ if ($.urlParam('mental') != 0 ) {
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
   for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
-
   $(".bigswitch, .switch").removeClass("selected");
   $("#mentalB_m, #mentalB").addClass("selected");
   $(".chatter, .chartTitle").hide();
   $(".mental").show();
-
   $('.dot').each(function(i, obj) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
-
      $('#filter_box').val("");
-
     $('.card').hide();
         var txt = "Yes";
         $('.hideThis').each(function(){
@@ -845,7 +1351,6 @@ if ($.urlParam('mental') != 0 ) {
     d3.selectAll(".dot").classed("mentalSwatch", true);
     for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "all") { $(".chatterThing").html(dataChatter[i].chatter) } }
   }
-
 $("#all, #all_m").on('click',function(){
   $('#filter_box').attr("placeholder","Search list of all deaths by name, year or keyword");
         mentalLoad = false;
@@ -861,19 +1366,15 @@ $("#mentalB, #mentalB_m").on('click',function(){
   $('#filter_box').attr("placeholder","Search list of mental health deaths by name, year or keyword");
   mentalLoad = true;
   for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "mental") { $(".chatterThing").html(dataChatter[i].chatter) } }
-
   $(".bigDot").removeClass("selected");
   $("#mentalDot").addClass("selected");
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $('.dot').each(function(i, obj) {
     if ($(this).attr("mental") == "Yes") { $(this).addClass("mentalSwatch"); }
   });
-
      $('#filter_box').val("");
-
     $('.card').hide();
         var txt = "Yes";
         $('.hideThis').each(function(){
@@ -883,17 +1384,13 @@ $("#mentalB, #mentalB_m").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#weaponB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#weaponDot").addClass("selected");
-
   $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("weapon") == "GUN" && $(this).attr("mental") == "Yes") { 
@@ -902,14 +1399,11 @@ $("#weaponB").on('click',function(){
       }
     } else {
       if ($(this).attr("weapon") == "GUN") { $(this).addClass("mentalSwatch"); }
-
       for (var i=0; i < dataChatter.length; i++){ if (dataChatter[i].category == "weapon_all") { $(".chatterThing").html(dataChatter[i].chatter) } }
     }
     
   });
-
    $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "GUN";
         $('.weaponType').each(function(){
@@ -921,22 +1415,17 @@ $("#weaponB").on('click',function(){
           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
                $(this).parent().show();
              }
-
          }
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#raceB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#raceDot").addClass("selected");
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("race") == "BLACK" && $(this).attr("mental") == "Yes") { 
@@ -949,9 +1438,7 @@ $("#raceB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "BLACK";
         $('.card .stats, .card .ruling').each(function(){
@@ -967,17 +1454,13 @@ $("#raceB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#placeB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#placeDot").addClass("selected");
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("region") == "Metro" && $(this).attr("mental") == "Yes") { 
@@ -990,9 +1473,7 @@ $("#placeB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "Metro";
         $('.region').each(function(){
@@ -1008,17 +1489,13 @@ $("#placeB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#mannerB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#mannerDot").addClass("selected");
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("manner") == "HOMICIDE" && $(this).attr("mental") == "Yes") { 
@@ -1031,9 +1508,7 @@ $("#mannerB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = "HOMICIDE";
         $('.card .stats, .card .ruling').each(function(){
@@ -1049,18 +1524,13 @@ $("#mannerB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
 $("#genderB").on('click',function(){
-
   d3.selectAll(".dot").classed("faded", false);
   d3.selectAll(".dot").classed("active", false);
   d3.selectAll(".dot").classed("mentalSwatch", false);
-
   $(".bigDot").removeClass("selected");
   $("#genderDot").addClass("selected");
-
-
     $('.dot').each(function(i, obj) {
     if (mentalLoad == true) { 
       if ($(this).attr("gender") == " MALE" && $(this).attr("mental") == "Yes") { 
@@ -1073,9 +1543,7 @@ $("#genderB").on('click',function(){
     }
     
   });
-
  $('#filter_box').val("");
-
         $('.card').hide();
         var txt = " MALE";
         $('.card .stats, .card .ruling').each(function(){
@@ -1091,14 +1559,8 @@ $("#genderB").on('click',function(){
         });
         var count = $('.card:visible').length;
         $('.results').html(count);
-
   });
-
-
-
 });
-
-
 });
 });
 });
@@ -1118,12 +1580,10 @@ $("#genderB").on('click',function(){
       DropDown.prototype = {
         initEvents : function() {
           var obj = this;
-
           obj.dd.on('click', function(event){
             $(this).toggleClass('active');
             return false;
           });
-
           obj.opts.on('click',function(){
             var opt = $(this);
             obj.val = opt.text();
@@ -1138,19 +1598,456 @@ $("#genderB").on('click',function(){
           return this.index;
         }
       }
-
       $(function() {
-
         var dd = new DropDown( $('#dd') );
         var dd2 = new DropDown( $('#dd2') );
-
         $(document).click(function() {
           // all dropdowns
           $('.wrapper-dropdown-1').removeClass('active');
         });
-
       });
-
 </script>
 
+ <p>&nbsp;</p>
+
+                                                                                                                                                                    
+                        
+                                                                                        
+
+                                                                                                                                                                    
+                                                </div>
+                    
+                    
+                                            
+    
+                                  
+                                                                <section class="comments-section" id="comments">
+<!--
+    <script type="text/javascript">
+        if (typeof commentQueryStrings === 'undefined') {
+            var commentQueryStrings = {};
+        }
+    </script>
+    
+    <script type="text/javascript">
+        commentQueryStrings[window.location.pathname] = JSON.parse('{"pageName":"pageName=Fatal%20police%20encounters","channel":"channel=","server":"server=startribune.com","prop1":"c1=D%3Dg","prop2":"c2=V20160601","prop3":"c3=story","prop5":"c5=","prop7":"c7=comments","prop16":"c16=","prop71":"c71=websites"}');
+    </script>
+-->
+
+    <div class="comments">
+        <a href="#" class="js-comments-show comments-count-link">
+            <div class="comments-count"></div>
+            <span class="comments-show js-comments-show-txt"
+                  data-analytics-url="http://metrics.startribune.com/b/ss/nmminneapolis/1/JS-1.5.3/83600"
+                  data-analytics-querystring="pageName=Fatal%20police%20encounters&channel=&server=startribune.com&c1=D%3Dg&c2=V20160601&c3=story&c5=&c7=comments&c16=&c71=websites">View Comments</span>
+        </a>
+    </div>
+
+    <script src='//cdn.livefyre.com/Livefyre.js'></script>
+    <script type="text/javascript">
+        var networkConfig = {"network": "startribune.fyre.co"}
+        var convConfig = {"siteId":"356396","articleId":"380298861","el":"livefyre","collectionMeta":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IkZhdGFsIHBvbGljZSBlbmNvdW50ZXJzIiwidXJsIjoiaHR0cDpcL1wvd3d3LnN0YXJ0cmlidW5lLmNvbVwvcHJvdGVjdGVkXC8zODAyOTg4NjEuaHRtbCIsInRhZ3MiOiJcL3Byb3RlY3RlZCIsImNoZWNrc3VtIjoiZTNjOGM0NDY4NGRjNzcxOTQ0MWJlM2YzMmIwNzk1MDciLCJhcnRpY2xlSWQiOiIzODAyOTg4NjEifQ.wUJME5grdl4YsGxtQ4eKlT_JuRz9F4d2mXQfJDWib18","datetimeFormat":{"minutesUntilAbsoluteTime":1,"absoluteFormat":"MMM. d, yy<br>h:mm a"}};
+        var commentLoginText = "Log in/register to comment";
+        var commentEmailOnly = 0;
+        var commentPage = {};
+        commentPage.userToken = null;
+        commentPage.userAuth = false;
+        commentPage.registerUsername = false;
+        commentPage.onCommentCountUpdated = function (number) {
+            commentCount.checkLivefyreLoaded(number);
+        };
+        var checkUserToken = function (cb) {
+            if (jQuery.cookie('st_usr_livefyre_token')) {
+                commentPage.userAuth = true;
+                commentPage.userToken = jQuery.cookie('st_usr_livefyre_token');
+            }
+            cb();
+        };
+        if (jQuery.cookie('register_st_user_name')) {
+            if (jQuery.cookie('st_usr_livefyre_token')) {
+                jQuery.removeCookie('register_st_user_name');
+            } else {
+                commentPage.registerUsername = true;
+            }
+        }
+        var customStrings = {
+            signIn: (commentPage.registerUsername ? "Please create a username for your account." : commentLoginText),
+            postButton: "Post your comment",
+            postReplyButton: "Post your comment",
+            flagButton: "Report as inappropriate"
+        };
+        networkConfig["strings"] = customStrings;
+        Livefyre.require(['fyre.conv#3', 'auth'], function(Conv, auth) {
+            new Conv( networkConfig, [convConfig], function(commentsWidget){
+                checkUserToken(function () {
+                    if (commentPage.userToken) {
+                        auth.authenticate({livefyre: commentPage.userToken});
+                    }
+                });
+                commentsWidget.on('commentCountUpdated', commentPage.onCommentCountUpdated);
+                commentsWidget.on('initialRenderComplete', function () {
+                    jQuery('.fyre-comment a').contents().unwrap();
+                    commentCount.checkLivefyreLoaded(false, false);
+                });
+            });
+            auth.delegate({
+                login: function(cb) {
+                    if (commentPage.registerUsername) {
+                        window.location.href = 'http://users.startribune.com/';
+                    } else if (commentPage.userToken) {
+                        cb(null, {livefyre: commentPage.userToken});
+                    } else {
+                        window.location.href = 'http://' + document.domain + '/login?commentRedirect=true&path=' + encodeURIComponent( document.URL );
+                    }
+                }
+            });
+        });
+    </script>
+    <div id='livefyre-cont'>
+        <div id='livefyre'>
+            <div class="comment-standards-mod">
+                <a href="#" class="comment-standards-btn js-show-comment-standards">Read our comment standards</a>
+                <div class="comment-standards-txt">
+                    <p>StarTribune.com welcomes and encourages readers to comment and engage in substantive, mutually
+                        respectful exchanges over news topics. Commenters must follow our <a
+                                href="http://www.startribune.com/terms/">Terms of Use</a>.</p>
+                    <ol>
+                        <li>Keep it civil and stay on topic.</li>
+                        <li>No profanity, vulgarity, racial slurs or personal attacks.</li>
+                        <li>Comments with web links are not permitted.</li>
+                        <li>Comments that violate the above will be removed. Repeat violators may lose their commenting
+                            privileges on StarTribune.com.
+                        </li>
+                    </ol>
+                    <p>Comments will be reviewed before being published.</p>
+                </div>
+                <!--eo comment-standards-txt-->
+            </div>
+            <!--eo comments-standards-mod-->
+            <!--LiveFyre gets injected here-->
+        </div>
+        <div id="powered_by_livefyre_new"><a href="http://livefyre.com/" target="_blank">Powered by Livefyre</a></div>
+        <img class="comments-image-tracking" style="height: 0px;" alt=""
+             src="http://apps.startribune.com/circulars/images/blank.gif"/>
+        <script type="text/javascript">
+        <!--if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')//-->
+        </script>
+        <noscript>
+                        <img src="http://metrics.startribune.com/b/ss/nmminneapolis/1/JS-1.5.3--NS/52086?pageName=Fatal%20police%20encounters&channel=&server=startribune.com&c1=D%3Dg&c2=V20160601&c3=story&c5=noscript&c7=comments&c16=&c71=websites"
+                 height="1" width="1" border="0" alt=""/>
+            }
+        </noscript>
+        <!--/DO NOT REMOVE/-->
+    </div>
+</section>
+                    
+                                    </div><!-- l-article-body -->
+             
+                    </div>
+
+        
+            </div><!-- l-article-container -->
+
+      
+
+            <img class="trackerImage" src="http://apps.startribune.com/most_popular/?cmd=inc&amp;type=view&amp;section=%2Fprotected&amp;story_id=380298861">
+    
+  </div>
+
+      
+<div class="l-footer-container">
+    <nav class="l-footer-inner" role="navigation">
+        <div class="footer-top-mod">
+            <a class="footer-branding-mod" href="http://www.startribune.com/" data-linkname="StarTribune" data-linktype="logo navigation" data-modulename="Page Navigation Bottom logo navigation" data-moduletype="footer-page-nav" data-position="0-1">
+                <h4 class="footer-st-branding">StarTribune</h4>
+            </a>
+            <div class="footer-social-mod">
+                <ul class="footer-social-links">
+                    <li><span class="footer-social-links-label">Follow Us On:</span></li>
+                    <li><a href="https://www.facebook.com/startribune/" class="footer-social-facebook" data-linkname="Facebook" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-2" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/StarTribune/" class="footer-social-twitter" data-linkname="Twitter" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-3" target="_blank">Twitter</a></li>
+                    <li><a href="https://plus.google.com/+startribune/" class="footer-social-gplus" data-linkname="Google+" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-4" target="_blank">Google+</a></li>
+                    <li><a href="http://pinterest.com/startribune/" class="footer-social-pinterest" data-linkname="Pinterest" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-5" target="_blank">Pinterest</a></li>
+                    <li><a href="http://www.instagram.com/startribune/" class="footer-social-instagram" data-linkname="Instagram" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-6" target="_blank">Instagram</a></li>
+                    <li><a href="http://startribune.tumblr.com/" class="footer-social-tumblr" data-linkname="Tumblr" data-linktype="social navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-7" target="_blank">Tumblr</a></li>
+                </ul>
+            </div><!-- footer-social-mod-->
+
+            
+        </div><!-- footer-top-mod -->
+
+                <div class="footer-navigation-mod">
+                                        <div class="footer-navigation-col col-1">
+                                            <h4 class="footer-group-h">Company</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribunecompany.com/" data-linkname="About the Star Tribune" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-7">About the Star Tribune</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/contact-us/" data-linkname="Contact us" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-8">Contact us</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/work-for-us/" data-linkname="Jobs" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-9">Jobs</a></li>
+                                                                                                        <li><a href="http://nieonline.com/startribune/" data-linkname="News in Education" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-10">News in Education</a></li>
+                                                                                                        <li><a href="http://www.citypages.com/" data-linkname="City Pages" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-11">City Pages</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/sports/preps/" data-linkname="High school sports hubs" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-12">High school sports hubs</a></li>
+                                                                                                        <li><a href="http://apps.startribune.com/news/mobile-products/" data-linkname="Mobile and tablet apps" data-linktype="company navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-13">Mobile and tablet apps</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-2">
+                                            <h4 class="footer-group-h">Advertise with us</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribunecompany.com/mediakit/contact.php" data-linkname="Talk with a business consultant" data-linktype="advertise navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-14">Talk with a business consultant</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/mediakit/" data-linkname="Media kit" data-linktype="advertise navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-15">Media kit</a></li>
+                                                                                                        <li><a href="http://startribune.adperfect.com/" data-linkname="Classifieds" data-linktype="advertise navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-16">Classifieds</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-3">
+                                            <h4 class="footer-group-h">Buy</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://shop.startribune.com/" data-linkname="Star Tribune Store" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-17">Star Tribune Store</a></li>
+                                                                                                        <li><a href="https://shop.startribune.com/product/photo-print-request/" data-linkname="Photo Reprints" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-18">Photo Reprints</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/archives/" data-linkname="Archived articles" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-19">Archived articles</a></li>
+                                                                                                        <li><a href="http://www.startribunecompany.com/contact-us/#_newspaper_back" data-linkname="Back Copies" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-20">Back Copies</a></li>
+                                                                                                        <li><a href="http://reprints.ygsgroup.com/m/startribune/" data-linkname="Commercial reprints" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-21">Commercial reprints</a></li>
+                                                                                                        <li><a href="https://secure.startribune.com/company/ic/home/newspaper/permission_new.htm" data-linkname="Licensing" data-linktype="ecommerce navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-22">Licensing</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-4">
+                                            <h4 class="footer-group-h">Customer support</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribune.com/contactus/" data-linkname="Feedback" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-23">Feedback</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/membercenter/" data-linkname="Manage your account" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-24">Manage your account</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/subscriptionservices/" data-linkname="Newspaper subscription" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-25">Newspaper subscription</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/digitalaccess/" data-linkname="Digital access" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-26">Digital access</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/eedition/" data-linkname="eEdition" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-27">eEdition</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/subscriptionservices/" data-linkname="Vacation hold/billing" data-linktype="support navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-28">Vacation hold/billing</a></li>
+                                                                                                </ul>
+                                                            </div>
+                            <div class="footer-navigation-col col-5">
+                                            <h4 class="footer-group-h">Website</h4>
+                                                    <ul class="footer-navigation-links">
+                                                                    <li><a href="http://www.startribune.com/terms/" data-linkname="Terms of use" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-29">Terms of use</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/privacy/" data-linkname="Privacy policy" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-30">Privacy policy</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/siteindex/" data-linkname="Site index" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-31">Site index</a></li>
+                                                                                                        <li><a href="http://www.startribune.com/rss-index/112994779/" data-linkname="RSS" data-linktype="website navigation" data-modulename="Page Navigation Bottom" data-moduletype="footer-page-nav" data-position="0-32">RSS</a></li>
+                                                                                                </ul>
+                                                            </div>
+                    </div><!--footer-navigation-mod -->
+    </nav><!-- l-footer-inner -->
+</div><!--l-footer-container-->
+
+<div class="l-footer-container footer-copyright-mod">
+    <div class="l-footer-inner">
+        <p class="footer-copyright">&copy; 2016 StarTribune. All rights reserved.</p>
+    </div><!-- l-footer-inner -->
+</div><!--l-footer-container-->
+
+
+    
+  
+  
+    <script type="text/javascript" src="http://assets.startribune.com/static/min/footer.min.js?d=1464807625"></script>
+  
+  <!-- our JS modules -->
+  <!-- <script type="text/javascript" src="http://assets.startribune.com/static/js/ad.js"></script> -->
+
+  <!-- per-page JS modules -->
+          <script type="text/javascript" src="http://assets.startribune.com/static/min/article.min.js?d=1464807624"></script>
+    
+    <script>
+        $(function() {
+            ST_sharetools.init('.l-article-body');
+        });
+    </script>
+
+            <script type="text/javascript">
+            if( typeof( $.cookie( 'session_cookie_set' ) ) === 'undefined' ) {
+                jQuery.get( 'http://' + document.domain + '/login/session' );
+            }
+        </script>
+    
+            <script type="text/javascript">
+            var st_reload = 1200000;
+        </script>
+    
+        
+  <!-- housing page JS modules // this placement resolves script conflicts -->
+  
+  
+<!-- Start Omniture Tag -->
+    <script type="text/javascript" src="http://www.startribune.com/analytics-assets/sitecatalyst/StarTribunePageConfiguration.js?d=1464807266"></script>
+
+<script>
+    // Optimizely Adobe Analytics SiteCatalyst Integration code
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push('activateSiteCatalyst');
+</script>
+<script type="text/javascript">
+    //Impression Tracking
+    var impression_map = {};
+    var evar_map = {};
+    //Code removed because we are not currently doing impression tracking.
+    //Pageload Tracking
+                                        s.prop1 = 'D=g';
+                                                            s.prop2 = 'V20160601';
+                                
+            s.events = 'event31,event32';
+                                                s.channel = '';
+                                                            s.server = 'startribune.com';
+                                                            s.eVar61 = '+1';
+                                                            s.prop22 = '1';
+                                                            s.prop23 = '';
+                                                            s.prop56 = '';
+                                                            s.prop7 = '';
+                                                            s.prop3 = 'story';
+                                                            s.prop4 = 'Star Tribune';
+                                                            s.prop24 = 'article';
+                                                            s.prop35 = ' Star Tribune';
+                                                            s.prop45 = '';
+                                                            s.prop65 = 'May 20, 2016';
+                                                            s.prop74 = '4';
+                                                            s.prop75 = '2995';
+                                                            s.pageName = 'Fatal police encounters';
+                        
+          var storyExists = 'true';
+      var sidewaysEligible = 'false';
+      if(storyExists == 'true' && sidewaysEligible == 'true' && typeof referrerCheck != 'undefined' && referrerCheck()) {
+        s.prop56 = "PerfectMarket";
+      }
+    
+    
+    //
+    // Special check for override templates to track whether they have ads
+    //
+    (function($, s) {
+        var adCount = 0;
+        //
+        // If we aren't on sideways, don't count those ads
+        // (Sideways ads are built client-side; the scaffolding always exists.)
+        //
+        if( typeof s.prop56 === 'undefined' || s.prop56 === '' ) {
+            var adDivs = $('.dfp-ad-container').not( '.sideways-ad' );
+        } else {
+            var adDivs = $('.dfp-ad-container');
+        }
+        for( var i = 0, j = adDivs.length; i < j; i++ ) {
+            //
+            // CSS is hiding ad, skip it
+            //
+            if( $(adDivs[i]).is(':hidden' ) ) {
+                continue;
+            }
+            //
+            // Don't count ads in the navigation bar
+            //
+            var adDivIdParts = adDivs[i].id.split('-');
+            var adNameParts = adDivIdParts.slice(4, adDivIdParts.length);
+            var adName = adNameParts.join('-');
+            if( $.inArray( adName, [ 'navtab', 'nav-flag' ] ) !== -1 ) {
+                continue;
+            }
+            //
+            // Whatever is left is a valid ad
+            //
+            adCount++;
+        }
+        s.prop54 = ( adCount > 0 ) ? 'Override Template Ads' : 'Override Template No Ads';
+    })(jQuery, s);
+    
+  if(isWelcomeShowing()){
+    s.prop21 = "Welcome Screen";
+  }
+    var s_code=s.t();if(s_code)document.write(s_code);
+    //Click Tracking
+    function userInteraction(events, vars, linkName) {
+        try {
+            s.linkTrackEvents = events.join(',');
+            s.events = s.linkTrackEvents;
+            s.linkTrackVars = 'events';
+            if (typeof vars === 'object') {
+                for (var key in vars) {
+                    if (vars.hasOwnProperty(key)) {
+                        s[key] = vars[key];
+                        s.linkTrackVars += ',' + key;
+                    }
+                }
+            }
+            s.tl(this, 'o', 'user interaction: ' + linkName);
+        } catch (e) {}
+    }
+    function trackClick( clickData ) {
+        //var impression = impression_map[clickData.key];
+        //var impressionEvar = evar_map[clickData.key];
+        userInteraction(clickData.events, {
+            'eVar44':'startribune.com',
+            'eVar45':clickData.modulename,
+            'eVar46':'D=pageName',
+            'eVar47':clickData.linkPosition,
+            'eVar48':clickData.linkname,
+            'eVar50':clickData.zonetype,
+            'eVar58':clickData.linktype,
+            'eVar73':clickData.moduletype,
+            'eVar74':'story',
+            'eVar75':clickData.modulePosition,
+            //'products':'D="' + impression + '"'
+        }, clickData.linkname );
+    }
+    $(document).ready(function() {
+        $("a, input[type=submit]").on('click', function() {
+            analyticsClickTracking($(this));
+            return true;
+        });
+        if ( $('.fly-in').length > 0 ) {
+            // Add a data attribute to the meter fly-in so it will be detected by click tracking
+            $('.fly-in-start-btn').attr('data-linkname', 'fly-in');
+        }
+    });
+</script>
+<!-- End Omniture Tag -->
+
+<!-- Begin Chartbeat Tag -->
+<script type="text/javascript">
+    var _sf_async_config={uid:19787,domain:"startribune.com",sections:s.channel,authors:s.prop35,useCanonical:true};
+    var chartBeatAwesomeUser;
+    var samlId = readCookie('st_usr_saml_id');
+    if (!isNaN( parseInt(samlId) )) {
+        chartBeatAwesomeUser = 'lgdin';
+    }
+    else {
+        chartBeatAwesomeUser = 'anon';
+    }
+    if (!isNaN( parseInt(getUserSubscriptionId()) )) {
+        chartBeatAwesomeUser = 'paid';
+    }
+    var _cbq=window._cbq||[];
+    _cbq.push(['_acct',chartBeatAwesomeUser]);
+    (function(){
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+                (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+                "js/chartbeat_pub.js");
+            document.body.appendChild(e);
+        }
+        jQuery(function(){loadChartbeat();});
+    })();
+</script>
+<!-- End Chartbeat Tag -->
+
+
+    
+
+  <script type="text/javascript">
+var reloadTimerLong = null;
+if(typeof reloadTimerActive === 'undefined') {
+  var reloadTimerActive = true;
+}
+reloadTimerLong = window.setTimeout(function() { if(reloadTimerActive) { window.location.reload(false); } } , 3600000 );
+</script>
+
+      <script type="text/javascript">
+            window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
+      </script>
+      
+</body>
 </html>

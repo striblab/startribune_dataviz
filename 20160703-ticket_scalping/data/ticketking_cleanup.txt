@@ -1,0 +1,7 @@
+1. Copy raw data into Sublime Text
+2. Replace "2016." with "2016.\n" in regex find/replace
+3. Replace ">" with "	"
+4. Past back into Excel
+5. Header:
+
+Garbage	Junk	Bool1	Bool2	Blank1	Blank2	SR	Section	Row	Quantity	Price	ID	Notes

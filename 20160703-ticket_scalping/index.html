@@ -1,0 +1,379 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ticket Scalping Data Analysis</title>
+  <meta name="description" content="Ticket Scalping Data Analysis">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+  
+  <style>
+   .section { text-align:center; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:20px; border-bottom:solid 1px #ddd; clear:both; height:auto; }
+   .title { font-size:1.5em; font-weight:bold; }
+   .icon img { width:80px; height:80px; text-align:center; }
+   .seating, .infobox { float:left; width:48%; text-align:center; }
+   .chart, .datapoints { float:right; width:48%; height:200px; }
+   .chatter { clear:both; }
+   .seating img { width:300px; }
+
+   #chart .c3-line { stroke-width:6px !important; }
+
+   .date { font-size:.8em; padding:7px; }
+
+   .restricted { background-color:#AA3939; padding:5px; font-weight:900; }
+   .unrestricted { background-color:#2D882D; padding:5px; font-weight:900; }
+   .mixed { background-color:#ddd; padding:5px; font-weight:900; }
+
+   .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; }
+   .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+   ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+   .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+   .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+   header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+   .c3-tooltip th { background-color:#aaa;font-size:12px;padding:2px 5px;text-align:left;color:#FFF;font-family:"Benton Sans"; }
+
+   .chatter { text-align:left; }
+
+   .primary { background-color:#226666; color:#fff; padding:5px; }
+   .secondary { background-color:#AA6C39; color:#fff; padding:5px; }
+
+   @media (max-width:920px) {
+   .seating, .infobox { float:none; width:100%; }
+   .chart, .datapoints { float:none; width:100%;}
+   }
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+
+<div class="section">
+  <div class="chatter">Intro explainer</div>
+</div> 
+
+<!-- <div class="section">
+<div class="icon"><img src="img/electric.png" /></div>
+<div class="title">ACDC</div>
+<div class="date">2/14/2016</div>
+<div class="venue">XCEL Energy Center - St. Paul, MN</div>
+<div class="type mixed">Mixed</div>
+
+<div class="chatter">Chatter here</div>
+
+<div class="seating"><img src="img/xcel_adele.png" width="100%" /></div>
+<div class="chart" id="acdcChart"></div>
+<div class="breaker"></div>
+</div> -->
+
+<div class="section">
+<div class="icon"><img src="img/microphone2.png" /></div>
+<div class="title">Beyonce</div>
+<div class="date">5/23/2016</div>
+<div class="venue">TCF Bank Stadium - Minneapolis, MN</div>
+<div class="type unrestricted">Unrestricted</div>
+
+<div class="seating"><img src="img/tcf_beyonce.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="beyonceChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">One of the most popular shows of year was announced without any ticket purchasing or reselling restrictions, resulting in an influx of scalped tickets into the secondary market.</div>
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+<div class="section">
+<div class="icon"><img src="img/microphone.png" /></div>
+<div class="title">Adele</div>
+<div class="date">7/5/2016-7/6/2016</div>
+<div class="venue">XCEL Energy Center - St. Paul, MN</div>
+<div class="type restricted">Restricted</div>
+
+<div class="seating"><img src="img/xcel_adele.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="adeleChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">The other huge show to hit the Twin Cities was Adele, who takes a dim view of ticket scalping and insisted on credit card verification for all attendees, which effectively curbed scalping activity for her twin concerts in July.</div>
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+<div class="section">
+<div class="icon"><img src="img/acoustic2.png" /></div>
+<div class="title">Bruce Springsteen</div>
+<div class="date">2/29/2016</div>
+<div class="venue">XCEL Energy Center - St. Paul, MN</div>
+<div class="type restricted">Restricted</div>
+
+<div class="seating"><img src="img/xcel_springsteen.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="springsteenChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">At the end of 2015, Bruce Springsteen similarly insisted on credit card verification through TicketMaster, but his efforts to stop scalpers were not as effective as Adele's.</div>
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+<div class="section">
+<div class="icon"><img src="img/guitar3.png" /></div>
+<div class="title">Father John Misty</div>
+<div class="date">4/16/2016</div>
+<div class="venue">Northrop Auditorium - Minneapolis, MN</div>
+<div class="type unrestricted">Unrestricted</div>
+
+<div class="seating"><img src="img/northrop_misty.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="mistyChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">Not even smaller shows at smaller venues escape the notice of ticket scalpers as 100+ seats at Northrop found their way onto the secondary market.</div>
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+<div class="section">
+<div class="icon"><img src="img/acoustic.png" /></div>
+<div class="title">Paul McCartney</div>
+<div class="date">5/4/2016*</div>
+<div class="venue">Target Center - Minneapolis, MN</div>
+<div class="type unrestricted">Unrestricted</div>
+
+<div class="seating"><img src="img/target_mccartney.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="mccartneyChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">The Beatle alum's May show didn't have any special ticket sale restrictions, but it's two-night doubleheader put a lot of tickets on the market.</div>
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+<div class="section">
+<div class="icon"><img src="img/banjo.png" /></div>
+<div class="title">Zac Brown Band</div>
+<div class="date">5/26/2016</div>
+<div class="venue">Target Field - Minneapolis, MN</div>
+<div class="type unrestricted">Unrestricted</div>
+
+<div class="seating"><img src="img/targetfield_zacbrown.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="zacbrownChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">The Zac Brown Band's first big stadium show in Minnesota was met with mixed reviews and meager crowds over Memorial Day weekend. Scalpers knew they would be left holding the bag if they swept up a lot of the 37,000 Target Field tickets for sale.</div>
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+<div class="section">
+<div class="icon"><img src="img/football.png" /></div>
+<div class="title">Superbowl 50</div>
+<div class="date">2/7/2016</div>
+<div class="venue">Levi's Stadium - Santa Clara, CA</div>
+<div class="type mixed">Mixed</div>
+
+<div class="seating"><img src="img/superbowl50.png" width="100%" /></div>
+<div class="chart">
+  <div class="chartTitle"><span class="primary">Primary</span> vs. <span class="secondary">secondary</span> tickets available</div>
+  <div id="superbowlChart"></div>
+</div>
+<div class="breaker"></div>
+<div class="infobox">
+  <h3>What we learned</h3>
+<div class="chatter">Last season's Superbowl, while not technically a musical event -- despite the half time show -- was scraped to see how much ticket scalping took place for America's largest sporting event.</div>
+
+</div>
+<div class="datapoints">
+  <h3>Datapoints</h3>
+  <li>Point 1</li>
+  <li>Point 2</li>
+  <li>Point 3</li>
+</div>
+<div class="breaker"></div>
+</div>
+
+  </div>
+</body>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=totals", function(error, json) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=adele", function(error, json2) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=misty", function(error, json3) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=beyonce", function(error, json4) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=mccartney", function(error, json5) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=zacbrown", function(error, json6) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=ncaa", function(error, json7) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=springsteen", function(error, json8) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=superbowl", function(error, json9) {
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1gYpbP48cXP2Bd603q3X2dVinyTwAWq2gHmSQ9T6ibzI&sheet=acdc", function(error, json10) {
+
+var dataTotals = json.totals;
+// var dataAdele = json2.adele;
+// var dataMisty = json3.misty;
+// var dataBeyonce = json4.beyonce;
+// var dataMcCartney = json5.mccartney;
+// var dataZac = json6.zacbrown;
+// var dataNCAA = json7.ncaa;
+// var dataSpringsteen = json8.springsteen;
+// var dataSuperbowl = json9.superbowl;
+// var dataACDC = json10.acdc;
+
+function buildLines(container,concert,dataCompare) {
+var lineChart;
+
+var total = 0;
+var stubhub = 0;
+vividseats = 0;
+
+for (var i=0; i < dataCompare.length; i++){
+  if (concert == dataCompare[i].slug){
+    console.log(dataCompare[i].tickets_available)
+    total = Number(dataCompare[i].tickets_available) - Number(dataCompare[i].stubhub_seats) - Number(dataCompare[i].vividseats_list);
+    stubhub = Number(dataCompare[i].stubhub_seats);
+    vividseats = Number(dataCompare[i].vividseats_list);
+  }
+}
+
+
+var  padding = {
+        top: 20,
+        right: 40,
+        bottom: 20,
+        left: 100,
+    };
+
+lineChart = c3.generate({
+        bindto: container,
+        size: { height: 200 },
+        padding: padding,
+        data: {
+        columns: [
+            ['VividSeats',vividseats],
+            ['StubHub',stubhub],
+            ['Primary',total]
+            ],
+        type: 'bar',
+        colors: {
+            'VividSeats': '#AA6C39',
+            'StubHub': '#AA6C39',
+            'Primary': '#226666'
+        },
+        groups: [
+            ['VividSeats', 'StubHub']
+        ]
+    },
+    axis: {
+        x: {
+            type: 'category',
+            categories: ['Available Tickets']
+        },
+        y: {
+          tick: { 
+            format: d3.format(",.0f"),
+            count: 4
+             }
+        }
+    },
+    grid: {
+        y: {
+            lines: [{value:0}]
+        }
+    }
+});
+
+
+}
+
+buildLines("#superbowlChart","superbowl",dataTotals);
+buildLines("#springsteenChart","springsteen",dataTotals);
+
+buildLines("#adeleChart","adele",dataTotals);
+buildLines("#zacbrownChart","brown",dataTotals);
+buildLines("#mccartneyChart","mccartney",dataTotals);
+
+buildLines("#beyonceChart","beyonce",dataTotals);
+buildLines("#mistyChart","misty",dataTotals);
+
+});
+// });
+// });
+// });
+// });
+// });
+// });
+// });
+// });
+// });
+</script>
+
+</html>

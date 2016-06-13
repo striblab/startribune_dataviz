@@ -1,0 +1,34 @@
+Data verify
+
+Data finalize
+
+Data distill
+
+Concert List
+-presale
+-sale
+-performance dates
+
+Total tickets available
+-by quantity
+-by value
+
+Cross-reference tickets across sites
+
+Tickets "sold" over snapshots
+
+Figure out ticketing scalping process
+
+Determine what happens when tickets disappear from database
+
+Viz Layout
+
+Icons
+
+Charts
+
+Seating maps
+
+
+
+
