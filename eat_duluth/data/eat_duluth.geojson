@@ -1,0 +1,967 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094516,46.781947 ]
+    },
+    "properties": {
+    "name":"Blue Heron Trading Co.",
+    "address":"394 S. Lake Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-722-8799",
+    "website":"theblueherontradingcompany.com",
+    "where":"Canal Park",
+    "notes":"A one-stop shopping selection of Duluth's artisanal culinary community. Find everything from Epicurean's Lake Superior-shaped wood-fiber cutting boards to gooseberry-allspice-clove jam from the Duluth Preserving Co.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open weekdays 10-8, Saturday 10-9, Sunday 10-5."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.09383,46.784832 ]
+    },
+    "properties": {
+    "name":"Canal Park Brewing Co.",
+    "address":"300 Canal Park Dr.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-464-4790",
+    "website":"canalparkbrewery.com",
+    "where":"Canal Park",
+    "notes":"Bursting with energy, great looks, an exceptional location and a rare lakeside patio, Canal Park Brewing Co. has plenty of assets. The beer is brewed in a showy, watch-them-work facility, and the kitchen earns points for its skill at turning out approachable, beer friendly fare. The lively dining room is one of the city's better-looking dining venues, and the patio is also a â€˜beaut.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"late",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.096728,46.784686 ]
+    },
+    "properties": {
+    "name":"Endion Station",
+    "address":"200 Lake Place Dr.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-722-1622",
+    "website":"endionstation.com",
+    "where":"Canal Park",
+    "notes":"How great to see this historic building â€“ it's a former railway station, relocated to this primo from just up the lakeshore â€“ finally get a tenant that's worthy of its beauty and primo Canal Park address. It's the work of the Fitger's Brewhouse folks, which means the bar is all about beer (and cider), and the menu covers the pizza-sandwich-salad circuit. Nice patio, too.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094648,46.783081 ]
+    },
+    "properties": {
+    "name":"Fizzy Waters",
+    "address":"339 Canal Park Dr.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-464-0217",
+    "website":"fizzywatersofduluth.com",
+    "where":"Canal Park",
+    "notes":"Enjoy a happy reunion with soda pops of old â€“ there are hundreds of vintage labels on hand â€“ or quench your thirst at the soda fountain, where three premium roots beers and a pair of ever-changing sodas are kept on hand.",
+    "family":"family",
+    "cheap":"cheap eats",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 10-10 Monday-Thursday, 10 am-11 pm Friday-Saturday, 10-9:30 Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.093296,46.780123 ]
+    },
+    "properties": {
+    "name":"Grandma's Saloon & Grill",
+    "address":"522 Lake Av. S.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-727-4192",
+    "website":"grandmasrestaurants.com",
+    "where":"Canal Park",
+    "notes":"This original member of the family of restaurants (Bellisio's, Little Angie's Cantina and Grill, the Sports Garden Bar & Grill) helped spark the rejuvenation of the Canal Park district. The all-American menu is full of crowd-pleasers, and it's still got one of the city's best outdoor dining venues: a rooftop patio, with grab-the-camera views of the Aerial Lift Bridge.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094516,46.781947 ]
+    },
+    "properties": {
+    "name":"Lake Avenue Restaurant & Bar",
+    "address":"394 S. Lake Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-722-2355",
+    "website":"lakeavenuerestaurantandbar.com",
+    "where":"Canal Park",
+    "notes":"Chef Tony Beran's ambitious cooking has revitalized this DeWitt-Seitz Building institution, making it a favorite at lunch, dinner and weekend brunch. The bar is no slouch, either, with craft cocktailing that's rooted in micro-distillery spirits and liqueurs.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"brunch",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"cocktails",
+    "hours":"Open for lunch weekdays, dinner daily, weekend brunch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094516,46.781947 ]
+    },
+    "properties": {
+    "name":"Northern Waters Smokehaus",
+    "address":"394 S. Lake Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-724-7307",
+    "website":"northernwaterssmokehaus.com",
+    "where":"Canal Park",
+    "notes":"For the past 15 years, Eric Goerdt's sandwich shop has been as compelling a draw for Duluth visitors as a Glensheen guided tour. But â€œsandwich shopâ€ doesn't do it justice; this tiny, always-packed destination is a beacon to the fine arts of smoking and curing. Highlights include the sublime bison pastrami, fat-flecked saucisson sec, exquisite coppa and Lake Superior whitefish.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 10-8 Monday-Saturday, 10-6 Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.09404,46.779898 ]
+    },
+    "properties": {
+    "name":"Vikre Distillery",
+    "address":"525 S. Lake Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-481-7401",
+    "website":"vikredistillery.com",
+    "where":"Canal Park",
+    "notes":"Emily and Joel Vikre left careers in Boston to return to Emily's hometown, where they're converting Lake Superior's pristine waters into gins, aquavit, vodka and whiskey. The convivial cocktail room at the couple's fascinating Canal Park operation (free tours are available daily at 5:30 p.m.) is the place to savor Duluth tastiest, most imaginative cocktails.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"cocktails",
+    "hours":"Open 2-11 daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.096916,46.78813 ]
+    },
+    "properties": {
+    "name":"Duluth Coffee Co.",
+    "address":"105 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-464-5025",
+    "website":"duluthcoffeecompany.com",
+    "where":"Downtown",
+    "notes":"The city's most proficient caffeination station is where owner Eric Faust channels his deep insight into sourcing, roasting and brewing; those skills and passion are evident in each fastidiously crafted latte. The counter is loaded with beautifully crafted sweets (fruit-filled hand pies, the city's best chocolate chip cookie) from baker Amanda Belcher's Zenith Bread Project.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 6:30-5 weekdays, 8-3 weekends"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.09063,46.792405 ]
+    },
+    "properties": {
+    "name":"Fitger's Brewhouse",
+    "address":"600 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-279-2739",
+    "website":"fitgersbrewhouse.com",
+    "where":"Downtown",
+    "notes":"Fitger's Brewhouse has been an influential force on the Duluth dining â€“ and beer â€“ scene for 21 years. The gastropub fare is simple but not simplistic, and it's a fine match for brewmaster Frank Kaszuba's skillfully crafted ales and lagers.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.091511,46.791664 ]
+    },
+    "properties": {
+    "name":"Pickwick Restaurant & Pub",
+    "address":"508 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-623-7425",
+    "website":"pickwickduluth.com",
+    "where":"Downtown",
+    "notes":"Duluth's 102-year-old steakhouse-supper club classic hasn't relinquished one iota of its Old World charm. Go for the char-broiled steaks (and the way the kitchen celebrates Lake Superior-caught whitefish), stay for the signature deep-fried delight that is the pepper cheeseburger.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.097911,46.787649 ]
+    },
+    "properties": {
+    "name":"Pizza Luce",
+    "address":"11 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-727-7400",
+    "website":"pizzaluce.com",
+    "where":"Downtown",
+    "notes":"The city's late-night scene is owned by this Twin Cities favorite, which keeps the ovens fired up until 2 a.m. Sunday through Thursday nights, and 2:30 a.m. Friday and Saturday nights. Weekend brunch includes a breakfast pizza, naturally (it's topped with hash browns, bacon, sausage and scrambled eggs) but also explores omelets, burritos and Benedicts.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"brunch",
+    "late":"late",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 10:30 am-2 am Monday-Thursday, 10:30 am-2:30 am Friday, 8 am-2:30 am Saturday, 8 am-2 am Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.089411,46.793335 ]
+    },
+    "properties": {
+    "name":"PortLand Malt Shoppe",
+    "address":"716 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"",
+    "website":"portlandmaltshoppe.com",
+    "where":"Downtown",
+    "notes":"Kids of all ages will appreciate this downtown landmark, conveniently located a few steps off the Lakewalk. It's lakeside setting â€” housed in an adorable 1921 filling station straight off a movie studio back lot â€” is a major draw. The reasonably priced cones, sundaes, malts and floats are another, all made using ice cream from the Chocolate Shoppe in Madison, Wis.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 11 am-10 pm daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.089518,46.793605 ]
+    },
+    "properties": {
+    "name":"Sir Benedict's Tavern on the Lake",
+    "address":"705 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-728-1192",
+    "website":"sirbens.com",
+    "where":"Downtown",
+    "notes":"The roomy patio outside this former service station is a sunny people-watching platform. The menu is all about sandwiches and pizzas, and the bar taps a long list of local, regional and national beers.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.101108,46.784296 ]
+    },
+    "properties": {
+    "name":"Toasty's",
+    "address":"220 W. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-722-0915",
+    "website":"toastysduluth.com",
+    "where":"Downtown",
+    "notes":"This friendly counter-service shop skillfully whips up grilled cheese sandwiches to suit every whim, at budget-friendly prices. Great soups, too, including a rich onion soup perfumed with Bent Paddle Brewing Co.'s dark ale.",
+    "family":"family",
+    "cheap":"cheap eats",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.095556,46.788534 ]
+    },
+    "properties": {
+    "name":"Tycoons Zenith Alehouse",
+    "address":"132 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-623-1889",
+    "website":"http://tycoonsalehouse.com/",
+    "where":"Downtown",
+    "notes":"This sibling to Fitger's Brewhouse â€“ it's housed in the handsome Romanesque building that once housed Duluth's city hall -- has a supperclub-esque vibe upstairs. But the real treat lies in the sub basement, a remarkable rathskeller beer hall and cocktail bar that's dripping with atmosphere.  What a perfect venue for enjoying brewmaster Frank Kaszuba's big-shouldered oatmeal stout.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"brunch",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for dinner daily, weekend brunch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.088639,46.794037 ]
+    },
+    "properties": {
+    "name":"Va Bene Caffe",
+    "address":"734 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-722-1518",
+    "website":"vabenecaffe.com",
+    "where":"Downtown",
+    "notes":"The secret weapon at this Italian restaurant and deli is its screen porch, which offers shelter from Lake Superior winds without blocking Lake Superior views. Take a seat for pasta, pizza and panini (and the full bar), and for the diet-shattering desserts, but also drop by for a grab-and-go from the scoop case and its dozen varieties of gelato.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch weekdays, dinner daily, weekend brunch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094551,46.789319 ]
+    },
+    "properties": {
+    "name":"Zeitgeist Arts Cafe",
+    "address":"222 E. Superior St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-722-9100",
+    "website":"zeitgeistarts.com",
+    "where":"Downtown",
+    "notes":"This well-run restaurant, part of the lively Zeitgeist Center for Arts and Community, covers all kinds of bases â€” broiled Lake Superior whitefish sandwiches, rice bowls with shrimp and Thai chilies in a fragrant mushroom broth, lavishly topped half-pound burgers â€” in a loft-like environment. Weekend brunch is a highlight.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"brunch",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"cocktails",
+    "hours":"Open for lunch weekdays, dinner Monday-Saturday, brunch weekends"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.082896,46.810391 ]
+    },
+    "properties": {
+    "name":"At Sara's Table Chester Creek Cafe",
+    "address":"1902 E. 8th St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-724-6811",
+    "website":"astccc.net",
+    "where":"Hillside",
+    "notes":"Weekdays and weekends, nothing beats the plate-size, nutty-brown buttermilk pancakes and the hearty egg dishes from this popular and funky a.m.-to-p.m. restaurant, where the eclectic menu (shrimp-scallop paella, Vietnamese-style short ribs, Baja-style whitefish tacos) is fluent in the languages of â€œlocalâ€ and â€œorganic.â€",
+    "family":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"brunch",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for breakfast, lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.085085,46.802738 ]
+    },
+    "properties": {
+    "name":"Burrito Union",
+    "address":"1332 E. 4th St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-728-4414",
+    "website":"burritounion.com",
+    "where":"Hillside",
+    "notes":"Only in Duluth can you step outside a restaurant in the middle of the city and hear the sound of rushing water (coming, in this case, from nearby Chester Creek). This sibling to Fitger's Brewhouse taps brewmaster Frank Kaszuba's beers, and the kitchen keeps busy with burritos and other beer-friendly snacks, served in gigantic portions at budget-minded prices.",
+    "family":"family",
+    "cheap":"cheap eats",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily."
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.134652,46.76323 ]
+    },
+    "properties": {
+    "name":"Duluth's Best Bread",
+    "address":"2632 W. 3rd St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-590-5966",
+    "website":"duluthsbestbread.com",
+    "where":"Hillside",
+    "notes":"A new microbakery that's not just small in size, but in hours (just Thursday and Saturday, 9 a.m. to 1 p.m.) and selection: a few beautiful, rough-hewn breads (baker Michael Lillegard gets his inspiration from San Francisco's Tartine cookbooks), superb croissants, cinnamon rolls so popular they should probably have their own Facebook page, and addictive pecan caramel rolls.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 9-1 Thursday and Saturday only"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.074319,46.82178 ]
+    },
+    "properties": {
+    "name":"Northern Waters",
+    "address":"1608 Woodland Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-249-1957",
+    "website":"northernwaterssmokehaus.com/restaurant",
+    "where":"Hillside",
+    "notes":"The best new restaurant to open in Duluth in years is the work of Northern Waters Smokehaus owner Eric Goerdt. The name's shorter, but everything else has been pumped up: a much larger (and better looking) footprint, full-on lunch and dinner menus, and a flexible format that seamlessly moves from counter service during the day to table service in the evening. Don't miss it.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch daily, dinner Monday-Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.078089,46.817244 ]
+    },
+    "properties": {
+    "name":"Tavern on the Hill",
+    "address":"1102 Woodland Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-724-0010",
+    "website":"tavernduluth.com",
+    "where":"Hillside",
+    "notes":"For sheer size, nothing beats the sprawling indoor/outdoor setup at this slick, bustling newcomer, where the something-for-everyone menus (pizzas, flatbreads, tacos, burgers) is matched by the crowd-pleasing libations and friendly, fleet service.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"late",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094351,46.803229 ]
+    },
+    "properties": {
+    "name":"Toasty's",
+    "address":"1032 E. 9th St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-724-3336",
+    "website":"toastysduluth.com",
+    "where":"Hillside",
+    "notes":"This friendly counter-service shop skillfully whips up grilled cheese sandwiches to suit every whim, at budget-friendly prices. Great soups, too, including a rich onion soup perfumed with Bent Paddle Brewing Co.'s dark ale.",
+    "family":"family",
+    "cheap":"cheap eats",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.094268,46.79556 ]
+    },
+    "properties": {
+    "name":"Whole Foods Co-op",
+    "address":"610 E. 4th St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-728-0884",
+    "website":"wholefoods.coop",
+    "where":"Hillside",
+    "notes":"Stock the picnic basket in the impressive deli counters -- boosted by a quick breeze through the Minnesota- and Wisconsin-heavy selections in the cheese case -- at this natural foods co-op (membership not required). Dessert? The sublime whole pies â€” with their impossibly flaky, lard-fueled crusts â€” imported from the Rustic Inn Cafe in Two Harbors.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 7 am-9 pm daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.141384,46.758911 ]
+    },
+    "properties": {
+    "name":"A & Dubs",
+    "address":"3131 W. 3rd St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-624-0198",
+    "website":"",
+    "where":"Lincoln Park/West",
+    "notes":"Instead of going the Whopper or Big Mac route, take a drive down memory lane, pull up under the carports of this former A&W franchise and dig into genuine drive-in classics: double cheeseburgers, fried chicken baskets, crinkle fries, coleslaw, sundaes, shakes and floats made with the rich and refreshing house-made root beer. Friendly carhops, low prices, cash only.",
+    "family":"family",
+    "cheap":"cheap eats",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.121748,46.768042 ]
+    },
+    "properties": {
+    "name":"Bent Paddle Brewing Co.",
+    "address":"1912 W. Michigan St.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-279-2722",
+    "website":"bentpaddlebrewing.com",
+    "where":"Lincoln Park/West",
+    "notes":"The cozy taproom at this first-rate craft brewery pairs up with a host of visiting food vendors: Zenith Bread Project (pretzels!) on Wednesday, a food truck (Chow Haul, the Rambler or KBQ Ribs) on Thursday, pizza night (thanks to Log Home Wood Fired Pizza) on Friday, and burritos, tortas and tacos El Oasis Del Norte on Saturday.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open 2-10 Wednesday-Thursday, 2-11 Friday, noon-11 Saturday, noon-5 Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.129987,46.760668 ]
+    },
+    "properties": {
+    "name":"Duluth Grill",
+    "address":"118 S. 27th Av. W.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-726-1150",
+    "website":"duluthgrill.com",
+    "where":"Lincoln Park/West",
+    "notes":"Owners Tom and Jaima Hanson have ignited a nascent culinary revolution by proving that a breakfast-to-dinner operation in a former truck stop doesn't have to rely upon factory-made fare, and that the farm-to-table phenomenon doesn't have to be synonymous with expensive. The nimble, made-from-scratch cooking impresses, and the hospitality is ultra-friendly.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"brunch",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for breakfast, lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.157377,46.746973 ]
+    },
+    "properties": {
+    "name":"Whole Foods Co-op",
+    "address":"4426 Grand Av.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-728-0884",
+    "website":"wholefoods.coop",
+    "where":"Lincoln Park/West",
+    "notes":"Stock the picnic basket in the impressive deli counters -- boosted by a quick breeze through the Minnesota- and Wisconsin-heavy selections in the cheese case -- at this natural foods co-op (membership not required). Dessert? The sublime whole pies â€” with their impossibly flaky, lard-fueled crusts â€” imported from the Rustic Inn Cafe in Two Harbors.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 7 am-9 pm daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.682159,47.031657 ]
+    },
+    "properties": {
+    "name":"Cedar Coffee Co.",
+    "address":"1130 11th St.",
+    "city":"Two Harbors",
+    "state":"Minn.",
+    "phone":"218-834-2117",
+    "website":"cedarcoffeecompany.com",
+    "where":"North Shore",
+    "notes":"This newcomer is a handy spot for bike rentals and an in-the-woods respite for coffee, beer, wine, snacks and a rare crack at another up-and-coming Twin Ports artisanal food maker, Love Creamery ice cream. Yes, you should order the salted caramel.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 7-5:30 weekdays, 8-5 Saturday, 10-2 Sunday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.785452,46.949357 ]
+    },
+    "properties": {
+    "name":"Great! Lakes Candy Kitchen",
+    "address":"223 Scenic Hwy. 61",
+    "city":"Knife River",
+    "state":"Minn.",
+    "phone":"218-834-2121",
+    "website":"greatlakescandy.com",
+    "where":"North Shore",
+    "notes":"At this delightful sugar shop, the house-made caramel is so buttery that it can practically be spread on toast, the chocolate-coated sponge candy is a nostalgic treat and the bark comes in several tasty varieties. Don't leave without a Nutty Ice Cream Bar, a hefty wedge of vanilla ice cream on a stick, dipped in rich chocolate, salty roasted peanuts and toasted coconut.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 10-7 daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.875532,46.908685 ]
+    },
+    "properties": {
+    "name":"New Scenic Cafe",
+    "address":"5461 North Shore Dr.",
+    "city":"Duluth",
+    "state":"Minn.",
+    "phone":"218-525-6274",
+    "website":"newscenicafe.com",
+    "where":"North Shore",
+    "notes":"This must-visit restaurant is about 20 picturesque minutes up the shore from Canal Park. While the address is definitely more rural than urban, chef/owner Scott Graden cooks with big-city finesse that's suitable for an impromptu lunch or a special-occasion dinner. His far-flung menu, a reflection of his world travels, continually surprises and delights. The pie? Spectacular.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.785452,46.949357 ]
+    },
+    "properties": {
+    "name":"Russ Kendall's Smoke House",
+    "address":"149 Scenic Hwy. 61",
+    "city":"Knife River",
+    "state":"Minn.",
+    "phone":"218-834-5995",
+    "website":"",
+    "where":"North Shore",
+    "notes":"While driving up the shore on the old Scenic Highway (a must, by the way), be on the lookout for the neon sign that should spell out â€œSTOPâ€ but instead modestly announces â€œKendall's.â€ This North Shore institution features a stock-the-cooler selection of smoked herring, sugar-cured smoked lake trout and cisco, pickled herring and other delicacies.",
+    "family":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 9:30-6 daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.103609,46.724958 ]
+    },
+    "properties": {
+    "name":"A Dozen Excuses Donuts",
+    "address":"1112 Tower Av.",
+    "city":"Superior",
+    "state":"Wis.",
+    "phone":"218-409-2525",
+    "website":"adozenexcuses.com",
+    "where":"Superior",
+    "notes":"Skip the local Dunkin' Donuts franchise and go local. Owners Melissa Kindgren, Reggie Crawford and Cliff Lindberg crank out several dozen lavishly topped varieties â€” banana split! strawberry shortcake! â€” doughnuts, in both cake and raised varieties. The trio also do a brisk business in beef-filled pasties and Coney Island-style hot dogs.",
+    "family":"family",
+    "cheap":"cheap eats",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open 6-3 weekdays, 6-2 Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.104186,46.73331 ]
+    },
+    "properties": {
+    "name":"Anchor Bar & Grill",
+    "address":"413 Tower Av.",
+    "city":"Superior",
+    "state":"Wis.",
+    "phone":"715-394-9747",
+    "website":"anchorbarandgrill.com",
+    "where":"Superior",
+    "notes":"At Superior's most enduring dive bar, it's all about the burgers, which are easily the Twin Ports' most enduring guilty pleasure. They weigh in at a third of a pound, and most fall within the $5-and-under range. The house specialty? The one that's studded with cashews and blanketed in Swiss cheese.",
+    "family":"#",
+    "cheap":"cheap eats",
+    "patio":"#",
+    "brunch":"#",
+    "late":"late",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.097267,46.726913 ]
+    },
+    "properties": {
+    "name":"Spirit Room",
+    "address":"1323 Broadway St.",
+    "city":"Superior",
+    "state":"Wis.",
+    "phone":"715-817-4775",
+    "website":"spirit-room.com",
+    "where":"Superior",
+    "notes":"What a find: At this handsomely appointed respite for grown-ups, the bar shakes up a half-dozen inventive spins of what is surely the official Wisconsin state cocktail, the Old Fashioned. Chef Zac Simonen turns out an impressive (and impressively affordable) array of small plates (get the scallops with earthy mushrooms).",
+    "family":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"cocktails",
+    "hours":"Open for dinner Tuesday-Saturday, lunch Saturday"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.102116,46.726911 ]
+    },
+    "properties": {
+    "name":"Thirsty Pagan Brewing",
+    "address":"1623 Broadway St.",
+    "city":"Superior",
+    "state":"Wis.",
+    "phone":"715-394-2500",
+    "website":"thirstypaganbrewing.com",
+    "where":"Superior",
+    "notes":"Inside this fun-loving Superior destination (it's a former creamery), there's always something intriguing and offbeat on tap (try brewmaster Steve Knauss' rendition of Berliner Weisse, a sour taste of summer blended with rhubarb sauce), and the well-made deep-dish pizza covers all the right bases.",
+    "family":"#",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "late":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"Open for lunch and dinner daily"
+    }
+  }
+]
+}
