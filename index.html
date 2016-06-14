@@ -486,7 +486,7 @@ else { var git = ""; }
 
 var dateString = (new Date(d.dateUpdated).getMonth() + 1) + "/" + (new Date(d.dateUpdated).getDate()) + "/" + new Date(d.dateUpdated).getFullYear()
 
-  return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>by " + d.byline + "</div><div class='date'>" + dateString + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
+  return "<div class='articleName tease-headline'><div style='display:none;' id='tags'>" + d.articleType + " </div><a href='" + d.articleURL + "' target='new_' >"+ d.articleName + "</a></div><div class='byline'>" + d.byline + "</div><div class='date'>" + dateString + "</div><div class='articlePhoto'><a href='" + d.articleURL + "' target='new_' ><img src='" + d.thumbnail + "' /></a></div>" + git;
 
 });
 
