@@ -81,9 +81,6 @@
             cursor: pointer;
             margin: 0 !important;
         }
-        #table {
-            /*height:300px; overflow-y:auto; overflow-x:hidden;*/
-        }
         .step {
             padding: 5px;
             display: inline-block;
@@ -406,7 +403,8 @@
         .card.selected {
             padding: 9px;
         }
-        #table div:first-child {} #table div:last-child {
+        #table div:first-child {}
+        #table div:last-child {
             border: none;
         }
         #wrapper {} #rightSide {
@@ -561,7 +559,7 @@
 
             #rightSide{width:100%;float:none;}
             #table {
-    max-height: auto;
+    max-height: 3000px;
     overflow: visible;
 }
 
@@ -578,6 +576,9 @@
     position: relative;
 }
 #table::after, #table::before{display:none;}
+        .item-scroll {
+            margin-top: 0px;
+        }
 
         }
     </style>
