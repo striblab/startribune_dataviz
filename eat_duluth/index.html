@@ -589,15 +589,17 @@
 <div id="phone" class="stat"></div>
 <div id="website" class="stat"></div>
 <div id="area" class="stat"></div>
-<div id="hours" class="stat"></div>
-<div id="cheap" class="stat"></div>
-<div id="family" class="stat"></div>
-<div id="patio" class="stat"></div>
-<div id="brunch" class="stat"></div>
-<div id="late" class="stat"></div>
-<div id="sweets" class="stat"></div>
-<div id="beer" class="stat"></div>
-<div id="cocktails" class="stat"></div>
+<ul>
+<li id="hours" class="stat"></li>
+<li id="cheap" class="stat"></li>
+<li id="family" class="stat"></li>
+<li id="patio" class="stat"></li>
+<li id="brunch" class="stat"></li>
+<li id="late" class="stat"></li>
+<li id="sweets" class="stat"></li>
+<li id="beer" class="stat"></li>
+<li id="cocktails" class="stat"></li>
+</ul>
 <div id="notes" class="stat"></div>
 </div>
 </div>
@@ -665,6 +667,8 @@ function addBoxes() {
   }); 
 }
 
+$("li").hide();
+
 function spillSites(){
 d3.select("#table").selectAll(".card")
   .data(data).enter().append("div")
@@ -682,14 +686,15 @@ d3.select("#table").selectAll(".card")
     $("#infobox #website, .pwebsite").html("<a href='" + d.website + "' target='new_'>Website</a>");
     $("#infobox #area, .parea").html(d.where);
     $("#infobox #hours, .phours").html(d.hours);
-    if (d.cheap != "#") { $("#infobox #cheap, .pcheap").html("Cheap"); } else { $("#infobox #cheap, .pcheap").html(""); }
-    if (d.family != "#") { $("#infobox #family, .pfamily").html("Family Friendly"); } else { $("#infobox #family, .pfamily").html(""); }
-    if (d.patio != "#") { $("#infobox #patio, .ppatio").html("Patio"); } else { $("#infobox #patio, .ppatio").html(""); }
-    if (d.brunch != "#") { $("#infobox #brunch, .pbrunch").html("Weekend Brunch"); } else { $("#infobox #brunch, .pbrunch").html(""); }
-    if (d.late != "#") { $("#infobox #late, .plate").html("Late Night"); } else { $("#infobox #late, .plate").html(""); }
-    if (d.sweets != "#") { $("#infobox #sweets, .psweets").html("Sweets"); } else { $("#infobox #sweets, .psweets").html(""); }
-    if (d.beer != "#") { $("#infobox #beer, .pbeer").html("Beer"); } else { $("#infobox #beer, .pbeer").html(""); }
-    if (d.cocktails != "#") { $("#infobox #cocktails, .pcocktails").html("Cocktails"); } else { $("#infobox #cocktails, .pcocktails").html(""); }
+    $("li").hide();
+    if (d.cheap != "#") { $("#infobox #cheap, .pcheap").html("Cheap"); $("#infobox #cheap, .pcheap").show(); } else { $("#infobox #cheap, .pcheap").html(""); }
+    if (d.family != "#") { $("#infobox #family, .pfamily").html("Family Friendly"); $("#infobox #family, .pfamily").show(); } else { $("#infobox #family, .pfamily").html(""); }
+    if (d.patio != "#") { $("#infobox #patio, .ppatio").html("Patio"); $("#infobox #patio, .ppatio").show(); } else { $("#infobox #patio, .ppatio").html(""); }
+    if (d.brunch != "#") { $("#infobox #brunch, .pbrunch").html("Weekend Brunch"); $("#infobox #brunch, .pbrunch").show(); } else { $("#infobox #brunch, .pbrunch").html(""); }
+    if (d.late != "#") { $("#infobox #late, .plate").html("Late Night"); $("#infobox #late, .plate").show(); } else { $("#infobox #late, .plate").html(""); }
+    if (d.sweets != "#") { $("#infobox #sweets, .psweets").html("Sweets"); $("#infobox #sweets, .psweets").show(); } else { $("#infobox #sweets, .psweets").html(""); }
+    if (d.beer != "#") { $("#infobox #beer, .pbeer").html("Beer"); $("#infobox #beer, .pbeer").show(); } else { $("#infobox #beer, .pbeer").html(""); }
+    if (d.cocktails != "#") { $("#infobox #cocktails, .pcocktails").html("Cocktails"); $("#infobox #cocktails, .pcocktails").show() } else { $("#infobox #cocktails, .pcocktails").html(""); }
     $("#infobox #notes").html(d.notes);
 
   })
@@ -977,6 +982,7 @@ $(".zoom").click(function() {
     $(".stat").html("");
     $(".card").removeClass("selected");
     popup.remove();
+    $("li").hide();
 });
 
 map.setLayoutProperty('dots-layer-cheap', 'visibility', 'none');
