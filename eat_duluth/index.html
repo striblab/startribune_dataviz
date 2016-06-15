@@ -354,6 +354,7 @@
         .featherlight {
             display: none !important;
         }
+        .info-wrapper ul{margin:18px;}
         @media (max-width: 852px) {
             #wrapper {
                 width: 100%;
@@ -469,7 +470,6 @@
         }
         #infobox {
             background: #efefef;
-            padding: 18px;
             font-size: .95em;
             margin-top: 18px;
             min-height: 390px;
@@ -479,6 +479,7 @@
             background: #efefef;
             position: relative;
             z-index: 2;
+            padding: 18px;
         }
         #rightSide {
             position: relative;
@@ -554,6 +555,30 @@
             top: 42%;
             width: 100%;
             z-index: 1;
+        }
+
+        @media (max-width: 728px) {
+
+            #rightSide{width:100%;float:none;}
+            #table {
+    max-height: auto;
+    overflow: visible;
+}
+
+.zoom {
+    top: 200px;
+    right: 0;
+}
+.info-message{display:none;}
+#infobox {
+    background: #efefef;
+    font-size: .95em;
+    margin-top: 18px;
+    min-height: 0;
+    position: relative;
+}
+#table::after, #table::before{display:none;}
+
         }
     </style>
 
