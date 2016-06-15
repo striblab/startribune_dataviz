@@ -191,6 +191,7 @@ d3.select("#table").selectAll(".card")
   .attr("class",function(d) { return "card " + d.cheap + " " + d.family + " " + d.patio + " " + d.brunch + " " + d.late + " " + d.sweets + " " + d.beer + " " + d.cocktails; })
   .attr("longitude",function(d) { return d.longitude; })
   .attr("latitude",function(d) { return d.latitude; })
+  .attr("placeName",function(d) { return d.name; })
   .attr("pitch",function(d) { return d.pitch; })
   .attr("bearing",function(d) { return d.bearing; })
   .on("mousedown", function(d, i){ 
@@ -230,8 +231,6 @@ d3.select("#table").selectAll(".card")
       var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
       var pitch = $(this).attr("pitch") / random;
       var bearing = $(this).attr("bearing") / random;
-      console.log(bearing)
-      console.log(pitch)
       map.flyTo({ center: [$(this).attr("longitude"), $(this).attr("latitude")], zoom: 14, pitch: pitch, bearing: bearing });
       $(".card").removeClass("selected");
       $(this).addClass("selected"); 
@@ -281,16 +280,19 @@ geocoder.on('result', function(ev) {
 
 
 //CENSUS TRACTS
-  var shapeObj2 = new mapboxgl.GeoJSONSource({
-   data: dots
-});
+//   var shapeObj2 = new mapboxgl.GeoJSONSource({
+//    data: dots
+// });
 
-  map.addSource('dots', shapeObj2);
+//   map.addSource('dots', shapeObj2);
 
-    // map.addSource("polkTickets", {
-    //     type: "geojson",
-    //     data: dataTicketsPolk
-    // });
+    map.addSource("dots", {
+        type: "geojson",
+        data: dots
+        // cluster: true,
+        // clusterMaxZoom: 14,
+        // clusterRadius: 50
+    });
 
     map.addLayer({
                 "id": "dots-layer-cheap",
@@ -445,8 +447,37 @@ map.on('mousemove', function(e) {
     popup.setLngLat(e.lngLat)
         .setHTML(feature.properties.name)
         .addTo(map);
+
 });
 
+$(".card").click(function(e) {
+        var features = map.queryRenderedFeatures(e.point, { layers: ['dots-layer-cheap','dots-layer-family','dots-layer-sweets','dots-layer-patio','dots-layer-late','dots-layer-brunch','dots-layer-beer','dots-layer-cocktails','dots-layer-all'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+
+    var placeName = ""; //feature.properties.name
+  
+   // for (i=0; i < data.length; i++){
+   //  console.log(data[i].latitude)
+   //  if (data[i].latitude == $(this).attr("latitude") && data[i].longitude == $(this).attr("longitude")){
+   //    placeName = data[i].name;
+   //  }
+   // }
+
+    popup.setLngLat([$(this).attr("longitude"), $(this).attr("latitude")])
+        .setHTML($(this).attr("placeName"))
+        .addTo(map);
+});
 
 var index = 0;
 
@@ -465,7 +496,18 @@ $(".zoom").click(function() {
     map.flyTo({ center: [-92.098194, 46.786939], zoom: 8, pitch: 0, bearing: 0 });
     $(".stat").html("");
     $(".card").removeClass("selected");
+    popup.remove();
 });
+
+map.setLayoutProperty('dots-layer-cheap', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-family', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-sweets', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-patio', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-late', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-brunch', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-beer', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-cocktails', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-all', 'visibility', 'visible');
 
 $(".step").click(function() { 
 if ($(this).attr("data") != "card"){
@@ -482,14 +524,14 @@ map.setLayoutProperty('dots-layer-all', 'visibility', 'none');
 map.setLayoutProperty('dots-layer-' + $(this).attr("data"), 'visibility', 'visible');
 }
 else {
-map.setLayoutProperty('dots-layer-cheap', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-family', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-sweets', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-patio', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-late', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-brunch', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-beer', 'visibility', 'visible');
-map.setLayoutProperty('dots-layer-cocktails', 'visibility', 'visible');
+map.setLayoutProperty('dots-layer-cheap', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-family', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-sweets', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-patio', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-late', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-brunch', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-beer', 'visibility', 'none');
+map.setLayoutProperty('dots-layer-cocktails', 'visibility', 'none');
 map.setLayoutProperty('dots-layer-all', 'visibility', 'visible');
 }
 });
