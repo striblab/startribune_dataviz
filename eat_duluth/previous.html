@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,563 +16,88 @@
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
 
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif
-        }
-        #map {
-            height: 250px;
-            width: 100%;
-            background: #efefef;
-        }
-        #wrapper {
-            width: 920px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .bottom {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            clear: both;
-        }
-        .map-overlay-container {
-            width: 400px;
-        }
-        .map-overlay {
-            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            background-color: #fff;
-            border-radius: 3px;
-            padding: 10px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
-        }
-        .map-overlay h2,
-        .map-overlay p {
-            margin: 0 0 10px;
-        }
-        .mapboxgl-ctrl-attrib {
-            display: none;
-        }
-        .play {
-            background-color: #fff !important;
-            color: #000;
-        }
-        .pause {
-            background-color: #333 !important;
-            color: #fff;
-        }
-        #diverse {
-            color: #299129;
-        }
-        .stat {
-            margin-bottom: 6px;
-        }
-        #name {
-            font-weight: 900;
-            font-size: 1.2em;
-        }
-        .card {
-            padding: 3px;
-        }
-        .card:hover,
-        .step:hover,
-        .selected {
-            color: #fff;
-            background-color: #333;
-            cursor: pointer;
-            margin: 0 !important;
-        }
-        #table {
-            /*height:300px; overflow-y:auto; overflow-x:hidden;*/
-        }
-        .step {
-            padding: 5px;
-            display: inline-block;
-            text-align: left;
-            width: 100%;
-            font-size: .9em;
-            background-color: #fff;
-            font-weight: 900;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-            border: 1px solid black;
-        }
-        #filter input:focus {
-            width: 100% !important;
-        }
-        #filter input {
-            width: 100% !important;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
-            border-radius: 0 !important;
-        }
-        #geocoder-container {
-            width: 100%;
-            margin-top: 10px;
-        }
-        #geocoder-container > div {
-            min-width: 100%;
-            margin-left: 0;
-        }
-        .chatter span {
-            padding: 5px;
-        }
-        small {
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-            color: #808080;
-            clear: both;
-            display: block;
-        }
-        p {
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-        }
-        #infobox {
-            margin-top: 7px;
-            position: relative;
-        }
-        #leftSide {
-            float: left;
-            width: 32%;
-        }
-        #rightSide {
-            float: right;
-            height: 300px;
-            width: 58%;
-        }
-        .zoom {
-            text-align: center;
-            float: none !important;
-            padding: 20px;
-        }
-        .bigNum {
-            display: inline-block;
-            width: 32%;
-        }
-        .mapboxgl-popup {
-            max-width: 400px;
-            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        }
-        .marker-title {
-            font-weight: 700;
-        }
-        #legends {
-            width: 212px;
-            height: auto;
-            text-align: center;
-            margin-right: auto;
-            margin-left: auto;
-        }
-        .topLegend {
-            display: none;
-        }
-        .legendContainer {
-            text-align: center;
-            width: 212px;
-        }
-        .legend label,
-        .legend span {
-            display: block;
-            float: left;
-            height: 15px;
-            width: 30px;
-            text-align: center;
-            font-size: 12px;
-            color: #808080;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-        }
-        .legends {
-            width: 570px;
-            height: auto;
-            text-align: center;
-            margin-right: auto;
-            margin-left: auto;
-        }
-        .republican {
-            color: #F2614C;
-            fill: #F2614C !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .r1 {
-            background-color: #FF8572;
-            fill: #FF8572 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .r2 {
-            background-color: #F2634C;
-            fill: #F2634C !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .r3 {
-            background-color: #9C0004;
-            fill: #9C0004 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .r4 {
-            background-color: #4E0002;
-            fill: #4E0002 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .r0 {
-            background-color: #F2614C;
-            fill: #F2614C !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .mid {
-            background-color: #ddd;
-            fill: #ddd !important;
-            color: black !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .democrat {
-            color: #67B4C2;
-            fill: #67B4C2 !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .d1 {
-            background-color: #67B4C2;
-            fill: #67B4C2 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .d2 {
-            background-color: #4192A1;
-            fill: #4192A1 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .d3 {
-            background-color: #0D4773;
-            fill: #0D4773 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .d4 {
-            background-color: #022642;
-            fill: #022642 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .d0 {
-            background-color: #67B4C2;
-            fill: #67B4C2 !important;
-            color: white !important;
-            pointer-events: all;
-            font-weight: bold;
-        }
-        .independent {
-            fill: #E07242;
-            background-color: #E07242;
-            color: #333 !important;
-        }
-        small {
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-            color: #808080;
-            clear: both;
-            display: block;
-        }
-        .wrapper-demo {
-            width: 100%;
-        }
-        .wrapper-dropdown-1 {
-            display: inline-block;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-            z-index: 900;
-            background: #ddd;
-            color: #333;
-            cursor: pointer;
-            font-weight: bold;
-            outline: none;
-            padding: 8px;
-            position: relative;
-            width: 200px;
-            border: 1px solid #aaa;
-            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.10);
-            font-size: 14px;
-            width: 100%;
-        }
-        .wrapper-dropdown-1 .dropdown {
-            font-weight: normal;
-            left: 0;
-            list-style: none;
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            border: 1px solid #aaa;
-            background: #fff;
-            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-            margin-top: 0px !important;
-        }
-        ul.dropdown.months {
-            box-sizing: border-box;
-            margin: 0;
-            moz-box-sizing: border-box;
-            padding: 0;
-            webkit-box-sizing: border-box;
-            margin-top: -1px;
-            border-radius: 0 0 4px 4px;
-            background-clip: padding-box;
-        }
-        .wrapper-dropdown-1 .dropdown {
-            font-weight: normal;
-            left: 0;
-            list-style: none;
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            border: 1px solid #aaa;
-            background: #fff;
-            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-            margin-top: 0px !important;
-        }
-        .wrapper-dropdown-1 .dropdown li:hover a {
-            background: #EFEFEF;
-        }
-        header[role="banner"] {
-            width: 100%;
-            height: 40px;
-            z-index: 1000;
-            background: #f0f0f0;
-        }
-        .featherlight {
-            display: none !important;
-        }
-        @media (max-width: 920px) {
-            #wrapper {
-                width: 100%;
-            }
-            #leftSide {
-                float: none;
-                width: 100%;
-            }
-            #rightSide {
-                float: none;
-                width: 100%;
-                height: auto;
-            }
-            .featherlight {
-                display: block;
-            }
-        }
-        .step {
-            padding: 9px;
-            display: inline-block;
-            text-align: left;
-            width: 100%;
-            font-size: .9em;
-            background-color: #fff;
-            font-weight: 900;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-            border: 0 solid black;
-        }
-        .step:hover,
-        .selected {
-            color: #000;
-            background-color: #efefef;
-            cursor: pointer;
-            margin: 0 !important;
-        }
-        body {
-            font-size: .95em;
-        }
-        .card {
-            border: solid #ccc;
-            border-width: 0 0 1px 0;
-            padding: 9px;
-        }
-        .card:hover {
-            padding: 9px;
-            background-color: #efefef;
-            color: #000;
-        }
-        .card.selected {
-            padding: 9px;
-        }
-        #table div:first-child {} #table div:last-child {
-            border: none;
-        }
-        #wrapper {} #rightSide {
-            width: 65%;
-        }
-        #table::before {
-            content: " ";
-            position: absolute;
-            top: 0;
-            width: 100%;
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+13,ffffff+100&1+13,0+100 */
-            
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
-            /* FF3.6-15 */
-            
-            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
-            /* Chrome10-25,Safari5.1-6 */
-            
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
-            /* IE6-9 */
-            
-            z-index: 2;
-            height: 18px;
-            pointer-events: none;
-        }
-        #table::after {
-            content: " ";
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+87&0+0,1+87 */
-            
-            background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
-            /* FF3.6-15 */
-            
-            background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
-            /* Chrome10-25,Safari5.1-6 */
-            
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            
-            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
-            /* IE6-9 */
-            
-            z-index: 2;
-            height: 18px;
-            pointer-events: none;
-        }
-        .item-scroll {
-            position: relative;
-            border-bottom: 0 solid #000;
-            margin-top: -18px;
-        }
-        #table {
-            max-height: 675px;
-            overflow: auto;
-            padding: 18px 0 18px 0;
-        }
-        #infobox {
-            background: #efefef;
-            padding: 18px;
-            font-size: .95em;
-            margin-top: 18px;
-            min-height: 390px;
-            position: relative;
-        }
-        .info-wrapper {
-            background: #efefef;
-            position: relative;
-            z-index: 2;
-        }
-        #rightSide {
-            position: relative;
-        }
-        .mapboxgl-ctrl-geocoder .geocoder-icon-search {
-            opacity: .4;
-        }
-        .mapboxgl-ctrl-geocoder input[type='text'] {
-            font-size: 1.1em;
-            width: 100%;
-            border: 0;
-            background-color: transparent;
-            height: 40px;
-            margin: 0;
-            color: rgba(0, 0, 0, .5);
-            padding: 10px 10px 10px 40px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-        }
-        #geocoder-container > div {
-            min-width: 100%;
-            margin-left: 0;
-            margin-top: 18px;
-        }
-        .zoom {
-            position: absolute;
-            z-index: 2;
-            bottom: 15%;
-            color: black;
-            font-size: .9em;
-        }
-        .zoom:hover {
-            text-decoration: underline;
-        }
-        input {
-            margin-left: 0 !important;
-            margin: 0;
-            width: 100%;
-            height: 30px;
-            line-height: 120%;
-            font-size: 1em;
-            -webkit-appearance: none;
-            -webkit-border-radius: 0;
-            border-radius: 0;
-            /* box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); */
-            
-            color: rgba(0, 0, 0, 0.75);
-            -webkit-transition: all 0.30s ease-in-out;
-            -moz-transition: all 0.30s ease-in-out;
-            -ms-transition: all 0.30s ease-in-out;
-            -o-transition: all 0.30s ease-in-out;
-            background-color: #fff !important;
-            font-family: inherit;
-            border: 1px solid #ddd !important;
-        }
-        #website a {
-            color: #4682b4;
-        }
-        #website a:hover {
-            text-decoration: underline;
-        }
-        #notes {
-            font: normal normal 1.1em/1.5em "Poynter Serif RE", Georgia, Times, serif;
-            margin-top: 18px;
-        }
-        .info-message {
-            color: #999;
-            font-size: 1.1em;
-            position: absolute;
-            text-align: center;
-            top: 42%;
-            width: 100%;
-            z-index: 1;
+        body { margin:0; padding:0; font-family:"Benton Sans",Helvetica,Arial,sans-serif }
+        #map { height:250px; width:100%; }
+        #wrapper { width:920px; margin-left:auto; margin-right:auto; }
+        .bottom { position:absolute; bottom:0; width:100%; clear:both; }
+        .map-overlay-container { width:400px; }
+        .map-overlay { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
+        .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
+        .mapboxgl-ctrl-attrib { display:none; }
+        .play { background-color:#fff !important; color:#000; }
+        .pause { background-color:#333 !important; color:#fff; }
+        #diverse { color:#299129; }
+
+        .stat { margin-bottom:6px; }
+        #name { font-weight:900; font-size:1.2em; }
+
+        .card { padding:3px;  }
+        .card:hover, .step:hover, .selected { color:#fff; background-color:#333; cursor:pointer; margin:0 !important; }
+        #table { /*height:300px; overflow-y:auto; overflow-x:hidden;*/ }
+
+        .step { padding:5px; display:inline-block; text-align:left; width:100%; font-size:.9em; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
+
+        #filter input:focus { width: 100% !important; }
+        #filter input { width: 100% !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; border-radius:0 !important; }
+
+        #geocoder-container { width:100%; margin-top:10px; }
+        #geocoder-container > div { min-width:100%; margin-left:0; }
+
+        .chatter span { padding:5px; }
+
+        small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; }
+
+        p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+
+        #infobox { margin-top:7px; position:static; }
+
+        #leftSide { float:left; width:32%; }
+        #rightSide { float:right; height:300px; width:58%; }
+
+        .zoom { text-align:center; float:none !important; padding:20px; }
+          
+        .bigNum { display:inline-block; width:32%;  }
+
+        .mapboxgl-popup { max-width:400px; font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+        .marker-title { font-weight: 700; }
+
+        #legends { width:212px; height:auto; text-align:center; margin-right:auto; margin-left:auto; }
+        .topLegend { display:none; }
+        .legendContainer { text-align:center; width:212px; }
+        .legend label, .legend span { display:block; float:left; height:15px; width:30px; text-align:center; font-size:12px; color:#808080; font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+        .legends { width:570px; height:auto; text-align:center; margin-right:auto; margin-left:auto; }
+        .republican { color:#F2614C; fill:#F2614C !important; pointer-events: all; font-weight:bold; }
+        .r1 { background-color:#FF8572; fill:#FF8572 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .r2 { background-color:#F2634C; fill:#F2634C !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .r3 { background-color:#9C0004; fill:#9C0004 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .r4 { background-color:#4E0002; fill:#4E0002 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .r0 { background-color:#F2614C; fill:#F2614C !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .mid { background-color:#ddd; fill:#ddd !important; color:black !important; pointer-events: all; font-weight:bold; }
+        .democrat { color:#67B4C2; fill:#67B4C2 !important; pointer-events: all; font-weight:bold; }
+        .d1 { background-color:#67B4C2; fill:#67B4C2 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .d2 { background-color:#4192A1; fill:#4192A1 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .d3 { background-color:#0D4773; fill:#0D4773 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .d4 { background-color:#022642; fill:#022642 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .d0 { background-color:#67B4C2; fill:#67B4C2 !important; color:white !important; pointer-events: all; font-weight:bold; }
+        .independent { fill:#E07242; background-color:#E07242; color:#333 !important; }
+        small { font-family:"Benton Sans",Helvetica,Arial,sans-serif; color:#808080; clear:both; display:block; }
+
+       .wrapper-demo { width:100%; }
+       .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
+       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+       ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+       .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+       header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+       .featherlight { display:none !important; }
+
+        @media (max-width:920px) {
+          #wrapper { width:100%; }
+          #leftSide { float:none; width:100%; }
+          #rightSide { float:none; width:100%; height:auto; }
+          .featherlight { display:block; }
         }
     </style>
-
-    <!--[if IE]>
-      <style type="text/css">
-
-        table::before {
-          filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
-          background:none !important;
-        }
-        table::after {
-          filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
-          background:none !important;
-        }
-
-        </style>
-    <![endif]-->
 </head>
 <body>
 
@@ -579,12 +105,9 @@
 
 <div id="rightSide">
 <div id="map"></div>
-<div class="zoom">Reset View</div>
 <div id='geocoder-container'></div>
 
-<div id="infobox" style="">
-<p class="info-message">← Choose a restaurant from the list</p>
-<div class="info-wrapper">
+<div id="infobox">
 <div id="name" class="stat"></div>
 <div id="address" class="stat"></div>
 <div id="phone" class="stat"></div>
@@ -602,7 +125,6 @@
 <div id="notes" class="stat"></div>
 </div>
 </div>
-</div>
 
 <div id="leftSide">
 
@@ -611,9 +133,9 @@
   <section class="main">
         <div class="wrapper-demo">
           <div id="dd" class="wrapper-dropdown-1" tabindex="1">
-            <span>All restaurants</span>
+            <span>All</span>
               <ul class="dropdown months" tabindex="1">
-                <li class="step" data="card">All restaurants</li>
+                <li class="step" data="card">All</li>
                 <li class="step" data="cheap">Cheap</li>
                 <li class="step" data="family">Family Friendly</li>
                 <li class="step" data="sweets">Sweets</li>
@@ -629,11 +151,9 @@
 </div>
 </div>
 
-
-
-<div class="item-scroll">
-    <div id="table"></div>
-</div>
+<div id="filter"><input type="search" id="filter_box" placeholder="Search resturants"></input></div>
+<div class="zoom">Reset View</div>
+<div id="table"></div>
 
 </div>
 
