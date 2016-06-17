@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <title>U.S. Bank Stadium Chart</title>
+    <meta name="description" content="U.S. Bank Stadium Chart">
+    <meta name="author" content="Frey Hargarten - StarTribune">
+
+    <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
+
+</head>
+<style>
+       body { margin:0; padding:0; }
+       #viewSwitch { text-align:center; width:100%; margin-left:auto; margin-right:auto; }
+      .chartHeader { padding:12px;height:auto;text-align:center;padding-bottom:5px; }
+      .chatter { padding:15px; text-align:center; margin-bottom:20px; text-align:left; }
+      .wrapper-dropdown-1 .active { background:#ddd; }
+
+      #chart .c3-line { stroke-width:5px !important; }
+
+      p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+      h4 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; padding:10px; }
+
+      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+      header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
+      .c3-tooltip th { background-color:#aaa;font-size:12px;padding:2px 5px;text-align:left;color:#FFF;font-family:"Benton Sans"; }
+
+      .byline { text-align:center; margin-right:auto; margin-left:auto; width:100%; }
+    
+      @media (max-width:500px) {
+      }
+</style>
+
+<body>
+<div id="wrapper">
+<div class="chartTitle">U.S. Bank Stadium labor hours by trade</div>
+
+<!-- <div class="chatter">blah blah blah</div>-->
+ <div id="chart"></div>
+
+<!-- <small class="byline">Data Visualization by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></small> -->
+
+
+<!-- <a href="https://docs.google.com/spreadsheets/d/1P_ETaDTSnWw4iPN81dnnGG4jZRvDXd7qDwLbpIUjfjs/pub?output=xlsx" target="new_"><button class="downloadButton">&#9660; Download Data</button></a> -->
+
+</div>
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script>
+d3.csv("./data/labor_hours.csv", function(d) {
+  return {
+    Total: d.Total,
+    Time: d.Date,
+    Roofer: d.Roofer,
+    Plumber: d.Plumber,
+    Painter: d.Painter,
+    Other: d.Other,
+    MachineOps: d.MachineOps,
+    Laborer: d.Laborer,
+    Ironworker: d.Ironworker,
+    Electrician: d.Electrician,
+    Bricklayer: d.Bricklayer,
+    Carpenter: d.Carpenter
+  };
+}, function(error, rows) {
+
+$(".switch a").click(function() {
+  // $(".chatter").hide();
+
+
+});
+
+var data = rows;
+
+var x = [];
+var roofers = [];
+var plumber = [];
+var painter = [];
+var other = [];
+var machineops = [];
+var laborer = [];
+var ironworker = [];
+var electrician = [];
+var bricklayer = [];
+var carpenter = [];
+
+x[0] = "x";
+roofers[0] = "Roofers";
+plumber[0] = "Plumber";
+painter[0] = "Painter";
+other[0] = "Other";
+machineops[0] = "Machine Ops";
+laborer[0] = "Laborers";
+ironworker[0] = "Ironworkers";
+electrician[0] = "Electricians";
+bricklayer[0] = "Bricklayers";
+carpenter[0] = "Carpenters";
+
+for (var i=0; i < data.length; i++){
+x[i+1] = data[i].Time;
+roofers[i+1] = data[i].Roofer;
+plumber[i+1] = data[i].Plumber;
+painter[i+1] = data[i].Painter;
+other[i+1] = data[i].Other;
+machineops[i+1] = data[i].MachineOps;
+laborer[i+1] = data[i].Laborer;
+ironworker[i+1] = data[i].Ironworker;
+electrician[i+1] = data[i].Electrician;
+bricklayer[i+1] = data[i].Bricklayer;
+carpenter[i+1] = data[i].Carpenter;
+}
+
+var  padding = {
+        top: 20,
+        right: 40,
+        bottom: 20,
+        left: 60,
+    };
+
+var chartR = c3.generate({
+        bindto: '#chart',
+        size: { height: 400 },
+        padding: padding,
+        data: {
+            x: 'x',
+            columns: [
+            x,
+            roofers,
+            plumber,
+            painter,
+            other,
+            machineops,
+            laborer,
+            ironworker,
+            electrician,
+            bricklayer,
+            carpenter
+        ],
+        type: 'area',
+        },
+        color: {
+          pattern: ['#dae1e7','#c5ccd3','#b0b9bf','#9ba5ac','#889299','#747f87','#616d75','#4f5b63','#3d4952','#2c3942']
+          // pattern: ['#333333']
+        },
+        axis: {
+          y: {
+            min: 0,
+            padding: {bottom: 0},
+            tick: {
+             count: 4,
+             format: d3.format(',.0f')
+            }
+        },
+        x: {
+            type: 'categories',
+            tick: {
+                count: 4,
+                multiline: false
+            }
+          }
+        },
+      subchart: { show: false },
+        // color: { pattern: ['#000','#DAE1E7','#C6D1D9','#A8B9C5','#7F98AA','#556E7F','#2C3942'] },
+    });
+
+});
+</script>
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
+</script>
+</body>
+</html>
