@@ -20,6 +20,7 @@
       .wrapper-dropdown-1 .active { background:#ddd; }
 
       #chart .c3-line { stroke-width:5px !important; opacity:0 !important; }
+      #chart_m .c3-line { stroke-width:5px !important; opacity:0 !important; }
 
       p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       h4 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; padding:10px; }
@@ -33,8 +34,12 @@
       .c3-tooltip th { background-color:#aaa;font-size:12px;padding:2px 5px;text-align:left;color:#FFF;font-family:"Benton Sans"; }
 
       .byline { text-align:center; margin-right:auto; margin-left:auto; width:100%; }
+
+      #chart_m { display:none; }
     
       @media (max-width:500px) {
+        #chart { display:none; }
+        #chart_m { display:block; }
       }
 </style>
 
@@ -44,6 +49,8 @@
 
 <!-- <div class="chatter">blah blah blah</div>-->
  <div id="chart"></div>
+
+  <div id="chart_m"></div>
 
 <!-- <small class="byline">Data Visualization by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></small> -->
 
@@ -128,7 +135,7 @@ var  padding = {
         left: 60,
     };
 
-var chartR = c3.generate({
+var chartD = c3.generate({
         bindto: '#chart',
         size: { height: 400 },
         padding: padding,
@@ -149,11 +156,67 @@ var chartR = c3.generate({
         ],
         type: 'area',
         order: 'desc',
-        groups: [["Roofers", "Plumbers", "Painters", "Others", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]]
+        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]]
         },
         point: {
             show: false
         },
+        color: {
+          pattern: ['#ffffe0','#ffe3af','#ffc58a','#ffa474','#fa8266','#ed645c','#db4551','#c52940','#aa0e27','#8b0000']
+          // pattern: ['#333333']
+        },
+        axis: {
+          y: {
+            min: 0,
+            padding: {bottom: 0},
+            tick: {
+             count: 4,
+             format: d3.format(',.0f')
+            }
+        },
+        x: {
+            type: 'categories',
+            tick: {
+                count: 4,
+                multiline: false
+            }
+          }
+        },
+      subchart: { show: false },
+        // color: { pattern: ['#000','#DAE1E7','#C6D1D9','#A8B9C5','#7F98AA','#556E7F','#2C3942'] },
+    });
+
+var chartM = c3.generate({
+        bindto: '#chart_m',
+        size: { height: 400 },
+        padding: padding,
+        data: {
+            x: 'x',
+            columns: [
+            x,
+            roofers,
+            plumber,
+            painter,
+            other,
+            machineops,
+            laborer,
+            ironworker,
+            electrician,
+            bricklayer,
+            carpenter
+        ],
+        type: 'bar',
+        order: 'desc',
+        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]]
+        },
+        point: {
+            show: false
+        },
+        bar: {
+        width: {
+            ratio: 0.9
+        }
+      },
         color: {
           pattern: ['#ffffe0','#ffe3af','#ffc58a','#ffa474','#fa8266','#ed645c','#db4551','#c52940','#aa0e27','#8b0000']
           // pattern: ['#333333']
