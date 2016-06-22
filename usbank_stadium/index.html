@@ -19,7 +19,7 @@
       .chatter { padding:15px; text-align:center; margin-bottom:20px; text-align:left; }
       .wrapper-dropdown-1 .active { background:#ddd; }
 
-      #chart .c3-line { stroke-width:5px !important; }
+      #chart .c3-line { stroke-width:5px !important; opacity:0 !important; }
 
       p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       h4 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; padding:10px; }
@@ -97,8 +97,8 @@ var carpenter = [];
 
 x[0] = "x";
 roofers[0] = "Roofers";
-plumber[0] = "Plumber";
-painter[0] = "Painter";
+plumber[0] = "Plumbers";
+painter[0] = "Painters";
 other[0] = "Other";
 machineops[0] = "Machine Ops";
 laborer[0] = "Laborers";
@@ -148,9 +148,14 @@ var chartR = c3.generate({
             carpenter
         ],
         type: 'area',
+        order: 'desc',
+        groups: [["Roofers", "Plumbers", "Painters", "Others", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]]
+        },
+        point: {
+            show: false
         },
         color: {
-          pattern: ['#dae1e7','#c5ccd3','#b0b9bf','#9ba5ac','#889299','#747f87','#616d75','#4f5b63','#3d4952','#2c3942']
+          pattern: ['#ffffe0','#ffe3af','#ffc58a','#ffa474','#fa8266','#ed645c','#db4551','#c52940','#aa0e27','#8b0000']
           // pattern: ['#333333']
         },
         axis: {
