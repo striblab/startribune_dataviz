@@ -4,8 +4,8 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <title>Eat Duluth 2016</title>
-    <meta name="description" content="Eat Duluth 2016">
+    <title>Taste Restaurant Guides</title>
+    <meta name="description" content="Taste Resturant Guides">
     <meta name="author" content="Frey Hargarten - StarTribune">
 
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.19.1/mapbox-gl.css' rel='stylesheet' />
@@ -678,18 +678,26 @@
 <script src="js/featherlight-master/src/featherlight.js"></script>
 <script>
 
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=places", function(error, dataLoad) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=duluth", function(error, dataLoadD) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=superior", function(error, dataLoadS) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=lake_pepin", function(error, dataLoadP) {
 d3.json('./data/eat_duluth.geojson', function(error, dots) {
 
-var data = dataLoad.places;
 
-function addBoxes() {
-  $('#table .card').each(function(i, obj) {
-    $(this).addClass("lightbox");
-  });
-  $('#table .card.lightbox').each(function(i, obj) {
-    $(this).attr("data-featherlight","#infobox");
-  }); 
+//CHOOSE WHICH MAP
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  return results[1] || 0;
+}
+
+if ($.urlParam('location') != 0 ) { 
+  var location = $.urlParam('location');
+  if (location == 'duluth') { var data = dataLoadD.duluth; } 
+  else if (location == 'superior') { var data = dataLoadS.superior; } 
+  else if (location == 'pepin') { var data = dataLoadP.lake_pepin; } 
+
+} else {
+  var data = dataLoadD.duluth;
 }
 
 $("li").hide();
@@ -1052,7 +1060,8 @@ map.setLayoutProperty('dots-layer-all', 'visibility', 'visible');
 
 });
 });
-
+});
+});
 </script>
 <script type="text/javascript">
       
