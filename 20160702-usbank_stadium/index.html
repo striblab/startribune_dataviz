@@ -13,14 +13,24 @@
 
 </head>
 <style>
-       body { margin:0; padding:0; }
+       body { margin:0; padding:0; font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
        #viewSwitch { text-align:center; width:100%; margin-left:auto; margin-right:auto; }
       .chartHeader { padding:12px;height:auto;text-align:center;padding-bottom:5px; }
       .chatter { padding:15px; text-align:center; margin-bottom:20px; text-align:left; }
       .wrapper-dropdown-1 .active { background:#ddd; }
 
-      #chart .c3-line { stroke-width:5px !important; opacity:0 !important; }
-      #chart_m .c3-line { stroke-width:5px !important; opacity:0 !important; }
+/*      #chart .c3-line { stroke-width:5px !important; opacity:0 !important; }
+      #chart_m .c3-line { stroke-width:5px !important; opacity:0 !important; }*/
+       
+      .container { width:100%; text-align:center; }
+      .legendChart { width:100%; }
+      .legendChart div { width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
+      .legendChart div:hover, .selected2 { background-color:#333 !important; color:#fff !important; } 
+
+      .c3-area { opacity:0.8 !important; }
+
+      .byline { text-align:right !important; font-size:.8em; }
+      .byline a { color:#ccc !important; font-weight:400; }
 
       p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       h4 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; padding:10px; }
@@ -40,17 +50,26 @@
       @media (max-width:500px) {
         #chart { display:none; }
         #chart_m { display:block; }
+        .legendChart div { width:32%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
       }
 </style>
 
 <body>
 <div id="wrapper">
-<div class="chartTitle">U.S. Bank Stadium labor hours by trade</div>
+<div class="chartTitle">U.S. Bank Stadium labor hours by trade - <span id="total">3,497,834</span> hours</div>
 
 <!-- <div class="chatter">blah blah blah</div>-->
  <div id="chart"></div>
 
   <div id="chart_m"></div>
+
+  <div class='container'>
+    <div class="legendChart"><div id="all" class="clickyButton selected2">All</div></div>
+  </div>
+
+<div class="breaker"></div>
+
+  <div class="byline"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Graphic by Jeff Hargarten</a></div>
 
 <!-- <small class="byline">Data Visualization by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></small> -->
 
@@ -67,26 +86,21 @@
 <script>
 d3.csv("./data/labor_hours.csv", function(d) {
   return {
-    Total: d.Total,
+    Total: +d.Total,
     Time: d.Date,
-    Roofer: d.Roofer,
-    Plumber: d.Plumber,
-    Painter: d.Painter,
-    Other: d.Other,
-    MachineOps: d.MachineOps,
-    Laborer: d.Laborer,
-    Ironworker: d.Ironworker,
-    Electrician: d.Electrician,
-    Bricklayer: d.Bricklayer,
-    Carpenter: d.Carpenter
+    Roofer: +d.Roofer,
+    Plumber: +d.Plumber,
+    Painter: +d.Painter,
+    Other: +d.Other,
+    MachineOps: +d.MachineOps,
+    Laborer: +d.Laborer,
+    Ironworker: +d.Ironworker,
+    Electrician: +d.Electrician,
+    Bricklayer: +d.Bricklayer,
+    Carpenter: +d.Carpenter
   };
 }, function(error, rows) {
 
-$(".switch a").click(function() {
-  // $(".chatter").hide();
-
-
-});
 
 var data = rows;
 
@@ -130,9 +144,9 @@ carpenter[i+1] = data[i].Carpenter;
 
 var  padding = {
         top: 20,
-        right: 40,
+        right: 60,
         bottom: 20,
-        left: 60,
+        left: 30,
     };
 
 var chartD = c3.generate({
@@ -152,25 +166,47 @@ var chartD = c3.generate({
             ironworker,
             electrician,
             bricklayer,
-            carpenter
+            carpenter    
         ],
         type: 'area',
-        order: 'desc',
-        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]]
+        // order: 'desc',
+        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]],
+        order: false,
+        axes: { 
+          "Carpenters": "y2",
+          "Bricklayers": "y2",
+          "Electricians": "y2",
+          "Ironworkers": "y2",
+          "Laborers": "y2",
+          "Machine Ops": "y2",
+          "Other": "y2",
+          "Painters": "y2",
+          "Plumbers": "y2",
+          "Roofers": "y2"
+        }
+        },
+        legend: {
+        show: false
         },
         point: {
             show: false
         },
         color: {
-          pattern: ['#ffffe0','#ffe3af','#ffc58a','#ffa474','#fa8266','#ed645c','#db4551','#c52940','#aa0e27','#8b0000']
+          pattern: ['#D4D0CE','#A7BCC8','#A8ACB9','#C5C1BF','#B6C4D5','#D8E5E8','#B7C9D1','#BCD1DC','#B2BAC6','#DEE7EB']
           // pattern: ['#333333']
         },
         axis: {
           y: {
+            show: false
+          },
+          y2: {
+            show: true,
             min: 0,
+            max: 250000,
             padding: {bottom: 0},
             tick: {
              count: 4,
+             values: [0,80000,150000,250000],
              format: d3.format(',.0f')
             }
         },
@@ -183,7 +219,45 @@ var chartD = c3.generate({
           }
         },
       subchart: { show: false },
-        // color: { pattern: ['#000','#DAE1E7','#C6D1D9','#A8B9C5','#7F98AA','#556E7F','#2C3942'] },
+      tooltip: {
+      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+          var $$ = this, config = $$.config,
+              titleFormat = config.tooltip_format_title || defaultTitleFormat,
+              nameFormat = config.tooltip_format_name || function (name) { return name; },
+              valueFormat = config.tooltip_format_value || defaultValueFormat,
+              text, i, title, value, name, bgcolor;
+              // var totalHours;
+          for (i = 0; i < d.length; i++) {
+              if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+
+              name = nameFormat(d[i].name);
+              value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+              bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+              if (! text) {
+
+                  title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+
+                  for (var k=0; k < rows.length; k++){
+                    if (String(rows[k].Time) == String(title)){
+                      var totalHours = d3.format(",")(rows[k].Total);
+                      
+                      break;
+                    }
+                  }
+
+                  text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + " - " + totalHours + " hours</th></tr>" : "");
+              }
+
+              text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+              text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + d[i].id + "</td>";
+              text += "<td class='value'>" + value + "</td>";
+              text += "</tr>";
+              
+          }
+          return text + "</table>";
+      }
+    }
     });
 
 var chartM = c3.generate({
@@ -203,11 +277,27 @@ var chartM = c3.generate({
             ironworker,
             electrician,
             bricklayer,
-            carpenter
+            carpenter  
         ],
         type: 'bar',
-        order: 'desc',
-        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]]
+        // order: 'desc',
+        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]],
+        order: false,
+        axes: { 
+          "Carpenters": "y2",
+          "Bricklayers": "y2",
+          "Electricians": "y2",
+          "Ironworkers": "y2",
+          "Laborers": "y2",
+          "Machine Ops": "y2",
+          "Other": "y2",
+          "Painters": "y2",
+          "Plumbers": "y2",
+          "Roofers": "y2"
+        }
+        },
+        legend: {
+        show: false
         },
         point: {
             show: false
@@ -218,15 +308,21 @@ var chartM = c3.generate({
         }
       },
         color: {
-          pattern: ['#ffffe0','#ffe3af','#ffc58a','#ffa474','#fa8266','#ed645c','#db4551','#c52940','#aa0e27','#8b0000']
+          pattern: ['#D4D0CE','#A7BCC8','#A8ACB9','#C5C1BF','#B6C4D5','#D8E5E8','#B7C9D1','#BCD1DC','#B2BAC6','#DEE7EB']
           // pattern: ['#333333']
         },
         axis: {
           y: {
+            show: false
+          },
+          y2: {
+            show: true,
             min: 0,
+            max: 250000,
             padding: {bottom: 0},
             tick: {
              count: 4,
+             values: [0,80000,150000,250000],
              format: d3.format(',.0f')
             }
         },
@@ -239,8 +335,103 @@ var chartM = c3.generate({
           }
         },
       subchart: { show: false },
-        // color: { pattern: ['#000','#DAE1E7','#C6D1D9','#A8B9C5','#7F98AA','#556E7F','#2C3942'] },
+      tooltip: {
+      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+          var $$ = this, config = $$.config,
+              titleFormat = config.tooltip_format_title || defaultTitleFormat,
+              nameFormat = config.tooltip_format_name || function (name) { return name; },
+              valueFormat = config.tooltip_format_value || defaultValueFormat,
+              text, i, title, value, name, bgcolor;
+              // var totalHours;
+          for (i = 0; i < d.length; i++) {
+              if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+
+              name = nameFormat(d[i].name);
+              value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+              bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+              if (! text) {
+
+                  title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+
+                  for (var k=0; k < rows.length; k++){
+                    if (String(rows[k].Time) == String(title)){
+                      var totalHours = d3.format(",")(rows[k].Total);
+                      
+                      break;
+                    }
+                  }
+
+                  text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + " - " + totalHours + " hours</th></tr>" : "");
+              }
+
+              text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+              text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + d[i].id + "</td>";
+              text += "<td class='value'>" + value + "</td>";
+              text += "</tr>";
+              
+          }
+          return text + "</table>";
+      }
+    }
     });
+
+$("#all").click(function() {
+    chartD.revert();
+    chartM.revert();
+    $("#total").html("3,497,834");
+});
+
+function spitLegend() {
+d3.select('.legendChart').selectAll('div')
+    .data(["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"])
+  .enter().append('div')
+    .attr('data-id', function (id) { return id; })
+    .attr("class","clickyButton")
+    .html(function (id) { return id; })
+    .each(function (id) {
+        d3.select(this).style('background-color', chartD.color(id));
+    })
+    .on('mouseover', function (id) {
+        // chartD.focus(id);
+        // chartM.focus(id);
+    })
+    .on('mouseout', function (id) {
+        // chartD.revert();
+        // chartM.revert();
+    })
+    .on('click', function (id) {
+        // chartD.toggle(id);
+        // chartM.toggle(id);
+        chartD.focus(id);
+        chartM.focus(id);
+
+        console.log(id);
+
+        var totalHours = 0;
+
+        for (var k=0; k < rows.length; k++){
+          if (id == "Carpenters") { totalHours += rows[k].Carpenter; }
+          else if (id == "Roofers") { totalHours += rows[k].Roofer; }
+          else if (id == "Plumbers") { totalHours += rows[k].Plumber; }
+          else if (id == "Painters") { totalHours += rows[k].Painter; }
+          else if (id == "Other") { totalHours += rows[k].Other; }
+          else if (id == "Machine Ops") { totalHours += rows[k].MachineOps; }
+          else if (id == "Laborers") { totalHours += rows[k].Laborer; }
+          else if (id == "Ironworkers") { totalHours += rows[k].Ironworker; }
+          else if (id == "Electricians") { totalHours += rows[k].Electrician; } 
+          else if (id == "Bricklayers") { totalHours += rows[k].Bricklayer; } 
+          }
+        $("#total").html(d3.format(",.0f")(totalHours));
+    });
+
+$(".clickyButton").click(function() {
+    $(".clickyButton").removeClass("selected2");
+    $(this).addClass("selected2");
+  });
+}
+
+spitLegend();
 
 });
 </script>
