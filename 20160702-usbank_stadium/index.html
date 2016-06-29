@@ -173,7 +173,7 @@ var chartD = c3.generate({
         ],
         type: 'area',
         order: 'desc',         
-        groups: [["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Other","Roofers"]],
+        groups: [["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Roofers","Other"]],
         // order: false,
         axes: { 
           "Carpenters": "y2",
@@ -284,7 +284,7 @@ var chartM = c3.generate({
         ],
         type: 'bar',
         order: 'desc',
-        groups: [["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Other","Roofers"]],
+        groups: [["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Roofers","Other"]],
         // order: false,
         axes: { 
           "Carpenters": "y2",
@@ -387,7 +387,7 @@ $("#all").click(function() {
 
 function spitLegend() {
 d3.select('.legendChart').selectAll('div')
-    .data(["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Other","Roofers"])
+    .data(["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Roofers","Other"])
     .enter().append('div')
     .attr('data-id', function (id) { return id; })
     .attr("class","clickyButton")
