@@ -23,8 +23,9 @@
        
       .container { width:100%; text-align:center; }
       .legendChart { width:100%; }
+      #all { width:95%; margin-left:auto; margin-right:auto; }
       .legendChart div { width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
-      .legendChart div:hover, .selected2 { background-color:#333 !important; color:#fff !important; } 
+      .legendChart div:hover, #all:hover, .selected2 { background-color:#333 !important; color:#fff !important; cursor:pointer; } 
 
       .c3-area { opacity:0.8 !important; }
 
@@ -43,6 +44,7 @@
       .c3-tooltip th { background-color:#aaa;font-size:12px;padding:2px 5px;text-align:left;color:#FFF;font-family:"Benton Sans"; }
 
       .byline { text-align:center; margin-right:auto; margin-left:auto; width:100%; }
+      .footnote { color:#ccc; font-size:0.7em; }
 
       #chart_m { display:none; }
     
@@ -63,11 +65,13 @@
   <div id="chart_m"></div>
 
   <div class='container'>
-    <div class="legendChart"><div id="all" class="clickyButton selected2">All</div></div>
+    <div id="all" class="clickyButton selected2">All</div>
+    <div class="legendChart"></div>
   </div>
 
 <div class="breaker"></div>
-
+  <div class='footnote'>Plumber includes: pipefitter, steamfitter, heating/cooling worker, pipelayer, sheet metal worker, sprinkler fitter</div>
+  <div class='footnote'>Other trades: Asbestos abatement worker, carpet layer, elevator worker, flag person, greaser, scraper, sign erector, survey field technician, tile setter, traffic controller</div>
   <div class="byline"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Graphic by Jeff Hargarten</a></div>
 
 <!-- <small class="byline">Data Visualization by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></small> -->
@@ -156,21 +160,21 @@ var chartD = c3.generate({
             x: 'x',
             columns: [
             x,
-            roofers,
-            plumber,
-            painter,
-            other,
-            machineops,
+            carpenter,
             laborer,
-            ironworker,
             electrician,
+            ironworker,
+            plumber,
+            machineops,
             bricklayer,
-            carpenter    
+            painter,
+            roofers,
+            other    
         ],
         type: 'area',
-        // order: 'desc',
-        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]],
-        order: false,
+        order: 'desc',         
+        groups: [["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Other","Roofers"]],
+        // order: false,
         axes: { 
           "Carpenters": "y2",
           "Bricklayers": "y2",
@@ -191,7 +195,7 @@ var chartD = c3.generate({
             show: false
         },
         color: {
-          pattern: ['#D4D0CE','#A7BCC8','#A8ACB9','#C5C1BF','#B6C4D5','#D8E5E8','#B7C9D1','#BCD1DC','#B2BAC6','#DEE7EB']
+          pattern: ['#DEE7EB','#D8E5E8','#BCD1DC','#B7C9D1','#A7BCC8','#B6C4D5','#B2BAC6','#A8ACB9','#D4D0CE','#C5C1BF']
           // pattern: ['#333333']
         },
         axis: {
@@ -267,21 +271,21 @@ var chartM = c3.generate({
             x: 'x',
             columns: [
             x,
-            roofers,
-            plumber,
-            painter,
-            other,
-            machineops,
+            carpenter,
             laborer,
-            ironworker,
             electrician,
+            ironworker,
+            plumber,
+            machineops,
             bricklayer,
-            carpenter  
+            painter,
+            roofers,
+            other    
         ],
         type: 'bar',
-        // order: 'desc',
-        groups: [["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"]],
-        order: false,
+        order: 'desc',
+        groups: [["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Other","Roofers"]],
+        // order: false,
         axes: { 
           "Carpenters": "y2",
           "Bricklayers": "y2",
@@ -307,7 +311,7 @@ var chartM = c3.generate({
         }
       },
         color: {
-          pattern: ['#D4D0CE','#A7BCC8','#A8ACB9','#C5C1BF','#B6C4D5','#D8E5E8','#B7C9D1','#BCD1DC','#B2BAC6','#DEE7EB']
+          pattern: ['#DEE7EB','#D8E5E8','#BCD1DC','#B7C9D1','#A7BCC8','#B6C4D5','#B2BAC6','#A8ACB9','#D4D0CE','#C5C1BF']
           // pattern: ['#333333']
         },
         axis: {
@@ -383,8 +387,8 @@ $("#all").click(function() {
 
 function spitLegend() {
 d3.select('.legendChart').selectAll('div')
-    .data(["Roofers", "Plumbers", "Painters", "Other", "Machine Ops", "Laborers", "Ironworkers", "Electricians", "Bricklayers", "Carpenters"])
-  .enter().append('div')
+    .data(["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Other","Roofers"])
+    .enter().append('div')
     .attr('data-id', function (id) { return id; })
     .attr("class","clickyButton")
     .html(function (id) { return id; })
