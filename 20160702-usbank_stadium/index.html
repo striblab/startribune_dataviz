@@ -44,12 +44,15 @@
 
       #chart_m { display:none; }
 
-      #totals { font-size:3em; color:#333;}
+      #totals { font-size:3em; color:#333; letter-spacing: -.75px;}
 
       #all { float:left; width:19%; height:86px; vertical-align:center; padding-top:35px; border-radius:5px; background-color:#ddd; }
       .legendChart { float:right; width:80%; }
       .legendChart div { width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; border-radius:5px; margin:3px; padding:10px; }
-      .legendChart div:hover, #all:hover, .selected2 { background-color:#456789 !important; color:#fff !important; cursor:pointer; } 
+      .legendChart div:hover, #all:hover { background-color:#446688 !important; color:#fff !important; cursor:pointer; } 
+      .legendChart div:hover, .selected2 { background-color:#333333 !important; color:#fff !important; cursor:pointer; } 
+    
+    
     
       @media (max-width:500px) {
         #chart { display:none; }
@@ -62,7 +65,7 @@
 
 <body>
 <div id="wrapper">
-<div class="chartTitle">LABOR HOURS BY TRADE TESTING</div>
+<div class="chartTitle">LABOR HOURS BY TRADE</div>
 <div id="totals"><span id="total">3,497,834</span> hours</div>
 
 <!-- <div class="chatter">blah blah blah</div>-->
