@@ -681,8 +681,9 @@
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=duluth", function(error, dataLoadD) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=superior", function(error, dataLoadS) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=lake_pepin", function(error, dataLoadP) {
-d3.json('./data/eat_duluth.geojson', function(error, dots) {
-
+d3.json('./data/duluth.geojson', function(error, dotsD) {
+d3.json('./data/pepin.geojson', function(error, dotsP) {
+d3.json('./data/superior.geojson', function(error, dotsS) {
 
 //CHOOSE WHICH MAP
 $.urlParam = function(name){
@@ -692,12 +693,14 @@ $.urlParam = function(name){
 
 if ($.urlParam('location') != 0 ) { 
   var location = $.urlParam('location');
-  if (location == 'duluth') { var data = dataLoadD.duluth; } 
-  else if (location == 'superior') { var data = dataLoadS.superior; } 
-  else if (location == 'pepin') { var data = dataLoadP.lake_pepin; } 
+  if (location == 'duluth') { var data = dataLoadD.duluth; var dots = dotsD; var center = [-92.098194, 46.786939]; } 
+  else if (location == 'superior') { var data = dataLoadS.superior; var dots = dotsS; var center = [-92.085256, 46.706881]; } 
+  else if (location == 'pepin') { var data = dataLoadP.lake_pepin; var dots = dotsP; var center = [-92.3013, 44.4982]; } 
 
 } else {
   var data = dataLoadD.duluth;
+  var dots = dotsD;
+  var center = [-92.098194, 46.786939];
 }
 
 $("li").hide();
@@ -758,7 +761,7 @@ d3.select("#table").selectAll(".card")
     $(".step").click(function() { 
       $(".card").hide();
       $("." + $(this).attr("data")).show(); 
-      map.flyTo({ center: [-92.098194, 46.786939], zoom: 10, pitch: 0, bearing: 0 });
+      map.flyTo({ center: center, zoom: 10, pitch: 0, bearing: 0 });
       $(".stat").html("");
       $(".card").removeClass("selected");
     });
@@ -773,8 +776,8 @@ spillSites();
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/shadowflare/cimdyoofx00iv9qkpdj7o0izi',
-    center: [-92.098194, 46.786939],
+    style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
+    center: center,
     zoom: 8,
     minZoom: 6
     // maxBounds: llb
@@ -1000,18 +1003,18 @@ $(".card").click(function(e) {
 var index = 0;
 
 $( document ).ready(function() {
-    if ($("#wrapper").width() < 920) { map.flyTo({ center: [-92.098194, 46.786939], zoom: 8, pitch: 0, bearing: 0 }); }
-    else { map.flyTo({ center: [-92.098194, 46.786939], zoom: 10 }); }
+    if ($("#wrapper").width() < 920) { map.flyTo({ center: center, zoom: 8, pitch: 0, bearing: 0 }); }
+    else { map.flyTo({ center: center, zoom: 10 }); }
     $(window).resize(function() {
-    if ($("#wrapper").width() < 920) { map.flyTo({ center: [-92.098194, 46.786939], zoom: 8, pitch: 0, bearing: 0 }); }
-    else { map.flyTo({ center: [-92.098194, 46.786939], zoom: 9 }); }
+    if ($("#wrapper").width() < 920) { map.flyTo({ center: center, zoom: 8, pitch: 0, bearing: 0 }); }
+    else { map.flyTo({ center: center, zoom: 9 }); }
     });
 
     // addBoxes();
 });
 
 $(".zoom").click(function() {
-    map.flyTo({ center: [-92.098194, 46.786939], zoom: 8, pitch: 0, bearing: 0 });
+    map.flyTo({ center: center, zoom: 8, pitch: 0, bearing: 0 });
     $(".stat").html("");
     $(".card").removeClass("selected");
     popup.remove();
@@ -1058,6 +1061,8 @@ map.setLayoutProperty('dots-layer-all', 'visibility', 'visible');
 });
 
 
+});
+});
 });
 });
 });

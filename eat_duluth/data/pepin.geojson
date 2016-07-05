@@ -1,0 +1,509 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.534174,44.565645 ]
+    },
+    "properties": {
+    "name":"Staghead",
+    "address":"219 Bush St.",
+    "city":"Red Wing",
+    "state":"Minn.",
+    "phone":"651-212-6494",
+    "website":"www.thestaghead.com",
+    "where":"#",
+    "notes":"It’s great to see the lights back on at this handsome downtown Red Wing storefront, after a too-long absence. New co-owners John and Danielle Flicek (he cooks, she runs the front of the house) deftly pair their gastropub menu with a discerning beer roster.",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"cocktails",
+    "hours":"11 am-8 pm Mon-Thu, 11 am-9 pm Fri-Sat",
+    "reservations":"reservations",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.45072,44.584202 ]
+    },
+    "properties": {
+    "name":"Chef Shack Ranch",
+    "address":"6379 Main St.",
+    "city":"Bay City",
+    "state":"Wis.",
+    "phone":"715-594-3060",
+    "website":"www.chefshackranch.com",
+    "where":"#",
+    "notes":"Summer means that Chef Shack food truckers Lisa Carlson and Carrie Summer leave the city on weekends and open the doors of their enchanting rural Wisconsin outlet, just off Hwy. 35 in beautiful downtown Bay City. The modest menus change with the seasons. Consider it your lucky day if they’ve fired up their outdoor pizza oven, and don’t miss dessert.",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"brunch",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"cocktails",
+    "hours":"5-10 pm Fri-Sat, 10 am-2 pm Sun",
+    "reservations":"reservations",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.356822,44.510991 ]
+    },
+    "properties": {
+    "name":"Frontenac State Park picnic grounds",
+    "address":"29223 County Rd. 28 Blvd.",
+    "city":"Frontenac",
+    "state":"Minn.",
+    "phone":"651-345-3401",
+    "website":"www.mndnr.gov/stateparks",
+    "where":"#",
+    "notes":"Pack a hamper -- or, better yet, order takeout -- and head to the breathtaking, bluff-top picnic ground in Frontenac State Park, which boasts thrilling views of Lake Pepin that surely stretch, on a clear day, anyway, for a good 25 miles. Can’t find it? Google Maps probably has it filed under G, for “God’s Country.”",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"#",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.309625,44.560801 ]
+    },
+    "properties": {
+    "name":"Smiling Pelican Bakeshop",
+    "address":"W3556 Hwy. 35",
+    "city":"Maiden Rock",
+    "state":"Wis.",
+    "phone":"715-448-3807",
+    "website":"https://www.facebook.com/Smiling-Pelican-Bakeshop-116667161693522/?fref=ts",
+    "where":"#",
+    "notes":"There's almost always a line swelling in front of the counter at the Smiling Pelican Bakeshop, and with good reason: Baker/co-owner Sandra Thielman creates a drool-inducing selection of cookies, muffins, scones and breads, plus cakes, pies and tarts sold whole or by the slice (the mile-high banana cream pie is not to be missed), quiche and fragrant cardamom-scented rolls. This remarkable enterprise fills the first floor of a storybook Victorian farmhouse, complete with a shaded porch and a lovingly tended flower garden.  At the House of Thielman, seasonal fruits are treated like the treasure they are, prices are shockingly affordable and, if you leave without a bag of lavender- and ginger-packed sugar cookies, you need to have your head examined. Arrive early, or risk being confronted by a chalkboard bearing the travelogue's two most demoralizing words: \"Sold out.\"",
+    "family-friendly":"family",
+    "cheap":"cheap",
+    "patio":"patio",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"8 am-3 pm Fri-Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.269914,44.451108 ]
+    },
+    "properties": {
+    "name":"Chickadee Cottage Cafe",
+    "address":"317 N. Lakeshore Dr.",
+    "city":"Lake City",
+    "state":"Minn.",
+    "phone":"651-345-5155",
+    "website":"www.chickadeecottagecafe.com",
+    "where":"#",
+    "notes":"This quaint breakfast/lunch/afternoon tea shop pretty much defines the phrase “day-trip destination,” with fresh roadside food and scandalous desserts at",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"brunch",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"8 am-2 pm Tue-Sat, 9 am-2 pm Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.265983,44.44979 ]
+    },
+    "properties": {
+    "name":"Nosh Restaurant Bar",
+    "address":"310 1/2 S. Washington St.",
+    "city":"Lake City",
+    "state":"Minn.",
+    "phone":"651-345-2425",
+    "website":"www.noshrestaurant.com",
+    "where":"#",
+    "notes":"Mention “Lake Pepin” and a food lover’s reflexive response is often “Nosh Restaurant & Bar. With good reason. Chef/owner Greg Jaworski taps neighboring farmers for ingredients and inspiration, and his creative, seasonal cooking more than lives up to his restaurant’s spectacular marina location. When making a reservation, be sure to ask for a window table.",
+    "family-friendly":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"cocktails",
+    "hours":"4-9 pm Wed-Sat, 3-8 pm Sun",
+    "reservations":"reservations",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.223732,44.517873 ]
+    },
+    "properties": {
+    "name":"A to Z Produce and Bakery",
+    "address":"N2956 Anker Lane",
+    "city":"Stockholm",
+    "state":"Wis.",
+    "phone":"#",
+    "website":"www.atozproduceandbakery.com",
+    "where":"#",
+    "notes":"Anyone with a free Tuesday night needs to know about the “pizza farm,” aka A to Z Produce and Bakery, where owners Robbi Bannen and Ted Fisher channel the considerable bounty of their picturesque farm into wood-fired pizzas of genuine distinction. It’s a magical experience. Pack your own blanket, table, chairs, plates, cups, cutlery and anything else you’ll need (and prepare to carry them all out when it’s time to leave). Beverages available.",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"4:30- 8 pm Tue",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.26216,44.482986 ]
+    },
+    "properties": {
+    "name":"Bogus Creek Cafe & Bakery",
+    "address":"N2049 Spring St.",
+    "city":"Stockholm",
+    "state":"Wis.",
+    "phone":"715-442-5017",
+    "website":"www.boguscreekcafe.com",
+    "where":"#",
+    "notes":"At this Stockholm charmer, the roomy patio has all the requisite get-away-from-it-all attributes, and the carefully prepared breakfast-all-day menu treads a similar forget-your-troubles path: thick salmon cakes topped with poached eggs, fresh-squeezed orange juice, a basket brimming with slices of breads baked that morning, buttery cinnamon coffee cake and chef/owner Colleen Flynn’s hazelnut-brown crepes dressed with tart lingonberries and sinfully thick whipped cream. Flynn also operates a small bakery and ice cream scoop shop.",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"brunch",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"9 am-5 pm daily",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.26216,44.482986 ]
+    },
+    "properties": {
+    "name":"Stockholm Pie & General Store",
+    "address":"N2030 Spring St.",
+    "city":"Stockholm",
+    "state":"Wis.",
+    "phone":"715-442-5505",
+    "website":"www.stockholmpieandgeneralstore.com",
+    "where":"#",
+    "notes":"As the name announces, it’s all about pies, made from scratch and filled with every imaginable ingredient in the pie-making constellation and sold by the slice or the whole pie. Lunch means savory pies: a chicken pot pie, or a veggie quiche, plus a half-dozen sandwiches, and soup.",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"10 am-5 pm Sun-Mon and Wed-Thu, 10 am-5:30 pm Tue, 10 am-6 pm Fri-Sat",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.262121,44.483301 ]
+    },
+    "properties": {
+    "name":"The Palate",
+    "address":"W12102 State Hwy. 35",
+    "city":"Stockholm",
+    "state":"Wis.",
+    "phone":"715-442-6400",
+    "website":"www.thepalate.net",
+    "where":"#",
+    "notes":"Yes, this well-stocked kitchen store is filled with all kinds of cooking and baking equipment, as well as a fine selection of gourmet groceries. But co-owners Nancy Fitzsimons and Shana Finnegan also stay busy in the kitchen they use for cooking classes, stocking gigantic glass jars with all kinds of old-fashioned bars and cookies (the irresistibly retro coconut-oatmeal-corn flake concoction known as the \"Ranger\" cookie is a house specialty), along with thirst-quenching rhubarb lemonade or some other refreshing, freshly prepared libation. Prices? So low you’ll do a double-take.",
+    "family-friendly":"#",
+    "cheap":"cheap",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"10 am-5 pm Tue-Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.008222,44.420245 ]
+    },
+    "properties": {
+    "name":"JJ Barbecue and Catering",
+    "address":"N208 N. Main St. (Hwy. 35)",
+    "city":"Nelson",
+    "state":"Wis.",
+    "phone":"715-673-4717",
+    "website":"www.jandjbbq.com",
+    "where":"#",
+    "notes":"The dustibles -- sorry, collectibles -- stacked floor-to-ceiling inside JJ Barbecue and Catering didn't exactly telegraph a vote of confidence, at least to road-tripping BBQ hounds. But don't allow the antiques to make an unfavorable impression, because the smoked and richly glazed pork and chicken, served in Flintstone-esque portions at highly reasonable prices, is surprisingly good. A tip: Order lunch or dinner to go, hop in the car, drive nine miles south to Alma, Wis., and picnic in breezy, beautiful Buena Vista Park, so named for its awesome, on-top-of-the-bluff views.",
+    "family-friendly":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"brunch",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"10:30 am-7 pm Wed-Thu, 10:30 am-8 pm Fri-Sat, 9 am-6 pm Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.008222,44.420245 ]
+    },
+    "properties": {
+    "name":"Nelson Cheese Factory",
+    "address":"S237 Hwy. 35",
+    "city":"Nelson",
+    "state":"Wis.",
+    "phone":"715-673-4725",
+    "website":"www.nelsoncheese.com",
+    "where":"#",
+    "notes":"A gourmet grocery store in rural Wisconsin? Yep, and this place is a doozy, hawking everything from European cheeses and 150-plus wines to more local flavors, everything from smoked trout to lamb sausage to the made-on-the-premises cheese curds. The kitchen turns out a dozen gigantic hoagies - hot or cold and priced to move - and weekends mean generously topped 10-inch pizzas. Want to stay put? The appealing wine bar pours 15 choices by the glass. Be sure to take advantage of the major ice-cream deal: a buck buys a giant scoop, and a towering double goes for $3. No wonder there's always a line.",
+    "family-friendly":"family",
+    "cheap":"cheap",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"9 am-6 pm Sun-Thu, 9 am-7 pm Fri-Sat",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.008222,44.420245 ]
+    },
+    "properties": {
+    "name":"The Stone Barn",
+    "address":"S685 County Rd. KK",
+    "city":"Nelson",
+    "state":"Wis.",
+    "phone":"715-673-4478",
+    "website":"www.thenelsonstonebarn.com",
+    "where":"#",
+    "notes":"Expect to encounter one scenic vista after another, as you drive down the narrow, winding country road toward this knockout outdoor dining destination. It’s housed in the remains of a 120-year-old barn that’s now graced with flowers, herbs, a bubbling fountain and plenty of tables. New ownership is continuing (and, improving upon) the tradition of serving wood-fired pizzas, beer and wine.",
+    "family-friendly":"family",
+    "cheap":"#",
+    "patio":"patio",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"5-9 pm Fri-Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.145805,44.43844 ]
+    },
+    "properties": {
+    "name":"Harbor View Cafe",
+    "address":"314 1st St",
+    "city":"Pepin",
+    "state":"Wis.",
+    "phone":"715-442-3893",
+    "website":"www.harborviewpepin.com",
+    "where":"#",
+    "notes":"A change in ownership from a few years back hasn't fundamentally altered the landmark daytripping destination that is the Harbor View Cafe. An eclectic chalkboard menu and scratch cooking continue as the restaurant's core principles, just as they have for more than three decades years.",
+    "family-friendly":"",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"11 am-2:30 pm Mon and Thu-Sat, 5-8 pm Mon and Thu, 5-9 pm Fri, 4:45-9 pm Sat, 11:45 am-7:30 pm Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.14795,44.441079 ]
+    },
+    "properties": {
+    "name":"Homemade Cafe",
+    "address":"809 3rd St. (Hwy. 35)",
+    "city":"Pepin",
+    "state":"Wis.",
+    "phone":"612-396-5804",
+    "website":"www.thehomemadecafe.com",
+    "where":"#",
+    "notes":"For owner Julie Elwell, the Homemade Cafe isn't just a business name, it's a sacred way of doing things. Along with rolling out a belt-busting variety of pies (\"I always make at least two a week that I've never made before, just to see if I like them,\" she said), Elwell also turns out an astonishingly good Reuben, a buttermilk-marinated pork tenderloin sandwich that would be the pride of any self-respecting Iowa farm woman, thoughtfully topped burgers (ask for extras of the tangy pickles), a refreshing house-made (naturally) ginger ale, excellent hash browns and pie tin-size buttermilk pancakes.",
+    "family-friendly":"family",
+    "cheap":"cheap",
+    "patio":"patio",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"7 am- 2 pm Thu-Mon",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.003777,44.301686 ]
+    },
+    "properties": {
+    "name":"Lark Toys",
+    "address":"63604 170th Av.",
+    "city":"Kellogg",
+    "state":"Minn.",
+    "phone":"507-767-3387",
+    "website":"www.larktoys.com",
+    "where":"#",
+    "notes":"Work up an appetite browsing through this gigantic kidland paradise, then stop into the cafe for a sandwich or a cone from the 16-choice ice cream scoop shop.",
+    "family-friendly":"family",
+    "cheap":"cheap",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"10 am-6 pm daily",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.078983,44.402728 ]
+    },
+    "properties": {
+    "name":"Reads Landing Brewing Co.",
+    "address":"70555 202nd St.",
+    "city":"Reads Landing",
+    "state":"Minn.",
+    "phone":"651-560-4777",
+    "website":"www.rlbrewingco.com",
+    "where":"#",
+    "notes":"The on-the-Mississippi setting is a no-brainer draw at this welcoming brewpub, but it doesn’t overshadow two other major reasons to visit: brewer Bob Nihart’s beers and chef Casey Mehrkens’ satisfying (and affordable) gastropub fare.",
+    "family-friendly":"#",
+    "cheap":"#",
+    "patio":"#",
+    "brunch":"#",
+    "sweets":"#",
+    "beer":"beer",
+    "cocktails":"#",
+    "hours":"11 am-9 pm Wed-Thu, 11 am-10 pm Fri-Sat, noon-9 pm Sun",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.917153,44.324613 ]
+    },
+    "properties": {
+    "name":"Fire and Ice",
+    "address":"305 N. Main St.",
+    "city":"Alma",
+    "state":"Wis.",
+    "phone":"612-432-3653",
+    "website":"www.hoteldevillealma.com",
+    "where":"#",
+    "notes":"Daniel Kordiak isn't the mayor of Alma, Wis., but, as the town's biggest booster, maybe he should be. Dilapidated is too generous a word for the buildings Kordiak buys along Alma's curving main street, which he injects with significant investments in sweat equity-fueled funkiness and converts them into BBs, boutiques and a coffeehouse he calls Fire and Ice. Go for the swank antiques, stay for the beverages, ice cream and homey pastries, baked at Kordiak's Alma Bakery, just up the street. Oh, and don't forget to explore the shop's remarkable hidden grotto of a garden.",
+    "family-friendly":"family",
+    "cheap":"cheap",
+    "patio":"patio",
+    "brunch":"#",
+    "sweets":"sweets",
+    "beer":"#",
+    "cocktails":"#",
+    "hours":"11 am-5 pm Sun-Thu, 11 am-9 pm Fri-Sat",
+    "reservations":"#",
+    "pitch":60,
+    "bearing":-60
+    }
+  }
+]
+}
