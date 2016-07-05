@@ -16,16 +16,12 @@
        #viewSwitch { text-align:center; width:100%; margin-left:auto; margin-right:auto; }
       .chartHeader { padding:12px;height:auto;text-align:center;padding-bottom:5px; }
       .chatter { padding:15px; text-align:center; margin-bottom:20px; text-align:left; }
-      .wrapper-dropdown-1 .active { background:#ddd; }
 
       #chart .c3-line { stroke-width:5px !important; opacity:0 !important; }
       #chart_m .c3-line { stroke-width:5px !important; opacity:0 !important; }
        
       .container { width:100%; text-align:center; }
       .legendChart { width:100%; }
-      #all { width:95%; margin-left:auto; margin-right:auto; }
-      .legendChart div { width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
-      .legendChart div:hover, #all:hover, .selected2 { background-color:#333 !important; color:#fff !important; cursor:pointer; } 
 
       .c3-area { opacity:0.8 !important; }
 
@@ -47,17 +43,27 @@
       .footnote { color:#ccc; font-size:0.7em; }
 
       #chart_m { display:none; }
+
+      #totals { font-size:3em; color:#ccc; }
+
+      #all { float:left; width:19%; height:86px; vertical-align:center; padding-top:35px; border-radius:5px; background-color:#ddd; }
+      .legendChart { float:right; width:80%; }
+      .legendChart div { width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; border-radius:5px; margin:3px; padding:10px; }
+      .legendChart div:hover, #all:hover, .selected2 { background-color:#333 !important; color:#fff !important; cursor:pointer; } 
     
       @media (max-width:500px) {
         #chart { display:none; }
         #chart_m { display:block; }
-        .legendChart div { width:32%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
+        #all { width:100%; margin-right:auto; margin-left:auto; }
+        .legendChart { width:100%; }
+        .legendChart div { width:48.2%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
       }
 </style>
 
 <body>
 <div id="wrapper">
-<div class="chartTitle">U.S. Bank Stadium labor hours by trade - <span id="total">3,497,834</span> hours</div>
+<div class="chartTitle">LABOR HOURS BY TRADE</div>
+<div id="totals"><span id="total">3,497,834</span> hours</div>
 
 <!-- <div class="chatter">blah blah blah</div>-->
  <div id="chart"></div>
@@ -65,14 +71,14 @@
   <div id="chart_m"></div>
 
   <div class='container'>
-    <div id="all" class="clickyButton selected2">All</div>
+    <div id="all" class="clickyButton selected2">Show All</div>
     <div class="legendChart"></div>
   </div>
 
-<div class="breaker"></div>
+<!-- <div class="breaker"></div>
   <div class='footnote'>Plumber includes: pipefitter, steamfitter, heating/cooling worker, pipelayer, sheet metal worker, sprinkler fitter</div>
   <div class='footnote'>Other trades: Asbestos abatement worker, carpet layer, elevator worker, flag person, greaser, scraper, sign erector, survey field technician, tile setter, traffic controller</div>
-  <div class="byline"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Graphic by Jeff Hargarten</a></div>
+  <div class="byline"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Graphic by Jeff Hargarten</a></div> -->
 
 <!-- <small class="byline">Data Visualization by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></small> -->
 
@@ -90,7 +96,7 @@
 d3.csv("./data/labor_hours.csv", function(d) {
   return {
     Total: +d.Total,
-    Time: d.Date,
+    Time: d3.time.format("%b %Y")(new Date(d.Date)),
     Roofer: +d.Roofer,
     Plumber: +d.Plumber,
     Painter: +d.Painter,
@@ -158,6 +164,7 @@ var chartD = c3.generate({
         padding: padding,
         data: {
             x: 'x',
+            // x_format : '%Y%m%d',
             columns: [
             x,
             carpenter,
@@ -206,16 +213,18 @@ var chartD = c3.generate({
             show: true,
             min: 0,
             max: 250000,
-            padding: {bottom: 0},
+            padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
-             count: 4,
-             values: [0,80000,150000,250000],
+             count: 6,
+             values: [0,25000,75000,125000,175000,225000],
              format: d3.format(',.0f')
             }
         },
         x: {
             type: 'categories',
+            padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
+                format: "%m-%d-%Y",
                 count: 4,
                 multiline: false
             }
@@ -269,6 +278,7 @@ var chartM = c3.generate({
         padding: padding,
         data: {
             x: 'x',
+            // x_format : '%Y%m%d',
             columns: [
             x,
             carpenter,
@@ -322,15 +332,17 @@ var chartM = c3.generate({
             show: true,
             min: 0,
             max: 250000,
-            padding: {bottom: 0},
+            padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
-             count: 4,
-             values: [0,80000,150000,250000],
+             // count: 6,
+             format: "%m-%d-%Y",
+             values: [0,25000,75000,125000,175000,225000],
              format: d3.format(',.0f')
             }
         },
         x: {
             type: 'categories',
+            padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
                 count: 4,
                 multiline: false
