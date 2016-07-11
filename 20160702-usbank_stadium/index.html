@@ -165,7 +165,7 @@ var chartD = c3.generate({
         padding: padding,
         data: {
             x: 'x',
-            // x_format : '%Y%m%d',
+            // xFormat : '%m-%d-%Y',
             columns: [
             x,
             carpenter,
@@ -225,7 +225,7 @@ var chartD = c3.generate({
             type: 'categories',
             padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
-                format: "%m-%d-%Y",
+                // format: "%m-%d-%Y",
                 count: 4,
                 multiline: false
             }
@@ -279,7 +279,7 @@ var chartM = c3.generate({
         padding: padding,
         data: {
             x: 'x',
-            // x_format : '%Y%m%d',
+            // xFormat : '%m-%d-%Y',
             columns: [
             x,
             carpenter,
@@ -336,7 +336,7 @@ var chartM = c3.generate({
             padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
              // count: 6,
-             format: "%m-%d-%Y",
+             // format: "%m-%d-%Y",
              values: [0,25000,75000,125000,175000,225000],
              format: d3.format(',.0f')
             }
