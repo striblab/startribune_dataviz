@@ -97,7 +97,7 @@
 d3.csv("./data/labor_hours.csv", function(d) {
   return {
     Total: +d.Total,
-    Time: d3.time.format("%b %Y")(new Date(d.Date)),
+    Time: d.Date,
     Roofer: +d.Roofer,
     Plumber: +d.Plumber,
     Painter: +d.Painter,
