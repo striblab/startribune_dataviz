@@ -16,21 +16,16 @@
        #viewSwitch { text-align:center; width:100%; margin-left:auto; margin-right:auto; }
       .chartHeader { padding:12px;height:auto;text-align:center;padding-bottom:5px; }
       .chatter { padding:15px; text-align:center; margin-bottom:20px; text-align:left; }
-
       #chart .c3-line { stroke-width:5px !important; opacity:0 !important; }
       #chart_m .c3-line { stroke-width:5px !important; opacity:0 !important; }
        
       .container { width:100%; text-align:center; }
       .legendChart { width:100%; }
-
       .c3-area { opacity:0.8 !important; }
-
       .byline { text-align:right !important; font-size:.8em; }
       .byline a { color:#ccc !important; font-weight:400; }
-
       p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       h4 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:center; padding:10px; }
-
       .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:250px; }
       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
       ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
@@ -38,18 +33,15 @@
       .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
       header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
       .c3-tooltip th { background-color:#aaa;font-size:12px;padding:2px 5px;text-align:left;color:#FFF;font-family:"Benton Sans"; }
-
       .byline { text-align:center; margin-right:auto; margin-left:auto; width:100%; }
       .footnote { color:#ccc; font-size:0.7em; }
-
       #chart_m { display:none; }
-
-      #totals { font-size:3em; color:#ccc; }
-
+      #totals { font-size:3em; color:#333; letter-spacing: -.5px;}
       #all { float:left; width:19%; height:86px; vertical-align:center; padding-top:35px; border-radius:5px; background-color:#ddd; }
       .legendChart { float:right; width:80%; }
       .legendChart div { width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; border-radius:5px; margin:3px; padding:10px; }
-      .legendChart div:hover, #all:hover, .selected2 { background-color:#333 !important; color:#fff !important; cursor:pointer; } 
+      .legendChart div:hover, #all:hover, .selected2 { background-color:#557799 !important; color:#fff !important; cursor:pointer; } 
+    
     
       @media (max-width:500px) {
         #chart { display:none; }
@@ -109,10 +101,7 @@ d3.csv("./data/labor_hours.csv", function(d) {
     Carpenter: +d.Carpenter
   };
 }, function(error, rows) {
-
-
 var data = rows;
-
 var x = [];
 var roofers = [];
 var plumber = [];
@@ -124,7 +113,6 @@ var ironworker = [];
 var electrician = [];
 var bricklayer = [];
 var carpenter = [];
-
 x[0] = "x";
 roofers[0] = "Roofers";
 plumber[0] = "Plumbers";
@@ -136,7 +124,6 @@ ironworker[0] = "Ironworkers";
 electrician[0] = "Electricians";
 bricklayer[0] = "Bricklayers";
 carpenter[0] = "Carpenters";
-
 for (var i=0; i < data.length; i++){
 x[i+1] = data[i].Time;
 roofers[i+1] = data[i].Roofer;
@@ -150,21 +137,19 @@ electrician[i+1] = data[i].Electrician;
 bricklayer[i+1] = data[i].Bricklayer;
 carpenter[i+1] = data[i].Carpenter;
 }
-
 var  padding = {
         top: 20,
         right: 60,
         bottom: 20,
         left: 30,
     };
-
 var chartD = c3.generate({
         bindto: '#chart',
         size: { height: 400 },
         padding: padding,
         data: {
             x: 'x',
-            // xFormat : '%m-%d-%Y',
+            // x_format : '%Y%m%d',
             columns: [
             x,
             carpenter,
@@ -224,7 +209,7 @@ var chartD = c3.generate({
             type: 'categories',
             padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
-                // format: "%m-%d-%Y",
+                format: "%m-%d-%Y",
                 count: 4,
                 multiline: false
             }
@@ -241,15 +226,11 @@ var chartD = c3.generate({
               // var totalHours;
           for (i = 0; i < d.length; i++) {
               if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
-
               name = nameFormat(d[i].name);
               value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
               bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
-
               if (! text) {
-
                   title = titleFormat ? titleFormat(d[i].x) : d[i].x;
-
                   for (var k=0; k < rows.length; k++){
                     if (String(rows[k].Time) == String(title)){
                       var totalHours = d3.format(",")(rows[k].Total);
@@ -257,10 +238,8 @@ var chartD = c3.generate({
                       break;
                     }
                   }
-
                   text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + " - " + totalHours + " hours</th></tr>" : "");
               }
-
               text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
               text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + d[i].id + "</td>";
               text += "<td class='value'>" + value + "</td>";
@@ -271,14 +250,13 @@ var chartD = c3.generate({
       }
     }
     });
-
 var chartM = c3.generate({
         bindto: '#chart_m',
         size: { height: 400 },
         padding: padding,
         data: {
             x: 'x',
-            // xFormat : '%m-%d-%Y',
+            // x_format : '%Y%m%d',
             columns: [
             x,
             carpenter,
@@ -335,7 +313,7 @@ var chartM = c3.generate({
             padding: {bottom: 0, top: 0, right:0, left:0},
             tick: {
              // count: 6,
-             // format: "%m-%d-%Y",
+             format: "%m-%d-%Y",
              values: [0,25000,75000,125000,175000,225000],
              format: d3.format(',.0f')
             }
@@ -360,15 +338,11 @@ var chartM = c3.generate({
               // var totalHours;
           for (i = 0; i < d.length; i++) {
               if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
-
               name = nameFormat(d[i].name);
               value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
               bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
-
               if (! text) {
-
                   title = titleFormat ? titleFormat(d[i].x) : d[i].x;
-
                   for (var k=0; k < rows.length; k++){
                     if (String(rows[k].Time) == String(title)){
                       var totalHours = d3.format(",")(rows[k].Total);
@@ -376,10 +350,8 @@ var chartM = c3.generate({
                       break;
                     }
                   }
-
                   text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + " - " + totalHours + " hours</th></tr>" : "");
               }
-
               text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
               text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + d[i].id + "</td>";
               text += "<td class='value'>" + value + "</td>";
@@ -390,13 +362,11 @@ var chartM = c3.generate({
       }
     }
     });
-
 $("#all").click(function() {
     chartD.revert();
     chartM.revert();
     $("#total").html("3,497,834");
 });
-
 function spitLegend() {
 d3.select('.legendChart').selectAll('div')
     .data(["Carpenters","Laborers","Electricians","Ironworkers","Plumbers","Machine Ops","Bricklayers","Painters","Roofers","Other"])
@@ -420,11 +390,8 @@ d3.select('.legendChart').selectAll('div')
         // chartM.toggle(id);
         chartD.focus(id);
         chartM.focus(id);
-
         console.log(id);
-
         var totalHours = 0;
-
         for (var k=0; k < rows.length; k++){
           if (id == "Carpenters") { totalHours += rows[k].Carpenter; }
           else if (id == "Roofers") { totalHours += rows[k].Roofer; }
@@ -439,15 +406,12 @@ d3.select('.legendChart').selectAll('div')
           }
         $("#total").html(d3.format(",.0f")(totalHours));
     });
-
 $(".clickyButton").click(function() {
     $(".clickyButton").removeClass("selected2");
     $(this).addClass("selected2");
   });
 }
-
 spitLegend();
-
 });
 </script>
 <script type="text/javascript">
@@ -463,12 +427,10 @@ spitLegend();
       DropDown.prototype = {
         initEvents : function() {
           var obj = this;
-
           obj.dd.on('click', function(event){
             $(this).toggleClass('active');
             return false;
           });
-
           obj.opts.on('click',function(){
             var opt = $(this);
             obj.val = opt.text();
@@ -483,19 +445,14 @@ spitLegend();
           return this.index;
         }
       }
-
       $(function() {
-
         var dd = new DropDown( $('#dd') );
         var dd2 = new DropDown( $('#ddY') );
-
         $(document).click(function() {
           // all dropdowns
           $('.wrapper-dropdown-1').removeClass('active');
         });
-
       });
-
 </script>
 </body>
 </html>
