@@ -300,7 +300,7 @@ d3.select('#pct').selectAll('.stat')
     .data(["All","Insurance","License","Speeding","Other","Seatbelt","Parking","Marijuana"])
     .enter().append('div')
     .attr('data-id', function (id) { return id; })
-    .attr("class","stat")
+    .attr("class",function (id) { if (id == "All") { return 'stat clicked' } else { return 'stat'; }; })
     .html(function (id) {
       if (id == "All") { var counted = allCount; }
       if (id == "Insurance") { var counted = insuranceCount; }
