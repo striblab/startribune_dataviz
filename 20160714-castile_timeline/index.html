@@ -47,6 +47,8 @@
       .mj { color:#333333;}
       .fines { color:#000;}
 
+      #pct { text-align:center; }
+
 
       #filter input { border-radius:0 !important; width:100% !important; }
       #filter { padding:0px !important; }
@@ -167,6 +169,7 @@ $(".th").click(function() {
 var chart;
 
 var axis = [];
+var allNum = [];
 var insuranceNum = [];
 var licenseNum = [];
 var speedingNum = [];
@@ -176,6 +179,7 @@ var seatbeltNum = [];
 var mjNum = [];
 
 axis[0] = 'axis';
+allNum[0] = 'Everything',
 insuranceNum[0] = 'Insurance';
 licenseNum[0] = 'License';
 speedingNum[0] = 'Speeding';
@@ -195,6 +199,7 @@ var mjCount = 0;
 
 for (var i=0; i < data.length; i++){
   axis[i+1] = d3.time.format("%m-%d-%Y")(new Date(data[i].filed));
+  allNum[i+1] = null;
   insuranceNum[i+1] = null;
   licenseNum[i+1] = null;
   speedingNum[i+1] = null;
@@ -256,6 +261,7 @@ chart = c3.generate({
     },
     data: {
         xs: {
+            'Everything': 'axis',
             'Insurance': 'axis',
             'License': 'axis',
             'Speeding': 'axis',
@@ -266,6 +272,7 @@ chart = c3.generate({
         },
         columns: [
             axis,
+            allNum,
             insuranceNum,
             licenseNum,
             speedingNum,
@@ -281,7 +288,7 @@ chart = c3.generate({
         // }
     },
      color:  { 
-          pattern: ['#aaaaaa', '#959595', '#808080', '#6b6b6b', '#585858', '#464646', '#333333']
+          pattern: ['#000', '#ffaaaa', '#e69190', '#cd7976', '#b5625e', '#9d4a45', '#84332f', '#6c1c1a']
         },
       legend: {
         show: false
