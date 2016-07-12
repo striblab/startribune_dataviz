@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Maps</title>
+  <meta name="description" content="Maps">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link rel="stylesheet" href="https://mapzen.com/js/mapzen.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.1/leaflet.css" />
+  
+  <style>
+         body {
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+
+<div id="map"></div>
+
+  </div>
+</body>
+
+<script src="./js/Leaflet-master/src/Leaflet.js"></script>
+<script src="https://mapzen.com/js/mapzen.min.js"></script>
+<script src="./js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="./js/tangram-master/dist/tangram.min.js"></script>
+<script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1RiNtORVIispxDGDxtdDljvs0CEDP94EaV2B3wbcMkXk&sheet=events", function(error, dataLoad) {
+
+var data = dataLoad;
+
+        var map = L.map('map');
+        var layer = Tangram.leafletLayer({
+            scene: './js/scene.yaml',
+            attribution: '<a href="https://mapzen.com/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://mapzen.com/" target="_blank">Mapzen</a>'
+        });
+        layer.addTo(map);
+        map.setView([40.70531887544228, -74.00976419448853], 15);
+
+});
+</script>
+
+</html>

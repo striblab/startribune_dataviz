@@ -1,0 +1,42 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Open popup programmatically
+description: Open a markers popup from a button.
+tags:
+  - markers
+---
+
+<style>
+.ui-control {
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:1000;
+  }
+</style>
+
+<div id='map'></div>
+<button id='open-popup' class='ui-control'>open popup</button>
+
+<script>
+var map = L.mapbox.map('map', 'mapbox.dc-markers');
+
+// Wait until the markers are loaded, so we know that `map.featureLayer.eachLayer`
+// will actually go over each marker.
+map.featureLayer.on('ready', function(e) {
+    document.getElementById('open-popup').onclick = clickButton;
+});
+
+function clickButton() {
+    map.featureLayer.eachLayer(function(marker) {
+        // You can replace this test for anything else, to choose the right
+        // marker on which to open a popup. by default, popups are exclusive
+        // so opening a new one will close all of the others.
+        if (marker.feature.properties.title === 'Capital Pride Parade') {
+            marker.openPopup();
+        }
+    });
+}
+</script>

@@ -1,0 +1,48 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Display latitude and longitude on marker movement
+description: Drag the marker to a new location on a map to view it's coordinates.
+tags:
+  - layers
+---
+<style>
+pre.ui-coordinates {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+  }
+</style>
+<div id='map'></div>
+<pre id='coordinates' class='ui-coordinates'></pre>
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([0, 0], 2);
+
+var coordinates = document.getElementById('coordinates');
+
+var marker = L.marker([0, 0], {
+    icon: L.mapbox.marker.icon({
+      'marker-color': '#f86767'
+    }),
+    draggable: true
+}).addTo(map);
+
+// every time the marker is dragged, update the coordinates container
+marker.on('dragend', ondragend);
+
+// Set the initial marker coordinate on load.
+ondragend();
+
+function ondragend() {
+    var m = marker.getLatLng();
+    coordinates.innerHTML = 'Latitude: ' + m.lat + '<br />Longitude: ' + m.lng;
+}
+</script>

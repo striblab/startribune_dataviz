@@ -1,0 +1,40 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Create markers from HTML
+description: Use L.divIcon to create custom HTML markers.
+tags:
+  - markers
+---
+<style>
+/*
+ * Unlike other icons, you can style `L.divIcon` with CSS.
+ * These styles make each marker a pink triangle.
+ */
+.css-icon {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #ff8888;
+  }
+</style>
+<div id='map'></div>
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([0, 0], 2);
+
+// Define an icon called cssIcon
+var cssIcon = L.divIcon({
+  // Specify a class name we can refer to in CSS.
+  className: 'css-icon',
+  // Set marker width and height
+  iconSize: [60, 60]
+});
+
+// Create three markers and set their icons to cssIcon
+L.marker([45, 45], {icon: cssIcon}).addTo(map);
+L.marker([0, 0], {icon: cssIcon}).addTo(map);
+L.marker([-45, -45], {icon: cssIcon}).addTo(map);
+</script>

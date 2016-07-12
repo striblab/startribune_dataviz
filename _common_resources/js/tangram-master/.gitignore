@@ -1,0 +1,18 @@
+.gitattributes
+
+# jshint config
+.jshintrc
+
+# build & test artifacts
+node_modules
+dist/tangram.test.js
+dist/tangram.test-worker.js
+
+# a make target for npm install
+.npm
+
+# OS misc
+.DS_Store
+
+# storing some screenshots here
+screenshots

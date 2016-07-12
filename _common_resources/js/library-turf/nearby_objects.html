@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nearby Objects</title>
+  <meta name="description" content="Nearby Objects">
+  <meta name="author" content="Jeff Hargarten - StarTribune, Mapbox.js, Turf.js">
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.css' type='text/css' />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .mapbox-logo, .leaflet-control-attribution{ display:none !important; }
+  .small-input { width: 80px; vertical-align:middle; }
+</style>
+</head>
+
+<body>
+
+<div id='map'></div>
+<div class='pin-top fill-gray pad1'>
+    Water Fountains accessible within
+    <input type='number' id='radius' max='4000' min='0' class='clean short small-input' value='500' step='10' /> feet
+    of the Bay to Breakers race route.
+    <p class='small'>A GeoJSON route is buffered with <a target='_blank' href='https://github.com/Turfjs/turf-buffer'>turf-buffer</a>
+    and points are found with <a href='https://github.com/Turfjs/turf-within'>turf-within</a>.</p>
+</div>
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+
+<script src='data/data.js'></script>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2lsZW5jZWQiLCJhIjoiUm1IZjgyWSJ9.dAfyl93WqB8IOvxlPq-yyA';
+var map = L.mapbox.map('map', 'mapbox.dark')
+.setView([40.72677093147629,-73.99480819702147], 14);
+
+var bufferLayer = L.mapbox.featureLayer().addTo(map);
+
+var raceRoute = L.mapbox.featureLayer().addTo(map);
+var waterFountains = L.mapbox.featureLayer().addTo(map);
+var waterFountainsInside = L.mapbox.featureLayer().addTo(map);
+
+waterFountains.loadURL('data/water_fountains.geojson')
+    .on('ready', done);
+
+raceRoute.loadURL('data/bay_to_breakers.geojson')
+    .on('ready', done);
+
+var loaded = 0;
+function done() {
+    if (++loaded !== 2) return;
+    raceRoute.setStyle({ color: 'hotpink', weight: 3 });
+    map.fitBounds(raceRoute.getBounds());
+
+    function run() {
+        var radius = parseInt(document.getElementById('radius').value);
+        if (isNaN(radius)) radius = 500;
+        var buffer = turf.buffer(raceRoute.getGeoJSON(), radius/5280, 'miles');
+        var fountains = waterFountains.getGeoJSON();
+        fountains.features.forEach(function(feature) {
+            feature.properties['marker-color'] = '#111';
+            feature.properties['marker-symbol'] = 'water';
+            feature.properties['marker-size'] = 'small';
+        });
+        waterFountains.setGeoJSON(fountains);
+        bufferLayer
+            .setGeoJSON(buffer)
+            .setStyle({
+                stroke: false,
+                fillColor: 'hotpink',
+                fillOpacity: 0.2
+            })
+            .eachLayer(function(layer) {
+                layer.bindLabel('Bay to Breakers Route', { noHide: true });
+            });
+        var fountainsInside = turf.within(waterFountains.getGeoJSON(), buffer);
+        fountainsInside.features.forEach(function(feature) {
+            feature.properties['marker-color'] = '#00f';
+            feature.properties['marker-symbol'] = 'water';
+            feature.properties['marker-size'] = 'large';
+        });
+        waterFountainsInside
+            .setGeoJSON(fountainsInside)
+            .eachLayer(function(layer) {
+                layer.bindLabel('Accessible water fountain');
+            });
+    }
+
+    run();
+
+    document.getElementById('radius').onchange = run;
+}
+
+</script>
+
+</html>

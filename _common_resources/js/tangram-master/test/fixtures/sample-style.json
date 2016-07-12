@@ -1,0 +1,37 @@
+{
+    "root": {
+        "filter": {
+            "kind": "highway"
+        },
+        "draw": {
+            "group": {
+                "color": [255, 255, 255]
+            }
+        },
+
+        "fill": {
+            "filter": {
+                "name": "FDR"
+            },
+            "draw": {
+                "group": {
+                    "color": [1, 1, 0]
+                }
+            },
+            "b": {
+                "draw": {
+                    "group": {
+                        "a": "b",
+                        "color": [3.14, 3.14, 3.14]
+                    }
+                }
+            }
+        },
+
+        "rule1": {
+            "filter": {
+                "a": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Disable zooming and panning
+description: How to disable zooming and panning with Mapbox.js, our open source JavaScript library.
+tags:
+  - zoompan
+---
+<div id='map'></div>
+
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets', {
+  zoomControl: false
+}).setView([41.0252, 28.9950], 11);
+
+// Disable drag and zoom handlers.
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+map.keyboard.disable();
+
+// Disable tap handler, if present.
+if (map.tap) map.tap.disable();
+</script>

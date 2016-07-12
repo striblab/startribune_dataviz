@@ -1,0 +1,21 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Plain Leaflet API
+description: Using Mapbox.js you can use the Leaflet API exclusively.
+tags:
+  - leaflet
+---
+<div id='map'></div>
+
+<script>
+// Replace 'mapbox.streets' with your map id.
+var mapboxTiles = L.tileLayer('{{site.tileApi}}/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+    attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setView([42.3610, -71.0587], 15);
+</script>
