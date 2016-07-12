@@ -52,11 +52,12 @@
       .legendChart { float:right; width:85%; }
       .legendChart div { font-size:.9em; width:19%; display:inline-block; text-align:center; cursor: pointer; color:#000; border-radius:5px; margin:3px; padding:10px; }
       .legendChart div:hover, #all:hover, .selected2 { background-color:#557799 !important; color:#fff !important; cursor:pointer; } 
-        
+    
+    
       @media (max-width:500px) {
         #chart { display:none; }
         #chart_m { display:block; }
-        #all { float:none; width:96%; margin:0 auto 3px auto; }
+        #all { float:none; width:97%; margin:0 auto 3px auto; }
         .legendChart { width:100%; }
         .legendChart div { width:47%; display:inline-block; text-align:center; cursor: pointer; color:#000; }
       }
@@ -64,6 +65,7 @@
 .chartTitle {
     font-size: 1em;
 }  
+  
   
   
 </style>
@@ -332,6 +334,9 @@ var chartM = c3.generate({
           pattern: ['#DEE7EB','#D8E5E8','#BCD1DC','#B7C9D1','#A7BCC8','#B6C4D5','#B2BAC6','#A8ACB9','#D4D0CE','#C5C1BF']
           // pattern: ['#333333']
         },
+    tooltip: {
+        show: false
+    },
         axis: {
           y: {
             show: false
