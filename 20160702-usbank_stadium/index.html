@@ -362,46 +362,46 @@ var chartM = c3.generate({
             }
           }
         },
-      subchart: { show: false },
-      tooltip: {
-      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-          var $$ = this, config = $$.config,
-              titleFormat = config.tooltip_format_title || defaultTitleFormat,
-              nameFormat = config.tooltip_format_name || function (name) { return name; },
-              valueFormat = config.tooltip_format_value || defaultValueFormat,
-              text, i, title, value, name, bgcolor;
-              // var totalHours;
-          for (i = 0; i < d.length; i++) {
-              if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+      subchart: { show: false }
+    //   tooltip: {
+    //   contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+    //       var $$ = this, config = $$.config,
+    //           titleFormat = config.tooltip_format_title || defaultTitleFormat,
+    //           nameFormat = config.tooltip_format_name || function (name) { return name; },
+    //           valueFormat = config.tooltip_format_value || defaultValueFormat,
+    //           text, i, title, value, name, bgcolor;
+    //           // var totalHours;
+    //       for (i = 0; i < d.length; i++) {
+    //           if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
 
-              name = nameFormat(d[i].name);
-              value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
-              bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+    //           name = nameFormat(d[i].name);
+    //           value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+    //           bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
 
-              if (! text) {
+    //           if (! text) {
 
-                  title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+    //               title = titleFormat ? titleFormat(d[i].x) : d[i].x;
 
-                  for (var k=0; k < rows.length; k++){
-                    if (String(rows[k].Time) == String(title)){
-                      var totalHours = d3.format(",")(rows[k].Total);
+    //               for (var k=0; k < rows.length; k++){
+    //                 if (String(rows[k].Time) == String(title)){
+    //                   var totalHours = d3.format(",")(rows[k].Total);
                       
-                      break;
-                    }
-                  }
+    //                   break;
+    //                 }
+    //               }
 
-                  text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + " - " + totalHours + " hours</th></tr>" : "");
-              }
+    //               text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + " - " + totalHours + " hours</th></tr>" : "");
+    //           }
 
-              text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
-              text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + d[i].id + "</td>";
-              text += "<td class='value'>" + value + "</td>";
-              text += "</tr>";
+    //           text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+    //           text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + d[i].id + "</td>";
+    //           text += "<td class='value'>" + value + "</td>";
+    //           text += "</tr>";
               
-          }
-          return text + "</table>";
-      }
-    }
+    //       }
+    //       return text + "</table>";
+    //   }
+    // }
     });
 
 $("#all").click(function() {

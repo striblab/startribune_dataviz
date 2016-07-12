@@ -1,0 +1,409 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Philando Castile Traffic Stops Timeline</title>
+  <meta name="description" content="Philando Castile Traffic Stops Timeline">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
+  
+  <style>
+      body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+      #chart .c3-line { stroke-width:6px !important; }
+
+      #map { width:100%; height:200px; }
+      .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
+      .map-overlay { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
+      .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
+      .mapboxgl-ctrl-attrib { display:none; }
+
+      #wrapper { width:100%; margin-right:auto; margin-left:auto; }
+      #leftSide { width:30%; float:left; }
+      #rightSide { width:68%; float:right; }
+
+      #viewSwitch, #current { padding:10px; }
+      .stat { font-weight:900; display:inline-block; width:24%; text-align:center; }
+      .stat:hover, .clicked { background-color:#ddd !important; cursor:pointer; }
+
+      #filter { padding:12px; }
+
+      #chart { height:300px; }
+
+      .source { font-size:0.8em; }
+
+      .insurance { color:#aaaaaa;}
+      .license { color:#959595;}
+      .speeding { color:#808080;}
+      .other { color:#6b6b6b;}
+      .seatbelt { color:#585858;}
+      .parking { color:#464646;}
+      .mj { color:#333333;}
+      .fines { color:#000;}
+
+
+      #filter input { border-radius:0 !important; width:100% !important; }
+      #filter { padding:0px !important; }
+
+      p { text-align:center; margin-right:auto; margin-left:auto; padding:15px; }
+
+      .switch { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; color:#000 !important; margin:0 !important; }
+      .switch:hover, .selected, .step:hover, .cell:hover { background-color:#4C4C39 !important; color:#fff !important; cursor:pointer; margin:0 !important; }
+
+      .cell { width:19%; display:inline-block; }
+
+      @media (max-width:500px) {
+        .stat { width:48%; }
+      }
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+
+<div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
+<div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations.</div>
+    <div id="chart"></div>
+    <div id="pct"></div>
+
+<div style="display:none">
+  <div id="filter"><input type="search" id="filter_box" placeholder="Search incidents"></input></div>
+
+  <div id="incidents">
+    <div class='th cell' data="year">Year</div><div class='th cell' data="date">Date</div><div class='th cell' data="offense">Offense</div><div class='th cell' date="level">Level</div><div class='th cell' data="status">Status</div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
+
+<script>
+
+d3.csv("./data/citations.csv", function(d) {
+  return {
+    filed: d3.time.format("%x")(new Date(d.OffenseDateraw)),
+    level: d.StatLevel,
+    charge: d.StatDescr,
+    disposition: d.DispCode,
+    type: d.type,
+    year: d.year,
+    fine: d.fine
+  };
+}, function(error, rows) {
+
+var data = rows;
+
+function tableSort(container,party,data,candidate,sorted){
+   
+  d3.select(container).selectAll(".card").sort(function(a, b) {
+          if (candidate == "year") { 
+        if (sorted == "descend") { return d3.descending(a.year, b.year); }
+        if (sorted == "ascend") { return d3.ascending(a.year, b.year); }
+     }
+          if (candidate == "date") { 
+        if (sorted == "descend") { return d3.descending(a.filed, b.filed); }
+        if (sorted == "ascend") { return d3.ascending(a.filed, b.filed); }
+     }
+           if (candidate == "offense") { 
+        if (sorted == "descend") { return d3.descending(a.charge, b.charge); }
+        if (sorted == "ascend") { return d3.ascending(a.charge, b.charge); }
+     }
+           if (candidate == "level") { 
+        if (sorted == "descend") { return d3.descending(a.level, b.level); }
+        if (sorted == "ascend") { return d3.ascending(a.level, b.level); }
+     }
+           if (candidate == "status") { 
+        if (sorted == "descend") { return d3.ascending(a.disposition, b.disposition); }
+        if (sorted == "ascend") { return d3.descending(a.disposition, b.disposition); }
+     }
+    })
+    .transition().duration(500);
+}
+
+d3.select("#incidents").selectAll(".card")
+  .data(data).enter().append("div")
+  .attr("class",function(d) { return "card"; })
+  .html(function(d){ 
+    return "<div class='cell'>" + d.year + "</div><div class='cell'>" + d.filed + "</div><div class='cell'>" + d.charge + "</div><div class='cell'>" + d.level + "</div><div class='cell'>" + d.disposition + "</div>";
+  });
+
+$('#filter_box').keyup(function(i){
+   $('.card').hide();
+   var txt = $('#filter_box').val();
+   $('.card').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).show();
+       }
+   });
+});
+
+$(".th").click(function() {
+  $(".th").removeClass("selected");
+  $(this).addClass("selected");
+  if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
+  else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
+  tableSort("#incidents",null,data,$(this).attr("data"),sorted);
+});
+
+// $(".switch").click(function()  { 
+//    $(".switch").removeClass("selected");
+//    $(this).addClass("selected");
+//    map.flyTo({ center: [$(this).attr("longitude"),$(this).attr("latitude")], zoom: 9 });
+//    switchChart($(this).text());
+// });
+
+var chart;
+
+var axis = [];
+var insuranceNum = [];
+var licenseNum = [];
+var speedingNum = [];
+var otherNum = [];
+var parkingNum = [];
+var seatbeltNum = [];
+var mjNum = [];
+
+axis[0] = 'axis';
+insuranceNum[0] = 'Insurance';
+licenseNum[0] = 'License';
+speedingNum[0] = 'Speeding';
+otherNum[0] = 'Other';
+parkingNum[0] = 'Parking';
+mjNum[0] = 'Marijuana';
+seatbeltNum[0] = 'Seatbelt';
+
+var allCount = 0;
+var insuranceCount = 0;
+var licenseCount = 0;
+var speedingCount = 0;
+var otherCount = 0;
+var parkingCount = 0;
+var seatbeltCount = 0;
+var mjCount = 0;
+
+for (var i=0; i < data.length; i++){
+  axis[i+1] = d3.time.format("%m-%d-%Y")(new Date(data[i].filed));
+  insuranceNum[i+1] = null;
+  licenseNum[i+1] = null;
+  speedingNum[i+1] = null;
+  otherNum[i+1] = null;
+  parkingNum[i+1] = null;
+  seatbeltNum[i+1] = null;
+  mjNum[i+1] = null;
+  allCount++;
+
+  if (data[i].type == "insurance"){
+    insuranceCount++;
+    if (data[i].disposition == "DISMISS") { insuranceNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV")  { insuranceNum[i+1] = 10; }
+  }
+  if (data[i].type == "license"){
+    licenseCount++;
+    if (data[i].disposition == "DISMISS") { licenseNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV" || data[i].disposition == "FTA")  { licenseNum[i+1] = 10; }
+  }
+  if (data[i].type == "speeding"){
+    speedingCount++;
+    if (data[i].disposition == "DISMISS") { speedingNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV")  { speedingNum[i+1] = 10; }
+  }
+  if (data[i].type == "other"){
+    otherCount++;
+    if (data[i].disposition == "DISMISS") { otherNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV")  { otherNum[i+1] = 10; }
+  }
+  if (data[i].type == "parking"){
+    parkingCount++;
+    if (data[i].disposition == "DISMISS") { parkingNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV")  { parkingNum[i+1] = 10; }
+  }
+  if (data[i].type == "seatbelt"){
+    seatbeltCount++;
+    if (data[i].disposition == "DISMISS") { seatbeltNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV")  { seatbeltNum[i+1] = 10; }
+  }
+  if (data[i].type == "marijuana"){
+    mjCount++;
+    if (data[i].disposition == "DISMISS") { mjNum[i+1] = 30; }
+    else if (data[i].disposition == "CONV")  { mjNum[i+1] = 10; }
+  }
+}
+
+var  padding = {
+        top: 20,
+        right: 80,
+        bottom: 20,
+        left: 80,
+    };
+
+chart = c3.generate({
+      bindto: "#chart",
+      padding: padding,
+      point: {
+        r: 5
+    },
+    data: {
+        xs: {
+            'Insurance': 'axis',
+            'License': 'axis',
+            'Speeding': 'axis',
+            'Other': 'axis',
+            'Parking': 'axis',
+            'Marijuana': 'axis',
+            'Seatbelt': 'axis'
+        },
+        columns: [
+            axis,
+            insuranceNum,
+            licenseNum,
+            speedingNum,
+            otherNum,
+            seatbeltNum,
+            parkingNum,
+            mjNum
+        ],
+        type: 'scatter'
+        // types: {
+        //     'Trump': 'line',
+        //     'Clinton': 'line'
+        // }
+    },
+     color:  { 
+          pattern: ['#aaaaaa', '#959595', '#808080', '#6b6b6b', '#585858', '#464646', '#333333']
+        },
+      legend: {
+        show: false
+        },
+    axis: {
+      y: {
+            min: 0,
+            padding: {bottom: 0},
+            tick: {
+             format: function (d) {
+                    switch (d) {
+                        case 30:
+                            return "Convicted"
+                        case 10:
+                            return "Dismissed"
+                    }
+                },
+              values: [10,30],
+            }
+        },
+        x: {
+            type: 'categories',
+            categories: ['12-02-2002','03-21-2006','02-13-2008','08-10-2011'],
+            tick: {
+                count: 4,
+                multiline: false
+            }
+          }
+        },
+        tooltip: {
+      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+          var $$ = this, config = $$.config,
+              titleFormat = config.tooltip_format_title || defaultTitleFormat,
+              nameFormat = config.tooltip_format_name || function (name) { return name; },
+              valueFormat = config.tooltip_format_value || defaultValueFormat,
+              text, i, title, value, name, bgcolor;
+          for (i = 0; i < d.length; i++) {
+              if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+
+              if (! text) {
+                  title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+                  text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
+              }
+
+              var description = "";
+
+              name = nameFormat(d[i].name);
+              value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+              bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+              // console.log(title);
+
+              for (var k=0; k < data.length; k++){
+                if (d3.time.format("%m-%d-%Y")(new Date(data[k].filed)) == title && String(name).toLowerCase() == String(data[k].type).toLowerCase()){
+                  description = data[k].charge;
+                  break;
+                }
+              }
+
+              text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+              text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
+              text += "<td class='value'>" + value + "</td>";
+              text += "</tr><tr>";
+              text += "<td class='value'>" + description + "</td>";
+              text += "</tr>";
+              
+          }
+          return text + "</table>";
+      }
+    }
+});
+
+function spitLegend() {
+d3.select('#pct').selectAll('.stat')
+    .data(["All","Insurance","License","Speeding","Other","Seatbelt","Parking","Marijuana"])
+    .enter().append('div')
+    .attr('data-id', function (id) { return id; })
+    .attr("class","stat")
+    .html(function (id) {
+      if (id == "All") { var counted = allCount; }
+      if (id == "Insurance") { var counted = insuranceCount; }
+      if (id == "License") { var counted = licenseCount; }
+      if (id == "Speeding") { var counted = speedingCount; }
+      if (id == "Other") { var counted = otherCount; }
+      if (id == "Seatbelt") { var counted = seatbeltCount; }
+      if (id == "Parking") { var counted = parkingCount; }
+      if (id == "Marijuana") { var counted = mjCount; }
+
+     return "<div class='bigNum'>" + counted + "</div><div class='label'>" + id + "</div>"; })
+    .each(function (id) {
+        d3.select(this).style('color', chart.color(id));
+    })
+    .on('mouseover', function (id) {
+        // chartD.focus(id);
+        // chartM.focus(id);
+    })
+    .on('mouseout', function (id) {
+        // chartD.revert();
+        // chartM.revert();
+    })
+    .on('click', function (id) {
+      if (id == "All") { chart.revert(); }
+      else { chart.focus(id); }
+    });
+
+// d3.select('#pct').append('div')
+//     .attr("class","stat")
+//     .attr("id","all")
+//     .html(function (id) { return "<div class='bigNum'>" + allCount + "</div><div class='label'>All</div>"; })
+//     .on('click', function (id) {
+//         chart.revert();
+//     });
+
+$(".stat").click(function() {
+  $(".stat").removeClass("clicked");
+  $(this).addClass("clicked");
+});
+}
+
+spitLegend();
+
+});
+</script>
+
+</html>
