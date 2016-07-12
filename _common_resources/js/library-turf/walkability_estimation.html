@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Walkability Estimation</title>
+  <meta name="description" content="Walkability Estimation">
+  <meta name="author" content="Jeff Hargarten - StarTribune, Mapbox.js, Turf.js">
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.css' type='text/css' />
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .mapbox-logo, .leaflet-control-attribution{ display:none !important; }
+  #score { font-size: 250%; font-weight: 900;}
+  #description { padding-bottom: 15px; }
+  #steps { position:absolute; bottom:0px; width:100%; height: 40px; background:#000; }
+  #steps a {
+      color:#fff;
+      display:inline-block;
+      text-align:center;
+      box-sizing:border-box;
+      max-width:10000px !important;
+  }
+  .button:hover {
+  }
+</style>
+</head>
+
+<body>
+
+<div id='map'></div>
+<div class='pin-top pad1 dark fill-green'>
+  <div id='description'>Drag the point to calculate the relative walkability of a location</div>
+  <span id='score' class=''></span><span>/100</span>
+</div>
+<div id='steps' class='col12'>
+    <a href='#' class='col6 unround button fill-navy fill-green' id='amenities'>Amenities</a>
+    <a href='#' class='col6 unround button fill-navy' id='pedestrians'>Pedestrians</a>
+</div>
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+
+<script src='data/bars.js'></script>
+<script src='data/libraries.js'></script>
+<script src='data/metros.js'></script>
+<script src='data/bikes.js'></script>
+<script src='data/pharmacies.js'></script>
+<script src='data/postoffices.js'></script>
+<script src='data/zipcar.js'></script>
+<script src='data/schools.js'></script>
+<script src='data/grocery.js'></script>
+<script src='data/pedestrians.js'></script>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2lsZW5jZWQiLCJhIjoiUm1IZjgyWSJ9.dAfyl93WqB8IOvxlPq-yyA';
+
+var map = L.mapbox.map('map', 'mapbox.dark', { zoomControl: false })
+    .setView([38.91326933963583,-77.0323696732521,], 15);
+map.scrollWheelZoom.disable();
+new L.Control.Zoom({ position: 'topright' }).addTo(map);
+
+var amenitiesActive = true;
+var pedestriansActive = false;
+var debounceWait = 15;
+
+var distances = [
+    { miles: 0.1, decay: 1 },
+    { miles: 0.5, decay: 0.4 },
+    { miles: 0.7, decay: 0.13 }
+];
+
+var amenities = [
+    {name: 'metros', importance: 6.5, data: metros},
+    {name: 'grocery', importance: 5, data: grocery},
+    {name: 'pharmacies', importance: 4, data: pharmacies},
+    {name: 'bikes', importance: 3, data: bikes},
+    {name: 'bars', importance: 2.5, data: bars},
+    {name: 'zipcar', importance: 3, data: zipcar},
+    {name: 'libraries', importance: 1, data: libraries},
+    {name: 'schools', importance: 1, data: schools},
+    {name: 'postoffices', importance: .5, data: postoffices}
+];
+
+var pt = {
+    "type": "Feature",
+    "properties": {
+        "marker-symbol": "pitch",
+        "marker-color": "#fff",
+        "marker-size": "small",
+        "stroke": "#000"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -77.0323696732521,
+            38.91326933963583
+        ]
+    }
+};
+
+var ptLayer = L.mapbox.featureLayer().setGeoJSON(pt);
+var amenityLayer = new L.layerGroup().addTo(map);
+
+ptLayer.eachLayer(function(layer) {
+    layer.options.draggable = true;
+    walkability = debounce(walkability, debounceWait)
+    layer.on('drag', walkability);
+});
+ptLayer.addTo(map);
+
+walkability();
+
+function walkability() {
+    pt = ptLayer.getLayers()[0].toGeoJSON();
+
+    var score = 0;
+    var categories
+    var pois = turf.featurecollection([]);
+    
+    amenities.forEach(function(amenity){
+        amenity.data.features.forEach(function(f){
+            f.properties.score = null;
+        });
+    });
+    
+    distances.forEach(function(distance){
+        amenities.forEach(function(amenity){
+            var found = turf.featurecollection(amenity.data.features.filter(function(f){
+                    if (turf.distance(f, pt, 'miles') <= distance.miles) return true;
+                })
+            );
+            
+            var increment = amenity.importance * (distance.decay)
+            found.features.forEach(function(poi){
+                if(!poi.properties.score || poi.properties.score < increment) poi.properties.score = increment;
+            });
+            pois.features = pois.features.concat(found.features);
+            amenity[distance.miles + 'mi'] = found.features.length
+            score += (amenity[distance.miles + 'mi'] * amenity.importance * distance.decay) / 5;
+        });
+    });
+
+    amenityLayer.clearLayers();
+    amenityLayer = new L.layerGroup().addTo(map);
+    
+    L.geoJson(pois, {
+      pointToLayer: function(feature, latlng) {
+        return L.circleMarker(latlng, {
+          radius: feature.properties.score * 4,
+          fillColor: 'yellow',
+          fillOpacity: 1,
+          stroke: false
+        });
+      }
+    }).addTo(amenityLayer);
+    
+    
+    if(score > 100) score = 100;
+    document.getElementById('score').innerHTML = Math.floor(score); 
+}
+
+// taken from underscore http://underscorejs.org/
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+var pedestrianLayer = new L.layerGroup().addTo(map);
+
+function setButton(t) {
+    t.classList.toggle('fill-green');
+}
+
+document.getElementById('amenities').onclick = function() { setButton(this); toggleAmenities(); };
+document.getElementById('pedestrians').onclick = function() { setButton(this); togglePedestrians(); };
+
+function toggleAmenities() {
+    // turn off amenities
+    if(amenitiesActive) {
+        amenitiesActive = false;
+
+        amenityLayer.clearLayers();
+        ptLayer.clearLayers();
+    //turn on amenities
+    } else {
+        console.log('adding amenities')
+        amenitiesActive = true;
+
+        ptLayer = L.mapbox.featureLayer().setGeoJSON(pt);
+        ptLayer.eachLayer(function(layer) {
+            layer.options.draggable = true;
+            walkability = debounce(walkability, debounceWait)
+            layer.on('drag', walkability);
+            walkability();
+        });
+        ptLayer.addTo(map);
+    }
+}
+
+function togglePedestrians() {
+    if(pedestriansActive) {
+        pedestriansActive = false;
+
+        //remove pedestrians
+        pedestrianLayer.clearLayers();
+    } else {
+        pedestriansActive = true;
+
+        // add pedestrians sized by daily counts
+        L.geoJson(pedestrians, {
+          pointToLayer: function(feature, latlng) {
+            var radius = 0;
+            if(feature.properties.daily > 1) radius = .1;
+            if(feature.properties.daily > 200) radius = .3;
+            if(feature.properties.daily > 500) radius = .6;
+            if(feature.properties.daily > 1000) radius = .8;
+            if(feature.properties.daily > 3000) radius = 1.5;
+            if(feature.properties.daily > 8000) radius = 3;
+            if(feature.properties.daily > 15000) radius = 5;
+            if(feature.properties.daily > 25000) radius = 8;
+            if(feature.properties.daily > 60000) radius = 10;
+
+            return L.circleMarker(latlng, {
+              radius: radius,
+              fillColor: 'red',
+              fillOpacity: 1,
+              stroke: false
+            });
+          }
+        }).addTo(pedestrianLayer);
+    }
+}
+
+</script>
+
+</html>

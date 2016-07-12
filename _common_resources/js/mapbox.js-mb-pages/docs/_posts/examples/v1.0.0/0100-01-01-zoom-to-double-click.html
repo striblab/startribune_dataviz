@@ -1,0 +1,22 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Double click to zoom
+description: Listen for a double click event from a user and zoom in on the map.
+tags:
+  - zoompan
+---
+<div id='map'></div>
+
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets', {
+    // Disable default double-click behavior.
+    doubleClickZoom: false
+})
+.setView([46.695, 11.470], 4)
+.on('dblclick', function(e) {
+    // Zoom exactly to each double-clicked point
+    map.setView(e.latlng, map.getZoom() + 1);
+});
+</script>

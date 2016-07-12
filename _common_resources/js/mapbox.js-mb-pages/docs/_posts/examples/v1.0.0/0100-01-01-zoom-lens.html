@@ -1,0 +1,89 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Zoom lens
+description: Create an interface for scanning maps through a lens.
+tags:
+  - ui
+  - layers
+---
+
+<style>
+#map {
+  pointer-events:all;
+  cursor:none
+  }
+#zoommap {
+  background:#73b5e5;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+  -webkit-transform:rotate(-60deg);
+     -moz-transform:rotate(-60deg);
+      -ms-transform:rotate(-60deg);
+       -o-transform:rotate(-60deg);
+          transform:rotate(-60deg);
+  }
+#zoomlens {
+  overflow:visible;
+  top:-9999px;
+  left:-9999px;
+  }
+#border {
+  border:5px solid #404040;
+  margin-top: -5px;
+  margin-left: -5px;
+  border-radius:50%;
+  box-shadow:0 0 10px rgba(0,0,0,0.25);
+  }
+.overlay {
+  position:absolute;
+  pointer-events:none;
+  overflow:hidden;
+  width:200px;
+  height:200px;
+  z-index:1000;
+  }
+.rotater {
+  -webkit-transform:rotate(30deg);
+     -moz-transform:rotate(30deg);
+      -ms-transform:rotate(30deg);
+       -o-transform:rotate(30deg);
+          transform:rotate(30deg);
+  }
+</style>
+<div id='map'></div>
+<div id='zoomlens' class='overlay'>
+    <div class='overlay rotater'>
+        <div class='overlay rotater'>
+            <div id='zoommap' class='overlay'></div>
+        </div>
+    </div>
+    <div id='border' class='overlay'></div>
+</div>
+<script>
+var map = L.mapbox.map('map', 'mapbox.light');
+var zoommap = L.mapbox.map('zoommap', 'mapbox.streets', {
+    fadeAnimation: false,
+    zoomControl: false,
+    attributionControl: false
+});
+
+var zl = document.getElementById('zoomlens');
+
+// Call update or zoom functions when
+// these events occur.
+map.on('mousemove', update);
+map.on('zoomend', zoom);
+
+function zoom(e) {
+    if (zoommap._loaded) zoommap.setZoom(e.target.getZoom() + 1);
+}
+
+function update(e) {
+    zl.style.top = ~~e.containerPoint.y - 100 + 'px';
+    zl.style.left = ~~e.containerPoint.x - 100 + 'px';
+    zoommap.setView(e.latlng, map.getZoom() + 1, true);
+}
+</script>

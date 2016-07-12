@@ -1,0 +1,85 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Displaying WMS layers
+description: 'Add a <a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Service</a> layer using data provided by <a href="http://www.noaa.gov/">NOAA</a>'
+tags:
+  - layers
+---
+<style>
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;right:10px;
+  z-index:1;
+  border-radius:3px;
+  width:120px;
+  border:1px solid rgba(0,0,0,0.4);
+  }
+  .menu-ui a {
+    font-size:13px;
+    color:#404040;
+    display:block;
+    margin:0;padding:0;
+    padding:10px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    text-align:center;
+    }
+    .menu-ui a:first-child {
+      border-radius:3px 3px 0 0;
+      }
+    .menu-ui a:last-child {
+      border:none;
+      border-radius:0 0 3px 3px;
+      }
+    .menu-ui a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      }
+    .menu-ui a.active {
+      background:#3887BE;
+      color:#FFF;
+      }
+      .menu-ui a.active:hover {
+        background:#3074a4;
+        }
+</style>
+<div id='map'>
+	<nav id='map-ui' class='menu-ui'>
+    <a href='#' class='active' id='temperature'>Temperature</a>
+    <a href='#' class='active' id='precipitation'>Precipitation</a>
+  </nav>
+</div>
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets').setView([37, -99], 3);
+
+// Add each wms layer using L.tileLayer.wms
+var temperature = L.tileLayer.wms('http://gis.srh.noaa.gov/arcgis/services/NDFDTemps/MapServer/WMSServer', {
+    format: 'img/png',
+    transparent: true,
+    layers: 16
+}).addTo(map);
+
+var precipitation = L.tileLayer.wms('http://nowcoast.noaa.gov/arcgis/services/nowcoast/analysis_meteohydro_sfc_qpe_time/MapServer/WmsServer', {
+    format: 'image/png',
+    transparent: true,
+    layers: '5'
+}).addTo(map);
+
+// Layer switcher
+document.getElementById('temperature').onclick = function () {
+    var enable = this.className !== 'active';
+    temperature.setOpacity(enable ? 1 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+
+document.getElementById('precipitation').onclick = function () {
+    var enable = this.className !== 'active';
+    precipitation.setOpacity(enable ? 1 : 0);
+    this.className = enable ? 'active' : '';
+    return false;
+};
+</script>

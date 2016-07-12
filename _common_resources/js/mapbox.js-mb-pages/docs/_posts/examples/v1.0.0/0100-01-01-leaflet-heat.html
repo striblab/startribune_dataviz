@@ -1,0 +1,33 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Leaflet Heat
+description: Initially draw heatmap data on a map and allow a users mouse movement to draw their own.
+tags:
+  - plugins
+---
+<script src='{{site.tileApi}}/mapbox.js/plugins/leaflet-heat/v0.1.3/leaflet-heat.js'></script>
+<div id='map'></div>
+
+<!-- Example data. -->
+<script src='{{site.baseurl}}/assets/data/realworld.388.js'></script>
+
+<script>
+    var map = L.mapbox.map('map', 'mapbox.dark')
+        .setView([-37.821, 175.219], 16);
+
+    var heat = L.heatLayer(addressPoints, {maxZoom: 18}).addTo(map);
+    var draw = true;
+
+    // add points on mouse move (except when interacting with the map)
+    map.on({
+        movestart: function () { draw = false; },
+        moveend:   function () { draw = true; },
+        mousemove: function (e) {
+            if (draw) {
+                heat.addLatLng(e.latlng);
+            }
+        }
+    })
+</script>

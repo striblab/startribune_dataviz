@@ -1,0 +1,76 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Listing markers in view
+description: Show a list of markers within view by their coordinates on a map with Mapbox.js.
+tags:
+  - ui
+---
+<style>
+pre.ui-coordinates {
+  background:rgba(0,0,0,0.5);
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:5px 10px;
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+  max-height:240px;
+  overflow:auto;
+  width:100px;
+  }
+</style>
+
+<div id='map'></div>
+<pre id='coordinates' class='ui-coordinates'></pre>
+
+<script>
+var map = L.mapbox.map('map', 'mapbox.light');
+var myLayer = L.mapbox.featureLayer().addTo(map);
+var features = [];
+
+for (var x = -120; x < 120; x += 20) {
+    for (var y = -80; y < 80; y += 10) {
+        features.push({
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [x, y]
+            },
+            properties: {
+                'marker-color': '#000',
+                'marker-symbol': 'star-stroked',
+                title: [x, y].join(',')
+            }
+        });
+    }
+}
+
+myLayer.setGeoJSON({
+    type: 'FeatureCollection',
+    features: features
+});
+
+map.on('move', function() {
+    // Construct an empty list to fill with onscreen markers.
+    var inBounds = [],
+    // Get the map bounds - the top-left and bottom-right locations.
+        bounds = map.getBounds();
+
+    // For each marker, consider whether it is currently visible by comparing
+    // with the current map bounds.
+    myLayer.eachLayer(function(marker) {
+        if (bounds.contains(marker.getLatLng())) {
+            inBounds.push(marker.options.title);
+        }
+    });
+
+    // Display a list of markers.
+    document.getElementById('coordinates').innerHTML = inBounds.join('\n');
+});
+
+map.setView([37, -77], 5);
+</script>

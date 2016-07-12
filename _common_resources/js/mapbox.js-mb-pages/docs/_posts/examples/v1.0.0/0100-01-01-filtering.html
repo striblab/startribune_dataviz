@@ -1,0 +1,52 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Searching for markers
+description: Use setFilter as a fast search to filter out markers based on a user query.
+tags:
+  - ui
+  - markers
+  - omnivore
+---
+<style>
+.search-ui {
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:1000;
+  }
+</style>
+
+<!-- jQuery is required for this example. -->
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<script src='{{site.tileApi}}/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<div id='map'></div>
+<input id='search' class='search-ui' placeholder='Enter state code' />
+
+<script>
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([40, -95], 4);
+
+var featureLayer = L.mapbox.featureLayer().addTo(map);
+
+$('#search').keyup(search);
+
+var csvLayer = omnivore.csv('/mapbox.js/assets/data/airports.csv', null, L.mapbox.featureLayer())
+    .addTo(map);
+
+function search() {
+    // get the value of the search input field
+    var searchString = $('#search').val().toLowerCase();
+
+    csvLayer.setFilter(showState);
+
+    // here we're simply comparing the 'state' property of each marker
+    // to the search string, seeing whether the former contains the latter.
+    function showState(feature) {
+        return feature.properties.state
+            .toLowerCase()
+            .indexOf(searchString) !== -1;
+    }
+}
+</script>

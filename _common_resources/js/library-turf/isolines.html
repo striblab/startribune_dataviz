@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Isolines</title>
+  <meta name="description" content="Isolines">
+  <meta name="author" content="Jeff Hargarten - StarTribune, Mapbox.js, Turf.js">
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.css' type='text/css' />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .mapbox-logo, .leaflet-control-attribution{ display:none !important; }
+  .small-input { width: 80px; vertical-align:middle; }
+</style>
+</head>
+
+<body>
+
+<div id='map'></div>
+<div class='pin-top fill-gray pad1'>
+    Population data from the US Census transformed in real-time
+    into population isolines with <a target='_blank' href='https://github.com/Turfjs/turf-isolines'>turf-isoline</a>.
+</div>
+
+</body>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+
+<script src='data/data.js'></script>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic2lsZW5jZWQiLCJhIjoiUm1IZjgyWSJ9.dAfyl93WqB8IOvxlPq-yyA';
+var map = L.mapbox.map('map', 'mapbox.dark')
+.setView([40.72677093147629,-73.99480819702147], 14);
+
+map.scrollWheelZoom.disable();
+
+// calculate quantile breaks
+var breaks = turf.quantile(pts, 'pop', [10,20,30,40,50,60,70,80,85,90,95,99]);
+// calculate isolines
+var iso = turf.isolines(pts, 'pop', 49, breaks);
+
+// style isolines
+iso.features.forEach(function(line, i){
+  line.properties['stroke-width'] = breaks.indexOf(line.properties.pop)/breaks.length;
+  line.properties['stroke-opacity'] = breaks.indexOf(line.properties.pop)/breaks.length;
+  line.properties['stroke'] = 'red';
+});
+
+L.geoJson(iso, {
+  style: L.mapbox.simplestyle.style,
+}).addTo(map);
+
+// style points
+pts.features.forEach(function(pt){
+  pt.properties.radius = 0.5;
+  pt.properties.fillColor = '#FFFF00';
+  pt.properties.fillOpacity = 1;
+  pt.properties.stroke = false;
+});
+
+L.geoJson(pts, {
+  pointToLayer: function(feature, latlng) {
+    var radius = feature.properties.pop/breaks[breaks.length-1]*3;
+    return L.circleMarker(latlng, {
+      radius: radius,
+      fillColor:'#FFFF00',
+      fillOpacity:1,
+      stroke: false
+    });
+  }
+}).addTo(map);
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+---
+layout: example
+categories: example/v1.0.0
+version: v1.0.0
+title: Show tooltips on hover
+description: How to show marker popups on hover with Mapbox.js, our open source JavaScript library.
+tags:
+  - tooltips
+  - markers
+---
+<div id='map'></div>
+
+<script>
+var map = L.mapbox.map('map', 'mapbox.light')
+  .setView([39.12367, -76.81229], 9);
+
+var myLayer = L.mapbox.featureLayer().addTo(map);
+
+var geojson = {
+    type: 'FeatureCollection',
+    features: [{
+        type: 'Feature',
+        properties: {
+            title: 'Washington, D.C.',
+            'marker-color': '#f86767',
+            'marker-size': 'large',
+            'marker-symbol': 'star',
+            url: 'http://en.wikipedia.org/wiki/Washington,_D.C.'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-77.03201, 38.90065]
+        }
+    },
+    {
+        type: 'Feature',
+        properties: {
+            title: 'Baltimore, MD',
+            'marker-color': '#7ec9b1',
+            'marker-size': 'large',
+            'marker-symbol': 'star',
+            url: 'http://en.wikipedia.org/wiki/Baltimore'
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-76.60767, 39.28755]
+        }
+    }]
+};
+
+myLayer.setGeoJSON(geojson);
+myLayer.on('mouseover', function(e) {
+    e.layer.openPopup();
+});
+myLayer.on('mouseout', function(e) {
+    e.layer.closePopup();
+});
+</script>

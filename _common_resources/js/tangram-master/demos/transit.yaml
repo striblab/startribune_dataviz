@@ -1,0 +1,18 @@
+layers:
+    transit:
+        data: { source: mapzen }
+        draw:
+            lines:
+                order: 400
+                color: gray
+                width: 4px
+                outline:
+                    color: black
+                    width: 1px
+                interactive: true
+
+        colored:
+            filter: { colour: true }
+            draw:
+                lines:
+                    color: function() { return feature.colour; }
