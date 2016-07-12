@@ -72,15 +72,8 @@
 <div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
 <div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations.</div>
     <div id="chart"></div>
+    <div class="chartTitle">Breakdown of charges</div>
     <div id="pct"></div>
-
-<div style="display:none">
-  <div id="filter"><input type="search" id="filter_box" placeholder="Search incidents"></input></div>
-
-  <div id="incidents">
-    <div class='th cell' data="year">Year</div><div class='th cell' data="date">Date</div><div class='th cell' data="offense">Offense</div><div class='th cell' date="level">Level</div><div class='th cell' data="status">Status</div>
-  </div>
-</div>
 
   </div>
 </body>
@@ -106,65 +99,6 @@ d3.csv("./data/citations.csv", function(d) {
 }, function(error, rows) {
 
 var data = rows;
-
-function tableSort(container,party,data,candidate,sorted){
-   
-  d3.select(container).selectAll(".card").sort(function(a, b) {
-          if (candidate == "year") { 
-        if (sorted == "descend") { return d3.descending(a.year, b.year); }
-        if (sorted == "ascend") { return d3.ascending(a.year, b.year); }
-     }
-          if (candidate == "date") { 
-        if (sorted == "descend") { return d3.descending(a.filed, b.filed); }
-        if (sorted == "ascend") { return d3.ascending(a.filed, b.filed); }
-     }
-           if (candidate == "offense") { 
-        if (sorted == "descend") { return d3.descending(a.charge, b.charge); }
-        if (sorted == "ascend") { return d3.ascending(a.charge, b.charge); }
-     }
-           if (candidate == "level") { 
-        if (sorted == "descend") { return d3.descending(a.level, b.level); }
-        if (sorted == "ascend") { return d3.ascending(a.level, b.level); }
-     }
-           if (candidate == "status") { 
-        if (sorted == "descend") { return d3.ascending(a.disposition, b.disposition); }
-        if (sorted == "ascend") { return d3.descending(a.disposition, b.disposition); }
-     }
-    })
-    .transition().duration(500);
-}
-
-d3.select("#incidents").selectAll(".card")
-  .data(data).enter().append("div")
-  .attr("class",function(d) { return "card"; })
-  .html(function(d){ 
-    return "<div class='cell'>" + d.year + "</div><div class='cell'>" + d.filed + "</div><div class='cell'>" + d.charge + "</div><div class='cell'>" + d.level + "</div><div class='cell'>" + d.disposition + "</div>";
-  });
-
-$('#filter_box').keyup(function(i){
-   $('.card').hide();
-   var txt = $('#filter_box').val();
-   $('.card').each(function(){
-       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
-           $(this).show();
-       }
-   });
-});
-
-$(".th").click(function() {
-  $(".th").removeClass("selected");
-  $(this).addClass("selected");
-  if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
-  else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
-  tableSort("#incidents",null,data,$(this).attr("data"),sorted);
-});
-
-// $(".switch").click(function()  { 
-//    $(".switch").removeClass("selected");
-//    $(this).addClass("selected");
-//    map.flyTo({ center: [$(this).attr("longitude"),$(this).attr("latitude")], zoom: 9 });
-//    switchChart($(this).text());
-// });
 
 var chart;
 
