@@ -28,6 +28,8 @@
       #leftSide { width:30%; float:left; }
       #rightSide { width:68%; float:right; }
 
+      .fixtip { width:150px; }
+
       #viewSwitch, #current { padding:10px; }
       .stat { font-weight:900; display:inline-block; width:24%; text-align:center; }
       .stat:hover, .clicked { background-color:#ddd !important; cursor:pointer; }
@@ -264,7 +266,7 @@ chart = c3.generate({
 
               if (! text) {
                   title = titleFormat ? titleFormat(d[i].x) : d[i].x;
-                  text = "<table class='" + $$.CLASS.tooltip + "'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
+                  text = "<table class='" + $$.CLASS.tooltip + " fixtip'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
               }
 
               var description = "";
@@ -286,8 +288,7 @@ chart = c3.generate({
               text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
               text += "<td class='value'>" + value + "</td>";
               text += "</tr><tr>";
-              text += "<td class='value'>" + description + "</td>";
-              text += "</tr>";
+              text += "<tr class='value'><td style='width:100%' colspan='2'>" + description + "</td></tr>";
               
           }
           return text + "</table>";
