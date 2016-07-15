@@ -36,7 +36,7 @@
 
       #filter { padding:12px; }
 
-      #chart { height:300px; }
+      #chart, #chartF { height:150px; }
 
       .source { font-size:0.8em; }
 
@@ -51,6 +51,10 @@
 
       #pct { text-align:center; }
 
+      .c3-xgrid-line.suspend line, .suspend { stroke: red !important; color:red; }
+      .c3-xgrid-line.reinstate line, .reinstate { stroke: green !important; color:green; }
+      .label { font-weight:900; }
+      #legend { text-align:center; }
 
       #filter input { border-radius:0 !important; width:100% !important; }
       #filter { padding:0px !important; }
@@ -71,12 +75,15 @@
 <body>
   <div id="wrapper">
 
-<div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
-<div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations.</div>
+<!-- <div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
+<div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations and fined for more than $7,000.</div> -->
+<div class='label'>Citations</div>
+<div id="legend"><span class='suspend'>&mdash;</span> License Suspended  <span class='reinstate'>&mdash;</span> License Reinstated</div>
     <div id="chart"></div>
-    <div class="chartTitle">Breakdown of charges</div>
+<div class='label'>Fines</div>
+    <div id="chartF"></div>
+    <div class="chartTitle">Breakdown of citations</div>
     <div id="pct"></div>
-
   </div>
 </body>
 
@@ -96,7 +103,7 @@ d3.csv("./data/citations.csv", function(d) {
     disposition: d.DispCode,
     type: d.type,
     year: d.year,
-    fine: d.fine
+    fine: +d.fine
   };
 }, function(error, rows) {
 
@@ -113,6 +120,7 @@ var otherNum = [];
 var parkingNum = [];
 var seatbeltNum = [];
 var mjNum = [];
+var fineNum = [];
 
 axis[0] = 'axis';
 allNum[0] = 'Everything',
@@ -123,6 +131,7 @@ otherNum[0] = 'Other';
 parkingNum[0] = 'Parking';
 mjNum[0] = 'Marijuana';
 seatbeltNum[0] = 'Seatbelt';
+fineNum[0] = 'Fine';
 
 var allCount = 0;
 var insuranceCount = 0;
@@ -143,7 +152,13 @@ for (var i=0; i < data.length; i++){
   parkingNum[i+1] = null;
   seatbeltNum[i+1] = null;
   mjNum[i+1] = null;
-  allCount++;
+  fineNum[i+1] = null;
+
+  if (data[i].type != "reinstatement" && data[i].type != "suspended"){ allCount++; }
+
+  console.log(data[i].fine);
+
+  if (data[i].fine != 0) { fineNum[i+1] = data[i].fine; }
 
   if (data[i].type == "insurance"){
     insuranceCount++;
@@ -193,7 +208,7 @@ chart = c3.generate({
       bindto: "#chart",
       padding: padding,
       point: {
-        r: 5
+        r: 4
     },
     data: {
         xs: {
@@ -229,6 +244,44 @@ chart = c3.generate({
       legend: {
         show: false
         },
+    grid: {
+        x: {
+            lines: [
+                {value: '04-04-2003', text: '', position: 'start', class: 'reinstate'},
+                {value: '06-13-2003', text: '', position: 'start', class: 'reinstate'},
+                {value: '03-11-2004', text: '', position: 'start', class: 'reinstate'},
+                {value: '03-01-2003', text: '', position: 'start', class: 'reinstate'},
+                {value: '05-19-2006', text: '', position: 'start', class: 'reinstate'},
+                {value: '05-09-2007', text: '', position: 'start', class: 'reinstate'},
+                {value: '09-30-2013', text: '', position: 'start', class: 'reinstate'},
+
+                {value: '12-24-2002', text: '', position: 'start', class: 'suspend'},
+                {value: '01-02-2003', text: '', position: 'start', class: 'suspend'},
+                {value: '06-12-2003', text: '', position: 'start', class: 'suspend'},
+                {value: '12-02-2003', text: '', position: 'start', class: 'suspend'},
+                {value: '11-23-2005', text: '', position: 'start', class: 'suspend'},
+                {value: '07-14-2006', text: '', position: 'start', class: 'suspend'},
+                {value: '08-22-2006', text: '', position: 'start', class: 'suspend'},
+                {value: '09-14-2006', text: '', position: 'start', class: 'suspend'},
+                {value: '06-13-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '08-24-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '09-04-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '09-13-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '11-19-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '12-18-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '12-19-2007', text: '', position: 'start', class: 'suspend'},
+                {value: '04-06-2011', text: '', position: 'start', class: 'suspend'},
+                {value: '04-04-2011', text: '', position: 'start', class: 'suspend'},
+                {value: '10-10-2011', text: '', position: 'start', class: 'suspend'},
+                {value: '12-09-2011', text: '', position: 'start', class: 'suspend'},
+                {value: '02-17-2012', text: '', position: 'start', class: 'suspend'},
+                {value: '05-03-2012', text: '', position: 'start', class: 'suspend'},
+                {value: '06-01-2012', text: '', position: 'start', class: 'suspend'},
+                {value: '07-26-2012', text: '', position: 'start', class: 'suspend'},
+                {value: '09-23-2013', text: '', position: 'start', class: 'suspend'}
+            ]
+        }
+    },
     axis: {
       y: {
             min: 0,
@@ -237,9 +290,9 @@ chart = c3.generate({
              format: function (d) {
                     switch (d) {
                         case 30:
-                            return "Convicted"
-                        case 10:
                             return "Dismissed"
+                        case 10:
+                            return "Convicted"
                     }
                 },
               values: [10,30],
@@ -296,6 +349,89 @@ chart = c3.generate({
     }
 });
 
+chartF = c3.generate({
+      bindto: "#chartF",
+      padding: padding,
+      point: {
+        r: 4
+    },
+    data: {
+        xs: {
+            'Fine': 'axis'
+        },
+        columns: [
+            axis,
+            fineNum
+        ],
+        type: 'scatter'
+    },
+     color:  { 
+          pattern: ['#000']
+        },
+      legend: {
+        show: false
+        },
+    axis: {
+      y: {
+            min: 0,
+            padding: {bottom: 0},
+            tick: {
+             count: 4,
+             format: d3.format("$"),
+             values: [100,250,400]
+            }
+        },
+        x: {
+            type: 'categories',
+            categories: ['12-02-2002','03-21-2006','02-13-2008','08-10-2011'],
+            tick: {
+                count: 4,
+                multiline: false
+            }
+          }
+        },
+        tooltip: {
+      contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+          var $$ = this, config = $$.config,
+              titleFormat = config.tooltip_format_title || defaultTitleFormat,
+              nameFormat = config.tooltip_format_name || function (name) { return name; },
+              valueFormat = config.tooltip_format_value || defaultValueFormat,
+              text, i, title, value, name, bgcolor;
+          for (i = 0; i < d.length; i++) {
+              if (! (d[i] && (d[i].value || d[i].value === 0))) { continue; }
+
+              if (! text) {
+                  title = titleFormat ? titleFormat(d[i].x) : d[i].x;
+                  text = "<table class='" + $$.CLASS.tooltip + " fixtip'>" + (title || title === 0 ? "<tr><th colspan='2'>" + title + "</th></tr>" : "");
+              }
+
+              var description = "";
+
+              name = nameFormat(d[i].name);
+              value = valueFormat(d[i].value, d[i].ratio, d[i].id, d[i].index);
+              bgcolor = $$.levelColor ? $$.levelColor(d[i].value) : color(d[i].id);
+
+              // console.log(title);
+
+              // for (var k=0; k < data.length; k++){
+              //   if (d3.time.format("%m-%d-%Y")(new Date(data[k].filed)) == title && String(name).toLowerCase() == String(data[k].type).toLowerCase()){
+              //     description = data[k].charge;
+              //     break;
+              //   }
+              // }
+
+              text += "<tr class='" + $$.CLASS.tooltipName + "-" + d[i].id + "'>";
+              text += "<td class='name'><span style='background-color:" + bgcolor + "'></span>" + name + "</td>";
+              text += "<td class='value'>" + value + "</td>";
+              text += "</tr><tr>";
+              text += "<tr class='value'><td style='width:100%' colspan='2'>" + description + "</td></tr>";
+              
+          }
+          return text + "</table>";
+      }
+    }
+});
+
 function spitLegend() {
 d3.select('#pct').selectAll('.stat')
     .data(["All","Insurance","License","Speeding","Other","Seatbelt","Parking","Marijuana"])
@@ -328,14 +464,6 @@ d3.select('#pct').selectAll('.stat')
       if (id == "All") { chart.revert(); }
       else { chart.focus(id); }
     });
-
-// d3.select('#pct').append('div')
-//     .attr("class","stat")
-//     .attr("id","all")
-//     .html(function (id) { return "<div class='bigNum'>" + allCount + "</div><div class='label'>All</div>"; })
-//     .on('click', function (id) {
-//         chart.revert();
-//     });
 
 $(".stat").click(function() {
   $(".stat").removeClass("clicked");
