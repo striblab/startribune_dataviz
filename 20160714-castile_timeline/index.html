@@ -31,7 +31,7 @@
       .fixtip { width:150px; }
 
       #viewSwitch, #current { padding:10px; }
-      .stat { font-weight:900; display:inline-block; width:24%; text-align:center; }
+      .stat { font-weight:900; display:inline-block; width:12%; text-align:center; }
       .stat:hover, .clicked { background-color:#ddd !important; cursor:pointer; }
 
       #filter { padding:12px; }
@@ -49,12 +49,12 @@
       .mj { color:#333333;}
       .fines { color:#000;}
 
-      #pct { text-align:center; }
+      #pct { text-align:center;margin-bottom:20px; }
 
       .c3-xgrid-line.suspend line, .suspend { stroke: red !important; color:red; }
       .c3-xgrid-line.reinstate line, .reinstate { stroke: green !important; color:green; }
       .label { font-weight:900; }
-      #legend { text-align:center; }
+      #legend { text-align:center; margin-top:-35px;margin-bottom:20px;}
 
       #filter input { border-radius:0 !important; width:100% !important; }
       #filter { padding:0px !important; }
@@ -77,13 +77,14 @@
 
 <!-- <div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
 <div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations and fined for more than $7,000.</div> -->
-<div class='label'>Citations</div>
-<div id="legend"><span class='suspend'>&mdash;</span> License Suspended  <span class='reinstate'>&mdash;</span> License Reinstated</div>
+<div class="chartTitle">Breakdown of citations</div>
+    <div id="pct"></div>
+    <div class='label'>Citations</div>
     <div id="chart"></div>
+    <div id="legend"><span class='suspend'>&mdash;</span> License Suspended  <span class='reinstate'>&mdash;</span> License Reinstated</div>
 <div class='label'>Fines</div>
     <div id="chartF"></div>
-    <div class="chartTitle">Breakdown of citations</div>
-    <div id="pct"></div>
+  
   </div>
 </body>
 
@@ -239,7 +240,8 @@ chart = c3.generate({
         // }
     },
      color:  { 
-          pattern: ['#000', '#ffaaaa', '#e69190', '#cd7976', '#b5625e', '#9d4a45', '#84332f', '#6c1c1a']
+          pattern: ['#000', '#ca7a68', '#76909f', '#b1ae68', '#a17a94', '#6f9a7c', '#cf99fa', '#9c8f68']
+          // pattern: ['#000', '#ffaaaa', '#e69190', '#cd7976', '#b5625e', '#9d4a45', '#84332f', '#6c1c1a']
         },
       legend: {
         show: false
