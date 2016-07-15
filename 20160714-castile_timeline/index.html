@@ -95,7 +95,6 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
 
 <script>
-
 d3.csv("./data/citations.csv", function(d) {
   return {
     filed: d3.time.format("%x")(new Date(d.OffenseDateraw)),
@@ -164,7 +163,7 @@ for (var i=0; i < data.length; i++){
   if (data[i].type == "insurance"){
     insuranceCount++;
     if (data[i].disposition == "DISMISS") { insuranceNum[i+1] = 30; }
-    else if (data[i].disposition == "CONV")  { insuranceNum[i+1] = 10; }
+    else if (data[i].disposition == "CONV" || data[i].disposition == "CFD")  { insuranceNum[i+1] = 10; }
   }
   if (data[i].type == "license"){
     licenseCount++;
@@ -240,8 +239,7 @@ chart = c3.generate({
         // }
     },
      color:  { 
-          pattern: ['#000', '#ca7a68', '#76909f', '#b1ae68', '#a17a94', '#6f9a7c', '#cf995a', '#9c8f68']
-          // pattern: ['#000', '#ffaaaa', '#e69190', '#cd7976', '#b5625e', '#9d4a45', '#84332f', '#6c1c1a']
+          pattern: ['#000', '#bbbbbf', '#a7aaae', '#929a9c', '#7f8a8b', '#6c7a7a', '#5a6a6a', '#475b5a']
         },
       legend: {
         show: false
@@ -391,7 +389,7 @@ chartF = c3.generate({
         type: 'scatter'
     },
      color:  { 
-          pattern: ['#000']
+          pattern: ['#D6A184']
         },
       legend: {
         show: false
