@@ -31,7 +31,14 @@
       .fixtip { width:150px; }
 
       #viewSwitch, #current { padding:10px; }
-      .stat { font-weight:900; display:inline-block; width:12%; text-align:center; }
+      .stat { font-weight:900; display:inline-block;     
+        width: 10%;
+        margin-left: 10px;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        margin-top:20px; }
       .stat:hover, .clicked { background-color:#ddd !important; cursor:pointer; }
 
       #filter { padding:12px; }
@@ -49,11 +56,12 @@
       .mj { color:#333333;}
       .fines { color:#000;}
 
-      #pct { text-align:center;margin-bottom:20px; }
-
+      #pct { text-align:center;margin-bottom:20px;margin-left:-40px; }
+.chartTitle {padding-bottom:20px;}
       .c3-xgrid-line.suspend line, .suspend { stroke: #d30000 !important; color:#d30000; }
       .c3-xgrid-line.reinstate line, .reinstate { stroke: #009b00 !important; color:#009b00; }
       .label { font-weight:900; }
+      .label.hed {/*margin-left:30px;*/}
       #legend { text-align:center; margin-top:-35px;margin-bottom:20px;}
 
       #filter input { border-radius:0 !important; width:100% !important; }
@@ -66,9 +74,10 @@
 
       .cell { width:19%; display:inline-block; }
 
-      @media (max-width:500px) {
-        .stat { width:48%; }
+      @media (max-width:550px) {
+        .stat { width:24%; }
       }
+ 
   </style> 
 </head>
 
@@ -77,12 +86,12 @@
 
 <!-- <div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
 <div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations and fined for more than $7,000.</div> -->
-<div class="chartTitle">Breakdown of citations</div>
+<div class='label hed'>Citations</div>
     <div id="pct"></div>
-    <div class='label'>Citations</div>
+    
     <div id="chart"></div>
     <div id="legend"><span class='suspend'>&mdash;</span> License Suspended  <span class='reinstate'>&mdash;</span> License Reinstated</div>
-<div class='label'>Fines</div>
+<div class='label hed'>Fines</div>
     <div id="chartF"></div>
   
   </div>
