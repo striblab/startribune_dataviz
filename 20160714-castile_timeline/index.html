@@ -31,7 +31,14 @@
       .fixtip { width:150px; }
 
       #viewSwitch, #current { padding:10px; }
-      .stat { font-weight:900; display:inline-block; width:24%; text-align:center; }
+      .stat { font-weight:900; display:inline-block;     
+        width: 10%;
+        margin-left: 10px;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        margin-top:20px; }
       .stat:hover, .clicked { background-color:#ddd !important; cursor:pointer; }
 
       #filter { padding:12px; }
@@ -49,12 +56,15 @@
       .mj { color:#333333;}
       .fines { color:#000;}
 
-      #pct { text-align:center; }
-
-      .c3-xgrid-line.suspend line, .suspend { stroke: red !important; color:red; }
-      .c3-xgrid-line.reinstate line, .reinstate { stroke: green !important; color:green; }
+      #pct { text-align:center;margin-bottom:20px;margin-left:-40px; }
+      .chartTitle {padding-bottom:20px;}
+      .c3-xgrid-line.suspend line { stroke: #d30000 !important; color:#d30000; opacity:0.3 !important; }
+      .suspend { stroke: #d30000 !important; color:#d30000;  }
+      .c3-xgrid-line.reinstate line { stroke: #009b00 !important; color:#009b00; opacity:0.3 !important; }
+      .reinstate { stroke: #009b00 !important; color:#009b00; }
       .label { font-weight:900; }
-      #legend { text-align:center; }
+      .label.hed {/*margin-left:30px;*/}
+      #legend { text-align:center; margin-top:-25px;margin-bottom:20px;font-size:.9em;}
 
       #filter input { border-radius:0 !important; width:100% !important; }
       #filter { padding:0px !important; }
@@ -66,9 +76,10 @@
 
       .cell { width:19%; display:inline-block; }
 
-      @media (max-width:500px) {
-        .stat { width:48%; }
+      @media (max-width:550px) {
+        .stat { width:24%; }
       }
+ 
   </style> 
 </head>
 
@@ -77,13 +88,14 @@
 
 <!-- <div class="chartTitle">Castile traffic stops over time by charge and disposition</div>
 <div class="chatter">Philando Castile was pulled over 52 times since 2002 and charged 88 times with various vehicle and traffic violations and fined for more than $7,000.</div> -->
-<div class='label'>Citations</div>
-<div id="legend"><span class='suspend'>&mdash;</span> License Suspended  <span class='reinstate'>&mdash;</span> License Reinstated</div>
-    <div id="chart"></div>
-<div class='label'>Fines</div>
-    <div id="chartF"></div>
-    <div class="chartTitle">Breakdown of citations</div>
+<div class='label hed'>Citations</div>
     <div id="pct"></div>
+    
+    <div id="chart"></div>
+    <div id="legend"><span class='suspend'>&mdash;</span> License Suspended  <span class='reinstate'>&mdash;</span> License Reinstated</div>
+<div class='label hed'>Fines</div>
+    <div id="chartF"></div>
+  
   </div>
 </body>
 
@@ -239,7 +251,8 @@ chart = c3.generate({
         // }
     },
      color:  { 
-          pattern: ['#000', '#ffaaaa', '#e69190', '#cd7976', '#b5625e', '#9d4a45', '#84332f', '#6c1c1a']
+          pattern: ['#000', '#ca7a68', '#76909f', '#b1ae68', '#a17a94', '#6f9a7c', '#cf995a', '#9c8f68']
+          // pattern: ['#000', '#ffaaaa', '#e69190', '#cd7976', '#b5625e', '#9d4a45', '#84332f', '#6c1c1a']
         },
       legend: {
         show: false
@@ -247,61 +260,61 @@ chart = c3.generate({
     grid: {
         x: {
             lines: [
-                {value: '04-04-2003', text: '', position: 'start', class: 'reinstate'},
-                {value: '06-13-2003', text: '', position: 'start', class: 'reinstate'},
-                {value: '03-11-2004', text: '', position: 'start', class: 'reinstate'},
-                {value: '03-01-2003', text: '', position: 'start', class: 'reinstate'},
-                {value: '05-19-2006', text: '', position: 'start', class: 'reinstate'},
-                {value: '05-09-2007', text: '', position: 'start', class: 'reinstate'},
-                {value: '09-30-2013', text: '', position: 'start', class: 'reinstate'},
-                {value: '01-28-2008', text: '', position: 'start', class: 'reinstate'},
-                {value: '08-26-2008', text: '', position: 'start', class: 'reinstate'},
-                {value: '10-07-2008', text: '', position: 'start', class: 'reinstate'},
-                {value: '11-05-2008', text: '', position: 'start', class: 'reinstate'},
-                {value: '03-20-2009', text: '', position: 'start', class: 'reinstate'},
-                {value: '06-08-2009', text: '', position: 'start', class: 'reinstate'},
-                {value: '11-06-2009', text: '', position: 'start', class: 'reinstate'},
-                {value: '02-11-2010', text: '', position: 'start', class: 'reinstate'},
-                {value: '02-05-2003', text: '', position: 'start', class: 'reinstate'},
-                {value: '02-19-2003', text: '', position: 'start', class: 'reinstate'},
+                {value: '04-04-2003', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '06-13-2003', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '03-11-2004', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '03-01-2003', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '05-19-2006', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '05-09-2007', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '09-30-2013', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '01-28-2008', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '08-26-2008', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '10-07-2008', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '11-05-2008', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '03-20-2009', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '06-08-2009', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '11-06-2009', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '02-11-2010', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '02-05-2003', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
+                {value: '02-19-2003', text: '', position: 'start', class: 'reinstate', opacity:0.5 },
 
-                {value: '12-24-2002', text: '', position: 'start', class: 'suspend'},
-                {value: '01-02-2003', text: '', position: 'start', class: 'suspend'},
-                {value: '06-12-2003', text: '', position: 'start', class: 'suspend'},
-                {value: '12-02-2003', text: '', position: 'start', class: 'suspend'},
-                {value: '11-23-2005', text: '', position: 'start', class: 'suspend'},
-                {value: '07-14-2006', text: '', position: 'start', class: 'suspend'},
-                {value: '08-22-2006', text: '', position: 'start', class: 'suspend'},
-                {value: '09-14-2006', text: '', position: 'start', class: 'suspend'},
-                {value: '06-13-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '08-24-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '09-04-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '09-13-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '11-19-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '12-18-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '12-19-2007', text: '', position: 'start', class: 'suspend'},
-                {value: '04-06-2011', text: '', position: 'start', class: 'suspend'},
-                {value: '04-04-2011', text: '', position: 'start', class: 'suspend'},
-                {value: '10-10-2011', text: '', position: 'start', class: 'suspend'},
-                {value: '12-09-2011', text: '', position: 'start', class: 'suspend'},
-                {value: '02-17-2012', text: '', position: 'start', class: 'suspend'},
-                {value: '05-03-2012', text: '', position: 'start', class: 'suspend'},
-                {value: '06-01-2012', text: '', position: 'start', class: 'suspend'},
-                {value: '07-26-2012', text: '', position: 'start', class: 'suspend'},
-                {value: '09-23-2013', text: '', position: 'start', class: 'suspend'},
-                {value: '01-25-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '03-03-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '05-07-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '08-05-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '10-03-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '11-03-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '12-03-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '12-08-2008', text: '', position: 'start', class: 'suspend'},
-                {value: '06-04-2009', text: '', position: 'start', class: 'suspend'},
-                {value: '11-05-2009', text: '', position: 'start', class: 'suspend'},
-                {value: '02-10-2010', text: '', position: 'start', class: 'suspend'},
-                {value: '11-04-2010', text: '', position: 'start', class: 'suspend'},
-                {value: '12-30-2010', text: '', position: 'start', class: 'suspend'}
+                {value: '12-24-2002', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '01-02-2003', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '06-12-2003', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-02-2003', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '11-23-2005', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '07-14-2006', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '08-22-2006', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '09-14-2006', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '06-13-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '08-24-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '09-04-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '09-13-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '11-19-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-18-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-19-2007', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '04-06-2011', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '04-04-2011', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '10-10-2011', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-09-2011', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '02-17-2012', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '05-03-2012', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '06-01-2012', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '07-26-2012', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '09-23-2013', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '01-25-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '03-03-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '05-07-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '08-05-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '10-03-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '11-03-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-03-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-08-2008', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '06-04-2009', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '11-05-2009', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '02-10-2010', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '11-04-2010', text: '', position: 'start', class: 'suspend', opacity:0.5 },
+                {value: '12-30-2010', text: '', position: 'start', class: 'suspend', opacity:0.5 }
             ]
         }
     },
