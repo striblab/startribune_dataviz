@@ -387,6 +387,7 @@ d3.select("#schoolsList").selectAll(".switch")
 
     $("li.district").click(function() { 
       $("li.district").removeClass("selected");
+      $(".cell").removeClass("selected2");
       $(this).addClass("selected");
       $("#listedSchools").slideToggle();
       $("#thisDistrict").html($(this).text());
