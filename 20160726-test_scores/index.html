@@ -56,6 +56,8 @@
       #geocoder-container { width:100%; margin-top:10px; }
       #geocoder-container > div { min-width:100%; margin-left:0; }
 
+      .description { margin-top:10px; margin-bottom:10px; }
+
       .better { background-color:#AEBFAC; color:#fff; }
       .worse { background-color:#BF7E7C; color:#fff; }
       .expected { background-color:#BBA4BC; color:#fff; }
@@ -107,6 +109,8 @@
 <div id="filter2"><input type="search" id="filter_box2" placeholder="Search by district name"></input></div>
 </ul>
 
+<div style="text-align:left; margin-top:10px">Percentage of schools in this district by how MCA proficiency rates, in reading and math, compare to what would be expected considering the schools’ poverty rates. Click on any of the percentages to see a list of schools, below, that fall in this group.</div>
+
 <div id="bigstats">
 <div class="chartTitle">Reading</div>
   <div class="cell worse" data="Falling Short" type="R">
@@ -146,10 +150,12 @@
 <div id="rightSide">
     <div id="infobox">
       <div id="schoolname">school name</div>
-      <div class='where'><span id="district"></span> DISTRICT - <span id="location"></span></div>
+      <div class='where'><span id="district"></span> DISTRICT <span id="location"></span></div>
       <div id="type" class='where'></div>
       <div class="description">Among the <span id="enrolled"></span> students enrolled at this school, <span id="minority"></span> are minorities<!-- , <span id="freelunch"></span> use free lunch programs --> and <span id="poverty"></span> are in poverty.</div>
-      <p></p>
+      
+      <div class="bigPCT">READING</div>
+      <div class="bigPCT">MATH</div>
       <div class="category" id="categoryR"></div>
       <div class="category" id="categoryM"></div>
       <div class="bigPCT" id="rPCT"></div>
@@ -249,8 +255,8 @@ d3.select("#schoolsList").selectAll(".switch")
       if (data[k].school == d.school && data[k].subject == "M" && data[k].year == "14 to 15"){
         $("#categoryM").html(data[k].category);
         $("#categoryR").html(d.category);
-        $("#mPCT").html(d3.format("%")(data[k].profpct) + " math proficiency");
-        $("#rPCT").html(d3.format("%")(d.profpct) + " reading proficiency");
+        $("#mPCT").html(d3.format("%")(data[k].profpct) + " proficiency");
+        $("#rPCT").html(d3.format("%")(d.profpct) + " proficiency");
         $("#mPCTP").html(d3.format("%")(data[k].predicted) + " predicted");
         $("#rPCTP").html(d3.format("%")(d.predicted) + " predicted");
         if (data[k].category == "About as Expected") { gradeShade2 = "expected"; }
@@ -289,7 +295,7 @@ d3.select("#schoolsList").selectAll(".switch")
     $("#district").html(d.district);
     $("#enrolled").html(d3.format(",")(d.enrollment));
     $("#type").html(d.type);
-    $("#location").html(d.location + " (" + d.region + ")");
+    $("#location").html(" (" + d.location + ")");
     $("#category").html(d.category);
     $("#freelunch").html(d3.format("%")(freelunchPCT));
     $("#poverty").html(d3.format("%")(d.povertypct));
@@ -444,7 +450,7 @@ d3.select("#schoolsList").selectAll(".switch")
     $("#enrolled").html(data[4].enrollment);
     $("#freelunch").html(d3.format("%")(data[4].freelunch / data[4].enrollment));
     $("#type").html(data[4].type);
-    $("#location").html(data[4].location + " (" + data[4].region + ")");
+    $("#location").html(" (" + data[4].location + ")");
     $("#categoryR").html(data[4].category);
     $("#categoryM").html(data[5].category);
     $("#poverty").html(d3.format("%")(data[4].povertypct));
@@ -454,8 +460,8 @@ d3.select("#schoolsList").selectAll(".switch")
     $("#poverty").addClass("gray3");
     $("#freelunch").addClass("gray3");
     $("#categoryR,#categoryM").addClass("better");
-    $("#mPCT").html(d3.format("%")(data[4].profpct) + " math proficiency");
-    $("#rPCT").html(d3.format("%")(data[5].profpct) + " reading proficiency");
+    $("#mPCT").html(d3.format("%")(data[4].profpct) + " proficiency");
+    $("#rPCT").html(d3.format("%")(data[5].profpct) + " proficiency");
     $("#mPCTP").html(d3.format("%")(data[4].predicted) + " predicted");
     $("#rPCTP").html(d3.format("%")(data[5].predicted) + " predicted");
     crunchStatsM("",true);
@@ -494,7 +500,7 @@ d3.select("#schoolsList").selectAll(".switch")
         $("#schoolname").html(data[4].school);
         $("#district").html(data[4].district);
         $("#type").html(data[4].type);
-        $("#location").html(data[4].location + " (" + data[0].region + ")");
+        $("#location").html(" (" + data[0].location + ")");
         $("#category").html(data[4].category);
         $("#poverty").html(d3.format("%")(data[4].povertypct));
         $("#povertycat").html(data[4].povertycat);
