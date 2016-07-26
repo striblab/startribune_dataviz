@@ -31,13 +31,13 @@
 
       #infobox { text-align:left; padding:30px; }
 
-      #schoolsList { height:377px; overflow-x:hidden; overflow-y:scroll; }
+      #schoolsList { height:457px; overflow-x:hidden; overflow-y:scroll; }
 
       .stat { font-weight:900; }
 
       #filter { padding:12px; }
 
-      #chart { height:160px; }
+      #chart { height:230px; }
 
       .source { font-size:0.8em; }
 
@@ -109,8 +109,6 @@
 <div id="filter2"><input type="search" id="filter_box2" placeholder="Search by district name"></input></div>
 </ul>
 
-<div style="text-align:left; margin-top:10px">Percentage of schools in this district by how MCA proficiency rates, in reading and math, compare to what would be expected considering the schools’ poverty rates. Click on any of the percentages to see a list of schools, below, that fall in this group.</div>
-
 <div id="bigstats">
 <div class="chartTitle">Reading</div>
   <div class="cell worse" data="Falling Short" type="R">
@@ -148,7 +146,9 @@
 </div>
 
 <div id="rightSide">
-    <div id="infobox">
+    <div style="text-align:left; margin-top:10px" id="instructions">The above displays the percentage of schools in this district by how MCA proficiency rates, in reading and math, compare to what would be expected considering the schools’ poverty rates. Click on any of the percentages to see a list of schools that fall in this group. Select a district from above to filter which schools are listed and what the overall breakdowns are for the district. Selecte a school from the left to see its specific data.</div>
+
+    <div id="infobox" style="display:none;">
       <div id="schoolname">school name</div>
       <div class='where'><span id="district"></span> DISTRICT <span id="location"></span></div>
       <div id="type" class='where'></div>
@@ -166,7 +166,7 @@
 
     <div class="breaker" id="mobileBreak"></div>
 
-   <h4>Proficiency change over time</h4>
+   <h4 id="chartLabel" style="display:none;">Proficiency change over time</h4>
     <div id="chart"></div>
 </div>
 </div>
@@ -441,10 +441,14 @@ d3.select("#schoolsList").selectAll(".switch")
     $(".switch").click(function()  { 
        $(".switch").removeClass("selected");
        $(this).addClass("selected");
+       $("#instructions").hide();
+       $("#infobox,#chart,#chartLabel").show();
        // map.flyTo({ center: [$(this).attr("longitude"),$(this).attr("latitude")], zoom: 9 });
        switchChart($(this).text());
     });
 
+    $("#infobox,#chart,#chartLabel").hide();
+    $("#instructions").show();
     $("#schoolname").html(data[4].school);
     $("#district").html(data[4].district);
     $("#enrolled").html(data[4].enrollment);
@@ -469,6 +473,8 @@ d3.select("#schoolsList").selectAll(".switch")
 
     $(".zoom").click(function() {
         thisDistrict = "All"
+        $("#infobox,#chart,#chartLabel").hide();
+        $("#instructions").show();
         $(".switch, li.district").removeClass("selected");
         $(".switch").show();
         $("li.district").show();
@@ -513,7 +519,7 @@ d3.select("#schoolsList").selectAll(".switch")
         $("#categoryR,#categoryM").addClass("better");
         $(".cell").removeClass("selected2");
         switchChart("A.C.G.C. SECONDARY");
-        $(".switch:first").addClass("selected");
+        // $(".switch:first").addClass("selected");
     return false;
     });
 
