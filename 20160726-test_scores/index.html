@@ -230,7 +230,7 @@ d3.select("#schoolsList").selectAll(".switch")
   .attr("categorym",function(d) { 
     var category;
         for (var k=0; k < data.length; k++){
-      if (data[k].school == d.school && data[k].subject == "M" && data[k].year == "15 to 16"){
+      if (data[k].school == d.school && data[k].district == d.district && data[k].subject == "M" && data[k].year == "15 to 16"){
         category = data[k].category;
       }
     }
@@ -257,8 +257,10 @@ d3.select("#schoolsList").selectAll(".switch")
     $("#categoryR,#categoryM").removeClass('expected');
     $("#categoryR,#categoryM").removeClass('nan');
 
+    switchChart(d.school,d.district);
+
     for (var k=0; k < data.length; k++){
-      if (data[k].school == d.school && data[k].subject == "M" && data[k].year == "15 to 16"){
+      if (data[k].school == d.school && data[k].district == d.district && data[k].subject == "M" && data[k].year == "15 to 16"){
         $("#categoryM").html(data[k].category);
         $("#categoryR").html(d.category);
         $("#mPCT").html(d3.format("%")(data[k].profpct) + " proficiency");
@@ -331,7 +333,7 @@ d3.select("#schoolsList").selectAll(".switch")
 
     if (all == true){
     for (var k=0; k < data.length; k++){
-      if (data[k].subject == "M" && data[k].year == "14 to 15"){
+      if (data[k].subject == "M" && data[k].year == "15 to 16"){
         totalSchools++;
         if (data[k].category == "About as expected") { metCount++; }
         if (data[k].category == "Falling short") { failCount++; }
@@ -365,7 +367,7 @@ d3.select("#schoolsList").selectAll(".switch")
 
     if (all == true){
     for (var k=0; k < data.length; k++){
-      if (data[k].subject == "R" && data[k].year == "14 to 15"){
+      if (data[k].subject == "R" && data[k].year == "15 to 16"){
         totalSchools++;
         if (data[k].category == "About as expected") { metCount++; }
         if (data[k].category == "Falling short") { failCount++; }
@@ -450,7 +452,6 @@ d3.select("#schoolsList").selectAll(".switch")
        $("#instructions").hide();
        $("#infobox,#chart,#chartLabel").show();
        // map.flyTo({ center: [$(this).attr("longitude"),$(this).attr("latitude")], zoom: 9 });
-       switchChart($(this).text());
     });
 
     $("#infobox,#chart,#chartLabel").hide();
@@ -532,9 +533,11 @@ d3.select("#schoolsList").selectAll(".switch")
 
 
 
-function switchChart(name){
+function switchChart(name,district){
 
 var axis = [];
+
+console.log(district)
 
 axis[0] = 'x';
 axis[1] = "'12 to '13";
@@ -549,12 +552,12 @@ var dataM = [];
 dataR[0] = "Reading";
 dataM[0] = "Math";
 dataRP = 0;
-dataMP = 0
+dataMP = 0;
 
 var found = false;
 
 for (var i=0; i < data.length; i++){
-  if (name == data[i].school){
+  if (name == data[i].school && district == data[i].district){
     found = true;
 
     if (data[i].subject == 'R'){
@@ -569,7 +572,7 @@ for (var i=0; i < data.length; i++){
 indexYear = 1;
 
 for (var i=0; i < data.length; i++){
-  if (name == data[i].school){
+  if (name == data[i].school && district == data[i].district){
     found = true;
 
     if (data[i].subject == 'M'){
