@@ -540,10 +540,10 @@ var axis = [];
 console.log(district)
 
 axis[0] = 'x';
-axis[1] = "'12 to '13";
-axis[2] = "'13 to '14";
-axis[3] = "'14 to '15";
-axis[4] = "'15 to '16";
+// axis[1] = "'12 to '13";
+// axis[2] = "'13 to '14";
+// axis[3] = "'14 to '15";
+// axis[4] = "'15 to '16";
 
 var indexYear = 1;
 var dataR = [];
@@ -562,6 +562,7 @@ for (var i=0; i < data.length; i++){
 
     if (data[i].subject == 'R'){
       dataR[indexYear] = data[i].profpct;
+      axis[indexYear] = data[i].year;
       indexYear++;
       dataRP = data[i].predicted;
     }
@@ -577,6 +578,7 @@ for (var i=0; i < data.length; i++){
 
     if (data[i].subject == 'M'){
       dataM[indexYear] = data[i].profpct;
+      axis[indexYear] = data[i].year;
       indexYear++;
       dataMP = data[i].predicted;
     }
