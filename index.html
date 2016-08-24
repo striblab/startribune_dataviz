@@ -23,9 +23,9 @@
       body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       #infobox { font-family:"Poynter Serif RE",Georgia,Times,serif; font-size:16px; margin:10px; }
       #infobox p { padding:3px; }
-      #leftPane { float:left !important; width:630px !important; }      
+      #leftPane { float:right !important; width:630px !important; }      
       #testDiv { height:400px; background-color:#ddd; width:85%; float:right; }
-      h1 { font-family:"Popular"; font-weight:900; font-size:3.5em; margin-bottom:10px; }
+      h1 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:900; font-size:2.5em; margin-bottom:10px; }
       h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
       p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
       .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
@@ -36,6 +36,7 @@
       #specialContentWrapper{ width:960px !important; margin-left:auto; margin-right:auto; }
       a { color: #87C944; text-decoration: none; }
       a:hover { text-decoration:none !important; color:inherit !important; }
+      .link a:hover { text-decoration:none !important; color: #87C944 !important; }
       
 /*HEADER*/
       .starlogo { float:left; margin:15px; }
@@ -48,10 +49,9 @@
 
 /*ENTRIES*/
       #articlePane { display:inline-block !important;  }
-      .articleName{ color: #333; font-family: Popular; font-size: 26px; line-height: 120%; margin: 10px 0 15px 0; }
+      .articleName{ color: #333; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: 23px; line-height: 120%; margin: 10px 0 15px 0; }
       .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
       .articleEntry { margin:20px; }
-      .articleName { font-weight:normal; font-size:28px; }
       .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%;  }
       .byline { font-weight:bold; float:left; } 
       .more { font-size:18px; display:block; text-align:center; }
@@ -63,12 +63,11 @@
     .social_icons { text-align:center !important; }
     ul.share-buttons { list-style:none; padding:0 !important; }
     ul.share-buttons li { display:inline !important; }
-    ul.share-buttons li:hover { opacity:0.8; }
-/*    ul.share-buttons li img { width:30px; }*/
+    ul.share-buttons li:hover { opacity:0.8; cursor:pointer; }
     #sharing { text-align:center; margin-left:auto; margin-right:auto; padding:20px; }
 
 /*SIDEBAR*/
-      #dataSidebar { float:right !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
+      #dataSidebar { float:left !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
       .sectionBox { margin:7px; }
       .creditBox { width:32%; height:auto; float:left; }
       #articleHeader { margin-top:40px; }
@@ -180,7 +179,7 @@
 <!-- mark me bro -->
 
 <div id="top">
-<img class="starlogo" src="img/striblab_min.png" width="130px" />
+<img class="starlogo" src="img/striblab_min.png" width="110px" />
 <p>
   <h1>StribLab</h1>
   <div class="toptext">StribLab is the Star Tribune's aggregation of digital, data-driven and visual storytelling that includes tools, maps, charts, investigations and analysis from reporters and editors across the newsroom. Contact <a href="http://twitter.com/jeffhargarten" target="new_">@JeffHargarten</a> with any questions or feedback.</div>
@@ -210,7 +209,7 @@
               <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="resources">Resources</li>
-              <li class="sort-link" id="contributors">Contributors</li>
+              <!-- <li class="sort-link" id="contributors">Contributors</li> -->
               </ul>
           </div>
         ​</div>
@@ -388,7 +387,7 @@
 <div class="sort-link" id="other">Other<div class="count">0</div></div>
 <div class="sort-link" id="tools">Tools<div class="count">0</div></div> -->
 <div class="sort-link" id="resources">Resources</div>
-<div class="sort-link" id="contributors">Contributors</div>
+<!-- <div class="sort-link" id="contributors">Contributors</div> -->
 <!-- <div id="searchMe"><input type="text" id="search-criteria" placeholder="Search projects" /></div> -->
 <div id="links">
 <div class="link"><a href="https://startribune.com" target="new_"><img class="striblogo" src="img/striblogo.png" class="gitlogo" /></a></div>
