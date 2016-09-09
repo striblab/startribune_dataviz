@@ -42,13 +42,13 @@
 
    .chatter, .chartTitle { text-align:left; }
 
-   .negDark { fill:#CC4C02 !important; background-color:#CC4C02 !important; color:#fff; }
-   .negMid { fill:#FE9929 !important; background-color:#FE9929 !important; color:#fff; }
+   .negDark { fill:#7F0000 !important; background-color:#7F0000 !important; color:#fff !important; }
+   .negMid { fill:#F24930 !important; background-color:#F24930 !important; color:#fff; }
    .negLight { fill:#FED98E !important; background-color:#FED98E !important; }
    .neutral { fill:#ddd !important; background-color:#fff !important; }
    .posLight { fill:#ECF9B9 !important; background-color:#ECF9B9 !important; }
-   .posMid { fill:#ADDD8E !important; background-color:#ADDD8E !important; color:#fff; }
-   .posDark { fill:#31A354 !important; background-color:#31A354 !important; color:#fff; } 
+   .posMid { fill:#AEDE8F !important; background-color:#AEDE8F !important; color:#fff; }
+   .posDark { fill:#0F6633 !important; background-color:#0F6633 !important; color:#fff !important; } 
 
    .state-boundary { fill: none; stroke: #fff; stroke-width:2.3px; } 
 
@@ -372,8 +372,12 @@ jQuery.fn.d3Up = function () {
    $('.p25').each(function() {
     var num = $(this).text();
     if (num != "No data available"){
-      var color_scale = d3.scale.linear().domain([-20, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
+      var color_scale = d3.scale.linear().domain([-20, 0, 25]).range(['#7F0000', '#ECF9B9', '#0F6633']);
+      if (num < -15 || num > 15) { var textcolor = "#fff"; }
+      else  { var textcolor = "#000"; }
+      $(this).css('color', textcolor);
       $(this).css('background-color', color_scale(num));
+     
     }
     });
    $('.p75').each(function() {
@@ -407,9 +411,10 @@ function mapColor(d, subject, dataCompare){
       var points = data[i].aum25 - 42;
       if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "#fff"; }
       else { 
-        var color_scale = d3.scale.linear().domain([-20, 0, 25]).range(['#CC4C02', '#ECF9B9', '#31A354']);
+        var color_scale = d3.scale.linear().domain([-20, 0, 25]).range(['#7F0000', '#ECF9B9', '#0F6633']);
         return color_scale(points);
       }
+
       // break;
       // else if (points >= 15 ) { return "posDark"; }
       // else if (points >= 10) { return "posMid"; }
@@ -431,7 +436,9 @@ function mapTips(d, subject, dataCompare){
        if (d.properties.hasOwnProperty('NAME')) { var name = d.properties.NAME; }
        else if (d.properties.hasOwnProperty('COUNTYNAME')) { var name = d.properties.COUNTYNAME; }
         var points = Math.round(data[i].aum25 - 47); 
-        return "<div style='font-weight:900;'>" + name + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " average upward mobility score</div><div style='background-color:" + mapColor(d, subject, dataCompare) + "'>" + d3.format("+")(points) + " from average</div>";
+        if (Math.round(data[i].aum25) < -15 || Math.round(data[i].aum25) > 15) { var textcolor = "#fff"; }
+        else  { var textcolor = "#000"; }
+        return "<div style='font-weight:900;'>" + name + " County, " + data[i].state + "</div><div>" + Math.round(data[i].aum25) + " average upward mobility score</div><div style='background-color:" + mapColor(d, subject, dataCompare) + "; color:" + textcolor + "'>" + d3.format("+")(points) + " from average</div>";
       } else {
          return "<div style='font-weight:900;'>" + d.properties.NAME + " County, " + data[i].state + "</div><div>No data available</div>";
       }
