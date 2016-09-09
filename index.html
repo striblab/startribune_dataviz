@@ -172,6 +172,7 @@
       #footerStuff { display:block; }
       #footerStuff .link:hover { background-color:#fff !important; cursor:pointer; }
     }
+
    </style>
 
 <body>
@@ -582,21 +583,19 @@ $(".articleEntry").hide();
 var start = 0;
 var end = 2;
 
-$('.articleEntry').eq(start).show();
-$('.articleEntry').eq(start+1).show();
-$('.articleEntry').eq(end).show();
-
-// $(".tools").hide();
+$('.articleEntry:not(.tools)').eq(start).show();
+$('.articleEntry:not(.tools)').eq(start+1).show();
+$('.articleEntry:not(.tools)').eq(end).show();
 
 $(window).scroll(function() {
   if (killPaging == false){
-   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+   // if($(window).scrollTop() + $(window).height() == $(document).height()) {
        start = end + 1;
        end = end + 3;
-       $('.articleEntry').eq(start).show();
-       $('.articleEntry').eq(start+1).show();
-       $('.articleEntry').eq(end).show();
-   }
+       $('.articleEntry:not(.tools)').eq(start).show();
+       $('.articleEntry:not(.tools)').eq(start+1).show();
+       $('.articleEntry:not(.tools)').eq(end).show();
+   // }
  }
 });
 
