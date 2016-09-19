@@ -1,0 +1,692 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vikings 2016 Stats</title>
+  <meta name="description" content="Vikings 2016 Stats">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+  
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
+  
+  <style>
+      body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; }
+      .fieldsection { width:24%; height:300px; background-color:#2AED6B; display:inline-block; vertical-align:middle; }
+      .bar { width:100%; height:100px; vertical-align:middle; padding-top:5%; }
+      .avgsection { width:24%; background-color:#fff; display:inline-block; }
+      .los { border-right:10px #C5D86D solid; }
+      #viewSwitch { text-align:center; margin-left:17px; }
+
+      #rb .fieldsection { border-top:10px #C5D86D solid; }
+
+      .wrapper-demo { text-align:left; }
+      .wrapper-dropdown-1 { width:300px; margin-right:auto; margin-left:auto; }
+      .wrapper-dropdown-1.active .dropdown {  opacity: 1; pointer-events: auto;border-radius: 0 !important; }
+
+      .bigNum { font-size:2em !important; }
+
+      #fieldQB { /*background-image: url("img/field.png");*/ }
+
+      #rb .fieldsection { width:97%; }
+      #rb .bar { display:inline-block; width:15% !important; height:290px;}
+      #rb .avg { display:inline-block; width:15% !important; }
+
+      .p0 { opacity:0; }
+      .p1 { background-color:transparent; opacity:0.8; }
+      .p2 { background-color:#d9d9d9; opacity:0.8; }
+      .p3 { background-color:#bdbdbd; opacity:0.8; }
+      .p4 { background-color:#969696; color:#fff; opacity:0.8; }
+      .p5 { background-color:#737373; color:#fff; opacity:0.8; }
+
+      #smallLegend div { height:12px; width:30px; display:inline-block; opacity:1 !important; }
+      #smallLegend { font-size:0.8em; color:#bbb; float:right; margin-right:17px; }
+      h3 { text-align:left !important; margin-left:17px; float:left; }
+
+      @media (max-width:400px) {
+        .wrapper-dropdown-1 { width:100%; }
+        #viewSwitch { margin-left:0px; }
+        .fieldsection, .avgsection { width:15%; }
+        #smallLegend, h3 { float:none !important; }
+        .bigNum { font-size:2em !important; }
+      }
+  </style> 
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="viewSwitch">
+<div id="selector">
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span id="topweek"></span>
+              <ul class="dropdown months" tabindex="1">
+                <li class="step" index="0">All Weeks</li>
+              </ul>
+          </div>
+        ​</div>
+</section>
+</div>
+</div>
+
+<div class="breaker"></div>
+
+<div class="playerstats" id="qb">  
+<h3><span id="qbDude">QB</span> completion percentage by section of field | <span id="total"></span> yards total</h3>
+<div id="smallLegend"><span>Less</span><div class="p1"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
+
+<div class="breaker"></div>
+
+<div id="fieldQB">
+<div class="fieldsection los" id="behindlos">
+<div class="bar left"></div>
+<div class="bar middle"></div>
+<div class="bar right"></div>
+</div>
+<div class="fieldsection" id="y09">
+<div class="bar left"></div>
+<div class="bar middle"></div>
+<div class="bar right"></div>
+</div>
+<div class="fieldsection" id="y1019">
+<div class="bar left"></div>
+<div class="bar middle"></div>
+<div class="bar right"></div>
+</div>
+<div class="fieldsection" id="y20plus">
+<div class="bar left"></div>
+<div class="bar middle"></div>
+<div class="bar right"></div>
+</div>
+</div>
+
+<div class="avgsection bigNum" id="avgbehindlos">0%</div>
+<div class="avgsection bigNum" id="avgy09">0%</div>
+<div class="avgsection bigNum" id="avgy1019">0%</div>
+<div class="avgsection bigNum" id="avgy20plus">0%</div>
+
+<div class="avgsection">Behind LOS</div>
+<div class="avgsection">0-9 Yards</div>
+<div class="avgsection">10-19 Yards</div>
+<div class="avgsection">20+ Yards</div>
+</div>
+
+<div class="breaker"></div>
+
+<div class="playerstats" id="rb" style="display:none;">  
+<h3>RB rushing by section of field</h3>
+<div id="smallLegend"><span>Less</span><div class="p1"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
+
+<div class="breaker"></div>
+
+<div class="fieldsection">
+<div class="bar oleft"></div>
+<div class="bar offlt"></div>
+<div class="bar lcenter"></div>
+<div class="bar rcenter"></div>
+<div class="bar offrt"></div>
+<div class="bar oright"></div>
+
+<div class="avg">Outside L</div>
+<div class="avg">Off LT</div>
+<div class="avg">L of Center</div>
+<div class="avg">R of Center</div>
+<div class="avg">Off RT</div>
+<div class="avg">Outside R</div>
+
+<div class="avg oleft">0</div>
+<div class="avg offlt">0</div>
+<div class="avg lcenter">0</div>
+<div class="avg rcenter">0</div>
+<div class="avg offrt">0</div>
+<div class="avg oright">0</div>
+
+<div class="avg">yards</div>
+<div class="avg">yards</div>
+<div class="avg">yards</div>
+<div class="avg">yards</div>
+<div class="avg">yards</div>
+<div class="avg">yards</div>
+</div>
+
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</body>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
+
+<script>
+// $.urlParam = function(name){
+//   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+//   return results[1] || 0;
+// }
+
+// var selected = $.urlParam('chart');
+
+// $(".playstats").hide();
+// $("#" + selected).show();
+
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1PAY0eRevbywXoyk-HuK0mNBcfdq4ZKyqPveag12oj_s&sheet=rushing", function(error, dataLoadR) {
+d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1PAY0eRevbywXoyk-HuK0mNBcfdq4ZKyqPveag12oj_s&sheet=passing", function(error, dataLoadP) {
+
+var dataP = dataLoadP.passing;
+var dataR = dataLoadR.rushing;
+
+function crunchPassing(week){
+
+  var totalYards = 0;
+  var qb = "QB";
+
+  var behindLOSLeft = 0;
+  var behindLOSRight = 0;
+  var behindLOSMid = 0;
+  var behindLOSLeftY = 0;
+  var behindLOSRightY = 0;
+  var behindLOSMidY = 0;
+  var behindLOSAtt = 0;
+  var behindLOSCom = 0;
+  var behindLOSLeftAtt = 0;
+  var behindLOSRightAtt = 0;
+  var behindLOSMidAtt = 0;
+  var behindLOSLeftCom = 0;
+  var behindLOSRightCom = 0;
+  var behindLOSMidCom = 0;
+
+  var y09Left = 0;
+  var y09Right = 0;
+  var y09Mid = 0;
+  var y09LeftY = 0;
+  var y09RightY = 0;
+  var y09MidY = 0;
+  var y09Att = 0;
+  var y09Com = 0;
+  var y09LeftAtt = 0;
+  var y09RightAtt = 0;
+  var y09MidAtt = 0;
+  var y09LeftCom = 0;
+  var y09RightCom = 0;
+  var y09MidCom = 0;
+
+  var y1019Left = 0;
+  var y1019Right = 0;
+  var y1019Mid = 0;
+  var y1019LeftY = 0;
+  var y1019RightY = 0;
+  var y1019MidY = 0;
+  var y1019Att = 0;
+  var y1019Com = 0;
+  var y1019LeftAtt = 0;
+  var y1019RightAtt = 0;
+  var y1019MidAtt = 0;
+  var y1019LeftCom = 0;
+  var y1019RightCom = 0;
+  var y1019MidCom = 0;
+
+  var y20plusLeft = 0;
+  var y20plusRight = 0;
+  var y20plusMid = 0;
+  var y20plusLeftY = 0;
+  var y20plusRightY = 0;
+  var y20plusMidY = 0;
+  var y20plusAtt = 0;
+  var y20plusCom = 0;
+  var y20plusLeftAtt = 0;
+  var y20plusRightAtt = 0;
+  var y20plusMidAtt = 0;
+  var y20plusLeftCom = 0;
+  var y20plusRightCom = 0;
+  var y20plusMidCom = 0;
+
+if (week != 0){
+  for (var i=0; i < dataP.length; i++){
+    if (week == dataP[i].week){
+
+      totalYards += dataP[i].left_yards + dataP[i].right_yards + dataP[i].middle_yards;
+
+      if (dataP[i].where == "Behind LOS"){
+        if (dataP[i].left_att != 0) { behindLOSLeft = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { behindLOSRight = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { behindLOSMid = dataP[i].middle_com / dataP[i].middle_att; }
+        behindLOSLeftY = dataP[i].left_yards;
+        behindLOSRightY = dataP[i].right_yards;
+        behindLOSMidY = dataP[i].middle_yards;
+        behindLOSAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        behindLOSCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        behindLOSLeftAtt = dataP[i].left_att;
+        behindLOSRightAtt = dataP[i].right_att
+        behindLOSMidAtt = dataP[i].middle_att;
+        behindLOSLeftCom = dataP[i].middle_com;
+        behindLOSRightCom = dataP[i].right_com;
+        behindLOSMidCom = dataP[i].left_com;
+      }
+      if (dataP[i].where == "0-9 yards"){
+        if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y09Right = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y09Mid = dataP[i].middle_com / dataP[i].middle_att;  }
+        y09LeftY = dataP[i].left_yards;
+        y09RightY = dataP[i].right_yards;
+        y09MidY = dataP[i].middle_yards;
+        y09Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y09Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y09LeftAtt = dataP[i].left_att;
+        y09RightAtt = dataP[i].right_att
+        y09MidAtt = dataP[i].middle_att;
+        y09LeftCom = dataP[i].middle_com;
+        y09RightCom = dataP[i].right_com;
+        y09MidCom = dataP[i].left_com;
+      }
+      if (dataP[i].where == "10-19 yards"){
+        if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y1019Right = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y1019Mid = dataP[i].middle_com / dataP[i].middle_att; }
+        y1019LeftY = dataP[i].left_yards;
+        y1019RightY = dataP[i].right_yards;
+        y1019MidY = dataP[i].middle_yards;
+        y1019Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y1019Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y1019LeftAtt = dataP[i].left_att;
+        y1019RightAtt = dataP[i].right_att
+        y1019MidAtt = dataP[i].middle_att;
+        y1019LeftCom = dataP[i].middle_com;
+        y1019RightCom = dataP[i].right_com;
+        y1019MidCom = dataP[i].left_com;
+      }
+      if (dataP[i].where == "20-plus"){
+        if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y20plusRight = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y20plusMid = dataP[i].middle_com / dataP[i].middle_att; }  
+        y20plusLeftY = dataP[i].left_yards;
+        y20plusRightY = dataP[i].right_yards;
+        y20plusMidY = dataP[i].middle_yards;
+        y20plusAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y20plusCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftAtt = dataP[i].left_att;
+        y20plusRightAtt = dataP[i].right_att
+        y20plusMidAtt = dataP[i].middle_att;
+        y20plusLeftCom = dataP[i].middle_com;
+        y20plusRightCom = dataP[i].right_com;
+        y20plusMidCom = dataP[i].left_com;
+      }
+
+      qb = dataP[i].who;
+    }
+  }
+} else {
+  for (var i=0; i < dataP.length; i++){
+    // if (week == dataP[i].week){
+
+      totalYards += dataP[i].left_yards + dataP[i].right_yards + dataP[i].middle_yards;
+
+      if (dataP[i].where == "Behind LOS"){
+        if (dataP[i].left_att != 0) { behindLOSLeft = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { behindLOSRight = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { behindLOSMid = dataP[i].middle_com / dataP[i].middle_att; }
+        behindLOSLeftY += dataP[i].left_yards;
+        behindLOSRightY += dataP[i].right_yards;
+        behindLOSMidY += dataP[i].middle_yards;
+        behindLOSAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        behindLOSCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        behindLOSLeftAtt += dataP[i].left_att;
+        behindLOSRightAtt += dataP[i].right_att
+        behindLOSMidAtt += dataP[i].middle_att;
+        behindLOSLeftCom += dataP[i].left_com;
+        behindLOSRightCom += dataP[i].right_com;
+        behindLOSMidCom += dataP[i].middle_com;
+      }
+      if (dataP[i].where == "0-9 yards"){
+        if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y09Right = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y09Mid = dataP[i].middle_com / dataP[i].middle_att;  }
+        y09LeftY += dataP[i].left_yards;
+        y09RightY += dataP[i].right_yards;
+        y09MidY += dataP[i].middle_yards;
+        y09Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y09Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y09LeftAtt += dataP[i].left_att;
+        y09RightAtt += dataP[i].right_att
+        y09MidAtt += dataP[i].middle_att;
+        y09LeftCom += dataP[i].left_com;
+        y09RightCom += dataP[i].right_com;
+        y09MidCom += dataP[i].middle_com;
+      }
+      if (dataP[i].where == "10-19 yards"){
+        if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y1019Right = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y1019Mid = dataP[i].middle_com / dataP[i].middle_att; }
+        y1019LeftY += dataP[i].left_yards;
+        y1019RightY += dataP[i].right_yards;
+        y1019MidY += dataP[i].middle_yards;
+        y1019Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y1019Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y1019LeftAtt += dataP[i].left_att;
+        y1019RightAtt += dataP[i].right_att
+        y1019MidAtt += dataP[i].middle_att;
+        y1019LeftCom += dataP[i].left_com;
+        y1019RightCom += dataP[i].right_com;
+        y1019MidCom += dataP[i].middle_com;
+      }
+      if (dataP[i].where == "20-plus"){
+        if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y20plusRight = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y20plusMid = dataP[i].middle_com / dataP[i].middle_att; }  
+        y20plusLeftY += dataP[i].left_yards;
+        y20plusRightY += dataP[i].right_yards;
+        y20plusMidY += dataP[i].middle_yards;
+        y20plusAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y20plusCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftAtt += dataP[i].left_att;
+        y20plusRightAtt += dataP[i].right_att
+        y20plusMidAtt += dataP[i].middle_att;
+        y20plusLeftCom += dataP[i].left_com;
+        y20plusRightCom += dataP[i].right_com;
+        y20plusMidCom += dataP[i].middle_com;
+      }
+    }
+  // }
+    qb = "All QB";
+}
+
+  if (behindLOSLeft >= 0.8) { $("#behindlos .left").addClass('p5'); }
+  else if (behindLOSLeft >= 0.6) { $("#behindlos .left").addClass('p4'); }
+  else if (behindLOSLeft >= 0.4) { $("#behindlos .left").addClass('p3'); }
+  else if (behindLOSLeft >= 0.2) { $("#behindlos .left").addClass('p2'); }
+  else if (behindLOSLeft >= 0) { $("#behindlos .left").addClass('p1'); }
+  else { $("#behindlos .left").addClass('p0'); }
+
+  $("#behindlos .left").html("<div>" + d3.format("%")(behindLOSLeft) + "</div><div>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + "</div><div>" + behindLOSLeftY + " yards</div>&nbsp");
+
+  if (behindLOSMid >= 0.8) { $("#behindlos .middle").addClass('p5'); }
+  else if (behindLOSMid >= 0.6) { $("#behindlos .middle").addClass('p4'); }
+  else if (behindLOSMid >= 0.4) { $("#behindlos .middle").addClass('p3'); }
+  else if (behindLOSMid >= 0.2) { $("#behindlos .middle").addClass('p2'); }
+  else if (behindLOSMid >= 0) { $("#behindlos .middle").addClass('p1'); }
+  else  { $("#behindlos .middle").addClass('p0'); }
+
+  $("#behindlos .middle").html("<div>" + d3.format("%")(behindLOSMid) + "</div><div>" + behindLOSMidCom + "/" + behindLOSMidAtt + "</div><div>" + behindLOSMidY + " yards</div>&nbsp");
+
+  if (behindLOSRight >= 0.8) { $("#behindlos .right").addClass('p5'); }
+  else if (behindLOSRight >= 0.6) { $("#behindlos .right").addClass('p4'); }
+  else if (behindLOSRight >= 0.4) { $("#behindlos .right").addClass('p3'); }
+  else if (behindLOSRight >= 0.2) { $("#behindlos .right").addClass('p2'); }
+  else if (behindLOSRight >= 0) { $("#behindlos .right").addClass('p1'); }
+  else { $("#behindlos .right").addClass('p0'); }
+
+  $("#beindlos .right").html("<div>" + d3.format("%")(behindLOSRight) + "</div><div>" + behindLOSRightCom + "/" + behindLOSRightAtt + "</div><div>&nbsp" + behindLOSRightY + " yards</div>");
+  $("#avgbehindlos").html(d3.format("%")(behindLOSCom / behindLOSAtt));
+
+  if (y09Left >= 0.8) { $("#y09 .left").addClass('p5'); }
+  else if (y09Left >= 0.6) { $("#y09 .left").addClass('p4'); }
+  else if (y09Left >= 0.4) { $("#y09 .left").addClass('p3'); }
+  else if (y09Left >= 0.2) { $("#y09 .left").addClass('p2'); }
+  else if (y09Left >= 0) { $("#y09 .left").addClass('p1'); }
+  else  { $("#y09 .left").addClass('p0'); }
+
+  $("#y09 .left").html("<div>" + d3.format("%")(y09Left) + "</div><div>" + y09LeftCom + "/" + y09LeftAtt + "</div><div>" + y09LeftY + " yards</div>&nbsp");
+
+  if (y09Mid >= 0.8) { $("#y09 .middle").addClass('p5'); }
+  else if (y09Mid >= 0.6) { $("#y09 .middle").addClass('p4'); }
+  else if (y09Mid >= 0.4) { $("#y09 .middle").addClass('p3'); }
+  else if (y09Mid >= 0.2) { $("#y09 .middle").addClass('p2'); }
+  else if (y09Mid >= 0) { $("#y09 .middle").addClass('p1'); }
+  else  { $("#y09 .middle").addClass('p0'); }
+
+  $("#y09 .middle").html("<div>" + d3.format("%")(y09Mid) + "</div><div>" + y09MidCom + "/" + y09MidAtt + "</div><div>" + y09MidY + " yards</div>&nbsp");
+
+  if (y09Right >= 0.8) { $("#y09 .right").addClass('p5'); }
+  else if (y09Right >= 0.6) { $("#y09 .right").addClass('p4'); }
+  else if (y09Right >= 0.4) { $("#y09 .right").addClass('p3'); }
+  else if (y09Right >= 0.2) { $("#y09 .right").addClass('p2'); }
+  else if (y09Right >= 0) { $("#y09 .right").addClass('p1'); }
+  else  { $("#y09 .right").addClass('p0'); }
+
+  $("#y09 .right").html("<div>" + d3.format("%")(y09Right) + "</div><div>" + y09RightCom + "/" + y09RightAtt + "</div><div>" + y09RightY + " yards</div>&nbsp");
+  $("#avgy09").html(d3.format("%")(y09Com / y09Att));
+
+  if (y1019Left >= 0.8) { $("#y1019 .left").addClass('p5'); }
+  else if (y1019Left >= 0.6) { $("#y1019 .left").addClass('p4'); }
+  else if (y1019Left >= 0.4) { $("#y1019 .left").addClass('p3'); }
+  else if (y1019Left >= 0.2) { $("#y1019 .left").addClass('p2'); }
+  else if (y1019Left >= 0) { $("#y1019 .left").addClass('p1'); }
+  else  { $("#y1019 .left").addClass('p0'); }
+
+  $("#y1019 .left").html("<div>" + d3.format("%")(y1019Left) + "</div><div>" + y1019LeftCom + "/" + y1019LeftAtt + "</div><div>" + y1019LeftY + " yards</div>&nbsp");
+
+  if (y1019Mid >= 0.8) { $("#y1019 .middle").addClass('p5'); }
+  else if (y1019Mid >= 0.6) { $("#y1019 .middle").addClass('p4'); }
+  else if (y1019Mid >= 0.4) { $("#y1019 .middle").addClass('p3'); }
+  else if (y1019Mid >= 0.2) { $("#y1019 .middle").addClass('p2'); }
+  else if (y1019Mid >= 0) { $("#y1019 .middle").addClass('p1'); }
+  else  { $("#y1019 .middle").addClass('p0'); }
+
+  $("#y1019 .middle").html("<div>" + d3.format("%")(y1019Mid) + "</div><div>" + y1019MidCom + "/" + y1019MidAtt + "</div><div>" + y1019MidY + " yards</div>&nbsp");
+
+  if (y1019Right >= 0.8) { $("#y1019 .right").addClass('p5'); }
+  else if (y1019Right >= 0.6) { $("#y1019 .right").addClass('p4'); }
+  else if (y1019Right >= 0.4) { $("#y1019 .right").addClass('p3'); }
+  else if (y1019Right >= 0.2) { $("#y1019 .right").addClass('p2'); }
+  else if (y1019Right >= 0) { $("#y1019 .right").addClass('p1'); }
+  else  { $("#y1019 .right").addClass('p0'); }
+
+  $("#y1019 .right").html("<div>" + d3.format("%")(y1019Right) + "</div><div>" + y1019RightCom + "/" + y1019RightAtt + "</div><div>" + y1019RightY + " yards</div>&nbsp");
+  $("#avgy1019").html(d3.format("%")(y1019Com / y1019Att));
+
+  if (y20plusLeft >= 0.8) { $("#y20plus .left").addClass('p5'); }
+  else if (y20plusLeft >= 0.6) { $("#y20plus .left").addClass('p4'); }
+  else if (y20plusLeft >= 0.4) { $("#y20plus .left").addClass('p3'); }
+  else if (y20plusLeft >= 0.2) { $("#y20plus .left").addClass('p2'); }
+  else if (y20plusLeft >= 0) { $("#y20plus .left").addClass('p1'); }
+  else  { $("#y20plus .left").addClass('p0'); }
+
+  $("#y20plus .left").html("<div>" + d3.format("%")(y20plusLeft) + "</div><div>" + y20plusLeftCom + "/" + y20plusLeftAtt + "</div><div>" + y20plusLeftY + " yards</div>&nbsp");
+
+  if (y20plusMid >= 0.8) { $("#y20plus .middle").addClass('p5'); }
+  else if (y20plusMid >= 0.6) { $("#y20plus .middle").addClass('p4'); }
+  else if (y20plusMid >= 0.4) { $("#y20plus .middle").addClass('p3'); }
+  else if (y20plusMid >= 0.2) { $("#y20plus .middle").addClass('p2'); }
+  else if (y20plusMid >= 0) { $("#y20plus .middle").addClass('p1'); }
+  else { $("#y20plus .middle").addClass('p0'); }
+
+  $("#y20plus .middle").html("<div>" + d3.format("%")(y20plusMid) + "</div><div>" + y20plusMidCom + "/" + y20plusMidAtt + "</div><div>" + y20plusMidY + " yards</div>&nbsp");
+
+  if (y20plusRight >= 0.8) { $("#y20plus .right").addClass('p5'); }
+  else if (y20plusRight >= 0.6) { $("#y20plus .right").addClass('p4'); }
+  else if (y20plusRight >= 0.4) { $("#y20plus .right").addClass('p3'); }
+  else if (y20plusRight >= 0.2) { $("#y20plus .right").addClass('p2'); }
+  else if (y20plusRight >= 0) { $("#y20plus .right").addClass('p1'); }
+  else { $("#y20plus .right").addClass('p0'); }
+
+  $("#y20plus .right").html("<div>" + d3.format("%")(y20plusRight) + "</div><div>" + y20plusRightCom + "/" + y20plusRightAtt + "</div><div>" + y20plusRightY + " yards</div>&nbsp");
+  $("#avgy20plus").html(d3.format("%")(y20plusCom / y20plusAtt));
+
+  $("#total").html(totalYards);
+  $("#qbDude").html(qb);
+  
+}
+
+function crunchRushing(week) {
+
+  var oleft = 0;
+  var offlt = 0;
+  var lcenter = 0;
+  var rcenter = 0;
+  var offrt = 0;
+  var oright = 0;
+  var oleftY = 0;
+  var offltY = 0;
+  var lcenterY = 0;
+  var rcenterY = 0;
+  var offrtY = 0;
+  var orightY = 0;
+
+  for (var i=0; i < dataR.length; i++){
+      if (week == dataR[i].week){
+        if (dataR[i].where == "Outside left"){
+        oleft = dataR[i].rushes;
+        oleftY = dataR[i].yards;
+        }
+        if (dataR[i].where == "Off LT"){
+        offlt = dataR[i].rushes;
+        offltY = dataR[i].yards;
+        }
+        if (dataR[i].where == "Left of center"){
+        lcenter = dataR[i].rushes;
+        lcenterY = dataR[i].yards;
+        }
+        if (dataR[i].where == "Right of center"){
+        rcenter = dataR[i].rushes;
+        rcenterY = dataR[i].yards;
+        }
+        if (dataR[i].where == "Off RT"){
+        offrt = dataR[i].rushes;
+        offrtY = dataR[i].yards;
+        }
+        if (dataR[i].where == "Outside right"){
+        oright = dataR[i].rushes;
+        orightY = dataR[i].yards;
+        }
+      }
+  }
+
+    if (oleft >= 8) { $(".bar.oleft").addClass('p5'); }
+    if (oleft >= 6) { $(".bar.oleft").addClass('p4'); }
+    if (oleft >= 4) { $(".bar.oleft").addClass('p3'); }
+    if (oleft >= 2) { $(".bar.oleft").addClass('p2'); }
+    if (oleft >= 0) { $(".bar.oleft").addClass('p1'); }
+
+    $(".avg.oleft").html(oleftY);
+
+    if (offlt >= 8) { $(".bar.offlt").addClass('p5'); }
+    if (offlt >= 6) { $(".bar.offlt").addClass('p4'); }
+    if (offlt >= 4) { $(".bar.offlt").addClass('p3'); }
+    if (offlt >= 2) { $(".bar.offlt").addClass('p2'); }
+    if (offlt >= 0) { $(".bar.offlt").addClass('p1'); }
+
+    $(".avg.offlt").html(offltY);
+
+    if (lcenter >= 8) { $(".bar.lcenter").addClass('p5'); }
+    if (lcenter >= 6) { $(".bar.lcenter").addClass('p4'); }
+    if (lcenter >= 4) { $(".bar.lcenter").addClass('p3'); }
+    if (lcenter >= 2) { $(".bar.lcenter").addClass('p2'); }
+    if (lcenter >= 0) { $(".bar.lcenter").addClass('p1'); }
+
+    $(".avg.lcenter").html(offltY);
+
+    if (rcenter >= 8) { $(".bar.rcenter").addClass('p5'); }
+    if (rcenter >= 6) { $(".bar.rcenter").addClass('p4'); }
+    if (rcenter >= 4) { $(".bar.rcenter").addClass('p3'); }
+    if (rcenter >= 2) { $(".bar.rcenter").addClass('p2'); }
+    if (rcenter >= 0) { $(".bar.rcenter").addClass('p1'); }
+
+    $(".avg.rcenter").html(rcenterY);
+
+    if (offrt >= 8) { $(".bar.offrt").addClass('p5'); }
+    if (offrt >= 6) { $(".bar.offrt").addClass('p4'); }
+    if (offrt >= 4) { $(".bar.offrt").addClass('p3'); }
+    if (offrt >= 2) { $(".bar.offrt").addClass('p2'); }
+    if (offrt >= 0) { $(".bar.offrt").addClass('p1'); }
+
+    $(".avg.offrt").html(offltY);
+
+    if (oright >= 8) { $(".bar.oright").addClass('p5'); }
+    if (oright >= 6) { $(".bar.oright").addClass('p4'); }
+    if (oright >= 4) { $(".bar.oright").addClass('p3'); }
+    if (oright >= 2) { $(".bar.oright").addClass('p2'); }
+    if (oright >= 0) { $(".bar.oright").addClass('p1'); }
+
+    $(".avg.oright").html(orightY);
+}
+
+function buildWeeks(){
+  var thisweek = 0;
+  for (var i=0; i < dataP.length; i++){
+    if (dataP[i].week != thisweek){
+    $("ul.dropdown").append("<li class='step' index='" + dataP[i].week + "'>Week " + dataP[i].week + " " + dataP[i].homeaway + " " + dataP[i].opponent + " | " + dataP[i].score + " " + dataP[i].winner + "</li>");
+    thisweek = dataP[i].week;
+    $("#topweek").html("Week " + dataP[i].week + " " + dataP[i].homeaway + " " + dataP[i].opponent + " | " + dataP[i].score + " " + dataP[i].winner);
+    }
+  }
+
+  $(".step").click(function() {
+  var week = Number($(this).attr("index"));
+  crunchPassing(week);
+  crunchRushing(week);
+  });
+
+}
+
+buildWeeks();
+
+crunchPassing(0);
+crunchRushing(0);
+
+});
+});
+
+</script>
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
+</script>
+</html>
