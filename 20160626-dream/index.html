@@ -42,7 +42,6 @@
 
    .chatter, .chartTitle { text-align:left; }
 
-<<<<<<< HEAD
    .negDark { fill:#F21919 !important; background-color:#F21919 !important; color:#fff !important; }
    .negMid { fill:#F27F7F !important; background-color:#F27F7F !important; color:#fff; }
    .negLight { fill:#F1D9CB !important; background-color:#F1D9CB !important; }
@@ -50,7 +49,6 @@
    .posLight { fill:#D2EDCB !important; background-color:#D2EDCB !important; }
    .posMid { fill:#A8DA99 !important; background-color:#A8DA99 !important; color:#fff; }
    .posDark { fill:#57B857 !important; background-color:#57B857 !important; color:#fff !important; } 
-=======
    .negDark { fill:#7F0000 !important; background-color:#7F0000 !important; color:#fff !important; }
    .negMid { fill:#F24930 !important; background-color:#F24930 !important; color:#fff; }
    .negLight { fill:#FED98E !important; background-color:#FED98E !important; }
@@ -58,7 +56,6 @@
    .posLight { fill:#ECF9B9 !important; background-color:#ECF9B9 !important; }
    .posMid { fill:#AEDE8F !important; background-color:#AEDE8F !important; color:#fff; }
    .posDark { fill:#0F6633 !important; background-color:#0F6633 !important; color:#fff !important; } 
->>>>>>> origin/master
 
    .state-boundary { fill: none; stroke: #fff; stroke-width:2.3px; } 
 
@@ -382,11 +379,8 @@ jQuery.fn.d3Up = function () {
    $('.p25').each(function() {
     var num = $(this).text();
     if (num != "No data available"){
-<<<<<<< HEAD
       var color_scale = d3.scale.linear().domain([-10, 0, 20]).range(['#F21919', '#F1D9CB', '#57B857']);
-=======
       var color_scale = d3.scale.linear().domain([-10, 0, 20]).range(['#7F0000', '#ECF9B9', '#0F6633']);
->>>>>>> origin/master
       if (num < -15 || num > 15) { var textcolor = "#fff"; }
       else  { var textcolor = "#000"; }
       $(this).css('color', textcolor);
@@ -425,11 +419,8 @@ function mapColor(d, subject, dataCompare){
       var points = data[i].aum25 - 42;
       if (data[i].aum25 == null || data[i].aum25 == 0 || data[i].aum25 == "undefined") { return "#fff"; }
       else { 
-<<<<<<< HEAD
         var color_scale = d3.scale.linear().domain([-10, 0, 20]).range(['#F21919', '#F1D9CB', '#57B857']);
-=======
         var color_scale = d3.scale.linear().domain([-12, 0, 20]).range(['#7F0000', '#ECF9B9', '#0F6633']);
->>>>>>> origin/master
         return color_scale(points);
       }
 
