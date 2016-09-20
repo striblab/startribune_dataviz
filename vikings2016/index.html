@@ -16,14 +16,20 @@
   
   <style>
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
-      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; }
-      .fieldsection { width:24%; height:300px; background-color:#2AED6B; display:inline-block; vertical-align:middle; }
+      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:520px; margin-right:auto; margin-left:auto; }
+      .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ background-color:#2AED6B; display:inline-block; vertical-align:middle; }
       .bar { width:100%; height:100px; vertical-align:middle; padding-top:5%; }
       .avgsection { width:24%; background-color:#fff; display:inline-block; }
+      .hashes { background-color:#2AED6B; height:20px; }
+      .hashes div { width:11.1%; height:20px; border-left:3px solid #fff; display:inline-block; }
       .los { border-right:10px #C5D86D solid; }
-      #viewSwitch { text-align:center; margin-left:17px; }
+
+      .otherstats { display:none; }
+      .bar:hover { opacity:0.9; cursor:pointer; }
 
       #rb .fieldsection { border-top:10px #C5D86D solid; }
+
+      .highlight { font-weight:900; font-size:1.2em; }
 
       .wrapper-demo { text-align:left; }
       .wrapper-dropdown-1 { width:300px; margin-right:auto; margin-left:auto; }
@@ -45,14 +51,15 @@
       .p5 { background-color:#737373; color:#fff; opacity:0.8; }
 
       #smallLegend div { height:12px; width:30px; display:inline-block; opacity:1 !important; }
-      #smallLegend { font-size:0.8em; color:#bbb; float:right; margin-right:17px; }
-      h3 { text-align:left !important; margin-left:17px; float:left; }
+      #smallLegend { font-size:0.8em; color:#bbb; margin-right:17px; }
+      h4 { text-align:left !important; }
 
-      @media (max-width:400px) {
+      @media (max-width:530px) {
+        #wrapper { width:100%; }
         .wrapper-dropdown-1 { width:100%; }
+        .avgsection, .fieldsection { width:24%; }
+        .otherstats { font-size:0.8em; }
         #viewSwitch { margin-left:0px; }
-        .fieldsection, .avgsection { width:15%; }
-        #smallLegend, h3 { float:none !important; }
         .bigNum { font-size:2em !important; }
       }
   </style> 
@@ -79,12 +86,23 @@
 <div class="breaker"></div>
 
 <div class="playerstats" id="qb">  
-<h3><span id="qbDude">QB</span> completion percentage by section of field | <span id="total"></span> yards total</h3>
-<div id="smallLegend"><span>Less</span><div class="p1"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
+<h4><span id="qbDude">QB</span> completion percentage by section of field</h4>
+
+<h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards | <span id="td"></span> TD <span id="int"></span> INT</h4>
 
 <div class="breaker"></div>
 
-<div id="fieldQB">
+<div class="avgsection">Behind LOS</div>
+<div class="avgsection">0-9 Yards</div>
+<div class="avgsection">10-19 Yards</div>
+<div class="avgsection">20+ Yards</div>
+
+<div class="avgsection hashes los"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+<!-- <div id="fieldQB"> -->
 <div class="fieldsection los" id="behindlos">
 <div class="bar left"></div>
 <div class="bar middle"></div>
@@ -105,64 +123,28 @@
 <div class="bar middle"></div>
 <div class="bar right"></div>
 </div>
-</div>
+<!-- </div> -->
+
+<div class="avgsection hashes los"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
 <div class="avgsection bigNum" id="avgbehindlos">0%</div>
 <div class="avgsection bigNum" id="avgy09">0%</div>
 <div class="avgsection bigNum" id="avgy1019">0%</div>
 <div class="avgsection bigNum" id="avgy20plus">0%</div>
 
-<div class="avgsection">Behind LOS</div>
-<div class="avgsection">0-9 Yards</div>
-<div class="avgsection">10-19 Yards</div>
-<div class="avgsection">20+ Yards</div>
+<div class="avgsection">completions</div>
+<div class="avgsection">completions</div>
+<div class="avgsection">completions</div>
+<div class="avgsection">completions</div>
 </div>
 
 <div class="breaker"></div>
 
-<div class="playerstats" id="rb" style="display:none;">  
-<h3>RB rushing by section of field</h3>
+<h5>Completion percentage</h5>
 <div id="smallLegend"><span>Less</span><div class="p1"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
-
-<div class="breaker"></div>
-
-<div class="fieldsection">
-<div class="bar oleft"></div>
-<div class="bar offlt"></div>
-<div class="bar lcenter"></div>
-<div class="bar rcenter"></div>
-<div class="bar offrt"></div>
-<div class="bar oright"></div>
-
-<div class="avg">Outside L</div>
-<div class="avg">Off LT</div>
-<div class="avg">L of Center</div>
-<div class="avg">R of Center</div>
-<div class="avg">Off RT</div>
-<div class="avg">Outside R</div>
-
-<div class="avg oleft">0</div>
-<div class="avg offlt">0</div>
-<div class="avg lcenter">0</div>
-<div class="avg rcenter">0</div>
-<div class="avg offrt">0</div>
-<div class="avg oright">0</div>
-
-<div class="avg">yards</div>
-<div class="avg">yards</div>
-<div class="avg">yards</div>
-<div class="avg">yards</div>
-<div class="avg">yards</div>
-<div class="avg">yards</div>
-</div>
-
-
-
-
-</div>
-
-</div>
-
 
 </div>
 
@@ -185,16 +167,18 @@
 // $(".playstats").hide();
 // $("#" + selected).show();
 
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1PAY0eRevbywXoyk-HuK0mNBcfdq4ZKyqPveag12oj_s&sheet=rushing", function(error, dataLoadR) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1PAY0eRevbywXoyk-HuK0mNBcfdq4ZKyqPveag12oj_s&sheet=passing", function(error, dataLoadP) {
 
 var dataP = dataLoadP.passing;
-var dataR = dataLoadR.rushing;
 
 function crunchPassing(week){
 
   var totalYards = 0;
   var qb = "QB";
+  var td = 0;
+  var interceptions = 0;
+  var att = 0
+  var com = 0;
 
   var behindLOSLeft = 0;
   var behindLOSRight = 0;
@@ -210,6 +194,12 @@ function crunchPassing(week){
   var behindLOSLeftCom = 0;
   var behindLOSRightCom = 0;
   var behindLOSMidCom = 0;
+  var behindLOSLeftTD = 0;
+  var behindLOSRightTD = 0;
+  var behindLOSMidTD = 0;
+  var behindLOSLeftINT = 0;
+  var behindLOSRightINT = 0;
+  var behindLOSMidINT = 0;
 
   var y09Left = 0;
   var y09Right = 0;
@@ -225,6 +215,12 @@ function crunchPassing(week){
   var y09LeftCom = 0;
   var y09RightCom = 0;
   var y09MidCom = 0;
+  var y09LeftTD = 0;
+  var y09RightTD = 0;
+  var y09MidTD = 0;
+  var y09LeftINT = 0;
+  var y09RightINT = 0;
+  var y09MidINT = 0;
 
   var y1019Left = 0;
   var y1019Right = 0;
@@ -240,6 +236,12 @@ function crunchPassing(week){
   var y1019LeftCom = 0;
   var y1019RightCom = 0;
   var y1019MidCom = 0;
+  var y1019LeftTD = 0;
+  var y1019RightTD = 0;
+  var y1019MidTD = 0;
+  var y1019LeftINT = 0;
+  var y1019RightINT = 0;
+  var y1019MidINT = 0;
 
   var y20plusLeft = 0;
   var y20plusRight = 0;
@@ -255,6 +257,12 @@ function crunchPassing(week){
   var y20plusLeftCom = 0;
   var y20plusRightCom = 0;
   var y20plusMidCom = 0;
+  var y20plusLeftTD = 0;
+  var y20plusRightTD = 0;
+  var y20plusMidTD = 0;
+  var y20plusLeftINT = 0;
+  var y20plusRightINT = 0;
+  var y20plusMidINT = 0;
 
 if (week != 0){
   for (var i=0; i < dataP.length; i++){
@@ -277,6 +285,16 @@ if (week != 0){
         behindLOSLeftCom = dataP[i].middle_com;
         behindLOSRightCom = dataP[i].right_com;
         behindLOSMidCom = dataP[i].left_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        behindLOSLeftTD = dataP[i].left_td;
+        behindLOSRightTD = dataP[i].right_td;
+        behindLOSMidTD = dataP[i].mid_td;
+        behindLOSLeftINT = dataP[i].left_int;
+        behindLOSRightINT = dataP[i].right_int;
+        behindLOSMidINT = dataP[i].mid_int;
       }
       if (dataP[i].where == "0-9 yards"){
         if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
@@ -293,6 +311,16 @@ if (week != 0){
         y09LeftCom = dataP[i].middle_com;
         y09RightCom = dataP[i].right_com;
         y09MidCom = dataP[i].left_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y09LeftTD = dataP[i].left_td;
+        y09RightTD = dataP[i].right_td;
+        y09MidTD = dataP[i].mid_td;
+        y09LeftINT = dataP[i].left_int;
+        y09RightINT = dataP[i].right_int;
+        y09MidINT = dataP[i].mid_int;
       }
       if (dataP[i].where == "10-19 yards"){
         if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
@@ -309,6 +337,16 @@ if (week != 0){
         y1019LeftCom = dataP[i].middle_com;
         y1019RightCom = dataP[i].right_com;
         y1019MidCom = dataP[i].left_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y1019LeftTD = dataP[i].left_td;
+        y1019RightTD = dataP[i].right_td;
+        y1019MidTD = dataP[i].mid_td;
+        y1019LeftINT = dataP[i].left_int;
+        y1019RightINT = dataP[i].right_int;
+        y1019MidINT = dataP[i].mid_int;
       }
       if (dataP[i].where == "20-plus"){
         if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
@@ -325,6 +363,16 @@ if (week != 0){
         y20plusLeftCom = dataP[i].middle_com;
         y20plusRightCom = dataP[i].right_com;
         y20plusMidCom = dataP[i].left_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftTD = dataP[i].left_td;
+        y20plusRightTD = dataP[i].right_td;
+        y20plusMidTD = dataP[i].mid_td;
+        y20plusLeftINT = dataP[i].left_int;
+        y20plusRightINT = dataP[i].right_int;
+        y20plusMidINT = dataP[i].mid_int;
       }
 
       qb = dataP[i].who;
@@ -351,6 +399,16 @@ if (week != 0){
         behindLOSLeftCom += dataP[i].left_com;
         behindLOSRightCom += dataP[i].right_com;
         behindLOSMidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        behindLOSLeftTD = dataP[i].left_td;
+        behindLOSRightTD = dataP[i].right_td;
+        behindLOSMidTD = dataP[i].mid_td;
+        behindLOSLeftINT = dataP[i].left_int;
+        behindLOSRightINT = dataP[i].right_int;
+        behindLOSMidINT = dataP[i].mid_int;
       }
       if (dataP[i].where == "0-9 yards"){
         if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
@@ -367,6 +425,16 @@ if (week != 0){
         y09LeftCom += dataP[i].left_com;
         y09RightCom += dataP[i].right_com;
         y09MidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y09LeftTD = dataP[i].left_td;
+        y09RightTD = dataP[i].right_td;
+        y09MidTD = dataP[i].mid_td;
+        y09LeftINT = dataP[i].left_int;
+        y09RightINT = dataP[i].right_int;
+        y09MidINT = dataP[i].mid_int;
       }
       if (dataP[i].where == "10-19 yards"){
         if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
@@ -383,6 +451,16 @@ if (week != 0){
         y1019LeftCom += dataP[i].left_com;
         y1019RightCom += dataP[i].right_com;
         y1019MidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y1019LeftTD = dataP[i].left_td;
+        y1019RightTD = dataP[i].right_td;
+        y1019MidTD = dataP[i].mid_td;
+        y1019LeftINT = dataP[i].left_int;
+        y1019RightINT = dataP[i].right_int;
+        y1019MidINT = dataP[i].mid_int;
       }
       if (dataP[i].where == "20-plus"){
         if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
@@ -399,6 +477,16 @@ if (week != 0){
         y20plusLeftCom += dataP[i].left_com;
         y20plusRightCom += dataP[i].right_com;
         y20plusMidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftTD = dataP[i].left_td;
+        y20plusRightTD = dataP[i].right_td;
+        y20plusMidTD = dataP[i].mid_td;
+        y20plusLeftINT = dataP[i].left_int;
+        y20plusRightINT = dataP[i].right_int;
+        y20plusMidINT = dataP[i].mid_int;
       }
     }
   // }
@@ -412,7 +500,7 @@ if (week != 0){
   else if (behindLOSLeft >= 0) { $("#behindlos .left").addClass('p1'); }
   else { $("#behindlos .left").addClass('p0'); }
 
-  $("#behindlos .left").html("<div>" + d3.format("%")(behindLOSLeft) + "</div><div>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + "</div><div>" + behindLOSLeftY + " yards</div>&nbsp");
+  $("#behindlos .left").html("<div class='highlight'>" + d3.format("%")(behindLOSLeft) + "</div><div class='otherstats'>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + " | " + behindLOSLeftY + " yards</div><div class='otherstats'>" + behindLOSLeftTD + " TD " + behindLOSLeftINT + " INT</div>");
 
   if (behindLOSMid >= 0.8) { $("#behindlos .middle").addClass('p5'); }
   else if (behindLOSMid >= 0.6) { $("#behindlos .middle").addClass('p4'); }
@@ -421,7 +509,7 @@ if (week != 0){
   else if (behindLOSMid >= 0) { $("#behindlos .middle").addClass('p1'); }
   else  { $("#behindlos .middle").addClass('p0'); }
 
-  $("#behindlos .middle").html("<div>" + d3.format("%")(behindLOSMid) + "</div><div>" + behindLOSMidCom + "/" + behindLOSMidAtt + "</div><div>" + behindLOSMidY + " yards</div>&nbsp");
+  $("#behindlos .middle").html("<div class='highlight'>" + d3.format("%")(behindLOSMid) + "</div><div class='otherstats'>" + behindLOSMidCom + "/" + behindLOSMidAtt + " | " + behindLOSMidY + " yards</div><div class='otherstats'>" + behindLOSMidTD + " TD " + behindLOSMidINT +  " INT</div>&nbsp");
 
   if (behindLOSRight >= 0.8) { $("#behindlos .right").addClass('p5'); }
   else if (behindLOSRight >= 0.6) { $("#behindlos .right").addClass('p4'); }
@@ -430,7 +518,7 @@ if (week != 0){
   else if (behindLOSRight >= 0) { $("#behindlos .right").addClass('p1'); }
   else { $("#behindlos .right").addClass('p0'); }
 
-  $("#beindlos .right").html("<div>" + d3.format("%")(behindLOSRight) + "</div><div>" + behindLOSRightCom + "/" + behindLOSRightAtt + "</div><div>&nbsp" + behindLOSRightY + " yards</div>");
+  $("#beindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRight) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + " | " + behindLOSRightY + " yards</div class='otherstats'><div>&nbsp" + behindLOSRightTD + " TD " + behindLOSRightINT + " INT</div>");
   $("#avgbehindlos").html(d3.format("%")(behindLOSCom / behindLOSAtt));
 
   if (y09Left >= 0.8) { $("#y09 .left").addClass('p5'); }
@@ -440,7 +528,7 @@ if (week != 0){
   else if (y09Left >= 0) { $("#y09 .left").addClass('p1'); }
   else  { $("#y09 .left").addClass('p0'); }
 
-  $("#y09 .left").html("<div>" + d3.format("%")(y09Left) + "</div><div>" + y09LeftCom + "/" + y09LeftAtt + "</div><div>" + y09LeftY + " yards</div>&nbsp");
+  $("#y09 .left").html("<div class='highlight'>" + d3.format("%")(y09Left) + "</div><div class='otherstats'>" + y09LeftCom + "/" + y09LeftAtt + " | " + y09LeftY + " yards</div><div class='otherstats'>" + y09LeftTD + " TD " + y09LeftINT + " INT</div>&nbsp");
 
   if (y09Mid >= 0.8) { $("#y09 .middle").addClass('p5'); }
   else if (y09Mid >= 0.6) { $("#y09 .middle").addClass('p4'); }
@@ -449,7 +537,7 @@ if (week != 0){
   else if (y09Mid >= 0) { $("#y09 .middle").addClass('p1'); }
   else  { $("#y09 .middle").addClass('p0'); }
 
-  $("#y09 .middle").html("<div>" + d3.format("%")(y09Mid) + "</div><div>" + y09MidCom + "/" + y09MidAtt + "</div><div>" + y09MidY + " yards</div>&nbsp");
+  $("#y09 .middle").html("<div class='highlight'>" + d3.format("%")(y09Mid) + "</div><div class='otherstats'>" + y09MidCom + "/" + y09MidAtt + " | " + y09MidY + " yards</div><div class='otherstats'>" + y09MidTD + " TD " + y09MidINT + " INT</div>&nbsp");
 
   if (y09Right >= 0.8) { $("#y09 .right").addClass('p5'); }
   else if (y09Right >= 0.6) { $("#y09 .right").addClass('p4'); }
@@ -458,7 +546,7 @@ if (week != 0){
   else if (y09Right >= 0) { $("#y09 .right").addClass('p1'); }
   else  { $("#y09 .right").addClass('p0'); }
 
-  $("#y09 .right").html("<div>" + d3.format("%")(y09Right) + "</div><div>" + y09RightCom + "/" + y09RightAtt + "</div><div>" + y09RightY + " yards</div>&nbsp");
+  $("#y09 .right").html("<div class='highlight'>" + d3.format("%")(y09Right) + "</div><div class='otherstats'>" + y09RightCom + "/" + y09RightAtt + " | " + y09RightY + " yards</div><div class='otherstats'>" + y09RightTD + " TD " + y09RightINT + " INT</div>&nbsp");
   $("#avgy09").html(d3.format("%")(y09Com / y09Att));
 
   if (y1019Left >= 0.8) { $("#y1019 .left").addClass('p5'); }
@@ -468,7 +556,7 @@ if (week != 0){
   else if (y1019Left >= 0) { $("#y1019 .left").addClass('p1'); }
   else  { $("#y1019 .left").addClass('p0'); }
 
-  $("#y1019 .left").html("<div>" + d3.format("%")(y1019Left) + "</div><div>" + y1019LeftCom + "/" + y1019LeftAtt + "</div><div>" + y1019LeftY + " yards</div>&nbsp");
+  $("#y1019 .left").html("<div class='highlight'>" + d3.format("%")(y1019Left) + "</div><div class='otherstats'>" + y1019LeftCom + "/" + y1019LeftAtt + " | " + y1019LeftY+ " yards</div><div class='otherstats'>" + y1019LeftTD + " TD " + y1019LeftINT  + " INT</div>&nbsp");
 
   if (y1019Mid >= 0.8) { $("#y1019 .middle").addClass('p5'); }
   else if (y1019Mid >= 0.6) { $("#y1019 .middle").addClass('p4'); }
@@ -477,7 +565,7 @@ if (week != 0){
   else if (y1019Mid >= 0) { $("#y1019 .middle").addClass('p1'); }
   else  { $("#y1019 .middle").addClass('p0'); }
 
-  $("#y1019 .middle").html("<div>" + d3.format("%")(y1019Mid) + "</div><div>" + y1019MidCom + "/" + y1019MidAtt + "</div><div>" + y1019MidY + " yards</div>&nbsp");
+  $("#y1019 .middle").html("<div class='highlight'>" + d3.format("%")(y1019Mid) + "</div><div class='otherstats'>" + y1019MidCom + "/" + y1019MidAtt + " | " + y1019MidY + " yards</div><div class='otherstats'>" + y1019MidTD + " TD " + y1019MidINT + " INT</div>&nbsp");
 
   if (y1019Right >= 0.8) { $("#y1019 .right").addClass('p5'); }
   else if (y1019Right >= 0.6) { $("#y1019 .right").addClass('p4'); }
@@ -486,7 +574,7 @@ if (week != 0){
   else if (y1019Right >= 0) { $("#y1019 .right").addClass('p1'); }
   else  { $("#y1019 .right").addClass('p0'); }
 
-  $("#y1019 .right").html("<div>" + d3.format("%")(y1019Right) + "</div><div>" + y1019RightCom + "/" + y1019RightAtt + "</div><div>" + y1019RightY + " yards</div>&nbsp");
+  $("#y1019 .right").html("<div class='highlight'>" + d3.format("%")(y1019Right) + "</div><div class='otherstats'>" + y1019RightCom + "/" + y1019RightAtt + " | " + y1019RightY + " yards</div><div class='otherstats'>" + y1019RightTD + " TD " + y1019RightINT + " INT</div>&nbsp");
   $("#avgy1019").html(d3.format("%")(y1019Com / y1019Att));
 
   if (y20plusLeft >= 0.8) { $("#y20plus .left").addClass('p5'); }
@@ -496,7 +584,7 @@ if (week != 0){
   else if (y20plusLeft >= 0) { $("#y20plus .left").addClass('p1'); }
   else  { $("#y20plus .left").addClass('p0'); }
 
-  $("#y20plus .left").html("<div>" + d3.format("%")(y20plusLeft) + "</div><div>" + y20plusLeftCom + "/" + y20plusLeftAtt + "</div><div>" + y20plusLeftY + " yards</div>&nbsp");
+  $("#y20plus .left").html("<div class='highlight'>" + d3.format("%")(y20plusLeft) + "</div><div class='otherstats'>" + y20plusLeftCom + "/" + y20plusLeftAtt + " | " + y20plusLeftY + " yards</div><div class='otherstats'>" + y20plusLeftTD + " TD " + y20plusLeftINT + " INT</div>&nbsp");
 
   if (y20plusMid >= 0.8) { $("#y20plus .middle").addClass('p5'); }
   else if (y20plusMid >= 0.6) { $("#y20plus .middle").addClass('p4'); }
@@ -505,7 +593,7 @@ if (week != 0){
   else if (y20plusMid >= 0) { $("#y20plus .middle").addClass('p1'); }
   else { $("#y20plus .middle").addClass('p0'); }
 
-  $("#y20plus .middle").html("<div>" + d3.format("%")(y20plusMid) + "</div><div>" + y20plusMidCom + "/" + y20plusMidAtt + "</div><div>" + y20plusMidY + " yards</div>&nbsp");
+  $("#y20plus .middle").html("<div class='highlight'>" + d3.format("%")(y20plusMid) + "</div><div class='otherstats'>" + y20plusMidCom + "/" + y20plusMidAtt + " | " + y20plusMidY + " yards</div><div class='otherstats'>" + y20plusMidTD + " TD " + y20plusMidINT + " INT</div>&nbsp");
 
   if (y20plusRight >= 0.8) { $("#y20plus .right").addClass('p5'); }
   else if (y20plusRight >= 0.6) { $("#y20plus .right").addClass('p4'); }
@@ -514,105 +602,15 @@ if (week != 0){
   else if (y20plusRight >= 0) { $("#y20plus .right").addClass('p1'); }
   else { $("#y20plus .right").addClass('p0'); }
 
-  $("#y20plus .right").html("<div>" + d3.format("%")(y20plusRight) + "</div><div>" + y20plusRightCom + "/" + y20plusRightAtt + "</div><div>" + y20plusRightY + " yards</div>&nbsp");
+  $("#y20plus .right").html("<div class='highlight'>" + d3.format("%")(y20plusRight) + "</div><div class='otherstats'>" + y20plusRightCom + "/" + y20plusRightAtt + " | " + y20plusRightY + " yards</div><div class='otherstats'>" + y20plusRightTD + " TD " + y20plusRightINT + " INT</div>&nbsp");
   $("#avgy20plus").html(d3.format("%")(y20plusCom / y20plusAtt));
 
   $("#total").html(totalYards);
   $("#qbDude").html(qb);
-  
-}
-
-function crunchRushing(week) {
-
-  var oleft = 0;
-  var offlt = 0;
-  var lcenter = 0;
-  var rcenter = 0;
-  var offrt = 0;
-  var oright = 0;
-  var oleftY = 0;
-  var offltY = 0;
-  var lcenterY = 0;
-  var rcenterY = 0;
-  var offrtY = 0;
-  var orightY = 0;
-
-  for (var i=0; i < dataR.length; i++){
-      if (week == dataR[i].week){
-        if (dataR[i].where == "Outside left"){
-        oleft = dataR[i].rushes;
-        oleftY = dataR[i].yards;
-        }
-        if (dataR[i].where == "Off LT"){
-        offlt = dataR[i].rushes;
-        offltY = dataR[i].yards;
-        }
-        if (dataR[i].where == "Left of center"){
-        lcenter = dataR[i].rushes;
-        lcenterY = dataR[i].yards;
-        }
-        if (dataR[i].where == "Right of center"){
-        rcenter = dataR[i].rushes;
-        rcenterY = dataR[i].yards;
-        }
-        if (dataR[i].where == "Off RT"){
-        offrt = dataR[i].rushes;
-        offrtY = dataR[i].yards;
-        }
-        if (dataR[i].where == "Outside right"){
-        oright = dataR[i].rushes;
-        orightY = dataR[i].yards;
-        }
-      }
-  }
-
-    if (oleft >= 8) { $(".bar.oleft").addClass('p5'); }
-    if (oleft >= 6) { $(".bar.oleft").addClass('p4'); }
-    if (oleft >= 4) { $(".bar.oleft").addClass('p3'); }
-    if (oleft >= 2) { $(".bar.oleft").addClass('p2'); }
-    if (oleft >= 0) { $(".bar.oleft").addClass('p1'); }
-
-    $(".avg.oleft").html(oleftY);
-
-    if (offlt >= 8) { $(".bar.offlt").addClass('p5'); }
-    if (offlt >= 6) { $(".bar.offlt").addClass('p4'); }
-    if (offlt >= 4) { $(".bar.offlt").addClass('p3'); }
-    if (offlt >= 2) { $(".bar.offlt").addClass('p2'); }
-    if (offlt >= 0) { $(".bar.offlt").addClass('p1'); }
-
-    $(".avg.offlt").html(offltY);
-
-    if (lcenter >= 8) { $(".bar.lcenter").addClass('p5'); }
-    if (lcenter >= 6) { $(".bar.lcenter").addClass('p4'); }
-    if (lcenter >= 4) { $(".bar.lcenter").addClass('p3'); }
-    if (lcenter >= 2) { $(".bar.lcenter").addClass('p2'); }
-    if (lcenter >= 0) { $(".bar.lcenter").addClass('p1'); }
-
-    $(".avg.lcenter").html(offltY);
-
-    if (rcenter >= 8) { $(".bar.rcenter").addClass('p5'); }
-    if (rcenter >= 6) { $(".bar.rcenter").addClass('p4'); }
-    if (rcenter >= 4) { $(".bar.rcenter").addClass('p3'); }
-    if (rcenter >= 2) { $(".bar.rcenter").addClass('p2'); }
-    if (rcenter >= 0) { $(".bar.rcenter").addClass('p1'); }
-
-    $(".avg.rcenter").html(rcenterY);
-
-    if (offrt >= 8) { $(".bar.offrt").addClass('p5'); }
-    if (offrt >= 6) { $(".bar.offrt").addClass('p4'); }
-    if (offrt >= 4) { $(".bar.offrt").addClass('p3'); }
-    if (offrt >= 2) { $(".bar.offrt").addClass('p2'); }
-    if (offrt >= 0) { $(".bar.offrt").addClass('p1'); }
-
-    $(".avg.offrt").html(offltY);
-
-    if (oright >= 8) { $(".bar.oright").addClass('p5'); }
-    if (oright >= 6) { $(".bar.oright").addClass('p4'); }
-    if (oright >= 4) { $(".bar.oright").addClass('p3'); }
-    if (oright >= 2) { $(".bar.oright").addClass('p2'); }
-    if (oright >= 0) { $(".bar.oright").addClass('p1'); }
-
-    $(".avg.oright").html(orightY);
+  $("#td").html(td);
+  $("#int").html(interceptions);
+  $("#att").html(att);
+  $("#com").html(com);
 }
 
 function buildWeeks(){
@@ -628,22 +626,8 @@ function buildWeeks(){
   $(".step").click(function() {
   var week = Number($(this).attr("index"));
   crunchPassing(week);
-  crunchRushing(week);
   });
 
-}
-
-buildWeeks();
-
-crunchPassing(0);
-crunchRushing(0);
-
-});
-});
-
-</script>
-<script type="text/javascript">
-      
       function DropDown(el) {
         this.dd = el;
         this.placeholder = this.dd.children('span');
@@ -688,5 +672,22 @@ crunchRushing(0);
 
       });
 
+}
+
+buildWeeks();
+
+crunchPassing(0);
+
+$(".bar").hover(function() {
+  $(".otherstats").hide();
+  $(this).find(".otherstats").show();
+});
+
+$(".bar").mouseleave(function() {
+  $(".otherstats").hide();
+});
+
+
+});
 </script>
 </html>
