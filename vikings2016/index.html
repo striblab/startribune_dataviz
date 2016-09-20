@@ -274,127 +274,13 @@ if (week != 0){
         if (dataP[i].left_att != 0) { behindLOSLeft = dataP[i].left_com / dataP[i].left_att; }
         if (dataP[i].right_att != 0) { behindLOSRight = dataP[i].right_com / dataP[i].right_att; }
         if (dataP[i].middle_att != 0) { behindLOSMid = dataP[i].middle_com / dataP[i].middle_att; }
-        behindLOSLeftY = dataP[i].left_yards;
-        behindLOSRightY = dataP[i].right_yards;
-        behindLOSMidY = dataP[i].middle_yards;
-        behindLOSAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        behindLOSCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        behindLOSLeftAtt = dataP[i].left_att;
-        behindLOSRightAtt = dataP[i].right_att
-        behindLOSMidAtt = dataP[i].middle_att;
-        behindLOSLeftCom = dataP[i].middle_com;
-        behindLOSRightCom = dataP[i].right_com;
-        behindLOSMidCom = dataP[i].left_com;
-        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
-        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
-        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        behindLOSLeftTD = dataP[i].left_td;
-        behindLOSRightTD = dataP[i].right_td;
-        behindLOSMidTD = dataP[i].mid_td;
-        behindLOSLeftINT = dataP[i].left_int;
-        behindLOSRightINT = dataP[i].right_int;
-        behindLOSMidINT = dataP[i].mid_int;
-      }
-      if (dataP[i].where == "0-9 yards"){
-        if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
-        if (dataP[i].right_att != 0) { y09Right = dataP[i].right_com / dataP[i].right_att; }
-        if (dataP[i].middle_att != 0) { y09Mid = dataP[i].middle_com / dataP[i].middle_att;  }
-        y09LeftY = dataP[i].left_yards;
-        y09RightY = dataP[i].right_yards;
-        y09MidY = dataP[i].middle_yards;
-        y09Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        y09Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y09LeftAtt = dataP[i].left_att;
-        y09RightAtt = dataP[i].right_att
-        y09MidAtt = dataP[i].middle_att;
-        y09LeftCom = dataP[i].middle_com;
-        y09RightCom = dataP[i].right_com;
-        y09MidCom = dataP[i].left_com;
-        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
-        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
-        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y09LeftTD = dataP[i].left_td;
-        y09RightTD = dataP[i].right_td;
-        y09MidTD = dataP[i].mid_td;
-        y09LeftINT = dataP[i].left_int;
-        y09RightINT = dataP[i].right_int;
-        y09MidINT = dataP[i].mid_int;
-      }
-      if (dataP[i].where == "10-19 yards"){
-        if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
-        if (dataP[i].right_att != 0) { y1019Right = dataP[i].right_com / dataP[i].right_att; }
-        if (dataP[i].middle_att != 0) { y1019Mid = dataP[i].middle_com / dataP[i].middle_att; }
-        y1019LeftY = dataP[i].left_yards;
-        y1019RightY = dataP[i].right_yards;
-        y1019MidY = dataP[i].middle_yards;
-        y1019Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        y1019Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y1019LeftAtt = dataP[i].left_att;
-        y1019RightAtt = dataP[i].right_att
-        y1019MidAtt = dataP[i].middle_att;
-        y1019LeftCom = dataP[i].middle_com;
-        y1019RightCom = dataP[i].right_com;
-        y1019MidCom = dataP[i].left_com;
-        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
-        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
-        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y1019LeftTD = dataP[i].left_td;
-        y1019RightTD = dataP[i].right_td;
-        y1019MidTD = dataP[i].mid_td;
-        y1019LeftINT = dataP[i].left_int;
-        y1019RightINT = dataP[i].right_int;
-        y1019MidINT = dataP[i].mid_int;
-      }
-      if (dataP[i].where == "20-plus"){
-        if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
-        if (dataP[i].right_att != 0) { y20plusRight = dataP[i].right_com / dataP[i].right_att; }
-        if (dataP[i].middle_att != 0) { y20plusMid = dataP[i].middle_com / dataP[i].middle_att; }  
-        y20plusLeftY = dataP[i].left_yards;
-        y20plusRightY = dataP[i].right_yards;
-        y20plusMidY = dataP[i].middle_yards;
-        y20plusAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        y20plusCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y20plusLeftAtt = dataP[i].left_att;
-        y20plusRightAtt = dataP[i].right_att
-        y20plusMidAtt = dataP[i].middle_att;
-        y20plusLeftCom = dataP[i].middle_com;
-        y20plusRightCom = dataP[i].right_com;
-        y20plusMidCom = dataP[i].left_com;
-        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
-        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
-        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y20plusLeftTD = dataP[i].left_td;
-        y20plusRightTD = dataP[i].right_td;
-        y20plusMidTD = dataP[i].mid_td;
-        y20plusLeftINT = dataP[i].left_int;
-        y20plusRightINT = dataP[i].right_int;
-        y20plusMidINT = dataP[i].mid_int;
-      }
-
-      qb = dataP[i].who;
-    }
-  }
-} else {
-  for (var i=0; i < dataP.length; i++){
-    // if (week == dataP[i].week){
-
-      totalYards += dataP[i].left_yards + dataP[i].right_yards + dataP[i].middle_yards;
-
-      if (dataP[i].where == "Behind LOS"){
-        if (dataP[i].left_att != 0) { behindLOSLeft = dataP[i].left_com / dataP[i].left_att; }
-        if (dataP[i].right_att != 0) { behindLOSRight = dataP[i].right_com / dataP[i].right_att; }
-        if (dataP[i].middle_att != 0) { behindLOSMid = dataP[i].middle_com / dataP[i].middle_att; }
         behindLOSLeftY += dataP[i].left_yards;
         behindLOSRightY += dataP[i].right_yards;
         behindLOSMidY += dataP[i].middle_yards;
         behindLOSAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
         behindLOSCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
         behindLOSLeftAtt += dataP[i].left_att;
-        behindLOSRightAtt += dataP[i].right_att
+        behindLOSRightAtt += dataP[i].right_att;
         behindLOSMidAtt += dataP[i].middle_att;
         behindLOSLeftCom += dataP[i].left_com;
         behindLOSRightCom += dataP[i].right_com;
@@ -466,17 +352,131 @@ if (week != 0){
         if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
         if (dataP[i].right_att != 0) { y20plusRight = dataP[i].right_com / dataP[i].right_att; }
         if (dataP[i].middle_att != 0) { y20plusMid = dataP[i].middle_com / dataP[i].middle_att; }  
-        y20plusLeftY += dataP[i].left_yards;
-        y20plusRightY += dataP[i].right_yards;
-        y20plusMidY += dataP[i].middle_yards;
-        y20plusAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        y20plusCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y20plusLeftAtt += dataP[i].left_att;
-        y20plusRightAtt += dataP[i].right_att
-        y20plusMidAtt += dataP[i].middle_att;
-        y20plusLeftCom += dataP[i].left_com;
-        y20plusRightCom += dataP[i].right_com;
-        y20plusMidCom += dataP[i].middle_com;
+        y20plusLeftY = dataP[i].left_yards;
+        y20plusRightY = dataP[i].right_yards;
+        y20plusMidY = dataP[i].middle_yards;
+        y20plusAtt = dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y20plusCom = dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftAtt = dataP[i].left_att;
+        y20plusRightAtt = dataP[i].right_att
+        y20plusMidAtt = dataP[i].middle_att;
+        y20plusLeftCom = dataP[i].middle_com;
+        y20plusRightCom = dataP[i].right_com;
+        y20plusMidCom = dataP[i].left_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftTD = dataP[i].left_td;
+        y20plusRightTD = dataP[i].right_td;
+        y20plusMidTD = dataP[i].mid_td;
+        y20plusLeftINT = dataP[i].left_int;
+        y20plusRightINT = dataP[i].right_int;
+        y20plusMidINT = dataP[i].mid_int;
+      }
+
+      qb = dataP[i].who;
+    }
+  }
+} else {
+  for (var i=0; i < dataP.length; i++){
+    // if (week == dataP[i].week){
+
+      totalYards += dataP[i].left_yards + dataP[i].right_yards + dataP[i].middle_yards;
+
+      if (dataP[i].where == "Behind LOS"){
+        if (dataP[i].left_att != 0) { behindLOSLeft = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { behindLOSRight = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { behindLOSMid = dataP[i].middle_com / dataP[i].middle_att; }
+        behindLOSLeftY += dataP[i].left_yards;
+        behindLOSRightY += dataP[i].right_yards;
+        behindLOSMidY += dataP[i].middle_yards;
+        behindLOSAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        behindLOSCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        behindLOSLeftAtt += dataP[i].left_att;
+        behindLOSRightAtt += dataP[i].right_att;
+        behindLOSMidAtt += dataP[i].middle_att;
+        behindLOSLeftCom += dataP[i].left_com;
+        behindLOSRightCom += dataP[i].right_com;
+        behindLOSMidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        behindLOSLeftTD = dataP[i].left_td;
+        behindLOSRightTD = dataP[i].right_td;
+        behindLOSMidTD = dataP[i].mid_td;
+        behindLOSLeftINT = dataP[i].left_int;
+        behindLOSRightINT = dataP[i].right_int;
+        behindLOSMidINT = dataP[i].mid_int;
+      }
+      if (dataP[i].where == "0-9 yards"){
+        if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y09Right = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y09Mid = dataP[i].middle_com / dataP[i].middle_att;  }
+        y09LeftY += dataP[i].left_yards;
+        y09RightY += dataP[i].right_yards;
+        y09MidY += dataP[i].middle_yards;
+        y09Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y09Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y09LeftAtt += dataP[i].left_att;
+        y09RightAtt += dataP[i].right_att
+        y09MidAtt += dataP[i].middle_att;
+        y09LeftCom += dataP[i].left_com;
+        y09RightCom += dataP[i].right_com;
+        y09MidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y09LeftTD = dataP[i].left_td;
+        y09RightTD = dataP[i].right_td;
+        y09MidTD = dataP[i].mid_td;
+        y09LeftINT = dataP[i].left_int;
+        y09RightINT = dataP[i].right_int;
+        y09MidINT = dataP[i].mid_int;
+      }
+      if (dataP[i].where == "10-19 yards"){
+        if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y1019Right = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y1019Mid = dataP[i].middle_com / dataP[i].middle_att; }
+        y1019LeftY += dataP[i].left_yards;
+        y1019RightY += dataP[i].right_yards;
+        y1019MidY += dataP[i].middle_yards;
+        y1019Att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y1019Com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y1019LeftAtt += dataP[i].left_att;
+        y1019RightAtt += dataP[i].right_att
+        y1019MidAtt += dataP[i].middle_att;
+        y1019LeftCom += dataP[i].left_com;
+        y1019RightCom += dataP[i].right_com;
+        y1019MidCom += dataP[i].middle_com;
+        interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
+        td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
+        att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y1019LeftTD = dataP[i].left_td;
+        y1019RightTD = dataP[i].right_td;
+        y1019MidTD = dataP[i].mid_td;
+        y1019LeftINT = dataP[i].left_int;
+        y1019RightINT = dataP[i].right_int;
+        y1019MidINT = dataP[i].mid_int;
+      }
+      if (dataP[i].where == "20-plus"){
+        if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
+        if (dataP[i].right_att != 0) { y20plusRight = dataP[i].right_com / dataP[i].right_att; }
+        if (dataP[i].middle_att != 0) { y20plusMid = dataP[i].middle_com / dataP[i].middle_att; }  
+        y20plusLeftY = dataP[i].left_yards;
+        y20plusRightY = dataP[i].right_yards;
+        y20plusMidY = dataP[i].middle_yards;
+        y20plusAtt = dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y20plusCom = dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftAtt = dataP[i].left_att;
+        y20plusRightAtt = dataP[i].right_att
+        y20plusMidAtt = dataP[i].middle_att;
+        y20plusLeftCom = dataP[i].middle_com;
+        y20plusRightCom = dataP[i].right_com;
+        y20plusMidCom = dataP[i].left_com;
         interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
         td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
         att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
