@@ -18,14 +18,14 @@
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; /*width:520px;*/ margin-right:auto; margin-left:auto; }
       .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ background-color:#2AED6B; display:inline-block; vertical-align:middle; }
-      .bar { width:100%; height:100px; vertical-align:middle; padding-top:5%; }
+      .bar { width:100%; height:100px; /*vertical-align:middle;*/ padding-top:5%; }
       .avgsection { width:24%; background-color:#fff; display:inline-block; }
-      .hashes { background-color:#2AED6B; height:20px; }
+      .hashes { background-color:#2AED6B; height:20px; display:inline-block; }
       .hashes div { width:11.1%; height:20px; border-left:3px solid #fff; display:inline-block; }
       .los { border-right:10px #C5D86D solid; }
 
       .otherstats { display:none; }
-      .bar:hover { opacity:0.9; cursor:pointer; }
+      .bar:hover { opacity:0.9; }
 
       #rb .fieldsection { border-top:10px #C5D86D solid; }
 
@@ -43,12 +43,12 @@
       #rb .bar { display:inline-block; width:15% !important; height:290px;}
       #rb .avg { display:inline-block; width:15% !important; }
 
-      .p0 { opacity:0; }
-      .p1 { background-color:transparent; opacity:0.8; }
-      .p2 { background-color:#d9d9d9; opacity:0.8; }
-      .p3 { background-color:#bdbdbd; opacity:0.8; }
-      .p4 { background-color:#969696; color:#fff; opacity:0.8; }
-      .p5 { background-color:#737373; color:#fff; opacity:0.8; }
+      .p0 { background-color:#dddddd; }
+      .p1 { background-color:transparent; /*opacity:0.8; */ }
+      .p2 { background-color:#d9d9d9; /*opacity:0.8;*/ }
+      .p3 { background-color:#bdbdbd; /*opacity:0.8; */ }
+      .p4 { background-color:#969696; color:#fff; /*opacity:0.8;*/ }
+      .p5 { background-color:#737373; color:#fff; /*opacity:0.8;*/ }
 
       #smallLegend div { height:12px; width:30px; display:inline-block; opacity:1 !important; }
       #smallLegend { font-size:0.8em; color:#bbb; margin-right:17px; }
@@ -86,7 +86,7 @@
 <p></p>
 
 <div class="playerstats" id="qb">  
-<h4><span id="qbDude">QB</span> completion percentage by section of field</h4>
+<h4><span id="qbDude">QB</span> completion percentage by area of field</h4>
 
 <h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards | <span id="td"></span> TD <span id="int"></span> INT</h4>
 
@@ -102,7 +102,6 @@
 <div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
-<!-- <div id="fieldQB"> -->
 <div class="fieldsection los" id="behindlos">
 <div class="bar left"></div>
 <div class="bar middle"></div>
@@ -123,7 +122,6 @@
 <div class="bar middle"></div>
 <div class="bar right"></div>
 </div>
-<!-- </div> -->
 
 <div class="avgsection hashes los"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -143,8 +141,8 @@
 
 <div class="breaker"></div>
 
+<div id="smallLegend"><span>Less</span><div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
 <h5>Completion percentage</h5>
-<div id="smallLegend"><span>Less</span><div class="p1"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
 
 </div>
 
