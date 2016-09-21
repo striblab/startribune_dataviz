@@ -1,0 +1,133 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-4b89zj');
+	src:url('fonts/icomoon.eot?#iefix-4b89zj') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-4b89zj') format('woff'),
+		url('fonts/icomoon.ttf?-4b89zj') format('truetype'),
+		url('fonts/icomoon.svg?-4b89zj#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-download2:before {
+	content: "\e602";
+}
+.icon-coin:before {
+	content: "\e616";
+}
+.icon-download:before {
+	content: "\e617";
+}
+.icon-info:before {
+	content: "\e619";
+}
+.icon-backward:before {
+	content: "\e61a";
+}
+.icon-forward:before {
+	content: "\e61b";
+}
+.icon-backward2:before {
+	content: "\e61c";
+}
+.icon-forward2:before {
+	content: "\e61d";
+}
+.icon-shuffle:before {
+	content: "\e61f";
+}
+.icon-soundcloud:before {
+	content: "\e620";
+}
+.icon-soundcloud2:before {
+	content: "\e699";
+}
+.icon-expand:before {
+	content: "\e613";
+}
+.icon-contract:before {
+	content: "\e614";
+}
+.icon-happy:before {
+	content: "\e615";
+}
+.icon-question:before {
+	content: "\e600";
+}
+.icon-triangles:before {
+	content: "\e601";
+}
+.icon-loop-off:before {
+	content: "\e603";
+}
+.icon-loop-on:before {
+	content: "\e604";
+}
+.icon-knobs:before {
+	content: "\e605";
+}
+.icon-keyboard:before {
+	content: "\e802";
+}
+.icon-volume-medium:before {
+	content: "\e606";
+}
+.icon-volume-mute2:before {
+	content: "\e607";
+}
+.icon-pause:before {
+	content: "\e608";
+}
+.icon-play:before {
+	content: "\e609";
+}
+.icon-menu:before {
+	content: "\e618";
+}
+.icon-keyboard2:before {
+	content: "\e60a";
+}
+.icon-github2:before {
+	content: "\e60b";
+}
+.icon-keyboard22:before {
+	content: "\e60c";
+}
+.icon-vinyl:before {
+	content: "\e60d";
+}
+.icon-headphones:before {
+	content: "\e60e";
+}
+.icon-vinyl2:before {
+	content: "\e60f";
+}
+.icon-eye-top:before {
+	content: "\e610";
+}
+.icon-vinyl3:before {
+	content: "\e611";
+}
+.icon-eye-wide:before {
+	content: "\e612";
+}
+.icon-microphone:before {
+	content: "\e61e";
+}
+.icon-soundcloud3:before {
+	content: "\e621";
+}
