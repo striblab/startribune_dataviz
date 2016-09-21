@@ -518,7 +518,7 @@ if (week != 0){
   else if (behindLOSRight >= 0) { $("#behindlos .right").addClass('p1'); }
   else { $("#behindlos .right").addClass('p0'); }
 
-  if (behindLOSRightAtt != 0) {$("#beindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRight) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + " | " + behindLOSRightY + " yards</div class='otherstats'><div>&nbsp" + behindLOSRightTD + " TD " + behindLOSRightINT + " INT</div>"); }
+  if (behindLOSRightAtt != 0) { $("#beindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRight) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + " | " + behindLOSRightY + " yards</div><div class='otherstats'>" + behindLOSRightTD + " TD " + behindLOSRightINT + " INT</div>"); }
 
   $("#avgbehindlos").html(d3.format("%")(behindLOSCom / behindLOSAtt));
 
