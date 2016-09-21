@@ -16,7 +16,7 @@
   
   <style>
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
-      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:520px; margin-right:auto; margin-left:auto; }
+      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; /*width:520px;*/ margin-right:auto; margin-left:auto; }
       .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ background-color:#2AED6B; display:inline-block; vertical-align:middle; }
       .bar { width:100%; height:100px; vertical-align:middle; padding-top:5%; }
       .avgsection { width:24%; background-color:#fff; display:inline-block; }
@@ -83,7 +83,7 @@
 </div>
 </div>
 
-<div class="breaker"></div>
+<p></p>
 
 <div class="playerstats" id="qb">  
 <h4><span id="qbDude">QB</span> completion percentage by section of field</h4>
@@ -500,7 +500,7 @@ if (week != 0){
   else if (behindLOSLeft >= 0) { $("#behindlos .left").addClass('p1'); }
   else { $("#behindlos .left").addClass('p0'); }
 
-  $("#behindlos .left").html("<div class='highlight'>" + d3.format("%")(behindLOSLeft) + "</div><div class='otherstats'>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + " | " + behindLOSLeftY + " yards</div><div class='otherstats'>" + behindLOSLeftTD + " TD " + behindLOSLeftINT + " INT</div>");
+  if (behindLOSLeftAtt != 0) { $("#behindlos .left").html("<div class='highlight'>" + d3.format("%")(behindLOSLeft) + "</div><div class='otherstats'>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + " | " + behindLOSLeftY + " yards</div><div class='otherstats'>" + behindLOSLeftTD + " TD " + behindLOSLeftINT + " INT</div>"); }
 
   if (behindLOSMid >= 0.8) { $("#behindlos .middle").addClass('p5'); }
   else if (behindLOSMid >= 0.6) { $("#behindlos .middle").addClass('p4'); }
@@ -509,7 +509,7 @@ if (week != 0){
   else if (behindLOSMid >= 0) { $("#behindlos .middle").addClass('p1'); }
   else  { $("#behindlos .middle").addClass('p0'); }
 
-  $("#behindlos .middle").html("<div class='highlight'>" + d3.format("%")(behindLOSMid) + "</div><div class='otherstats'>" + behindLOSMidCom + "/" + behindLOSMidAtt + " | " + behindLOSMidY + " yards</div><div class='otherstats'>" + behindLOSMidTD + " TD " + behindLOSMidINT +  " INT</div>&nbsp");
+  if (behindLOSMidAtt != 0) {$("#behindlos .middle").html("<div class='highlight'>" + d3.format("%")(behindLOSMid) + "</div><div class='otherstats'>" + behindLOSMidCom + "/" + behindLOSMidAtt + " | " + behindLOSMidY + " yards</div><div class='otherstats'>" + behindLOSMidTD + " TD " + behindLOSMidINT +  " INT</div>&nbsp"); }
 
   if (behindLOSRight >= 0.8) { $("#behindlos .right").addClass('p5'); }
   else if (behindLOSRight >= 0.6) { $("#behindlos .right").addClass('p4'); }
@@ -518,7 +518,8 @@ if (week != 0){
   else if (behindLOSRight >= 0) { $("#behindlos .right").addClass('p1'); }
   else { $("#behindlos .right").addClass('p0'); }
 
-  $("#beindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRight) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + " | " + behindLOSRightY + " yards</div class='otherstats'><div>&nbsp" + behindLOSRightTD + " TD " + behindLOSRightINT + " INT</div>");
+  if (behindLOSRightAtt != 0) {$("#beindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRight) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + " | " + behindLOSRightY + " yards</div class='otherstats'><div>&nbsp" + behindLOSRightTD + " TD " + behindLOSRightINT + " INT</div>"); }
+
   $("#avgbehindlos").html(d3.format("%")(behindLOSCom / behindLOSAtt));
 
   if (y09Left >= 0.8) { $("#y09 .left").addClass('p5'); }
@@ -528,7 +529,7 @@ if (week != 0){
   else if (y09Left >= 0) { $("#y09 .left").addClass('p1'); }
   else  { $("#y09 .left").addClass('p0'); }
 
-  $("#y09 .left").html("<div class='highlight'>" + d3.format("%")(y09Left) + "</div><div class='otherstats'>" + y09LeftCom + "/" + y09LeftAtt + " | " + y09LeftY + " yards</div><div class='otherstats'>" + y09LeftTD + " TD " + y09LeftINT + " INT</div>&nbsp");
+  if (y09LeftAtt != 0) {$("#y09 .left").html("<div class='highlight'>" + d3.format("%")(y09Left) + "</div><div class='otherstats'>" + y09LeftCom + "/" + y09LeftAtt + " | " + y09LeftY + " yards</div><div class='otherstats'>" + y09LeftTD + " TD " + y09LeftINT + " INT</div>&nbsp"); }
 
   if (y09Mid >= 0.8) { $("#y09 .middle").addClass('p5'); }
   else if (y09Mid >= 0.6) { $("#y09 .middle").addClass('p4'); }
@@ -537,7 +538,7 @@ if (week != 0){
   else if (y09Mid >= 0) { $("#y09 .middle").addClass('p1'); }
   else  { $("#y09 .middle").addClass('p0'); }
 
-  $("#y09 .middle").html("<div class='highlight'>" + d3.format("%")(y09Mid) + "</div><div class='otherstats'>" + y09MidCom + "/" + y09MidAtt + " | " + y09MidY + " yards</div><div class='otherstats'>" + y09MidTD + " TD " + y09MidINT + " INT</div>&nbsp");
+  if (y09MidAtt != 0) {$("#y09 .middle").html("<div class='highlight'>" + d3.format("%")(y09Mid) + "</div><div class='otherstats'>" + y09MidCom + "/" + y09MidAtt + " | " + y09MidY + " yards</div><div class='otherstats'>" + y09MidTD + " TD " + y09MidINT + " INT</div>&nbsp"); }
 
   if (y09Right >= 0.8) { $("#y09 .right").addClass('p5'); }
   else if (y09Right >= 0.6) { $("#y09 .right").addClass('p4'); }
@@ -546,7 +547,8 @@ if (week != 0){
   else if (y09Right >= 0) { $("#y09 .right").addClass('p1'); }
   else  { $("#y09 .right").addClass('p0'); }
 
-  $("#y09 .right").html("<div class='highlight'>" + d3.format("%")(y09Right) + "</div><div class='otherstats'>" + y09RightCom + "/" + y09RightAtt + " | " + y09RightY + " yards</div><div class='otherstats'>" + y09RightTD + " TD " + y09RightINT + " INT</div>&nbsp");
+  if (y09RightAtt != 0) {$("#y09 .right").html("<div class='highlight'>" + d3.format("%")(y09Right) + "</div><div class='otherstats'>" + y09RightCom + "/" + y09RightAtt + " | " + y09RightY + " yards</div><div class='otherstats'>" + y09RightTD + " TD " + y09RightINT + " INT</div>&nbsp"); }
+
   $("#avgy09").html(d3.format("%")(y09Com / y09Att));
 
   if (y1019Left >= 0.8) { $("#y1019 .left").addClass('p5'); }
@@ -556,7 +558,7 @@ if (week != 0){
   else if (y1019Left >= 0) { $("#y1019 .left").addClass('p1'); }
   else  { $("#y1019 .left").addClass('p0'); }
 
-  $("#y1019 .left").html("<div class='highlight'>" + d3.format("%")(y1019Left) + "</div><div class='otherstats'>" + y1019LeftCom + "/" + y1019LeftAtt + " | " + y1019LeftY+ " yards</div><div class='otherstats'>" + y1019LeftTD + " TD " + y1019LeftINT  + " INT</div>&nbsp");
+  if (y1019LeftAtt != 0) {$("#y1019 .left").html("<div class='highlight'>" + d3.format("%")(y1019Left) + "</div><div class='otherstats'>" + y1019LeftCom + "/" + y1019LeftAtt + " | " + y1019LeftY+ " yards</div><div class='otherstats'>" + y1019LeftTD + " TD " + y1019LeftINT  + " INT</div>&nbsp"); }
 
   if (y1019Mid >= 0.8) { $("#y1019 .middle").addClass('p5'); }
   else if (y1019Mid >= 0.6) { $("#y1019 .middle").addClass('p4'); }
@@ -565,7 +567,7 @@ if (week != 0){
   else if (y1019Mid >= 0) { $("#y1019 .middle").addClass('p1'); }
   else  { $("#y1019 .middle").addClass('p0'); }
 
-  $("#y1019 .middle").html("<div class='highlight'>" + d3.format("%")(y1019Mid) + "</div><div class='otherstats'>" + y1019MidCom + "/" + y1019MidAtt + " | " + y1019MidY + " yards</div><div class='otherstats'>" + y1019MidTD + " TD " + y1019MidINT + " INT</div>&nbsp");
+  if (y1019MidAtt != 0) {$("#y1019 .middle").html("<div class='highlight'>" + d3.format("%")(y1019Mid) + "</div><div class='otherstats'>" + y1019MidCom + "/" + y1019MidAtt + " | " + y1019MidY + " yards</div><div class='otherstats'>" + y1019MidTD + " TD " + y1019MidINT + " INT</div>&nbsp"); }
 
   if (y1019Right >= 0.8) { $("#y1019 .right").addClass('p5'); }
   else if (y1019Right >= 0.6) { $("#y1019 .right").addClass('p4'); }
@@ -574,7 +576,8 @@ if (week != 0){
   else if (y1019Right >= 0) { $("#y1019 .right").addClass('p1'); }
   else  { $("#y1019 .right").addClass('p0'); }
 
-  $("#y1019 .right").html("<div class='highlight'>" + d3.format("%")(y1019Right) + "</div><div class='otherstats'>" + y1019RightCom + "/" + y1019RightAtt + " | " + y1019RightY + " yards</div><div class='otherstats'>" + y1019RightTD + " TD " + y1019RightINT + " INT</div>&nbsp");
+  if (y1019RightAtt != 0) {$("#y1019 .right").html("<div class='highlight'>" + d3.format("%")(y1019Right) + "</div><div class='otherstats'>" + y1019RightCom + "/" + y1019RightAtt + " | " + y1019RightY + " yards</div><div class='otherstats'>" + y1019RightTD + " TD " + y1019RightINT + " INT</div>&nbsp"); }
+
   $("#avgy1019").html(d3.format("%")(y1019Com / y1019Att));
 
   if (y20plusLeft >= 0.8) { $("#y20plus .left").addClass('p5'); }
@@ -584,7 +587,7 @@ if (week != 0){
   else if (y20plusLeft >= 0) { $("#y20plus .left").addClass('p1'); }
   else  { $("#y20plus .left").addClass('p0'); }
 
-  $("#y20plus .left").html("<div class='highlight'>" + d3.format("%")(y20plusLeft) + "</div><div class='otherstats'>" + y20plusLeftCom + "/" + y20plusLeftAtt + " | " + y20plusLeftY + " yards</div><div class='otherstats'>" + y20plusLeftTD + " TD " + y20plusLeftINT + " INT</div>&nbsp");
+  if (y20plusLeftAtt != 0) {$("#y20plus .left").html("<div class='highlight'>" + d3.format("%")(y20plusLeft) + "</div><div class='otherstats'>" + y20plusLeftCom + "/" + y20plusLeftAtt + " | " + y20plusLeftY + " yards</div><div class='otherstats'>" + y20plusLeftTD + " TD " + y20plusLeftINT + " INT</div>&nbsp"); }
 
   if (y20plusMid >= 0.8) { $("#y20plus .middle").addClass('p5'); }
   else if (y20plusMid >= 0.6) { $("#y20plus .middle").addClass('p4'); }
@@ -593,7 +596,7 @@ if (week != 0){
   else if (y20plusMid >= 0) { $("#y20plus .middle").addClass('p1'); }
   else { $("#y20plus .middle").addClass('p0'); }
 
-  $("#y20plus .middle").html("<div class='highlight'>" + d3.format("%")(y20plusMid) + "</div><div class='otherstats'>" + y20plusMidCom + "/" + y20plusMidAtt + " | " + y20plusMidY + " yards</div><div class='otherstats'>" + y20plusMidTD + " TD " + y20plusMidINT + " INT</div>&nbsp");
+  if (y20plusMidAtt != 0) {$("#y20plus .middle").html("<div class='highlight'>" + d3.format("%")(y20plusMid) + "</div><div class='otherstats'>" + y20plusMidCom + "/" + y20plusMidAtt + " | " + y20plusMidY + " yards</div><div class='otherstats'>" + y20plusMidTD + " TD " + y20plusMidINT + " INT</div>&nbsp"); }
 
   if (y20plusRight >= 0.8) { $("#y20plus .right").addClass('p5'); }
   else if (y20plusRight >= 0.6) { $("#y20plus .right").addClass('p4'); }
@@ -602,7 +605,8 @@ if (week != 0){
   else if (y20plusRight >= 0) { $("#y20plus .right").addClass('p1'); }
   else { $("#y20plus .right").addClass('p0'); }
 
-  $("#y20plus .right").html("<div class='highlight'>" + d3.format("%")(y20plusRight) + "</div><div class='otherstats'>" + y20plusRightCom + "/" + y20plusRightAtt + " | " + y20plusRightY + " yards</div><div class='otherstats'>" + y20plusRightTD + " TD " + y20plusRightINT + " INT</div>&nbsp");
+  if (y20plusRightAtt != 0) {$("#y20plus .right").html("<div class='highlight'>" + d3.format("%")(y20plusRight) + "</div><div class='otherstats'>" + y20plusRightCom + "/" + y20plusRightAtt + " | " + y20plusRightY + " yards</div><div class='otherstats'>" + y20plusRightTD + " TD " + y20plusRightINT + " INT</div>&nbsp"); }
+
   $("#avgy20plus").html(d3.format("%")(y20plusCom / y20plusAtt));
 
   $("#total").html(totalYards);
