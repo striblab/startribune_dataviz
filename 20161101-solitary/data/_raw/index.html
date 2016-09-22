@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Solitary</title>
+  <meta name="description" content="Solitary">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+<!--   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css"> -->
+  
+  <style>
+
+  </style> 
+</head>
+
+<body>
+  <div id="wrapper">
+<div id="results"></div>
+  </div>
+</body>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script>
+d3.csv("solitary.csv", function(d) {
+  return {
+    id: +d.RandomID,
+    start: d.start,
+    end: d.end,
+    discipline: d.discipline,
+    last: d.Last,
+    first: d.First,
+    middle: d.Middle,
+    sex: d.sex,
+    dob: d.dob,
+    currstat: d.currstat,
+    currlocation: d.currlocation,
+    src: d.src,
+    govoffense: d.govoffense,
+    admitdate: d.admitdate,
+    race: d.race,
+    expdate: d.expdate
+  };
+}, function(error, rows) {
+
+var rangeStart;
+var rangeEnd;
+var start2;
+var end2;
+var currentDude;
+var currentFirst;
+var currentMiddle;
+var currentLast;
+var currentSex;
+var currentDOB;
+var currentStat;
+var currentLocation;
+var currentRace;
+var currentSRC;
+var currentGOV;
+var currentAdmit;
+var currentEXP;
+var printStart;
+var printEnd;
+var print = true;
+var result;
+var conCount = 0;
+var oCount = 0;
+
+function dateRangeOverlaps(a_start, a_end, b_start, b_end) {
+    if (a_start <= b_start && b_end <= a_end) return "absorb";
+    if (b_start <= a_end) return "expand end";
+    // if (b_start <  a_start && a_end <  b_end) return "expand start";
+    return false;
+}
+
+d3.select("#results").selectAll(".card")
+.data(rows).enter().append("div")
+.attr("class","card")
+.html(function (d){ 
+
+  if (currentDude != d.id) {
+    result = "<div>" + currentDude + " | " + d3.time.format("%m/%d/%Y")(new Date(rangeStart)) + " | " + d3.time.format("%m/%d/%Y")(new Date(rangeEnd))+ " | " + conCount  + " | " + oCount  + " | " + currentRace + " | " + currentLast  + " | " + currentFirst  + " | " + currentMiddle  + " | " + currentSex  + " | " + currentDOB  + " | " + currentStat  + " | " + currentLocation  + " | " + currentSRC  + " | " + currentGOV + " | " + currentAdmit  + " | " + currentEXP + "</div>";
+    currentDude = d.id;
+    currentFirst = d.first;
+    currentMiddle = d.middle;
+    currentRace = d.race;
+    currentLast = d.last;
+    currentSex = d.sex;
+    currentDOB = d.dob;
+    currentStat = d.currstat;
+    currentLocation = d.currlocation;
+    currentSRC = d.src;
+    currentGOV = d.govoffense;
+    currentAdmit = d.admitdate;
+    currentEXP = d.expdate;
+    rangeStart = new Date(d.start).getTime();
+    rangeEnd = new Date(d.end).getTime();
+    conCount = 0;
+    oCount = 0;
+    return "<div>" + result + "</div>" + "<div>" + currentDude + " | " + d3.time.format("%m/%d/%Y")(new Date(rangeStart)) + " | " + d3.time.format("%m/%d/%Y")(new Date(rangeEnd))+ " | " + conCount  + " | " + oCount  + " | " + currentRace + " | " + currentLast  + " | " + currentFirst  + " | " + currentMiddle  + " | " + currentSex  + " | " + currentDOB  + " | " + currentStat + " | " + currentLocation  + " | " + currentSRC  + " | " + currentGOV  + " | " + currentAdmit  + " | " + currentEXP + "</div>";
+  }
+
+  start2 = new Date(d.start).getTime();
+  end2 = new Date(d.end).getTime();
+
+  var comparison = dateRangeOverlaps(rangeStart, rangeEnd, start2, end2);
+
+  // if (comparison == "expand start") { rangeStart = start2; }
+  if (comparison == "expand end") { rangeEnd = end2; conCount++; } 
+  if (comparison == "absorb") { print = false; oCount++; }
+  if (comparison == false) { 
+
+    result = "<div>" + currentDude + " | " + d3.time.format("%m/%d/%Y")(new Date(rangeStart)) + " | " + d3.time.format("%m/%d/%Y")(new Date(rangeEnd))+ " | " + conCount  + " | " + oCount  + " | " + d.race + " | " + d.last  + " | " + d.first  + " | " + d.middle  + " | " + d.sex  + " | " + d.dob  + " | " + d.currstat  + " | " + d.currlocation  + " | " + d.src  + " | " + d.govoffense   + " | " + d.admitdate  + " | " + d.expdate + "</div>"; 
+    rangeStart = new Date(d.start).getTime();
+    rangeEnd = new Date(d.end).getTime();
+    conCount = 0;
+    oCount = 0;
+    return result;
+  }
+
+});
+
+});
+</script>
+
+</html>
