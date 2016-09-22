@@ -121,12 +121,12 @@
 <div id='geocoder-container2'></div>
 
 <div id="box" class="controls">
-<h2 id="year"></h2>
+<h2 id="year" style="display:none;"></h2>
 
 <div id="quantize">
 <span class='legend' id="aidQ">
   <nav class='legend clearfix'>
-    <h4>Decibel noise level</h4>
+    <h5>Decibel noise level change since 2012</h5>
     <span style='background:#fff;'>Less</span>
     <span style='background:#2c7bb6;'></span>
     <span style='background:#abd9e9;'></span>
@@ -138,7 +138,7 @@
 </div>
 </div>
 
-<div class='map-overlay-container controls'>
+<div class='map-overlay-container controls' style="display:none;">
 <div class='map-overlay'>
 
 <button class="previous navButtons"><<</button><button class="next navButtons">>></button><button class="play myButton2" id="toggle">&#9658;</button>
@@ -544,14 +544,14 @@ geocoder2.on('result', function(ev) {
                 'fill-opacity': 1,
                 'fill-outline-color': 'rgba(51, 51, 51, 1)',
                 "fill-color": {
-                property: 'A2015',
+                property: 'DIFF',
                 // type: 'categorical',
                 stops: [
-                    [0, '#2c7bb6'],
-                    [50, '#abd9e9'],
-                    [55, '#ffffbf'],
-                    [65, '#fdae61'],
-                    [69, '#d7191c']]
+                    [-2, '#2c7bb6'],
+                    [-1, '#abd9e9'],
+                    [0, '#ffffbf'],
+                    [1, '#fdae61'],
+                    [10, '#d7191c']]
             }
                 }
     });
@@ -565,14 +565,14 @@ geocoder2.on('result', function(ev) {
                 'fill-opacity': 1,
                 'fill-outline-color': 'rgba(51, 51, 51, 1)',
                 "fill-color": {
-                property: 'A2015',
+                property: 'DIFF',
                 // type: 'categorical',
                 stops: [
-                    [0, '#2c7bb6'],
-                    [50, '#abd9e9'],
-                    [55, '#ffffbf'],
-                    [65, '#fdae61'],
-                    [69, '#d7191c']]
+                    [-2, '#2c7bb6'],
+                    [-1, '#abd9e9'],
+                    [0, '#ffffbf'],
+                    [1, '#fdae61'],
+                    [10, '#d7191c']]
             }
                 }
     });
@@ -699,7 +699,7 @@ function playback(index,stream) {
 
 }
 
-playback(0);
+playback(4);
 
 function play(j,timeout){
  timer[j] = window.setTimeout(function() { playback(j); }, timeout); 
