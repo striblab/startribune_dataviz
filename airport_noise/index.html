@@ -126,7 +126,7 @@
 <div id="quantize">
 <span class='legend' id="aidQ">
   <nav class='legend clearfix'>
-    <h5>Decibel noise level change since 2012</h5>
+    <h5>Decibel noise level</h5>
     <span style='background:#fff;'>Less</span>
     <span style='background:#2c7bb6;'></span>
     <span style='background:#abd9e9;'></span>
@@ -138,7 +138,7 @@
 </div>
 </div>
 
-<div class='map-overlay-container controls' style="display:none;">
+<div class='map-overlay-container controls'>
 <div class='map-overlay'>
 
 <button class="previous navButtons"><<</button><button class="next navButtons">>></button><button class="play myButton2" id="toggle">&#9658;</button>
@@ -183,7 +183,11 @@ $("#" + selected).show();
 d3.json('./shapefiles/blocks.json', function(error, blocks) {
 d3.json('./shapefiles/noise.geojson', function(error, spots) {
 d3.json('./shapefiles/blocks_ext.json', function(error, blocks_ext) {
-d3.json('./shapefiles/contour.json', function(error, contours) {
+d3.json('./shapefiles/contour2011.json', function(error, contours2011) {
+d3.json('./shapefiles/contour2012.json', function(error, contours2012) {
+d3.json('./shapefiles/contour2013.json', function(error, contours2013) {
+d3.json('./shapefiles/contour2014.json', function(error, contours2014) {
+d3.json('./shapefiles/contour2015.json', function(error, contours2015) {
 
 //MAPPAGE
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
@@ -314,9 +318,29 @@ geocoder2.on('result', function(ev) {
         data: blocks_ext
     });
 
-    map2.addSource("contours", {
+    map2.addSource("contours2011", {
         type: "geojson",
-        data: contours
+        data: contours2011
+    });
+
+    map2.addSource("contours2012", {
+        type: "geojson",
+        data: contours2012
+    });
+
+    map2.addSource("contours2013", {
+        type: "geojson",
+        data: contours2013
+    });
+
+    map2.addSource("contours2014", {
+        type: "geojson",
+        data: contours2014
+    });
+
+    map2.addSource("contours2015", {
+        type: "geojson",
+        data: contours2015
     });
 
 //2010
@@ -405,6 +429,18 @@ geocoder2.on('result', function(ev) {
                 }
     });
 
+    map2.addLayer({
+                "id": "contour-layer2011",
+                "type": "fill",
+                "source": "contours2011",
+                "paint": {
+                "fill-antialias": true,
+                "fill-color": 'rgba(0, 0, 0, 0)',
+                // "fill-outline-opacity": 1,
+                "fill-outline-color": "#000000"
+                }
+    });
+
 //2012
     map2.addLayer({
                 "id": "blocks-layer2012",
@@ -445,6 +481,18 @@ geocoder2.on('result', function(ev) {
                     [65, '#fdae61'],
                     [69, '#d7191c']]
             }
+                }
+    });
+
+    map2.addLayer({
+                "id": "contour-layer2012",
+                "type": "fill",
+                "source": "contours2012",
+                "paint": {
+                "fill-antialias": true,
+                "fill-color": 'rgba(0, 0, 0, 0)',
+                // "fill-outline-opacity": 1,
+                "fill-outline-color": "#000000"
                 }
     });
 
@@ -491,6 +539,18 @@ geocoder2.on('result', function(ev) {
                 }
     });
 
+    map2.addLayer({
+                "id": "contour-layer2013",
+                "type": "fill",
+                "source": "contours2013",
+                "paint": {
+                "fill-antialias": true,
+                "fill-color": 'rgba(0, 0, 0, 0)',
+                // "fill-outline-opacity": 1,
+                "fill-outline-color": "#000000"
+                }
+    });
+
 //2014
     map2.addLayer({
                 "id": "blocks-layer2014",
@@ -534,6 +594,18 @@ geocoder2.on('result', function(ev) {
                 }
     });
 
+    map2.addLayer({
+                "id": "contour-layer2014",
+                "type": "fill",
+                "source": "contours2014",
+                "paint": {
+                "fill-antialias": true,
+                "fill-color": 'rgba(0, 0, 0, 0)',
+                // "fill-outline-opacity": 1,
+                "fill-outline-color": "#000000"
+                }
+    });
+
 //2015
     map2.addLayer({
                 "id": "blocks-layer2015",
@@ -544,14 +616,14 @@ geocoder2.on('result', function(ev) {
                 'fill-opacity': 1,
                 'fill-outline-color': 'rgba(51, 51, 51, 1)',
                 "fill-color": {
-                property: 'DIFF',
+                property: 'A2015',
                 // type: 'categorical',
                 stops: [
-                    [-2, '#2c7bb6'],
-                    [-1, '#abd9e9'],
-                    [0, '#ffffbf'],
-                    [1, '#fdae61'],
-                    [10, '#d7191c']]
+                    [0, '#2c7bb6'],
+                    [50, '#abd9e9'],
+                    [55, '#ffffbf'],
+                    [65, '#fdae61'],
+                    [69, '#d7191c']]
             }
                 }
     });
@@ -565,14 +637,14 @@ geocoder2.on('result', function(ev) {
                 'fill-opacity': 1,
                 'fill-outline-color': 'rgba(51, 51, 51, 1)',
                 "fill-color": {
-                property: 'DIFF',
+                property: 'A2015',
                 // type: 'categorical',
                 stops: [
-                    [-2, '#2c7bb6'],
-                    [-1, '#abd9e9'],
-                    [0, '#ffffbf'],
-                    [1, '#fdae61'],
-                    [10, '#d7191c']]
+                    [0, '#2c7bb6'],
+                    [50, '#abd9e9'],
+                    [55, '#ffffbf'],
+                    [65, '#fdae61'],
+                    [69, '#d7191c']]
             }
                 }
     });
@@ -580,21 +652,12 @@ geocoder2.on('result', function(ev) {
     map2.addLayer({
                 "id": "contour-layer2015",
                 "type": "fill",
-                "source": "contours",
+                "source": "contours2015",
                 "paint": {
                 "fill-antialias": true,
                 "fill-color": 'rgba(0, 0, 0, 0)',
                 // "fill-outline-opacity": 1,
-                "fill-outline-color": {
-                property: 'NAME',
-                type: 'categorical',
-                stops: [
-                    ['DNL_60', '#000000'],
-                    ['DNL_63', '#000000'],
-                    ['DNL_65', '#000000'],
-                    ['DNL_70', '#000000'],
-                    ['DNL_75', '#000000']]
-            }
+                "fill-outline-color": "#000000"
                 }
     });
 
@@ -634,7 +697,11 @@ function playback(index,stream) {
     map2.setLayoutProperty('blocks-layer-ext2013', 'visibility', 'none');
     map2.setLayoutProperty('blocks-layer-ext2014', 'visibility', 'none');
     map2.setLayoutProperty('blocks-layer-ext2015', 'visibility', 'none');
-    map2.setLayoutProperty('contour-layer2015', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2011', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2012', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2013', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2014', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2015', 'visibility', 'none');
     }
     if (index == 1){
     map2.setLayoutProperty('blocks-layer2010', 'visibility', 'none');
@@ -649,7 +716,11 @@ function playback(index,stream) {
     map2.setLayoutProperty('blocks-layer-ext2013', 'visibility', 'none');
     map2.setLayoutProperty('blocks-layer-ext2014', 'visibility', 'none');
     map2.setLayoutProperty('blocks-layer-ext2015', 'visibility', 'none');
-    map2.setLayoutProperty('contour-layer2015', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2011', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2012', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2013', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2014', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2015', 'visibility', 'none');
     }
     else if (index == 2){
     map2.setLayoutProperty('blocks-layer2010', 'visibility', 'none');
@@ -665,6 +736,11 @@ function playback(index,stream) {
     map2.setLayoutProperty('blocks-layer-ext2014', 'visibility', 'none');
     map2.setLayoutProperty('blocks-layer-ext2015', 'visibility', 'none');
     map2.setLayoutProperty('contour-layer2015', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2011', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2012', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2013', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2014', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2015', 'visibility', 'none');
     }
     else if (index == 3){
     map2.setLayoutProperty('blocks-layer2010', 'visibility', 'none');
@@ -680,6 +756,11 @@ function playback(index,stream) {
     map2.setLayoutProperty('blocks-layer-ext2014', 'visibility', 'visible');
     map2.setLayoutProperty('blocks-layer-ext2015', 'visibility', 'none');
     map2.setLayoutProperty('contour-layer2015', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2011', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2012', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2013', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2014', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2015', 'visibility', 'none');
     }
     else if (index == 4){
     map2.setLayoutProperty('blocks-layer2010', 'visibility', 'none');
@@ -695,11 +776,16 @@ function playback(index,stream) {
     map2.setLayoutProperty('blocks-layer-ext2014', 'visibility', 'none');
     map2.setLayoutProperty('blocks-layer-ext2015', 'visibility', 'visible');
     map2.setLayoutProperty('contour-layer2015', 'visibility', 'visible');
+    map2.setLayoutProperty('contour-layer2011', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2012', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2013', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2014', 'visibility', 'none');
+    map2.setLayoutProperty('contour-layer2015', 'visibility', 'visible');
     }
 
 }
 
-playback(4);
+playback(0);
 
 function play(j,timeout){
  timer[j] = window.setTimeout(function() { playback(j); }, timeout); 
@@ -767,7 +853,10 @@ $(".next").click(function() {
 });
 
 
-
+});
+});
+});
+});
 });
 });
 });
