@@ -1,0 +1,68 @@
+Jeff Hargarten | Coffman Memorial Union, Tuesday October 4, 2016
+
+Wading into data-driven seas
+
+Examples
+-------------------------
+Star Tribune's Data Drop
+http://www.startribune.com/local/datadrop
+
+The battle for the Minnesota House
+http://www.startribune.com/deep-look-at-the-battle-for-minnesota-house/388851762/
+
+Police use-of-force deaths in Minnesota since 2000
+http://striblab.github.io/startribune_dataviz/20151117-police_deaths/index.html?mental=yes
+
+The urban bias of Pokemon GO
+http://www.startribune.com/urban-vs-rural-why-playing-pokmon-go-in-the-suburbs-could-be-hurting-your-game/388985262/
+
+Explore the math and reading scores of Minnesota schools
+http://www.startribune.com/explore-your-school-s-math-and-reading-test-scores/388290262/
+
+A timeline of Philando Castile's vehicle citations
+http://www.startribune.com/a-timeline-of-philando-castile-s-vehicle-citations/387036081/
+
+Where cars got towed from during Minneapolis snow emergencies
+http://www.startribune.com/where-cars-got-towed-from-during-minneapolis-snow-emergencies/375716501/
+
+
+Basic data reporting tools
+-------------------------
+Excel/Google Sheets | https://www.google.com/sheets/about/
+Basic, yet powerful, spreadsheets, the bread and butter of data reporting
+
+CARTO | https://carto.com/
+A free (with limits) and powerful data mapping service
+
+Mapbox | http://mapbox.com
+Another free and powerful, though slightly more complex, data mapping service
+
+Tabula | http://journalismtools.io/tool/tabula/
+Turn PDFs into spreadsheets
+
+QGIS | http://www.qgis.org/en/site/
+A more advanced bit of GIS software for building data maps from
+
+Tons of data tools
+http://journalismtools.io/tools/
+
+A huge list of other resources
+http://striblab.github.io/startribune_dataviz/
+
+
+Major sources of data
+-------------------------
+Data Portals | http://journalismtools.io/tool/dataportals/
+A massive listing of open data portals across the world
+
+Open Minneapolis | http://opendata.minneapolismn.gov/
+A great source of public city data
+
+American FactFinder | https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
+The U.S. Census Bureau's impressive lookup tool
+
+Census Explorer | http://www.census.gov/censusexplorer/
+Another cool tool from the U.S. Census Bureau
+
+Minnesota Secretary of State | http://www.sos.state.mn.us/elections-voting/election-results
+Home of Minnesota election results going back multiple years
