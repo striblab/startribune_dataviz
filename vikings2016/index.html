@@ -37,6 +37,7 @@
 
       .touchdown { border:2px solid #f00; }
       .interception { border:2px solid #00f; }
+      .both { border:2px solid #f0f; }
 
       .bigNum { font-size:2em !important; }
 
@@ -416,12 +417,12 @@ if (week != 0){
         td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
         att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
         com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        behindLOSLeftTD = dataP[i].left_td;
-        behindLOSRightTD = dataP[i].right_td;
-        behindLOSMidTD = dataP[i].mid_td;
-        behindLOSLeftINT = dataP[i].left_int;
-        behindLOSRightINT = dataP[i].right_int;
-        behindLOSMidINT = dataP[i].mid_int;
+        behindLOSLeftTD += dataP[i].left_td;
+        behindLOSRightTD += dataP[i].right_td;
+        behindLOSMidTD += dataP[i].mid_td;
+        behindLOSLeftINT += dataP[i].left_int;
+        behindLOSRightINT += dataP[i].right_int;
+        behindLOSMidINT += dataP[i].mid_int;
       }
       if (dataP[i].where == "0-9 yards"){
         if (dataP[i].left_att != 0) { y09Left = dataP[i].left_com / dataP[i].left_att; }
@@ -442,12 +443,12 @@ if (week != 0){
         td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
         att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
         com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y09LeftTD = dataP[i].left_td;
-        y09RightTD = dataP[i].right_td;
-        y09MidTD = dataP[i].mid_td;
-        y09LeftINT = dataP[i].left_int;
-        y09RightINT = dataP[i].right_int;
-        y09MidINT = dataP[i].mid_int;
+        y09LeftTD += dataP[i].left_td;
+        y09RightTD += dataP[i].right_td;
+        y09MidTD += dataP[i].mid_td;
+        y09LeftINT += dataP[i].left_int;
+        y09RightINT += dataP[i].right_int;
+        y09MidINT += dataP[i].mid_int;
       }
       if (dataP[i].where == "10-19 yards"){
         if (dataP[i].left_att != 0) { y1019Left = dataP[i].left_com / dataP[i].left_att; }
@@ -468,12 +469,12 @@ if (week != 0){
         td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
         att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
         com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y1019LeftTD = dataP[i].left_td;
-        y1019RightTD = dataP[i].right_td;
-        y1019MidTD = dataP[i].mid_td;
-        y1019LeftINT = dataP[i].left_int;
-        y1019RightINT = dataP[i].right_int;
-        y1019MidINT = dataP[i].mid_int;
+        y1019LeftTD += dataP[i].left_td;
+        y1019RightTD += dataP[i].right_td;
+        y1019MidTD += dataP[i].mid_td;
+        y1019LeftINT += dataP[i].left_int;
+        y1019RightINT += dataP[i].right_int;
+        y1019MidINT += dataP[i].mid_int;
       }
       if (dataP[i].where == "20-plus"){
         if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
@@ -494,12 +495,12 @@ if (week != 0){
         td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
         att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
         com += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y20plusLeftTD = dataP[i].left_td;
-        y20plusRightTD = dataP[i].right_td;
-        y20plusMidTD = dataP[i].mid_td;
-        y20plusLeftINT = dataP[i].left_int;
-        y20plusRightINT = dataP[i].right_int;
-        y20plusMidINT = dataP[i].mid_int;
+        y20plusLeftTD += dataP[i].left_td;
+        y20plusRightTD += dataP[i].right_td;
+        y20plusMidTD += dataP[i].mid_td;
+        y20plusLeftINT += dataP[i].left_int;
+        y20plusRightINT += dataP[i].right_int;
+        y20plusMidINT += dataP[i].mid_int;
       }
     }
   // }
@@ -634,7 +635,10 @@ if (week != 0){
     if ($(this).text() > 0) { $(this).parents(".bar").addClass("touchdown"); }
   });
   $('.int').each(function(i, obj) {
-    if ($(this).text() > 0) { $(this).parents(".bar").addClass("interception"); }
+    if ($(this).text() > 0) { 
+     if ($(this).parents(".bar").hasClass("touchdown")) { $(this).parents(".bar").removeClass("touchdown"); $(this).parents(".bar").addClass("both") }
+     else { $(this).parents(".bar").addClass("interception"); }
+    }
   });
 }
 
