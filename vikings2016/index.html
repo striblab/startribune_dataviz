@@ -17,11 +17,11 @@
   <style>
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; /*width:520px;*/ margin-right:auto; margin-left:auto; }
-      #headlineBox { /*margin: 0 5% 0 17%;*/ }
-      #headlineBox img {float:left;padding-right:20px;width:200px;}
-      #headlineBox .textBox {width:auto; display:block;}
-      #headlineBox .textBox h3 {text-align:left;font-size:1.5em;}
-      #headlineBox .textBox h4 {margin-top:10px;}
+      #headlineBox {width: 50%; text-align: center; display: inline-block;background-color:#dfdfdf; padding:15px;}
+      #headlineBox img {float:left;width:50%; padding-right:20px;}
+      #headlineBox .textBox {width:auto; padding-left:20px;display:block;}
+      #headlineBox .textBox h3 {text-align:left;font-size:3em;}
+      #headlineBox .textBox h4 {margin-top:1em;}
       .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ /*background-color:#2AED6B;*/ display:inline-block; vertical-align:middle;
       background-image: url("img/fieldDB2.png"); 
       background-size:100% 100%;
@@ -55,17 +55,26 @@
       #rb .bar { display:inline-block; width:15% !important; height:290px;}
       #rb .avg { display:inline-block; width:15% !important; }
 
-      .p0 { background-color:transparent; }
-      .p1 { background-color:#dddddd; opacity:0.8;  }
-      .p2 { background-color:#d9d9d9; opacity:0.8; }
-      .p3 { background-color:#bdbdbd; opacity:0.8;  }
-      .p4 { background-color:#969696; color:#fff; opacity:0.8; }
-      .p5 { background-color:#737373; color:#fff; opacity:0.8; }
+      #smallLegend .key { margin:0 5px 10px 5px;height:12px;display:inline-block; background-image: url("img/fieldDBkey.png")}
+      #smallLegend .key div { height:12px; width:30px; display:inline-block;  }
+      #smallLegend { font-size:0.8em; color:#bbb; margin-top:15px; }
+
+      /*.p0 { background-color:transparent; }*/
+      .p0 { background-color:rgba(255,255,255,.5); opacity:0.8;}
+      /*      .p1 { background-color:#dddddd; opacity:0.8;  }*/
+      .p1 { background-color:rgba(221,221,221,.5); opacity:0.8;}
+      /*.p2 { background-color:#d9d9d9; opacity:0.8; }*/
+      .p2 { background-color:rgba(217,217,217,.5); opacity:0.8;}
+      /*.p3 { background-color:#bdbdbd; opacity:0.8;  }*/
+      .p3 { background-color:rgba(189,189,189,.5); opacity:0.8;}
+      /*.p4 { background-color:#969696; color:#fff; opacity:0.8; }*/
+      .p4 { background-color:rgba(150,150,150,.5); color:#fff; opacity:0.8;}
+      /*.p5 { background-color:#737373; color:#fff; opacity:0.8; }*/
+      .p5 { background-color:rgba(115,115,115,.5); color:#fff; opacity:0.8;}
 
       .tinybreak { padding:3px; }
 
-      #smallLegend div { height:12px; width:30px; display:inline-block; opacity:1 !important; }
-      #smallLegend { font-size:0.8em; color:#bbb; margin-right:17px; }
+
       h4 { text-align:left !important; }
 
       @media (max-width:530px) {
@@ -101,9 +110,9 @@
 
 <div class="playerstats" id="qb"> 
 <div id ="headlineBox">
-<!-- <img src="img/samBradford.png" > -->
+<div id="qbPic"><!-- <img src="img/samBradford.png" > --></div>
 <div class="textBox">
-<h3><span id="qbDude">QB</span> passing attempts by area of field</h3>
+<h3><span id="qbDude">QB</span> <br>passing attempts by area of field</h3>
 <div class="tinybreak"></div>
 <h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards&nbsp;&nbsp;|&nbsp;&nbsp;<span id="td"></span> <span class="touchdown" style="padding:10px">TD</span> <span id="int"></span> <span class="interception" style="padding:10px">INT</span></h4>
 </div>
@@ -162,7 +171,7 @@
 
 <div class="breaker"></div>
 
-<div id="smallLegend"><span>Less</span>&nbsp;<div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div>&nbsp;<span>More</span></div>
+<div id="smallLegend"><span>Less</span>&nbsp;<div class="key"><div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div></div>&nbsp;<span>More</span></div>
 <h5>Passing attempts</h5>
 </div>
 
@@ -638,7 +647,13 @@ if (week != 0){
 
 
   $("#total").html(totalYards);
+  if (qb == "Sam Bradford"){$("#qbPic").html("<img src='img/samBradford.png'>");}
+  else if (qb == "Shaun Hill"){$("#qbPic").html("<img src='img/shaunHill.png'>");}
+  else 
+    {$("#qbPic").html("<img src='img/vikingsLogo.png'>");}
+  
   $("#qbDude").html(qb);
+
   $("#td").html(td);
   $("#int").html(interceptions);
   $("#att").html(att);
