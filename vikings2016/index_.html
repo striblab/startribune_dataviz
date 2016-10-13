@@ -17,21 +17,12 @@
   <style>
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; /*width:520px;*/ margin-right:auto; margin-left:auto; }
-      #headlineBox {
-        margin: 0 5% 0 17%;}
-      #headlineBox img {float:left;padding-right:20px;width:200px;}
-      #headlineBox .textBox {width:auto; display:block;}
-      #headlineBox .textBox h3 {text-align:left;font-size:2em;}
-            #headlineBox .textBox h4 {margin-top:10px;}
-      .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ /*background-color:#2AED6B;*/ display:inline-block; vertical-align:middle;
-      background-image: url("img/fieldDB2.png"); 
-      background-size:100% 100%;
-      margin-bottom: 5px; }
+      .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ background-color:#2AED6B; display:inline-block; vertical-align:middle; }
       .bar { width:100%; height:100px; /*vertical-align:middle;*/ padding-top:5%; }
       .avgsection { width:24%; background-color:#fff; display:inline-block; }
-      .hashes { background-color:transparent; height:20px; display:inline-block; }
+      .hashes { background-color:#2AED6B; height:20px; display:inline-block; }
       .hashes div { width:11.1%; height:20px; border-left:3px solid #fff; display:inline-block; }
-      .los { border-right:5px red solid; }
+      .los { border-right:10px #C5D86D solid; }
 
       .otherstats { display:none; }
       .bar:hover { opacity:0.9; }
@@ -57,11 +48,11 @@
       #rb .avg { display:inline-block; width:15% !important; }
 
       .p0 { background-color:transparent; }
-      .p1 { background-color:#dddddd; opacity:0.3;  }
-      .p2 { background-color:#d9d9d9; opacity:0.3; }
-      .p3 { background-color:#bdbdbd; opacity:0.3;  }
-      .p4 { background-color:#969696; color:#fff; opacity:0.3; }
-      .p5 { background-color:#737373; color:#fff; opacity:0.3; }
+      .p1 { background-color:#dddddd; /*opacity:0.8; */ }
+      .p2 { background-color:#d9d9d9; /*opacity:0.8;*/ }
+      .p3 { background-color:#bdbdbd; /*opacity:0.8; */ }
+      .p4 { background-color:#969696; color:#fff; /*opacity:0.8;*/ }
+      .p5 { background-color:#737373; color:#fff; /*opacity:0.8;*/ }
 
       #smallLegend div { height:12px; width:30px; display:inline-block; opacity:1 !important; }
       #smallLegend { font-size:0.8em; color:#bbb; margin-right:17px; }
@@ -98,32 +89,17 @@
 
 <p></p>
 
-<div class="playerstats" id="qb"> 
-<div id ="headlineBox">
-<img src="img/samBradford.png" >
-<div class="textBox">
-<h3><span id="qbDude">QB</span> passing attempts <br>by area of field</h3>
+<div class="playerstats" id="qb">  
+<h4><span id="qbDude">QB</span> passing attempts by area of field</h4>
 
-<h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards&nbsp;&nbsp;|&nbsp;&nbsp;<span id="td"></span> TD <span id="int"></span> INT</h4>
-</div>
-</div>
+<h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards | <span id="td"></span> TD <span id="int"></span> INT</h4>
+
 <div class="breaker"></div>
 
-<div class="avgsection bigNum" id="avgbehindlos">0%</div>
-<div class="avgsection bigNum" id="avgy09">0%</div>
-<div class="avgsection bigNum" id="avgy1019">0%</div>
-<div class="avgsection bigNum" id="avgy20plus">0%</div>
-
-<div class="avgsection">of passing attempts</div>
-<div class="avgsection">of passing attempts</div>
-<div class="avgsection">of passing attempts</div>
-<div class="avgsection">of passing attempts</div>
-
-
-<div class="avgsection">behind line-of-scrimmage</div>
-<div class="avgsection">0-9 yards</div>
-<div class="avgsection">10-19 yards</div>
-<div class="avgsection">20+ yards</div>
+<div class="avgsection">Behind LOS</div>
+<div class="avgsection">0-9 Yards</div>
+<div class="avgsection">10-19 Yards</div>
+<div class="avgsection">20+ Yards</div>
 
 <div class="avgsection hashes los"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -156,16 +132,24 @@
 <div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <div class="avgsection hashes"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
+<div class="avgsection bigNum" id="avgbehindlos">0%</div>
+<div class="avgsection bigNum" id="avgy09">0%</div>
+<div class="avgsection bigNum" id="avgy1019">0%</div>
+<div class="avgsection bigNum" id="avgy20plus">0%</div>
 
+<div class="avgsection">attempts</div>
+<div class="avgsection">attempts</div>
+<div class="avgsection">attempts</div>
+<div class="avgsection">attempts</div>
 </div>
 
 <div class="breaker"></div>
 
-<span class="touchdown" style="padding:10px">TD</span>&nbsp;&nbsp;<span class="interception" style="padding:10px">INT</span>
+<span class="touchdown" style="padding:10px">TD</span> <span class="interception" style="padding:10px">INT</span>
 
 <div class="breaker"></div>
 
-<div id="smallLegend"><span>Less</span>&nbsp;<div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div>&nbsp;<span>More</span></div>
+<div id="smallLegend"><span>Less</span><div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div><span>More</span></div>
 <h5>Passing attempts</h5>
 </div>
 
@@ -530,7 +514,7 @@ if (week != 0){
   else if ((behindLOSLeftAtt / att) > 0) { $("#behindlos .left").addClass('p1'); }
   else { $("#behindlos .left").addClass('p0'); }
 
-  if (behindLOSLeftAtt != 0) { $("#behindlos .left").html("<div class='highlight'>" + d3.format("%")(behindLOSLeftAtt / att) + "</div><div class='otherstats'>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + "&nbsp;for&nbsp;" + behindLOSLeftY + " yards</div><div class='otherstats'><span class='td'>" + behindLOSLeftTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + behindLOSLeftINT + "</span> INT</div>"); }
+  if (behindLOSLeftAtt != 0) { $("#behindlos .left").html("<div class='highlight'>" + d3.format("%")(behindLOSLeftAtt / att) + "</div><div class='otherstats'>" + behindLOSLeftCom + "/" + behindLOSLeftAtt + " | " + behindLOSLeftY + " yards</div><div class='otherstats'><span class='td'>" + behindLOSLeftTD + "</span> TD <span class='int'>" + behindLOSLeftINT + "</span> INT</div>"); }
 
   if ((behindLOSMidAtt / att) >= 0.20) { $("#behindlos .middle").addClass('p5'); }
   else if ((behindLOSMidAtt / att) >= 0.15) { $("#behindlos .middle").addClass('p4'); }
@@ -539,7 +523,7 @@ if (week != 0){
   else if ((behindLOSMidAtt / att) > 0) { $("#behindlos .middle").addClass('p1'); }
   else  { $("#behindlos .middle").addClass('p0'); }
 
-  if (behindLOSMidAtt != 0) {$("#behindlos .middle").html("<div class='highlight'>" + d3.format("%")(behindLOSMidAtt / att) + "</div><div class='otherstats'>" + behindLOSMidCom + "/" + behindLOSMidAtt + "&nbsp;for&nbsp;" + behindLOSMidY + " yards</div><div class='otherstats'><span class='td'>" + behindLOSMidTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + behindLOSMidINT +  "</span> INT</div>&nbsp"); }
+  if (behindLOSMidAtt != 0) {$("#behindlos .middle").html("<div class='highlight'>" + d3.format("%")(behindLOSMidAtt / att) + "</div><div class='otherstats'>" + behindLOSMidCom + "/" + behindLOSMidAtt + " | " + behindLOSMidY + " yards</div><div class='otherstats'><span class='td'>" + behindLOSMidTD + "</span> TD <span class='int'>" + behindLOSMidINT +  "</span> INT</div>&nbsp"); }
 
   if ((behindLOSRightAtt / att) >= 0.20) { $("#behindlos .right").addClass('p5'); }
   else if ((behindLOSRightAtt / att) >= 0.15) { $("#behindlos .right").addClass('p4'); }
@@ -548,7 +532,7 @@ if (week != 0){
   else if ((behindLOSRightAtt / att) > 0) { $("#behindlos .right").addClass('p1'); }
   else { $("#behindlos .right").addClass('p0'); }
 
-  if (behindLOSRightAtt != 0) { $("#behindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRightAtt / att) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + "&nbsp;for&nbsp;" + behindLOSRightY + " yards</div><div class='otherstats'><span class='td'>" + behindLOSRightTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + behindLOSRightINT + "</span> INT</div>"); }
+  if (behindLOSRightAtt != 0) { $("#behindlos .right").html("<div class='highlight'>" + d3.format("%")(behindLOSRightAtt / att) + "</div><di class='otherstats'>" + behindLOSRightCom + "/" + behindLOSRightAtt + " | " + behindLOSRightY + " yards</div><div class='otherstats'><span class='td'>" + behindLOSRightTD + "</span> TD <span class='int'>" + behindLOSRightINT + "</span> INT</div>"); }
 
   $("#avgbehindlos").html(d3.format("%")(behindLOSAtt / att));
 
@@ -559,7 +543,7 @@ if (week != 0){
   else if ((y09LeftAtt / att) > 0) { $("#y09 .left").addClass('p1'); }
   else  { $("#y09 .left").addClass('p0'); }
 
-  if (y09LeftAtt != 0) {$("#y09 .left").html("<div class='highlight'>" + d3.format("%")(y09LeftAtt / att) + "</div><div class='otherstats'>" + y09LeftCom + "/" + y09LeftAtt + "&nbsp;for&nbsp;" + y09LeftY + " yards</div><div class='otherstats'><span class='td'>" + y09LeftTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y09LeftINT + "</span> INT</div>&nbsp"); }
+  if (y09LeftAtt != 0) {$("#y09 .left").html("<div class='highlight'>" + d3.format("%")(y09LeftAtt / att) + "</div><div class='otherstats'>" + y09LeftCom + "/" + y09LeftAtt + " | " + y09LeftY + " yards</div><div class='otherstats'><span class='td'>" + y09LeftTD + "</span> TD <span class='int'>" + y09LeftINT + "</span> INT</div>&nbsp"); }
 
   if ((y09MidAtt / att) >= 0.20) { $("#y09 .middle").addClass('p5'); }
   else if ((y09MidAtt / att) >= 0.15) { $("#y09 .middle").addClass('p4'); }
@@ -568,7 +552,7 @@ if (week != 0){
   else if ((y09MidAtt / att) > 0) { $("#y09 .middle").addClass('p1'); }
   else  { $("#y09 .middle").addClass('p0'); }
 
-  if (y09MidAtt != 0) {$("#y09 .middle").html("<div class='highlight'>" + d3.format("%")(y09MidAtt / att) + "</div><div class='otherstats'>" + y09MidCom + "/" + y09MidAtt + "&nbsp;for&nbsp;" + y09MidY + " yards</div><div class='otherstats'><span class='td'>" + y09MidTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y09MidINT + "</span> INT</div>&nbsp"); }
+  if (y09MidAtt != 0) {$("#y09 .middle").html("<div class='highlight'>" + d3.format("%")(y09MidAtt / att) + "</div><div class='otherstats'>" + y09MidCom + "/" + y09MidAtt + " | " + y09MidY + " yards</div><div class='otherstats'><span class='td'>" + y09MidTD + "</span> TD <span class='int'>" + y09MidINT + "</span> INT</div>&nbsp"); }
 
   if ((y09RightAtt / att) >= 0.20) { $("#y09 .right").addClass('p5'); }
   else if ((y09RightAtt / att) >= 0.15) { $("#y09 .right").addClass('p4'); }
@@ -577,7 +561,7 @@ if (week != 0){
   else if ((y09RightAtt / att) > 0) { $("#y09 .right").addClass('p1'); }
   else  { $("#y09 .right").addClass('p0'); }
 
-  if (y09RightAtt != 0) {$("#y09 .right").html("<div class='highlight'>" + d3.format("%")(y09RightAtt / att) + "</div><div class='otherstats'>" + y09RightCom + "/" + y09RightAtt + "&nbsp;for&nbsp;" + y09RightY + " yards</div><div class='otherstats'><span class='td'>" + y09RightTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y09RightINT + "</span> INT</div>&nbsp"); }
+  if (y09RightAtt != 0) {$("#y09 .right").html("<div class='highlight'>" + d3.format("%")(y09RightAtt / att) + "</div><div class='otherstats'>" + y09RightCom + "/" + y09RightAtt + " | " + y09RightY + " yards</div><div class='otherstats'><span class='td'>" + y09RightTD + "</span> TD <span class='int'>" + y09RightINT + "</span> INT</div>&nbsp"); }
 
   $("#avgy09").html(d3.format("%")(y09Att / att));
 
@@ -588,7 +572,7 @@ if (week != 0){
   else if ((y1019LeftAtt / att) > 0) { $("#y1019 .left").addClass('p1'); }
   else  { $("#y1019 .left").addClass('p0'); }
 
-  if (y1019LeftAtt != 0) {$("#y1019 .left").html("<div class='highlight'>" + d3.format("%")(y1019LeftAtt / att) + "</div><div class='otherstats'>" + y1019LeftCom + "/" + y1019LeftAtt + "&nbsp;for&nbsp;" + y1019LeftY+ " yards</div><div class='otherstats'><span class='td'>" + y1019LeftTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y1019LeftINT  + "</span> INT</div>&nbsp"); }
+  if (y1019LeftAtt != 0) {$("#y1019 .left").html("<div class='highlight'>" + d3.format("%")(y1019LeftAtt / att) + "</div><div class='otherstats'>" + y1019LeftCom + "/" + y1019LeftAtt + " | " + y1019LeftY+ " yards</div><div class='otherstats'><span class='td'>" + y1019LeftTD + "</span> TD <span class='int'>" + y1019LeftINT  + "</span> INT</div>&nbsp"); }
 
   if ((y1019MidAtt / att) >= 0.20) { $("#y1019 .middle").addClass('p5'); }
   else if ((y1019MidAtt / att) >= 0.15) { $("#y1019 .middle").addClass('p4'); }
@@ -597,7 +581,7 @@ if (week != 0){
   else if ((y1019MidAtt / att) > 0) { $("#y1019 .middle").addClass('p1'); }
   else  { $("#y1019 .middle").addClass('p0'); }
 
-  if (y1019MidAtt != 0) {$("#y1019 .middle").html("<div class='highlight'>" + d3.format("%")(y1019MidAtt / att) + "</div><div class='otherstats'>" + y1019MidCom + "/" + y1019MidAtt + "&nbsp;for&nbsp;" + y1019MidY + " yards</div><div class='otherstats'><span class='td'>" + y1019MidTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y1019MidINT + "</span> INT</div>&nbsp"); }
+  if (y1019MidAtt != 0) {$("#y1019 .middle").html("<div class='highlight'>" + d3.format("%")(y1019MidAtt / att) + "</div><div class='otherstats'>" + y1019MidCom + "/" + y1019MidAtt + " | " + y1019MidY + " yards</div><div class='otherstats'><span class='td'>" + y1019MidTD + "</span> TD <span class='int'>" + y1019MidINT + "</span> INT</div>&nbsp"); }
 
   if ((y1019RightAtt / att) >= 0.20) { $("#y1019 .right").addClass('p5'); }
   else if ((y1019RightAtt / att) >= 0.15) { $("#y1019 .right").addClass('p4'); }
@@ -606,7 +590,7 @@ if (week != 0){
   else if ((y1019RightAtt / att) > 0) { $("#y1019 .right").addClass('p1'); }
   else  { $("#y1019 .right").addClass('p0'); }
 
-  if (y1019RightAtt != 0) {$("#y1019 .right").html("<div class='highlight'>" + d3.format("%")(y1019RightAtt / att) + "</div><div class='otherstats'>" + y1019RightCom + "/" + y1019RightAtt + "&nbsp;for&nbsp;" + y1019RightY + " yards</div><div class='otherstats'><span class='td'>" + y1019RightTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y1019RightINT + "</span> INT</div>&nbsp"); }
+  if (y1019RightAtt != 0) {$("#y1019 .right").html("<div class='highlight'>" + d3.format("%")(y1019RightAtt / att) + "</div><div class='otherstats'>" + y1019RightCom + "/" + y1019RightAtt + " | " + y1019RightY + " yards</div><div class='otherstats'><span class='td'>" + y1019RightTD + "</span> TD <span class='int'>" + y1019RightINT + "</span> INT</div>&nbsp"); }
 
   $("#avgy1019").html(d3.format("%")(y1019Att / att));
 
@@ -617,7 +601,7 @@ if (week != 0){
   else if ((y20plusLeftAtt / att) > 0) { $("#y20plus .left").addClass('p1'); }
   else  { $("#y20plus .left").addClass('p0'); }
 
-  if (y20plusLeftAtt != 0) {$("#y20plus .left").html("<div class='highlight'>" + d3.format("%")(y20plusLeftAtt / att) + "</div><div class='otherstats'>" + y20plusLeftCom + "/" + y20plusLeftAtt + "&nbsp;for&nbsp;" + y20plusLeftY + " yards</div><div class='otherstats'><span class='td'>" + y20plusLeftTD + "</span> <span class='int'>TD " + y20plusLeftINT + "</span> INT</div>&nbsp"); }
+  if (y20plusLeftAtt != 0) {$("#y20plus .left").html("<div class='highlight'>" + d3.format("%")(y20plusLeftAtt / att) + "</div><div class='otherstats'>" + y20plusLeftCom + "/" + y20plusLeftAtt + " | " + y20plusLeftY + " yards</div><div class='otherstats'><span class='td'>" + y20plusLeftTD + "</span> <span class='int'>TD " + y20plusLeftINT + "</span> INT</div>&nbsp"); }
 
   if ((y20plusMidAtt / att) >= 0.20) { $("#y20plus .middle").addClass('p5'); }
   else if ((y20plusMidAtt / att) >= 0.15) { $("#y20plus .middle").addClass('p4'); }
@@ -626,7 +610,7 @@ if (week != 0){
   else if ((y20plusMidAtt / att) > 0) { $("#y20plus .middle").addClass('p1'); }
   else { $("#y20plus .middle").addClass('p0'); }
 
-  if (y20plusMidAtt != 0) {$("#y20plus .middle").html("<div class='highlight'>" + d3.format("%")(y20plusMidAtt / att) + "</div><div class='otherstats'>" + y20plusMidCom + "/" + y20plusMidAtt + "&nbsp;for&nbsp;" + y20plusMidY + " yards</div><div class='otherstats'><span class='td'>" + y20plusMidTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y20plusMidINT + "</span> INT</div>&nbsp"); }
+  if (y20plusMidAtt != 0) {$("#y20plus .middle").html("<div class='highlight'>" + d3.format("%")(y20plusMidAtt / att) + "</div><div class='otherstats'>" + y20plusMidCom + "/" + y20plusMidAtt + " | " + y20plusMidY + " yards</div><div class='otherstats'><span class='td'>" + y20plusMidTD + "</span> TD <span class='int'>" + y20plusMidINT + "</span> INT</div>&nbsp"); }
 
   if ((y20plusRightAtt / att) >= 0.20) { $("#y20plus .right").addClass('p5'); }
   else if ((y20plusRightAtt / att) >= 0.15) { $("#y20plus .right").addClass('p4'); }
@@ -635,7 +619,7 @@ if (week != 0){
   else if ((y20plusRightAtt / att) > 0) { $("#y20plus .right").addClass('p1'); }
   else { $("#y20plus .right").addClass('p0'); }
 
-  if (y20plusRightAtt != 0) {$("#y20plus .right").html("<div class='highlight'>" + d3.format("%")(y20plusRightAtt / att) + "</div><div class='otherstats'>" + y20plusRightCom + "/" + y20plusRightAtt + "&nbsp;for&nbsp;" + y20plusRightY + " yards</div><div class='otherstats'><span class='td'>" + y20plusRightTD + "</span> TD&nbsp;&nbsp;<span class='int'>" + y20plusRightINT + "</span> INT</div>&nbsp"); }
+  if (y20plusRightAtt != 0) {$("#y20plus .right").html("<div class='highlight'>" + d3.format("%")(y20plusRightAtt / att) + "</div><div class='otherstats'>" + y20plusRightCom + "/" + y20plusRightAtt + " | " + y20plusRightY + " yards</div><div class='otherstats'><span class='td'>" + y20plusRightTD + "</span> TD <span class='int'>" + y20plusRightINT + "</span> INT</div>&nbsp"); }
 
   $("#avgy20plus").html(d3.format("%")(y20plusAtt/ att));
 
@@ -662,9 +646,9 @@ function buildWeeks(){
   var thisweek = 0;
   for (var i=0; i < dataP.length; i++){
     if (dataP[i].week != thisweek){
-    $("ul.dropdown").append("<li class='step' index='" + dataP[i].week + "'>Week " + dataP[i].week + " " + dataP[i].homeaway + " " + dataP[i].opponent + "&nbsp;for&nbsp;" + dataP[i].score + " " + dataP[i].winner + "</li>");
+    $("ul.dropdown").append("<li class='step' index='" + dataP[i].week + "'>Week " + dataP[i].week + " " + dataP[i].homeaway + " " + dataP[i].opponent + " | " + dataP[i].score + " " + dataP[i].winner + "</li>");
     thisweek = dataP[i].week;
-    $("#topweek").html("Week " + dataP[i].week + " " + dataP[i].homeaway + " " + dataP[i].opponent + "&nbsp;for&nbsp;" + dataP[i].score + " " + dataP[i].winner);
+    $("#topweek").html("Week " + dataP[i].week + " " + dataP[i].homeaway + " " + dataP[i].opponent + " | " + dataP[i].score + " " + dataP[i].winner);
     }
   }
 
