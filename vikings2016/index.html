@@ -15,12 +15,13 @@
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
   
   <style>
+
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
-      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:100%; /*width:520px;*/ margin-right:auto; margin-left:auto; }
-      #headlineBox {width: 50%; text-align: center; display: inline-block;background-color:#dfdfdf; padding:15px;}
+      #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:540px; /*width:520px;*/ margin-right:auto; margin-left:auto; }
+      #headlineBox { width:100%; text-align: center; display: inline-block;background-color:#dfdfdf; padding:15px; }
       #headlineBox img {float:left;width:50%; padding-right:20px;}
       #headlineBox .textBox {width:auto; padding-left:20px;display:block;}
-      #headlineBox .textBox h3 {text-align:left;font-size:3em;}
+      #headlineBox .textBox h3 { text-align:left; font-size:1.5em;}
       #headlineBox .textBox h4 {margin-top:1em;}
       .fieldsection { width:24%; height:300px; /*background-color:transparent;*/ /*background-color:#2AED6B;*/ display:inline-block; vertical-align:middle;
       background-image: url("img/fieldDB2.png"); 
@@ -40,7 +41,7 @@
       .highlight { font-weight:900; font-size:1.2em; }
 
       .wrapper-demo { text-align:left; }
-      .wrapper-dropdown-1 { width:300px; margin-right:auto; margin-left:auto; }
+      .wrapper-dropdown-1 { width:100%; margin-right:auto; margin-left:auto; }
       .wrapper-dropdown-1.active .dropdown {  opacity: 1; pointer-events: auto;border-radius: 0 !important; }
 
       .touchdown { border:2px solid #f00; }
@@ -55,36 +56,28 @@
       #rb .bar { display:inline-block; width:15% !important; height:290px;}
       #rb .avg { display:inline-block; width:15% !important; }
 
-      #smallLegend .key { margin:0 5px 10px 5px;height:12px;display:inline-block; background-image: url("img/fieldDBkey.png")}
+      #smallLegend .key { margin:0 5px 10px 5px;height:12px;display:inline-block; background-image: url("img/fieldDBkey.png"); }
       #smallLegend .key div { height:12px; width:30px; display:inline-block;  }
       #smallLegend { font-size:0.8em; color:#bbb; margin-top:15px; }
 
-      /*.p0 { background-color:transparent; }*/
-      .p0 { background-color:rgba(255,255,255,.5); opacity:0.8;}
-      /*      .p1 { background-color:#dddddd; opacity:0.8;  }*/
-      .p1 { background-color:rgba(221,221,221,.5); opacity:0.8;}
-      /*.p2 { background-color:#d9d9d9; opacity:0.8; }*/
-      .p2 { background-color:rgba(217,217,217,.5); opacity:0.8;}
-      /*.p3 { background-color:#bdbdbd; opacity:0.8;  }*/
-      .p3 { background-color:rgba(189,189,189,.5); opacity:0.8;}
-      /*.p4 { background-color:#969696; color:#fff; opacity:0.8; }*/
-      .p4 { background-color:rgba(150,150,150,.5); color:#fff; opacity:0.8;}
-      /*.p5 { background-color:#737373; color:#fff; opacity:0.8; }*/
-      .p5 { background-color:rgba(115,115,115,.5); color:#fff; opacity:0.8;}
-
       .tinybreak { padding:3px; }
-
 
       h4 { text-align:left !important; }
 
       @media (max-width:530px) {
         #wrapper { width:100%; }
+        #headlineBox { padding:0; }
+        #headlineBox img { float: none; width: 100%; padding-right:0; }
+        #headlineBox .textBox { width:100%; padding-left:0 !important; }
         .wrapper-dropdown-1 { width:100%; }
         .avgsection, .fieldsection { width:24%; }
         .otherstats { font-size:0.8em; }
         #viewSwitch { margin-left:0px; }
         .bigNum { font-size:2em !important; }
       }
+
+
+      
   </style> 
 </head>
 
@@ -114,7 +107,8 @@
 <div class="textBox">
 <h3><span id="qbDude">QB</span> <br>passing attempts by area of field</h3>
 <div class="tinybreak"></div>
-<h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards&nbsp;&nbsp;|&nbsp;&nbsp;<span id="td"></span> <span class="touchdown" style="padding:10px">TD</span> <span id="int"></span> <span class="interception" style="padding:10px">INT</span></h4>
+<h4><span id="com">0</span>/<span id="att">0</span> for <span id="total"></span> yards</h4> 
+<h4><span id="td"></span> <span class="touchdown" style="padding:10px">TD</span> <span id="int"></span> <span class="interception" style="padding:10px">INT</span></h4>
 </div>
 </div>
 <div class="breaker"></div>
@@ -171,8 +165,8 @@
 
 <div class="breaker"></div>
 
-<div id="smallLegend"><span>Less</span>&nbsp;<div class="key"><div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div></div>&nbsp;<span>More</span></div>
-<h5>Passing attempts</h5>
+<!-- <div id="smallLegend"><span>Less</span>&nbsp;<div class="key"><div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div></div>&nbsp;<span>More</span></div>
+<h5>Passing attempts</h5> -->
 </div>
 
 </body>
@@ -502,17 +496,17 @@ if (week != 0){
         if (dataP[i].left_att != 0) { y20plusLeft = dataP[i].left_com / dataP[i].left_att; }
         if (dataP[i].right_att != 0) { y20plusRight = dataP[i].right_com / dataP[i].right_att; }
         if (dataP[i].middle_att != 0) { y20plusMid = dataP[i].middle_com / dataP[i].middle_att; }  
-        y20plusLeftY = dataP[i].left_yards;
-        y20plusRightY = dataP[i].right_yards;
-        y20plusMidY = dataP[i].middle_yards;
-        y20plusAtt = dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
-        y20plusCom = dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
-        y20plusLeftAtt = dataP[i].left_att;
-        y20plusRightAtt = dataP[i].right_att
-        y20plusMidAtt = dataP[i].middle_att;
-        y20plusLeftCom = dataP[i].left_com;
-        y20plusRightCom = dataP[i].right_com;
-        y20plusMidCom = dataP[i].middle_com;
+        y20plusLeftY += dataP[i].left_yards;
+        y20plusRightY += dataP[i].right_yards;
+        y20plusMidY += dataP[i].middle_yards;
+        y20plusAtt += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
+        y20plusCom += dataP[i].middle_com + dataP[i].right_com + dataP[i].left_com;
+        y20plusLeftAtt += dataP[i].left_att;
+        y20plusRightAtt += dataP[i].right_att
+        y20plusMidAtt += dataP[i].middle_att;
+        y20plusLeftCom += dataP[i].left_com;
+        y20plusRightCom += dataP[i].right_com;
+        y20plusMidCom += dataP[i].middle_com;
         interceptions += dataP[i].left_int + dataP[i].right_int + dataP[i].mid_int;
         td += dataP[i].left_td + dataP[i].right_td + dataP[i].mid_td;
         att += dataP[i].left_att + dataP[i].right_att + dataP[i].middle_att;
@@ -646,7 +640,7 @@ if (week != 0){
   $("#avgy20plus").html(d3.format("%")(y20plusAtt/ att));
 
 
-  $("#total").html(totalYards);
+  $("#total").html(d3.format(",")(totalYards));
   if (qb == "Sam Bradford"){$("#qbPic").html("<img src='img/samBradford.png'>");}
   else if (qb == "Shaun Hill"){$("#qbPic").html("<img src='img/shaunHill.png'>");}
   else 
