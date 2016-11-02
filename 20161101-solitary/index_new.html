@@ -71,6 +71,10 @@
 
     .breaker { padding:1px; }
 
+    #addendum div { display:none; }
+
+    #addendum { height:16.67px; }
+
     .year { width:100%; }
 /*    .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:11px; }
     .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:31px; }*/
@@ -94,16 +98,7 @@
 
 
     @media (max-width:840px) { 
-      .chatter { width:100% !important; clear:both; text-align:left; }
-      #legend { float:none; margin-top:0; }
-      .wrapper-demo { width:100%;  }
-      #topmonths { display:none; }
-      #viewSwitch { float:none; width:100%; }
-      #wrapper { width:100%; text-align:center; }
-      .month { width:8%; }
-      .yearLabel { display:none; }
-      .month { border-bottom:0; }
-
+    #wrapper { width:100%; }
     }
   </style> 
 </head>
@@ -121,15 +116,8 @@
               <ul class="dropdown months" tabindex="1">
                 <li class="step selected" data="204314" index="0">Israel Musawwir</li>
                 <li class="step" data="213688" index="1">Sean Ellis</li>
-                <li class="step" data="196309" index="2">Marcus Mable</li>
+                <li class="step" data="208543" index="2">Cesar De la Garza</li>
                 <li class="step" data="232429" index="3">Anthony Nasseff</li>
-                <li class="step" data="214486" index="4">Michael Wadena</li>
-                <li class="step" data="219696" index="5">Michael Fleming</li>
-                <li class="step" data="104759" index="6">Charles Noble</li>
-                <li class="step" data="230542" index="7">Wayne LittleSoldier</li>
-                <li class="step" data="218377" index="8">Dylan Ganske</li>
-                <li class="step" data="236728" index="9">Elsa Cabana</li>
-                <li class="step" data="231803" index="10">Dakota Lafave</li>
               </ul>
           </div>
         ​</div>
@@ -144,7 +132,10 @@
 <div class="chatter">
 This inmate was held in solitary confinement a total of <span class='metric' id="total">0</span> days, with <span class='metric' id="consecutive">0</span> consecutive and <span class='metric' id="overlapping">0</span> overlapping sentences.
 </div>
+<div id="addendum">
 <div id="more" class="chatter">He also served another <span class='metric' id="totalM">2133</span> days in solitary confinement prior to 2005.</div>
+<div id="more2" class="chatter">He also served another <span class='metric' id="totalM">450</span> days in solitary confinement prior to 2005.</div>
+</div>
 
 <div class="breaker"></div>
 
@@ -374,11 +365,14 @@ function spitCalendars(id){
 }
 
 spitCalendars("204314");
+$("#more").show();
 
 $(".step").click(function() {
+  $("#more, #more2").hide();
   spitCalendars($(this).attr("data"));
-  if ($(this).attr("index") == "0") { $("#more").css('visibility', 'visible'); }
-  else { $("#more").css('visibility', 'hidden'); }
+  if ($(this).attr("index") == "0") { $("#more").show(); }
+  else if ($(this).attr("index") == "2") { $("#more2").show(); }
+  else { $("#more, #more2").hide(); }
 });
 
 });
