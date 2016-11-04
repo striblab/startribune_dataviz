@@ -21,41 +21,41 @@
     #calendar { width:100%; }
     .graph-domain { display:inline-block !important; }
     .metric { font-weight:900; }
-.year {
-    width: 100%;
-}
+    .year {
+        width: 100%;
+    }
 
-.yearLabel {
-    color: #bbb;
-    font-size: 8px;
-    display: inline-block;
-    float: left;
-    width: 20px;
-    text-align: center;
-    margin-left: 10px;
-    position: relative;
-}
+    .yearLabel {
+        color: #bbb;
+        font-size: 8px;
+        display: inline-block;
+        float: left;
+        width: 20px;
+        text-align: center;
+        margin-left: 10px;
+        position: relative;
+    }
 
-.month {
-    display: block;
-}
+    .month {
+        display: block;
+    }
 
-.block {
-    height: 10px;
-    width: 10px;
-    float: left;
-    margin: 0;
-    white-space: normal;
-    border: 0.5px solid #fff !important;
-    font-size: 0;
-    background-color: #bbbbbb;
-}
+    .block {
+        height: 10px;
+        width: 10px;
+        float: left;
+        margin: 0;
+        white-space: normal;
+        border: 0.5px solid #fff !important;
+        font-size: 0;
+        background-color: #bbbbbb;
+    }
 
 
 /*    .block { height:1px; width:1px; float:left; margin:1px; white-space:normal; border:1px solid #C5C4CE; font-size:0; }*/
 /*    .block { height:7px; width:7px; float:left; margin:0; white-space:normal; border:0.5px solid #fff !important; font-size:0; background-color:#bbbbbb; }*/
     .confined { background-color:#7767C6; }
-    .free { background-color:#C5C4CE; }
+    .out { background-color:#ffffff; border:1px solid #000000 !important; }
     .overlap { background-color:#A59DC9; } 
 
     #total { color:#7767C6; }
@@ -124,7 +124,7 @@
 </section>
 </div>
 </div>
-  <div id="legend"><span class='confined block'></span> confined <!-- <span class='overlap block'></span> overlapping --> <span class='free block'></span> not confined</div> 
+  <div id="legend"><span class='out block'></span> not imprisoned <span class='confined block'></span> confined <!-- <span class='overlap block'></span> overlapping --> <span class='free block'></span> not confined</div> 
 </div>
 
 <div class="breaker"></div>
@@ -247,7 +247,7 @@ d3.csv("./data/solitary.csv", function(d) {
     currlocation: d.currlocation,
     src: d.src,
     govoffense: d.govoffense,
-    admitdate: d.admitdate,
+    admitdate: new Date(d.admitdate),
     expdate: d.expdate
   };
 }, function(error, rows) {
@@ -261,64 +261,64 @@ function buildBricks(year){
   for (var i=0; i < 31; i++){
     date = new Date("Jan " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .january").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .january").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   if (year == 2012 || year == 2008) { var febRange = 29; }
   else { var febRange = 28; }
   for (var i=0; i < febRange; i++){
     date = new Date("Feb " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .february").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .february").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Mar " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .march").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .march").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Apr " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .april").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .april").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("May " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .may").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .may").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Jun " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .june").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .june").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Jul " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .july").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .july").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Aug " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .august").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .august").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Sep " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .september").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .september").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Oct " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .october").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .october").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Nov " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .november").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .november").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Dec " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .december").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .december").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
 }
 
@@ -340,7 +340,8 @@ buildBricks(2015);
 
 function spitCalendars(id){
 
-  $(".block").removeClass("selectedBlock");
+  $(".month .block").removeClass("selectedBlock");
+  $(".month .block").removeClass("out");
 
   var startRange = [];
   var endRange = []; 
@@ -348,6 +349,7 @@ function spitCalendars(id){
   var oCount = 0;
   var index = 0;
   var range = 0;
+  var admission;
 
   for (var i=0; i < data.length; i++){
     //find id
@@ -357,6 +359,7 @@ function spitCalendars(id){
       cCount += data[i].consecutive;
       oCount += data[i].overlap;
       index++;
+      admission = data[i].admitdate;
     }
   }
 
@@ -384,6 +387,12 @@ function spitCalendars(id){
     $("#consecutive").html(cCount);
     $("#overlapping").html(oCount);
     $("#total").html(range);
+
+    var admitted = admission.getTime();    
+
+    $( ".block" ).each(function() { 
+      if ($(this).attr("data") < admitted) { $(this).addClass("out"); }
+    });
 
 }
 
