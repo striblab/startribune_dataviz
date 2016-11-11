@@ -96,9 +96,37 @@
     #viewSwitch { float:left; }
 
 
+    /* DESKTOP */
+    .year {
+        width: 100%;
+        max-width: 655px;
+    }
+    .block {
+        height: 7px;
+        width: 7px;
+        float: left;
+        margin: .4px;
+        white-space: normal;
+        /* border: 1px solid #fff !important; */
+        font-size: 0;
+        background-color: #fbd4c3;
+    }
+    .selectedBlock {
+        background-color: #f47a44;
+    }
+    .out {
+        display: none;
+    }
 
     @media (max-width:840px) { 
     #wrapper { width:100%; }
+        .block {
+        margin: .5px;
+    }
+    .year {
+        max-width: 305px;
+        margin: 0 auto;
+    }
     }
   </style> 
 </head>
