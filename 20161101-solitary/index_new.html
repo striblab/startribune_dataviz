@@ -40,14 +40,26 @@
         display: block;
     }
 
+    .block {
+        height: 10px;
+        width: 10px;
+        float: left;
+        margin: 0;
+        white-space: normal;
+        border: 0.5px solid #fff !important;
+        font-size: 0;
+        background-color: #efc2af;
+    }
+
+
 /*    .block { height:1px; width:1px; float:left; margin:1px; white-space:normal; border:1px solid #C5C4CE; font-size:0; }*/
 /*    .block { height:7px; width:7px; float:left; margin:0; white-space:normal; border:0.5px solid #fff !important; font-size:0; background-color:#bbbbbb; }*/
-    .confined { background-color:#7767C6; }
+    .confined { background-color:#f47a44; }
     .out { background-color:#ffffff; border:1px solid #000000 !important; }
     .overlap { background-color:#A59DC9; } 
 
-    #total { color:#7767C6; }
-    #consecutive, #overlapping { color:#7767C6; }
+    #total { color:#f47a44; }
+    #consecutive, #overlapping { color:#f47a44; }
     /*#overlapping { color:#A59DC9; }*/
 
     #legend { float:right; margin-top:10px; vertical-align:middle; }
@@ -55,7 +67,7 @@
 
     #topmonths { display:none; }
 
-    .selectedBlock { background-color:#7767C6; border:1px solid #7767C6; /*-webkit-transition: all 0.5s ease 0.5s; -moz-transition: all 0.5s ease 0.5s; -o-transition: all 0.5s ease 0.5s; transition: all 0.5s ease 0.5s;*/ }
+    .selectedBlock { background-color:#f47a44; border:1px solid #f47a44; /*-webkit-transition: all 0.5s ease 0.5s; -moz-transition: all 0.5s ease 0.5s; -o-transition: all 0.5s ease 0.5s; transition: all 0.5s ease 0.5s;*/ }
 
     .breaker { padding:1px; }
 
@@ -63,6 +75,7 @@
 
     #addendum { height:18px; }
 
+    .year { width:100%; }
 /*    .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:11px; }
     .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:31px; }*/
 
@@ -83,37 +96,11 @@
     #viewSwitch { float:left; }
 
 
-    /* DESKTOP */
-    .year {
-        width: 100%;
-        max-width: 655px;
-    }
-    .block {
-        height: 7px;
-        width: 7px;
-        float: left;
-        margin: .4px;
-        white-space: normal;
-        /* border: 1px solid #fff !important; */
-        font-size: 0;
-        background-color: #fbd4c3;
-    }
-    .selectedBlock {
-        background-color: #f47a44;
-    }
-    .out {
-        display: none;
-    }
+    .yearLabel, .out { display:none; }
+    #name { font-weight:900; }
 
     @media (max-width:840px) { 
     #wrapper { width:100%; }
-        .block {
-        margin: .5px;
-    }
-    .year {
-        max-width: 305px;
-        margin: 0 auto;
-    }
     }
   </style> 
 </head>
@@ -139,13 +126,13 @@
 </section>
 </div>
 </div>
-  <div id="legend"><span class='out block'></span> not imprisoned <span class='confined block'></span> confined <!-- <span class='overlap block'></span> overlapping --> <span class='free block'></span> not confined</div> 
+  <div id="legend"><!-- <span class='out block'></span> not imprisoned  --> <span class='free block'></span> Imprisoned <span class='confined block'></span> Confined<!-- <span class='overlap block'></span> overlapping --> </div> 
 </div>
 
 <div class="breaker"></div>
 
 <div class="chatter">
-This inmate was held in solitary confinement a total of <span class='metric' id="total">0</span> days, with <span class='metric' id="consecutive">0</span> consecutive and <span class='metric' id="overlapping">0</span> overlapping sentences.
+<span id="name">Israel Musawwir</span> spent <span class='metric' id="allDays">0</span> days in prison. Nearly <span class="metric" id="pct">0</span> of his total time (<span class='metric' id="total">0</span> days) was spent in solitary confinement, with <span class='metric' id="consecutive">0</span> consecutive and <span class='metric' id="overlapping">0</span> overlapping sentences.
 </div>
 <div id="addendum">
 <!-- <div id="more" class="chatter">He also served another <span class='metric' id="totalM">2133</span> days in solitary confinement prior to 2005.</div>
@@ -156,6 +143,11 @@ This inmate was held in solitary confinement a total of <span class='metric' id=
 
 <div id="calendarGrid">
 <div id="topmonths"><div class='month january'>Jan</div><div class='month february'>Feb</div><div class='month march'>Mar</div><div class='month april'>Apr</div><div class='month may'>May</div><div class='month june'>June</div><div class='month july'>July</div><div class='month august'>Aug</div><div class='month september'>Sep</div><div class='month october'>Oct</div><div class='month november'>Nov</div><div class='month december'>Dec</div></div>
+
+<div class="year" id="y2000">
+<div class="yearLabel">2000</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+</div>
 
 <div class="year" id="y2001">
 <div class="yearLabel">2001</div>
@@ -337,6 +329,7 @@ function buildBricks(year){
   }
 }
 
+buildBricks(2000);
 buildBricks(2001);
 buildBricks(2002);
 buildBricks(2003);
@@ -403,7 +396,13 @@ function spitCalendars(id){
     $("#overlapping").html(oCount);
     $("#total").html(range);
 
-    var admitted = admission.getTime();    
+    var admitted = admission.getTime(); 
+    var cutoff = new Date("December, 31, 2015");   
+
+    var allDays = Math.round((cutoff.getTime() - admitted)/(1000*60*60*24));
+
+    $("#allDays").html(allDays);
+    $("#pct").html(d3.format("%")(range/allDays));
 
     $( ".block" ).each(function() { 
       if ($(this).attr("data") < admitted) { $(this).addClass("out"); }
@@ -416,6 +415,7 @@ $("#more").show();
 
 $(".step").click(function() {
   $("#more, #more2").hide();
+  $("#name").html($(this).text());
   spitCalendars($(this).attr("data"));
   if ($(this).attr("index") == "0") { $("#more").show(); }
   else if ($(this).attr("index") == "2") { $("#more2").show(); }
