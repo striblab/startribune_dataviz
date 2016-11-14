@@ -21,36 +21,69 @@
     #calendar { width:100%; }
     .graph-domain { display:inline-block !important; }
     .metric { font-weight:900; }
+    .year {
+        width: 100%;
+    }
+
+    .yearLabel {
+        color: #bbb;
+        font-size: 8px;
+        display: inline-block;
+        float: left;
+        width: 20px;
+        text-align: center;
+        margin-left: 10px;
+        position: relative;
+    }
+
+    .month {
+        display: block;
+    }
+
+    .block {
+        height: 10px;
+        width: 10px;
+        float: left;
+        margin: 0;
+        white-space: normal;
+        border: 0.5px solid #fff !important;
+        font-size: 0;
+        background-color: #efc2af;
+    }
 
 
 /*    .block { height:1px; width:1px; float:left; margin:1px; white-space:normal; border:1px solid #C5C4CE; font-size:0; }*/
-    .block { height:7px; width:7px; float:left; margin:0; white-space:normal; border:0.5px solid #fff !important; font-size:0; background-color:#bbbbbb; }
-    .confined { background-color:#7767C6; }
-    .free { background-color:#C5C4CE; }
+/*    .block { height:7px; width:7px; float:left; margin:0; white-space:normal; border:0.5px solid #fff !important; font-size:0; background-color:#bbbbbb; }*/
+    .confined { background-color:#f47a44; }
+    .out { background-color:#ffffff; border:1px solid #000000 !important; }
     .overlap { background-color:#A59DC9; } 
 
-    #total { color:#7767C6; }
-    #consecutive, #overlapping { color:#7767C6; }
+    #total { color:#f47a44; }
+    #consecutive, #overlapping { color:#f47a44; }
     /*#overlapping { color:#A59DC9; }*/
 
     #legend { float:right; margin-top:10px; vertical-align:middle; }
     #legend .block { height:13px; width:13px; display:inline-block; float:none; margin-left:10px; padding-bottom:10px; margin-bottom:-3px; border:0; }
 
-    #topmonths { }
+    #topmonths { display:none; }
 
-    .selectedBlock { background-color:#7767C6; border:1px solid #7767C6; /*-webkit-transition: all 0.5s ease 0.5s; -moz-transition: all 0.5s ease 0.5s; -o-transition: all 0.5s ease 0.5s; transition: all 0.5s ease 0.5s;*/ }
+    .selectedBlock { background-color:#f47a44; border:1px solid #f47a44; /*-webkit-transition: all 0.5s ease 0.5s; -moz-transition: all 0.5s ease 0.5s; -o-transition: all 0.5s ease 0.5s; transition: all 0.5s ease 0.5s;*/ }
 
     .breaker { padding:1px; }
 
+    #addendum div { display:none; }
+
+    #addendum { height:18px; }
+
     .year { width:100%; }
-    /*.month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:11px; }*/
-    .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:31px; }
+/*    .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:11px; }
+    .month { width:8.1%; border-bottom:1px solid #bbb; display:inline-block; height:31px; }*/
 
     #topmonths .month { width:8.1%; border-bottom:0; display:inline-block; height:auto; font-size:0.6em; color:#bbb; vertical-align:top; }
 
     .step { padding:5px; }
 
-    .yearLabel { color:#bbb; font-size:0.6em; margin-top:-3px; margin-bottom:6px; }
+/*    .yearLabel { color:#bbb; font-size:0.6em; margin-top:-3px; margin-bottom:6px; }*/
 
 /*FANCY DROPDOWNS*/
     .wrapper-demo { width:200px; }
@@ -62,17 +95,12 @@
     header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
     #viewSwitch { float:left; }
 
-    @media (max-width:840px) { 
-/*      .chatter { width:100% !important; clear:both; text-align:left; }
-      #legend { float:none; margin-top:0; }
-      .wrapper-demo { width:100%;  }
-      #topmonths { display:none; }
-      #viewSwitch { float:none; width:100%; }
-      #wrapper { width:100%; text-align:center; }
-/*      .month { width:8%; }*/
-      .yearLabel { display:none; }
-      .month { border-bottom:0; }*/
 
+    .yearLabel, .out { display:none; }
+    #name { font-weight:900; }
+
+    @media (max-width:840px) { 
+    #wrapper { width:100%; }
     }
   </style> 
 </head>
@@ -98,74 +126,104 @@
 </section>
 </div>
 </div>
-  <div id="legend"><span class='confined block'></span> confined <!-- <span class='overlap block'></span> overlapping --> <span class='free block'></span> not confined</div> 
+  <div id="legend"><!-- <span class='out block'></span> not imprisoned  --> <span class='free block'></span> Imprisoned <span class='confined block'></span> Confined<!-- <span class='overlap block'></span> overlapping --> </div> 
 </div>
 
 <div class="breaker"></div>
 
 <div class="chatter">
-This inmate was held in solitary confinement a total of <span class='metric' id="total">0</span> days, with <span class='metric' id="consecutive">0</span> consecutive and <span class='metric' id="overlapping">0</span> overlapping sentences.
+<span id="name">Israel Musawwir</span> spent <span class='metric' id="allDays">0</span> days in prison. Nearly <span class="metric" id="pct">0</span> of his total time (<span class='metric' id="total">0</span> days) was spent in solitary confinement, with <span class='metric' id="consecutive">0</span> consecutive and <span class='metric' id="overlapping">0</span> overlapping sentences.
 </div>
-<div id="more" class="chatter">He also served another <span class='metric' id="totalM">2133</span> days in solitary confinement prior to 2005.</div>
+<div id="addendum">
+<!-- <div id="more" class="chatter">He also served another <span class='metric' id="totalM">2133</span> days in solitary confinement prior to 2005.</div>
+<div id="more2" class="chatter">He also served another <span class='metric' id="totalM">450</span> days in solitary confinement prior to 2005.</div> -->
+</div>
 
 <div class="breaker"></div>
 
 <div id="calendarGrid">
 <div id="topmonths"><div class='month january'>Jan</div><div class='month february'>Feb</div><div class='month march'>Mar</div><div class='month april'>Apr</div><div class='month may'>May</div><div class='month june'>June</div><div class='month july'>July</div><div class='month august'>Aug</div><div class='month september'>Sep</div><div class='month october'>Oct</div><div class='month november'>Nov</div><div class='month december'>Dec</div></div>
 
-<div class="year" id="y2005">
+<div class="year" id="y2000">
+<div class="yearLabel">2000</div>
 <div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+</div>
+
+<div class="year" id="y2001">
+<div class="yearLabel">2001</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+</div>
+
+<div class="year" id="y2002">
+<div class="yearLabel">2002</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+</div>
+
+<div class="year" id="y2003">
+<div class="yearLabel">2003</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+</div>
+
+<div class="year" id="y2004">
+<div class="yearLabel">2004</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+</div>
+
+<div class="year" id="y2005">
 <div class="yearLabel">2005</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2006">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2006</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2007">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2007</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+
 </div>
 
 <div class="year" id="y2008">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2008</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2009">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2009</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2010">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2010</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2011">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2011</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2012">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2012</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2013">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2013</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2014">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2014</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 </div>
 
 <div class="year" id="y2015">
-<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
 <div class="yearLabel">2015</div>
+<div class='month january'></div><div class='month february'></div><div class='month march'></div><div class='month april'></div><div class='month may'></div><div class='month june'></div><div class='month july'></div><div class='month august'></div><div class='month september'></div><div class='month october'></div><div class='month november'></div><div class='month december'></div>
+
 </div>
 
 </div>
@@ -196,7 +254,7 @@ d3.csv("./data/solitary.csv", function(d) {
     currlocation: d.currlocation,
     src: d.src,
     govoffense: d.govoffense,
-    admitdate: d.admitdate,
+    admitdate: new Date(d.admitdate),
     expdate: d.expdate
   };
 }, function(error, rows) {
@@ -210,67 +268,72 @@ function buildBricks(year){
   for (var i=0; i < 31; i++){
     date = new Date("Jan " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .january").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .january").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   if (year == 2012 || year == 2008) { var febRange = 29; }
   else { var febRange = 28; }
   for (var i=0; i < febRange; i++){
     date = new Date("Feb " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .february").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .february").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Mar " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .march").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .march").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Apr " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .april").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .april").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("May " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .may").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .may").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Jun " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .june").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .june").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Jul " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .july").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .july").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Aug " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .august").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .august").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Sep " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .september").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .september").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Oct " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .october").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .october").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 30; i++){
     date = new Date("Nov " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .november").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .november").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
   for (var i=0; i < 31; i++){
     date = new Date("Dec " + (i + 1) + " " + year + " 00:00:00");
     milliseconds = date.getTime(); 
-    $("#y" + year + " .december").append("<div class='block' id='d" + milliseconds + "'></div>");
+    $("#y" + year + " .december").append("<div class='block' data='" + milliseconds + "' id='d" + milliseconds + "'></div>");
   }
 }
 
+buildBricks(2000);
+buildBricks(2001);
+buildBricks(2002);
+buildBricks(2003);
+buildBricks(2004);
 buildBricks(2005);
 buildBricks(2006);
 buildBricks(2007);
@@ -285,7 +348,8 @@ buildBricks(2015);
 
 function spitCalendars(id){
 
-  $(".block").removeClass("selectedBlock");
+  $(".month .block").removeClass("selectedBlock");
+  $(".month .block").removeClass("out");
 
   var startRange = [];
   var endRange = []; 
@@ -293,6 +357,7 @@ function spitCalendars(id){
   var oCount = 0;
   var index = 0;
   var range = 0;
+  var admission;
 
   for (var i=0; i < data.length; i++){
     //find id
@@ -302,6 +367,7 @@ function spitCalendars(id){
       cCount += data[i].consecutive;
       oCount += data[i].overlap;
       index++;
+      admission = data[i].admitdate;
     }
   }
 
@@ -326,18 +392,34 @@ function spitCalendars(id){
     $cells.slice(idx_1, idx_2 + 1).addClass('selectedBlock');
   }
 
-    $("#consecutive").html(cCount);
-    $("#overlapping").html(oCount);
-    $("#total").html(range);
+    $("#consecutive").html(d3.format(",")(cCount));
+    $("#overlapping").html(d3.format(",")(oCount));
+    $("#total").html(d3.format(",")(range));
+
+    var admitted = admission.getTime(); 
+    var cutoff = new Date("December, 31, 2015");   
+
+    var allDays = Math.round((cutoff.getTime() - admitted)/(1000*60*60*24));
+
+    $("#allDays").html(d3.format(",")(allDays));
+    $("#pct").html(d3.format("%")(range/allDays));
+
+    $( ".block" ).each(function() { 
+      if ($(this).attr("data") < admitted) { $(this).addClass("out"); }
+    });
 
 }
 
 spitCalendars("204314");
+$("#more").show();
 
 $(".step").click(function() {
+  $("#more, #more2").hide();
+  $("#name").html($(this).text());
   spitCalendars($(this).attr("data"));
-  if ($(this).attr("index") == "0") { $("#more").css('visibility', 'visible'); }
-  else { $("#more").css('visibility', 'hidden'); }
+  if ($(this).attr("index") == "0") { $("#more").show(); }
+  else if ($(this).attr("index") == "2") { $("#more2").show(); }
+  else { $("#more, #more2").hide(); }
 });
 
 });
