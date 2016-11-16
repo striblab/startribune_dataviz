@@ -13,31 +13,34 @@
   <meta property="og:description" content="Data-driven storytelling, maps, charts and more | Startribune.com" />
 
   <title>StribLab: Data-driven storytelling, maps, charts and more | Startribune.com</title>
-
-<!-- load common dataviz styles -->
-<link rel="stylesheet" href="_common_resources/styles/startribune_dataviz_styles.css" /> 
-
-<!-- dataviz and custom styles for this page -->
    <style>
 /*PRIMARY*/
-      body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
-      #infobox { font-family:"Poynter Serif RE",Georgia,Times,serif; font-size:16px; margin:10px; }
-      #infobox p { padding:3px; }
+      ::selection { background: #ddd; }
+      body { font-family:Helvetica; overflow-x:hidden; }
       #leftPane { float:right !important; width:630px !important; }      
       #testDiv { height:400px; background-color:#ddd; width:85%; float:right; }
       h1 { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:900; font-size:2.5em; margin-bottom:10px; }
       h3 { margin-top:15px; padding-bottom:5px; border-bottom:solid 1px #ddd; }
-      p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px;  letter-spacing: -0.3px; font-weight: normal; }
       .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
       .l-container:nth-child(2) { width:100%; }
       .l-container { text-align:left !important; width:970px; margin-left:auto; margin-right:auto; }
       .breaker { clear:both; margin:7px; padding:0; }
       .tools { display:none; }
-      #specialContentWrapper{ width:960px !important; margin-left:auto; margin-right:auto; }
       a { color: #87C944; text-decoration: none; }
-      a:hover { text-decoration:none !important; color:inherit !important; }
+      a:hover { color:#333 !important; color:inherit !important; }
       .link a:hover { text-decoration:none !important; color: #87C944 !important; }
-      
+      .masthead  a { color:#000 !important; }
+      .masthead { font-weight:900; font-family:Helvetica; /*letter-spacing:20px;*/ text-align:left !important; font-size:1.5em; }
+      p { font-family:Helvetica; }
+      #wrapper { width:800px;; margin-right:auto; margin-left:auto; }
+      h1 { font-family:"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif; text-align:left; letter-spacing:20px; }
+      #sidebar { width:170px; text-align:center; float:left; }
+      #content { width:596px; text-align:left; float:right; }
+      button:focus { outline:0 !important; }
+      :focus { outline:0; }
+      a h3 { color:#000 !important; font-family:"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif; text-align:left; }
+      h4 { color:#333; text-align:center; margin:0; padding:10px 0 0; }
+
 /*HEADER*/
       .starlogo { float:left; margin:15px; }
       #logo_container { width:208px; }
@@ -46,6 +49,27 @@
       #viewSwitch { display:none; }
       .dash { display:none; }
       .main { text-align:center; }
+      .resume_icon { text-align:center; padding:25px; }
+      .resume_icon img { width:90px; }
+      .section h1 { text-align:center; }
+      .icon { width:100%; display:block; }
+      .breaker { clear:both; margin:10px; }
+      .icon img { margin:10px; width:64px; }
+      .icon:hover { cursor:pointer; opacity:.8; }
+      .selected { background-color:#ddd !important; margin:0 !important; }
+      .linkage { text-align:left; }
+      #overall { text-align:left !important; }
+      div#at4-share { display:none !important; }
+      .tagline { text-align:left !important; }
+      .at-icon { background-color:#87C944 !important; }
+      #topmenu { text-align:center; }
+      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:15px; text-align:center; background-color:#fff; border:1px solid black; width:24.5%; border-radius:0; }
+      .topbutton:hover { opacity:.8; cursor:pointer; }
+      .this { background-color:#ddd; border:1px solid #ddd; }
+      #socialmenu { text-align:center; }
+      #socialmenu div { width:24.55%; display:inline-block; text-align:center; }
+      #socialmenu img { width:33%; }
+      #socialmenu img:hover { opacity:.8; }
 
 /*ENTRIES*/
       #articlePane { display:inline-block !important;  }
@@ -65,6 +89,7 @@
     ul.share-buttons li { display:inline !important; }
     ul.share-buttons li:hover { opacity:0.8; cursor:pointer; }
     #sharing { text-align:center; margin-left:auto; margin-right:auto; padding:20px; }
+    .follow { padding:15px; }
 
 /*SIDEBAR*/
       #dataSidebar { float:left !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
@@ -74,10 +99,9 @@
       .articleName a { color: #333; text-decoration: none; }
       .article-share { position:relative !important; float:left !important; margin-left:0 !important; }
       #team { font-weight:bold; clear:both; }
-      .sort-link { border-bottom: 1px solid #000; padding:15px; font-size:13px; }
       .links { text-align:center; }
       .link { width:100%; font-size:1.3em; border-top: 1px solid #ddd; padding:10px; font-weight:bold; vertical-align:middle; }
-      /*#sorting_mobile { display:none; }*/
+      li.sort-link { text-align:left !important; }
       #github { padding:15px; font-size:14px; }
       .gitlogo, .bloglogo { width:40px; display:inline-block; margin:3px; vertical-align:middle; }   
       .git { font-size: 11px; background-color:transparent; -moz-border-radius:16px; -webkit-border-radius:16px; text-align:right; border-radius:0; border:0; display:inline-block; cursor:pointer; font-family:"Benton Sans",Helvetica,Arial,sans-serif; padding:8px; text-decoration:none; font-weight:bold; width:100%; margin-bottom:7px; }
@@ -91,6 +115,26 @@
       .linkSelect { background-color:#ddd !important; }
 
 /*DROPDOWN*/
+/*      *, *:after, *:before { box-sizing:border-box; margin:0; moz-box-sizing:border-box; padding:0; webkit-box-sizing:border-box; }
+      ::-moz-selection { background:transparent; }*/
+      .wrapper-demo { font-weight:400; zoom:1; z-index:999; display:inline-block; width:100%; }
+      .wrapper-demo:after { clear:both; content:""; display:table; }
+      .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
+      .wrapper-dropdown-1:after { border-color:transparent #333; border-style:solid; border-width:6px 0 6px 6px; content:""; height:0; margin-top:-6px; position:absolute; right:16px; top:50%; width:0; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important;  }
+      .wrapper-dropdown-1 .dropdown li a { color:#9e9e9e; display:block; padding:10px 20px; text-decoration:none; }
+      .wrapper-dropdown-1 .dropdown li:hover a { background:#ddd; }
+      .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
+      .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
+      .wrapper-dropdown-1.active .dropdown { opacity:1; pointer-events:auto; }
+      .wrapper-dropdown-1.active:after { border-color:#333 transparent; border-width:6px 6px 0 6px; margin-top:-3px; }
+      .wrapper-dropdown-1.active { background:#ddd; background:linear-gradient(to right, #ddd 0%,#ddd 78%,#ffffff 78%,#ffffff 100%); background:-moz-linear-gradient(left, #9bc7de 0%, #9bc7de 78%, #ffffff 78%, #ffffff 100%); background:-ms-linear-gradient(left, #ddd 0%,#ddd 78%,#ffffff 78%,#ffffff 100%); background:-o-linear-gradient(left, #ddd 0%,#ddd 78%,#ffffff 78%,#ffffff 100%); background:-webkit-gradient(linear, left top, right top, color-stop(0%,#ddd), color-stop(78%,#ddd), color-stop(78%,#ffffff), color-stop(100%,#ffffff)); background:-webkit-linear-gradient(left, #ddd 0%,#ddd 78%,#ffffff 78%,#ffffff 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc7de', endColorstr='#ffffff',GradientType=1 ); }
+      ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; }
+      .no-opacity .wrapper-dropdown-1 .dropdown,
+      .no-pointerevents .wrapper-dropdown-1 .dropdown { display:none; opacity:1; pointer-events:auto; }
+      .no-opacity .wrapper-dropdown-1.active .dropdown,
+      .no-pointerevents .wrapper-dropdown-1.active .dropdown { display:block; }
+      header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
       .wrapper-dropdown { width:100% !important; }
       .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:8px;position:relative; border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; margin-right:auto; margin-left:auto; }
       .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#fff;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
@@ -99,12 +143,23 @@
       .wrapper-dropdown-1 .dropdown li:hover a { background:#EFEFEF; }
       header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
 
-/*SEARCH*/
-      #search-criteria, #search-criteria_m { width:100%; }
-      #search-criteria_m { height:40px; font-size:20px; }
-      #searchMe, #searchMe_m { padding:15px; font-size:14px; }     
-      .fixed { position:fixed; top:40px !important;}
+/*VIDEO*/
+      .video { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+      .video iframe, .video object, .video embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+/*SEARCH*/
+      #filter { font-family:"Helvetica"; font-size:.9em;}
+      #filter input { width: 100% !important; padding: 0 10px 0 10px; font-family:"Helvetica"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
+        -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);  -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #eee !important; 
+        background-size: 14px 14px;
+        background-repeat: no-repeat; 
+        background-position: 98% 50%; }
+      #filter input:focus { width: 100% !important; font-family:"Helvetica"; box-shadow: 0 0 5px #999; border-radius:0 !important; padding: 1px 10px 1px 10px; border: 1px solid #61bd1a; }
+      #results { text-align:center; padding:15px; height:30px; }
+
+/*LIGHTBOXES*/
+     .featherlight .featherlight-inner { width:100%; height:600px; }
+     .featherlight-iframe .featherlight-content { width:80%; }
       
 /*RESOURCES*/
       #resourcesBlock { display:none; }
@@ -117,6 +172,19 @@
       .scrollToTop:hover { color:#333 !important; cursor:pointer; }
       #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
       #footerStuff { display:none; }
+      #intro { text-align:center; }
+      #photo img { width:200px; }
+     .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; }
+     #footer { text-align:center; padding-top:5px; border-top:1px solid #ddd; padding:15px; }
+     .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; font-size:.9em; }
+     .linkDiv { display:inline-block !important; margin:5px; }
+     .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
+     .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+      #intro { text-align:center; }
+      #photo img { width:200px; }
+      #about { margin-top:15px; border-top:1px solid #ddd;}
+      #profile { float:left; margin:10px; }
+      #sharethis { clear:both !important; text-align:center; }
 
 /*BREAKPOINTS*/
     @media only screen and (min-width:650px) {
@@ -173,31 +241,71 @@
       #footerStuff .link:hover { background-color:#fff !important; cursor:pointer; }
     }
 
+     @media (max-width:800px) {
+     .topbutton { width:24%; }
+     #socialmenu div { width:24%; display:inline-block; text-align:center; }
+     #socialmenu img { width:33%; }
+     #wrapper { width:100%; }
+     .pubBanner img { width:100%; }
+     .linkDiv { width:48%; margin:5px; }
+     .icon { width:19%; display:inline-block; }
+     #sidebar { width:100%; text-align:center; float:none; }
+     #content { width:100%; text-align:center; float:none; }
+     #resumebox { height:750px !important; }
+     }
+
+     @media (max-width:450px) {
+     #profile { width:100%; margin:0; }
+     .linkDiv { width:100%; display:block !important; margin:5px; }
+     .icon { width:18% !important; display:inline-block; }
+     .icon img { width:40px !important; }
+     h1 { letter-spacing: 10px !important; }
+     }
    </style>
 
 <body>
-<div id="specialContentWrapper">
-<!-- mark me bro -->
-
-<div id="top">
-<img class="starlogo" src="img/striblab_min.png" width="110px" />
-<p>
-  <h1>StribLab</h1>
-  <div class="toptext">StribLab is the Star Tribune's aggregation of digital, data-driven and visual storytelling that includes tools, maps, charts, investigations and analysis from reporters and editors across the newsroom. Contact <a href="http://twitter.com/jeffhargarten" target="new_">@JeffHargarten</a> with any questions or feedback.</div>
-</p>
+<div id="wrapper">
+<div id="intro" class="section">
+<div class='masthead'><a href="./">striblab</a></div>
+<p class='tagline'>converging storytelling, data, code, and design</p>
 </div>
 
-<div class="breaker topbreaker"></div>
+<div id="topmenu">
+<a href="http://freyhargarten.com"><button class="topbutton">Resume</button></a>
+<a href="http://striblab.github.io/startribune_dataviz"><button class="topbutton this">Articles</button></a>
+<a href="http://standardcandles.org"><button class="topbutton">Blog</button></a>
+<a href="http://deadskies.org"><button class="topbutton">Artwork</button></a>
+</div>
+<div id="socialmenu">
+<div><a href="https://www.linkedin.com/in/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/linkedin.png" /></a><a href="https://github.com/jhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/github.png" /></a><a href="mailto:jeff.hargarten@startribune.com" target="new_"><img src="http://freyhargarten.com/_base/img/icons/mail.png" /></a></div>
+<div><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/striblab.png" /></a><a href="http://startribune.com/local/datadrop" target="new_"><img src="http://freyhargarten.com/_base/img/icons/datadrop.png" /></a><a href="http://twitter.com" target="new_"><img src="http://freyhargarten.com/_base/img/icons/twitter.png" /></a></div>
+<div><a href="https://medium.com/@jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/medium.png" /></a><a href="https://www.facebook.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/facebook.png" /></a><a href="https://www.instagram.com/jeffhargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/instagram.png" /></a></div>
+<div><a href="http://jhshadowflare.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" /></a><a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" /></a><a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" /></a></div>
+</div>
 
-    <div id="viewSwitch">
-<div id="selector">
+<p></p>
+
+<div id="filter"><input type="search" id="filter_box" placeholder="search by keyword"></input></div>
+
+<div id="results"></div>
+
+<div id="sidebar">
+
+<div class="icon sort-link selected articles" id="allProjects_m"><img data="startribune" src="img/striblab.png" /></div>
+<div class="icon sort-link datadrop" id="datadrop"><img data="startribune" src="img/datadrop.png" /></div>
+<div class="icon sort-link resources" id="resources"><img data="github" src="img/github.png" /></div>
+
+</div>
+
+<div id="content">
+
+<div id="sorting" class="sectionBox">
   <section class="main">
         <div class="wrapper-demo">
-          <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
             <span>All Projects</span>
               <ul class="dropdown months" tabindex="1">
               <li class="sort-link" id="allProjects_m"><strong>All Projects <span class='dash'>-</span> </strong><div class="count"><strong>0</strong></div></li>
-              <li class="sort-link" id="datadrop">Data Drop <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="economics">Business and Economics <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="crime">Criminal Justice <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="demographics">Demographics <span class='dash'>-</span> <div class="count">0</div></li>
@@ -209,47 +317,15 @@
               <li class="sort-link" id="transit">Transport/Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
               <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="resources">Resources</li>
-              <!-- <li class="sort-link" id="contributors">Contributors</li> -->
               </ul>
           </div>
         ​</div>
 </section>
 </div>
-</div>
-
-<div id="leftPane">
-<!-- <div id="infobox">
-<p></p>
-<div id="contribs">Regular contributors: <strong><a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a>, <a href="http://www.startribune.com/dan-browning/10644516/">Dan Browning</a>, <a href="http://www.startribune.com/matt-delong/285386351/">Matt DeLong</a>, <a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a>, <a href="http://www.startribune.com/local/blogs/Full_Disclosure/">James Eli Shiffer</a>, <a href="http://www.startribune.com/cj-sinner/284976151/">CJ Sinner</a>, <a href="http://www.startribune.com/brandon-stahl/186499941/">Brandon Stahl</a>, <a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a></strong></div>
-<p></p>
-</div> -->
-
-<div id="sorting_mobile" class="sectionBox">
-<div id="searchMe_m"><input type="text" id="search-criteria_m" placeholder="Search projects" /></div>
-</div>
 
 <div id="articlePane" class="sectionBox">
 
 
-</div>
-
-<div id="contributorsBlock">
-<h3>Regular Contributors</h3>
-<div class="link"><a href="http://www.startribune.com/andy-mannix/366674391/" target="new_">Andy Mannix</a></div>
-<div class="link">Billy Steve Clayton</div>
-<div class="link"><a href="http://www.startribune.com/brandon-stahl/186499941/" target="new_">Brandon Stahl</a></div>
-<div class="link"><a href="http://www.startribune.com/cj-sinner/284976151/" target="new_">CJ Sinner</a></div>
-<div class="link"><a href="http://www.startribune.com/dan-browning/10644516/" target="new_">Dan Browning</a></div>
-<div class="link"><a href="http://www.startribune.com/dave-braunger/10644491/" target="new_">Dave Braunger</a></div>
-<div class="link"><a href="http://www.startribune.com/eric-roper/62906482/" target="new_">Eric Roper</a></div>
-<div class="link"><a href="http://www.startribune.com/jamie-hutt/10645101/" target="new_">Jamie Hutt</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_">James Eli Shiffer</a></div>
-<div class="link"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></div>
-<div class="link"><a href="http://www.startribune.com/jennifer-bjorhus/34031274/" target="new_">Jennifer Bjorhus</a></div>
-<div class="link"><a href="http://www.startribune.com/matt-delong/285386351/" target="new_">Matt DeLong</a></div>
-<div class="link"><a href="http://www.startribune.com/maryjo-webster/303594441/" target="new_">MaryJo Webster</a></div>
-<div class="link">Michael Grant</div>
 </div>
 
 <div id="resourcesBlock" class="resources">
@@ -340,99 +416,58 @@
 <div id="graphics">
 
 </div>
-
-<!-- <div class="databankLink"><a href="https://drive.google.com/a/umn.edu/folderview?id=0B01GwdexvA5PSjlSc0VlQlZkdE0&usp=sharing" target="new_">StarTribune Databank</a> | <a href="http://panda.star.local/#search/all" target="new_">Panda Database</a></div> -->
+</div>
 </div>
 
-<!-- <div class="more"><a  href="javascript:void(0)">See more</a></div>
- -->
+<div class="breaker"></div>
+
 <div class="scrollToTop">Return to Top</div>
 
-</div>
+<div class="breaker"></div>
 
-<div id="dataSidebar">
-<div id="sorting" class="sectionBox">
-  <section class="main">
-        <div class="wrapper-demo">
-          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
-            <span>All Projects</span>
-              <ul class="dropdown months" tabindex="1">
-              <li class="sort-link" id="allProjects_m"><strong>All Projects <span class='dash'>-</span> </strong><div class="count"><strong>0</strong></div></li>
-              <li class="sort-link" id="datadrop">Data Drop <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="economics">Business and Economics <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="crime">Criminal Justice <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="demographics">Demographics <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="education">Education <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="environment">Environment <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="health">Health <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="politics">Politics <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="scitech">Science and Technology <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="transit">Transport/Infrastructure <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="other">Other <span class='dash'>-</span> <div class="count">0</div></li>
-              <li class="sort-link" id="tools">Tools <span class='dash'>-</span> <div class="count">0</div></li>
-              </ul>
-          </div>
-        ​</div>
-</section>
-<!-- <div class="sort-link" id="allProjects"><strong>All Projects</strong><div class="count"><strong>0</strong></div></div>
-<div class="sort-link" id="datadrop">Data Drop<div class="count">0</div></div>
-<div class="sort-link" id="economics">Business and Economics<div class="count">0</div></div>
-<div class="sort-link" id="crime">Criminal Justice<div class="count">0</div></div>
-<div class="sort-link" id="demographics">Demographics<div class="count">0</div></div>
-<div class="sort-link" id="education">Education<div class="count">0</div></div>
-<div class="sort-link" id="environment">Environment<div class="count">0</div></div>
-<div class="sort-link" id="health">Health<div class="count">0</div></div>
-<div class="sort-link" id="politics">Politics<div class="count">0</div></div>
-<div class="sort-link" id="scitech">Science and Technology<div class="count">0</div></div>
-<div class="sort-link" id="transit">Transportation and Infrastructure<div class="count">0</div></div>
-<div class="sort-link" id="other">Other<div class="count">0</div></div>
-<div class="sort-link" id="tools">Tools<div class="count">0</div></div> -->
-<div class="sort-link" id="resources">Resources</div>
-<!-- <div class="sort-link" id="contributors">Contributors</div> -->
-<!-- <div id="searchMe"><input type="text" id="search-criteria" placeholder="Search projects" /></div> -->
-<div id="links">
-<div class="link"><a href="https://startribune.com" target="new_"><img class="striblogo" src="img/striblogo.png" class="gitlogo" /></a></div>
-<div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure</a></div>
-<div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
-<div id="sharing">
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%striblab.github.io/startribune_dataviz/&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/fbshare.png"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%striblab.github.io/startribune_dataviz/&text=:%20http%3A%2F%2Fstriblab.github.io/startribune_dataviz/g&via=jeffhargarten" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/twshare.png"></a></li>
-  <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="./img/tshare.png"></a></li>
-  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="./img/rshare.png"></a></li>
-</ul>
+<div id="sharethis"><div class="addthis_sharing_toolbox"></div></div>
+
+<div class="breaker"></div>
+
+<div id="about">
+<img src="http://freyhargarten.com/_base/img/profile.jpg" width="200px" id="profile" />
+<p>Dead Skies is the work of Frey Hargarten, a journalist, traveller, writer, artist, futurist, nerd and general pain in the ass. Opinions are mine and far too many.</p> 
+<div id="pgpkey"><a href="http://freyhargarten.com/pgp/frey.hargarten.A33572D4.pgp.asc" key="E502 A15E A8D1 8CAA 478A F1CE 13AC DE60 A335 72D4">E502 A15E A8D1 8CAA 478A F1CE 13AC DE60 A335 72D4</a></div>
+
+<div class="breaker"></div>
+
+<div id="linkFarm" class="footerLinks">
+<div class="linkDiv">
+<h4><img src="http://freyhargarten.com/_base/img/deadskies.png" width="50" /></h4>  
+<h4><strong><a href="http://deadskies.org">Dead Skies</a></strong></h4>
+<div class="linkage"><a href="http://jhshadowflare.deviantart.com/">DeviantArt</a> | <a href="http://jeffhargarten.tumblr.com/">Tumblr</a> | <a href="https://soundcloud.com/jeffhargarten">Soundcloud</a></div>
+</div>
+<div class="linkDiv">  
+<h4><img src="http://freyhargarten.com/_base/img/dm_logo.png" width="50" /></h4>  
+<h4><strong><a href="http://freyhargarten.com">Datamancy</a></strong></h4>
+<div class="linkage"><a href="https://www.linkedin.com/in/jeffhargarten">LinkedIn</a> | <a href="https://github.com/jhargarten">Github</a></div>
+</div>
+<div class="linkDiv">
+<h4><img src="http://freyhargarten.com/_base/img/striblab.png" width="50" /></h4>  
+<h4><strong><a href="http://striblab.github.io/startribune_dataviz">StribLab</a></strong></h4>
+<a href="http://www.startribune.com/jeff-hargarten/274254381/">StarTribune</a> | <a href="http://startribune.com/local/datadrop">Data Drop</a>
+</div>
+<div class="linkDiv">
+<h4><img src="http://freyhargarten.com/_base/img/standardcandles.jpg" width="50" /></h4>  
+<h4><strong><a href="http://portalmancy.org">Portalmancy</a></strong></h4>
+<div class="linkage"><!-- <a href="https://medium.com/@jeffhargarten">Medium</a> |  --><a href="https://twitter.com/jeffhargarten">Twitter</a> | <a href="https://www.facebook.com/jeffhargarten">Facebook</a> | <a href="https://www.instagram.com/jeffhargarten/">Instagram</a></div>
 </div>
 </div>
 
-</div>
+<div class="breaker"></div>
 
-</div>
-
-<div id="footerStuff">
-<div class="link"><a href="http://www.startribune.com/local/datadrop/" target="new_"><img src="img/datalab-color.png" class="bloglogo" /> Data Drop</a></div>
-<div class="link"><a href="http://www.startribune.com/local/blogs/Full_Disclosure/" target="new_"><img src="img/fulldisclosure-color.png" class="bloglogo" /> Full Disclosure</a></div>
-<div class="link"><a href="https://github.com/striblab" target="new_"><img src="img/github.png" class="gitlogo" /> Visit our Github</a></div>
-<div id="sharing">
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%striblab.github.io/startribune_dataviz/&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="./img/fbshare.png"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%striblab.github.io/startribune_dataviz/&text=:%20http%3A%2F%2Fstriblab.github.io/startribune_dataviz/g&via=jeffhargarten" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="./img/twshare.png"></a></li>
-  <li><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="./img/tshare.png"></a></li>
-  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fstriblab.github.io/startribune_dataviz/&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="./img/rshare.png"></a></li>
-</ul>
-</div>
-</div>
-
-<div id="footerBottom">StarTribune 2016</div>
+<div id="footer"><span><a href="https://creativecommons.org/" target="new_"><img src="http://freyhargarten.com/_base/img/cc.large.png" width="15px" /></a></span> Star Tribune, Frey Hargarten 2016</div>
 </body>
-<!--close specialContentWrapper-->
+<!--close wrapper-->
 
-<!-- custom scripts calls for this page -->
-
-
-<!-- custom script coding for this page -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530d7525029946bb"></script>
 
 <script>
 
@@ -526,8 +561,8 @@ $('#allProjects, #allProjects_m').css("background-color","#ddd");
   $("#allProjects, #allProjects_m").find(".count").html($(".articleEntry").length);
 $( ".sort-link" ).click(function() {
   killPaging = true;
-  $('#search-criteria_m').val("");
-  $('#search-criteria').val("");
+  $('#filter_box').val("");
+  $('#filter_box').val("");
   $(".articleEntry").hide();
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
@@ -550,20 +585,7 @@ $( "#allProjects, #allProjects_m" ).click(function() {
 $( document ).ready(function() {
    
 
- $('#search-criteria').keyup(function(){
-    $('.articleEntry, .linkage').hide();
-    $(".sort-link").css("background-color","#fff");
-    var txt = $('#search-criteria').val();
-    if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
-    $('.articleName, .byline, .linkage').each(function(){
-       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
-           $(this).parent().show();
-           $(this).show();
-       }
-    });
-});
-
-$('#search-criteria_m').keyup(function(){
+$('#filter_box').keyup(function(){
     $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
     var txt = $('#search-criteria_m').val();
@@ -633,6 +655,36 @@ if ($.urlParam('page') != 0 ) {
 
 });
 });
+
+$(document).ready(function () {
+
+  $(".socialBox").hide();
+  $("#overall").show();
+
+    $(".menu-btn a").click(function () {
+        $(".overlay").fadeToggle(200);
+        $(this).toggleClass('btn-open').toggleClass('btn-close');
+    });
+
+    $('.overlay').on('click', function () {
+        $(".overlay").fadeToggle(200);
+        $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+    });
+
+    $('.menu a').on('click', function () {
+        $(".overlay").fadeToggle(200);
+        $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
+    });
+
+    $(".icon img").click(function () {
+        $(".socialBox").hide();
+        $(".icon").removeClass('selected');
+        // window.history.pushState(null, null, '/?page=' + $(this).attr("data"));
+        $(this).parent().addClass('selected');
+        $("#" + $(this).attr("data")).fadeToggle(200);
+    });
+
+});
 </script>
 <script type="text/javascript">
       
@@ -681,3 +733,4 @@ if ($.urlParam('page') != 0 ) {
       });
 
 </script>
+</html>
