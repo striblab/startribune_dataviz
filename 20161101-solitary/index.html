@@ -345,7 +345,7 @@ function spitCalendars(id){
   var endblock;
 
   for (var k=1; k < startRange.length; k++){
-    range += Math.round((endRange[k].getTime() - startRange[k].getTime())/(1000*60*60*24));
+    range += Math.round(((endRange[k].getTime()) - startRange[k].getTime())/(1000*60*60*24));
 
     var startblock = "d" + startRange[k].getTime();
     var endblock = "d" + endRange[k].getTime();
@@ -380,7 +380,7 @@ function spitCalendars(id){
 
 if (id == 204314){
 
-      var healthDays = 2088;
+      var healthDays = 2115;
       $(".clause").show();
       $("#healthDays").html(d3.format(",")(healthDays));
 
