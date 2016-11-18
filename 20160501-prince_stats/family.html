@@ -108,9 +108,9 @@
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
 //https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
 
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=profiles", function(error, dataLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=contacts", function(error, dataLoadContacts) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=timeline", function(error, dataLoadTime) {
+d3.json("./data/profiles.json", function(error, dataLoad) {
+d3.json("./data/contacts.json", function(error, dataLoadContacts) {
+d3.json("./data/timeline.json", function(error, dataLoadTime) {
 
 var data = dataLoad.profiles;
 var dataContacts = dataLoadContacts.contacts;

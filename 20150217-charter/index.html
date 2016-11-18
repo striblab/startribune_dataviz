@@ -1004,20 +1004,8 @@
 <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/725b2a2115b/sorting/formatted-numbers.js"></script>
 
 <script>
-//LIVE JSON MAGIC
+d3.json("./data/scores.json", function(error, dataLoad) {
 
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1DqAAXzqQpfHoZ2xXlI7E_m9tT6RPuG_ks_rlWYRYzA4&sheet=scores
-
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=xWYgn9hOr75ajKn40iSeTidxgooc5BJBs7e0wUCDk2BeUH4gvoUK6BIhmzvR8I3CDhktgysid2B8tADcD25Wjck16sItgbIhOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6T1aSlyoJhomszdFEJ4O60icmOLOnU7dJHURRy1VefYOkjJU8Fi2N0eUbF4XoTIQ6hzd_dgT7OAiYiftTNJGaPHA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1DqAAXzqQpfHoZ2xXlI7E_m9tT6RPuG_ks_rlWYRYzA4&sheet=scores", function(error, dataLoad) {
-
-// var dataLoad = <?php echo $jsonData; ?>
-
-// var data = dataLoad.scores;
-  
   $(document).ready(function(){
       $('#stuff').dataTable({"iDisplayLength": 9, "oLanguage": {"sSearch": ""}, "scrollY": "425px", "scrollCollapse": true, "paging": false, columnDefs: [{ type: 'formatted-num', targets: 2 }]});
 

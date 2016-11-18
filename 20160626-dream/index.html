@@ -166,11 +166,6 @@
 <script src="//d3js.org/topojson.v1.min.js"></script>
 
 <script>
-//http://www.nytimes.com/2013/07/22/business/in-climbing-income-ladder-location-matters.html?pagewanted=all
-//http://bl.ocks.org/d3noob/c9b90689c1438f57d649
-
-</script>
-<script>
 var toggle = "p1";
 
 $(".metroSwitch").click(function() {
@@ -182,13 +177,7 @@ $(".metroSwitch").click(function() {
   $("#" + $(this).attr("data") + "Chatter").show();
 });
 
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1IA2b2UwsXVyxSN-vyF1wQh12dJjmeB2LzJUK54Mt7qY&sheet=countiesAll
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1RiNtORVIispxDGDxtdDljvs0CEDP94EaV2B3wbcMkXk&sheet=events
-
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=Iiu7d5v7uTzA3A8rDzVrgIny3eTE8z8jaPvVyu04yib0bfX4MpnA0IEMtzTg2qpCFyrWiHjphI6f_UZO-CDZotNiCpgau37DOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TBNazkN1LwDkRgliZDyKih_Q8eB04lcAX-r6YpSSA6aP54X-URYOTRFs3Us1YSAyaW0Ar8EAym2_s8cJgq7PpvZlqkDfXKzXo&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, json) {
+d3.json("./data/aum.json", function(error, json) {
 
 var data = json.countiesAll;
 

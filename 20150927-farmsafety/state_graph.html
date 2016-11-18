@@ -176,15 +176,7 @@
 <script src="js/jquery.sticky.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1eGWgtyT4ouwi6DKZF8rE8eTlOjTeBrk3KozImcCFNyA&sheet=rates
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=wi1U33nrsG4Qe0xqeEigPFZQldp-ak3QeroA31DRqKrw77jJqsJSMDOuy2S0b1IfGYwoAtAaexVlV54adT_nDBMxng6-QQfvOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TLmt2PNm_0LkIyvgo3_FyFlMqvjY5AMuWPb-SbbO92YRo-6y4IMKOTzS4f-N1wum-xcG-w52aeuShZPjsV88guw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=wi1U33nrsG4Qe0xqeEigPFZQldp-ak3QeroA31DRqKrw77jJqsJSMDOuy2S0b1IfGYwoAtAaexVlV54adT_nDBMxng6-QQfvOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TLmt2PNm_0LkIyvgo3_FyFlMqvjY5AMuWPb-SbbO92YRo-6y4IMKOTzS4f-N1wum-xcG-w52aeuShZPjsV88guw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataLoad) {
-
-// var dataLoad = <?php echo $jsonData; ?>
+d3.json("./data/rates.json", function(error, dataLoad) {
 
 var data = dataLoad.rates;
 

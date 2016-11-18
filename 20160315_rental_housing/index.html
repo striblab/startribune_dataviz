@@ -118,13 +118,8 @@
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1rHKgLz3z8LSR-J01DthEeTF9dACUeu07zRrEwZlaZDw&sheet=rentalHousing
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1rHKgLz3z8LSR-J01DthEeTF9dACUeu07zRrEwZlaZDw&sheet=costBurden
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1rHKgLz3z8LSR-J01DthEeTF9dACUeu07zRrEwZlaZDw&sheet=rentalHousing", function(error, json) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1rHKgLz3z8LSR-J01DthEeTF9dACUeu07zRrEwZlaZDw&sheet=costBurden", function(error, json2) {
+d3.json("./data/rental_housing.json", function(error, json) {
+d3.json("./data/cost_burden.json", function(error, json2) {
 
 var dataHousing = json.rentalHousing;
 var dataBurden = json2.costBurden;

@@ -138,28 +138,10 @@
 <script src="js/jquery.initialize.js"></script>
 
 <script>
-//LIVE JSON MAGIC
+d3.json("./data/chart_breakdowns.json", function(error, dataChartLoad) {
+d3.json("./data/white_breakdowns.json", function(error, dataChartLoadW) {
+d3.json("./data/minority_breakdowns.json", function(error, dataChartLoadM) {
 
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=segregation_status
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=chart_breakdowns
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=white_breakdowns
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=minority_breakdowns
-//https://drivenotepad.appspot.com/app?state=%7B%22ids%22:%5B%220B01GwdexvA5PVGhNUU5UMXdQTWc%22%5D,%22action%22:%22open%22%7D
-
-//THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-
-// $jsonChart = file_get_contents("https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=O7JGTiU9JX3wNMzOLJTEUWWm4sEPtiqWEp3ih-t6tlmxMvmu6KkcmOeBRpM6-121aC-R2XNl4ALkdkeiWJ9kf2G1c3MCxNm9OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzI-mtKRf-8plGOUy-lJCxpF2DQLccfmsBGWAyiujVfWxmelbCou2EhfNg1xV69xW9102aPo2dzOFtTQmYRJSnvtduGLVKr9rYwjNh_sEyWjORYPdsBNrk6UOb9cKNfNz5Vl-itTxC18SLtDSB5x-usvR3ZB_eUI38hNQWStQvGwnIEB_jcADA_w&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonChartW = file_get_contents("https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=RtADPilWZofRQwuA0e1nD2M_u2ajVzpHZHBEQ2tJGWV_3YtBzI-hu-4grxrVY5Iv6HarTZzVa3NcwQxiBqBR7c6GamGECmVvOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzI-mtKRf-8plGOUy-lJCxpF2DQLccfmsBGWAyiujVfWxmelbCou2EhfNg1xV69xW9102aPo2dzOFtTQmYRJSnvtduGLVKr9rYwjNh_sEyWjORYPdsBNrk6UOb9cKNfNz5Vl-itTxC18SLtDSB5x-ussyItN6smo0VhNQWStQvGwnIEB_jcADA_w&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonChartM = file_get_contents("https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=ZALlOdc2rOhozHneIdqNLSJsxy9OiIFPHUuwtzgmc2HAqK6Xj2GMx_EjefEnQ5JLysI7VAiHqjUF8korLEw59hGCikTuVAwdOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzI-mtKRf-8plGOUy-lJCxpF2DQLccfmsBGWAyiujVfWxmelbCou2EhfNg1xV69xW9102aPo2dzOFtTQmYRJSnvtduGLVKr9rYwjNh_sEyWjORYPdsBNrk6UOb9cKNfNz5Vl-itTxC18SLtDSB5x-usqGq3wgorTFF5Mim1nsZQ3SsfyYN-7SmVQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=chart_breakdowns", function(error, dataChartLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=white_breakdowns", function(error, dataChartLoadW) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=minority_breakdowns", function(error, dataChartLoadM) {
-
-//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
-// var dataChartLoad = <?php echo $jsonChart; ?>;
-// var dataChartLoadW = <?php echo $jsonChartW; ?>;
-// var dataChartLoadM = <?php echo $jsonChartM; ?>;
 
 var dataChart = dataChartLoad.chart_breakdowns;
 var dataChartW = dataChartLoadW.white_breakdowns;

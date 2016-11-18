@@ -129,16 +129,8 @@ Sufficiency Rating
 <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI&sheet=highway_bridges
-//http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI&sheet=highway_bridges
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=0wOqpzm3l2g_3nOsS0U811K3_OWKCnkUblFwXrtobf9mxuwoW6dUSw3puid3xHnKBkHbd_Uf9fqRmcccXwXZBykkONrfCKtXOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTzLz7xvOCphkOMuyyaLvUX75TNyc1uoTlh6GLDlJWoUcBNutXp44Tqy6uTvB6WQySCWgToZmllaNO4CI5jbdKsX_gZbJLCkm&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI&sheet=highway_bridges", function(error, json) {
-  d3.json("shapefiles/counties.json", function(error, us) {
+d3.json("./data/highway_bridges.json", function(error, json) {
+d3.json("shapefiles/counties.json", function(error, us) {
 
 var data = json;
 
@@ -153,22 +145,6 @@ $(window).on("resize", function() {
 
 
 $(document).ready(function(){
-
-// d3.csv("data/bridges_sd_th.csv", function(error, csvData) {
-//     csvData.forEach(function(d) {
-//         d.county = d.county;
-//   d.facility = d.road;
-//   d.intersection = d.intersected;
-//   d.year = d.built;
-//   d.type = d.sd;
-//   d.rating = +d.rating;
-//   d.status = d.status;
-//         d.inspected = d.last_inspected;
-//   d.lat = d.latitude;
-//   d.long = d.longitude;
-//     });
-
-
 
 var ramsey = 8;
 var hennepin = 6;

@@ -130,19 +130,6 @@
 <script src="js/nvd3-master/examples/stream_layers.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1X9fPQ-FUegTf8E4HWtXeySCKzM9qtKbJs56tD2R6KRE&sheet=greenline_ridership
-
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=YFQKBYw4L84kl7adaq1TYJXBNN4Uzz_NKklH2ZtncZkqqH-ts8gOTQ7snzDUksQV0lkDpXHLadBLgFhOtyK2wfJcgupDbMfoOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tfv0G49k1zY7acJXCedsJ5llqxXBMPUct2GGl0aTEOo3-5hZiyrwzA-hjpkEftHNgbpduxq8FudgLSSmnsv9CwmE7j-oM2zeHYm4lCyG2i8Y&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-// var data = <?php echo $jsonData; ?>;
-
-// var boardData = data.greenline_ridership;
-</script>
-
-<script>
 var aspect = 800 / 350, chart = $("#map svg");
 $(window).on("resize", function() {   
   var targetWidth = chart.parent().width();   
@@ -159,27 +146,7 @@ $( ".myButton" ).click(function() {
 </script>
 
 <script>
-
-// d3.csv("data/boardings_avg.csv", function(error, boardData) {
-//     boardData.forEach(function(d) {
-//   d.station = d.Station;
-//   d.Jun14Avg = +d.Jun14Avg;
-//   d.Jul14Avg = +d.Jul14Avg;
-//   d.Aug14Avg = +d.Aug14Avg;
-//   d.Sep14Avg = +d.Sep14Avg;
-//   d.Oct14Avg = +d.Oct14Avg;
-//   d.Nov14Avg = +d.Nov14Avg;
-//   d.Dec14Avg = +d.Dec14Avg;
-//   d.Total14Avg = +d.Total14Avg;
-//   d.Jan15Avg = +d.Jan15Avg;
-//   d.Feb15Avg = +d.Feb15Avg;
-//   d.Mar15Avg = +d.Mar15Avg;
-//   d.April15Avg = +d.April15Avg;
-//   d.May15Avg = +d.May15Avg;
-//   d.Total15Avg = +d.Total15Avg;
-//     });
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1X9fPQ-FUegTf8E4HWtXeySCKzM9qtKbJs56tD2R6KRE&sheet=greenline_ridership", function(error, data) {
+d3.json("./data/greenline_ridership.json", function(error, data) {
 
 var boardData = data.greenline_ridership;
 

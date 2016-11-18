@@ -12,7 +12,7 @@
          body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
        #selector { margin-left:auto; margin-right:auto; text-align:center; }
        .button { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #ddd; }
-       .button:hover, .selected { background-color:#bc73bb !important; cursor:pointer;  }
+       .button:hover, .selected { background-color:#bc73bb !important; cursor:pointer; margin:0 !important;  }
     
        .button { float:left; }
        .stat { float:right; }
@@ -203,7 +203,7 @@ overflow-y: auto;
 </script>
 <script>
 //LIVE JSON MAGIC
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI&sheet=stats", function(error, dataLoad) {
+d3.json("./data/prince.json", function(error, dataLoad) {
 var data = dataLoad.stats;
 $('.scrollToTop').click(function(){
     $('.rightSide').animate({scrollTop : 0},800);

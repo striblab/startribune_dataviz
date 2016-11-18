@@ -105,19 +105,6 @@
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1EyIcKkeGu8BFF51CyGeTd1bybEArzNO4qNsxX8u0cP0&sheet=drugArrests
-
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=pc_HPLczStSbM00VConqiWKYre_FNRD2I7cyiEaKwRhvMQbbo0wpEVmz8AK8o2-rJi1Yr6Ic-WRMEqp87gvMiJUXXhrHMWNeOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6T2cEIEYlv5-V6PlfYHawZrqn0KuOJARhDH3oN3OU6WCYQn90h_xdS1o6DP6KL63Ps3dzJzZTV7GhhEyfZYBWdObkn56t7w9_u&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1JpW0sgMM4grkFjkj1UI6JF8ajmMCAwUsNzshTAp_EQk&sheet=mn_counties", function(error, data) {
-
-// var data = <?php echo $jsonData; ?>
-
-// var bustData = data.drugArrests;
-
 var aspect = 630 / 600,   chart = $("#map svg");
 $(window).on("resize", function() {   
   var targetWidth = chart.parent().width(); 
@@ -474,7 +461,6 @@ var mjData = [{
         "value": .5673
     }]
 }]
-});
 });
 </script> 
 </html>

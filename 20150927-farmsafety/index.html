@@ -527,17 +527,7 @@
 <script src="js/colorbox-master/jquery.colorbox.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1eGWgtyT4ouwi6DKZF8rE8eTlOjTeBrk3KozImcCFNyA&sheet=Sheet1
-
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=oR8e3j3xA7Z3sA8DdxEopk_dwa1OmXkaD2j3nHT7JajVgFrIcex9YgeWpim9c2Nn8kpF7V9Jmm7R5GhjYPiojNc7nz-Tnze4OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TLmt2PNm_0LkIyvgo3_FyFlMqvjY5AMuWPb-SbbO92YRo-6y4IMKOTzS4f-N1wum-5y7FLqOV0Tk27B8Rh4QJTQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1eGWgtyT4ouwi6DKZF8rE8eTlOjTeBrk3KozImcCFNyA&sheet=Sheet1", function(error, data) {
-
-
-// var data = <?php echo $jsonData; ?>
+d3.json("./data/deaths.json", function(error, data) {
 
 //DEFINE COLOR SWATCHES
 allSwatch = "#999999";

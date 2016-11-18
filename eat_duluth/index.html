@@ -678,9 +678,9 @@
 <script src="js/featherlight-master/src/featherlight.js"></script>
 <script>
 
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=duluth", function(error, dataLoadD) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=superior", function(error, dataLoadS) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1NtnhoawFWm2-LahvvRr3jOmSGKuGM7x_B17evdDRfmE&sheet=lake_pepin", function(error, dataLoadP) {
+d3.json("./data/duluth.json", function(error, dataLoadD) {
+d3.json("./data/superior.json", function(error, dataLoadS) {
+d3.json("./data/lake_pepin.json", function(error, dataLoadP) {
 d3.json('./data/duluth.geojson', function(error, dotsD) {
 d3.json('./data/pepin.geojson', function(error, dotsP) {
 d3.json('./data/superior.geojson', function(error, dotsS) {

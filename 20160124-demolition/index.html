@@ -205,18 +205,8 @@ var pymChild = new pym.Child();
 </script>
 
 <script>
-//LIVE JSON MAGIC
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ&sheet=minneapolis
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ&sheet=minneapolisParcels
-
-
-// $jsonDataTeardowns = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=9VKeGAmPZj_9XeUYV34rbrGLdnhnpVd9f-EP5Qalsw6HPSArUsn_wg55tWWmeknVpHxIm6HZBsn0vx8D_nO2EKexLx7yUrqNOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TKT0XypQ53EL7IeizIpPSlbwZKZErRZu3grvwA3jhdCB8rBOMfkuHrr6ocnMDbLZR35iDyrfKhrpBtcwx7r9-pYtdjieda6Sn&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataParcels = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=rrAoB_wZMecV3cLY65bgAOReFqnPI5XOaf9rlf8OFVTMcQRs3x3vZmVEfCFKV4M3W5kKrqK_VX30vx8D_nO2EBPKsrdt7rEJOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TKT0XypQ53EL7IeizIpPSlbwZKZErRZu3grvwA3jhdCB8rBOMfkuHrr6ocnMDbLZR35iDyrfKhrpBtcwx7r9-pSb-3rH5zIQpyBAf43AAwP8&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ&sheet=minneapolis", function(error, dataTeardownsLoad) {
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ&sheet=minneapolisParcels", function(error, dataParcelsLoad) {
+d3.json("./data/minneapolis.json", function(error, dataTeardownsLoad) {
+d3.json("./data/minneapolisParcels.json", function(error, dataParcelsLoad) {
 
 $("#back").css('visibility', 'hidden');
 

@@ -77,11 +77,7 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mncounty_smoking
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mncountySmoking", function(dataLoad) {
+d3.json("./data/mncountySmoking.json", function(dataLoad) {
 
 var data = dataLoad.mncountySmoking;
 
@@ -92,9 +88,6 @@ var mapBounds = new L.LatLngBounds(
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
   var map = L.mapbox.map('map', 'mapbox.light')
     .setView([46.358056, -94.200833], 7);
-
-//Load whatever base map layer you want, whether OpenStreetMap, GoogleMaps, MapBox or something custom and random
-// var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 map.setView([45.9703, -94.1748], 6);
 
