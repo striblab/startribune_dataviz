@@ -50,34 +50,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=golfRevenue
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=skiRevenue
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=foodRevenue
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=totalRevenue
-
-
-// $jsonDataGolf = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=I6Ci_Z3KGkyMwiCUapP0Xtedw0TmOvVCOnjpg_vtLrzLy7AcGO4f1-3dV9OlV3C3FwBn39qVPZZb9PC_W7yAKyBvkKxeTUlYOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TOu-pBVr_KKIoCKUZbY94U8WrSyuyXPuHOYGRBuBd96b-KgarCDUqOyJkSjDTkFEVbpduxq8FudgkBER6bGKj1DY3eh6Wj_ZT&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataSki = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=KSue6BVwpDahVAKMFVC9Am3Dq6NDnphfC9x4b2OFa6iB6UXb6JoDdjtAzcTauCiFs2Faq68v3IRb9PC_W7yAK74nlvpc6ETrOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TOu-pBVr_KKIoCKUZbY94U8WrSyuyXPuHOYGRBuBd96b-KgarCDUqOyJkSjDTkFEVzd_dgT7OAibIh3aZb7mF-o2qrCO0PzE3&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataFood = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=nzkZzRiMcmlUXvTs-gRjhK72sir72lEPdapBJSwXKXMd_zzGi0LnB-0PEBD4TQELt5w5J0WDpn8b04nfWkKAAMqfdprY7Tr-OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TOu-pBVr_KKIoCKUZbY94U8WrSyuyXPuHOYGRBuBd96b-KgarCDUqOyJkSjDTkFEVzup67gDRLyIBmW0SC523ajY3eh6Wj_ZT&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataTotal = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=nnvZXIIYNecfsp7hZgIdUqkSzmDjm0HUWhPHKykSGB7uATbEVm7pYHJX3UtDOLmU39C4jVc6jKYb04nfWkKAALBYLCUP8llEOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TOu-pBVr_KKIoCKUZbY94U8WrSyuyXPuHOYGRBuBd96b-KgarCDUqOyJkSjDTkFEVvHGwpxn9NdGPtvNIRa8_QTWs3JWtkYZ5&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=golfRevenue", function(error, dataGolfLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=skiRevenue", function(error, dataSkiLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=foodRevenue", function(error, dataFoodLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1AO4WE-XPuVrOgLj3clPasArlOBeWz_JvpjKVNW1g0Rg&sheet=totalRevenue", function(error, dataTotalLoad) {
-
-// var dataGolfLoad = <?php echo $jsonDataGolf; ?>
-// var dataSkiLoad = <?php echo $jsonDataSki; ?>
-// var dataFoodLoad = <?php echo $jsonDataFood; ?>
-// var dataTotalLoad = <?php echo $jsonDataTotal; ?>
-
-// var dataGolf = dataGolfLoad.golfRevenue;
-// var dataSki = dataSkiLoad.skiRevenue;
-// var dataFood = dataFoodLoad.foodRevenue;
-// var dataTotal = dataTotalLoad.totalRevenue;
+d3.json("./data/golfRevenue.json", function(error, dataGolfLoad) {
+d3.json("./data/skiRevenue.json", function(error, dataSkiLoad) {
+d3.json("./data/foodRevenue.json", function(error, dataFoodLoad) {
+d3.json("./data/totalRevenue.json", function(error, dataTotalLoad) {
 
 var chart;
 nv.addGraph(function() {

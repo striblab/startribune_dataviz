@@ -117,24 +117,8 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1zalHsACkfNH0mFwMrMUwcho6El9CEzDbAiVPq2oaT34&sheet=data2010
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1zalHsACkfNH0mFwMrMUwcho6El9CEzDbAiVPq2oaT34&sheet=mntotals2010
-
-
-// $json2010Data = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=7UvodDuRFz4cSvrJl1WaofbmicCzLWLlE5fTlrKnbs6XKl9nW7qY4qu8cssysQwXMQRpe4k48JELThwAl5Zed68h01whQ0LXOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6T8VXsrpQWHdoCCqhuVxQCc9s-HzDeymtYblcNhCHKrhXYBgGczhsqru2HtU637Ynx3dzJzZTV7GjOV6wtJjWpHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonTotalsData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=tlVGuWb5X97BWhANVMHJLBlFv3pXxUbqgwgCLfjfSvulDk17_OibKuvSMtYJNfUBm2dNeUa5XqCzCH0uIzsIadsWNO4UwdKJOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6T8VXsrpQWHdoCCqhuVxQCc9s-HzDeymtYblcNhCHKrhXYBgGczhsqru2HtU637Ynx35iDyrfKhrp9Pqrlzti6KQTSoHANlI7H&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1zalHsACkfNH0mFwMrMUwcho6El9CEzDbAiVPq2oaT34&sheet=data2010", function(error, data2010Load) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1zalHsACkfNH0mFwMrMUwcho6El9CEzDbAiVPq2oaT34&sheet=mntotals2010", function(error, dataTotalsLoad) {
-
-// var data2010Load = <?php echo $json2010Data; ?>
-// var dataTotalsLoad = <?php echo $jsonTotalsData; ?>
-
-// var csvData2 = data2010Load.data2010;
-// var csvData2 = dataTotalLoad.mntotals2010;
+d3.json("./data/data2010.json", function(error, data2010Load) {
+d3.json("./data/mntotals2010.json", function(error, dataTotalsLoad) {
 
 $( document ).ready(function() {
     $("#aid").css("background-color","#333");

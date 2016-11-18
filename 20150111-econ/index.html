@@ -59,37 +59,12 @@
 <script src="js/nvd3-master/examples/stream_layers.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=us_employment
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=mn_jobs
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=consumer_sentiment
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=gdp
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=unemployment
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=gas_prices
-
-
-// $jsonDataEmployment = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=lDuq2QLoJI2sVFHwdW6l1XwJb6N0P5NvkBiG_fgiVQw6GgKnr96yVFWvhi07sc-WPAMWcLFU2aVgxOnW6WwtuIXfCOshxK0kOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TlKWY28apK4GWPLGu8IzhCAQgAezk9Te-YwwVTIfZD9u19sYfDmmkRl5m5tJuQZnNUFd-GmD5L_wkQ20FJXnGbufLq6yf0mIl&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataJobs = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=IjYGDXBrPrBfej4tQYg2gtH8uWgKUXP1w24apmGx-lEf_4-Cm4KtEa3IiG96AnZoyg-ryTYcOsVgxOnW6WwtuHvv71zukT5uOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TlKWY28apK4GWPLGu8IzhCAQgAezk9Te-YwwVTIfZD9u19sYfDmmkRl5m5tJuQZnN35iDyrfKhroZ1-h8WExqwQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataConsumer = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=X3DRAIHCT79gGTUgZoSgQNIg3dkNB2MlnYFSGNeS6sWGU5kx0am729u9ERVFNWDS1VAcn7Vfs8b2KFBhMo-m7ouYMDOX233KOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TlKWY28apK4GWPLGu8IzhCAQgAezk9Te-YwwVTIfZD9u19sYfDmmkRl5m5tJuQZnNW0Ar8EAym2_ODekF422rbL72vXLIl28D9ei23o0Wz2M&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataGDP = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=swPCSgPrGpE6p-qz75oX4ATt0i3EasTOU7yx3Q2MYiwahyR60B6zd7TV9fj07j5785QISs1QPg72KFBhMo-m7uBbXdQoXw2UOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TlKWY28apK4GWPLGu8IzhCAQgAezk9Te-YwwVTIfZD9u19sYfDmmkRl5m5tJuQZnNbpduxq8Fudi6OkT85HQhMw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataUnemployment = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=-wENe99Ck99JtLGOSH3-xRGYPYlUhn6eCElRuY__FCe8guOAk0hBW43irrf37QMy_ZRjdfvGgDb2KFBhMo-m7gPhOXmrz5BDOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TlKWY28apK4GWPLGu8IzhCAQgAezk9Te-YwwVTIfZD9u19sYfDmmkRl5m5tJuQZnNUFd-GmD5L_wKnHy6Yc1coyge5pkNL5ic&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataGas = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=IYfKCStiXh4kkIuG8jdD2RG1uHS2a0w9or5tiiCnJ65Rx3CbgQVxb1ZNafPw5dJ-CyFqNNhwOxb2KFBhMo-m7gi0pn4378QNOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TlKWY28apK4GWPLGu8IzhCAQgAezk9Te-YwwVTIfZD9u19sYfDmmkRl5m5tJuQZnNbpduxq8FudirZJBeLBW_csgQH-NwAMD_&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=us_employment", function(error, dataEmployment) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=mn_jobs", function(error, dataJobs) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=consumer_sentiment", function(error, dataConsumer) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=gdp", function(error, dataGDP) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=unemployment", function(error, dataUnemployment) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08&sheet=gas_prices", function(error, dataGas) {
-
-// var dataEmployment = <?php echo $jsonDataEmployment; ?>
-// var dataJobs = <?php echo $jsonDataJobs; ?>
-// var dataConsumer = <?php echo $jsonDataConsumer; ?>
-// var dataGDP = <?php echo $jsonDataGDP; ?>
-// var dataUnemployment = <?php echo $jsonDataUnemployment; ?>
-// var dataGas = <?php echo $jsonDataGas; ?>
+d3.json("./data/us_employment.json", function(error, dataEmployment) {
+d3.json("./data/mn_jobs.json", function(error, dataJobs) {
+d3.json("./data/consumer_sentiment.json", function(error, dataConsumer) {
+d3.json("./data/gdp.json", function(error, dataGDP) {
+d3.json("./data/unemployment.json", function(error, dataUnemployment) {
+d3.json("./data/gas_prices.json", function(error, dataGas) {
 
 var gdpData = dataGDP.gdp;
 var unemployment = dataUnemployment.unemployment;

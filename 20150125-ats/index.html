@@ -126,40 +126,6 @@
 <script src="js/nvd3-master/examples/stream_layers.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnregion_ats
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mntypes_ats
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnage_ats
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnus_ats
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnsecondhand_ats
-
-
-// $jsonDataRegions = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=1dd1lIcNvlnj41WSit85xJQf-X1Zcatn8djMkpkm__-Tpj-vPowBpzrDz56O5V5d-Mh1B3VXtRaEbLGbhWjhU-hjooR7ikj6OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tw5fEDf5wv_nmp-nLZgqbJVEVuGN3COaK75NAOujuuU2IP20NR3O_nfFTZRYf37Vs35iDyrfKhrqTM3LwEXkptAk1kCVwhYU8&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataTypes = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=ipr6vSCQMr8POPYx-7hiM5vegQvpJ2RuoKTAoPCfBpzl0iwItQow4K41KxL9mbwyQFdnr3Ft9yaEbLGbhWjhUwRmKDELiN-lOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tw5fEDf5wv_nmp-nLZgqbJVEVuGN3COaK75NAOujuuU2IP20NR3O_nfFTZRYf37Vs35iDyrfKhrpxBVwIWOV90Lkn56t7w9_u&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataSecondhand = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=MusAViszh2_f9JxG-a0AE2yWHS0G7vAAojJs42oFobo7xB8tebYYkblAhnDOxdcFHuOhbrgEvQU_JV0m8uQPGCz46_E8zOSsOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tw5fEDf5wv_nmp-nLZgqbJVEVuGN3COaK75NAOujuuU2IP20NR3O_nfFTZRYf37Vs35iDyrfKhrrWi9YEhT1ePL0ykgOOYMM6&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataUS = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=pvB6dkZC4RuaCfu-f2Wv4-XSSieBl0egqDewiV_W9YTGTn1v_Koh0HBuj6i3Hzp38x81mAorUto_JV0m8uQPGORneWivZfhtOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tw5fEDf5wv_nmp-nLZgqbJVEVuGN3COaK75NAOujuuU2IP20NR3O_nfFTZRYf37Vs35iDyrfKhrqTGN76TvFqVA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataAge = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=EIOVHK5XtITiDf-9Ex2d63CjQYJJ0xHdig9XFZZRTKYWDrjny_Hdb9X3yXMWQsauwFGFQYZnFkc_JV0m8uQPGDQvR8qqHsdbOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6Tw5fEDf5wv_nmp-nLZgqbJVEVuGN3COaK75NAOujuuU2IP20NR3O_nfFTZRYf37Vs35iDyrfKhrpJrIHYUZvBoQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnregion_ats", function(error, dataRegionsLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mntypes_ats", function(error, dataTypesLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnsecondhand_ats", function(error, dataSecondhandLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnus_ats", function(error, dataUSLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00&sheet=mnage_ats", function(error, dataAgeLoad) {
-
-// var dataRegionsLoad = <?php echo $jsonDataRegions; ?>
-// var dataTypesLoad = <?php echo $jsonDataTypes; ?>
-// var dataSecondhandLoad = <?php echo $jsonDataSecondhand; ?>
-// var dataUSLoad = <?php echo $jsonDataUS; ?>
-// var dataAgeLoad = <?php echo $jsonDataAge; ?>
-
-// var dataRegions = dataRegionsLoad.mnregion_ats;
-// var dataSecondhand = dataSecondhandLoad.mnsecondhand_ats;
-// var dataTypes = dataTypesLoad.mntypes_ats;
-// var dataUS = dataUSLoad.mnus_ats;
-// var dataAge = dataAgeLoad.mnage_ats;
-
 var aspect = 550 / 550,
     chart = $("#map svg");
 $(window).on("resize", function() {
@@ -597,11 +563,6 @@ d3.helper.tooltip = function(accessor){
 
     };
 };
-});
-});
-});
-});
-});
 </script>
 
 </html>

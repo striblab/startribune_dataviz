@@ -89,15 +89,7 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1TFaDqK7Q_YZ1ucWCdB8snFQrlGiRtA4hOpcDBW0KrGg&sheet=districts
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=3H15wwkLvI0fcVkgEOpIxL4Z-WQzBhPwRrgE4c-G0mmYV_eDWyyZiZrgx0Dn1a67ESsHfNHRT8gqJngjE_Ezh2Yp4-AEGShJOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6THvj8nhwyf7HquKh-yCje2smCxo-567jG9MKKlG-RzX16oe7mbg5yHyGBE13DvETm3dzJzZTV7Gje_hBp2hW1OA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-// var dataLoad = <?php echo $jsonData; ?>
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1TFaDqK7Q_YZ1ucWCdB8snFQrlGiRtA4hOpcDBW0KrGg&sheet=districts", function(error, dataLoad) {
+d3.json("./data/districts.json", function(error, dataLoad) {
 
 var data = dataLoad.districts;
 
@@ -215,7 +207,7 @@ var customLayer = L.geoJson(null, {
     }
 });
 
-var districts = omnivore.csv('data/FootballData.csv',null,customLayer)
+var districts = omnivore.csv('./data/FootballData.csv',null,customLayer)
 // var districts = omnivore.csv('https://docs.google.com/spreadsheets/d/1TFaDqK7Q_YZ1ucWCdB8snFQrlGiRtA4hOpcDBW0KrGg/export?format=csv&id=1TFaDqK7Q_YZ1ucWCdB8snFQrlGiRtA4hOpcDBW0KrGg&gid=0',null,customLayer)
     .on('click', function(layer) {
         this.eachLayer(function(marker) {

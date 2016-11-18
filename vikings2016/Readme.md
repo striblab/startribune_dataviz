@@ -1,9 +1,10 @@
-Star Tribune Data Drop - Minnesota Airport Noise
+Star Tribune Data Drop - Vikings QB Passing Grid
 ================
 
 by Frey Hargarten
 
-Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [jQuery](https://github.com/jquery/jquery) and [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/). Powered by Google Sheets.
+Built using Mike Bostock's [D3](https://github.com/mbostock/d3) and [jQuery](https://github.com/jquery/jquery). Powered by Google Sheets.
 
 The files can be run in any live server setup. Just open the index.php or index.html file in your browser.
 
+http://www.startribune.com/vikings-sam-bradford-has-already-been-one-of-the-nfl-s-short-pass-leaders/400006501/?refresh=true

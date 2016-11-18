@@ -97,34 +97,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2010
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2011
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2012
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2013
-
-
-// $jsonData2010 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=CGU34zzZzjQ-Q5RxEG3DZ2_DPfQItcqML9zsGUWBCXIeqYc3Kva85cik2vUrlrTq-kob-djqrBZbk2Gs41SkE2fOY4j7cejnOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TL8jD69XUQdWJyj3BwusstzVp5koooVP2k7CJKget415y1Pp2LKVRb6E67AHPKrry3dzJzZTV7GjOV6wtJjWpHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonData2011 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=R5VDwwKqRuuNosijSW9p3wh49NFFce7cpYKjdf7YzzYnYshQr6tLSXv8qYiqa64OLnh4DX7-N9EnHYHXCNdjFK1N8ViP_jDHOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TL8jD69XUQdWJyj3BwusstzVp5koooVP2k7CJKget415y1Pp2LKVRb6E67AHPKrry3dzJzZTV7GhKaajAePxKUQ&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonData2012 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=jtR5NTnyHKj7VP3WLfo99-X5Huoxcgi5O9uUWA7Q2g2_7asGkFjJz0K9sgY73e6ps8KOd7NQdJwnHYHXCNdjFLWRVWoxSmzKOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TL8jD69XUQdWJyj3BwusstzVp5koooVP2k7CJKget415y1Pp2LKVRb6E67AHPKrry3dzJzZTV7GgEwKIU9KEm8g&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonData2013 = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=sqKSDqKZdXGoWDVDN6MKsqVe5AwoaZDpB6IjLPZh8U3fxgWudvPQKqfKxy7fgfGX3DAthac5yRUnHYHXCNdjFLd0TqfhQBMEOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TL8jD69XUQdWJyj3BwusstzVp5koooVP2k7CJKget415y1Pp2LKVRb6E67AHPKrry3dzJzZTV7GhgiY4yJtqsSg&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2010", function(error, data2010Load) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2011", function(error, data2011Load) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2012", function(error, data2012Load) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1_xNChmoWc2ABvcAvSoaDp1BEgAYVCkcouEsLte_oc8w&sheet=data2013", function(error, data2013Load) {
-
-// var data2010Load = <?php echo $jsonData2010; ?>
-// var data2011Load = <?php echo $jsonData2011; ?>
-// var data2012Load = <?php echo $jsonData2012; ?>
-// var data2013Load = <?php echo $jsonData2013; ?>
-
-// var data2010 = data2010Load.data2010;
-// var data2011 = data2011Load.data2011;
-// var data2012 = data2012Load.data2012;
-// var data2013 = data2013Load.data2013;
+d3.json("./data/data2010.json", function(error, data2010Load) {
+d3.json("./data/data2011.json", function(error, data2011Load) {
+d3.json("./data/data2012.json", function(error, data2012Load) {
+d3.json("./data/data2013.json", function(error, data2013Load) {
 
 var aspect = 900 / 250;
 var aspect2 = 900 / 700;

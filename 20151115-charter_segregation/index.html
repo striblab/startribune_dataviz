@@ -92,14 +92,14 @@
 
 //THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
 
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charter_breakdown", function(error, dataLoadBreakdown) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charter_demographics", function(error, dataLoadDemographics) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_poverty_white", function(error, dataLoadPovertyWhite) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_poverty_minority", function(error, dataLoadPovertyMinority) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_poverty_integrated", function(error, dataLoadPovertyIntegrated) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_proficiency_white", function(error, dataLoadProficiencyWhite) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_proficiency_minority", function(error, dataLoadProficiencyMinority) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_proficiency_integrated", function(error, dataLoadProficiencyIntegrated) {
+d3.json("./data/charter_breakdown.json", function(error, dataLoadBreakdown) {
+d3.json("./data/charter_demographics.json", function(error, dataLoadDemographics) {
+d3.json("./data/charters_poverty_white.json", function(error, dataLoadPovertyWhite) {
+d3.json("./data/charters_poverty_minority.json", function(error, dataLoadPovertyMinority) {
+d3.json("./data/charters_poverty_integrated.json", function(error, dataLoadPovertyIntegrated) {
+d3.json("./data/charters_proficiency_white.json", function(error, dataLoadProficiencyWhite) {
+d3.json("./data/charters_proficiency_minority.json", function(error, dataLoadProficiencyMinority) {
+d3.json("./data/charters_proficiency_integrated.json", function(error, dataLoadProficiencyIntegrated) {
 
 
 //THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT

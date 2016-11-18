@@ -49,18 +49,13 @@
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII&sheet=events
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII&sheet=summary
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII&sheet=events", function(error, json) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&?id=1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII&sheet=summary", function(error, json2) {
+d3.json("./data/events.json", function(error, json) {
+d3.json("./data/summary.json", function(error, json2) {
 
 var data = json.events;
-var dataChart = json2.summary;
+var dataChart = json2.sum;
 
-//CHART
+// CHART
 var  padding = {
         top: 20,
         right: 40,
@@ -128,7 +123,7 @@ var chartDecade = c3.generate({
                 // "scrollCollapse": true,
                 // "paging": false,
                 "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/od6/public/values?&alt=json",
+                "sAjaxSource": "http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII&sheet=events",
                 "aoColumns": [                 
                     { "mDataProp": "gsx$year.$t" },
                     { "mDataProp": "gsx$hospital.$t" },

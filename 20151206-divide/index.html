@@ -519,15 +519,15 @@
 
 
 // d3.json("http://googlescript.startribune.com/?AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ&sheet=minneapolisParcels", function(error, dataLoadBreakdown) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=religion", function(error, dataLoadReligion) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=medianIncome", function(error, dataLoadIncome) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=population", function(error, dataLoadPop) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=age", function(error, dataLoadAge) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=medianAge", function(error, dataLoadMAge) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=livingCosts", function(error, dataLoadLiving) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=education", function(error, dataLoadEducation) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=race", function(error, dataLoadRace) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=votes2012", function(error, dataLoadAmend) {
+d3.json("./data/religion.json", function(error, dataLoadReligion) {
+d3.json("./data/medianIncome.json", function(error, dataLoadIncome) {
+d3.json("./data/population.json", function(error, dataLoadPop) {
+d3.json("./data/age.json", function(error, dataLoadAge) {
+d3.json("./data/medianAge.json", function(error, dataLoadMAge) {
+d3.json("./data/livingCosts.json", function(error, dataLoadLiving) {
+d3.json("./data/education.json", function(error, dataLoadEducation) {
+d3.json("./data/race.json", function(error, dataLoadRace) {
+d3.json("./data/votes2012.json", function(error, dataLoadAmend) {
 
 //THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
 // var dataLoadBreakdown = <?php echo $jsonDataBreakdown; ?>;

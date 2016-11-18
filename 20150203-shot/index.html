@@ -402,25 +402,7 @@ h2 { color: #666; }
 <script src="http://apps.startribune.com/news/20150201-st-paul-police-shootings/nvd3-master/examples/stream_layers.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=stp_shootings
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mpls_shootings
-
-
-// $jsonDataSTP = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=KzNaWV0JB0g9XFM2pi6yCTYyC1rW4HNGNmmnfGQwlcB6zFQQCYcIbwBBx97hCbLOIZeoZDF3TrucTuKnWGNpZ2zC8AUDZHPQOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxzd_dgT7OAiauvEge2qMbLbECsxWSthHz&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataMPLS = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=JfSEO826as0zxqGV6nmfeWkRyXNrDg5GIynKx86hmP58q58W0InChT_5zgBuTxpsk0aCwRRTAlDQHR4Cgs6U9WsEdM6pTrFhOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrogJJ3xr17aTSpHXVormcll&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=KzNaWV0JB0g9XFM2pi6yCTYyC1rW4HNGNmmnfGQwlcB6zFQQCYcIbwBBx97hCbLOIZeoZDF3TrucTuKnWGNpZ2zC8AUDZHPQOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxzd_dgT7OAiauvEge2qMbLbECsxWSthHz&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataSTPLoad) {
-d3.json("https://script.googleusercontent.com/macros/echo?user_content_key=JfSEO826as0zxqGV6nmfeWkRyXNrDg5GIynKx86hmP58q58W0InChT_5zgBuTxpsk0aCwRRTAlDQHR4Cgs6U9WsEdM6pTrFhOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrogJJ3xr17aTSpHXVormcll&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX", function(error, dataMPLSLoad) {
-
-// var dataSTPLoad = <?php echo $jsonDataSTP; ?>
-// var dataMPLSLoad = <?php echo $jsonDataMPLS; ?>
-
-// var dataSTP = dataSTPLoad.stp_shootings;
-// var dataMPLS = dataSTPLoad.mpls_shootings;
-
+d3.json("./data/stp_shootings.json", function(error, dataSTPLoad) {
 
 //MENU STUFF
 function setVisibility(id, visibility) {
@@ -960,7 +942,5 @@ function redrawChart(data2){
 }
 
 });
-});
-//$( '#map' ).hide();
 </script>
 </html>

@@ -81,20 +81,9 @@
 
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1wspa73qBDJKlgP8ETQhgudW7L6KXG0UruiexyClGnfQ&sheet=sites
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=FQy3xn0XmgFcr0qUyjjtQnxWeWveU9qSQtuouMxX79ocKFIpXuUE7J-9Zak2WFVYTpi1wjKZTocDhP7XrJ-PY4DLLY5LZaz1OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TW_iS3QL5NWDjBKfHY6MA6ob4KNGMWjKza3gwUE5m7IWWOKImTLe82HtObrOOILNmzd_dgT7OAiYCZuS1zJBL_A&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1wspa73qBDJKlgP8ETQhgudW7L6KXG0UruiexyClGnfQ&sheet=sites", function(error, dataLoad) {
-
-
-
-// var dataLoad = <?php echo $jsonData; ?>
+d3.json("./data/sites.json", function(error, dataLoad) {
 
 var data = dataLoad.sites;
-
 
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
 
@@ -117,8 +106,8 @@ var map = L.mapbox.map('map', 'mapbox.light').setView([45.9703, -94.1748], 7)
 //DARK SITE LOCATIONS
 // 
 
-// var dark_sites = omnivore.csv('https://docs.google.com/spreadsheets/d/1wspa73qBDJKlgP8ETQhgudW7L6KXG0UruiexyClGnfQ/export?format=csv&id=1wspa73qBDJKlgP8ETQhgudW7L6KXG0UruiexyClGnfQ&gid=0')
-   var dark_sites = omnivore.csv('data/dark_sites.txt')
+var dark_sites = omnivore.csv('./data/sites.csv')
+   // var dark_sites = omnivore.csv('data/dark_sites.txt')
     .on('ready', function(layer) {
 
         this.eachLayer(function(marker) {

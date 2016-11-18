@@ -77,56 +77,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=drugsMPLS
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=drugsStCloud
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=drugsFargo
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=patients
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=percentage_combined
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=painMPLS
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=painStCloud
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=painFargo
-
-
-// $jsonDataMPLSdrugs = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=d0V7YdlFnbm93YFxZvCx7V8QyiLmasUPhSSuiPgqOROQYDTvEHuK9JImNPyCmS8CnbLTAo2DSGn40hh5HwG1KE75BKInOLOCOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg53dzJzZTV7GhsIPisIKtPdA&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataSTCdrugs = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=8hHq7c2gpVc8-IBDVVJfFc82cFjI9V2XuUcTusS691_155Rs-2NaaTFCi_D2vlowjtamSixloK740hh5HwG1KDgnPew7YWmZOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg53dzJzZTV7Gj_Tkbgb44Rtsx4Wk6doCLN&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataFRGdrugs = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=qjChyEH4KyWEbXU2Yvss_ec9aXPqR1-d6rEDfhLd7QRqr-2gOX5we34iVUwpMQMpZImsaXZVVaT40hh5HwG1KI_8ZMVZJpJ2OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg53dzJzZTV7GiPmyzPrIGRUJGNj-qTZ_41&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataPatients = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=iIkcxRXrv86x8etK_4eOLAW7TuFbdAWoOumYC6QlW1ZQ9GMAklKajd3REDQY2n6cCK2Bz_0Oq6GokgxqltYdoW8LNDsjZDd4OJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg5vl7IGsXAM8mreszkdyKLHg&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataPCT = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=n5gcCBr638qzoc0ATQyAPOelrXdon2xJnM3gP1nxT23edaZX9A3muDr6NKhUttuXX_61lyCgO9KokgxqltYdoVYaYryoAfvlOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg5vl7IGsXAM8nZ4RdT-csL5n3yB_lGTnnSvK33hGtcAds&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataMPLSpain = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=M6RI-D1tEFPxMe3WuSiINHTipIEtz4r8HRrvEGec4UHgvC6D03kWUjMYdAdr-iiR6NK25OGGLBSokgxqltYdoSQEyvs_u1ZvOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg5vl7IGsXAM8lMfsCwklZ3_A&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataStCloudpain = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=2Cnqp65LhFhwIRrE_lMEoImU-eEvYODaDPAYoO3l_HHSs-jSvGeLms6cXIJGyeH0a2XkZh4XUv2okgxqltYdoc4PGKMnM_-rOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg5vl7IGsXAM8nvyhY23R-ZpWgx3XYevaTs&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataFRGpain = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=v9hmZI4w7n0Fn2YjjlZUcOQTCmhnmcxyGg5yKRdNo3BBcF9pkCb6ed2SufZmcMgsIllPCooJhZ-okgxqltYdoVHaYWR8weBWOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TQ1Be_EyTphlnz1eC8nfZzB1HBXjW1MuZMfXkiPdUAakwI2NCyHBMyLTIiumGfJg5vl7IGsXAM8k8og3EcX-W6Q&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-
-
-
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=drugsMPLS", function(error, dataMPLSdrugsLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=drugsStCloud", function(error, dataSTCdrugsLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=drugsFargo", function(error, dataFRGdrugsLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=patients", function(error, dataPatientsLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=percentage_combined", function(error, dataPCTLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=painMPLS", function(error, dataMPLSpainLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=painStCloud", function(error, dataStCloudpainLoad) {
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1XjxQfzBPI-B-fPIcitZSY121mZ-0R10E6Orde3UDCZ4&sheet=painFargo", function(error, dataFRGpainLoad) {
-
-// var dataMPLSdrugsLoad = <?php echo $jsonDataMPLSdrugs; ?>
-// var dataSTCdrugsLoad = <?php echo $jsonDataSTCdrugs; ?>
-// var dataFRGdrugsLoad = <?php echo $jsonDataFRGdrugs; ?>
-// var dataPatientsLoad = <?php echo $jsonDataPatients; ?>
-// var dataPCTLoad = <?php echo $jsonDataPCT; ?>
-// var dataMPLSpainLoad = <?php echo $jsonDataMPLSpain; ?>
-// var dataStCloudpainLoad = <?php echo $jsonDataStCloudpain; ?>
-// var dataFRGpainLoad = <?php echo $jsonDataFRGpain; ?>
-
-// var dataMPLSdrugs = dataMPLSdrugsLoad.drugsMPLS;
-// var dataSTCdrugs = dataSTCdrugsLoad.drugsStCloud;
-// var dataFRGdrugs = dataFRGdrugsLoad.drugsFargo;
-// var dataPatients = dataPatientsLoad.patients;
-// var dataPCT = dataPCTLoad.percentage_combined;
-// var dataMPLSpain = dataMPLSpainLoad.painMPLS;
-// var dataStCloudpain = dataStCloudpainLoad.painStCloud;
-// var dataFRGpain = dataFRGpainLoad.painFargo;
+d3.json("./data/drugsMPLS.json", function(error, dataMPLSdrugsLoad) {
+d3.json("./data/drugsStCloud.json", function(error, dataSTCdrugsLoad) {
+d3.json("./data/drugsFargo.json", function(error, dataFRGdrugsLoad) {
+d3.json("./data/patients.json", function(error, dataPatientsLoad) {
+d3.json("./data/percentage_combined.json", function(error, dataPCTLoad) {
+d3.json("./data/painMPLS.json", function(error, dataMPLSpainLoad) {
+d3.json("./data/painStCloud.json", function(error, dataStCloudpainLoad) {
+d3.json("./data/painFargo.json", function(error, dataFRGpainLoad) {
 
 $( document ).ready(function() {
   $("#meds").css("background-color","#333");
