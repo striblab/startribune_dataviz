@@ -8,8 +8,8 @@
  	<meta name="author" content="Jeff Hargarten - StarTribune">
 	<meta name="generator" content="BBEdit 10.5" />
 	
-	<link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" /> 
-	<link rel="stylesheet" href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" />
+    <link rel="stylesheet" href="../_common_resources/js/datatables-master/DataTables-1.10.12/css/jquery.dataTables.min.css" /> 
+    <link rel="stylesheet" href="../_common_resources/js/datatables-master/Responsive-2.1.0/css/responsive.dataTables.min.css" />
     <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
 <style type="text/css">
@@ -41,10 +41,6 @@
 	table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before { height: 20px; width: 20px; display: block; color: white; border: 2px solid white; position:static !important; border-radius: 16px; text-align: center; line-height: 20px; box-shadow: 0 0 0 #444; box-sizing: content-box; content: ''; float: left; font-weight: bold; margin-right: 6px; background-color: #61bd1a; font-size: 16px; }
     #wrapper{ width:98%; }
     div.container { max-width: 1200px }
-
-    @media only screen and (min-width:650px) {
-
-    }
 </style>	
 	
 </head>
@@ -54,24 +50,13 @@
 
 <table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Last</th><th>First</th><th>Address</th><th>Speciality</th><th>Payer</th><th>State</th><th>Paid</th><th>Payments</th><th>Pay Nature</th><th>Pay Form</th></tr></thead></table>
 
-
-<a href='https://docs.google.com/spreadsheets/d/1XBn-4N1Ri_8VjbTNiITlBTYhB-UsL7TiHShvor3zExQ/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- <a href='https://docs.google.com/spreadsheets/d/1XBn-4N1Ri_8VjbTNiITlBTYhB-UsL7TiHShvor3zExQ/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 </div>
 
-</body>
-
-
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src='//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js'></script>
-<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
-
-
-<script type="text/javascript" charset="utf-8">
-// $jsonData = file_get_contents("https://spreadsheets.google.com/feeds/list/1A49qWO70uKF3qfxDHBD3KO5zDNgUbDiSGS9MTHfEgTE/oq15w3o/public/values?&alt=json");
-
-
-// var data = <?php echo $jsonData ?>
-
+<script src='../_common_resources/js/datatables-master/datatables.min.js'></script>
+<script src="../_common_resources/js/datatables-master/Responsive-2.1.0/js/datatables.responsive.js"></script>
+<script>
       $(document).ready(function() {
 
            var eventsTable = $('#events').DataTable( {
@@ -101,4 +86,5 @@
 
         } );
     </script>
+</body>
 </html>

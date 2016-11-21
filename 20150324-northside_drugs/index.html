@@ -9,7 +9,7 @@
   <meta name="description" content="Where do those arrested for drugs in North Minneapolis live?">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href="js/nvd3-master/src/nv.d3.css" rel="stylesheet" type="text/css">
+  <link href="../_common_resources/charts/nvd3-master-old/src/nv.d3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
 
 <style>
@@ -74,7 +74,6 @@
 <div class='legend' id="leg"> <nav class='legend clearfix'>   <span style='background:#fff;'>Less</span>   <span style='background:#c7e9c0;'></span>   <span style='background:#74c476;'></span>   <span style='background:#006d2c'></span>   <span style='background:#002911'></span>   <span style='background:#fff;'>Most</span></nav>
 </div>
 
-
 <a href="javascript:void(0);" class="zoom">Reset View</a>
 
 <p style="padding:2px;clear:both;"></p>
@@ -90,20 +89,17 @@
 
 </div>
 
-<a href="https://github.com/striblab/startribune_dataviz/tree/master/20150324-northside_drugs/data/drug_arrests.xlsx?raw=true" target="new_"><button class="downloadButton">&#9660; Download Data</button></a>
-</body>
+<!-- <a href="https://github.com/striblab/startribune_dataviz/tree/master/20150324-northside_drugs/data/drug_arrests.xlsx?raw=true" target="new_"><button class="downloadButton">&#9660; Download Data</button></a> -->
 
-<script src="js/nvd3-master/lib/d3.v3.js"></script>
-<script src="js/nvd3-master/nv.d3.js"></script>
-<script src="js/nvd3-master/src/utils.js"></script>
-<script src="js/nvd3-master/src/tooltip.js"></script>
-<script src="js/nvd3-master/src/models/legend.js"></script>
-<script src="js/nvd3-master/src/models/axis.js"></script>
-<script src="js/nvd3-master/examples/stream_layers.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/lib/d3.v3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/examples/stream_layers.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script>
 var aspect = 630 / 600,   chart = $("#map svg");
 $(window).on("resize", function() {   
@@ -462,5 +458,6 @@ var mjData = [{
     }]
 }]
 });
-</script> 
+</script>
+</body> 
 </html>

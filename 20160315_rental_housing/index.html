@@ -58,7 +58,6 @@
   #table { height:120px; }
   .chartTitle { font-size:1em; }
   }
-
   </style> 
 </head>
 
@@ -69,9 +68,9 @@
 
 <div id="rightSide">
 
-<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by city"></input></div>
+<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by city" /></div>
 
-<div id="table"><div class='tableHead rSort cityCell' data="city">City or Township</div><div class='tableHead rSort selected rents' data="units">Units</div><div class='tableHead rSort pct' data="under50">Units <50%</div><div class='tableHead rSort pct' data="under80">Units <80%</div></div>
+<div id="table"><div class='tableHead rSort cityCell' data="city">City or Township</div><div class='tableHead rSort selected rents' data="units">Units</div><div class='tableHead rSort pct' data="under50">Units &lt;50%</div><div class='tableHead rSort pct' data="under80">Units &lt;80%</div></div>
 </div>
 
 </div>
@@ -111,8 +110,6 @@
 <div class="chart" id="chart"></div>
 
 </div>
-
-</body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -553,5 +550,5 @@ d3.selectAll(container + " svg g path")
 });
 });
 </script>
-
+</body>
 </html>

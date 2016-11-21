@@ -52,11 +52,8 @@ var st_page_obj = {"story_id":"380298861","title":"Fatal police encounters","pri
 </script>
 
 
-<link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
 <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-<link rel="stylesheet" href="js/featherlight-master/src/featherlight.css" />
-<link rel="stylesheet" type="text/css" href="../_common_resources/interfaces/paginate/jPaginate/css/style.css" media="screen"/>
+<link rel="stylesheet" href="../_common_resources/js/featherlight-master/src/featherlight.css" />
 
     <style>
       
@@ -954,24 +951,10 @@ text-transform: uppercase;
   </div>
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
-<script src="js/featherlight-master/src/featherlight.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js'></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/featherlight-master/src/featherlight.js"></script>
 
 <script>
-//LIVE JSON MAGIC
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart
-//THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-// $jsonDataShootings = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=gzHCZ7kiey1SMM5PgBsM3CMeEa4NGwiyFa2FU8DnUoYjQIKgjsJFAGwT7SqIrwFV-EqtN7Cx_xlY8kVRmstDxBon1OqOrn1NOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx35iDyrfKhrpOMLCYDptcpnMxR0xLFGFK&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataYear = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=tNF6_if_WpQAvlnIwRWIHBHNBcOQ82hB8rzcScLoXpi_4W6d84eUeNWyXA8NKNBB4DWz53L3bhAVl38Pz93wBsrUsEnuNKBWOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWx9WKnAm96yZmfHc12uQ5hug&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-// $jsonDataRace = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=1o5js0t1-i_wvGK8iMjzk2xR5auHvAWz3S9omyswRYuc-g_Zqf9Hd8ftf-teZu-RxUlpYxtPQRoVl38Pz93wBkgelLHZJDxkOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TTWRPEfSfzbJF18UG-xWdHYR7bDcausFkqDGusCOyHu-vlnNWYFTCZLrx7oAt3qWxxcG-w52aeuSr4afipWyPHw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
-// var dataLoadShootings = <?php echo $jsonDataShootings; ?>;
-// var dataLoadYear = <?php echo $jsonDataYear; ?>;
-// var dataLoadRace = <?php echo $jsonDataRace; ?>;
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings", function(error, dataLoadShootings) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=yearChart", function(error, dataLoadYear) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=raceChart", function(error, dataLoadRace) {
@@ -1916,9 +1899,6 @@ $("#genderB").on('click',function(){
     })();
 </script>
 <!-- End Chartbeat Tag -->
-
-
-    
 
   <script type="text/javascript">
 var reloadTimerLong = null;

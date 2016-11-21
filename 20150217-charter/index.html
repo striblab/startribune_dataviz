@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <html lang="en">
@@ -10,9 +9,8 @@
   <meta name="description" content="Charter versus Public Schools">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href="js/nvd3-master/src/nv.d3.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/special/data_tables/media/css/demo_page.css">
-  <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/special/data_tables/media/css/demo_table.css">
+  <link href="../_common_resources/charts/nvd3-master-old/src/nv.d3.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../_common_resources/js/datatables-master/DataTables-1.10.12/css/jquery.dataTables.min.css" /> 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
 <style type="text/css">
@@ -980,28 +978,26 @@
 </table>
 </div>
 
-<a href="https://docs.google.com/spreadsheets/d/18PDilsW9QF7KYr50TTwrqCgBBYmea4rfzqETLgnZ4U8/pub?output=xlsx" target="_new"><button class="downloadButton">&#9660; Download Data</button></a>
-</body>
+<!-- <a href="https://docs.google.com/spreadsheets/d/18PDilsW9QF7KYr50TTwrqCgBBYmea4rfzqETLgnZ4U8/pub?output=xlsx" target="_new"><button class="downloadButton">&#9660; Download Data</button></a> -->
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
-<script src="js/nvd3-master/lib/d3.v3.js"></script>
-<script src="js/nvd3-master/nv.d3.js"></script>
-<script src="js/nvd3-master/lib/d3.v2.min.js"></script>
-<script src="js/nvd3-master/src/utils.js"></script>
-<script src="js/nvd3-master/src/tooltip.js"></script>
-<script src="js/nvd3-master/src/models/legend.js"></script>
-<script src="js/nvd3-master/src/models/axis.js"></script>
-<script src="js/nvd3-master/src/models/multiBarHorizontal.js"></script>
-<script src="js/nvd3-master/src/models/multiBarHorizontalChart.js"></script>
-<script src="js/nvd3-master/examples/stream_layers.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
+<script src="../_common_resources/js/d3-master/queue.v1.min.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/lib/d3.v3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/lib/d3.v2.min.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/multiBarHorizontal.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/multiBarHorizontalChart.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/examples/stream_layers.js"></script>
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-<script type="text/javascript" language="javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.js"></script>
-<script type="text/javascript" language="javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.js"></script>
-<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/725b2a2115b/sorting/formatted-numbers.js"></script>
+<script src='../_common_resources/js/datatables-master/datatables.min.js'></script>
+<script type="text/javascript" src="http://wcfcourier.com/app/special/data_tables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/plug-ins/725b2a2115b/sorting/formatted-numbers.js"></script>
 
 <script>
 d3.json("./data/scores.json", function(error, dataLoad) {
@@ -1012,7 +1008,7 @@ d3.json("./data/scores.json", function(error, dataLoad) {
   });
 
 var school = "Academia Cesar Chavez";
-var metric = "data/mmr.json";
+var metric = "./data/mmr.json";
 
 $( document ).ready(function() {
     $("#chart").hide();
@@ -1191,6 +1187,6 @@ d3.json(metric,function(data) {
 }
 
 });
-
 </script>
+</body>
 </html>

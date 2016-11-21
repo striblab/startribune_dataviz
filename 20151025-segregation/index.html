@@ -10,9 +10,9 @@
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
   <link rel="stylesheet" href="http://apps.startribune.com/news/dataviz-css-master/startribune_dataviz_styles.css" /> 
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="js/d3.slider-master/d3.slider.css" /> 
-  <link href="js/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link href='../_common_resources/js/mapbox-master/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="../_common_resources/js/d3.slider-master/d3.slider.css" /> 
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
 
 <style>
@@ -63,6 +63,7 @@
   .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
   .previous { float:left; }
   .next { float:right; }
+  .leaflet-tile-pane { opacity: .5; }
 
   #slider2 { display:none; }
 
@@ -74,7 +75,6 @@
    .myButton2, #toggle { width:100% !important; }
   }
 
-  .leaflet-tile-pane { opacity: .5; }
 </style>
 </head>
 
@@ -100,7 +100,7 @@
 
 <div class='yearChatter' id="year2015">Minneapolis and St. Paul public elementary schools are more segregated than they have been in a generation, while suburban schools are more integrated than ever before.</div>
 
-<button class="previous navButtons"><<</button><button class="next navButtons">>></button><button class="play myButton2" id="toggle">&#9658;</button>
+<button class="previous navButtons">&lt;&lt;</button><button class="next navButtons">&gt;&gt;</button><button class="play myButton2" id="toggle">&#9658;</button>
 
 <div class="breaker"></div>
 
@@ -122,20 +122,18 @@
 
 <div class="sliderDiv" style="margin-left:18px;"><div id="slider2"></div></div>
 
-<div class="breaker"></div>
+<!-- <div class="breaker"></div> -->
 
-<a class="downloadButton" href='https://docs.google.com/spreadsheets/d/14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M/pub?output=csv'>Download Data</button></a>
+<!-- <a class="downloadButton" href='https://docs.google.com/spreadsheets/d/14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M/pub?output=csv'>Download Data</button></a> -->
 
 </div>
 
-</body>
-
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-<script src="js/d3.slider-master/d3.slider.js"></script>
-<script src="js/c3-master/c3.min.js"></script>
-<script src="js/jquery.initialize.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src='../_common_resources/js/mapbox-master/mapbox.js'></script>
+<script src="../_common_resources/js/d3.slider-master/d3.slider.js"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script src="../_common_resources/js/jquery.initialize.js"></script>
 
 <script>
 d3.json("./data/chart_breakdowns.json", function(error, dataChartLoad) {
@@ -664,5 +662,5 @@ function resetMarkers(markers){
   });
 });
 </script>
-
+</body>
 </html>

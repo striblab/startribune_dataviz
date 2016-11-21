@@ -9,7 +9,7 @@
   <meta name="description" content="These are the worst bridges in Minnesota">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="../_common_resources/js/datatables-master/DataTables-1.10.12/css/jquery.dataTables.min.css" /> 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
 <style>
@@ -75,7 +75,7 @@
 <div id="wrapper">
 <div id="counties"><svg width="630" height="600" viewBox="0 0 630 600" preserveAspectRatio="xMidYMid"></svg></div>
 
-<a href="javascript:void(0);" class="zoom">Reset Zoom</a>
+<a href="javascript:void(0);" class="zoom">Reset View</a>
 
 <div class='legend'>
   <nav class='legend clearfix'>
@@ -86,7 +86,7 @@
     <span style='background:#74c476;'></span>
     <span style='background:#31a354;'></span>
     <span style='background:#fff;'>8</span>
-    </nav>
+  </nav>
 </div>
 
 <div class='legend'>
@@ -98,10 +98,10 @@
 <br />
 
 <div id="marker_legend">
-<center>
-<img src="img/legend2.png" /><br />
+<div style="text-align:center;">
+<img src="img/legend2.png" alt="legend" /><br />
 Sufficiency Rating
-</center>
+</div>
 </div>
 
 <table id="table_view">
@@ -118,15 +118,14 @@ Sufficiency Rating
   </thead>
 </table>
 
-<a href='https://docs.google.com/spreadsheets/d/1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- <a href='https://docs.google.com/spreadsheets/d/1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 </div>
-</body>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-<script type="text/javascript" language="javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
-<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
+<script src="../_common_resources/js/d3-master/queue.v1.min.js"></script>
+<script src='../_common_resources/js/datatables-master/datatables.min.js'></script>
 
 <script>
 d3.json("./data/highway_bridges.json", function(error, json) {
@@ -539,3 +538,5 @@ function clicked2(d) {
 });
 });
 </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 Star Tribune - Child Protection Services Flowchart
 ================
 
-by Jeff Hargarten
+by Frey Hargarten
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3).
 

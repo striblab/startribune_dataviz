@@ -39,7 +39,7 @@
 
 <div class='legend'>
   <nav class='legend clearfix'>
-    <span style='background:#fff; margin-right:8px;'><20%</span>
+    <span style='background:#fff; margin-right:8px;'>&lt;20%</span>
     <span style='background:#c0e2ca;'></span>
     <span style='background:#9ad3b5;'></span>
     <span style='background:#73c5a0;'></span>
@@ -47,6 +47,7 @@
     <span style='background:#26a876;'></span>
     <span style='background:#009961;'></span>
     <span style='background:#fff; margin-left:5px;'>75%</span>
+  </nav>
 </div>
 <p style="clear:both;"></p>
 <p style="clear:both;"></p>
@@ -63,23 +64,16 @@
 <p>High-speed, in this case, is defined as at least 10mbps download and 6mbps upload speeds.</p>
 <p>The map depicts percentage of households with available high-speed broadband service by county.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/19UbRO-CAFgsvU9rnipW6v_5cQxqTrhJPHMiXvlIBm5M/pub?output=csv" target="new_"><button class="downloadButton">&#9660; Download Data</button></a>
+<!-- <a href="https://docs.google.com/spreadsheets/d/19UbRO-CAFgsvU9rnipW6v_5cQxqTrhJPHMiXvlIBm5M/pub?output=csv" target="new_"><button class="downloadButton">&#9660; Download Data</button></a> -->
 
 </div>
-</body>
 
 <!--SCRIPTS-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
-<script src="//cdn.jsdelivr.net/underscorejs/1.6.0/underscore-min.map"></script>
-<script src="//cdn.jsdelivr.net/underscorejs/1.6.0/underscore-min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js" type="text/javascript"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-<script src="http://datamaps.github.com/scripts/datamaps-all.js"></script>
 <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
+<script src="../_common_resources/js/d3-master/queue.v1.min.js"></script>
+<script src="./js/datamaps-all.js"></script>
 
 <script>
 d3.json("./data/mncounty_internet2014.json", function(error, dataLoad) {
@@ -264,4 +258,5 @@ return factor3;
 
 });
 </script>
+</body>
 </html>

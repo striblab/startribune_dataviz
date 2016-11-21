@@ -3,125 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Prince's Career by the Numbers</title>
   <meta name="description" content="Prince's Career by the Numbers">
   <meta name="author" content="Frey Hargarten, Billy Steve Clayton, Jamie Hutt - StarTribune">
-  <!-- <link rel="stylesheet" href="http://assets.startribune.com/static/css/screen.css"> -->
-  <link rel="stylesheet" href="http://striblab.github.io/startribune_dataviz/_common_resources/styles/startribune_dataviz_styles.css" />
-  <style>
-         body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
-       #selector { margin-left:auto; margin-right:auto; text-align:center; }
-       .button { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid #ddd; }
-       .button:hover, .selected { background-color:#bc73bb !important; cursor:pointer; margin:0 !important;  }
-    
-       .button { float:left; }
-       .stat { float:right; }
-       .filterBreak { height:2px; border-top:1px solid #ddd; clear:both; }
-       .icon { float:left;padding: 0 10px 18px 0; text-align:left;}
-       .icon img { width:50px; }
-       .bigicon { text-align:center; }
-       .bigicon img { width:100px; display:none;}
-       .year { font-size:1em; 
-         font-family:"Benton Sans",Helvetica,Arial,sans-serif; 
-/*         border-left:3px solid #bc73bb; */
-         margin:15px 0 15px 0; }
-       .year div { margin:0px; }
-       .yearHide { display:none; }
-       .gold { color:#AAAA39; font-weight:900; }
-       .diamond { color:#CBCBB3; font-weight:900; } 
-       .platinum { color:#989886; font-weight:900; }
-       .yearLabel { font-size:2em; font-family:"Popular"; padding-bottom:0px}
-       .item.album {min-height: 220px;}
-       .item.alt {min-height: 220px;}
-       .item.billboard {min-height:70px;}
-       .item.tour {min-height: 70px;}
-       .item.other {min-height: 70px;}
-       .item.grammy {min-height: 70px;}
-    
-       .left { width:49%; float:left; padding:-2px; }
-       .right { width:49%; float:right; padding:-2px; }
-       .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
-       .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-       .art img { width:200px; }
-       .item.icon img { width:150px !important;  text-align:left !important; }
-       .item.icon { text-align:left !important; }
-       .item { padding-bottom:12px;border-bottom:1px solid #ddd;min-height: 52px;margin-bottom:12px; }
-       #selector { display:none; }
-        
-       #wrapper { width:100%; } 
-       .leftSide { float:left; width:30%; position:fixed; }
-       .rightSide { float:right; width:67%; height:24000px; overflow-x:hidden; overflow-y:hidden; }
-       .title { font-weight:900; font-size:1.2em !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif; text-align:left; margin-top:15px !important; margin-bottom:5px !important;}
-        .rank {margin-bottom:3px !important;}
-        .label {margin-bottom:5px !important;}
-        .author {margin-bottom:5px !important;}
-    
-       .art { float:right; padding: 3px 12px 12px 12px;}
-       .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; line-height:150%;margin-top:5px !important;margin-bottom:5px !important;}
-    
-        #filter { font-family:"Benton Sans"; font-size:1.2em; margin:5px; }
-        #filter input { width: 100% !important; padding: 25px 10px 25px 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
-          -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);  -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #eee !important; 
-          background-size: 14px 14px;
-          background-repeat: no-repeat; 
-          background-position: 98% 50%; }
-        #filter input:focus { width: 100% !important; font-family:"Benton Sans"; box-shadow: 0 0 5px #333 !important; padding: 25px 10px 25px 10px; border: 1px solid #61bd1a; }
-        .wrapper-demo { width:100%; }
-        .wrapper-dropdown-1 { display:inline-block;font-family:"Benton Sans",Helvetica,Arial,sans-serif;z-index:900;background:#ddd;color:#333;cursor:pointer;font-weight:bold;outline:none;padding:16px;position:relative;width:200px;border:1px solid #aaa;box-shadow:0 2px 1px rgba(0, 0, 0, 0.10);font-size:14px; width:100%; }
-    
-        .wrapper-dropdown-1.active {background:#ddd !important;}
-        .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#ddd;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
-        ul.dropdown.months { box-sizing:border-box;margin:0;moz-box-sizing:border-box;padding:0;webkit-box-sizing:border-box;margin-top:-1px;border-radius:0 0 4px 4px;background-clip:padding-box; background:#ddd;}
-        .wrapper-dropdown-1 .dropdown { font-weight:normal;left:0;list-style:none;opacity:0;pointer-events:none;position:absolute;right:0;top:100%;border:1px solid #aaa;background:#ddd;box-shadow:0 4px 5px rgba(0, 0, 0, 0.15);margin-top:0px !important; }
-        .wrapper-dropdown-1 .dropdown li:hover a { background:#bc73bb; }
-        header[role="banner"] { width:100%;height:40px;z-index:1000;background:#f0f0f0; }
-       .wrapper-dropdown-1 .dropdown li a {
-          color: #757575;
-          padding: 5px 18px;
-          }
-      .wrapper-dropdown-1 .dropdown li a:hover {
-          color: #fff;
-          }   
-          
-      .wrapper-dropdown-1 .dropdown li.selected {
-          color: #fff !important;
-          }     
-    
-/*
-.switch.button.selected {
-    background-color: #bc73bb !important;
-    color: #fff !important;
-    cursor: pointer;
-}
-*/
-    
-    
-        .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
-        .video-container iframe,
-        .video-container object,
-        .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-          #filter { text-align:center; margin:0; clear:both; display:block; padding:0; padding-top:15px; width:100%; }
-          #filterBox { display:none; }
-          #selector { display:block; }
-          .button, .stat { width:100%; float:none; clear:both; }
-          .leftSide, .rightSide { width:100%; float:none; position:static; }
-    
-        body{max-width:525px;}
-    
-    
-@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
- 
-.icon { float:left;padding: 0 10px 0px 0; text-align:left;}
-.rightSide {width:100%;padding-right:5%;padding-left:5%;
-height:800px;
-overflow-x: hidden;
-overflow-y: auto;
-}     
-.art { float:right; padding: 3px 12px 12px 12px;}      
-.art img { width:100%;height:100%;margin:0 auto 10px auto;!important}      
-}  
-  </style> 
 
+  <link rel="stylesheet" href="http://striblab.github.io/startribune_dataviz/_common_resources/styles/startribune_dataviz_styles.css" />
+
+  <style>
+    body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; max-width:525px; }
+    #selector { margin-left:auto; margin-right:auto; text-align:center; }
+    .button { background-color:#fff; border:1px solid #ddd; display:inline-block; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:900; padding:10px; text-align:center; width:100%; }
+    .button:hover, .selected { background-color:#bc73bb !important; cursor:pointer; margin:0 !important; }
+    .button { float:left; }
+    .stat { float:right; }
+    .filterBreak { border-top:1px solid #ddd; clear:both; height:2px; }
+    .icon { float:left; padding:0 10px 18px 0; text-align:left; }
+    .icon img { width:50px; }
+    .bigicon { text-align:center; }
+    .bigicon img { display:none; width:100px; }
+    .year { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em; margin:15px 0 15px 0; }
+    .year div { margin:0px; }
+    .yearHide { display:none; }
+    .gold { color:#AAAA39; font-weight:900; }
+    .diamond { color:#CBCBB3; font-weight:900; }
+    .platinum { color:#989886; font-weight:900; }
+    .yearLabel { font-family:"Popular"; font-size:2em; padding-bottom:0px; }
+    .item.album { min-height:220px; }
+    .item.alt { min-height:220px; }
+    .item.billboard { min-height:70px; }
+    .item.tour { min-height:70px; }
+    .item.other { min-height:70px; }
+    .item.grammy { min-height:70px; }
+    .left { float:left; padding:-2px; width:49%; }
+    .right { float:right; padding:-2px; width:49%; }
+    .scrollToTop { color:#aaa !important; padding:15px; text-align:center; }
+    .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+    .art img { width:200px; }
+    .item.icon img { text-align:left !important; width:150px !important; }
+    .item.icon { text-align:left !important; }
+    .item { border-bottom:1px solid #ddd; margin-bottom:12px; min-height:52px; padding-bottom:12px; }
+    #selector { display:none; }
+    #wrapper { width:100%; }
+    .leftSide { float:left; position:fixed; width:30%; }
+    .rightSide { float:right; height:24000px; overflow-x:hidden; overflow-y:hidden; width:67%; }
+    .title { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1.2em !important; font-weight:900; margin-bottom:5px !important; margin-top:15px !important; text-align:left; }
+    .rank { margin-bottom:3px !important; }
+    .label { margin-bottom:5px !important; }
+    .author { margin-bottom:5px !important; }
+    .art { float:right; padding:3px 12px 12px 12px; }
+    .description { font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:1em !important; line-height:150%; margin-bottom:5px !important; margin-top:5px !important; }
+    #filter { font-family:"Benton Sans"; font-size:1.2em; margin:5px; }
+    #filter input { background-color:#fff !important; background-position:98% 50%; background-repeat:no-repeat; background-size:14px 14px; border:1px solid #eee !important; border-radius:0 !important; border-radius:0; box-shadow:inset 0 1px 2px rgba(0,0,0,0.1); color:rgba(0,0,0,0.75); font-family:"Benton Sans"; font-family:inherit; font-size:1em; height:30px; line-height:120%; margin:0; moz-transition:all 0.30s ease-in-out; ms-transition:all 0.30s ease-in-out; o-transition:all 0.30s ease-in-out; padding:25px 10px 25px 10px; webkit-appearance:none; webkit-border-radius:0; webkit-transition:all 0.30s ease-in-out; width:100% !important; width:100%; }
+    #filter input:focus { border:1px solid #61bd1a; box-shadow:0 0 5px #333 !important; font-family:"Benton Sans"; padding:25px 10px 25px 10px; width:100% !important; }
+    .wrapper-demo { width:100%; }
+    .wrapper-dropdown-1 { background:#ddd; border:1px solid #aaa; box-shadow:0 2px 1px rgba(0, 0, 0, 0.10); color:#333; cursor:pointer; display:inline-block; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:14px; font-weight:bold; outline:none; padding:16px; position:relative; width:100%; width:200px; z-index:900; }
+    .wrapper-dropdown-1.active { background:#ddd !important; }
+    .wrapper-dropdown-1 .dropdown { background:#ddd; border:1px solid #aaa; box-shadow:0 4px 5px rgba(0, 0, 0, 0.15); font-weight:normal; left:0; list-style:none; margin-top:0px !important; opacity:0; pointer-events:none; position:absolute; right:0; top:100%; }
+    ul.dropdown.months { background:#ddd; background-clip:padding-box; border-radius:0 0 4px 4px; box-sizing:border-box; margin:0; margin-top:-1px; moz-box-sizing:border-box; padding:0; webkit-box-sizing:border-box; }
+    .wrapper-dropdown-1 .dropdown { background:#ddd; border:1px solid #aaa; box-shadow:0 4px 5px rgba(0, 0, 0, 0.15); font-weight:normal; left:0; list-style:none; margin-top:0px !important; opacity:0; pointer-events:none; position:absolute; right:0; top:100%; }
+    .wrapper-dropdown-1 .dropdown li:hover a { background:#bc73bb; }
+    header[role="banner"] { background:#f0f0f0; height:40px; width:100%; z-index:1000; }
+    .wrapper-dropdown-1 .dropdown li a { color:#757575; padding:5px 18px; }
+    .wrapper-dropdown-1 .dropdown li a:hover { color:#fff; }
+    .wrapper-dropdown-1 .dropdown li.selected { color:#fff !important; }
+    .video-container { height:0; overflow:hidden; padding-bottom:56.25%; padding-top:30px; position:relative; }
+    .video-container iframe,
+     .video-container object,
+     .video-container embed { height:100%; left:0; position:absolute; top:0; width:100%; }
+    #filter { clear:both; display:block; margin:0; padding:0; padding-top:15px; text-align:center; width:100%; }
+    #filterBox { display:none; }
+    #selector { display:block; }
+    .button, .stat { clear:both; float:none; width:100%; }
+    .leftSide, .rightSide { float:none; position:static; width:100%; }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+      .icon { float:left; padding:0 10px 0px 0; text-align:left; }
+      .rightSide { height:800px; overflow-x:hidden; overflow-y:auto; padding-left:5%; padding-right:5%; width:100%; }
+      .art { float:right; padding:3px 12px 12px 12px; }
+      .art img { height:100%; margin:0 auto 10px auto; width:100%; } 
+    }  
+</style> 
 </head>
 
 <body>
@@ -145,7 +107,7 @@ overflow-y: auto;
     ​       </div>
         </section>
       </div>
-      <div id="filter"><input type="search" id="filter_box" placeholder="Search by keyword or year"></input></div>
+      <div id="filter"><input type="search" id="filter_box" placeholder="Search by keyword or year" /></div>
     </div>
 
     <div class="content">
@@ -194,10 +156,9 @@ overflow-y: auto;
 
 <div class="breaker"></div>
 <div class="source">Sources: Billboard, Nielsen SoundScan</div>
-</body>
 
 <script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script>
 // $("#headerDiv").sticky({topSpacing:1});
 </script>
@@ -319,4 +280,5 @@ spitFirstItems(1975);
 </script>
 <script src="http://static.startribune.com/js/pym/pym.min.js"></script>
 <script>var pymChild = new pym.Child();</script>
+</body>
 </html>

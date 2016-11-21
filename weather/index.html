@@ -323,7 +323,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 </div>
 
 <div id="temperature" class="block">
-<div class="icon"><img  src="img/thermostat.png" /></div>
+<div class="icon"><img  src="img/thermostat.png" alt="themostat" /></div>
 <div class="bigTitle redswatch">Temperatures</div>
 <div class="chartTitle">Temperatures <span class="thisYear">2015</span></div>
 <div class="chatter">Average, minimum and maximum temperatures by day in Minnesota.</div>
@@ -354,7 +354,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div class="breaker"></div>
 
 <div id="snowfall" class="block">
-<div class="icon"><img  src="img/snowflake.png" /></div>
+<div class="icon"><img src="img/snowflake.png" alt="snowflake" /></div>
 <div class="bigTitle snowswatch">Snowfall</div>
 <div class="chartTitle">Snowfall <span class="thisYear">2015</span></div>
 <div class="chatter">The total snowfall in inches by day in Minnesota.</div>
@@ -377,7 +377,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div class="breaker"></div>
 
 <div id="precipitation" class="block">
-<div class="icon"><img  src="img/raindrop.png" /></div>
+<div class="icon"><img src="img/raindrop.png" alt="raindrop" /></div>
 <div class="bigTitle precipswatch">Precipitation</div>
 <div class="chartTitle">Precipitation <span class="thisYear">2015</span></div>
 <div class="chatter">The total precipitation in inches by day in Minnesota.</div>
@@ -408,7 +408,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div class="breaker"></div>
 
 <div id="wind" class="block" style="display:none;">
-<div class="icon"><img  src="img/wind.png" /></div>
+<div class="icon"><img src="img/wind.png" alt="wind" /></div>
 <div class="bigTitle orangeswatch">Wind</div>
 <div class="chartTitle">Windspeed <span class="thisYear">2015</span></div>
 <div class="chatter">Maximum and average windspeed by day in Minnesota.</div>
@@ -422,16 +422,12 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 
   </div>
 
-<a href="https://docs.google.com/spreadsheets/d/1-2zKGGKgPe9Xer1MrRBI74Zy5TUi15HuZShdT-eJFFs/pub?output=xlsx" target="new_"><button class="downloadButton">&nbsp;Download data</button></a>
+<!-- <a href="https://docs.google.com/spreadsheets/d/1-2zKGGKgPe9Xer1MrRBI74Zy5TUi15HuZShdT-eJFFs/pub?output=xlsx" target="new_"><button class="downloadButton">&nbsp;Download data</button></a> -->
   
-</body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 
-<script>
-// $("#selector").sticky({topSpacing:1});
-</script>
 <script type="text/javascript">
       
       function DropDown(el) {
@@ -964,4 +960,5 @@ var chartWind = c3.generate({
 });
 });
 </script>
+</body>
 </html>

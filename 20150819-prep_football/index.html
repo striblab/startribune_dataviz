@@ -8,7 +8,7 @@
   <meta name="description" content="Prep Football Districts">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link href='../_common_resources/js/mapbox-master/mapbox.css' rel='stylesheet' />
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
 <style>
@@ -26,7 +26,7 @@
   .downloadButton { display:none !important; }
 
   .switch { padding:10px; display:inline-block; text-align:center; width:150px; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
-  .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:4px; margin-top:4px; }
+  .switch:hover, .selected { background-color:#333 !important; color:#fff !important; cursor:pointer; margin-bottom:0 !important; }
 
   @media only screen and (max-width:650px) {
   #map { float:none; width:100%; }
@@ -77,16 +77,13 @@
 
 <div class="breaker"></div>
 
-<a href='https://docs.google.com/spreadsheets/d/1TFaDqK7Q_YZ1ucWCdB8snFQrlGiRtA4hOpcDBW0KrGg/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- <a href='https://docs.google.com/spreadsheets/d/1TFaDqK7Q_YZ1ucWCdB8snFQrlGiRtA4hOpcDBW0KrGg/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 </div>
 
-</body>
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src='../_common_resources/js/mapbox-master/mapbox.js'></script>
+<script src='../_common_resources/js/mapbox-master/leaflet-omnivore.min.js'></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 
 <script>
 d3.json("./data/districts.json", function(error, dataLoad) {
@@ -218,5 +215,5 @@ var districts = omnivore.csv('./data/FootballData.csv',null,customLayer)
 });
 });
 </script>
-
+</body>
 </html>

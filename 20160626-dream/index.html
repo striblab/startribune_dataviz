@@ -16,8 +16,6 @@
    #wrapper { text-align:center; height:auto; width:800px; margin-right:auto; margin-left:auto; }
    #map, #country { width:800px; margin-right:auto; margin-left:auto; text-align:center;  }
    #mapMN { width:350px; margin-right:auto; margin-left:auto; text-align:center;  }
-   #leftSide {  }
-   #rightSide {  }
    .none { fill:#ddd !important; }
    .zoom { float:none !important; text-align:center; padding:20px; }
    #slider { display:none; }
@@ -125,45 +123,25 @@
 
 <div id="tableBlock">
 <!-- <h3>Someone growing up in</h3> -->
-<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by county or state"></input></div>
+<div id="filter" class="filter"><input type="search" class="filter_box" placeholder="Search by county or state" /></div>
 <div class="table" id="table">
 <div class='tableHead partyBar hSort' data="county">County</div><div class='tableHead hSort selected' data="state">State</div>
 <div class='tableHead hSort' data="aum25">AUM</div>
 </div>
 </div>
 
-<!-- <div id="gridBlock" style="display:none;">  
-<h3 style="text-align:left;">...with parents earning in the <span id="pQ">--</span> quintile</h3> 
-<div id="quintile">
-<div class="grid start" data="p5">5th</div>
-<div class="grid start" data="p4">4th</div>
-<div class="grid start" data="p3">3rd</div>
-<div class="grid start" data="p2">2nd</div>
-<div class="grid start selected" data="p1">1st</div>
 </div>
-<div id="chartBlock">
-<div id="chart"><svg></svg></div>
 </div>
-<div class="breaker"></div>
-<h3 style="text-align:right;">...end up on average in the <span id="cQ">--</span> quintile</h3>
-</div> -->
-</div>
-
-  </div>
-
-
-  </div>
-</body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
 <script src="../_common_resources/charts/nvd3-master/build/nv.d3.js"></script>
 <script src="../_common_resources/charts/nvd3-master/src/utils.js"></script>
 <script src="../_common_resources/charts/nvd3-master/src/tooltip.js"></script>
 <script src="../_common_resources/charts/nvd3-master/src/models/legend.js"></script>
 <script src="../_common_resources/charts/nvd3-master/src/models/axis.js"></script>
 <script src="../_common_resources/charts/nvd3-master/test/stream_layers.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
 
 <script>
 var toggle = "p1";
@@ -769,5 +747,5 @@ else if (toggle == "p5"){
 
 });
 </script>
-
+</body>
 </html>

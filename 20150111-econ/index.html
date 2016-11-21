@@ -9,7 +9,7 @@
   <meta name="description" content="Economic Growth Data">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href="js/nvd3-master/src/nv.d3.css" rel="stylesheet" type="text/css">
+  <link href="../_common_resources/charts/nvd3-master-old/src/nv.d3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
 <style>
@@ -44,19 +44,18 @@
 <div id="chart6"><svg width="100%" height="500"></svg></div>
 <div id="scaling">numbers in thousands</div>
 
- <a href="https://docs.google.com/spreadsheets/d/1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08/pub?output=xlsx"><button class="downloadButton">&#9660; Download Data</button></a>
+<!--  <a href="https://docs.google.com/spreadsheets/d/1tDdErMqTdlfMHbKeGyVEFM7sIF8tPP-qtYkZOEa8w08/pub?output=xlsx"><button class="downloadButton">&#9660; Download Data</button></a> -->
 </div>
-</body>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/nvd3-master/lib/d3.v3.js"></script>
-<script src="js/nvd3-master/nv.d3.js"></script>
-<script src="js/nvd3-master/src/utils.js"></script>
-<script src="js/nvd3-master/src/tooltip.js"></script>
-<script src="js/nvd3-master/src/models/legend.js"></script>
-<script src="js/nvd3-master/src/models/axis.js"></script>
-<script src="js/nvd3-master/examples/stream_layers.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/nvd3-master-old/lib/d3.v3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/examples/stream_layers.js"></script>
 
 <script>
 d3.json("./data/us_employment.json", function(error, dataEmployment) {
@@ -9273,4 +9272,5 @@ $( "#unem" ).click(function() {
 });
 });
 </script>
+</body>
 </html>

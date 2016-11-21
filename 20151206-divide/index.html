@@ -9,7 +9,6 @@
   <meta name="description" content="The Great Divide">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href="js/c3-master/c3.css" rel="stylesheet" type="text/css">
   <link href="../_common_resources/charts/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css?r" />
   <link href="../_common_resources/interfaces/bxslider-master/jquery.bxslider.css" rel="stylesheet" />
@@ -170,7 +169,7 @@
 
 <div class="section" id="population">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/population.png" /></div>
+  <div class="sectionIcon"><img src="img/population.png" alt="population" /></div>
   <div class="sectionTitle populationSwatch">Population</div>
   <div class="chatter">The Twin Cities metro area experienced far greater population growth from 2010 to 2014 compared to outstate counties, many of which saw lesser or negative growth over the time period. Some rural counties have lost about half their population since the 1950s.</div>
 </div>
@@ -208,7 +207,7 @@
 
 <div class="section" id="education">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/education.png" /></div>
+  <div class="sectionIcon"><img src="img/education.png" alt="education" /></div>
   <div class="sectionTitle educationSwatch">Education</div>
   <div class="chatter">In the metro area, the percentage of people with a associate's degree or higher was often far higher across 2009-2013 compared to many outstate counties.</div>
 </div>
@@ -246,7 +245,7 @@
 
 <div class="section" id="religion">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/religion.png" /></div>
+  <div class="sectionIcon"><img src="img/religion.png" alt="religion" /></div>
   <div class="sectionTitle religionSwatch">Religion</div>
   <div class="chatter">Outstate counties tend to have higher percentages of religious adherence compared to the metro area, particularly in southwestern Minnesota.</div>
 </div>
@@ -282,7 +281,7 @@
 
 <div class="section" id="income">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/income.png" /></div>
+  <div class="sectionIcon"><img src="img/income.png" alt="income" /></div>
   <div class="sectionTitle incomeSwatch">Income</div>
   <div class="chatter">Median income in the metro area tends to be higher than in outstate counties.</div>
 </div>
@@ -319,7 +318,7 @@
 
 <div class="section" id="costs">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/cost.png" /></div>
+  <div class="sectionIcon"><img src="img/cost.png" alt="cost" /></div>
   <div class="sectionTitle costSwatch">Living Costs</div>
   <div class="chatter">The lower cost of basic necessities, particularly housing, in Greater Minnesota tends to equalize standards of living with the metro area, where median household incomes are higher.</div>
 </div>
@@ -355,7 +354,7 @@
 
 <div class="section" id="age">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/age.png" /></div>
+  <div class="sectionIcon"><img src="img/age.png" alt="age" /></div>
   <div class="sectionTitle ageSwatch">Age</div>
   <div class="chatter">A larger elderly population is in the whole state's future as the baby boomers become senior citizens. But Greater Minnesota is graying first and faster than the metro area.</div>
 </div>
@@ -394,7 +393,7 @@
 
 <div class="section" id="race">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/race.png" /></div>
+  <div class="sectionIcon"><img src="img/race.png" alt="race" /></div>
   <div class="sectionTitle raceSwatch">Race</div>
   <div class="chatter">Metro area counties are vastly more diverse than populations outstate, with more people of color than most other areas.</div>
 </div>
@@ -437,7 +436,7 @@
 
 <div class="section" id="social">
 <div class="sectionHead">
-  <div class="sectionIcon"><img src="img/social.png" /></div>
+  <div class="sectionIcon"><img src="img/social.png" alt="social" /></div>
   <div class="sectionTitle socialSwatch">Social</div>
   <div class="chatter">The 2012 proposed constitutional amendment banning same-sex marriage in Minnesota was defeated even though it won majority approval in most Greater Minnesota counties. "No" votes carried five of seven metro counties.</div>
 </div>
@@ -468,25 +467,16 @@
 <div class='breaker'></div>    
 <div class="zoom">Reset View</div>     
     
-    
-
 <div class='source'>Source: Minnesota Secretary of State</div>
 
 </div>
 
+<!-- <a href="https://docs.google.com/spreadsheets/d/1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY/pub?output=xlsx" target="new_"><button class="downloadButton9">&nbsp;Download data</button></a> -->
 
-<!--<div class='breaker'></div>-->
+</div>
 
-<a href="https://docs.google.com/spreadsheets/d/1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY/pub?output=xlsx" target="new_"><button class="downloadButton9">&nbsp;Download data</button></a>
-
-  </div>
-
-
-
-</body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script src="../_common_resources/interfaces/stickies/jquery.sticky.js"></script>
 <script src="../_common_resources/charts/nvd3-master/build/nv.d3.js"></script>
 <script src="../_common_resources/charts/nvd3-master/src/utils.js"></script>
@@ -502,23 +492,6 @@
 </script>
 
 <script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=religion
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=medianIncome
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=population
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=age
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=medianAge
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=livingCosts
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=education
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=race
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=politicalLeaning2014
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1xavZEiWOLzafmKIhtkl2UZTuTpGCUtxZTgsP1Hy-KZY&sheet=votes2012
-
-//THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-
-
-// d3.json("http://googlescript.startribune.com/?AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ&sheet=minneapolisParcels", function(error, dataLoadBreakdown) {
 d3.json("./data/religion.json", function(error, dataLoadReligion) {
 d3.json("./data/medianIncome.json", function(error, dataLoadIncome) {
 d3.json("./data/population.json", function(error, dataLoadPop) {
@@ -528,20 +501,6 @@ d3.json("./data/livingCosts.json", function(error, dataLoadLiving) {
 d3.json("./data/education.json", function(error, dataLoadEducation) {
 d3.json("./data/race.json", function(error, dataLoadRace) {
 d3.json("./data/votes2012.json", function(error, dataLoadAmend) {
-
-//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
-// var dataLoadBreakdown = <?php echo $jsonDataBreakdown; ?>;
-// var dataLoadReligion = <?php echo $jsonDataReligion; ?>;
-// var dataLoadIncome = <?php echo $jsonDataIncome; ?>;
-// var dataLoadPop = <?php echo $jsonDataPop; ?>;
-// var dataLoadAge = <?php echo $jsonDataAge; ?>;
-// var dataLoadMAge = <?php echo $jsonDataMAge; ?>;
-// var dataLoadLiving = <?php echo $jsonDataLiving; ?>;
-// var dataLoadEducation = <?php echo $jsonDataEducation; ?>;
-// var dataLoadRace = <?php echo $jsonDataRace; ?>;
-// var dataLoadAmend = <?php echo $jsonDataAmend; ?>;
-
-// dataBreakdown = dataLoadBreakdown.charter_breakdown;
 
 dataReligion = dataLoadReligion.religion;
 dataIncome = dataLoadIncome.medianIncome;
@@ -560,10 +519,6 @@ $(".myButton2").on('click',function(){
  $(".section").hide();
  $("#" + $(this).attr("data")).show();
 });
-
-
-//OTHER PAGE EFFECTS
-// $("#menu").sticky({topSpacing:1});
 
 //CHARTS
 chartBuild("#popChart","population",dataPopulation,"Minnesota",0);
@@ -1393,4 +1348,5 @@ d3.helper.tooltip = function(accessor){
 });
 // });
 </script>
+</body>
 </html>

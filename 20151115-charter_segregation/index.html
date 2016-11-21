@@ -9,8 +9,7 @@
   <meta name="description" content="Charter School Segregation">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  
-  <link href="js/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
   <style>
@@ -66,32 +65,14 @@
 <div class="chart" id="proficiency_integrated"></div>
 
 
-<a href='https://docs.google.com/spreadsheets/d/14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- <a href='https://docs.google.com/spreadsheets/d/14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 </div>
 
-</body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/c3-master/c3.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 
 <script>
-// $("#headerDiv").sticky({topSpacing:1});
-
-</script>
-<script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charter_breakdown
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charter_demographics
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_poverty_white
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_poverty_minority
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_poverty_integrated
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_proficiency_white
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_proficiency_minority
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=14YUw6tgOv3wo2B9XnagFbCsM9DHHqiC96NAZcJobH_M&sheet=charters_proficiency_integrated
-
-//THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-
 d3.json("./data/charter_breakdown.json", function(error, dataLoadBreakdown) {
 d3.json("./data/charter_demographics.json", function(error, dataLoadDemographics) {
 d3.json("./data/charters_poverty_white.json", function(error, dataLoadPovertyWhite) {
@@ -101,17 +82,6 @@ d3.json("./data/charters_proficiency_white.json", function(error, dataLoadProfic
 d3.json("./data/charters_proficiency_minority.json", function(error, dataLoadProficiencyMinority) {
 d3.json("./data/charters_proficiency_integrated.json", function(error, dataLoadProficiencyIntegrated) {
 
-
-//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
-// var dataLoadBreakdown = <?php echo $jsonDataBreakdown; ?>;
-// var dataLoadDemographics = <?php echo $jsonDataDemographics; ?>;
-// var dataLoadPovertyWhite = <?php echo $jsonDataPovertyWhite; ?>;
-// var dataLoadPovertyMinority = <?php echo $jsonDataPovertyMinority; ?>;
-// var dataLoadPovertyIntegrated = <?php echo $jsonDataPovertyIntegrated; ?>;
-// var dataLoadProficiencyWhite = <?php echo $jsonDataProficiencyWhite; ?>;
-// var dataLoadProficiencyMinority = <?php echo $jsonDataProficiencyMinority; ?>;
-// var dataLoadProficiencyIntegrated = <?php echo $jsonDataProficiencyIntegrated; ?>;
-
 dataBreakdown = dataLoadBreakdown.charter_breakdown;
 dataDemographics = dataLoadDemographics.charter_demographics;
 dataPovertyWhite = dataLoadPovertyWhite.charters_poverty_white;
@@ -120,12 +90,6 @@ dataPovertyIntegrated = dataLoadPovertyIntegrated.charters_poverty_integrated;
 dataProficiencyWhite = dataLoadProficiencyWhite.charters_proficiency_white;
 dataProficiencyMinority = dataLoadProficiencyMinority.charters_proficiency_minority;
 dataProficiencyIntegrated = dataLoadProficiencyIntegrated.charters_proficiency_integrated;
-
-
-//St. Paul: '#7d7373'
-//Suburbs: #c7c7c7'
-//Charters: '#ad1625'
-//Minneapolis: '#3c4646'
 
 var padding = {
         top: 40,
@@ -412,5 +376,5 @@ var chart_proficiency_integrated = c3.generate({
 });
 });
 </script>
-
+</body>
 </html>
