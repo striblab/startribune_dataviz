@@ -15,7 +15,6 @@
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
   
   <style>
-
       body, #filter, #filter input:focus { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       #wrapper { text-align:center; margin-right:auto; margin-left:auto; width:500px; /*width:520px;*/ margin-right:auto; margin-left:auto; }
       #headlineBox { width:100%; text-align: center; display: inline-block;background-color:#dfdfdf; padding:15px; }
@@ -75,9 +74,6 @@
         #viewSwitch { margin-left:0px; }
         .bigNum { font-size:2em !important; }
       }
-
-
-      
   </style> 
 </head>
 
@@ -163,31 +159,15 @@
 
 </div>
 
-<div class="breaker"></div>
-
-<!-- <div id="smallLegend"><span>Less</span>&nbsp;<div class="key"><div class="p0"></div><div class="p2"></div><div class="p3"></div><div class="p4"></div><div class="p5"></div></div>&nbsp;<span>More</span></div>
-<h5>Passing attempts</h5> -->
 </div>
 
-</body>
-
 <script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js'></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
 
 <script>
-// $.urlParam = function(name){
-//   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-//   return results[1] || 0;
-// }
-
-// var selected = $.urlParam('chart');
-
-// $(".playstats").hide();
-// $("#" + selected).show();
-
 d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1PAY0eRevbywXoyk-HuK0mNBcfdq4ZKyqPveag12oj_s&sheet=passing", function(error, dataLoadP) {
 
 var dataP = dataLoadP.passing;
@@ -742,4 +722,5 @@ $(".bar").mouseleave(function() {
 
 });
 </script>
+</body>
 </html>

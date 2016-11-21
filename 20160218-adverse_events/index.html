@@ -10,8 +10,8 @@
   <meta name="author" content="Frey Hargarten - StarTribune">
 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
-  <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" /> 
-  <link rel="stylesheet" href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" />
+  <link rel="stylesheet" href="../_common_resources/js/datatables-master/DataTables-1.10.12/css/jquery.dataTables.min.css" /> 
+  <link rel="stylesheet" href="../_common_resources/js/datatables-master/Responsive-2.1.0/css/responsive.dataTables.min.css" />
   <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
   
   <style>
@@ -36,16 +36,15 @@
 <div class="chartTitle">Search the state’s database by hospital or by adverse event</div>
 <div class="chatter">Data contains events reported between 2004 and 2016.</div>
 <table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Year</th><th>Hospital</th><th>City</th><th>Event</th><th>Incidents</th><th>Deaths</th><th>Injuries</th><th>Type</th></tr></thead></table>
-
-<a href='https://docs.google.com/spreadsheets/d/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- 
+<a href='https://docs.google.com/spreadsheets/d/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 
   </div>
-</body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src='//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js'></script>
-<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src='../_common_resources/js/datatables-master/datatables.min.js'></script>
+<script src="../_common_resources/js/datatables-master/Responsive-2.1.0/js/datatables.responsive.js"></script>
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 
 <script>
@@ -119,11 +118,8 @@ var chartDecade = c3.generate({
                 "bProcessing":true,
                 "sAjaxDataProp": "feed.entry",
                 "order": [[ 0, "desc" ]],
-                // "scrollY": "300px",
-                // "scrollCollapse": true,
-                // "paging": false,
                 "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII&sheet=events",
+                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/od6/public/values?&alt=json",
                 "aoColumns": [                 
                     { "mDataProp": "gsx$year.$t" },
                     { "mDataProp": "gsx$hospital.$t" },
@@ -145,5 +141,5 @@ var chartDecade = c3.generate({
 });
 });
 </script>
-
+</body>
 </html>

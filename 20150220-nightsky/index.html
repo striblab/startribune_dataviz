@@ -8,8 +8,8 @@
   <meta name="description" content="Nighttime Lights">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
-  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.3/leaflet.fullscreen.css' rel='stylesheet' />
+  <link href='../_common_resources/js/mapbox-master/mapbox.css' rel='stylesheet' />
+  <link href='../_common_resources/js/mapbox-master/leaflet.fullscreen.css' rel='stylesheet' />
   <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
@@ -50,7 +50,6 @@
 </head>
 
 <body>
-
 <div id="wrapper">
 <div id='map' class='dark'></div>
 <p></p>
@@ -64,20 +63,18 @@
       </label>
 </div>
  -->
-  <a href="https://docs.google.com/spreadsheets/d/1wspa73qBDJKlgP8ETQhgudW7L6KXG0UruiexyClGnfQ/pub?output=xlsx"><button class="downloadButton">&#9660; Download Data</button></a>
+<!--   <a href="https://docs.google.com/spreadsheets/d/1wspa73qBDJKlgP8ETQhgudW7L6KXG0UruiexyClGnfQ/pub?output=xlsx"><button class="downloadButton">&#9660; Download Data</button></a> -->
 </p>
 </div>
-</body>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
-<script src='https://cartodb-libs.global.ssl.fastly.net/torque.full.js'></script>
-<!-- <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script> -->
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.1.2/leaflet-omnivore.min.js'></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.3/Leaflet.fullscreen.min.js'></script>
-<script src="http://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
+<script src="../_common_resources/js/d3-master/queue.v1.min.js"></script>
+<script src='../_common_resources/js/mapbox-master/mapbox.js'></script>
+<script src='../_common_resources/js/mapbox-master/leaflet-omnivore.min.js'></script>
+<script src='../_common_resources/js/mapbox-master/Leaflet.fullscreen.min.js'></script>
+<script src="../_common_resources/js/mapbox-master/leaflet.markercluster-src.js"></script>
 
 
 <script>
@@ -178,4 +175,5 @@ jQuery('#sites_toggle input').on('change', function () {
 });
 });
 </script>
+</body>
 </html>

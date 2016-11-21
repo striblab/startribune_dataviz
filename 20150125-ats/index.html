@@ -9,7 +9,7 @@
   <meta name="description" content="Minnesota Smoking Trends">
   <meta name="author" content="Jeff Hargarten - StarTribune">
 
-  <link href="js/nvd3-master/src/nv.d3.css" rel="stylesheet" type="text/css">
+  <link href="../_common_resources/charts/nvd3-master-old/src/nv.d3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
 <style>
@@ -79,6 +79,7 @@
     <span style='background:#006d2c'></span>
     <span style='background:#002911'></span>
     <span style='background:#fff;'>18%</span>
+  </nav>
 </div>
 
 <p style="padding:2px;clear:both;"></p>
@@ -108,22 +109,21 @@
 
 </div>
 
-<a href="https://docs.google.com/spreadsheets/d/16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00/pub?output=xlsx" target="new_"><button class="downloadButton">&#9660; Download Data</button></a>
+<!-- <a href="https://docs.google.com/spreadsheets/d/16btCovqjK4hg2QKiz8e_W4BZR79h7Nck1QP8dtYZP00/pub?output=xlsx" target="new_"><button class="downloadButton">&#9660; Download Data</button></a> -->
 
 </div>
 
-</body>
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
-<script src="js/nvd3-master/lib/d3.v3.js"></script>
-<script src="js/nvd3-master/nv.d3.js"></script>
-<script src="js/nvd3-master/src/utils.js"></script>
-<script src="js/nvd3-master/src/tooltip.js"></script>
-<script src="js/nvd3-master/src/models/legend.js"></script>
-<script src="js/nvd3-master/src/models/axis.js"></script>
-<script src="js/nvd3-master/examples/stream_layers.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
+<script src="../_common_resources/js/d3-master/queue.v1.min.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/lib/d3.v3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master-old/examples/stream_layers.js"></script>
 
 <script>
 var aspect = 550 / 550,
@@ -564,5 +564,5 @@ d3.helper.tooltip = function(accessor){
     };
 };
 </script>
-
+</body>
 </html>

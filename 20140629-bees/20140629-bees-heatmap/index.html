@@ -33,14 +33,12 @@ The value of pollination to U.S. agricultural production is estimated around $20
     <span style='background:#ecedeb;'></span>
     <span style='background:#dee1dd;'></span>
     <span style='background:#c3cac3;width:11%;color:white;'>-</span>
-
+  </nav>
 <br />
     <small>Source: USDA</small>
 </div>
 
 <div id='map'></div>
-
-</body>
 
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
 <script>
@@ -81,4 +79,5 @@ var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
 map.legendControl.addLegend(document.getElementById('legend').innerHTML);
 dataControl.options.follow = true;
 </script>
+</body>
 </html>

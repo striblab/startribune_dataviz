@@ -11,9 +11,7 @@
   <meta name="author" content="Frey Hargarten - StarTribune">
 
   <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
   
   <style>
       body, #filter, #filter input:focus, p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
@@ -112,7 +110,7 @@
 <div style="text-align:left;">Percentage of schools in selected district by how MCA proficiency rates compare to what would be expected based on poverty rates.</div>
 
 <ul id="listedSchools" class="dropdown months" tabindex="1">
-<div id="filter2"><input type="search" id="filter_box2" placeholder="Search by district name"></input></div>
+<div id="filter2"><input type="search" id="filter_box2" placeholder="Search by district name" /></div>
 </ul>
 
 <div id="bigstats">
@@ -147,7 +145,7 @@
 <div class="zoom">Reset View</div>
 
 <div id="leftSide">
-    <div id="filter"><input type="search" id="filter_box" placeholder="Search by school name"></input></div>
+    <div id="filter"><input type="search" id="filter_box" placeholder="Search by school name" /></div>
     <div id="schoolsList"></div>
 </div>
 
@@ -176,13 +174,10 @@
     <div id="chart"></div>
 </div>
 </div>
-</body>
 
 <script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
 
 <script>
 d3.csv("./data/scores.csv", function(d) {
@@ -701,4 +696,5 @@ $('.switch').first().addClass("selected");
       });
 
 </script>
+</body>
 </html>

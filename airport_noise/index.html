@@ -71,7 +71,7 @@
       .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
 
       #box { text-align:center; }
-      #quantize { width:246px; margin-left:auto; margin-right:auto; }
+      .legendBlock { width:246px; margin-left:auto; margin-right:auto; }
 
       .map-overlay-container { position:static; }
       .map-overlay { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
@@ -95,9 +95,9 @@
 
 <div class="breaker"></div>
 
-<div id="box">
-<div id="quantize">
-<span class='legend' id="aidQ">
+<div>
+<div class='legendBlock'>
+<span class='legend'>
   <nav class='legend clearfix'>
     <h4>Noise change since 2006</h4>
     <span style='background:#fff;'>Less</span>
@@ -107,6 +107,7 @@
     <span style='background:#fdae61'></span>
     <span style='background:#d7191c'></span>
     <span style='background:#fff;'>More</span>
+  </nav>
 </span>
 </div>
 
@@ -120,11 +121,11 @@
 <div id="map_blocks"></div>
 <div id='geocoder-container2'></div>
 
-<div id="box" class="controls">
+<div class="controls">
 <h2 id="year" style="display:none;"></h2>
 
-<div id="quantize">
-<span class='legend' id="aidQ">
+<div class='legendBlock'>
+<span class='legend'>
   <nav class='legend clearfix'>
     <h5>Decibel noise level</h5>
     <span style='background:#fff;'>Less</span>
@@ -134,6 +135,7 @@
     <span style='background:#fdae61'></span>
     <span style='background:#d7191c'></span>
     <span style='background:#fff;'>More</span>
+  </nav>
 </span>
 </div>
 </div>
@@ -141,7 +143,7 @@
 <div class='map-overlay-container controls'>
 <div class='map-overlay'>
 
-<button class="previous navButtons"><<</button><button class="next navButtons">>></button><button class="play myButton2" id="toggle">&#9658;</button>
+<button class="previous navButtons">&lt;&lt;</button><button class="next navButtons">&gt;&gt;</button><button class="play myButton2" id="toggle">&#9658;</button>
 
 <div id="tracker">
 <div class="trackDot" id="d0" index="0" year="2011"></div>
@@ -159,10 +161,9 @@
 
 </div>
 <!-- <p><small class="byline">Data Visualization by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten</a></small></p> -->
-</body>
 
 <script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js'></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
@@ -172,13 +173,16 @@
 
 $.urlParam = function(name){
   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-  return results[1] || 0;
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
 }
 
 var selected = $.urlParam('chart');
 
+if (selected != null){
 $(".dataviz").hide();
 $("#" + selected).show();
+}
 
 d3.json('./shapefiles/blocks.json', function(error, blocks) {
 d3.json('./shapefiles/noise.geojson', function(error, spots) {
@@ -862,4 +866,5 @@ $(".next").click(function() {
 });
 });
 </script>
+</body>
 </html>

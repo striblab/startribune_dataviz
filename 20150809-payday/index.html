@@ -3,15 +3,16 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Payday Lending in Minnesota</title>
-  	<meta name="description" content="Payday Lending in Minnesota">
+  <meta name="description" content="Payday Lending in Minnesota">
  	<meta name="author" content="Jeff Hargarten - StarTribune">
 	<meta name="generator" content="BBEdit 10.5" />
 
-	<link rel="stylesheet" href="js/d3.slider-master/d3.slider.css" />
-  <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" /> 
-  <link rel="stylesheet" href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" />
-  <link href="js/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../_common_resources/js/d3.slider-master/d3.slider.css" />
+  <link rel="stylesheet" href="../_common_resources/js/datatables-master/DataTables-1.10.12/css/jquery.dataTables.min.css" /> 
+  <link rel="stylesheet" href="../_common_resources/js/datatables-master/Responsive-2.1.0/css/responsive.dataTables.min.css" />
+  <link href="../_common_resources/charts/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
   
 <style type="text/css">
@@ -164,23 +165,21 @@
 
 <div class="sliderDiv"><div id="slider2"></div></div>
 
-<a href='https://github.com/striblab/startribune_dataviz/tree/master/20150809-payday/data/payday_data.zip?raw=true' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- <a href='https://github.com/striblab/startribune_dataviz/tree/master/20150809-payday/data/payday_data.zip?raw=true' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 
 </div>
 
-</body>
-
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/d3.slider-master/d3.slider.js"></script>
-<script src="js/nvd3-master/build/nv.d3.js"></script>
-<script src="js/nvd3-master/src/utils.js"></script>
-<script src="js/nvd3-master/src/tooltip.js"></script>
-<script src="js/nvd3-master/src/models/legend.js"></script>
-<script src="js/nvd3-master/src/models/axis.js"></script>
-<script src="js/nvd3-master/test/stream_layers.js"></script>
-<script src='//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js'></script>
-<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3.slider-master/d3.slider.js"></script>
+<script src="../_common_resources/charts/nvd3-master/build/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master/test/stream_layers.js"></script>
+<script src='../_common_resources/js/datatables-master/datatables.min.js'></script>
+<script src="../_common_resources/js/datatables-master/Responsive-2.1.0/js/datatables.responsive.js"></script>
 <script>
 d3.json("./data/rixmannLobby.json", function(error, dataLobby) {
 d3.json("./data/paydayLoans.json", function(error, dataLoans) {
@@ -843,4 +842,5 @@ $(window).load(function(){
 });
 });
 </script>
+</body>
 </html>

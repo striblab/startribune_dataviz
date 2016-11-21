@@ -8,8 +8,8 @@
  	<meta name="author" content="Jeff Hargarten - StarTribune">
 	<meta name="generator" content="BBEdit 10.5" />
 	
-	<link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" /> 
-	<link rel="stylesheet" href="//cdn.datatables.net/responsive/1.0.6/css/dataTables.responsive.css" />
+    <link rel="stylesheet" href="../_common_resources/js/datatables-master/DataTables-1.10.12/css/jquery.dataTables.min.css" /> 
+    <link rel="stylesheet" href="../_common_resources/js/datatables-master/Responsive-2.1.0/css/responsive.dataTables.min.css" />
     <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
 <style type="text/css">
@@ -51,16 +51,14 @@
 
 <table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Last</th><th>First</th><th>County</th><th>OT Wages</th><th>OT %</th><th>Organization</th><th>Job Title</th><th>Gross Wages</th></tr></thead></table>
 
-<a href='https://docs.google.com/spreadsheets/d/18fLI7k8yU7t9bGGUqGfwm2RJWrVVwKjnm5pg9gtJ0ac/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
+<!-- <a href='https://docs.google.com/spreadsheets/d/18fLI7k8yU7t9bGGUqGfwm2RJWrVVwKjnm5pg9gtJ0ac/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 </div>
 
-</body>
-
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src='//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js'></script>
-<script src="//cdn.datatables.net/responsive/1.0.6/js/dataTables.responsive.js"></script>
+<script src='../_common_resources/js/datatables-master/datatables.min.js'></script>
+<script src="../_common_resources/js/datatables-master/Responsive-2.1.0/js/datatables.responsive.js"></script>
 
-<script type="text/javascript" charset="utf-8">
+<script>
       $(document).ready(function() {
 
            var eventsTable = $('#events').DataTable( {
@@ -91,4 +89,5 @@ $('.dataTables_filter input').attr("placeholder", "Enter an employee's name or c
 
         } );
     </script>
+</body>
 </html>

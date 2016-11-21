@@ -1,0 +1,21 @@
+{
+  "name": "mapbox.js",
+  "main": [
+    "mapbox.css",
+    "mapbox.js",
+    "images/*"
+  ],
+  "version": "3.0.1-1-gee7c97b",
+  "homepage": "https://github.com/mapbox/mapbox.js",
+  "authors": ["Mapbox"],
+  "description": "Mapbox Javascript API",
+  "keywords": ["mapbox", "leaflet", "maps", "map"],
+  "license": "See LICENSE.md",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "examples"
+  ]
+}

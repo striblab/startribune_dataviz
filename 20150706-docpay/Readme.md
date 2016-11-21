@@ -1,9 +1,9 @@
 Star Tribune - Doctor Payment Database
 ================
 
-by Jeff Hargarten
+by Frey Hargarten
 
-Built using [jQuery](https://github.com/jquery/jquery) and [DataTables](https://www.datatables.net/). Powered by [Google Sheets](https://www.google.com/sheets/about/).
+Built using [jQuery](https://github.com/jquery/jquery) and [DataTables](https://www.datatables.net/).
 
 The files can be run in any live server setup. Just open the index.html file in your browser.
 

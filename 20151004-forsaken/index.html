@@ -59,12 +59,9 @@
 
     }
 </style>
-
-
 </head>
 
 <body> 
-
 <div id="wrapper">
 
   <div id="quantize">
@@ -88,8 +85,6 @@
 
 <div id="map"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
 
-
-
 <div class="breaker"></div>
 <a href='javascript:void(0);' class='zoom'>Reset View</a>
 <div id="infobox">
@@ -98,32 +93,15 @@
 
 </div>
 
-<a href='https://docs.google.com/spreadsheets/d/1ckBZQQ6hK9w_wWKWDhsZB21u0CGFIYt4scuE3R9ALIU/pub?gid=799222312&single=true&output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
-
-</body>
+<!-- <a href='https://docs.google.com/spreadsheets/d/1ckBZQQ6hK9w_wWKWDhsZB21u0CGFIYt4scuE3R9ALIU/pub?gid=799222312&single=true&output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-<script>
-//LIVE JSON MAGIC
-
-//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1ckBZQQ6hK9w_wWKWDhsZB21u0CGFIYt4scuE3R9ALIU&sheet=waitlist
-
-//THESE LOAD DIFFERENT TABS OF THE GOOGLE SHEET INTO SEPERATE JSON STRINGS, USING THE ACTUAL URLS
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=lvligOlsAoP_76RtXpYsNdZJvl-g9RpWnScd7Tk3OJODGM3yzPbPWJSHYaUYhy95bycmBDbC6A7uML4kG4_mMIKHPVjGWXkSOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHaxCoMjMSmZWLp6XAShvjQj50JtCfh4yP7n1RnEoDeOH7XqmOXgX8RYIyMAhIAtjnF9UDzNXGLr6TkNKVDlkUzzGatjCbv0vUXYPAgPhZjax1Fp-df68fLfJ2WmKtJJhkHixcCzrIV0nbGetL3GQdFGud9WSYqyzEtw&lib=MVcLnEUipyThKZcpmQKyqT_CoSfd4egCX");
-
-</script>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3-master/topojson.v1.min.js"></script>
 
 <script>
 d3.json("./data/waitlist.json", function(error, dataLoad) {
 
-//THESE ADD THEM TO JAVASCRIPT VARIABLES WE CAN ACCESS THROUGHOUT THE DOCUMENT
-// var dataLoad = <?php echo $jsonData; ?>;
 
 var popData = dataLoad.waitlist;
 
@@ -325,4 +303,5 @@ d3.helper.tooltip = function(accessor){
 };
 });
 </script>
+</body>
 </html>

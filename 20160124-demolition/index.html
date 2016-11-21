@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +8,9 @@
   <meta name="description" content="Minneapolis Teardowns">
   <meta name="author" content="Frey Hargarten - StarTribune">
 
-  <link href="js/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-  <link rel="stylesheet" href="js/d3.slider-master/d3.slider.css" /> 
+  <link href="../_common_resources/charts/nvd3-master/build/nv.d3.css" rel="stylesheet" type="text/css">
+  <link href='../_common_resources/js/mapbox-master/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="../_common_resources/js/d3.slider-master/d3.slider.css" /> 
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
 
 <style>
@@ -100,7 +99,7 @@
 
 <div id="sliderDiv"><div id="slider"></div></div>
 <div class="breaker"></div>
-<div id="back"><< prev year</div><div id="forward">next year >></div>
+<div id="back">&lt;&lt; prev year</div><div id="forward">next year &gt;&gt;</div>
 
   <div class="breaker"></div>
 
@@ -154,10 +153,10 @@
 
 <div class="btn-group" data-toggle="buttons">
       <label class="btn btn-primary active" id="parcels_toggle">
-        <input type="checkbox" name="options" id="state4">Communities
+        <input type="checkbox" name="options">Communities
       </label>
      <label class="btn btn-primary" id="nb_toggle">
-        <input type="checkbox" name="options" id="state4">Neighborhoods
+        <input type="checkbox" name="options">Neighborhoods
       </label>
 </div>
 
@@ -182,23 +181,21 @@
 
 <div class="breaker"></div>
 
-<a href='https://docs.google.com/spreadsheets/d/1Ie_rGF9NjC7v-4Xk6AjapqawSSV9GCcD4bg5Ta7NrlQ/pub?output=xlsx' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a>
 </div>
-
-</body>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="js/d3.slider-master/d3.slider.js"></script>
-<script src="js/nvd3-master/build/nv.d3.js"></script>
-<script src="js/nvd3-master/src/utils.js"></script>
-<script src="js/nvd3-master/src/tooltip.js"></script>
-<script src="js/nvd3-master/src/models/legend.js"></script>
-<script src="js/nvd3-master/src/models/axis.js"></script>
-<script src="js/nvd3-master/test/stream_layers.js"></script>
+<script src='../_common_resources/js/mapbox-master/mapbox.js'></script>
+<script src='../_common_resources/js/mapbox-master/leaflet-omnivore.min.js'></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script src="../_common_resources/js/d3.slider-master/d3.slider.js"></script>
+<script src="../_common_resources/charts/nvd3-master/build/nv.d3.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/utils.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/tooltip.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/legend.js"></script>
+<script src="../_common_resources/charts/nvd3-master/src/models/axis.js"></script>
+<script src="../_common_resources/charts/nvd3-master/test/stream_layers.js"></script>
 <script type="text/javascript" src="http://static.startribune.com/js/pym/pym.min.js"></script>
 <script>
 var pymChild = new pym.Child();
@@ -1186,9 +1183,9 @@ return [
 }
 }
 
-
 });
 });
 });
 </script>
+</body>
 </html>
