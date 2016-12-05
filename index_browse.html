@@ -73,11 +73,11 @@
       #socialmenu img:hover { opacity:.8; }
 
 /*ENTRIES*/
-      #articlePane { display:inline-block !important;  }
+      #articlePane { display:inline-block !important; width:100%; }
       .articleName{ color: #333; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: 23px; line-height: 120%; margin: 10px 0 15px 0; }
       .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
       .articleEntry { margin:20px; }
-      .articlePhoto img { border: 1px solid #000; padding:1px; width:100%; max-width:100%;  }
+      .articlePhoto img { border: 1px solid #000; padding:1px; width:100% !important; max-width:100%;  }
       .byline { font-weight:bold; float:left; } 
       .more { font-size:18px; display:block; text-align:center; }
       .date { float:right; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
@@ -584,7 +584,7 @@ $( document ).ready(function() {
 $('#filter_box').keyup(function(){
     $('.articleEntry, .linkage').hide();
     $(".sort-link").css("background-color","#fff");
-    var txt = $('#search-criteria_m').val();
+    var txt = $('#filter_box').val();
     if (txt == '') { $('#allProjects').addClass("linkSelect"); $("#resourcesBlock, #contributorsBlock").hide(); }
     $('.articleName, .byline, .linkage').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
