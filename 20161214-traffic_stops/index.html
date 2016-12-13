@@ -19,7 +19,7 @@
   <style>
       body { margin:0; padding:0; font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       text { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
-      #wrapper { width:900px; margin-right:auto; margin-left:auto; display:block !important; }
+      #wrapper { width:900px; margin-right:auto; margin-left:auto; display:block !important; opacity:0; }
       #map { width:100%; height:400px; display:block; }
       .slide { width:100%; height:430px; display:block; }
       .mapboxgl-ctrl-attrib { display:none; }
@@ -88,17 +88,17 @@
 </div>
 
 <div id="content">
-<div id="mapbox" class="slide">
+<div id="mapbox" class="slide" data="0">
 <div id="map"></div>
 <div id='geocoder-container'></div>
 <!-- <div class="zoom">Reset View</div> -->
 </div>
 
-<div id="population" class="slide chart"></div>
-<div id="time" class="slide chart"></div>
-<div id="trend" class="slide chart"></div>
-<div id="search" class="slide chart"></div>
-<div id="gender" class="slide chart"></div>
+<div id="population" class="slide chart" data="1"></div>
+<div id="time" class="slide chart" data="2"></div>
+<div id="trend" class="slide chart" data="3"></div>
+<div id="search" class="slide chart" data="4"></div>
+<div id="gender" class="slide chart" data="5"></div>
 </div>
 
 <div id='cssmenu'>
@@ -124,27 +124,9 @@
 <script src="../_common_resources/charts/c3-master/c3.min.js"></script>
 
 <script>
-$.urlParam = function(name){
-  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-  if (results != null) { return results[1] || 0; }
-  else { return null; }
-}
-
-var selected = $.urlParam('chart');
-
-if (selected != null){
-  $(".slide, #cssmenu, #viewSwitch").hide();
-  $("#" + selected).show();
-  $("#wrapper, #content").css("width","100%");
-} else {
-  $(".slide").hide();
-  $("#mapbox").show();
-}
 
 d3.json('./shapefiles/minneapolis_shape.json', function(error, shape) {
 d3.json('./shapefiles/stpaul_neighborhoods.json', function(error, nb) {
-
-// var boom = json;
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
@@ -164,14 +146,25 @@ map.on('load', function() {
     map.addControl(geocoder);
     map.addControl(new mapboxgl.Navigation());
 
-    // map.addSource("boom", {
-    //     type: "geojson",
-    //     data: boom
-    // });
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
 
-  // var shapeObj = new mapboxgl.addSource({
-  //   data: nb
-  // });
+var selected = $.urlParam('chart');
+
+if (selected != null){
+  $(".slide, #cssmenu, #viewSwitch").hide();
+  $("#" + selected).show();
+  $("#wrapper, #content").css("width","100%");
+  $("#wrapper").css("opacity","1");
+  switchSlide($("#" + selected).attr("data"));
+} else {
+  $(".slide").hide();
+  $("#mapbox").show();
+  $("#wrapper").css("opacity","1");
+}
 
   map.addSource('mplsnb', {
     type: 'geojson',
