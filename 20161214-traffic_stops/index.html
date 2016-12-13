@@ -32,6 +32,7 @@
       #content { float:right; width:70%; }
       #chatterBox { text-align:left; }
       .chatter { height:100px; }
+      .selectThis a { color:#000 !important; }
 
       td { text-align:left; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
 
@@ -103,7 +104,7 @@
 <div id='cssmenu'>
 <ul id="nav">
  <ul>
-   <li class="menuSwitch" data="0"><a href='#'><div><div>Stops by neighborhood</div></div></a></li>
+   <li class="menuSwitch selectThis" data="0"><a href='#'><div><div>Stops by neighborhood</div></div></a></li>
    <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
    <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
    <li class="menuSwitch" data="3"><a href='#'><div><div>Trendline</div></div></a></li>
@@ -266,6 +267,8 @@ map.on('load', function() {
       }
 
       $(".menuSwitch").click(function() {
+        $(".menuSwitch").removeClass("selectThis");
+        $(this).addClass("selectThis");
         switchSlide($(this).attr("data"));
       });
 
