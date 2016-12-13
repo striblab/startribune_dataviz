@@ -1,0 +1,1741 @@
+    /* PAGE BASE */
+    
+    body {
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+        overflow-x: hidden !important;
+    }
+    p {
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    }
+    a {
+        color: #000;
+    }
+    a:link {
+        webkit-tap-highlight-color: #1d78af;
+    }
+    #wrapper {
+        display: none;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 1080px;
+    }
+    .l-elections-wrapper {
+        font-size: 1.2em;
+    }
+    .l-election-results-header {
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 2em;
+        padding-bottom: 1.5em;
+        padding-top: 1em;
+        text-align: center;
+    }
+    .group {
+        zoom: 1;
+    }
+    .section {
+        clear: both;
+        margin: 0px;
+        padding: 0px;
+    }
+    .group:before,
+    .group:after {
+        content: "";
+        display: table;
+    }
+    .col {
+        background: #fff;
+        padding: 1em 0;
+        text-align: center;
+    }
+    .col:first-child {
+        margin-left: 0;
+    }
+    .span_1_of_3 {
+        width: 32.26%;
+    }
+    .col {
+        display: block;
+        float: left;
+        margin: 1% 0 1% 1.6%;
+    }
+    .span_2_of_3 {
+        width: 66.13%;
+    }
+    .col {
+        display: block;
+        float: left;
+        margin: 0 0 0 1.6%;
+    }
+    #datavizPane {
+        zoom: 80%;
+    }
+    /* SECTION HEADER */
+    
+    .resultsBanner {
+        border-bottom: 1px solid #e7e7e7;
+        float: left;
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif!important;
+        font-size: .65em;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0;
+        padding: 10px 0 0 0;
+        width: 100%;
+    }
+    .resultsLogo {
+        float: left;
+        margin: 0 18px 0 10px;
+    }
+    .resultsLogo h4 {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        font-weight: bold;
+    }
+    .resultsLogoSVG {
+        background: url(http://stmedia.startribune.com/images/elex-logo-fallback-100.png);
+        background: url(http://static.startribune.com/preview/elections-2016/homepage/elex-logo-40.svg), none;
+        background-repeat: no-repeat;
+        background-size: 35px 35px;
+        float: right;
+        height: 35px;
+        margin: -12px 12px 0 6px;
+        width: 35px;
+    }
+    .coverageLinks {
+        float: right;
+        margin-right: 10px;
+        text-transform: uppercase;
+    }
+    .coverageLinks a:hover {
+        color: #999;
+    }
+    /* SWITCHES */
+    
+    #bottomSwitches {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 100%;
+    }
+    #viewSwitches {
+        border-right: 1px solid #ddd;
+        display: inline-block;
+    }
+    .switch {
+        background-color: #efefef;
+        border: 1px solid #aaa;
+        display: inline-block;
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        padding: 10px;
+        text-align: center;
+        width: 24.5%;
+    }
+    .switch:hover,
+    .selected2,
+    .mapSwitch:hover,
+    .typeSwitch:hover,
+    .layerSwitch:hover {
+        background-color: #cccccc !important;
+        color: #000 !important;
+        cursor: pointer;
+        opacity: 1 !important;
+    }
+    .selected3 {
+        color: #000 !important;
+    }
+    .typeSwitch,
+    .layerSwitch,
+    .stateSwitch {
+        display: inline-block;
+        margin: 5px;
+        opacity: .4;
+        width: 60px;
+    }
+    .switch img {
+        width: 40px;
+    }
+    .mapSwitch img,
+    .typeSwitch img,
+    .layerSwitch img,
+    .stateSwitch img {
+        width: 100%;
+    }
+    #raceSwitcher {
+        float: left;
+        font-size: 0.9em;
+        width: 20%;
+    }
+    .raceSwitch {
+        background: transparent;
+    }
+    /* PANES */
+    
+    #datavizPane {
+        float: right;
+        width: 77.9%;
+        background-color: #f3f3f3;
+        border-left: 1px solid #e7e7e7;
+    }
+    .dataviz {
+        width: 100%;
+    }
+    #rightSide {
+        font-size: .8em;
+        width: 100%;
+        padding: 0 0 0 10px;
+    }
+    div#fulldataviz {
+        position: relative;
+        width: 100%;
+    }
+    /* MAPS */
+    
+    .map,
+    .carto {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 800px;
+    }
+    .noclicky {
+        opacity: 0.7;
+        pointer-events: none !important;
+    }
+    .gone {
+        opacity: 0;
+        pointer-events: none !important;
+    }
+    rect:hover,
+    text:hover {
+        background-color: #333 !important;
+        cursor: pointer;
+        opacity: .5;
+    }
+    #mnhouse .map,
+    #mnhouse .carto,
+    #mnsenate .map,
+    #mnsenate .carto,
+    #mnhouse .map svg,
+    #mnhouse .carto svg,
+    #mnsenate .map svg,
+    #mnsenate .carto svg {
+        display: inline-block;
+        height: 600px !important;
+        width: 375px !important;
+    }
+    .carto,
+    #mnhouse .carto,
+    #mnsenate .carto {
+        display: none;
+    }
+    .tooltip {
+        min-width: 150px;
+        width: auto !important;
+    }
+    .passthrough {
+        font-family: Arial !important;
+        pointer-events: none !important;
+    }
+    .sideStates {
+        position: absolute;
+        right: 2%;
+        top: 240px;
+    }
+    .sideStates .block {
+        color: #fff;
+        font-size: 0.8em;
+        font-weight: 900;
+        height: 30px;
+        padding-top: 7px;
+        width: 30px;
+    }
+    .sideStates .block:hover {
+        border: 2px solid #333 !important;
+        cursor: pointer;
+    }
+    .stateSelect {
+        background-color: #333 !important;
+    }
+    .blockSelect {
+        border: 2px solid #333 !important;
+    }
+    .mapBox {
+        height: 600px !important;
+    }
+    .zoom {
+        float: right !important;
+        margin-right: 20px;
+    }
+    path {
+        stroke-opacity: 0.7 !important;
+    }
+    /* POWER BAR */
+    
+    #powerbar {
+        padding: 15px 10px 20px 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #e7e7e7;
+    }
+    #partyLabels,
+    #partyBar,
+    #partyCount {
+        width: 100%;
+    }
+    .bar,
+    .count,
+    .label {
+        display: inline-block;
+    }
+    .dlabel,
+    .rlabel {
+        font-size: 1.5em;
+    }
+    .count {
+        font-size: 1.5em;
+        font-weight: 900;
+        width: 13%;
+    }
+    .backbar {
+        background-color: #cccccc;
+        height: 24px;
+        margin: 0!important;
+        padding: 0 !important;
+    }
+    .label {
+        width: 48%;
+    }
+    .bar {
+        height: 24px;
+        width: 0;
+    }
+    .gopLabel,
+    .gopCount,
+    .gopVotes {
+        text-align: right !important;
+    }
+    .demsLabel,
+    .demsCount,
+    .demsVotes {
+        text-align: left !important;
+    }
+    #demsBar {
+        background-color: #0D4773;
+    }
+    #gopBar {
+        background-color: #9C0004;
+    }
+    #undBar {
+        background-color: #ddd;
+    }
+    #indBar {
+        background-color: #E07242;
+    }
+    #dWin {
+        float: left;
+    }
+    #rWin {
+        float: right;
+    }
+    #indLabel,
+    #undLabel,
+    #indCount,
+    #undCount {
+        text-align: center;
+    }
+    #remaining {
+        width: 100%;
+    }
+    .check {
+        font-size: 1.5em;
+        height: 20px;
+        width: 20px;
+    }
+    .demWin {
+        float: left;
+    }
+    .gopWin {
+        float: right;
+    }
+    .change {
+        font-size: 1.5em;
+        color: #bbbbbb;
+        font-weight: 900;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    /* SWATCHES */
+    
+    .republican {
+        background-color: #d34A44 !important;
+        fill: #d34A44 !important;
+        font-weight: bold;
+        pointer-events: all;
+        stroke: #8C1B17 !important;
+    }
+    .rlikely {
+        background-color: #A5484D;
+        fill: #A5484D !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .rlean {
+        background-color: #f7816E;
+        fill: #f7816E !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .democrat {
+        background-color: #3585BC !important;
+        fill: #3585BC !important;
+        font-weight: bold;
+        pointer-events: all;
+        stroke: #3F88C5 !important;
+    }
+    .dlikely {
+        background-color: #5ca5c3;
+        fill: #5ca5c3 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .dlean {
+        background-color: #72A9D6;
+        fill: #72A9D6 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r1 {
+        background-color: #eca795;
+        color: black !important;
+        fill: #eca795 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r2 {
+        background-color: #e58970;
+        color: white !important;
+        fill: #e58970 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r3 {
+        background-color: #df6a4c;
+        color: white !important;
+        fill: #df6a4c !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r4 {
+        background-color: #d84c27;
+        color: white !important;
+        fill: #d84c27 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r1b {
+        border: 1px solid #eca795;
+        color: black !important;
+        fill: #eca795 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r2b {
+        border: 1px solid #e58970;
+        color: black !important;
+        fill: #e58970 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r3b {
+        border: 1px solid #df6a4c;
+        color: black !important;
+        fill: #df6a4c !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .r4b {
+        border: 1px solid #d84c27;
+        color: black !important;
+        fill: #d84c27 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .mid {
+        background-color: #fff !important;
+        color: #bbb !important;
+        fill: #ddd !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .gray3 {
+        color: black !important;
+    }
+    .d1 {
+        background-color: #97bedb;
+        color: black !important;
+        fill: #97bedb !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d2 {
+        background-color: #73a7ce;
+        color: black !important;
+        fill: #73a7ce !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d3 {
+        background-color: #4f90c1;
+        color: black !important;
+        fill: #4f90c1 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d4 {
+        background-color: #2b7ab5;
+        color: black !important;
+        fill: #2b7ab5 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d1b {
+        border: 1px solid #97bedb;
+        color: black !important;
+        fill: #97bedb !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d2b {
+        border: 1px solid #73a7ce;
+        color: black !important;
+        fill: #73a7ce !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d3b {
+        border: 1px solid #4f90c1;
+        color: black !important;
+        fill: #4f90c1 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .d4b {
+        border: 1px solid #2b7ab5;
+        color: black !important;
+        fill: #2b7ab5 !important;
+        font-weight: bold;
+        pointer-events: all;
+    }
+    .independent {
+        border: 1px solid #7CB342;
+        color: #333 !important;
+        fill: #7CB342;
+    }
+    .none {
+        background-color: #cccccc !important;
+        fill: #cccccc !important;
+    }
+    /* LEGENDS */
+    
+    #legends {
+        float: left;
+    }
+    #legendMain {
+        font-size: 0.75em;
+    }
+    .legendLabel {
+        display: inline-block;
+        height: 15px;
+        width: 50px;
+    }
+    .brick {
+        color: #bbb;
+        display: inline-block;
+        height: 10px;
+        width: 26px;
+    }
+    .partyBlock {
+        display: inline-block;
+    }
+    .tinybreak {
+        clear: both;
+        display: block;
+    }
+    #legendMargins {
+        display: none;
+    }
+    .legendBlock {
+        text-align: left;
+    }
+    .smallLabel {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    .legendLabel {
+        color: #333;
+        font-weight: 900;
+        text-align: center;
+    }
+    .footnote {
+        clear: both;
+        color: #bbbbbb;
+        display: block;
+        display: none;
+        font-size: 0.7em;
+    }
+    .green2 {
+        background-color: #AED581 !important;
+        fill: #AED581 !important;  
+    }
+    .green4 {
+        background-color: #7CB342 !important;
+        fill: #7CB342 !important;  
+    }
+    /* CARTOGRAMS */
+    
+    .dem rect {
+        fill: #3F88C5 !important;
+    }
+    .rep rect {
+        fill: #D90429 !important;
+    }
+    .battleground rect {
+        fill: #cccccc !important;
+    }
+    .cartoState:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    .cartoState rect {
+        stroke: #fff !important;
+        stroke-width: 0.8px;
+    }
+    #cartogram {
+        height: 600px;
+        text-align: center;
+        width: 800px;
+    }
+    #cartogram text {
+        fill: #000 !important;
+        font-family: Arial !important;
+        font-size: 0.9em;
+        font-weight: 900;
+        pointer-events: none !important;
+    }
+    polygon {
+        stroke: #fff !important;
+        stroke-width: 1px;
+    }
+    .stateLabel {
+        background-color: transparent !important;
+        display: inline-block;
+        text-align: left;
+        width: 68%;
+    }
+    .votes {
+        background-color: transparent !important;
+        display: inline-block;
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+        text-align: left;
+        width: 30%;
+    }
+    .stateLabel {
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+        font-weight: 400;
+    }
+    .num:hover {
+        opacity: 0.5;
+    }
+    .thisThing {
+        opacity: 0.5;
+    }
+    .totalNum {
+        font-size: 1.4em;
+        font-weight: 900;
+    }
+    .slide {
+        display: none;
+    }
+    .cd {
+        stroke: #fff !important;
+        stroke-width: 1px !important;
+    }
+    .cd:hover {
+        cursor: pointer;
+        opacity: 0.5 !important;
+    }
+    .cd.active {
+        opacity: 0.5 !important;
+    }
+    /* TABLES */
+    
+    #table {
+        height: auto;
+        padding: 10px;
+        vertical-align: top;
+    }
+    #allResults {
+        border-right: 0;
+        height: 1200px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .column {
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+    }
+    .tableHead {
+        border-bottom: 1px solid #ddd;
+        display: inline-block;
+        font-family: "Poynter Serif RE";
+        font-weight: 900;
+        padding: 10px;
+        width: 24%;
+    }
+    .tableCell {
+        border-bottom: 1px solid #ddd;
+        display: inline-block;
+        font-family: "Benton Sans";
+        padding: 10px;
+        width: 24%;
+    }
+    .tableBreak {
+        clear: both;
+        display: block;
+    }
+    input {
+        border-radius: 0 !important;
+        margin-bottom: 15px !important;
+        padding: 0 12px;
+    }
+    input:focus {
+        border: 1px solid #bbbbbb;
+        box-shadow: 0 0 5px #bbbbbb;
+        padding: 3px 0px 3px 3px;
+    }
+    .district {
+        display: inline-block;
+    }
+    .box {
+        border: 1px solid #000;
+        font-size: .7em;
+        height: 40px;
+        margin: 2px;
+        padding: 3px;
+        vertical-align: middle;
+        width: 60px;
+    }
+    .box:hover {
+        background-color: #333;
+        cursor: pointer;
+    }
+    .tableCol {
+        display: inline-block;
+        text-align: left;
+        vertical-align: top;
+        width: 32%;
+    }
+    .dColumn {
+        border-top: 2px solid #72A9D6;
+        font-size: 0.7em;
+    }
+    .rColumn {
+        border-top: 2px solid #d34A44;
+        font-size: 0.7em;
+    }
+    .mColumn {
+        border-top: 2px solid #cccccc;
+        font-size: 0.7em;
+    }
+    .bigBoard {
+        display: none;
+        vertical-align: top;
+    }
+    .th {
+        font-weight: 900;
+    }
+    .tableRow {
+        border-right: 1px solid #ddd;
+        display: inline-block;
+        margin: 3px;
+        text-align: left !important;
+        vertical-align: top;
+        width: 32%;
+    }
+    .searchTerms {
+        display: none !important;
+    }
+    .bigBoard {
+        text-align: left;
+    }
+    .tableRow div {
+        display: inline-block;
+        text-align: center;
+        width: 24%;
+    }
+    .tableRow:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    .selectedBox {
+        opacity: 0.5 !important;
+    }
+    .president .tableRow div {
+        display: inline-block;
+        text-align: center;
+        width: 19%;
+    }
+    .stateBlock,
+    .stateBlockR {
+        color: #fff;
+        font-weight: 900;
+    }
+    .reporting {
+        color: #bbbbbb !important;
+    }
+    .tableRow {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        display: inline-block;
+        font-size: .8em;
+        margin: 3px;
+        padding: 5px 0px;
+        text-align: left !important;
+        vertical-align: top;
+        width: 32%;
+    }
+    .tableRow .d1 {
+        border-radius: 2px;
+        color: black !important;
+        fill: #97bedb !important;
+        font-weight: bold;
+        padding: 4px;
+        pointer-events: all;
+    }
+    .tableRow .pctBox {
+        border-radius: 2px;
+        color: #000 !important;
+        font-weight: bold;
+        padding: 6px 0px;
+        pointer-events: all;
+    }
+
+    .pctBox.democrat {
+/*        margin-right: 4px;*/
+    }
+
+    .pctBox.republican {
+/*        margin-left: 4px;*/
+    }
+
+    .stateBlockR {
+        color: #000;
+        font-weight: 900;
+    }
+    .tableRow .democrat,
+    #infobox .democrat {
+        color: #fff !important;
+        fill: #3585BC !important;
+        font-weight: bold;
+        pointer-events: all;
+        stroke: none;
+    }
+    .tableRow .republican,
+    #infobox .republican {
+        color: #fff !important;
+        fill: #d34A44 !important;
+        font-weight: bold;
+        pointer-events: all;
+        stroke: none;
+    }
+    /* INFOBOXES */
+    
+    .smallbreak {
+        clear: both;
+    }
+
+    #infobox .pct.republican {
+        max-width: 85px;
+        text-align: center;
+        border-radius: 2px;
+        border: 0 !important;
+        padding: 2px;
+    }
+
+    #infobox {
+        height: 122px;
+        text-align: left;
+        width: 100%;
+    }
+    .districtName {
+        font-size: 1.2em;
+        font-weight: 900;
+    }
+    .name {
+        font-weight: 900 !important;
+    }
+    .statRow {
+        width: 100%;
+    }
+    .cell {
+        display: inline-block;
+        text-align: center;
+    }
+    .stats .label {
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+        font-size: .5em;
+        text-align: center;
+        width: 66% !important;
+    }
+    .pct path {
+        stroke-width: .02px !important;
+    }
+    h2 {
+        padding: 10px;
+        text-align: center;
+    }
+    .candidate {
+        float: left;
+        width: 78%;
+    }
+    .pct {
+        float: right;
+        width: 20%;
+    }
+    .tooltip {
+        width: 150px;
+    }
+    .resultsRow div {
+        display: inline-block;
+        text-align: left;
+        width: 33%;
+    }
+
+    .resultsRow div:nth-child(3) {
+        max-width: 85px;
+        text-align: center;
+        border-radius: 2px;
+        border: 0 !important;
+        padding: 2px;
+    }
+
+    .resultsRow {
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0 0 6px 0;
+        clear: both;
+    }
+    .resultsHead {
+        color: #bbbbbb;
+        display: none !important;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+    .reportingRow {
+        color: #aaa;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+    .hideIT {
+        display: none;
+    }
+    #infobox {
+        float: none;
+        height: 133px;
+        margin-right:auto;
+        margin-left:auto;
+        margin-bottom: 15px;
+        text-align: left;
+        width: 100%;
+    }
+    #infobox .resultsRow:nth-child(2) {
+        border-bottom: 0px;
+    }
+    #infobox .resultsRow:nth-child(5) {
+        border-bottom: 0px;
+    }
+    /* DESKTOP NAV */
+    
+    #cssmenu,
+    #cssmenu ul,
+    #cssmenu ul li,
+    #cssmenu ul li a {
+        border: 0;
+        box-sizing: border-box;
+        display: block;
+        line-height: 1;
+        list-style: none;
+        margin: 0;
+        moz-box-sizing: border-box;
+        padding: 0;
+        position: relative;
+        webkit-box-sizing: border-box;
+    }
+    #raceSwitcher {
+        float: left;
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif!important;
+        font-size: .65em;
+        line-height: 100%;
+        margin: 64px auto 14px;
+        max-width: 238px;
+        padding: 10px 0 0 0;
+        position: absolute;
+        width: 100%;
+    }
+    #cssmenu li,
+    #mobmenu li {
+        background-color: #fff !important;
+        text-align: left;
+    }
+    #cssmenu ul ul {
+       /* display: none;*/
+    }
+    #cssmenu > ul > li.active > ul {
+        display: block;
+    }
+    .align-right {
+        float: right;
+    }
+    #cssmenu > ul > li > a {
+        background: #ffffff;
+        color: #757575;
+        border-bottom: 1px solid #e7e7e7;
+        cursor: pointer;
+        font-size: 16px;
+        o-transition: color .2s ease;
+        padding: 16px 22px;
+        text-decoration: none;
+        transition: color .2s ease;
+        webkit-transition: color .2s ease;
+        z-index: 2;
+    }
+    #cssmenu > ul > li > a:hover {
+        color: #000;
+    }
+    #cssmenu ul > li.has-sub > a img.test-chev {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        z-index: 5;
+        display: block;
+        height: 16px;
+        width: 16px;
+        content: "";
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+    }
+    #cssmenu ul > li.has-sub > a img.test-chev {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        content: "";
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    #cssmenu ul > li.has-sub.open > a img.test-chev {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    #cssmenu ul ul li a {
+        border-bottom: 1px solid #ddd;
+        background: #efefef;
+        color: #989898;
+        cursor: pointer;
+        font-size: 14px;
+        o-transition: color .2s ease;
+        padding: 14px 22px;
+        text-decoration: none;
+        transition: color .2s ease;
+        webkit-transition: color .2s ease;
+        z-index: 2;
+    }
+    #cssmenu ul ul ul li a {
+        padding-left: 32px;
+    }
+    #cssmenu ul ul li a:hover {
+        color: #000;
+    }
+    #cssmenu ul ul > li.has-sub > a:after {
+        background: #dddddd;
+        right: 26px;
+        top: 16px;
+    }
+    #cssmenu ul ul > li.has-sub > a:before {
+        background: #dddddd;
+        top: 20px;
+    }
+    #cssmenu > ul > li > a:hover {
+        color: #000;
+    }
+    #cssmenu {
+        display: block;
+    }
+    a img.test-chev:hover {
+        opacity: 1;
+    }
+    a img.test-chev {
+        opacity: .5;
+    }
+    /* MOBILE NAV */
+    
+    .drop {
+        display: none;
+        float: left;
+        position: relative;
+    }
+    .coverageLinks.cl-dsktp {
+        display: none;
+    }
+    .coverageLinks.cl-mobile {
+        display: block;
+    }
+    .switch {
+        margin: 0 !important;
+        width: auto !important;
+        display: inline-block;
+        max-width: 402px;
+    }
+    .switch:hover {
+        margin: 0 !important;
+    }
+    #mobmenu {
+        display: none;
+    }
+    #mobmenu,
+    #mobmenu ul,
+    #mobmenu ul li,
+    #mobmenu ul li a {
+        border: 0;
+        box-sizing: border-box;
+        display: block;
+        line-height: 1;
+        list-style: none;
+        margin: 0;
+        moz-box-sizing: border-box;
+        padding: 0;
+        position: relative;
+        webkit-box-sizing: border-box;
+    }
+    #mobmenu {
+        background: white;
+        border-right: 1px solid #c5c5c5;
+        bottom: 0;
+        color: #ffffff;
+        display: none;
+        font-family: "Benton Sans", sans-serif;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 220px;
+    }
+    #mobmenu ul ul {
+        display: none;
+    }
+    #mobmenu > ul > li.active > ul {
+        display: block;
+    }
+    #mobmenu > ul > li > a {
+        background: #ffffff;
+        color: #757575;
+        border-bottom: 1px solid #e7e7e7;
+        cursor: pointer;
+        font-size: 16px;
+        o-transition: color .2s ease;
+        padding: 16px 22px;
+        text-decoration: none;
+        transition: color .2s ease;
+        webkit-transition: color .2s ease;
+        z-index: 2;
+    }
+    #mobmenu > ul > li > a:hover {
+        color: #000;
+    }
+    #mobmenu ul > li.has-sub > a img.test-chev {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        z-index: 5;
+        display: block;
+        height: 16px;
+        width: 16px;
+        content: "";
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -ms-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+    }
+    #mobmenu ul > li.has-sub > a img.test-chev {
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        content: "";
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    #mobmenu ul > li.has-sub.open > a img.test-chev {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    #mobmenu ul ul li a {
+        border-bottom: 1px solid #ddd;
+        background: #efefef;
+        color: #989898;
+        cursor: pointer;
+        font-size: 14px;
+        o-transition: color .2s ease;
+        padding: 14px 22px;
+        text-decoration: none;
+        transition: color .2s ease;
+        webkit-transition: color .2s ease;
+        z-index: 2;
+    }
+    #mobmenu ul ul ul li a {
+        padding-left: 32px;
+    }
+    #mobmenu ul ul li a:hover {
+        color: #000;
+    }
+    #mobmenu ul ul > li.has-sub > a:after {
+        background: #dddddd;
+        right: 26px;
+        top: 16px;
+    }
+    #mobmenu ul ul > li.has-sub > a:before {
+        background: #dddddd;
+        top: 20px;
+    }
+    /* LOADING MASK */
+    
+    .loading-mask {
+        position: relative;
+    }
+    .loading-mask::before {
+        background-color: rgba(255, 255, 255, 1);
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .loader-img{
+        display: block;
+        margin: 18px auto;
+    }
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+    #message {
+        margin: 0 auto;
+        position: absolute;
+        text-align: center;
+        top: 20%;
+        width: 100%;
+    }
+    #loader {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    /* FALLBACK STUFF */
+    
+    #fallback {
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+    /* COUNTER */
+    
+    #countdown {
+        color: #000;
+        margin-left: 18px;
+        padding: 5px;
+        text-align: left;
+    }
+    #timestamp {
+        margin-left: 18px;
+        text-align: left;
+    }
+    .counter div {
+        display: inline-block;
+        width: 48%;
+    }
+    #countdownMobile {
+        display: none;
+    }
+    /* SHARING */
+    
+    .shareRow {
+        background-color: #fff;
+        float: left;
+        margin-bottom: 18px;
+        padding-left: 23px;
+        text-align: left;
+        width: 100%;
+    }
+    .shareRow a {
+        cursor: pointer;
+    }
+    .shareRow a:hover {
+        opacity: 0.5;
+    }
+    .shareLeft {
+        display: inline-block;
+    }
+    .shareRight {
+        display: inline-block;
+    }
+    .shareRow {
+        padding: 16px 22px;
+    }
+    .shareRight a img {
+        width: 20px !important;
+        display: inline-block;
+        border-radius: 2px;
+    }
+    .shareLeft a img {
+        width: 20px !important;
+        display: inline-block;
+        margin-right: 4px;
+        border-radius: 2px;
+    }
+    /* MOBILE BREAKPOINTS */
+    
+    @media (max-width: 970px) {
+        #infobox { width:100%; }
+        #countdownMobile {
+            display: block;
+        }
+        .switch img {
+            width: 16px;
+            height: 16px
+        }
+        .drop {
+            display: inline-block;
+        }
+        .sideStates {
+            display: none !important;
+        }
+        .footnote {
+            display: none;
+        }
+        .tableRow {
+            width: 48.3%;
+        }
+        #allResults {
+            height: 1700px;
+        }
+        .dlabel,
+        .rlabel {
+            font-size: 1em;
+        }
+        .metroMap {
+            display: none !important;
+        }
+        .resultsRow {
+            font-size: 0.85em;
+        }
+        .label {
+            width: 48%;
+        }
+        .count {
+            font-size: 1em;
+            width: 20%;
+        }
+        .change {
+            font-size: 1em;
+        }
+        #cssmenu {
+            display: none;
+        }
+        #mobmenu {
+            display: block;
+        }
+        #datavizPane {
+            width: 100%;
+            zoom: 100%;
+        }
+        #wrapper {
+            width: 100%;
+        }
+        #infobox {
+            font-size: 0.9em;
+        }
+        .map {
+            width: 100%;
+        }
+        .carto {
+            width: 100%;
+        }
+        .count {
+            width: 14%;
+        }
+        #rightSide,
+        .dataviz {
+            float: none;
+            width: 100%;
+        }
+        #historyview {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        #viewSwitches {
+            border-right: 0;
+            display: block;
+        }
+        .mapBox {
+            height: auto !important;
+        }
+        #mnhouse .map,
+        #mnsenate .map,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 400px !important;
+        }
+        .coverageLinks.cl-dsktp {
+            display: block;
+            float: none;
+            text-align: right;
+            font-size: 0.9em !important;
+            font-weight: normal;
+        }
+        .coverageLinks.cl-mobile {
+            display: none;
+        }
+        .drop {
+            float: left;
+            display: block;
+            width: 100%;
+        }
+        .switch {
+            width: 100% !important;
+        }
+        .resultsLogo {
+            float: left;
+            margin-left: 10px;
+        }
+        #cartogram {
+            height: 500px !important;
+            overflow: hidden !important;
+            width: 100%;
+        }
+        .coverageLinks.cl-dsktp {
+            float: none;
+            text-align: left;
+            clear: both;
+            font-size: 0.9em !important;
+            font-weight: normal;
+        }
+        .coverageLinks.cl-mobile {
+            display: none;
+        }
+    }
+    @media (max-width: 770px) {
+        #powerbar {
+            padding: 6px;
+        }
+        .map {
+            height: auto;
+            width: 700px;
+        }
+        #raceSwitcher {
+            margin: 77px auto 14px;
+        }
+        .carto {
+            height: 529px;
+            width: 700px;
+        }
+        .coverageLinks.cl-dsktp {
+            float: none;
+            text-align: left;
+            clear: both;
+            font-size: 0.9em !important;
+            font-weight: normal;
+        }
+        .mapState,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 400px !important;
+        }
+        #cartogram {
+            height: 454px !important;
+            overflow: hidden !important;
+            width: 100%;
+        }
+    }
+    @media (max-width: 630px) {
+        .mapBox {
+            height: 454px !important;
+        }
+        .count {
+            width: 20%;
+        }
+        #raceSwitcher {
+            margin: 95px auto 14px;
+        }
+        #powerbar {
+            padding: 6px;
+        }
+        .map {
+            height: auto;
+            width: 600px;
+        }
+        .carto {
+            width: 600px;
+            height: 454px;
+        }
+        .coverageLinks.cl-dsktp {
+            float: none;
+            text-align: left;
+            clear: both;
+            font-size: 0.9em !important;
+            font-weight: normal;
+        }
+        .mapState,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 400px !important;
+        }
+        #mnhouse .map,
+        #mnsenate .map,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 450px !important;
+        }
+        #cartogram {
+            height: 454px !important;
+            overflow: hidden !important;
+            width: 100%;
+        }
+    }
+    @media (max-width: 500px) {
+        .mapBox {
+            height: 311px !important;
+        }
+        text {
+            display: none !important;
+        }
+        .menukill {
+            display: none !important;
+        }
+        #powerbar {
+            padding: 6px;
+        }
+        .map {
+            height: auto;
+            width: 450px;
+        }
+        .carto {
+            height: auto !important;
+            width: 450px;
+        }
+        .coverageLinks.cl-dsktp {
+            float: right;
+            text-align: right;
+            font-size: 0.9em !important;
+            font-weight: normal;
+            position: absolute;
+            right: 0;
+        }
+        #mnhouse .map,
+        #mnsenate .map,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 300px !important;
+        }
+        #cartogram {
+            height: 244px !important;
+            overflow: hidden !important;
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        .mapBox {
+            height: auto !important;
+        }
+        .resultsRow .candidate {
+            width: 43% !important;
+        }
+        .resultsRow .counts {
+            width: 23% !important;
+        }
+        .resultsRow .pct {
+            width: 23% !important;
+        }
+        .col {
+            margin: 0 0 0 0%;
+            padding: 0 0;
+        }
+        .resultsLogo {
+            float: left;
+            margin-left: 10px;
+        }
+        .span_1_of_3 {
+            width: 100%;
+            padding-bottom: 8px;
+        }
+        .span_2_of_3 {
+            width: 100%;
+        }
+        .switch {
+            width: 100% !important;
+        }
+        .coverageLinks.cl-desktop {
+            float: none;
+            text-align: right;
+            font-size: 0.9em !important;
+        }
+        .coverageLinks.cl-mobile {
+            display: none;
+        }
+        .drop {
+            float: left;
+            width: 100%;
+        }
+        #raceSwitcher {
+            max-width: none;
+        }
+        #cssmenu {
+            display: none;
+        }
+        #mobmenu {
+            display: none;
+            margin-top: -18px !important;
+            width: 100%;
+            border-right: none;
+        }
+        #mnhouse .map,
+        #mnsenate .map,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 306.667px !important;
+        }
+        #datavizPane {
+            border-left: 0;
+        }
+        .shareRow {
+            box-shadow: 0px 0px 68px rgba(0, 0, 0, .6);
+            padding: 16px 22px;
+            border-bottom: 1px solid #bbbbbb;
+        }
+        .resultsBanner {
+            padding: 10px 0 16px 0;
+        }
+        #cartogram {
+            height: 306.667px !important;
+            overflow: hidden !important;
+            width: 100%;
+        }
+        .test-chev.button-drop {
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin: 0 auto;
+            left: 100px;
+            right: 0px;
+            top: 10px;
+        }
+    }
+    @media (max-width: 420px) {
+        .mapBox {
+            height: auto !important;
+        }
+        .partyBlock {
+            width: 18%;
+        }
+        .legendLabel {
+            height: auto;
+        }
+        .mobileKill {
+            display: none;
+        }
+        .label,
+        #dCheck,
+        #rCheck {
+            font-size: 0.8em;
+        }
+        .zoom {
+            clear: both;
+            float: none !important;
+            padding-top: 10px;
+            text-align: center !important;
+            margin-right: 0;
+        }
+        #infobox {
+            font-size: 0.8em;
+        }
+        #powerbar {
+            padding: 1px;
+        }
+        #mobmenu {
+            margin-top: -17px !important;
+        }
+        .mobileHide {
+            display: none;
+        }
+        .bigBoard {
+            font-size: 0.7em;
+        }
+        .map {
+            height: auto;
+            width: 100%;
+        }
+        .resultsRow {
+            border: none !important;
+        }
+        #mnhouse .map,
+        #mnsenate .map,
+        #mnhouse .map svg,
+        #mnsenate .map svg {
+            height: 298.89px !important;
+            width: 300px !important;
+        }
+        .carto {
+            height: auto;
+            width: 100%;
+        }
+        #cartogram, #cartogram svg {
+            height: 213.333px !important;
+            overflow: hidden !important;
+            width: 100%;
+        }
+
+    }
