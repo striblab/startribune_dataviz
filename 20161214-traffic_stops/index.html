@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Traffic stops</title>
-  <meta name="description" content="Traffic stops">
+  <title>St. Paul traffic stops</title>
+  <meta name="description" content="St. Paul traffic stops">
   <meta name="author" content="Frey Hargarten - StarTribune">
   
   <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
@@ -141,7 +141,7 @@ if (selected != null){
 }
 
 d3.json('./shapefiles/minneapolis_shape.json', function(error, shape) {
-d3.json('./shapefiles/minneapolis_neighborhoods.json', function(error, nb) {
+d3.json('./shapefiles/stpaul_neighborhoods.json', function(error, nb) {
 
 // var boom = json;
 
@@ -149,7 +149,7 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LF
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
-    center: [-93.266667, 44.983333],
+    center: [-93.093611, 44.944167],
     zoom: 10,
     minZoom: 2
 });
@@ -207,7 +207,7 @@ map.on('load', function() {
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML(feature.properties.Name)
+            .setHTML(feature.properties.NAME)
             .addTo(map);
     });
 
@@ -217,7 +217,7 @@ map.on('load', function() {
         if (index == 0){ 
           $(".slide").hide();
           $("#mapbox").show();
-          map.flyTo({ center:[-93.266667, 44.983333], zoom: 10 }); 
+          map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 }); 
           $("#title").html("section 1");
           $(".chatter").html("chatter 1");
         }
@@ -270,7 +270,7 @@ map.on('load', function() {
       });
 
       $(".zoom").click(function() {
-        map.flyTo({ center:[-93.266667, 44.983333], zoom: 10 }); 
+        map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 }); 
       });
 
 });
