@@ -45,6 +45,8 @@
 
       #viewSwitch { display:none; }
 
+      .tips { text-align:left !important; }
+
       .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:3em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
       .navButtons:hover { opacity:0.8; color:#fff; cursor:pointer; }
       .previous { float:left; }
@@ -73,7 +75,7 @@
           <div id="dd" class="wrapper-dropdown-1" tabindex="1">
             <span>Stops by area</span>
               <ul class="dropdown months" tabindex="1">
-               <li class="menuSwitch" data="0"><a href='#'><div><div>Stops by area of city</div></div></a></li>
+               <li class="menuSwitch" data="0"><a href='#'><div><div>Stop disparity by neighborhood</div></div></a></li>
                <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
                <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
                <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
@@ -89,7 +91,7 @@
 <div id='cssmenu'>
 <ul id="nav">
  <ul>
-   <li class="menuSwitch selectThis" data="0"><a href='#'><div><div>Stops by area of city</div></div></a></li>
+   <li class="menuSwitch selectThis" data="0"><a href='#'><div><div>Stop disparity by neighborhood</div></div></a></li>
    <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
    <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
    <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
@@ -102,7 +104,7 @@
 <div class="breaker"></div>
 
 <div id="chatterBox">
-<div id="chatter" class="chatter">Percentage of stopped drivers who were black in each police grid area.</div>
+<div id="chatter" class="chatter">Many St. Paul neighborhoods saw a higher percentage of black drivers pulled over compared to their percentage of the population.</div>
 </div>
 
 <div class="breaker"></div>
@@ -115,7 +117,7 @@
 <div class="breaker"></div>
 
 <div class="legends" id="scale">
-  <small class='stat'>% of stops with black driver</small>
+  <small class='stat'>Racial disparity</small>
     <div class="legendContainer">
       <span class='legend'>
         <nav class='legend clearfix'>
@@ -153,7 +155,7 @@
 <script>
 
 d3.json('./shapefiles/minneapolis_shape.json', function(error, shape) {
-d3.json('./shapefiles/stpaul_neighborhoods.json', function(error, nb) {
+d3.json('./shapefiles/st_nb_disparities.json', function(error, nb) {
 d3.json('./shapefiles/stops_grid.json', function(error, grid) {
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
@@ -207,46 +209,55 @@ if (selected != null){
         'source': 'stpnb',
         'paint': {
             'fill-antialias' : true,
-            'fill-opacity': 0.1,
-            'fill-color': "#888",
+            'fill-opacity': 0.5,
+            'fill-color': {
+                      property: 'disparity',
+                      // type: 'categorical',
+                      stops: [
+                      [0, "#CCCCCC"],
+                      [5, "#969696"],
+                      [8, "#636363"],
+                      [10, "#252525"],
+                      [12, "#000000"]]
+                    },
             'fill-outline-color': 'rgba(51, 51, 51, 1)'
         }
     });
 
-    map.addSource('grid', {
-      type: 'geojson',
-      data: grid
-    });
+    // map.addSource('grid', {
+    //   type: 'geojson',
+    //   data: grid
+    // });
 
-    map.addLayer({
-                "id": "grid",
-                "type": "circle",
-                "source": "grid",
-                "paint": {
-                    "circle-color": {
-                      'base': 1,
-                      property: 'PctBlack',
-                      // type: 'categorical',
-                      stops: [
-                      [0, "#CCCCCC"],
-                      [0.20, "#969696"],
-                      [0.30, "#636363"],
-                      [0.40, "#252525"]]
-                    },
-                    "circle-radius": {
-                      'base': 1.5,
-                      property: 'TotalStops',
-                      // type: 'categorical',
-                      stops: [
-                      [0, 1.5],
-                      [1000, 2],
-                      [3000, 2.5],
-                      [5000, 3],
-                      [7000, 3.5],
-                      [9000, 4]]
-                    }
-                }
-    });
+    // map.addLayer({
+    //             "id": "grid",
+    //             "type": "circle",
+    //             "source": "grid",
+    //             "paint": {
+    //                 "circle-color": {
+    //                   'base': 1,
+    //                   property: 'PctBlack',
+    //                   // type: 'categorical',
+    //                   stops: [
+    //                   [0, "#CCCCCC"],
+    //                   [0.20, "#969696"],
+    //                   [0.30, "#636363"],
+    //                   [0.40, "#252525"]]
+    //                 },
+    //                 "circle-radius": {
+    //                   'base': 1.5,
+    //                   property: 'TotalStops',
+    //                   // type: 'categorical',
+    //                   stops: [
+    //                   [0, 1.5],
+    //                   [1000, 2],
+    //                   [3000, 2.5],
+    //                   [5000, 3],
+    //                   [7000, 3.5],
+    //                   [9000, 4]]
+    //                 }
+    //             }
+    // });
 
     var popup = new mapboxgl.Popup({
         closeButton: false,
@@ -254,7 +265,7 @@ if (selected != null){
     });
 
     map.on('mousemove', function(e) {
-        var features = map.queryRenderedFeatures(e.point, { layers: ['grid'] });
+        var features = map.queryRenderedFeatures(e.point, { layers: ['shape-layer'] });
         map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
         if (!features.length) {
@@ -265,7 +276,7 @@ if (selected != null){
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML("<div>" + d3.format(",")(feature.properties.TotalStops) + " total stops</div><div>" + d3.format("%")(feature.properties.PctBlack) + " black drivers</div><div>" + d3.format("%")(feature.properties.PctWhite) + " white drivers</div>")
+            .setHTML("<div class='tips'>" + feature.properties.NAME + "</div><div class='tips'>" + feature.properties.disparity + "% disparity</div><div class='tips'>" + d3.format("%")(feature.properties.PctBlkStop) + " of stopped drivers were black</div><div class='tips'>" + d3.format("%")(feature.properties.BlackPop) + " black population</div>")
             .addTo(map);
     });
 
@@ -276,7 +287,7 @@ if (selected != null){
           $(".slide").hide();
           $("#mapbox").show();
           map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 });
-          $("#chatter").html("Percentage of stopped drivers who were black in each police grid area.");
+          $("#chatter").html("Many St. Paul neighborhoods saw a higher percentage of black drivers pulled over compared to their percentage of the population.");
         }
         if (index == 1){ 
           $(".slide").hide();
@@ -347,7 +358,7 @@ function popChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.53,0.15,0.18,0.09],
+                  ['Population',0.59,0.13,0.15,0.08],
                   ['Stops',0.36,0.27,0.08,0.07]
               ],
               type: 'bar'
@@ -529,7 +540,7 @@ function genderChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.29,0.30,0.08,0.08],
+                  ['Population',0.28,0.31,0.07,0.07],
                   ['Stops',0.23,0.13,0.19,0.07]
               ],
               type: 'bar'
