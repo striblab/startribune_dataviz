@@ -1,0 +1,611 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>St. Paul traffic stops</title>
+  <meta name="description" content="St. Paul traffic stops">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+  
+  <link href="../_common_resources/charts/c3-master/c3.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link rel="stylesheet" href="./css/datastyles.css" />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.css' type='text/css' />
+  <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.css' rel='stylesheet' />
+  
+  <style>
+      body { margin:0; padding:0; font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+      text { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
+      #wrapper { width:525px; margin-right:auto; margin-left:auto; display:block !important; opacity:0; }
+      #map { width:100%; height:300px; display:block; }
+      .slide { width:100%; height:330px; display:block; }
+      .mapboxgl-ctrl-attrib { display:none; }
+      #geocoder-container { width:100%; margin-top:10px; display:none; }
+      #geocoder-container > div { min-width:100%; margin-left:0; }
+      .zoom { float:none !important; text-align:center; padding:15px; }
+      .mapboxgl-canvas { position:relative !important; }
+
+      #cssmenu { float:left; width:100%; display:block !important; }
+      #content { float:right; width:100%; }
+      #chatterBox { text-align:left; }
+      .chatter { height:30px; }
+      .selectThis a { color:#000 !important; }
+
+      .c3-line { stroke-width:5px !important; }
+
+      .legendContainer { margin-left:auto; margin-right:auto; width: 257px; }
+
+      td { text-align:left; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
+
+      #slider { width:100% !important; }
+      #player { width:400px; margin-left:auto; margin-right:auto; text-align:center; }
+
+      #viewSwitch { display:none; }
+
+      .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:3em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
+      .navButtons:hover { opacity:0.8; color:#fff; cursor:pointer; }
+      .previous { float:left; }
+      .next { float:right; }
+      .switch:hover { margin:0 !important; }
+      #toggle { font-size:1.5em; margin-top:5px !important; }
+      #toggle:hover { margin-top:5px !important; }
+      .greyed { pointer-events:none; opacity:0.8; }
+
+      @media (max-width:500px) {
+        #wrapper { width:100%; }
+        #content { width:100%; }
+        #viewSwitch { display:block; }
+        #cssmenu { display:none; }
+        text { display:block !important; }
+      }
+  </style> 
+</head>
+
+<div id="wrapper">
+
+<div id="viewSwitch">
+<div id="selector">
+  <section class="main">
+        <div class="wrapper-demo">
+          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+            <span>Stops by area</span>
+              <ul class="dropdown months" tabindex="1">
+               <li class="menuSwitch" data="0"><a href='#'><div><div>Stops by area of city</div></div></a></li>
+               <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
+               <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
+               <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
+               <li class="menuSwitch" data="4"><a href='#'><div><div>Frisked and searched</div></div></a></li>
+               <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
+             </ul>
+          </div>
+        ​</div>
+</section>
+</div>
+</div>
+
+<div id='cssmenu'>
+<ul id="nav">
+ <ul>
+   <li class="menuSwitch selectThis" data="0"><a href='#'><div><div>Stops by area of city</div></div></a></li>
+   <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
+   <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
+   <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
+   <li class="menuSwitch" data="4"><a href='#'><div><div>Frisked and searched</div></div></a></li>
+   <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
+  </ul>
+</ul>
+</div>
+
+<div class="breaker"></div>
+
+<div id="chatterBox">
+<div id="chatter" class="chatter">Percentage of stopped drivers who were black in each police grid area.</div>
+</div>
+
+<div class="breaker"></div>
+
+<div id="content">
+<div id="mapbox" class="slide" data="0">
+<div id="map"></div>
+<div id='geocoder-container'></div>
+
+<div class="breaker"></div>
+
+<div class="legends" id="scale">
+  <small class='stat'>% of stops with black driver</small>
+    <div class="legendContainer">
+      <span class='legend'>
+        <nav class='legend clearfix'>
+          <span style='background:#fff;'>Less</span>
+          <span class='gray1'></span>
+          <span class='gray2'></span>
+          <span class='gray3'></span>
+          <span class='gray4'></span>
+          <span class='gray5'></span>
+          <span style='background:#fff;'>More</span>
+        </nav>
+      </span>
+    </div>
+<div class="zoom">Reset View</div>
+</div>
+
+</div>
+
+<div id="population" class="slide chart" data="1"></div>
+<div id="time" class="slide chart" data="2"></div>
+<div id="trend" class="slide chart" data="3"></div>
+<div id="search" class="slide chart" data="4"></div>
+<div id="gender" class="slide chart" data="5"></div>
+</div>
+
+</div>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.22.1/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.0.0/mapbox-gl-geocoder.js'></script>
+<script src="../_common_resources/charts/c3-master/c3.min.js"></script>
+
+<script>
+
+d3.json('./shapefiles/minneapolis_shape.json', function(error, shape) {
+d3.json('./shapefiles/stpaul_neighborhoods.json', function(error, nb) {
+d3.json('./shapefiles/stops_grid.json', function(error, grid) {
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
+    center: [-93.093611, 44.944167],
+    zoom: 10,
+    minZoom: 2
+});
+
+var geocoder = new mapboxgl.Geocoder({
+    container: 'geocoder-container'
+});
+
+map.on('load', function() {
+    map.scrollZoom.disable();
+    map.addControl(geocoder);
+    map.addControl(new mapboxgl.Navigation());
+
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+  $(".slide, #cssmenu, #viewSwitch").hide();
+  $("#" + selected).show();
+  $("#wrapper, #content").css("width","100%");
+  $("#wrapper").css("opacity","1");
+  switchSlide($("#" + selected).attr("data"));
+} else {
+  $(".slide").hide();
+  $("#mapbox").show();
+  $("#wrapper").css("opacity","1");
+}
+
+
+  map.addSource('stpnb', {
+    type: 'geojson',
+    data: nb
+  });
+
+  map.addLayer({
+        'id': 'shape-layer',
+        'interactive': true,
+        'type': 'fill',
+        'source': 'stpnb',
+        'paint': {
+            'fill-antialias' : true,
+            'fill-opacity': 0.1,
+            'fill-color': "#888",
+            'fill-outline-color': 'rgba(51, 51, 51, 1)'
+        }
+    });
+
+    map.addSource('grid', {
+      type: 'geojson',
+      data: grid
+    });
+
+    map.addLayer({
+                "id": "grid",
+                "type": "circle",
+                "source": "grid",
+                "paint": {
+                    "circle-color": {
+                      'base': 1,
+                      property: 'PctBlack',
+                      // type: 'categorical',
+                      stops: [
+                      [0, "#CCCCCC"],
+                      [0.20, "#969696"],
+                      [0.30, "#636363"],
+                      [0.40, "#252525"]]
+                    },
+                    "circle-radius": {
+                      'base': 1.5,
+                      property: 'TotalStops',
+                      // type: 'categorical',
+                      stops: [
+                      [0, 1.5],
+                      [1000, 2],
+                      [3000, 2.5],
+                      [5000, 3],
+                      [7000, 3.5],
+                      [9000, 4]]
+                    }
+                }
+    });
+
+    var popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+    });
+
+    map.on('mousemove', function(e) {
+        var features = map.queryRenderedFeatures(e.point, { layers: ['grid'] });
+        map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+        if (!features.length) {
+            popup.remove();
+            return;
+        }
+
+        var feature = features[0];
+
+        popup.setLngLat(e.lngLat)
+            .setHTML("<div>" + d3.format(",")(feature.properties.TotalStops) + " total stops</div><div>" + d3.format("%")(feature.properties.PctBlack) + " black drivers</div><div>" + d3.format("%")(feature.properties.PctWhite) + " white drivers</div>")
+            .addTo(map);
+    });
+
+      function switchSlide(index){
+        console.log(index);
+
+        if (index == 0){ 
+          $(".slide").hide();
+          $("#mapbox").show();
+          map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 });
+          $("#chatter").html("Percentage of stopped drivers who were black in each police grid area.");
+        }
+        if (index == 1){ 
+          $(".slide").hide();
+          $("#population").show();
+          $("#chatter").html("Traffic stops between 2001 and 2016 by race of driver, compared to that racial group’s share of the city population.");
+        }
+        if (index == 2){ 
+          $(".slide").hide();
+          $("#time").show();
+          $("#chatter").html("While white drivers are more likely to be stopped by police during the day, minorities are more likely pulled over at night.");
+        }
+        if (index == 3){ 
+          $(".slide").hide();
+          $("#trend").show();
+          $("#chatter").html("Whites were less likely than drivers of other races to get a citation during a traffic stop.");
+        }
+        if (index == 4){ 
+          $(".slide").hide();
+          $("#search").show();
+          $("#chatter").html("Black drivers were more likely than those of other races to be frisked or have their vehicles searched.");
+        }
+        if (index == 5){ 
+          $(".slide").hide();
+          $("#gender").show();
+          $("#chatter").html("The percentage of stops where the driver was a black male was significantly higher than their share of the city population.");
+        }
+      //  path = d3.selectAll(".chart path");
+
+      //  var totalLength = path.node().getTotalLength();
+
+      //  path
+      // .attr("stroke-dasharray", totalLength + " " + totalLength)
+      // .attr("stroke-dashoffset", totalLength)
+      // .transition()
+      //   .duration(3000)
+      //   .ease("linear")
+      //   .attr("stroke-dashoffset", 0);
+
+      }
+
+      $(".menuSwitch").click(function() {
+        $(".menuSwitch").removeClass("selectThis");
+        $(this).addClass("selectThis");
+        switchSlide($(this).attr("data"));
+      });
+
+      $(".zoom").click(function() {
+        map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 }); 
+      });
+
+});
+
+});
+});
+});
+
+function popChart(){
+
+      var  padding = {
+              top: 20,
+              right: 60,
+              bottom: 20,
+              left: 60,
+          };
+
+      var chart = c3.generate({
+              bindto: '#population',
+              padding: padding,
+          data: {
+              columns: [
+                  ['Population',0.53,0.15,0.18,0.09],
+                  ['Stops',0.36,0.27,0.08,0.07]
+              ],
+              type: 'bar'
+          },
+          color:  {  pattern: ["#636363","#7F98AA"] },
+          axis: {
+            y: {
+                  max: 1,
+                  min: 0,
+                  padding: {bottom: 0, top:0},
+                  tick: {
+                   count: 4,
+                   format: d3.format('%')
+                  }
+              },
+              x: {
+                  type: 'category',
+                  categories: ['White', 'Black', 'Asian', 'Hispanic']
+              }
+            }
+      });
+
+
+
+      $(".menuSwitch").click(function(event) { chart.show(); });
+
+}
+
+popChart();
+
+function timeChart(){
+
+      var  padding = {
+              top: 20,
+              right: 60,
+              bottom: 20,
+              left: 60,
+          };
+
+      var chart = c3.generate({
+              bindto: '#time',
+              padding: padding,
+          data: {
+              columns: [
+                  ["White",0.33,0.25,0.20,0.33,0.22],
+                  ["Black",0.15,0.16,0.18,0.36,0.30],
+                  ["Asian",0.20,0.18,0.19,0.35,0.27],
+                  ["Native",0.12,0.14,0.19,0.39,0.28],
+                  ["Hispanic",0.18,0.19,0.21,0.35,0.26]
+              ],
+              type: 'bar'
+          },
+          color:  {  pattern: ["#636363","#299E3D","#3580A3","#7F98AA","#C22A22"] },
+          axis: {
+            y: {
+                  max: 0.4,
+                  min: 0,
+                  padding: {bottom: 0, top:0},
+                  tick: {
+                   count: 4,
+                   format: d3.format('%')
+                  }
+              },
+              x: {
+                  type: 'category',
+                  categories: ['Morning', 'Aftnoon', 'Evening', 'Early Night', 'Overnite']
+              }
+            }
+      });
+
+
+
+      $(".menuSwitch").click(function(event) { chart.show(); });
+
+}
+
+timeChart();
+
+function citationChart(){
+
+      var  padding = {
+              top: 20,
+              right: 60,
+              bottom: 20,
+              left: 60,
+          };
+
+      var chart = c3.generate({
+              bindto: '#trend',
+              padding: padding,
+          data: {
+              columns: [
+                  ['Cited',0.09,0.18,0.13,0.18,0.15]
+              ],
+              type: 'bar'
+          },
+          color:  {  pattern: ["#636363","#7F98AA","#556E7F"] },
+          axis: {
+            y: {
+                  max: 1,
+                  min: 0,
+                  padding: {bottom: 0, top:0},
+                  tick: {
+                   count: 4,
+                   format: d3.format('%')
+                  }
+              },
+              x: {
+                  type: 'category',
+                  categories: ['White', 'Black', 'Asian', 'Native', 'Hispanic']
+              }
+            }
+      });
+
+
+
+      $(".menuSwitch").click(function(event) { chart.show(); });
+
+}
+
+citationChart();
+
+function searchChart(){
+
+      var  padding = {
+              top: 20,
+              right: 60,
+              bottom: 20,
+              left: 60,
+          };
+
+      var chart = c3.generate({
+              bindto: '#search',
+              padding: padding,
+          data: {
+              columns: [
+                  ['Searched',0.32,0.49,0.07,0.11],
+                  ['Frisked',0.33,0.48,0.07,0.11],
+              ],
+              type: 'bar'
+          },
+          color:  {  pattern: ["#7F98AA","#556E7F"] },
+          axis: {
+            y: {
+                  max: 1,
+                  min: 0,
+                  padding: {bottom: 0, top:0},
+                  tick: {
+                   count: 4,
+                   format: d3.format('%')
+                  }
+              },
+              x: {
+                  type: 'category',
+                  categories: ['White', 'Black', 'Asian', 'Hispanic']
+              }
+            }
+      });
+
+
+
+      $(".menuSwitch").click(function(event) { chart.show(); });
+
+}
+
+searchChart();
+
+function genderChart(){
+
+      var  padding = {
+              top: 20,
+              right: 60,
+              bottom: 20,
+              left: 60,
+          };
+
+      var chart = c3.generate({
+              bindto: '#gender',
+              padding: padding,
+          data: {
+              columns: [
+                  ['Population',0.29,0.30,0.08,0.08],
+                  ['Stops',0.23,0.13,0.19,0.07]
+              ],
+              type: 'bar'
+          },
+          color:  {  pattern: ["#636363","#7F98AA"] },
+          axis: {
+            y: {
+                  max: 1,
+                  min: 0,
+                  padding: {bottom: 0, top:0},
+                  tick: {
+                   count: 4,
+                   format: d3.format('%')
+                  }
+              },
+              x: {
+                  type: 'category',
+                  categories: ['White Males', 'White Females', 'Black Males', 'Black Females']
+              }
+            }
+      });
+
+
+
+      $(".menuSwitch").click(function(event) { chart.show(); });
+
+}
+
+genderChart();
+</script>
+<script type="text/javascript">
+      
+      function DropDown(el) {
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype = {
+        initEvents : function() {
+          var obj = this;
+
+          obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function() {
+          return this.val;
+        },
+        getIndex : function() {
+          return this.index;
+        }
+      }
+
+      $(function() {
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function() {
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
+</script>
+</body>
+</html>
