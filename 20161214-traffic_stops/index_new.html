@@ -45,6 +45,8 @@
 
       #viewSwitch { display:none; }
 
+      .tips { text-align:left !important; }
+
       .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:3em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
       .navButtons:hover { opacity:0.8; color:#fff; cursor:pointer; }
       .previous { float:left; }
@@ -274,7 +276,7 @@ if (selected != null){
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML("<div>" + feature.properties.NAME + "</div><div>" + feature.properties.disparity + "% disparity</div>")
+            .setHTML("<div class='tips'>" + feature.properties.NAME + "</div><div class='tips'>" + feature.properties.disparity + "% disparity</div><div class='tips'>" + d3.format("%")(feature.properties.PctBlkStop) + " of stopped drivers were black</div><div class='tips'>" + d3.format("%")(feature.properties.BlackPop) + " black population</div>")
             .addTo(map);
     });
 
