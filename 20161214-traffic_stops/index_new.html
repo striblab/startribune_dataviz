@@ -102,7 +102,7 @@
 <div class="breaker"></div>
 
 <div id="chatterBox">
-<div id="chatter" class="chatter">Percentage of stopped drivers who were black in each police grid area.</div>
+<div id="chatter" class="chatter">Many St. Paul neighborhoods saw a higher percentage of black drivers pulled over compared to their percentage of the population.</div>
 </div>
 
 <div class="breaker"></div>
@@ -285,7 +285,7 @@ if (selected != null){
           $(".slide").hide();
           $("#mapbox").show();
           map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 });
-          $("#chatter").html("Percentage of stopped drivers who were black in each police grid area.");
+          $("#chatter").html("Many St. Paul neighborhoods saw a higher percentage of black drivers pulled over compared to their percentage of the population.");
         }
         if (index == 1){ 
           $(".slide").hide();
@@ -356,7 +356,7 @@ function popChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.53,0.15,0.18,0.09],
+                  ['Population',0.59,0.13,0.15,0.08],
                   ['Stops',0.36,0.27,0.08,0.07]
               ],
               type: 'bar'
