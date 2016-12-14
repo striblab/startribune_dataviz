@@ -54,7 +54,7 @@
       #toggle:hover { margin-top:5px !important; }
       .greyed { pointer-events:none; opacity:0.8; }
 
-      @media (max-width:525px) {
+      @media (max-width:500px) {
         #wrapper { width:100%; }
         #content { width:100%; }
         #viewSwitch { display:block; }
@@ -77,7 +77,7 @@
                <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
                <li class="menuSwitch" data="2"><a href='#'><div><div>Nighttime stops</div></div></a></li>
                <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
-               <li class="menuSwitch" data="4"><a href='#'><div><div>Stopped and frisked</div></div></a></li>
+               <li class="menuSwitch" data="4"><a href='#'><div><div>Frisked and searched</div></div></a></li>
                <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
              </ul>
           </div>
@@ -86,11 +86,6 @@
 </div>
 </div>
 
-<!-- <div id="chatterBox">
-<div class="chartTitle" id="title">Title here</div>
-<div class="chatter">chatter here</div>
-</div> -->
-
 <div id='cssmenu'>
 <ul id="nav">
  <ul>
@@ -98,10 +93,15 @@
    <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
    <li class="menuSwitch" data="2"><a href='#'><div><div>Nighttime stops</div></div></a></li>
    <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
-   <li class="menuSwitch" data="4"><a href='#'><div><div>Stopped and frisked</div></div></a></li>
+   <li class="menuSwitch" data="4"><a href='#'><div><div>Frisked and searched</div></div></a></li>
    <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
   </ul>
 </ul>
+</div>
+
+<div id="chatterBox">
+<div class="chartTitle" id="title">Title here</div>
+<div class="chatter">chatter here</div>
 </div>
 
 <div id="content">
@@ -112,7 +112,7 @@
 <div class="breaker"></div>
 
 <div class="legends" id="scale">
-  <small class='stat'>Black drivers stopped</small>
+  <small class='stat'>% of stops with black driver</small>
     <div class="legendContainer">
       <span class='legend'>
         <nav class='legend clearfix'>
@@ -273,38 +273,26 @@ if (selected != null){
           $(".slide").hide();
           $("#mapbox").show();
           map.flyTo({ center:[-93.093611, 44.944167], zoom: 10 }); 
-          $("#title").html("section 1");
-          $(".chatter").html("chatter 1");
         }
         if (index == 1){ 
           $(".slide").hide();
           $("#population").show();
-          $("#title").html("section 2");
-          $(".chatter").html("chatter 2");
         }
         if (index == 2){ 
           $(".slide").hide();
           $("#time").show();
-          $("#title").html("section 3");
-          $(".chatter").html("chatter 3");
         }
         if (index == 3){ 
           $(".slide").hide();
           $("#trend").show();
-          $("#title").html("section 4");
-          $(".chatter").html("chatter 4");
         }
         if (index == 4){ 
           $(".slide").hide();
           $("#search").show();
-          $("#title").html("section 5");
-          $(".chatter").html("chatter 5");
         }
         if (index == 5){ 
           $(".slide").hide();
           $("#gender").show();
-          $("#title").html("section 6");
-          $(".chatter").html("chatter 6");
         }
       //  path = d3.selectAll(".chart path");
 
@@ -403,10 +391,10 @@ function timeChart(){
               ],
               type: 'line'
           },
-          color:  {  pattern: ["#C6D1D9","#A8B9C5","#7F98AA","#556E7F","#2C3942"] },
+          color:  {  pattern: ["#636363","#299E3D","#3580A3","#7F98AA","#C22A22"] },
           axis: {
             y: {
-                  max: 0.5,
+                  max: 0.4,
                   min: 0,
                   padding: {bottom: 0, top:0},
                   tick: {
@@ -416,7 +404,7 @@ function timeChart(){
               },
               x: {
                   type: 'category',
-                  categories: ['Morning', 'Afternoon', 'Evening', 'Early Night', 'Overnight']
+                  categories: ['Morning', 'Aftn', 'Evening', 'Early Night', 'Overnite']
               }
             }
       });
@@ -443,7 +431,6 @@ function citationChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.53,0.15,0.18,0.05,0.09],
                   ['Cited',0.09,0.18,0.13,0.18,0.15]
               ],
               type: 'bar'
@@ -488,7 +475,6 @@ function searchChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.53,0.15,0.18,0.09],
                   ['Searched',0.32,0.49,0.07,0.11],
                   ['Frisked',0.33,0.48,0.07,0.11],
               ],
