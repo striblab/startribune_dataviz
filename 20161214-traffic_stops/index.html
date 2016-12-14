@@ -19,20 +19,24 @@
   <style>
       body { margin:0; padding:0; font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
       text { font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
-      #wrapper { width:900px; margin-right:auto; margin-left:auto; display:block !important; opacity:0; }
-      #map { width:100%; height:400px; display:block; }
-      .slide { width:100%; height:430px; display:block; }
+      #wrapper { width:525px; margin-right:auto; margin-left:auto; display:block !important; opacity:0; }
+      #map { width:100%; height:300px; display:block; }
+      .slide { width:100%; height:330px; display:block; }
       .mapboxgl-ctrl-attrib { display:none; }
       #geocoder-container { width:100%; margin-top:10px; display:none; }
       #geocoder-container > div { min-width:100%; margin-left:0; }
       .zoom { float:none !important; text-align:center; padding:15px; }
       .mapboxgl-canvas { position:relative !important; }
 
-      #cssmenu { float:left; }
-      #content { float:right; width:70%; }
+      #cssmenu { float:left; width:100%; }
+      #content { float:right; width:100%; }
       #chatterBox { text-align:left; }
       .chatter { height:100px; }
       .selectThis a { color:#000 !important; }
+
+      .c3-line { stroke-width:5px !important; }
+
+      .legendContainer { margin-left:auto; margin-right:auto; width: 257px; }
 
       td { text-align:left; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
 
@@ -50,7 +54,7 @@
       #toggle:hover { margin-top:5px !important; }
       .greyed { pointer-events:none; opacity:0.8; }
 
-      @media (max-width:900px) {
+      @media (max-width:525px) {
         #wrapper { width:100%; }
         #content { width:100%; }
         #viewSwitch { display:block; }
@@ -67,12 +71,12 @@
   <section class="main">
         <div class="wrapper-demo">
           <div id="dd" class="wrapper-dropdown-1" tabindex="1">
-            <span>Stops by neighborhood</span>
+            <span>Stops by area</span>
               <ul class="dropdown months" tabindex="1">
-               <li class="menuSwitch" data="0"><a href='#'><div><div>Stops by neighborhood</div></div></a></li>
+               <li class="menuSwitch" data="0"><a href='#'><div><div>Stops by area</div></div></a></li>
                <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
-               <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
-               <li class="menuSwitch" data="3"><a href='#'><div><div>Trendline</div></div></a></li>
+               <li class="menuSwitch" data="2"><a href='#'><div><div>Nighttime stops</div></div></a></li>
+               <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
                <li class="menuSwitch" data="4"><a href='#'><div><div>Stopped and frisked</div></div></a></li>
                <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
              </ul>
@@ -82,16 +86,49 @@
 </div>
 </div>
 
-<div id="chatterBox">
+<!-- <div id="chatterBox">
 <div class="chartTitle" id="title">Title here</div>
 <div class="chatter">chatter here</div>
+</div> -->
+
+<div id='cssmenu'>
+<ul id="nav">
+ <ul>
+   <li class="menuSwitch selectThis" data="0"><a href='#'><div><div>Stops by area</div></div></a></li>
+   <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
+   <li class="menuSwitch" data="2"><a href='#'><div><div>Nighttime stops</div></div></a></li>
+   <li class="menuSwitch" data="3"><a href='#'><div><div>The citation gap</div></div></a></li>
+   <li class="menuSwitch" data="4"><a href='#'><div><div>Stopped and frisked</div></div></a></li>
+   <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
+  </ul>
+</ul>
 </div>
 
 <div id="content">
 <div id="mapbox" class="slide" data="0">
 <div id="map"></div>
 <div id='geocoder-container'></div>
-<!-- <div class="zoom">Reset View</div> -->
+
+<div class="breaker"></div>
+
+<div class="legends" id="scale">
+  <small class='stat'>Black drivers stopped</small>
+    <div class="legendContainer">
+      <span class='legend'>
+        <nav class='legend clearfix'>
+          <span style='background:#fff;'>Less</span>
+          <span class='gray1'></span>
+          <span class='gray2'></span>
+          <span class='gray3'></span>
+          <span class='gray4'></span>
+          <span class='gray5'></span>
+          <span style='background:#fff;'>More</span>
+        </nav>
+      </span>
+    </div>
+<div class="zoom">Reset View</div>
+</div>
+
 </div>
 
 <div id="population" class="slide chart" data="1"></div>
@@ -99,19 +136,6 @@
 <div id="trend" class="slide chart" data="3"></div>
 <div id="search" class="slide chart" data="4"></div>
 <div id="gender" class="slide chart" data="5"></div>
-</div>
-
-<div id='cssmenu'>
-<ul id="nav">
- <ul>
-   <li class="menuSwitch selectThis" data="0"><a href='#'><div><div>Stops by neighborhood</div></div></a></li>
-   <li class="menuSwitch" data="1"><a href='#'><div><div>Racial disparities</div></div></a></li>
-   <li class="menuSwitch" data="2"><a href='#'><div><div>Time of day</div></div></a></li>
-   <li class="menuSwitch" data="3"><a href='#'><div><div>Trendline</div></div></a></li>
-   <li class="menuSwitch" data="4"><a href='#'><div><div>Stopped and frisked</div></div></a></li>
-   <li class="menuSwitch" data="5"><a href='#'><div><div>Gender disparities</div></div></a></li>
-  </ul>
-</ul>
 </div>
 
 </div>
@@ -127,6 +151,7 @@
 
 d3.json('./shapefiles/minneapolis_shape.json', function(error, shape) {
 d3.json('./shapefiles/stpaul_neighborhoods.json', function(error, nb) {
+d3.json('./shapefiles/stops_grid.json', function(error, grid) {
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
@@ -166,7 +191,8 @@ if (selected != null){
   $("#wrapper").css("opacity","1");
 }
 
-  map.addSource('mplsnb', {
+
+  map.addSource('stpnb', {
     type: 'geojson',
     data: nb
   });
@@ -175,7 +201,7 @@ if (selected != null){
         'id': 'shape-layer',
         'interactive': true,
         'type': 'fill',
-        'source': 'mplsnb',
+        'source': 'stpnb',
         'paint': {
             'fill-antialias' : true,
             'fill-opacity': 0.1,
@@ -184,13 +210,48 @@ if (selected != null){
         }
     });
 
+    map.addSource('grid', {
+      type: 'geojson',
+      data: grid
+    });
+
+    map.addLayer({
+                "id": "grid",
+                "type": "circle",
+                "source": "grid",
+                "paint": {
+                    "circle-color": {
+                      'base': 1,
+                      property: 'PctBlack',
+                      // type: 'categorical',
+                      stops: [
+                      [0, "#CCCCCC"],
+                      [0.20, "#969696"],
+                      [0.30, "#636363"],
+                      [0.40, "#252525"]]
+                    },
+                    "circle-radius": {
+                      'base': 1.5,
+                      property: 'TotalStops',
+                      // type: 'categorical',
+                      stops: [
+                      [0, 1.5],
+                      [1000, 2],
+                      [3000, 2.5],
+                      [5000, 3],
+                      [7000, 3.5],
+                      [9000, 4]]
+                    }
+                }
+    });
+
     var popup = new mapboxgl.Popup({
         closeButton: false,
         closeOnClick: false
     });
 
     map.on('mousemove', function(e) {
-        var features = map.queryRenderedFeatures(e.point, { layers: ['shape-layer'] });
+        var features = map.queryRenderedFeatures(e.point, { layers: ['grid'] });
         map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
         if (!features.length) {
@@ -201,7 +262,7 @@ if (selected != null){
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML(feature.properties.NAME)
+            .setHTML("<div>" + d3.format(",")(feature.properties.TotalStops) + " total stops</div><div>" + d3.format("%")(feature.properties.PctBlack) + " black drivers</div><div>" + d3.format("%")(feature.properties.PctWhite) + " white drivers</div>")
             .addTo(map);
     });
 
@@ -273,6 +334,7 @@ if (selected != null){
 
 });
 });
+});
 
 function popChart(){
 
@@ -333,15 +395,18 @@ function timeChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.53,0.15,0.18,0.05,0.09],
-                  ['Stops',0.53,0.15,0.18,0.05,0.09]
+                  ["White",0.33,0.25,0.20,0.33,0.22],
+                  ["Black",0.15,0.16,0.18,0.36,0.30],
+                  ["Asian",0.20,0.18,0.19,0.35,0.27],
+                  ["Native",0.12,0.14,0.19,0.39,0.28],
+                  ["Hispanic",0.18,0.19,0.21,0.35,0.26]
               ],
               type: 'line'
           },
-          color:  {  pattern: ["#636363","#7F98AA"] },
+          color:  {  pattern: ["#C6D1D9","#A8B9C5","#7F98AA","#556E7F","#2C3942"] },
           axis: {
             y: {
-                  max: 1,
+                  max: 0.5,
                   min: 0,
                   padding: {bottom: 0, top:0},
                   tick: {
@@ -351,7 +416,7 @@ function timeChart(){
               },
               x: {
                   type: 'category',
-                  categories: ['White', 'Black', 'Asian', 'Native', 'Hispanic']
+                  categories: ['Morning', 'Afternoon', 'Evening', 'Early Night', 'Overnight']
               }
             }
       });
@@ -364,7 +429,7 @@ function timeChart(){
 
 timeChart();
 
-function trendChart(){
+function citationChart(){
 
       var  padding = {
               top: 20,
@@ -379,11 +444,11 @@ function trendChart(){
           data: {
               columns: [
                   ['Population',0.53,0.15,0.18,0.05,0.09],
-                  ['Stops',0.53,0.15,0.18,0.05,0.09]
+                  ['Cited',0.09,0.18,0.13,0.18,0.15]
               ],
-              type: 'line'
+              type: 'bar'
           },
-          color:  {  pattern: ["#636363","#7F98AA"] },
+          color:  {  pattern: ["#636363","#7F98AA","#556E7F"] },
           axis: {
             y: {
                   max: 1,
@@ -407,7 +472,7 @@ function trendChart(){
 
 }
 
-trendChart();
+citationChart();
 
 function searchChart(){
 
@@ -469,7 +534,7 @@ function genderChart(){
               padding: padding,
           data: {
               columns: [
-                  ['Population',0.29,0.30,0.08,0.07],
+                  ['Population',0.29,0.30,0.08,0.08],
                   ['Stops',0.23,0.13,0.19,0.07]
               ],
               type: 'bar'
