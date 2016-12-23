@@ -63,14 +63,6 @@
       div#at4-share { display:none !important; }
       .tagline { text-align:left !important; }
       .at-icon { background-color:#87C944 !important; }
-      #topmenu { text-align:center; }
-      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:15px; text-align:center; background-color:#fff; border:1px solid black; width:24.5%; border-radius:0; }
-      .topbutton:hover { opacity:.8; cursor:pointer; }
-      .this { background-color:#ddd; border:1px solid #ddd; }
-      #socialmenu { text-align:center; }
-      #socialmenu div { width:24.55%; display:inline-block; text-align:center; }
-      #socialmenu img { width:33%; }
-      #socialmenu img:hover { opacity:.8; }
 
 /*ENTRIES*/
       #articlePane { display:inline-block !important; width:100%; }
@@ -187,6 +179,12 @@
       #about { margin-top:15px; border-top:1px solid #ddd;}
       #profile { float:left; margin:10px; }
       #sharethis { clear:both !important; text-align:center; }
+      #topmenu { text-align:center; }
+      .siteNav { display:inline-block; width:48%; }
+      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:15px; text-align:center; background-color:#fff; border:1px solid black; width:100%; border-radius:0; }
+      .topbutton:hover { opacity:.8; cursor:pointer; }
+      .this { background-color:#ddd; border:1px solid #ddd; }
+      #socialmenu img:hover { opacity:.8; }
 
 /*BREAKPOINTS*/
     @media only screen and (min-width:650px) {
@@ -244,9 +242,7 @@
     }
 
      @media (max-width:800px) {
-     .topbutton { width:24%; }
-     #socialmenu div { width:24%; display:inline-block; text-align:center; }
-     #socialmenu img { width:33%; }
+     .siteNav img { width:31% !important; }
      #wrapper { width:100%; }
      .pubBanner img { width:100%; }
      .linkDiv { width:48%; margin:5px; }
@@ -451,13 +447,13 @@
 </div>
 
 <div id="topmenu">
-<a href="http://freyhargarten.com"><button class="topbutton">Resume</button></a>
-<a href="http://striblab.github.io/startribune_dataviz/index_browse.html"><button class="topbutton this">Articles</button></a>
-<a href="http://datamancy.org"><button class="topbutton">Blog</button></a>
-<a href="http://deadskies.org"><button class="topbutton">Artwork</button></a>
-</div>
-<div id="socialmenu">
-<div><a href="https://www.linkedin.com/in/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/linkedin.png" alt="linkedin" /></a><a href="https://github.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/github.png" alt="github" /></a><a href="https://www.facebook.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/facebook.png" alt="facebook" /></a></div><div><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/striblab.png" alt="striblab" /></a><a href="http://startribune.com/local/datadrop" target="new_"><img src="http://freyhargarten.com/_base/img/icons/datadrop.png" alt="datadrop" /></a><a href="https://muckrack.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/muckrack.png" alt="muckrack" /></a></div><div><a href="http://twitter.com" target="new_"><img src="http://freyhargarten.com/_base/img/icons/twitter.png" alt="twitter" /></a><a href="https://www.vimeo.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/vimeo.png" alt="vimeo" /></a><a href="https://www.instagram.com/jeffhargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/instagram.png" alt="instagram" /></a></div><div><a href="http://jhshadowflare.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" alt="deviantart" /></a><a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" alt="tumblr" /></a><a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" alt="soundcloud" /></a></div>
+<div class="siteNav"><a href="http://freyhargarten.com"><button class="topbutton">Resume</button></a><div><a href="https://www.linkedin.com/in/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/linkedin.png" alt="linkedin" /></a><a href="https://github.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/github.png" alt="github" /></a><a href="https://www.facebook.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/facebook.png" alt="facebook" /></a></div></div>
+
+<div class="siteNav"><a href="http://striblab.github.io/startribune_dataviz/index_browse.html"><button class="topbutton this">Articles</button></a><div><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/striblab.png" alt="striblab" /></a><a href="http://startribune.com/local/datadrop" target="new_"><img src="http://freyhargarten.com/_base/img/icons/datadrop.png" alt="datadrop" /></a><a href="https://muckrack.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/muckrack.png" alt="muckrack" /></a></div></div>
+
+<div class="siteNav"><a href="http://datamancy.org"><button class="topbutton">Blog</button></a><div><a href="http://twitter.com" target="new_"><img src="http://freyhargarten.com/_base/img/icons/twitter.png" alt="twitter" /></a><a href="https://www.vimeo.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/vimeo.png" alt="vimeo" /></a><a href="https://www.instagram.com/jeffhargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/instagram.png" alt="instagram" /></a></div></div>
+
+<div class="siteNav"><a href="http://deadskies.org"><button class="topbutton">Artwork</button></a><div><a href="http://jhshadowflare.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" alt="deviantart" /></a><a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" alt="tumblr" /></a><a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" alt="soundcloud" /></a></div></div>
 </div>
 
 <p></p>
