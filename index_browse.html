@@ -671,7 +671,7 @@ $(document).ready(function () {
     $(".icon img").click(function () {
         $(".socialBox").hide();
         $(".icon").removeClass('selected');
-        // window.history.pushState(null, null, '/?page=' + $(this).attr("data"));
+        // window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
         $(this).parent().addClass('selected');
         $("#" + $(this).attr("data")).fadeToggle(200);
     });
