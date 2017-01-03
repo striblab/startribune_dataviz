@@ -33,6 +33,7 @@
     .greenswatch { color:#3D813D; }
     .precipswatch { color:#87B887; }
     .summary { vertical-align:top; display:table-cell; }
+    .chart { height:400px; }
     #pdf { text-align:center; }
     #monthly { display:none; }
     .monthBar { display:inline-block; padding:10px; margin:20px; width:20%; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:bold; }
@@ -69,13 +70,13 @@
 
         <div class="wrapper-demo">
           <div id="ddY" class="wrapper-dropdown-1" tabindex="1">
-            <span>Year</span>
+            <span>2016</span>
               <ul class="dropdown years" tabindex="1">
-<!--         <li data='data2012' year='2011'><a href="#">2011</a></li> -->
-        <li data='data2012' year='2012'><a href="#">2012</a></li>
-        <li data='data2013' year='2013'><a href="#">2013</a></li>
-        <li data='data2014' year='2014'><a href="#">2014</a></li>
-        <li data='data2015' year='2015'><a href="#">2015</a></li>
+               <li data='data2015' year='2016'><a href="#">2016</a></li>
+               <li data='data2015' year='2015'><a href="#">2015</a></li>
+               <li data='data2014' year='2014'><a href="#">2014</a></li>
+               <li data='data2013' year='2013'><a href="#">2013</a></li>
+               <li data='data2012' year='2012'><a href="#">2012</a></li>
               </ul>
           </div>
         ​</div>
@@ -325,7 +326,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div id="temperature" class="block">
 <div class="icon"><img  src="img/thermostat.png" alt="themostat" /></div>
 <div class="bigTitle redswatch">Temperatures</div>
-<div class="chartTitle">Temperatures <span class="thisYear">2015</span></div>
+<div class="chartTitle">Temperatures <span class="thisYear">2016</span></div>
 <div class="chatter">Average, minimum and maximum temperatures by day in Minnesota.</div>
 <div class="highlights">
   <div class="highlightNum redswatch" id="maxTemp">0</div><div class="highlightNum lowswatch" id="minTemp">0</div>
@@ -356,7 +357,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div id="snowfall" class="block">
 <div class="icon"><img src="img/snowflake.png" alt="snowflake" /></div>
 <div class="bigTitle snowswatch">Snowfall</div>
-<div class="chartTitle">Snowfall <span class="thisYear">2015</span></div>
+<div class="chartTitle">Snowfall <span class="thisYear">2016</span></div>
 <div class="chatter">The total snowfall in inches by day in Minnesota.</div>
 <div class="highlights">
   <div class="highlightNum snowswatch" id="maxSnow">0</div><div class="highlightNum greyswatch" id="minSnow">0</div>
@@ -379,7 +380,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div id="precipitation" class="block">
 <div class="icon"><img src="img/raindrop.png" alt="raindrop" /></div>
 <div class="bigTitle precipswatch">Precipitation</div>
-<div class="chartTitle">Precipitation <span class="thisYear">2015</span></div>
+<div class="chartTitle">Precipitation <span class="thisYear">2016</span></div>
 <div class="chatter">The total precipitation in inches by day in Minnesota.</div>
 <div class="highlights">
   <div class="highlightNum greenswatch" id="maxPrecip">0</div><div class="highlightNum precipswatch" id="minPrecip">0</div>
@@ -410,7 +411,7 @@ Minnesota. Many lakes were ice-free in the year’s final week, forcing the U.S.
 <div id="wind" class="block" style="display:none;">
 <div class="icon"><img src="img/wind.png" alt="wind" /></div>
 <div class="bigTitle orangeswatch">Wind</div>
-<div class="chartTitle">Windspeed <span class="thisYear">2015</span></div>
+<div class="chartTitle">Windspeed <span class="thisYear">2016</span></div>
 <div class="chatter">Maximum and average windspeed by day in Minnesota.</div>
 <div class="highlights">
   <div class="highlightNum orangeswatch" id="maxWind">0</div><div class="highlightNum windswatch" id="minWind">0</div>
@@ -486,6 +487,8 @@ d3.json("./data/weather2014.json", function(error, dataLoad2014) {
 
 d3.json("./data/weather2015.json", function(error, dataLoad2015) {
 
+d3.json("./data/weather2016.json", function(error, dataLoad2016) {
+
 d3.json("./data/avgTemp.json", function(error, dataLoadTmp) {
 
 d3.json("./data/coolingDegree.json", function(error, dataLoadCool) {
@@ -507,6 +510,7 @@ data2012 = dataLoad2012.weather2012;
 data2013 = dataLoad2013.weather2013;
 data2014 = dataLoad2014.weather2014;
 data2015 = dataLoad2015.weather2015;
+data2016 = dataLoad2016.weather2016;
 dataTmp = dataLoadTmp.avgTemp;
 dataCool = dataLoadCool.coolingDegree;
 data90 = dataLoad90.over90;
@@ -527,6 +531,7 @@ if (whatYear == '2012') { var newData = data2012; }
 if (whatYear == '2013') { var newData = data2013; }
 if (whatYear == '2014') { var newData = data2014; }
 if (whatYear == '2015') { var newData = data2015; }
+if (whatYear == '2016') { var newData = data2016; }
 
 var maxTemp = Math.max.apply(Math,newData.map(function(o){return o.Tmax;}))
 var minTemp = Math.min.apply(Math,newData.map(function(o){return o.Tmin;}))
@@ -545,6 +550,10 @@ var minWind = Math.min.apply(Math,newData.map(function(o){return o.Max5Speed;}))
 $("#maxWind").html(Math.round(maxWind) + "mph");
 $("#minWind").html(Math.round(minWind) + "mph");
 
+chartTemps.flush();
+chartSnow.flush();
+chartPrecip.flush();
+chartWind.flush();
 
     chartTemps.load({
             json: newData,
@@ -584,8 +593,8 @@ $("#minWind").html(Math.round(minWind) + "mph");
 
 });
 
-var maxTemp = Math.max.apply(Math,data2015.map(function(o){return o.Tmax;}))
-var minTemp = Math.min.apply(Math,data2015.map(function(o){return o.Tmin;}))
+var maxTemp = Math.max.apply(Math,data2016.map(function(o){return o.Tmax;}))
+var minTemp = Math.min.apply(Math,data2016.map(function(o){return o.Tmin;}))
 var maxTempAll = Math.max.apply(Math,dataTmp.map(function(o){return o.avgTemp;}))
 var minTempAll = Math.min.apply(Math,dataTmp.map(function(o){return o.avgTemp;}))
 var max90 = Math.max.apply(Math,data90.map(function(o){return o.daysOver90;}))
@@ -622,8 +631,8 @@ $("#minPrecipAll").html(Math.round(minPrecipAll) + "in");
 $("#maxDew").html(Math.round(maxDew));
 $("#minDew").html(Math.round(minDew));
 
-var maxWind = Math.max.apply(Math,data2015.map(function(o){return o.Max5Speed;}))
-var minWind = Math.min.apply(Math,data2015.map(function(o){return o.Max5Speed;}))
+var maxWind = Math.max.apply(Math,data2016.map(function(o){return o.Max5Speed;}))
+var minWind = Math.min.apply(Math,data2016.map(function(o){return o.Max5Speed;}))
 
 $("#maxWind").html(Math.round(maxWind) + "mph");
 $("#minWind").html(Math.round(minWind) + "mph");
@@ -640,7 +649,7 @@ var chartTemps = c3.generate({
         bindto: '#tempsChart',
         padding: padding,
         data: {
-            json: data2015,
+            json: data2016,
             keys: {
                 x: 'DATE1',
                 value: ['Tmax','Tmin','Tavg','Avg30yearHigh','Avg30yearLow']
@@ -659,6 +668,9 @@ var chartTemps = c3.generate({
             'Avg30yearHigh': 'bar',
             'Avg30yearLow': 'bar'
             }
+        },
+    point: {
+            show: false
         },
        bar: {
         width: {
@@ -699,6 +711,9 @@ var chartTempHistory = c3.generate({
               'avgTemp': 'Average Temperature'
             }
         },
+    point: {
+            show: false
+        },
         axis: {
           y: {
             tick: {
@@ -714,7 +729,7 @@ var chartTempHistory = c3.generate({
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#333'] },
     });
 
@@ -730,6 +745,9 @@ var chartTempHot = c3.generate({
             names: {
               'daysOver90': '90+ Degree Days'
             }
+        },
+      point: {
+            show: false
         },
         axis: {
           y: {
@@ -749,7 +767,7 @@ var chartTempHot = c3.generate({
          regions: [
         {axis: 'x', start: '1980', end: '1990', class: 'hottest'},
     ],
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#801515'] },
     });
 
@@ -759,7 +777,7 @@ var chartSnow = c3.generate({
         bindto: '#snowChart',
         padding: padding,
         data: {
-            json: data2015,
+            json: data2016,
             keys: {
                 x: 'DATE1',
                 value: ['SnowFall']
@@ -767,6 +785,9 @@ var chartSnow = c3.generate({
             names: {
               'SnowFall': 'Snowfall'
             }
+        },
+      point: {
+            show: false
         },
         axis: {
           y: {
@@ -783,7 +804,7 @@ var chartSnow = c3.generate({
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#96ADB0'] },
     });
 
@@ -797,8 +818,11 @@ var chartSnowHistory = c3.generate({
                 value: ['totalSnow']
             },
             names: {
-              data1: 'Total Snow'
+              'totalSnow': 'Total Snow'
             }
+        },
+    point: {
+            show: false
         },
         axis: {
           y: {
@@ -814,7 +838,7 @@ var chartSnowHistory = c3.generate({
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#96ADB0'] },
     });
 
@@ -823,7 +847,7 @@ var chartPrecip = c3.generate({
         bindto: '#precipChart',
         padding: padding,
         data: {
-            json: data2015,
+            json: data2016,
             keys: {
                 x: 'DATE1',
                 value: ['PrecipTotal']
@@ -831,6 +855,9 @@ var chartPrecip = c3.generate({
             names: {
               'PrecipTotal': 'Precipitation'
             }
+        },
+    point: {
+            show: false
         },
         axis: {
           y: {
@@ -847,7 +874,7 @@ var chartPrecip = c3.generate({
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#3D813D'] },
     });
 
@@ -864,6 +891,9 @@ var chartDewHistory = c3.generate({
               'junetoAugAvg': 'Dewpoint High June to August Average'
             }
         },
+    point: {
+            show: false
+        },
         axis: {
           y: {
             tick: {
@@ -879,7 +909,7 @@ var chartDewHistory = c3.generate({
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#3D813D'] },
     });
 
@@ -896,6 +926,9 @@ var chartPrecipHistory = c3.generate({
               'annualPrecip': 'Total Precipitation'
             }
         },
+    point: {
+            show: false
+        },
         axis: {
           y: {
             tick: {
@@ -905,12 +938,12 @@ var chartPrecipHistory = c3.generate({
         },
         x: {
             tick: {
-                values: ['1891', '1924', '1953', '1982', '2011'],
+                values: ['1891', '1924', '1953', '1982', '2016'],
                 multiline: false
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#3D813D'] },
     });
 
@@ -928,6 +961,9 @@ var chartWind = c3.generate({
               'Max5Speed': 'Max Speed'
             }
         },
+      point: {
+            show: false
+        },
         axis: {
           y: {
             tick: {
@@ -943,9 +979,10 @@ var chartWind = c3.generate({
             }
           }
         },
-      subchart: { show: true },
+      // subchart: { show: true },
         color: { pattern: ['#E7C6A9', '#AA6C38'] },
     });
+});
 });
 });
 });
