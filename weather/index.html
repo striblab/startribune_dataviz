@@ -317,10 +317,6 @@ var minWind = Math.min.apply(Math,newData.map(function(o){return o.Max5Speed;}))
 $("#maxWind").html(Math.round(maxWind) + "mph");
 $("#minWind").html(Math.round(minWind) + "mph");
 
-chartTemps.flush();
-chartSnow.flush();
-chartPrecip.flush();
-chartWind.flush();
 
     chartTemps.load({
             json: newData,
@@ -357,6 +353,11 @@ chartWind.flush();
             },
           unload: ['AvgSpeed',"Max5Speed"]
     });
+
+chartTemps.flush();
+chartSnow.flush();
+chartPrecip.flush();
+chartWind.flush();
 
 });
 
