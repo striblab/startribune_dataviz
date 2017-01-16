@@ -1,4 +1,4 @@
-Star Tribune Data Drop - Twin Cities Realtor Data
+Star Tribune Data Drop - Metro Area community social media groups
 ================
 
 by Frey Hargarten
