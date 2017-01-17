@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" /> 
   
   <style>
-    body, #filter, #filter input:focus, p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; overflow-y:hidden; }
+    body, #filter, #filter input:focus, p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
 
     #wrapper { width:520px; margin-left:auto; margin-right:auto; }
 
@@ -139,7 +139,7 @@ var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
     center: [-93.2231, 44.9405],
-    zoom: 7.5,
+    zoom: 7,
     // minZoom: 7.5
 });
 
@@ -192,7 +192,7 @@ cityList.forEach(function(layer, i) {
    });
 
     $(".row").click(function() { map.flyTo({ center: [Number($(this).attr("longitude")), Number($(this).attr("latitude"))], zoom: 10 }); });
-    $(".zoom").click(function() { map.flyTo({ center: [-93.2231, 44.9405], zoom: 7.5 }); });
+    $(".zoom").click(function() { map.flyTo({ center: [-93.2231, 44.9405], zoom: 7 }); });
 
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
