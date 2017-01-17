@@ -38,12 +38,17 @@
     .zoom { float:none !important; }
 
     .selected { background-color:#ffffff !important; text-decoration:underline; color:#000 !important; }
+    .rowSelect { opacity:0.8em; }
 
-     @media (max-width:520px) { 
-       #wrapper { width:100%; margin-left:auto; margin-right:auto; }
-       .created, .city { display:none !important; }
-       .col { word-wrap: break-word !important; overflow-wrap: break-word !important; word-break:break-word !important; word-wrap:break-word !important; hyphens:auto !important; }
-     }
+    @media (max-width:520px) { 
+     #wrapper { width:100%; margin-left:auto; margin-right:auto; }
+     .created, .city { display:none !important; }
+     .col { word-wrap: break-word !important; overflow-wrap: break-word !important; word-break:break-word !important; word-wrap:break-word !important; hyphens:auto !important; }
+    }
+    @media (max-width:400px) { 
+     .name { width:59% !important; }
+     .tableHead { font-size:0.8em; }
+    }
   </style> 
 </head>
 
@@ -143,6 +148,8 @@ var map = new mapboxgl.Map({
     // minZoom: 7.5
 });
 
+map.scrollZoom.disable();
+
 // map.addControl(new MapboxGeocoder({
 //     accessToken: mapboxgl.accessToken
 // }));
@@ -191,8 +198,15 @@ cityList.forEach(function(layer, i) {
     });
    });
 
-    $(".row").click(function() { map.flyTo({ center: [Number($(this).attr("longitude")), Number($(this).attr("latitude"))], zoom: 10 }); });
-    $(".zoom").click(function() { map.flyTo({ center: [-93.2231, 44.9405], zoom: 7 }); });
+    $(".row").click(function() { 
+      map.flyTo({ center: [Number($(this).attr("longitude")), Number($(this).attr("latitude"))], zoom: 10 });
+      $(".row").removeClass("rowSelect");
+      $(this).removeClass("rowSelect");
+    });
+    $(".zoom").click(function() { 
+      $(".row").removeClass("rowSelect");
+      map.flyTo({ center: [-93.2231, 44.9405], zoom: 7 }); 
+    });
 
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
