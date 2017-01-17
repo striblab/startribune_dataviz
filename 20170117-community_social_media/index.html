@@ -15,12 +15,17 @@
   
   <style>
     body, #filter, #filter input:focus, p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; overflow-y:hidden; }
+
+    #wrapper { width:520px; margin-left:auto; margin-right:auto; }
+
     #groupsList { font-size:0.8em; }
     .tableHead { font-weight:900; }
     .tableHead:hover { opacity:0.8; cursor:pointer; }
     .row { padding:2px; }
     .row:hover { opacity:0.8; cursor:pointer; }
-    .col { display:inline-block; width:19%; vertical-align:top; }
+    .col { display:inline-block; width:20% !important; vertical-align:top; }
+    .name { width:40% !important; }
+    .created { display:none; }
      #map { height:400px; width:100%; }
     .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
     .map-overlay { font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
@@ -32,10 +37,10 @@
     .submit a { color:steelblue; }
     .zoom { float:none !important; }
 
-     @media (max-width:500px) { 
+    .selected { background-color:#ffffff !important; text-decoration:underline; color:#000 !important; }
+
+     @media (max-width:520px) { 
        .created, .city { display:none !important; }
-       .col { display:inline-block; width:20% !important; vertical-align:top; }
-       .name { width:50% !important; }
        .col { word-wrap: break-word !important; overflow-wrap: break-word !important; word-break:break-word !important; word-wrap:break-word !important; hyphens:auto !important; }
      }
   </style> 
