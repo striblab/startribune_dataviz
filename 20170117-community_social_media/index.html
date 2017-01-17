@@ -39,11 +39,15 @@
 
     .selected { background-color:#ffffff !important; text-decoration:underline; color:#000 !important; }
 
-     @media (max-width:520px) { 
-       #wrapper { width:100%; margin-left:auto; margin-right:auto; }
-       .created, .city { display:none !important; }
-       .col { word-wrap: break-word !important; overflow-wrap: break-word !important; word-break:break-word !important; word-wrap:break-word !important; hyphens:auto !important; }
-     }
+    @media (max-width:520px) { 
+     #wrapper { width:100%; margin-left:auto; margin-right:auto; }
+     .created, .city { display:none !important; }
+     .col { word-wrap: break-word !important; overflow-wrap: break-word !important; word-break:break-word !important; word-wrap:break-word !important; hyphens:auto !important; }
+    }
+    @media (max-width:400px) { 
+     .name { width:59% !important; }
+     .tableHead { font-size:0.8em; }
+    }
   </style> 
 </head>
 
@@ -142,6 +146,8 @@ var map = new mapboxgl.Map({
     zoom: 7,
     // minZoom: 7.5
 });
+
+map.scrollZoom.disable();
 
 // map.addControl(new MapboxGeocoder({
 //     accessToken: mapboxgl.accessToken
