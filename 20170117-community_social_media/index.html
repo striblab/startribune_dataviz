@@ -201,7 +201,7 @@ cityList.forEach(function(layer, i) {
     $(".row").click(function() { 
       map.flyTo({ center: [Number($(this).attr("longitude")), Number($(this).attr("latitude"))], zoom: 10 });
       $(".row").removeClass("rowSelect");
-      $(this).removeClass("rowSelect");
+      $(this).addClass("rowSelect");
     });
     $(".zoom").click(function() { 
       $(".row").removeClass("rowSelect");
