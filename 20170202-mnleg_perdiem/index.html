@@ -1,0 +1,412 @@
+<!-- TEXT -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MNLEG Per Diem Spending</title>
+  <meta name="description" content="MNLEG Per Diem Spending">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+  
+  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+
+<style>
+/*BASE LAYOUT*/
+    body, p { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+    #wrapper { width:520px; margin-right:auto; margin-left:auto; }
+    .leftSide { width:63%; float:right; }
+    .rightSide { width:30%; float:left; }
+    .right { float:left; width:48%; }
+    .left { float:right; width:48%; }
+    .labelTop { display:inline-block; padding-top:5px; padding-bottom:5px; font-weight:normal; }
+    #changeView { width:100%; margin-left:auto; margin-right:auto; display:none; }
+    .leftHalf { float:left; color:inherit !important; background-color:inherit !important; }
+    .rightHalf { float:right; color:#000 !important; }
+    .breaker { display:block !important; clear:both !important; width:100% !important; }
+    .layer { height:460px; }
+    #viewSwitch { display:none; }
+    #viewSwitch .step { border:0 !important; }
+    .chart { display:none; }
+
+    #topper { padding:15px; text-align:center; }
+    .zoom { float:none !important; }
+    .offlink a { color:steelblue; }
+    .offlink { text-align:center !important; }
+    .district { font-weight:900; }
+
+    .label { float:left; width:48%; clear:left; }
+    .stat { float:right; width:48%; clear:right; text-align:right; }
+
+/*CHARTS*/
+    #chart { width:100%; height:430px; }
+    .powerline { stroke-dasharray:5,5; stroke:#333; }
+    .chartTitle { margin-top:0 !important; padding-left:5px;font-weight:normal; font-size:1.3em; }
+    #chart .c3-line { stroke-width:5px !important; }
+
+/*MAPS*/
+    #mapBox { text-align:center; }
+    .map { display:inline-block; width:48%; }
+    .districtName { font-weight:900; font-size:1.2em; }
+
+/*SWATCHES*/
+    .republican { background-color:#8C1B17; fill:#8C1B17 !important; pointer-events: all; font-weight:bold; color:#fff; }
+    .rlikely { background-color:#A5484D; fill:#A5484D !important; pointer-events: all; font-weight:bold; }
+    .rlean { background-color:#f7816E; fill:#f7816E !important; pointer-events: all; font-weight:bold; }
+    .r1 { background-color:#C68985; fill:#C68985 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .r2 { background-color:#A5484D; fill:#A5484D !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .r3 { background-color:#A52129; fill:#A52129 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .r4 { background-color:#8C1B17; fill:#8C1B17 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .r0 { background-color:#8C1B17; fill:#8C1B17 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .gray3 { color:white !important; pointer-events: all; font-weight:bold; }
+    .mid { background-color:#aaa; fill:#aaa !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .democrat { background-color:#3F88C5; fill:#3F88C5 !important; pointer-events: all; font-weight:bold; color:#fff;  }
+    .dlikely { background-color:#5ca5c3; fill:#5ca5c3 !important; pointer-events: all; font-weight:bold; }
+    .dlean { background-color:#72A9D6; fill:#72A9D6 !important; pointer-events: all; font-weight:bold; }
+    .d1 { background-color:#ABCEE8; fill:#ABCEE8 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .d2 { background-color:#5ca5c3; fill:#5ca5c3 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .d3 { background-color:#4f97c4; fill:#4f97c4 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .d4 { background-color:#3f88c5; fill:#3f88c5 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .d0 { background-color:#3F88C5; fill:#3F88C5 !important; color:white !important; pointer-events: all; font-weight:bold; }
+    .text { fill:#ffffff !important; font-size:1em; }
+    rect:hover, text:hover { background-color:#333 !important; cursor:pointer; opacity:.5; }
+
+    .legends { text-align:center; }
+    .info { height:200px; }
+
+/*MOBILE BREAKPOINTS*/
+    @media (max-width:500px) {
+      #wrapper { width:100%; margin-right:auto; margin-left:auto; }
+      .metro { display:none; }
+      .map { width:100%; text-align:center; }
+    }
+</style> 
+</head>
+
+<body>
+<div id="wrapper">
+
+<div id="topper">
+<span class="offlink"><a href="https://www.gis.leg.mn/iMaps/districts/" target="new_">Who represents me?</a></span> | <span class="zoom">Reset</span>
+</div>
+
+<div class="breaker"></div>
+
+<div class="chart" id="house">
+<div class="chartTitle">Minnesota House per diem spending</div>
+
+<div id="mapHState" class="map"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+<div id="mapHMetro" class="map metro"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+
+<div class="legendBox">
+<div class="legends">
+    <div class="legendContainer">
+      <span class='legend'>
+        Spending
+        <nav class='legend clearfix'>
+          <span style='background:#fff;'>Less</span>
+          <span class='purple1'></span>
+          <span class='purple2'></span>
+          <span class='purple3'></span>
+          <span class='purple4'></span>
+          <span class='purple5'></span>
+          <span style='background:#fff;'>More</span>
+        </nav>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="breaker"></div>
+
+<div id="infoBoxH" class="info">
+<div class="district"></div>
+<div class='label'>Per diem</div><div class="stat perdiem"></div>
+<div class='label'>Communications</div><div class="stat communications"></div>
+<div class='label'>Lodging</div><div class="stat lodging"></div>
+<div class='label'>Mileage</div><div class="stat mileage"></div>
+<div class='label'>Other Travel</div><div class="stat othertravel"></div>
+<div class='label'>Other Expenses</div><div class="stat other"></div>
+<div class='label'>District Expenses</div><div class="stat districtX"></div>
+<div class='label'>Total</div><div class="stat total"></div>
+</div>
+</div>
+
+<div class="breaker"></div>
+
+<div class="chart" id="senate">
+<div class="chartTitle">Minnesota Senate per diem spending</div>
+
+<div id="mapSState" class="map"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+<div id="mapSMetro" class="map metro"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+
+<div class="legendBox">
+<div class="legends">
+    <div class="legendContainer">
+      <span class='legend'>
+        Spending
+        <nav class='legend clearfix'>
+          <span style='background:#fff;'>Less</span>
+          <span class='purple1'></span>
+          <span class='purple2'></span>
+          <span class='purple3'></span>
+          <span class='purple4'></span>
+          <span class='purple5'></span>
+          <span style='background:#fff;'>More</span>
+        </nav>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="breaker"></div>
+
+<div id="infoBoxS" class="info">
+<div class="district"></div>
+<div class='label'>Per diem</div><div class="stat perdiem"></div>
+<div class='label'>Communications</div><div class="stat communications"></div>
+<div class='label'>Lodging</div><div class="stat lodging"></div>
+<div class='label'>Mileage</div><div class="stat mileage"></div>
+<div class='label'>Other Travel</div><div class="stat othertravel"></div>
+<div class='label'>Other Expenses</div><div class="stat other"></div>
+<div class='label'>District Expenses</div><div class="stat districtX"></div>
+<div class='label'>Total</div><div class="stat total"></div>
+</div>
+</div>
+
+
+</div>
+<!-- end wrapper -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="../_common_resources/js/d3-master/d3.min.js" charset="utf-8"></script>
+<script>
+d3.json("./data/mnleg_spending.json", function(error, json) {
+
+var data2016 = json.expenses;
+
+console.log(json)
+
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+$(".chart").hide();
+$("#" + selected).show();
+} else { $(".chart").show(); }
+
+
+function mapBuild(container, boxContainer, chartContainer, shape, race, geo, dataCompare, index) {
+
+var width = 320,
+    height = 400,
+    centered;
+
+if (geo=="us") { var projection = d3.geo.albersUsa().scale(700).translate([330, 200]); }
+else if (geo=="mn") { var projection = d3.geo.albersUsa().scale(5037).translate([50, 970]); }
+else if (geo=="metro") { var projection = d3.geo.mercator().scale([16800]).center([-92.384033,45.209134]); }
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select(container + " svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height);
+
+var g = svg.append("g");
+
+d3.json("shapefiles/" + shape, function(error, us) {
+
+  g.append("g")
+      .attr("class", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .attr("id", function(d) { var str = geo + "_" + d.properties.DISTRICT; return str.replace(new RegExp(" ", "g"),"-"); })
+      .attr("precinctName", function(d){ return d.properties.DISTRICT })
+      .attr("class", function(d){
+        for (var i=0; i < data2016.length; i++){
+
+          if (d.properties.DISTRICT == data2016[i].district){
+
+            if (data2016[i].total >= 30000){ return "purple5"; }
+            else if (data2016[i].total >= 25000){ return "purple4"; }
+            else if (data2016[i].total >= 20000){ return "purple3"; }
+            else if (data2016[i].total >= 10000){ return "purple2"; }
+            else if (data2016[i].total >= 0){ return "purple1"; }
+          }
+        }
+        })
+      .on("mousedown", function(d){
+        var container = "";
+        if (race == "senate") { container = "#infoBoxS"; }
+        else if  (race == "house") { container = "#infoBoxH"; }
+
+         $(container + " .district").html("<div>District " + d.properties.DISTRICT + "</div>");
+
+        for (var i=0; i < data2016.length; i++){
+
+          if (d.properties.DISTRICT == data2016[i].district){
+         $(container + " .perdiem").html("<div>" + data2016[i].perdiem + "</div>");
+         $(container + " .communications").html("<div>" + data2016[i].communications + "</div>");
+         $(container + " .lodging").html("<div>" + data2016[i].lodging + "</div>");
+         $(container + " .mileage").html("<div>" + data2016[i].mileage + "</div>");
+         $(container + " .othertravel").html("<div>" + data2016[i].other_travel + "</div>");
+         $(container + " .other").html("<div>" + data2016[i].other_expenses + "</div>");
+         $(container + " .districtX").html("<div>" + data2016[i].district_expenses + "</div>");
+          $(container + " .total").html("<div>" + data2016[i].total + "</div>");
+          }
+        }
+
+
+        })
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .call(d3.helper.tooltip(function(d, i){
+        for (var i=0; i < data2016.length; i++){
+          if (d.properties.DISTRICT == data2016[i].district){
+            return "<div class='district'>District " + d.properties.DISTRICT + "</div><div>" + d3.format("$,.0f")(data2016[i].total) + " spent</div>";
+          }
+        }
+
+
+      }));
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+
+});
+
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+$(".zoom").click(function() {
+  clicked2();
+  $(".info").html("");
+});
+
+$(".mapSwitch").click(function() {
+  $("#filter input").val("");
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 6;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 3;
+    centered = null;
+  }
+
+  d3.selectAll("#mapMetro path, #mapState path")
+      .classed("faded", false)
+      .classed("active", false);
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function (d) { return d === centered; });
+}
+
+function clicked2(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 1;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function (d) { return d === centered; });
+}
+
+}
+
+d3.helper = {};
+
+d3.helper.tooltip = function(accessor){
+    return function(selection){
+        var tooltipDiv;
+        var bodyNode = d3.select('body').node();
+        selection.on("mouseover", function(d, i){
+            // Clean up lost tooltips
+            d3.select('body').selectAll('div.tooltip').remove();
+            // Append tooltip
+            tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px')
+                .style('position', 'absolute') 
+                .style('z-index', 1001);
+            // Add text using the accessor function
+            var tooltipText = accessor(d, i) || '';
+            // Crop text arbitrarily
+            //tooltipDiv.style('width', function(d, i){return (tooltipText.length > 80) ? '300px' : null;})
+            //    .html(tooltipText);
+        })
+        .on('mousemove', function(d, i) {
+            // Move tooltip
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px');
+            var tooltipText = accessor(d, i) || '';
+            tooltipDiv.html(tooltipText);
+        })
+        .on("mouseout", function(d, i){
+            // Remove tooltip
+            tooltipDiv.remove();
+        });
+
+    };
+};
+
+  mapBuild("#mapHMetro", "#infobox", "#chart", "mnleg_metro.json", "house", "metro", data2016, 0);
+  mapBuild("#mapHState", "#infobox", "#chart", "mnleg.json", "house", "mn", data2016, 0);
+
+  mapBuild("#mapSMetro", "#infobox", "#chart", "mnsenate_metro.json", "senate", "metro", data2016, 0);
+  mapBuild("#mapSState", "#infobox", "#chart", "mnsenate.json", "senate", "mn", data2016, 0);
+
+});
+</script>
+</body>
+</html>
