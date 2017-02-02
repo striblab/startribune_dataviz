@@ -127,7 +127,7 @@
 
 <div class="breaker"></div>
 
-<div id="infoBoxH" class="info gone">
+<div id="infoBoxH" class="info">
 <div class="district"></div>
 <div class='label'>Per diem</div><div class="stat perdiem"></div>
 <div class='label'>Communications</div><div class="stat communications"></div>
@@ -167,7 +167,7 @@
 
 <div class="breaker"></div>
 
-<div id="infoBoxS" class="info gone">
+<div id="infoBoxS" class="info">
 <div class="district"></div>
 <div class='label'>Per diem</div><div class="stat perdiem"></div>
 <div class='label'>Communications</div><div class="stat communications"></div>
@@ -176,7 +176,7 @@
 <div class='label'>Other Travel</div><div class="stat othertravel"></div>
 <div class='label'>Other Expenses</div><div class="stat other"></div>
 <div class='label'>District Expenses</div><div class="stat districtX"></div>
-<div class='label'>Total</div><div class="stat total"></div>
+<div class='label bolded'>Total</div><div class="stat total bolded"></div>
 </div>
 </div>
 
@@ -206,6 +206,36 @@ $(".chart").hide();
 $("#" + selected).show();
 } else { $(".chart").show(); }
 
+function totals(){
+   for (var i=0; i < data2016.length; i++){
+   if ("Total Senate" == String(data2016[i].name)){
+    $("#infoBoxS" + " .district").html("<div>" + data2016[i].name + " expenses</div>");
+    $("#infoBoxS" + " .perdiem").html("<div>" + d3.format("$,.0f")(Number(data2016[i].perdiem)) + "</div>");
+    $("#infoBoxS" + " .communications").html("<div>" + d3.format("$,.0f")(Number(data2016[i].communications)) + "</div>");
+    $("#infoBoxS" + " .lodging").html("<div>" + d3.format("$,.0f")(Number(data2016[i].lodging)) + "</div>");
+    $("#infoBoxS" + " .mileage").html("<div>" + d3.format("$,.0f")(Number(data2016[i].mileage)) + "</div>");
+    $("#infoBoxS" + " .othertravel").html("<div>" + d3.format("$,.0f")(Number(data2016[i].other_travel)) + "</div>");
+    $("#infoBoxS" + " .other").html("<div>" + d3.format("$,.0f")(Number(data2016[i].other_expenses)) + "</div>");
+    $("#infoBoxS" + " .districtX").html("<div>" + d3.format("$,.0f")(Number(data2016[i].district_expenses)) + "</div>");
+     $("#infoBoxS" + " .total").html("<div>" + d3.format("$,.0f")(Number(data2016[i].total)) + "</div>");
+     }
+   }
+   for (var i=0; i < data2016.length; i++){
+   if ("Total House" == String(data2016[i].name)){
+    $("#infoBoxH" + " .district").html("<div>" + data2016[i].name + " of Representatives expenses</div>");
+    $("#infoBoxH" + " .perdiem").html("<div>" + d3.format("$,.0f")(Number(data2016[i].perdiem)) + "</div>");
+    $("#infoBoxH" + " .communications").html("<div>" + d3.format("$,.0f")(Number(data2016[i].communications)) + "</div>");
+    $("#infoBoxH" + " .lodging").html("<div>" + d3.format("$,.0f")(Number(data2016[i].lodging)) + "</div>");
+    $("#infoBoxH" + " .mileage").html("<div>" + d3.format("$,.0f")(Number(data2016[i].mileage)) + "</div>");
+    $("#infoBoxH" + " .othertravel").html("<div>" + d3.format("$,.0f")(Number(data2016[i].other_travel)) + "</div>");
+    $("#infoBoxH" + " .other").html("<div>" + d3.format("$,.0f")(Number(data2016[i].other_expenses)) + "</div>");
+    $("#infoBoxH" + " .districtX").html("<div>" + d3.format("$,.0f")(Number(data2016[i].district_expenses)) + "</div>");
+     $("#infoBoxH" + " .total").html("<div>" + d3.format("$,.0f")(Number(data2016[i].total)) + "</div>");
+     }
+   }
+}
+
+totals();
 
 function mapBuild(container, boxContainer, chartContainer, shape, race, geo, dataCompare, index) {
 
@@ -258,10 +288,7 @@ d3.json("shapefiles/" + shape, function(error, us) {
       .on("mousedown", function(d){
         var container = "";
         if (race == "senate") { container = "#infoBoxS"; }
-        else if  (race == "house") { container = "#infoBoxH"; }
-
-         $(container).removeClass("gone");
-         
+        else if  (race == "house") { container = "#infoBoxH"; }         
 
         for (var i=0; i < data2016.length; i++){
 
@@ -312,7 +339,7 @@ var zoom = d3.behavior.zoom()
 
 $(".zoom").click(function() {
   clicked2();
-  $(".info").addClass("gone");
+  totals();
 });
 
 $(".mapSwitch").click(function() {
