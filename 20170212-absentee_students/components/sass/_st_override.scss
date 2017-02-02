@@ -1,0 +1,82 @@
+body { overflow-x:hidden; font-family:$bentonSans; }
+  a, a:hover, a:active, a:visited { color:#000; }
+      .breaker { clear:both; margin:30px; }
+      #wrapper { width:90%; margin-left:auto; margin-right:auto; }
+
+      #chart svg { height:150px; }
+      #chart2 svg { height:150px; }
+      #chart3 svg { height:150px; }
+
+      .sliderDiv { height:20px; padding:15px; margin-top:15px; }
+
+  #yearChatter { height:90px; margin-bottom:8px; }
+
+  #barChart { width:100%; text-align:center; }
+
+  .header { display:inline-block; width:30%; text-align:center; }
+  .column { display:inline-block; width:30%; text-align:center; height:350px; }
+  .footer { display:inline-block; width:30%; text-align:center; }
+  #gopBar { background-color:#7F1313; height:350px; }
+  #dflBar { background-color:#3A7D7D; height:350px; }
+  .bigNum { font-size:1.8em; font-family: $popular; font-weight:900; }
+
+  .title { font-weight:bold; margin-top:15px; margin-bottom:5px; font-family: $popular; font-size:1.2em; }
+
+  td{ padding: 8.88px !important; font-family:Arial; }
+  tr.odd td.sorting_1 { background-color: #efefef; }
+  tr.even td.sorting_1 { background-color: #efefef; }
+  tr.even { background-color: #fff !important; }
+  tr.odd { background-color: #fff !important; }
+  .dataTables_length{ display:none; }
+  .dataTable{ margin-bottom:18px; }
+  .dataTables_filter{ margin:10px; visibility:hidden;}
+  .dataTables_length, .dataTables_info { display:none; }
+  .dataTables_info { display:none;}
+  th { background: #ccc !important; }
+  table.dataTable.no-footer{ margin-bottom:0 !important; }
+  table { font-size:12px; }
+  .dataTables_scrollBody thead{ visibility:hidden;height:0 !important; }
+  th.sorting_asc, th.sorting_desc { background:#333 !important; font-weight:bold; color:#fff;}
+  th { display: table-cell;vertical-align: initial; }
+  th { padding:5px !important; }
+
+  tr.odd td.sorting_1 { background-color: #efefef; }
+  tr.even td.sorting_1 { background-color: #efefef; }
+  tr.even { background-color: #fff !important; }
+  tr.odd { background-color: #fff !important; }
+  .dataTables_length{ display:none; }
+  .dataTable{ margin-bottom:18px; }
+  .dataTables_wrapper .dataTables_paginate { text-align:center; }
+  .dataTables_length, .dataTables_info { display:none; }
+  .dataTables_info { display:none; }
+  .dataTables_wrapper .dataTables_filter { float: left; }
+  #events_filter input { margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
+    -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);   -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #ddd !important; }
+  #events_filter { width:100%; height:50px; }
+  input:focus {outline:0 !important;}
+  #events_filter input:focus { box-shadow: 0 0 5px #61bd1a; padding: 3px 0px 3px 3px; border: 1px solid #61bd1a; }
+    td { padding: 8.88px !important; font-family:Arial; font-size:14px !important; }
+  th { background: #ccc !important; font-size:1em; font-family:Popular; }
+  table.dataTable.no-footer{ margin-bottom:0 !important; }
+  table { font-size:14px; }
+  .dataTables_scrollBody thead{ visibility:hidden;height:0 !important; }
+  th.sorting_asc, th.sorting_desc { background:#333 !important; font-weight:bold; color:#fff;}
+  th { display: table-cell;vertical-align: initial; }
+  th { padding:5px !important; }
+  table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before { height: 20px; width: 20px; display: block; color: white; border: 2px solid white; position:static !important; border-radius: 16px; text-align: center; line-height: 20px; box-shadow: 0 0 0 #444; box-sizing: content-box; content: ''; float: left; font-weight: bold; margin-right: 6px; background-color: #61bd1a; font-size: 16px; }    div.container { max-width: 1200px }
+  .sorting_1:hover { cursor:pointer; }
+  th { font-family:$popular;}
+
+  .gopSwatch { color:#7F1313; font-weight:600; }
+  .dflSwatch { color:#0B4C4C; font-weight:600; }
+  .pdaSwatch { color:#4DA64D; font-weight:600; }
+  .paydaySwatch { color:#D09361; font-weight:600; }
+
+   @media only screen and (max-width:370px) {
+   #yearChatter { height:200px !important; }
+   }
+   
+   @media only screen and (max-width:650px) {
+   #wrapper { width:98%; }
+   #yearChatter { height:200px; }
+   }
