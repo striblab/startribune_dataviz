@@ -79,7 +79,7 @@ d3.select("#g" + grade).selectAll(".block")
     else if (d.pct > 0) { colorClass = "gray1"; }
   }  
 
-  var slideClasses = "slide1";
+  var slideClasses = "slide1 ";
 
   if (d.grade == "K" || d.grade == 1 || d.grade == 9 || d.grade == 10 || d.grade == 11 || d.grade == 12) { slideClasses += " slide2 "; }
   if (d.race == "Black" || d.race == "Hispanic" || d.race == "Native") { slideClasses += " slide3 "; }
