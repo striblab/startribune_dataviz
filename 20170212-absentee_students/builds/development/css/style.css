@@ -2737,4 +2737,5 @@ body { overflow-x:hidden; font-family: "Benton Sans",Helvetica,Arial,sans-serif 
   #grades { display:none; }
   #gradeAxis { margin-top:44px; }
   #mobileHide { display:none; }
+  .legendContainer { padding-left:14% !important; }
 }
