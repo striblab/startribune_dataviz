@@ -58,7 +58,7 @@ jsSources = [
   // 'components/scripts/pixgrid.js',
   // 'components/scripts/tagline.js',
   // 'components/scripts/template.js'
-  // 'components/scripts/d3.js',
+  // 'components/scripts/d3.v3.min.js',
   // 'components/scripts/c3.js',
   'components/scripts/st_script.js'
 ];
