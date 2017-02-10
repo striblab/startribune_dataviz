@@ -8,4 +8,4 @@ deployment:
   development:
     branch: dev
     commands:
-      - curl -X POST https://rundeck.strib.us/project/Ansible/job/e0f712c4-c338-4744-9212-153bd8504606/run?authtoken=$RUNDECK_AUTH_TOKEN
+      - curl -X POST https://rundeck.strib.us/api/14/job/e0f712c4-c338-4744-9212-153bd8504606/run?authtoken=$RUNDECK_AUTH_TOKEN
