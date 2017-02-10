@@ -49,19 +49,32 @@ if (env==='development') {
   sassStyle = 'compressed'; // if prod, compress css
 }
 
-
 coffeeSources = ['components/coffee/tagline.coffee'];
 
-// add any js libraries here to be compiled or comment out
+// add any custom js scripts here to be compiled or comment out
 jsSources = [
+  'components/scripts/st_script.js'
+];
+
+// add any js libraries here to be compiled or comment out
+librarySources = [
   // 'components/scripts/rclick.js',
   // 'components/scripts/pixgrid.js',
   // 'components/scripts/tagline.js',
-  // 'components/scripts/template.js'
-  // 'components/scripts/d3.v3.min.js',
-  // 'components/scripts/c3.js',
-  'components/scripts/st_script.js'
+  // 'components/scripts/template.js',
+  'components/scripts/jquery-ui.js',
+  'components/scripts/d3.v3.min.js',
+  // 'components/scripts/queue.v1.min.js',
+  // 'components/scripts/topojson.v1.min.js',
+  // 'components/scripts/datatables.min.js',
+  // 'components/scripts/dataTables.responsive.min.js',
+  // 'components/scripts/d3.slider.js',
+  // 'components/scripts/nv.d3.min.js',
+  // 'components/scripts/c3.min.js',
+  'components/scripts/mapbox-gl.js',
+  'components/scripts/mapbox-gl-geocoder.js',
 ];
+
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 jsonSources = [outputDir + 'js/*.json'];
@@ -82,6 +95,12 @@ gulp.task('js', function() {
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js')) // putting in local js folder
     .pipe(browserSync.stream())
+});
+
+gulp.task('libraries', function() {
+  gulp.src(librarySources)
+   .pipe(gulp.dest(outputDir + 'js')) // putting in local js folder
+   .pipe(browserSync.stream())
 });
 
 // watching local scss files for changes and then compiling css and injecting into the page with browserSync
@@ -124,6 +143,7 @@ gulp.task('html', function() {
     .pipe(browserSync.stream())
 });
 
+//grab images
 gulp.task('images', function() {
   gulp.src('builds/development/images/**/*.*')
     .pipe(gulpif(env === 'production', imagemin({
@@ -135,12 +155,28 @@ gulp.task('images', function() {
     .pipe(browserSync.stream())
 });
 
-// *** Not using json yet but could be used to fuel inline graphics
+//move json data
 gulp.task('json', function() {
-  gulp.src('builds/development/js/*.json')
-    .pipe(gulpif(env === 'production', jsonminify()))
-    .pipe(gulpif(env === 'production', gulp.dest('builds/production/js')))
+  gulp.src('builds/development/data/*.json')
+   .pipe(gulpif(env === 'production', gulp.dest('builds/production/data')))
    .pipe(browserSync.stream())
 });
-// took out 'images' 
-gulp.task('default', ['html', 'json', 'coffee', 'js', 'compass', 'watch', 'browserSync']);
+
+//move geojson and shapefiles
+gulp.task('shapefiles', function() {
+  gulp.src('builds/development/shapefiles/*.json')
+   .pipe(gulpif(env === 'production', gulp.dest('builds/production/shapefiles')))
+   .pipe(browserSync.stream())
+  gulp.src('builds/development/shapefiles/*.geojson')
+   .pipe(gulpif(env === 'production', gulp.dest('builds/production/shapefiles')))
+   .pipe(browserSync.stream())
+});
+
+//move geographic data
+gulp.task('geojson_data', function() {
+  gulp.src('builds/development/data/*.geojson')
+   .pipe(gulpif(env === 'production', gulp.dest('builds/production/data')))
+   .pipe(browserSync.stream())
+});
+
+gulp.task('default', ['html', 'json', 'geojson_data', 'coffee', 'libraries', 'js', 'shapefiles', 'compass', 'watch', 'browserSync']);
