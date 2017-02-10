@@ -71,6 +71,11 @@ librarySources = [
   // 'components/scripts/d3.slider.js',
   // 'components/scripts/nv.d3.min.js',
   // 'components/scripts/c3.min.js',
+  // 'components/scripts/mapbox.internals.js',
+  // 'components/scripts/mapbox.standalone.js',
+  // 'components/scripts/Leaflet.fullscreen.min.js',
+  // 'components/scripts/leaflet.markercluster-src.js',
+  // 'components/scripts/leaflet-omnivore.min.js',
   'components/scripts/mapbox-gl.js',
   'components/scripts/mapbox-gl-geocoder.js',
 ];
