@@ -2,11 +2,12 @@
   "name": "data-viz-workflows",
   "version": "0.0.1",
   "description": "template workflow for data viz",
+  "license" : "WTFPL",
   "repository": {
     "type": "git",
     "url": ""
   },
-  "author": "Dave Braunger",
+  "author": "Frey Hargarten",
   "devDependencies": {
   "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
