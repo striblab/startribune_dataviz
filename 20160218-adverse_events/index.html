@@ -16,11 +16,40 @@
   
   <style>
      #wrapper { width:100%; }
-     .dataTable { min-height:500px; }
-     .dataTables_info { display:block !important; font-family: "Benton Sans",Helvetica,Arial,sans-serif; }
 
-     @media (max-width:420px) {
+     body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+
+     #header { margin-bottom:10px; }
+     #events { overflow-y:auto; height:280px; }
+     .cell { display:inline-block; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-size:0.8em; vertical-align:top; margin-bottom:12px; text-align:center; } 
+     .th { display:inline-block; font-family:"Benton Sans",Helvetica,Arial,sans-serif; font-weight:900; text-align:center; } 
+     .th:hover { text-decoration:underline; cursor:pointer; }
+     .sortSelect { text-decoration:underline; }
+     .year { width:9%; }
+     .hospital { width:15%; }
+     .city { width:8%; }
+     .category { width:30%; }
+     .num { font-weight:900; text-align:center; width:9%; }
+     .cell.num { font-size:1.2em; }
+     .type { width:10%; }
+
+     #counts { margin-top:10px; margin-bottom:10px; }
+     #results { font-weight:900; }
+
+     #filter { margin-top:10px; margin-bottom:10px; }
+     #filter input:focus { width: 100% !important; }
+     #filter input { font-size:.85em; width:100% !important; font-family:"Benton Sans",Helvetica,Arial,sans-serif !important; }
+     .scrollToTop { color:steelblue !important; }
+     .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+
+     @media (max-width:700px) {
+    .th, .cell { width:12%; }
+     }
+
+     @media (max-width:600px) {
     .dataTable { min-height:70px; }
+    .kill { display:none; }
+    .th, .cell { width:32%; }
      }
 
   </style> 
@@ -29,13 +58,18 @@
 <body>
 <div id="wrapper">
 
-<div class="chartTitle">Hospitals with 6+ adverse events in 2015</div>
-<div class="chatter">Data spans 12-month period ending Oct. 6, 2015.</div>
+<div class="chartTitle">Hospitals with 6+ adverse events in 2016</div>
+<div class="chatter">Data spans 12-month period ending Oct. 6, 2016.</div>
 <div id="chart"></div>
 
 <div class="chartTitle">Search the state’s database by hospital or by adverse event</div>
-<div class="chatter">Data contains events reported between 2004 and 2016.</div>
-<table width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"><thead><tr><th>Year</th><th>Hospital</th><th>City</th><th>Event</th><th>Incidents</th><th>Deaths</th><th>Injuries</th><th>Type</th></tr></thead></table>
+<div class="chatter">Data contains reports filed between 2005 and 2017 that describe events spanning 2004 through 2016. </div>
+
+<div id="filter"><input type="search" id="filter_box" placeholder="Search table by keyword" /></div>
+
+<div id="header"><div class='th sortSelect year' data='year'>Filed</div><div class='th hospital' data='hospital'>Hospital</div><div class='th kill city' data='city'>City</div><div class='th kill category' data='event'>Event</div><div class='th num' data='incidents'>Incidents</div><div class='th kill num' data='deaths'>Deaths</div><div class='th kill num' data='injuries'>Injuries</div><div class='th kill type' data='type'>Type</div></div>
+<div width="100%" cellspacing="0" class="display compact responsive nowrap" id="events"></div>
+<div id="counts">Showing <span id="results">1,597</span> results | <span class="scrollToTop">Return to Top</span></div>
 <!-- 
 <a href='https://docs.google.com/spreadsheets/d/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
 
@@ -81,14 +115,14 @@ var chartDecade = c3.generate({
         },
        bar: {
         width: {
-            ratio: 0.5 // this makes bar width 50% of length between ticks
+            ratio: 0.5
         }
       },
         axis: {
           rotated: true,
           y: {
             tick: {
-             values: ['0', '20', '35'],
+             values: ['0', '15', '30'],
              format: d3.format('r')
             }
         },
@@ -104,39 +138,88 @@ var chartDecade = c3.generate({
         color: { pattern: ['#CCC'] },
     });
 
+function tableSpill() {
 
-//TABLE
-  $(document).ready(function() {
+d3.select("#events").selectAll(".card")
+  .data(data.sort(function(a,b) {return b.year-a.year;})).enter().append("div")
+  .attr("class",function(d) { return "card"; })
+  .attr("id",function(d) { return "s" + d.id; })
+  .on("click",function(d){
 
-           var eventsTable = $('#events').DataTable( {
-                responsive: {
-        details: {
-            type: 'row'
-        }
-    },
-                "bServerSide":false,
-                "bProcessing":true,
-                "sAjaxDataProp": "feed.entry",
-                "order": [[ 0, "desc" ]],
-                "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1jvziIFqm2fkcTgpigumWV2aM8XBPy6SjxE5_pAt9BII/od6/public/values?&alt=json",
-                "aoColumns": [                 
-                    { "mDataProp": "gsx$year.$t" },
-                    { "mDataProp": "gsx$hospital.$t" },
-                    { "mDataProp": "gsx$city.$t" },
-                    { "mDataProp": "gsx$category.$t" },
-                    { "mDataProp": "gsx$number.$t" },
-                    { "mDataProp": "gsx$death.$t" },
-                    { "mDataProp": "gsx$injury.$t" },
-                    { "mDataProp": "gsx$catcode.$t" },
-                            ]
-            } );
+  })
+  .html(function(d){ 
+    return "<div class='cell num year'>" + d.year + "</div><div class='cell hospital'>" + d.hospital + "</div><div class='cell kill city'>" + d.city + "</div><div class='cell kill category'>" + d.category + "</div><div class='cell num'>" + d.number + "</div><div class='cell kill num'>" + d.death + "</div><div class='cell kill num'>" + d.injury + "</div><div class='cell kill type'>" + d.cattype + "</div>";
+  });
 
-    $('.dataTables_filter input').attr("placeholder", "Enter keyword");
+}
 
-        } );
+tableSpill();
 
-    $(".dataTable").removeClass("nowrap");
+function tableSort(container,party,data,candidate,sorted){
+   
+  d3.select(container).selectAll(".card").sort(function(a, b) {
+          if (candidate == "year") { 
+        if (sorted == "descend") { return d3.descending(a.year, b.year); }
+        if (sorted == "ascend") { return d3.ascending(a.year, b.year); }
+     }
+          if (candidate == "hospital") { 
+        if (sorted == "descend") { return d3.descending(a.hospital, b.hospital); }
+        if (sorted == "ascend") { return d3.ascending(a.hospital, b.hospital); }
+     }
+           if (candidate == "city") { 
+        if (sorted == "descend") { return d3.descending(a.city, b.city); }
+        if (sorted == "ascend") { return d3.ascending(a.city, b.city); }
+     }
+           if (candidate == "event") { 
+        if (sorted == "descend") { return d3.ascending(a.category, b.category); }
+        if (sorted == "ascend") { return d3.descending(a.category, b.category); }
+     }
+           if (candidate == "incidents") { 
+        if (sorted == "descend") { return d3.ascending(a.number, b.number); }
+        if (sorted == "ascend") { return d3.descending(a.number, b.number); }
+     }
+           if (candidate == "deaths") { 
+        if (sorted == "descend") { return d3.ascending(a.death, b.death); }
+        if (sorted == "ascend") { return d3.descending(a.death, b.death); }
+     }
+           if (candidate == "injuries") { 
+        if (sorted == "descend") { return d3.ascending(a.injury, b.injury); }
+        if (sorted == "ascend") { return d3.descending(a.injury, b.injury); }
+     }
+           if (candidate == "type") { 
+        if (sorted == "descend") { return d3.ascending(a.cattype, b.cattype); }
+        if (sorted == "ascend") { return d3.descending(a.cattype, b.cattype); }
+     }
+    })
+    .transition().duration(500);
+}
+
+$( document ).ready(function() {
+$('#filter_box').on('keyup search', function(e){
+   $('.card').hide();
+   var txt = $('#filter_box').val();
+   $('.card').each(function(){
+      if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+          $(this).show();
+      }
+   });
+   var count = $('.card:visible').length;
+   $('#results').html(d3.format(",")(count));
+});
+
+$('.scrollToTop').click(function(){
+    $('#events').animate({scrollTop : 0},800);
+    return false;
+  });
+
+$(".th").click(function() {
+  $(".th").removeClass("sortSelect");
+  $(this).addClass("sortSelect");
+  if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
+  else if ($(this).hasClass("sortSelect")) { $(this).addClass("toggled"); var sorted ="descend"; } 
+  tableSort("#events",null,data,$(this).attr("data"),sorted);
+});
+});
 
 });
 });
