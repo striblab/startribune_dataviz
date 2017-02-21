@@ -62,7 +62,7 @@
     button {
         font-family: "Open Sans", sans-serif;
         color: #000000;
-        font-size: small;
+        font-size: medium;
         background: #9EE384;
         padding: 3px;
         border: solid #000000 0px;
@@ -95,7 +95,9 @@
     }
     
     .legend {
-        padding-top: 3px;
+        padding: 3px;
+        display: inline-block;
+        font-size: 18px
     }
     
     .rectangles {
@@ -117,7 +119,10 @@
         border: 1px solid black;
     }
     .footnote {
-        font-size: x-small;
+        font-size: small;
+    }
+    .colHide {
+
     }
     
     @media only screen and (max-width: 800px) {
@@ -137,25 +142,28 @@
     
     @media only screen and (max-width: 500px) {
         table {
-            font-size: 30%;
+            font-size: 95%;
             width: 500px;
         }
         body {
             width: 500px;
         }
         button {
-            font-size: 60%;
+            font-size: 100%;
             padding: 1px;
         }
         h2 {
-            font-size: 75%;
+            font-size: 95%;
         }
         .legend {
-            font-size: 75%;
+            font-size: 100%;
         }
         .rectangles {
             width: 7px;
             height: 7px;
+        }
+        .colHide {
+            display: none;
         }
     }
     </style>
@@ -175,7 +183,7 @@
 
     <div id="title">
         <h2> Diversity among Division I college men's basketball coaches</h2>
-        <p id>Explore the racial makeup of coaches in the six largest confernces since 1980. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or not white. Click on the name of a conference to change which schools are displayed.</p>
+        <p id>Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or not white. Click on the name of a conference to change which schools are displayed.</p>
         <div id="button-wrapper">
             <button onclick="updateBigTen()">Big Ten</button>
             <button onclick="updateSEC()">SEC</button>
@@ -208,6 +216,11 @@
             .append("th")
             .text(function(d) {
                 return d;
+            })
+            .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
             });
 
         var tablebody = table.append("tbody");
@@ -237,21 +250,37 @@
                     return "";
                 }
             })
-            .attr("class", function(d) {
+            .attr("class", function(d, i) {
                 if (d === "Mike Davis" || d === "Kelvin Sampson" || d === "Brian Ellerbe" || d === "Tommy Amaker" || d === "Randy Ayers" || d === "Jerry Dunn" || d === "Eddie Jordan" || d === "George Raveling" || d === "Clem Haskins" || d === "Tubby Smith" || d === "Ricky Byrdsong" || d === "Bill Cofield" || d === "Stu Jackson") {
-                    return "black";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                 } else if (d === "") {
-                    return "none";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;                    
                 } else if (d === "Indiana" || d === "Maryland" || d === "Michigan" || d === "Mich State" || d === "Ohio State" || d === "Penn State" || d === "Rutgers" || d === "Illinois" || d === "Iowa" || d === "Minnesota" || d === "Nebraska" || d === "Northwestern" || d === "Purdue" || d === "Wisconsin") {
-                    return "school";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;                    
                 } else {
-                    return "white";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;                    
                 }
             })
             .on("mousemove", function(d) {
                 function schoolName(d) {
                     if (d === "Indiana" || d === "Maryland" || d === "Michigan" || d === "Mich State" || d === "Ohio State" || d === "Penn State" || d === "Rutgers" || d === "Illinois" || d === "Iowa" || d === "Minnesota" || d === "Nebraska" || d === "Northwestern" || d === "Purdue" || d === "Wisconsin") {
-                        return "";
+                        return null;
                     } else {
                         return d;
                     }
@@ -298,7 +327,12 @@
                 .append("th")
                 .text(function(d) {
                     return d;
-                });
+                })
+                .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
+            });
 
             var tablebody = table.append("tbody");
 
@@ -327,15 +361,31 @@
                         return "";
                     }
                 })
-                .attr("class", function(d) {
+                .attr("class", function(d, i) {
                     if (d === "Tubby Smith" || d === "Dennis Felton" || d === "Frank Haith" || d === "Wade Houston" || d === "Cuonzo Martin" || d === "Anthony Grant" || d === "Avery Johnson" || d === "Nolan Richardson" || d === "Stan Heath" || d === "Mike Anderson" || d === "Tony Barbee" || d === "Trent Johnson" || d === "Johnny Jones" || d === "Rob Evans" || d === "Rod Barnes" || d === "Rick Ray") {
-                        return "black";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                     } else if (d == "") {
-                        return "none";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;
                     } else if (d === "Florida" || d === "Georgia" || d === "Kentucky" || d === "Missouri" || d === "S. Carolina" || d === "Tennessee" || d === "Vanderbilt" || d === "Alabama" || d === "Arkansas" || d === "Auburn" || d === "LSU" || d === "Mississippi" || d === "Miss. State" || d === "Texas A&M") {
-                        return "school";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;
                     } else {
-                        return "white";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -393,7 +443,12 @@
                 .append("th")
                 .text(function(d) {
                     return d;
-                });
+                })
+                .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
+            });
 
             var tablebody = table.append("tbody");
 
@@ -422,15 +477,31 @@
                         return "";
                     }
                 })
-                .attr("class", function(d) {
+                .attr("class", function(d, i) {
                     if (d === "Al Skinner" || d === "Steve Robinson" || d === "Leonard Hamilton" || d === "Oliver Purnell" || d === "Paul Hewitt" || d === "Frank Haith" || d === "Sidney Lowe" || d === "Dave Leitao" || d === "James Johnson" || d === "Danny Manning" || d === "Bob Wade") {
-                        return "black";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                     } else if (d == "") {
-                        return "none";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;
                     } else if (d === "Boston" || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NCSU" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
-                        return "school";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;
                     } else {
-                        return "white";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -488,7 +559,12 @@
                 .append("th")
                 .text(function(d) {
                     return d;
-                });
+                })
+                .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
+            });
 
             var tablebody = table.append("tbody");
 
@@ -517,15 +593,31 @@
                         return "";
                     }
                 })
-                .attr("class", function(d) {
+                .attr("class", function(d, i) {
                     if (d === "Mike Davis" || d === "Kelvin Sampson" || d === "Brian Ellerbe" || d === "Tommy Amaker" || d === "Randy Ayers" || d === "Jerry Dunn" || d === "Eddie Jordan" || d === "George Raveling" || d === "Clem Haskins" || d === "Tubby Smith" || d === "Ricky Byrdsong" || d === "Bill Cofield" || d === "Stu Jackson") {
-                        return "black";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                     } else if (d == "") {
-                        return "none";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;
                     } else if (d === "Indiana" || d === "Maryland" || d === "Michigan" || d === "Mich State" || d === "Ohio State" || d === "Penn State" || d === "Rutgers" || d === "Illinois" || d === "Iowa" || d === "Minnesota" || d === "Nebraska" || d === "Northwestern" || d === "Purdue" || d === "Wisconsin") {
-                        return "school";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;
                     } else {
-                        return "white";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -583,7 +675,12 @@
                 .append("th")
                 .text(function(d) {
                     return d;
-                });
+                })
+                .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
+            });
 
             var tablebody = table.append("tbody");
 
@@ -612,15 +709,31 @@
                         return "";
                     }
                 })
-                .attr("class", function(d) {
+                .attr("class", function(d, i) {
                     if (d === "Fred Snowden" || d === "Don Newman" || d === "Rob Evans" || d === "Todd Bozeman" || d === "Cuonzo Martin" || d === "Larry Farmer" || d === "Walt Hazzard" || d === "Ernie Kent" || d === "Ritchie McKay" || d === "Craig Robinson" || d === "George Raveling" || d === "Charlie Parker" || d === "Henry Bibby" || d === "Trent Johnson" || d === "Johnny Dawkins" || d === "Lorenzo Romar" || d === "Kelvin Sampson" || d === "Paul Graham") {
-                        return "black";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                     } else if (d == "") {
-                        return "none";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;
                     } else if (d === "Arizona" || d === "ASU" || d === "Berkeley" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "WSU") {
-                        return "school";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;
                     } else {
-                        return "white";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -678,7 +791,12 @@
                 .append("th")
                 .text(function(d) {
                     return d;
-                });
+                })
+                .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
+            });
 
             var tablebody = table.append("tbody");
 
@@ -707,15 +825,31 @@
                         return "";
                     }
                 })
-                .attr("class", function(d) {
+                .attr("class", function(d, i) {
                     if (d === "Al Skinner" || d === "Leonard Hamilton" || d === "Perry Clark" || d === "Ricky Stokes" || d === "Oliver Purnell" || d === "Dave Leitao" || d === "John Thompson Jr." || d === "John Thompson III" || d === "Ed Cooley" || d === "MIke Jarvis" || d === "Norm Roberts" || d === "Tommy Amaker" || d === "Louis Orr" || d === "Gary Waters") {
-                        return "black";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                     } else if (d == "") {
-                        return "none";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;
                     } else if (d === "Boston" || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
-                        return "school";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;
                     } else {
-                        return "white";
+                    var newClass = "";
+                    if (i > 0 && i <= 20) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -773,7 +907,12 @@
                 .append("th")
                 .text(function(d) {
                     return d;
-                });
+                })
+                .attr("class", function(d) {
+                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                    return "colHide";
+                }
+            });
 
             var tablebody = table.append("tbody");
 
@@ -802,15 +941,31 @@
                         return "";
                     }
                 })
-                .attr("class", function(d) {
+                .attr("class", function(d, i) {
                     if (d === "Harry Miller" || d === "Wayne Morgan" || d === "Kelvin Sampson" || d === "Shaka Smart" || d === "Trent Johnson" || d === "Chris Walker" || d === "Tubby Smith" || d === "Mike Anderson" || d === "Frank Haith" || d === "Melvin Watkins") {
-                        return "black";
+                    var newClass = "";
+                    if (i > 0 && i < 5) {
+                        newClass = " colHide";
+                    }
+                    return "black" + newClass;
                     } else if (d == "") {
-                        return "none";
+                    var newClass = "";
+                    if (i > 0 && i < 5) {
+                        newClass = " colHide";
+                    }
+                    return "none" + newClass;
                     } else if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "KSU" || d === "Oklahoma" || d === "OSU" || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska") {
-                        return "school";
+                    var newClass = "";
+                    if (i > 0 && i < 5) {
+                        newClass = " colHide";
+                    }
+                    return "school" + newClass;
                     } else {
-                        return "white";
+                    var newClass = "";
+                    if (i > 0 && i < 5) {
+                        newClass = " colHide";
+                    }
+                    return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
