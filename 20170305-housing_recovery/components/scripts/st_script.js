@@ -191,7 +191,7 @@ map.on('load', function() {
                 [300, "#bd0026"]
             ]
         },
-           'fill-outline-color': 'rgba(255, 255, 255, 0)'
+           'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
      }
    }, 'place-neighbourhood');
 
@@ -221,7 +221,7 @@ map.on('load', function() {
                 [300, "#bd0026"]
             ]
         },
-           'fill-outline-color': 'rgba(255, 255, 255, 0)'
+           'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
      }
    }, 'place-neighbourhood');
 
@@ -339,6 +339,7 @@ function metricLoad(city){
                 },
                 x: {
                     type: 'timeseries',
+                    label: 'Price per square foot over time',
                     tick: {
                         format: '%Y'
                     }
