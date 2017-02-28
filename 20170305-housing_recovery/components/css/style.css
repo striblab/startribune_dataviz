@@ -5380,6 +5380,10 @@ h5 {
   display:none;
 }
 
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass { 
+  display:none !important;
+}
+
 @media only screen and (max-width:900px)  {
 
 #map {

@@ -78,10 +78,13 @@ $(".th").click(function() {
 $(".row").click(function() {
 	$(".row").removeClass("selected");
 	$(this).addClass("selected");
-	var longitude = Number($(this).attr("longitude"));
-	var latitude = Number($(this).attr("latitude"));
-  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 13.5 }); }
-	else { map.flyTo({ center: [longitude, latitude], zoom: 11.5 }); }
+  var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+  var pitch = 100 / random;
+  var bearing = 100 / random;
+	var longitude = $(this).attr("longitude");
+	var latitude = $(this).attr("latitude");
+  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+	else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
 	metricLoad($(this).find(".name").text());
 });
 
@@ -101,7 +104,7 @@ var map = new mapboxgl.Map({
     // maxBounds: llb
 });
 
-// map.addControl(new mapboxgl.NavigationControl());
+map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 
 map.on('load', function() {
@@ -254,7 +257,7 @@ map.on('load', function() {
 });
 
 function reset(){
-	map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8 });
+	map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
 	$('#filter_box').val("");
 	$('.row').show();
 }
@@ -330,7 +333,7 @@ function metricLoad(city){
             },
             axis: {
                 y: {
-                    max: 330,
+                    max: 400,
                     min: 0,
                     padding: {bottom: 0, top: 0},
                     tick: {
