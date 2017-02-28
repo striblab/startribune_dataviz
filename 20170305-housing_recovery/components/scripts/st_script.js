@@ -77,12 +77,15 @@ $(".th").click(function() {
 $(".row").click(function() {
 	$(".row").removeClass("selected");
 	$(this).addClass("selected");
-  var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-  var pitch = 100 / random;
-  var bearing = 100 / random;
+  // var random = Math.floor(Math.random() * 4) + 1;
+  // var span = Math.floor(Math.random() * 100) + -100;
+  // var pitch = span / random;
+  // var bearing = span / random;
+  var pitch = 0;
+  var bearing = 0;
 	var longitude = $(this).attr("longitude");
 	var latitude = $(this).attr("latitude");
-  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
 	else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
 	metricLoad($(this).find(".name").text());
 });
