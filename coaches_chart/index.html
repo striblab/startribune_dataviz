@@ -1,135 +1,39 @@
 <!DOCTYPE html>
-
 <head>
-    <title>All</title>
-    <style>
-    .c3-line {
-        stroke-width: 4px !important;
-    }
-    
-    .c3-circle {
-        r: 0px !important;
-        stroke-width: 0px !important;
-    }
-    
-    .c3-axis-x {
-        stroke-width: .2px !important;
-    }
-    
-    .c3-axis-y {
-        stroke-width: .2px !important;
-    }
-    
-    .c3 text {
-        font-family: "Benton Sans", sans-serif;
-    }
-    .c3-tooltip {
-        -webkit-box-shadow: 0px !important;
-        box-shadow: 0px 0px 0px 0px !important;
-        opacity: 1 !important;        
-    }
-    th {
-        display: none;
-    }
-/*    td.name {
-        display: none;
-    }*/
-    td.value {
-        font-weight: bold;
-    }
-    
-    #button-wrapper {
-        margin: auto;
-        text-align: center;
-        display: block;
-      margin: 20px 0 10px 0;
-    }
-    
-    button {
-        font-family: "Benton Sans", sans-serif;
-        color: #000000;
-        font-size: small;
-        background: #ddd;
-        border-radius:4px;
-        padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 12px;
-      padding-right: 12px;
-        border: 0px;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    button:hover {
-        background: #999;
-        color: #ffffff;
-        cursor:pointer;
-    }
-  
-    button:focus {
-      outline: 0 !important;
-    }
-
-    .noclicky{
-     cursor:default !important;  
-    }
-
-    .active {
-        background: #666;
-        color: #ffffff;
-    }
-      
-    .coachBtn {
-      background-color:#66af50;
-      color:#fff;}
-     
-    .playerBtn {
-      background-color:#bf603c;
-      color:#fff;
-      margin-right:10px;}     
-     
-      
-      
-    #title {
-        text-align: center;
-        font-family: "Benton", sans-serif;
-        font-size: 22px;
-      
-    }
-    #footnote {
-        font-family: "Benton Sans", sans-serif;
-        font-size: x-small;
-        clear: left;
-        padding-left: 2.4%;
-      margin: 12px auto;
-    }  
-    </style>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<title>All</title>
+<style>.c3-line{stroke-width:4px!important;}.c3-circle{r:0px!important;stroke-width:0px!important;}.c3-axis-x{stroke-width:.2px!important;}.c3-axis-y{stroke-width:.2px!important;}.c3 text{font-family:"Benton Sans",sans-serif;}.c3-tooltip{font-family:"Benton Sans",sans-serif;-webkit-box-shadow:0px!important;box-shadow:0px 0px 0px 0px!important;opacity:1!important;}th{display:none;}td.value{font-weight:bold;}.coachKeys{float:left;margin:0px 0 10px 0;padding-top:6px;display:inline-block;font-family:"Benton Sans",sans-serif;vertical-align:middle;font-size:.9em;}.square{float:left;width:.7em;height:1.2em;margin-right:.5em;}#square-coach{background:#BF603C;}#square-player{background:#999999;margin-left:1.5em;}#button-wrapper{margin:auto;text-align:center;display:block;margin:20px 0 20px 45px;}button{font-family:"Benton Sans",sans-serif;color:#000000;font-size:small;background:#ddd;border-radius:4px;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border:0px;text-decoration:none;display:inline-block;}button:hover{background:#999;color:#ffffff;cursor:pointer;}button:focus{outline:0!important;}.noclicky{cursor:default!important;}.active{background:#666;color:#ffffff;}#title{text-align:center;font-family:"Benton",sans-serif;font-size:1.5em;}#intro{text-align:center;font-family:"Benton",sans-serif;font-size:1em;line-height:150%;margin:.5em auto;}#chart{display:block;min-height:410px;}#footnote{display:block;font-family:"Benton Sans",sans-serif;font-size:small;clear:left;padding-left:2.4%;margin:12px auto;color:#757575;}@media only screen and (max-width: 769px) {#button-wrapper{float:left;width:100%;margin:0;}.keyBlock{float:left;width:100%;margin-bottom:.5em;margin-left:30%;}.coachKeys{font-size:.9em;}.btnBlock{float:left;width:100%;margin-bottom:0em;}button{margin-bottom:.5em;}#chart{display:block;min-height:410px;}}@media only screen and (max-width: 500px) {body{width:100%;margin:10px auto;}#button-wrapper{float:left;width:100%;margin:0;}#square-player{margin-left:1em;}.keyBlock{float:left;width:100%;margin:0 auto .5em auto;}.coachKeys{font-size:.85em;}.btnBlock{float:left;width:100%;margin-bottom:0em;}button{margin-bottom:.5em;}#chart{display:block;min-height:300px;}}</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<meta name="viewport" content="width=device-width">
 </head>
-
 <body>
-    <div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
-    <div id="button-wrapper">
-        <button onclick="" class="coachBtn noclicky">Coaches</button>
-        <button onclick="" class="playerBtn noclicky">Players</button>
-        <button onclick="updateAll()" class="active">All Conferences</button>
-        <button onclick="updateBigTen()">Big Ten</button>
-        <button onclick="updateSEC()">SEC</button>
-        <button onclick="updateACC()">ACC</button>
-        <button onclick="updatePac12()">Pac 12</button>
-        <button onclick="updateBigEast()">Big East</button>
-        <button onclick="updateBig12()">Big 12</button>
-    </div>
-  
-    <div id="chart" style="height:410px;"></div>
-  
-  
-    <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
-
+<div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
+<div id="intro">Diversity is down in the Big Ten and the five other major men's basketball conferences. Explore the trends for each conference over the years. Additionally, the diversity gap between nonwhite coaches and their nonwhite players has been increasing since the early 2000s. For example, in the Big Ten in 2000, the percentage of nonwhite players was about twice the percentage of nonwhite coaches. In 2015, the percentage of nonwhite players was more than triple the percentage of coaches.</div>
+<div id="button-wrapper">
+<div class="keyBlock">
+<div class="coachKeys">
+<div class="square" id="square-coach"></div>Non-white players
+</div>
+<div class="coachKeys">
+<div class="square" id="square-player"></div>Non-white coaches
+</div>
+</div>
+<div class="btnBlock">
+<button onclick="updateAll()" class="active">All Conferences</button>
+<button onclick="updateBigTen()">Big Ten</button>
+<button onclick="updateSEC()">SEC</button>
+<button onclick="updateACC()">ACC</button>
+<button onclick="updatePac12()">Pac 12</button>
+<button onclick="updateBigEast()">Big East</button>
+<button onclick="updateBig12()">Big 12</button>
+</div>
+</div>
+<p style="margin:0;padding:0;">&nbsp;</p>
+<div id="chart"></div>
+<div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
 </body>
 <script>
     $('button').click(function() {
@@ -255,5 +159,4 @@ function updateAll() {
 }
 </script>
 </body>
-
 </html>
