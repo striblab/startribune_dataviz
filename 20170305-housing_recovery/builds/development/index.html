@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- 414739023 -->
  
 <div id="wrapper">
 
@@ -23,17 +21,17 @@
 
 <div id="reference" class="mobilekill">
 <div id="legendContainer">
-<h5>Housing Recovery Index</h5>
+<h5>Housing Market Index</h5>
 <div id="quantize">
 <span class='legend'>
   <nav class='legend clearfix'>
-    <span style='background:#fff;'>Less</span>
-    <span style='background:#ffffb2;'></span>
-    <span style='background:#fecc5c;'></span>
-    <span style='background:#fd8d3c;'></span>
-    <span style='background:#f03b20;'></span>
-    <span style='background:#bd0026;'></span>
-    <span style='background:#fff;'>More</span>
+    <span style='background:#fff;'>Cooler</span>
+    <span style='background:#fcbba1;'></span>
+    <span style='background:#fc9272;'></span>
+    <span style='background:#fb6a4a;'></span>
+    <span style='background:#de2d26;'></span>
+    <span style='background:#a50f15;'></span>
+    <span style='background:#fff;'>Hotter</span>
     <span style='background:#fff;'></span>
 <!--     <span style='background:#888888;'></span>
     <span style='background:#fff;'></span> -->
@@ -50,9 +48,34 @@
 <div id="metrics">
 <div id="districtName"></div>
 
+<div class="metricRow" id="indexRow">
+  <div style="text-align:left; text-decoration:underline;">Index components</div>
+  <div class="smallBreak"></div>
+
+  <div class="metricCol">
+    <div class="metric" id="days"></div>
+    <div class="metricLabel">avg market days</div>
+  </div>
+  <div class="metricCol">
+    <div class="metric" id="change">0%</div>
+    <div class="metricLabel">change in price per sqft*</div>
+  </div>
+  <div class="metricCol">
+    <div class="metric" id="distressed">0%</div>
+    <div class="metricLabel">distressed</div>
+  </div>
+  <div class="metricCol">
+    <div class="metric" id="ppsf">0%</div>
+    <div class="metricLabel">% of original price</div>
+  </div>
+</div>
+
 <div class="smallBreak"></div>
 
 <div class="metricRow">
+  <div style="text-align:left; text-decoration:underline;">Characteristics</div>
+  <div class="smallBreak"></div>
+
   <div class="metricCol">
     <div class="metric" id="income"></div>
     <div class="metricLabel">median income</div>
@@ -64,31 +87,10 @@
   <div class="metricCol">
     <div class="metric" id="kids">0%</div>
     <div class="metricLabel">kids</div>
-  </div>
+  </div> 
   <div class="metricCol">
     <div class="metric" id="renters">0%</div>
     <div class="metricLabel">renters</div>
-  </div>
-</div>
-
-<div class="smallBreak"></div>
-
-<div class="metricRow">
-  <div class="metricCol">
-    <div class="metric" id="days"></div>
-    <div class="metricLabel">avg market days</div>
-  </div>
-  <div class="metricCol">
-    <div class="metric" id="change">0%</div>
-    <div class="metricLabel">change from avg</div>
-  </div>
-  <div class="metricCol">
-    <div class="metric" id="distressed">0%</div>
-    <div class="metricLabel">distressed</div>
-  </div>
-  <div class="metricCol">
-    <div class="metric" id="ppsf">0%</div>
-    <div class="metricLabel">price per sqft</div>
   </div>
 </div>
 
@@ -109,6 +111,8 @@
 <div style="margin:5px; clear:both;"></div>
 
 <div class="mobilekill"><span style='background:#888888;'>Gray</span> cities on map not included due to less than 100 sales.</div>
+<div class="smallBreak"></div>
+<div class="mobilekill">*Change between 2016 and the previous four-year average.</div>
 
 </div>
 

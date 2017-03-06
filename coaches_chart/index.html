@@ -1,101 +1,39 @@
 <!DOCTYPE html>
-
 <head>
-    <title>All</title>
-    <style>
-    .c3-line {
-        stroke-width: 4px !important;
-    }
-    
-    .c3-circle {
-        r: 0px !important;
-        stroke-width: 0px !important;
-    }
-    
-    .c3-axis-x {
-        stroke-width: .2px !important;
-    }
-    
-    .c3-axis-y {
-        stroke-width: .2px !important;
-    }
-    
-    .c3 text {
-        font-family: "Open Sans", sans-serif;
-    }
-    .c3-tooltip {
-        -webkit-box-shadow: 0px !important;
-        box-shadow: 0px 0px 0px 0px !important;
-        opacity: 1 !important;        
-    }
-    th {
-        display: none;
-    }
-/*    td.name {
-        display: none;
-    }*/
-    td.value {
-        font-weight: bold;
-    }
-    
-    #button-wrapper {
-        margin: auto;
-        text-align: center;
-        display: block;
-    }
-    
-    button {
-        font-family: "Open Sans", sans-serif;
-        color: #000000;
-        font-size: small;
-        background: #9EE384;
-        padding: 3px;
-        border: 0px;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    button:hover {
-        background: #118241;
-        color: #ffffff;
-    }
-    
-    .active {
-        background: #118241;
-        color: #ffffff;
-    }
-    #title {
-        text-align: center;
-        font-family: "Open Sans", sans-serif;
-        font-size: large;
-    }
-    #footnote {
-        font-family: "Open Sans", sans-serif;
-        font-size: x-small;
-        clear: left;
-        padding-left: 2.4%;
-    }    
-    </style>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<title>All</title>
+<style>.c3-line{stroke-width:4px!important;}.c3-circle{r:0px!important;stroke-width:0px!important;}.c3-axis-x{stroke-width:.2px!important;}.c3-axis-y{stroke-width:.2px!important;}.c3 text{font-family:"Benton Sans",sans-serif;}.c3-tooltip{font-family:"Benton Sans",sans-serif;-webkit-box-shadow:0px!important;box-shadow:0px 0px 0px 0px!important;opacity:1!important;}th{display:none;}td.value{font-weight:bold;}.coachKeys{float:left;margin:0px 0 10px 0;padding-top:6px;display:inline-block;font-family:"Benton Sans",sans-serif;vertical-align:middle;font-size:.9em;}.square{float:left;width:.7em;height:1.2em;margin-right:.5em;}#square-coach{background:#BF603C;}#square-player{background:#999999;margin-left:1.5em;}#button-wrapper{margin:auto;text-align:center;display:block;margin:20px 0 20px 45px;}button{font-family:"Benton Sans",sans-serif;color:#000000;font-size:small;background:#ddd;border-radius:4px;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border:0px;text-decoration:none;display:inline-block;}button:hover{background:#999;color:#ffffff;cursor:pointer;}button:focus{outline:0!important;}.noclicky{cursor:default!important;}.active{background:#666;color:#ffffff;}#title{text-align:center;font-family:"Benton",sans-serif;font-size:1.5em;}#intro{text-align:center;font-family:"Benton",sans-serif;font-size:1em;line-height:150%;margin:.5em auto;}#chart{display:block;min-height:410px;}#footnote{display:block;font-family:"Benton Sans",sans-serif;font-size:small;clear:left;padding-left:2.4%;margin:12px auto;color:#757575;}@media only screen and (max-width: 769px) {#button-wrapper{float:left;width:100%;margin:0;}.keyBlock{float:left;width:100%;margin-bottom:.5em;margin-left:30%;}.coachKeys{font-size:.9em;}.btnBlock{float:left;width:100%;margin-bottom:0em;}button{margin-bottom:.5em;}#chart{display:block;min-height:410px;}}@media only screen and (max-width: 500px) {body{width:100%;margin:10px auto;}#button-wrapper{float:left;width:100%;margin:0;}#square-player{margin-left:1em;}.keyBlock{float:left;width:100%;margin:0 auto .5em auto;}.coachKeys{font-size:.85em;}.btnBlock{float:left;width:100%;margin-bottom:0em;}button{margin-bottom:.5em;}#chart{display:block;min-height:300px;}}</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<meta name="viewport" content="width=device-width">
 </head>
-
 <body>
-    <div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
-    <div id="chart" style="height:410px;"></div>
-    <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
-    <div id="button-wrapper">
-        <button onclick="updateAll()">All Conferences</button>
-        <button onclick="updateBigTen()">Big Ten</button>
-        <button onclick="updateSEC()">SEC</button>
-        <button onclick="updateACC()">ACC</button>
-        <button onclick="updatePac12()">Pac 12</button>
-        <button onclick="updateBigEast()">Big East</button>
-        <button onclick="updateBig12()">Big 12</button>
-    </div>
+<div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
+<div id="intro">Diversity is down in the Big Ten and the five other major men's basketball conferences. Explore the trends for each conference over the years. Additionally, the diversity gap between nonwhite coaches and their nonwhite players has been increasing since the early 2000s. For example, in the Big Ten in 2000, the percentage of nonwhite players was about twice the percentage of nonwhite coaches. In 2015, the percentage of nonwhite players was more than triple the percentage of coaches.</div>
+<div id="button-wrapper">
+<div class="keyBlock">
+<div class="coachKeys">
+<div class="square" id="square-coach"></div>Non-white players
+</div>
+<div class="coachKeys">
+<div class="square" id="square-player"></div>Non-white coaches
+</div>
+</div>
+<div class="btnBlock">
+<button onclick="updateAll()" class="active">All Conferences</button>
+<button onclick="updateBigTen()">Big Ten</button>
+<button onclick="updateSEC()">SEC</button>
+<button onclick="updateACC()">ACC</button>
+<button onclick="updatePac12()">Pac 12</button>
+<button onclick="updateBigEast()">Big East</button>
+<button onclick="updateBig12()">Big 12</button>
+</div>
+</div>
+<p style="margin:0;padding:0;">&nbsp;</p>
+<div id="chart"></div>
+<div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
 </body>
 <script>
     $('button').click(function() {
@@ -112,10 +50,11 @@ var chart = c3.generate({
         },
         columns: [
             ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.09, 0.11, 0.07, 0.07, 0.07, 0.07, 0.09, 0.11, 0.11, 0.11, 0.13, 0.16, 0.16, 0.24, 0.22, 0.17, 0.18, 0.25, 0.28, 0.23, 0.30, 0.32, 0.30, 0.32, 0.32, 0.32, 0.29, 0.28, 0.25, 0.23, 0.20, 0.18, 0.24, 0.23, 0.19, 0.21, 0.17],
+            ['Coaches', 0.070175439, 0.087719298, 0.051724138, 0.051724138, 0.051724138, 0.051724138, 0.068965517, 0.103448276, 0.103448276, 0.103448276, 0.120689655, 0.129032258, 0.126984127, 0.19047619, 0.206349206, 0.169230769, 0.194029851, 0.253731343, 0.28358209, 0.23880597, 0.308823529, 0.323529412, 0.308823529, 0.338235294, 0.323529412, 0.328571429, 0.285714286, 0.285714286, 0.257142857, 0.242857143, 0.214285714, 0.194444444, 0.25, 0.246575342, 0.213333333, 0.226666667, 0.173333333],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.667075465, 0.687755558, 0.685016748, 0.690217513, 0.69336503, 0.700658524, 0.710914811, 0.68107788, 0.687217463, 0.669573574, 0.708972474, 0.716081633, 0.713468716, 0.706442103, 0.703083345, 0.725951955, 0.736391367]
-        ]
+        ],
+        type: 'bar'
     },
     axis: {
         x: {
@@ -130,6 +69,9 @@ var chart = c3.generate({
     color: {
         pattern: ["#66AF50", "#BF603C"]
     },
+    legend: {
+        show: false
+    },
     tooltip: {
         grouped: false,
         value: function(value, ratio, id) {
@@ -143,7 +85,7 @@ function updateBigTen() {
     chart.load({
         columns: [
             ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.10, 0.10, 0.00, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.20, 0.18, 0.18, 0.36, 0.36, 0.27, 0.36, 0.27, 0.27, 0.18, 0.27, 0.27, 0.27, 0.27, 0.18, 0.18, 0.18, 0.27, 0.09, 0.09, 0.09, 0.08, 0.08, 0.00, 0.07, 0.07, 0.00],
+            ['Coaches', 0.1, 0.1, 0, 0, 0.1, 0.1, 0.2, 0.1, 0.1, 0.1, 0.2, 0.18, 0.27, 0.36, 0.36, 0.27, 0.36, 0.36, 0.27, 0.18, 0.27, 0.27, 0.27, 0.27, 0.18, 0.18, 0.18, 0.18, 0.09, 0.09, 0.09, 0.08, 0.08, 0, 0.07, 0.07, 0],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.555555556, 0.51875, 0.547619048, 0.581005587, 0.596385542, 0.649425287, 0.658959538, 0.604790419, 0.548780488, 0.538922156, 0.562130178, 0.538922156, 0.566137566, 0.602094241, 0.619047619, 0.650717703, 0.674311927]            
         ]
@@ -154,7 +96,7 @@ function updateSEC() {
     chart.load({
         columns: [
             ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.1, 0.2, 0.2, 0.3, 0.2, 0.2, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.2, 0.2, 0.3, 0.3, 0.4, 0.5, 0.3, 0.2, 0.2],
+            ['Coaches',0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1, 0.1, 0.181818182, 0.166666667, 0.25, 0.166666667, 0.166666667, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.333333333, 0.333333333, 0.333333333, 0.25, 0.166666667, 0.166666667, 0.25, 0.333333333, 0.5, 0.571428571, 0.357142857, 0.285714286, 0.285714286],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.716763006, 0.767955801, 0.748663102, 0.746031746, 0.71657754, 0.747311828, 0.777777778, 0.702247191, 0.703296703, 0.703703704, 0.744565217, 0.766304348, 0.772972973, 0.76635514, 0.737327189, 0.809954751, 0.780821918]            
         ]
@@ -176,7 +118,7 @@ function updatePac12() {
     chart.load({
         columns: [
             ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.2, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.3, 0.2, 0.1, 0.3, 0.3, 0.3, 0.5, 0.5, 0.4, 0.5, 0.4, 0.4, 0.3, 0.3, 0.4, 0.4, 0.3, 0.25, 0.25, 0.25, 0.25, 0.333333333, 0.333333333],
+            ['Coaches', 0.2, 0.3, 0.2, 0.1, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.3, 0.2, 0.2, 0.1, 0.3, 0.3, 0.3, 0.5, 0.5, 0.4, 0.5, 0.4, 0.4, 0.3, 0.3, 0.4, 0.4, 0.3, 0.25, 0.25, 0.25, 0.33, 0.333333333, 0.25],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.605633803, 0.715277778, 0.673076923, 0.68125, 0.694267516, 0.679012346, 0.669014085, 0.689440994, 0.6875, 0.679487179, 0.721518987, 0.766871166, 0.693877551, 0.715736041, 0.709359606, 0.689119171, 0.763157895]
         ]
@@ -187,7 +129,7 @@ function updateBigEast() {
     chart.load({
         columns: [
             ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.14, 0.14, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.22, 0.22, 0.22, 0.22, 0.17, 0.17, 0.33, 0.42, 0.33, 0.38, 0.46, 0.46, 0.38, 0.45, 0.31, 0.15, 0.15, 0.15, 0.15, 0.15, 0.23, 0.25, 0.30, 0.30, 0.30, 0.30],
+            ['Coaches', 0.111111, 0.111111, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1818, 0.1818, 0.1818, 0.1818, 0.1538, 0.1538, 0.3846, 0.307, 0.357, 0.42857, 0.42857, 0.357, 0.357, 0.41667, 0.307, 0.1538, 0.1538, 0.1538, 0.1538, 0.1538, 0.2307, 0.25, 0.3, 0.3, 0.3, 0.3],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.76419214, 0.771186441, 0.794642857, 0.736625514, 0.759493671, 0.732793522, 0.727272727, 0.731707317, 0.768292683, 0.770491803, 0.780991736, 0.76984127, 0.793522267, 0.698717949, 0.677018634, 0.718120805, 0.714285714]
         ]
@@ -197,8 +139,8 @@ function updateBigEast() {
 function updateBig12() {
     chart.load({
         columns: [
-            ["cat1", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.18, 0.18, 0.27, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.18, 0.27, 0.09, 0.09, 0.09, 0.09, 0.09, 0.20, 0.20, 0.20, 0.30, 0.10],
+            ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+            ['Coaches', 0, 0, 0, 0, 0, 0, 0, 0.111111111, 0.111111111, 0.111111111, 0.111111111, 0, 0, 0, 0.222222222, 0.222222222, 0.25, 0.25, 0.333333333, 0.25, 0.25, 0.25, 0.25, 0.33, 0.25, 0.25, 0.25, 0.166666667, 0.166666667, 0.166666667, 0.166666667, 0.2, 0.2, 0.2, 0.2, 0.3, 0.2],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.666666667, 0.618556701, 0.625668449, 0.630434783, 0.651041667, 0.663265306, 0.70212766, 0.671794872, 0.680628272, 0.647058824, 0.723958333, 0.735449735, 0.77124183, 0.74522293, 0.754716981, 0.740963855, 0.772727273]
         ]
@@ -209,7 +151,7 @@ function updateAll() {
     chart.load({
         columns: [
             ["cat1", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016"],
-            ['Coaches', 0.09, 0.11, 0.07, 0.07, 0.07, 0.07, 0.09, 0.11, 0.11, 0.11, 0.13, 0.16, 0.16, 0.24, 0.22, 0.17, 0.18, 0.25, 0.28, 0.23, 0.30, 0.32, 0.30, 0.32, 0.32, 0.32, 0.29, 0.28, 0.25, 0.23, 0.20, 0.18, 0.24, 0.23, 0.19, 0.21, 0.17],
+            ['Coaches', 0.070175439, 0.087719298, 0.051724138, 0.051724138, 0.051724138, 0.051724138, 0.068965517, 0.103448276, 0.103448276, 0.103448276, 0.120689655, 0.129032258, 0.126984127, 0.19047619, 0.206349206, 0.169230769, 0.194029851, 0.253731343, 0.28358209, 0.23880597, 0.308823529, 0.323529412, 0.308823529, 0.338235294, 0.323529412, 0.328571429, 0.285714286, 0.285714286, 0.257142857, 0.242857143, 0.214285714, 0.194444444, 0.25, 0.246575342, 0.213333333, 0.226666667, 0.173333333],
             ["cat2", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
             ["Players", 0.667075465, 0.687755558, 0.685016748, 0.690217513, 0.69336503, 0.700658524, 0.710914811, 0.68107788, 0.687217463, 0.669573574, 0.708972474, 0.716081633, 0.713468716, 0.706442103, 0.703083345, 0.725951955, 0.736391367]
         ]
@@ -217,5 +159,5 @@ function updateAll() {
 }
 </script>
 </body>
-
+</html>
 </html>

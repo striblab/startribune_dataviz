@@ -1,208 +1,51 @@
 <!DOCTYPE html>
-
 <head>
-    <title>All conferences</title>
-    <style>
-    .white {
-        background: lightgrey;
-    }
-    
-    .black {
-        background: darkgrey;
-    }
-    
-    .school {
-        background: rgba(102, 175, 80, .6);
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-    }
-    
-    .none {
-        background: #F7F7F7
-    }
-    
-    .tooltip {
-        font-family: 'Roboto Slab', serif;
-        position: absolute;
-        width: auto;
-        height: auto;
-        font-size: small;
-        background: white;
-        color: black;
-        padding: 2px;
-        text-align: center;
-    }
-    
-    #container {
-        margin: auto;
-        display: block;
-    }
-    
-    body {
-        width: 1100px;
-        margin-right: auto;
-        margin-left: auto;
-        font-family: "Open Sans", sans-serif;
-    }
-    
-    td {
-        opacity: .8;
-    }
-    
-    th {
-        font-weight: bold;
-    }
-    
-    #button-wrapper {
-        margin: auto;
-        text-align: center;
-        display: block;
-    }
-    
-    button {
-        font-family: "Open Sans", sans-serif;
-        color: #000000;
-        font-size: medium;
-        background: #9EE384;
-        padding: 3px;
-        border: solid #000000 0px;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    button:hover {
-        background: #118241;
-        text-decoration: none;
-        color: #ffffff;
-    }
-    
-    button:active {
-        background: #545454;
-        text-decoration: none;
-        color: #ffffff;
-    }
-    
-    svg {
-        display: block;
-        margin: auto;
-    }
-    
-    #title {
-        text-align: center;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .legend {
-        padding: 3px;
-        display: inline-block;
-        font-size: 18px
-    }
-    
-    .rectangles {
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-    }
-    
-    #rectangle-white {
-        background: lightgrey;
-    }
-    
-    #rectangle-black {
-        background: darkgrey;
-    }
-    
-    #rectangle-none {
-        background: white;
-        border: 1px solid black;
-    }
-    .footnote {
-        font-size: small;
-    }
-    .colHide {
-
-    }
-    
-    @media only screen and (max-width: 800px) {
-        body {
-            font-size: 75%;
-            width: 800px;
-        }
-        button {
-            font-size: 75%;
-            padding: 1px;
-        }
-        .rectangles {
-            width: 12px;
-            height: 12px;
-        }
-    }
-    
-    @media only screen and (max-width: 500px) {
-        table {
-            font-size: 95%;
-            width: 500px;
-        }
-        body {
-            width: 500px;
-        }
-        button {
-            font-size: 100%;
-            padding: 1px;
-        }
-        h2 {
-            font-size: 95%;
-        }
-        .legend {
-            font-size: 100%;
-        }
-        .rectangles {
-            width: 7px;
-            height: 7px;
-        }
-        .colHide {
-            display: none;
-        }
-    }
-    </style>
-    <meta name="viewport" content="width=device-width">
-    <!--Libraries-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script type="https://cdnjs.com/libraries/d3-legend"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<title>All conferences</title>
+<style>.coachOuter{width:100%;overflow-x:auto;}.school{background:rgba(102,175,80,.6);font-family:'Benton Sans',sans-serif;text-align:left;background:none;padding-right:10px;white-space:nowrap;}.tooltip{font-family:'Benton Sans',serif;position:absolute;width:auto;height:auto;font-size:small;background:white;color:black;padding:2px;text-align:center;}#container{width:100%;margin:auto;display:block;min-height:540px;}body{margin-right:auto;margin-left:auto;font-family:"Benton Sans",sans-serif;}td{opacity:.8;}.black{background:#BF603C;border-radius:12px;}.white{background:#efd7c9;border-radius:12px;}.none{background:#ffffff;}th{text-align:left;font-weight:bold;font-size:.75em;min-width:18px;}.coachKeys{float:left;margin:0px 0 10px 0;padding-top:6px;display:inline-block;font-family:"Benton Sans",sans-serif;vertical-align:middle;font-size:.9em;}.square{float:left;width:1.2em;height:1.2em;margin-right:.5em;border-radius:.6em;}#square-black{background:#BF603C;}#square-white{background:#efd7c9;margin-left:1.5em;}#square-none{background:#fff;margin-left:1.5em;width:1.1em;height:1.1em;border:1px solid #999;}#button-wrapper{float:left;width:100%;margin:auto;text-align:center;display:block;margin:20px 0 20px 0px;}button{font-family:"Benton Sans",sans-serif;color:#000000;font-size:small;background:#ddd;border-radius:4px;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border:0px;text-decoration:none;display:inline-block;}button:hover{background:#999;color:#ffffff;}.active{background:#666;color:#ffffff;}svg{display:block;margin:auto;}#title{text-align:center;font-family:"Benton",sans-serif;font-weight:normal;font-size:1.5em;width:100%;margin-left:auto;margin-right:auto;}#intro{text-align:center;font-family:"Benton",sans-serif;font-size:1em;line-height:150%;margin:.5em auto;}.legend{float:left;padding-top:3px;width:40%;margin:10px 0 10px 0;padding:3px;display:inline-block;font-size:16px}.rectangles{display:inline-block;width:18px;height:18px;}#rectangle-white{background:#efd7c9;border-radius:12px;}#rectangle-black{background:#d69a7f;border-radius:12px;}#rectangle-none{background:white;border:1px solid #999;}.footnote{font-size:small;margin:20px auto;color:#757575;}.colHide{}#byline{font-size:x-small;}#odd{color:white;}p.mobileComment{display:none;}@media only screen and (max-width: 758px) {body{font-size:85%;}button{font-family:"Benton Sans",sans-serif;color:#000000;font-size:small;background:#ddd;border-radius:4px;padding-top:6px;padding-bottom:6px;padding-left:10px;padding-right:10px;border:0px;text-decoration:none;display:inline-block;}th{text-align:left;font-weight:bold;font-size:.4em;min-width:11px;}.rectangles{width:12px;height:12px;}p.mobileComment{display:none;}}@media only screen and (max-width: 600px) {table{width:100%;}body{font-size:1em;}h2{font-size:95%;}.legend{font-size:100%;}#container{min-height:420px;}.rectangles{width:7px;height:7px;}.colHide{display:none;}th{font-family:Arial Narrow,Arial,sans-serif;text-align:left;font-weight:bold;font-size:.8em;min-width:1.5em;}#button-wrapper{float:left;width:100%;margin:0;}#square-player{margin-left:1em;}.keyBlock{float:left;width:100%;margin:0 auto .5em auto;}.coachKeys{font-size:.85em;font-size:.6em;}.btnBlock{float:left;width:100%;margin-bottom:1em;}button{margin-bottom:.5em;font-size:.6em;padding-left:8px;padding-right:8px;}#chart{display:block;min-height:300px;}p.mobileComment{display:block;font-size:.7em;}}</style>
+<meta name="viewport" content="width=device-width">
+ 
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script type="https://cdnjs.com/libraries/d3-legend"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-
 <body>
-
-    <div id="title">
-        <h2> Diversity among Division I college men's basketball coaches</h2>
-        <p id>Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or not white. Click on the name of a conference to change which schools are displayed.</p>
-        <div id="button-wrapper">
-            <button onclick="updateBigTen()">Big Ten</button>
-            <button onclick="updateSEC()">SEC</button>
-            <button onclick="updateACC()">ACC</button>
-            <button onclick="updatePac12()">Pac 12</button>
-            <button onclick="updateBigEast()">Big East</button>
-            <button onclick="updateBig12()">Big 12</button>
-        </div>
-        <div class="legend">
-            <div class="rectangles" id="rectangle-black"></div> Not white
-            <div class="rectangles" id="rectangle-white"></div> White
-            <div class="rectangles" id="rectangle-none"></div> School not in conference
-        </div>
-    </div>
-
-    <div id="container"></div>
-
-    <div class="footnote">Each column includes the schools that were in the conferences for that year.</div>
-    <script>
+<div class="coachOuter">
+<div id="title">Diversity among Division I men's basketball coaches</div>
+<div id="intro">Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or nonwhite. Click on the name of a conference to change which schools are displayed.</div>
+<div id="button-wrapper">
+<div class="keyBlock">
+<div class="coachKeys">
+<div class="square" id="square-black"></div>Non-white</div>
+<div class="coachKeys">
+<div class="square" id="square-white"></div>White</div>
+<div class="coachKeys">
+<div class="square" id="square-none"></div>School not in conference</div>
+</div>
+<div class="btnBlock">
+<button onclick="updateBigTen()" class="active">Big Ten</button>
+<button onclick="updateSEC()">SEC</button>
+<button onclick="updateACC()">ACC</button>
+<button onclick="updatePac12()">Pac 12</button>
+<button onclick="updateBigEast()">Big East</button>
+<button onclick="updateBig12()">Big 12</button>
+</div>
+</div>
+<p class="mobileComment">Swipe right to see entire chart</p>
+<div id="container"></div>
+<div class="footnote">Each column includes the schools that were in the conferences for that year. Each year represents the year the season began. For example, the column marked '80 represents the 1980-1981 season. Schools in the Big 8, which became the Big 12 in 1996, are included under the Big 12. Graphic by Ethan Nelson, a University of Minnesota student reporter on assignment for Star Tribune.</div>
+</div>
+<script>
+    $('button').click(function() {
+        $('button').removeClass('active')
+        $(this).addClass('active');
+    })
+    </script>
+<script>
     d3.csv("data/bigTen.csv", function(error, data) {
 
         var table = d3.select("#container")
@@ -220,6 +63,11 @@
             .attr("class", function(d) {
                 if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
                     return "colHide";
+                }
+            })
+            .attr("id", function(d) {
+                if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                    return "odd"
                 }
             });
 
@@ -262,19 +110,19 @@
                     if (i > 0 && i <= 20) {
                         newClass = " colHide";
                     }
-                    return "none" + newClass;                    
+                    return "none" + newClass;
                 } else if (d === "Indiana" || d === "Maryland" || d === "Michigan" || d === "Mich State" || d === "Ohio State" || d === "Penn State" || d === "Rutgers" || d === "Illinois" || d === "Iowa" || d === "Minnesota" || d === "Nebraska" || d === "Northwestern" || d === "Purdue" || d === "Wisconsin") {
                     var newClass = "";
                     if (i > 0 && i <= 20) {
                         newClass = " colHide";
                     }
-                    return "school" + newClass;                    
+                    return "school" + newClass;
                 } else {
                     var newClass = "";
                     if (i > 0 && i <= 20) {
                         newClass = " colHide";
                     }
-                    return "white" + newClass;                    
+                    return "white" + newClass;
                 }
             })
             .on("mousemove", function(d) {
@@ -329,10 +177,15 @@
                     return d;
                 })
                 .attr("class", function(d) {
-                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
-                    return "colHide";
-                }
-            });
+                    if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                        return "colHide";
+                    }
+                })
+                .attr("id", function(d) {
+                    if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                        return "odd"
+                    }
+                });
 
             var tablebody = table.append("tbody");
 
@@ -362,30 +215,30 @@
                     }
                 })
                 .attr("class", function(d, i) {
-                    if (d === "Tubby Smith" || d === "Dennis Felton" || d === "Frank Haith" || d === "Wade Houston" || d === "Cuonzo Martin" || d === "Anthony Grant" || d === "Avery Johnson" || d === "Nolan Richardson" || d === "Stan Heath" || d === "Mike Anderson" || d === "Tony Barbee" || d === "Trent Johnson" || d === "Johnny Jones" || d === "Rob Evans" || d === "Rod Barnes" || d === "Rick Ray") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "black" + newClass;
+                    if (d === "Tubby Smith" || d === "Dennis Felton" || d === "Frank Haith" || d === "Wade Houston" || d === "Cuonzo Martin" || d === "Anthony Grant" || d === "Avery Johnson" || d === "Nolan Richardson" || d === "Stan Heath" || d === "Mike Anderson" || d === "Tony Barbee" || d === "Trent Johnson" || d === "Johnny Jones" || d === "Rob Evans" || d === "Rod Barnes" || d === "Rick Ray" ||d === "Frank Martin") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "black" + newClass;
                     } else if (d == "") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "none" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "none" + newClass;
                     } else if (d === "Florida" || d === "Georgia" || d === "Kentucky" || d === "Missouri" || d === "S. Carolina" || d === "Tennessee" || d === "Vanderbilt" || d === "Alabama" || d === "Arkansas" || d === "Auburn" || d === "LSU" || d === "Mississippi" || d === "Miss. State" || d === "Texas A&M") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "school" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "school" + newClass;
                     } else {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "white" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -445,10 +298,15 @@
                     return d;
                 })
                 .attr("class", function(d) {
-                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
-                    return "colHide";
-                }
-            });
+                    if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                        return "colHide";
+                    }
+                })
+                .attr("id", function(d) {
+                    if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                        return "odd"
+                    }
+                });
 
             var tablebody = table.append("tbody");
 
@@ -471,7 +329,7 @@
                 .append("td")
                 .style("fill-opacity", ".8")
                 .text(function(d) {
-                    if (d === "Boston" || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NCSU" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
+                    if (d === "Bos. Col." || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NC State" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
                         return d;
                     } else {
                         return "";
@@ -479,34 +337,34 @@
                 })
                 .attr("class", function(d, i) {
                     if (d === "Al Skinner" || d === "Steve Robinson" || d === "Leonard Hamilton" || d === "Oliver Purnell" || d === "Paul Hewitt" || d === "Frank Haith" || d === "Sidney Lowe" || d === "Dave Leitao" || d === "James Johnson" || d === "Danny Manning" || d === "Bob Wade") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "black" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "black" + newClass;
                     } else if (d == "") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "none" + newClass;
-                    } else if (d === "Boston" || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NCSU" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "school" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "none" + newClass;
+                    } else if (d === "Bos. Col." || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NC State" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "school" + newClass;
                     } else {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "white" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
                     function schoolName() {
-                        if (d === "Boston" || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NCSU" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
+                        if (d === "Bos. Col." || d === "FSU" || d === "Clemson" || d === "Duke" || d === "GA Tech" || d === "Louisville" || d === "N. Carolina" || d === "Miami" || d === "NC State" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "Virginia" || d === "VA Tech" || d === "Wake Forest" || d === "Maryland") {
                             return "";
                         } else {
                             return d;
@@ -561,10 +419,15 @@
                     return d;
                 })
                 .attr("class", function(d) {
-                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
-                    return "colHide";
-                }
-            });
+                    if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                        return "colHide";
+                    }
+                })
+                .attr("id", function(d) {
+                    if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                        return "odd"
+                    }
+                });
 
             var tablebody = table.append("tbody");
 
@@ -595,29 +458,29 @@
                 })
                 .attr("class", function(d, i) {
                     if (d === "Mike Davis" || d === "Kelvin Sampson" || d === "Brian Ellerbe" || d === "Tommy Amaker" || d === "Randy Ayers" || d === "Jerry Dunn" || d === "Eddie Jordan" || d === "George Raveling" || d === "Clem Haskins" || d === "Tubby Smith" || d === "Ricky Byrdsong" || d === "Bill Cofield" || d === "Stu Jackson") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "black" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "black" + newClass;
                     } else if (d == "") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "none" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "none" + newClass;
                     } else if (d === "Indiana" || d === "Maryland" || d === "Michigan" || d === "Mich State" || d === "Ohio State" || d === "Penn State" || d === "Rutgers" || d === "Illinois" || d === "Iowa" || d === "Minnesota" || d === "Nebraska" || d === "Northwestern" || d === "Purdue" || d === "Wisconsin") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "school" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "school" + newClass;
                     } else {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "white" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
@@ -677,10 +540,15 @@
                     return d;
                 })
                 .attr("class", function(d) {
-                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
-                    return "colHide";
-                }
-            });
+                    if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                        return "colHide";
+                    }
+                })
+                .attr("id", function(d) {
+                    if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                        return "odd"
+                    }
+                });
 
             var tablebody = table.append("tbody");
 
@@ -703,7 +571,7 @@
                 .append("td")
                 .style("fill-opacity", ".8")
                 .text(function(d) {
-                    if (d === "Arizona" || d === "ASU" || d === "Berkeley" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "WSU") {
+                    if (d === "Arizona" || d === "ASU" || d === "Cal" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "Wash. St.") {
                         return d;
                     } else {
                         return "";
@@ -711,34 +579,34 @@
                 })
                 .attr("class", function(d, i) {
                     if (d === "Fred Snowden" || d === "Don Newman" || d === "Rob Evans" || d === "Todd Bozeman" || d === "Cuonzo Martin" || d === "Larry Farmer" || d === "Walt Hazzard" || d === "Ernie Kent" || d === "Ritchie McKay" || d === "Craig Robinson" || d === "George Raveling" || d === "Charlie Parker" || d === "Henry Bibby" || d === "Trent Johnson" || d === "Johnny Dawkins" || d === "Lorenzo Romar" || d === "Kelvin Sampson" || d === "Paul Graham") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "black" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "black" + newClass;
                     } else if (d == "") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "none" + newClass;
-                    } else if (d === "Arizona" || d === "ASU" || d === "Berkeley" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "WSU") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "school" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "none" + newClass;
+                    } else if (d === "Arizona" || d === "ASU" || d === "Cal" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "Wash. St.") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "school" + newClass;
                     } else {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "white" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
                     function schoolName() {
-                        if (d === "Arizona" || d === "ASU" || d === "Berkeley" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "WSU") {
+                        if (d === "Arizona" || d === "ASU" || d === "Cal" || d === "UCLA" || d === "Colorado" || d === "Oregon" || d === "Oregon St." || d === "USC" || d === "Stanford" || d === "Utah" || d === "Washington" || d === "Wash. St.") {
                             return "";
                         } else {
                             return d;
@@ -793,10 +661,15 @@
                     return d;
                 })
                 .attr("class", function(d) {
-                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
-                    return "colHide";
-                }
-            });
+                    if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                        return "colHide";
+                    }
+                })
+                .attr("id", function(d) {
+                    if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                        return "odd"
+                    }
+                });
 
             var tablebody = table.append("tbody");
 
@@ -819,42 +692,42 @@
                 .append("td")
                 .style("fill-opacity", ".8")
                 .text(function(d) {
-                    if (d === "Boston" || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
+                    if (d === "Bos. Col." || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
                         return d;
                     } else {
                         return "";
                     }
                 })
                 .attr("class", function(d, i) {
-                    if (d === "Al Skinner" || d === "Leonard Hamilton" || d === "Perry Clark" || d === "Ricky Stokes" || d === "Oliver Purnell" || d === "Dave Leitao" || d === "John Thompson Jr." || d === "John Thompson III" || d === "Ed Cooley" || d === "MIke Jarvis" || d === "Norm Roberts" || d === "Tommy Amaker" || d === "Louis Orr" || d === "Gary Waters") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "black" + newClass;
+                    if (d === "Al Skinner" || d === "Leonard Hamilton" || d === "Perry Clark" || d === "Ricky Stokes" || d === "Oliver Purnell" || d === "Dave Leitao" || d === "John Thompson Jr." || d === "John Thompson III" || d === "Ed Cooley" || d === "Mike Jarvis" || d === "Norm Roberts" || d === "Tommy Amaker" || d === "Louis Orr" || d === "Gary Waters") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "black" + newClass;
                     } else if (d == "") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "none" + newClass;
-                    } else if (d === "Boston" || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "school" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "none" + newClass;
+                    } else if (d === "Bos. Col." || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "school" + newClass;
                     } else {
-                    var newClass = "";
-                    if (i > 0 && i <= 20) {
-                        newClass = " colHide";
-                    }
-                    return "white" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
                     function schoolName() {
-                        if (d === "Boston" || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
+                        if (d === "Bos. Col." || d === "Louisville" || d === "Miami" || d === "Notre Dame" || d === "Pittsburgh" || d === "Syracuse" || d === "VA Tech" || d === "W. Virginia" || d === "Butler" || d === "Creighton" || d === "DePaul" || d === "Georgetown" || d === "Marquette" || d === "Providence" || d === "St. John's" || d === "Seton Hall" || d === "Villanova" || d === "Xavier" || d === "Rutgers") {
                             return "";
                         } else {
                             return d;
@@ -902,17 +775,22 @@
             var header = table.append("thead").append("tr");
             header
                 .selectAll("th")
-                .data(["University", "\'96", "\'97", "\'98", "\'99", "\'00", "\'01", "\'02", "\'03", "\'04", "\'05", "\'06", "\'07", "\'08", "\'09", "\'10", "\'11", "\'12", "\'13", "\'14", "\'15", "\'16"])
+                .data(["University", "\'80", "\'81", "\'82", "\'83", "\'84", "\'85", "\'86", "\'87", "\'88", "\'89", "\'90", "\'91", "\'92", "\'93", "\'94", "\'95", "\'96", "\'97", "\'98", "\'99", "\'00", "\'01", "\'02", "\'03", "\'04", "\'05", "\'06", "\'07", "\'08", "\'09", "\'10", "\'11", "\'12", "\'13", "\'14", "\'15", "\'16"])
                 .enter()
                 .append("th")
                 .text(function(d) {
                     return d;
                 })
                 .attr("class", function(d) {
-                if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
-                    return "colHide";
-                }
-            });
+                    if (d === "\'80" || d === "\'81" || d === "\'82" || d === "\'83" || d === "\'84" || d === "\'85" || d === "\'86" || d === "\'87" || d === "\'88" || d === "\'89" || d === "\'90" || d === "\'91" || d === "\'92" || d === "\'93" || d === "\'94" || d === "\'95" || d === "\'96" || d === "\'97" || d === "\'98" || d === "\'99") {
+                        return "colHide";
+                    }
+                })
+                .attr("id", function(d) {
+                    if (d === "\'81" || d === "\'83" || d === "\'85" || d === "\'87" || d === "\'89" || d === "\'91" || d === "\'93" || d === "\'95" || d === "\'97" || d === "\'99" || d === "\'01" || d === "\'03" || d === "\'05" || d === "\'07" || d === "\'09" || d === "\'11" || d === "\'13" || d === "\'15") {
+                        return "odd"
+                    }
+                });
 
             var tablebody = table.append("tbody");
 
@@ -935,42 +813,42 @@
                 .append("td")
                 .style("fill-opacity", ".8")
                 .text(function(d) {
-                    if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "KSU" || d === "Oklahoma" || d === "OSU" || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska") {
+                    if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "Kan. St." || d === "Oklahoma" || d === "Okla. St." || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska" || d === "Colorado") {
                         return d;
                     } else {
                         return "";
                     }
                 })
                 .attr("class", function(d, i) {
-                    if (d === "Harry Miller" || d === "Wayne Morgan" || d === "Kelvin Sampson" || d === "Shaka Smart" || d === "Trent Johnson" || d === "Chris Walker" || d === "Tubby Smith" || d === "Mike Anderson" || d === "Frank Haith" || d === "Melvin Watkins") {
-                    var newClass = "";
-                    if (i > 0 && i < 5) {
-                        newClass = " colHide";
-                    }
-                    return "black" + newClass;
+                    if (d === "Harry Miller" || d === "Wayne Morgan" || d === "Kelvin Sampson" || d === "Shaka Smart" || d === "Trent Johnson" || d === "Chris Walker" || d === "Tubby Smith" || d === "Mike Anderson" || d === "Frank Haith" || d === "Melvin Watkins" || d === "Ricardo Patton" || d === "Leonard Hamilton" || d === "Jeff Capel") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "black" + newClass;
                     } else if (d == "") {
-                    var newClass = "";
-                    if (i > 0 && i < 5) {
-                        newClass = " colHide";
-                    }
-                    return "none" + newClass;
-                    } else if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "KSU" || d === "Oklahoma" || d === "OSU" || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska") {
-                    var newClass = "";
-                    if (i > 0 && i < 5) {
-                        newClass = " colHide";
-                    }
-                    return "school" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "none" + newClass;
+                    } else if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "Kan. St." || d === "Oklahoma" || d === "Okla. St." || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska" || d === "Colorado") {
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "school" + newClass;
                     } else {
-                    var newClass = "";
-                    if (i > 0 && i < 5) {
-                        newClass = " colHide";
-                    }
-                    return "white" + newClass;
+                        var newClass = "";
+                        if (i > 0 && i <= 20) {
+                            newClass = " colHide";
+                        }
+                        return "white" + newClass;
                     }
                 })
                 .on("mousemove", function(d) {
                     function schoolName() {
-                        if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "KSU" || d === "Oklahoma" || d === "OSU" || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska") {
+                        if (d === "Baylor" || d === "Iowa State" || d === "Kansas" || d === "Kan. St." || d === "Oklahoma" || d === "Okla. St." || d === "Texas" || d === "TCU" || d === "Texas Tech" || d === "W. Virginia" || d === "Missouri" || d === "Texas A&M" || d === "Nebraska") {
                             return "";
                         } else {
                             return d;
@@ -1008,5 +886,4 @@
         })
     }
     </script>
-
 </body>
