@@ -1,247 +1,51 @@
 <!DOCTYPE html>
-
 <head>
-    <title>All conferences</title>
-    <style>
-
-    .school {
-        background: rgba(102, 175, 80, .6);
-        font-family: 'Benton Sans', sans-serif;
-        text-align: left;
-        background:none;
-      padding-right: 10px;
-    }
-    
-    .tooltip {
-        font-family: 'Benton Sans', serif;
-        position: absolute;
-        width: auto;
-        height: auto;
-        font-size: small;
-        background: white;
-        color: black;
-        padding: 2px;
-        text-align: center;
-    }
-    
-    #container {
-        margin: auto;
-        display: block;
-    }
-    
-    body {
-        width: 1100px;
-        margin-right: auto;
-        margin-left: auto;
-        font-family: "Benton Sans", sans-serif;
-    }
-    
-    td {
-        opacity: .8;
-    }
-
-    tr {padding-bottom: 12px;} 
-    
-    th {
-      text-align:left;
-      font-weight: bold;
-    }
-
-    .black {
-    background: #d69a7f;   
-    border-radius:12px;
-    } 
-      
-    .white {
-    background: #efd7c9;  
-    border-radius:12px;
-    } 
-
-    .none {background: #ffffff; }
-    
-    #button-wrapper {
-      float:right;
-            width:50%;
-        margin: auto;
-        text-align: center;
-        display: block;
-      margin: 10px 0 10px 0;
-    }
-    
-    button {
-        font-family: "Benton Sans", sans-serif;
-        color: #000000;
-        font-size: small;
-        background: #ddd;
-        border-radius:4px;
-        padding-top: 8px;
-      padding-bottom: 8px;
-      padding-left: 12px;
-      padding-right: 12px;
-        border: 0px;
-        text-decoration: none;
-        display: inline-block;
-    }
-    
-    button:hover {
-        background: #999;
-        color: #ffffff;
-    }
-
-    button:focus {
-      outline: 0 !important;
-    }
-    
-    .active {
-        background: #666;
-        color: #ffffff;
-    }
-    
-    svg {
-        display: block;
-        margin: auto;
-    }
-    
-    #title h2 {
-        text-align: center;
-        font-family: "Benton", sans-serif;
-      font-weight:normal;
-        font-size: 22px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .legend {
-
-      float:left;
-      padding-top: 3px;
-      width:40%;
-            margin: 10px 0 10px 0;
-
-        padding: 3px;
-        display: inline-block;
-        font-size: 16px
-
-    }
-    
-    .rectangles {
-        display: inline-block;
-        width: 18px;
-        height: 18px;
-    }
-
-    #rectangle-white {
-        background: #efd7c9;
-            border-radius: 12px;
-    }
-    
-    #rectangle-black {
-        background: #d69a7f;
-      border-radius: 12px;
-    }
-    
-    #rectangle-none {
-        background: white;
-        border: 1px solid #999;
-    }
-    
-    .footnote {
-        font-size: small;
-      margin: 15px auto;
-    }
-    
-    .colHide {}
-    
-    #byline {
-        font-size: x-small;
-    }
-    
-    #odd {
-        color: white;
-    }
-    
-     @media only screen and (max-width: 800px) {
-        body {
-            font-size: 75%;
-            width: 800px;
-        }
-        button {
-            font-size: 75%;
-            padding: 1px;
-        }
-        .rectangles {
-            width: 12px;
-            height: 12px;
-        }
-    }
-    
-    @media only screen and (max-width: 500px) {
-        table {
-            font-size: 95%;
-            width: 500px;
-        }
-        body {
-            width: 500px;
-        }
-        button {
-            font-size: 100%;
-            padding: 1px;
-        }
-        h2 {
-            font-size: 95%;
-        }
-        .legend {
-            font-size: 100%;
-        }
-        .rectangles {
-            width: 7px;
-            height: 7px;
-        }
-        .colHide {
-            display: none;
-        }
-    }
-    </style>
-    <meta name="viewport" content="width=device-width">
-    <!--Libraries-->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script type="https://cdnjs.com/libraries/d3-legend"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<title>All conferences</title>
+<style>.coachOuter{width:100%;overflow-x:auto;}.school{background:rgba(102,175,80,.6);font-family:'Benton Sans',sans-serif;text-align:left;background:none;padding-right:10px;white-space:nowrap;}.tooltip{font-family:'Benton Sans',serif;position:absolute;width:auto;height:auto;font-size:small;background:white;color:black;padding:2px;text-align:center;}#container{width:100%;margin:auto;display:block;min-height:540px;}body{margin-right:auto;margin-left:auto;font-family:"Benton Sans",sans-serif;}td{opacity:.8;}.black{background:#BF603C;border-radius:12px;}.white{background:#efd7c9;border-radius:12px;}.none{background:#ffffff;}th{text-align:left;font-weight:bold;font-size:.75em;min-width:18px;}.coachKeys{float:left;margin:0px 0 10px 0;padding-top:6px;display:inline-block;font-family:"Benton Sans",sans-serif;vertical-align:middle;font-size:.9em;}.square{float:left;width:1.2em;height:1.2em;margin-right:.5em;border-radius:.6em;}#square-black{background:#BF603C;}#square-white{background:#efd7c9;margin-left:1.5em;}#square-none{background:#fff;margin-left:1.5em;width:1.1em;height:1.1em;border:1px solid #999;}#button-wrapper{float:left;width:100%;margin:auto;text-align:center;display:block;margin:20px 0 20px 0px;}button{font-family:"Benton Sans",sans-serif;color:#000000;font-size:small;background:#ddd;border-radius:4px;padding-top:8px;padding-bottom:8px;padding-left:12px;padding-right:12px;border:0px;text-decoration:none;display:inline-block;}button:hover{background:#999;color:#ffffff;}.active{background:#666;color:#ffffff;}svg{display:block;margin:auto;}#title{text-align:center;font-family:"Benton",sans-serif;font-weight:normal;font-size:1.5em;width:100%;margin-left:auto;margin-right:auto;}#intro{text-align:center;font-family:"Benton",sans-serif;font-size:1em;line-height:150%;margin:.5em auto;}.legend{float:left;padding-top:3px;width:40%;margin:10px 0 10px 0;padding:3px;display:inline-block;font-size:16px}.rectangles{display:inline-block;width:18px;height:18px;}#rectangle-white{background:#efd7c9;border-radius:12px;}#rectangle-black{background:#d69a7f;border-radius:12px;}#rectangle-none{background:white;border:1px solid #999;}.footnote{font-size:small;margin:20px auto;color:#757575;}.colHide{}#byline{font-size:x-small;}#odd{color:white;}p.mobileComment{display:none;}@media only screen and (max-width: 758px) {body{font-size:85%;}button{font-family:"Benton Sans",sans-serif;color:#000000;font-size:small;background:#ddd;border-radius:4px;padding-top:6px;padding-bottom:6px;padding-left:10px;padding-right:10px;border:0px;text-decoration:none;display:inline-block;}th{text-align:left;font-weight:bold;font-size:.4em;min-width:11px;}.rectangles{width:12px;height:12px;}p.mobileComment{display:none;}}@media only screen and (max-width: 600px) {table{width:100%;}body{font-size:1em;}h2{font-size:95%;}.legend{font-size:100%;}#container{min-height:420px;}.rectangles{width:7px;height:7px;}.colHide{display:none;}th{font-family:Arial Narrow,Arial,sans-serif;text-align:left;font-weight:bold;font-size:.8em;min-width:1.5em;}#button-wrapper{float:left;width:100%;margin:0;}#square-player{margin-left:1em;}.keyBlock{float:left;width:100%;margin:0 auto .5em auto;}.coachKeys{font-size:.85em;font-size:.6em;}.btnBlock{float:left;width:100%;margin-bottom:1em;}button{margin-bottom:.5em;font-size:.6em;padding-left:8px;padding-right:8px;}#chart{display:block;min-height:300px;}p.mobileComment{display:block;font-size:.7em;}}</style>
+<meta name="viewport" content="width=device-width">
+ 
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script type="https://cdnjs.com/libraries/d3-legend"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ 
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
-
 <body>
-    <div id="title">
-        <h2> Diversity among Division I men's basketball coaches</h2>
-        <p>Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or nonwhite. Click on the name of a conference to change which schools are displayed.</p>
-        <div id="button-wrapper">
-            <button onclick="updateBigTen()" class="active">Big Ten</button>
-            <button onclick="updateSEC()">SEC</button>
-            <button onclick="updateACC()">ACC</button>
-            <button onclick="updatePac12()">Pac 12</button>
-            <button onclick="updateBigEast()">Big East</button>
-            <button onclick="updateBig12()">Big 12</button>
-        </div>
-        <div class="legend">
-            <div class="rectangles" id="rectangle-black"></div> Not white
-            <div class="rectangles" id="rectangle-white"></div> White
-            <div class="rectangles" id="rectangle-none"></div> School not in conference
-        </div>
-    </div>
-    <div id="container"></div>
-    <div class="footnote">Each column includes the schools that were in the conferences for that year. Each year represents the year the season began. For example, the column marked '80 represents the 1980-1981 season. Schools in the Big 8, which became the Big 12 in 1996, are included under the Big 12. Graphic by Ethan Nelson, a University of Minnesota student reporter on assignment for Star Tribune.</div>
-   <script>
+<div class="coachOuter">
+<div id="title">Diversity among Division I men's basketball coaches</div>
+<div id="intro">Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or nonwhite. Click on the name of a conference to change which schools are displayed.</div>
+<div id="button-wrapper">
+<div class="keyBlock">
+<div class="coachKeys">
+<div class="square" id="square-black"></div>Non-white</div>
+<div class="coachKeys">
+<div class="square" id="square-white"></div>White</div>
+<div class="coachKeys">
+<div class="square" id="square-none"></div>School not in conference</div>
+</div>
+<div class="btnBlock">
+<button onclick="updateBigTen()" class="active">Big Ten</button>
+<button onclick="updateSEC()">SEC</button>
+<button onclick="updateACC()">ACC</button>
+<button onclick="updatePac12()">Pac 12</button>
+<button onclick="updateBigEast()">Big East</button>
+<button onclick="updateBig12()">Big 12</button>
+</div>
+</div>
+<p class="mobileComment">Swipe right to see entire chart</p>
+<div id="container"></div>
+<div class="footnote">Each column includes the schools that were in the conferences for that year. Each year represents the year the season began. For example, the column marked '80 represents the 1980-1981 season. Schools in the Big 8, which became the Big 12 in 1996, are included under the Big 12. Graphic by Ethan Nelson, a University of Minnesota student reporter on assignment for Star Tribune.</div>
+</div>
+<script>
     $('button').click(function() {
         $('button').removeClass('active')
         $(this).addClass('active');
     })
     </script>
-    <script>
+<script>
     d3.csv("data/bigTen.csv", function(error, data) {
 
         var table = d3.select("#container")
