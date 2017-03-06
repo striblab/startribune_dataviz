@@ -5254,7 +5254,7 @@ a.ui-button:active,
  }
 
 #map  {
-     height: 360px;
+     height: 330px;
      width: 100%;
  }
 
@@ -5268,7 +5268,7 @@ a.ui-button:active,
 }
 
 #cities {
-     height:335px;
+     height:407px;
      overflow-y:auto;
 }
 

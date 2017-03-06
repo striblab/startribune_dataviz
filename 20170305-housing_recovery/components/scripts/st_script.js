@@ -13,11 +13,11 @@ d3.select("#cities").selectAll(".row")
 
   	var color = "#888888";
 
-	if (d.IndexScore >= 300) { color = "#bd0026"; }
-	else if	(d.IndexScore >= 240) { color = "#f03b20"; }
-	else if	(d.IndexScore >= 180) { color = "#fd8d3c"; }
-	else if	(d.IndexScore >= 120) { color = "#fecc5c"; }
-	else if	(d.IndexScore >= 60) { color = "#ffffb2"; }
+	if (d.IndexScore >= 300) { color = "#a50f15"; }
+	else if	(d.IndexScore >= 240) { color = "#de2d26"; }
+	else if	(d.IndexScore >= 180) { color = "#fb6a4a"; }
+	else if	(d.IndexScore >= 120) { color = "#fc9272"; }
+	else if	(d.IndexScore >= 60) { color = "#fcbba1"; }
 
 	return color;
 
@@ -130,11 +130,11 @@ map.on('load', function() {
 		        "type": "interval",
 		        "stops": [
 		            [0, "#888888"],
-		            [60, "#ffffb2"],
-		            [120, "#fecc5c"],
-		            [180, "#fd8d3c"],
-		            [240, "#f03b20"],
-		            [300, "#bd0026"]
+		            [60, "#fcbba1"],
+		            [120, "#fc9272"],
+		            [180, "#fb6a4a"],
+		            [240, "#de2d26"],
+		            [300, "#a50f15"]
 		        ]
 		    },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
@@ -159,12 +159,12 @@ map.on('load', function() {
 		        "property": "index_IndexScore",
 		        "type": "interval",
 		        "stops": [
-		            [0, "#888888"],
-		            [60, "#ffffb2"],
-		            [120, "#fecc5c"],
-		            [180, "#fd8d3c"],
-		            [240, "#f03b20"],
-		            [300, "#bd0026"]
+                [0, "#888888"],
+                [60, "#fcbba1"],
+                [120, "#fc9272"],
+                [180, "#fb6a4a"],
+                [240, "#de2d26"],
+                [300, "#a50f15"]
 		        ]
 		    },
            'fill-outline-color': 'rgba(255, 255, 255, 0)'
@@ -190,11 +190,11 @@ map.on('load', function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [60, "#ffffb2"],
-                [120, "#fecc5c"],
-                [180, "#fd8d3c"],
-                [240, "#f03b20"],
-                [300, "#bd0026"]
+                [60, "#fcbba1"],
+                [120, "#fc9272"],
+                [180, "#fb6a4a"],
+                [240, "#de2d26"],
+                [300, "#a50f15"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -220,11 +220,11 @@ map.on('load', function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [60, "#ffffb2"],
-                [120, "#fecc5c"],
-                [180, "#fd8d3c"],
-                [240, "#f03b20"],
-                [300, "#bd0026"]
+                [60, "#fcbba1"],
+                [120, "#fc9272"],
+                [180, "#fb6a4a"],
+                [240, "#de2d26"],
+                [300, "#a50f15"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -274,19 +274,20 @@ function metricLoad(city){
 
     var color = "#888888";
 
-    if (cityData[0].IndexScore >= 300) { color = "#bd0026"; }
-    else if (cityData[0].IndexScore >= 240) { color = "#f03b20"; }
-    else if (cityData[0].IndexScore>= 180) { color = "#fd8d3c"; }
-    else if (cityData[0].IndexScore >= 120) { color = "#fecc5c"; }
-    else if (cityData[0].IndexScore >= 60) { color = "#ffffb2"; }
+    if (cityData[0].IndexScore >= 300) { color = "#a50f15"; }
+    else if (cityData[0].IndexScore >= 240) { color = "#de2d26"; }
+    else if (cityData[0].IndexScore>= 180) { color = "#fb6a4a"; }
+    else if (cityData[0].IndexScore >= 120) { color = "#fc9272"; }
+    else if (cityData[0].IndexScore >= 60) { color = "#fcbba1"; }
 
     
     $("#districtName").css('background-color',color);
+    $("#indexRow").css('border',"3px solid " + color);
     
     $("#days").html(cityData[0].DaysMarket);
 	  $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
     $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
-    $("#ppsf").html(d3.format("$,.0f")(cityData[0].PPSF2016));
+    $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
 
     $("#income").html(d3.format("$,.0f")(cityData[0].MedianHHincome));
     $("#homes").html(d3.format("%")(cityData[0].PctSingleFamily));
@@ -345,13 +346,22 @@ function metricLoad(city){
                 },
                 x: {
                     type: 'timeseries',
-                    label: 'Price per square foot over time',
+                    // label: {
+                    //   text: 'Price per square foot over time',
+                    //   position: 'inner-center'
+                    // },
                     tick: {
                         format: '%Y'
                     }
                 }
             }
         });
+
+d3.select("#chart svg").append("text")
+    .attr("x", 50 )
+    .attr("y", 50)
+    .style("text-anchor", "right")
+    .text("Price per square foot over time");
 // }
 
 // loadChart("Richfield");
