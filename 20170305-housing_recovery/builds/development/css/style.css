@@ -5250,7 +5250,7 @@ a.ui-button:active,
 
 /* PROJECT STYLES */
 #wrapper  {
-     width: 840px;
+     width: 870px;
  }
 
 #map  {
@@ -5384,7 +5384,7 @@ h5 {
   display:none !important;
 }
 
-@media only screen and (max-width:900px)  {
+@media only screen and (max-width:840px)  {
 
 #map {
   height:200px;
