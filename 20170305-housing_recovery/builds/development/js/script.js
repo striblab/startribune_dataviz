@@ -6,6 +6,7 @@ d3.json("./shapefiles/stp_nb.json", function(error, stpnb) {
 d3.json('./data/cities.json', function(error, dataLoad) {
 
 var data = dataLoad.cities;
+var checked = false;
 
 d3.select("#cities").selectAll(".row")
   .data(data.sort(function(a,b) { return b.IndexScore - a.IndexScore; })).enter().append("div")
@@ -48,14 +49,6 @@ function tableSort(container,party,data,candidate,sorted){
 
 $( document ).ready(function() {
 
-
-$(".zoom").click(function() {
-	  reset();
-    $('#cities').animate({scrollTop : 0},800);
-    return false;
-});
-
-$('#filter_box').on('keyup search', function(e){
     $('.row').hide();
     var txt = $('#filter_box').val();
     $('.row').each(function(){
@@ -63,8 +56,35 @@ $('#filter_box').on('keyup search', function(e){
            $(this).show();
        }
     });
-    var count = $('.row:visible').length;
-    $('#results').html(count);
+    $('.row').each(function(){
+       if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+           $(this).hide();
+       }
+     });
+
+$('#filter_box').on('keyup search', function(e){
+    $('.row').hide();
+
+    if (checked){
+    var txt = $('#filter_box').val();
+    $('.row').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).show();
+       }
+    });
+    $('.row').each(function(){
+       if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+           $(this).hide();
+       }
+     });
+    } else {
+    var txt = $('#filter_box').val();
+    $('.row').each(function(){
+       if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) && ($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1)){
+           $(this).show();
+       }
+    });     
+    }
 });
 
 $(".th").click(function() {
@@ -111,6 +131,54 @@ map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 
 map.on('load', function() {
+
+$('.onoffswitch :checkbox').change(function() {  
+    if (this.checked) {
+      checked = true;
+    map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('mncities-layer', 'visibility', 'visible');
+    map.setLayoutProperty('wicities-layer', 'visibility', 'visible');
+    reset();
+    metricLoad("Richfield");
+
+    $(".row").removeClass("selected");
+    $(".row:contains('Richfield')").addClass("selected");
+
+      $('.row').show();
+        $('.row').each(function(){
+           if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+               $(this).hide();
+           }
+        });
+
+      $('#cities').animate({scrollTop : 0},800);
+    } else {
+      checked = false;
+
+    map.setLayoutProperty('stpnb-layer', 'visibility', 'visible');
+    map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
+    map.setLayoutProperty('mncities-layer', 'visibility', 'none');
+    map.setLayoutProperty('wicities-layer', 'visibility', 'none');
+    map.flyTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
+    metricLoad("(MPLS) Bottineau");
+
+    $(".row").removeClass("selected");
+    $(".row:contains('(MPLS) Bottineau')").addClass("selected");
+
+      $('.row').hide();
+      $('.row').each(function(){
+         if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+             $(this).show();
+         }
+      });
+
+      $('#cities').animate({scrollTop : 0},800);
+    }
+
+    console.log(checked);
+});
+
 
  map.addSource('mncities', {
    type: 'geojson',
@@ -231,6 +299,9 @@ map.on('load', function() {
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
      }
    }, 'place-neighbourhood');
+
+    map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
 
 // Create a popup, but don't add it to the map yet.
 // var popup = new mapboxgl.Popup({
