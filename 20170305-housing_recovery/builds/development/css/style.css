@@ -5416,7 +5416,7 @@ h5 {
 .onoffswitch-inner:before {
     content: "CITIES/TOWNS";
     padding-left: 10px;
-    background-color: #A50F15; color: #FFFFFF;
+    background-color: #d95f0e; color: #FFFFFF;
 }
 .onoffswitch-inner:after {
     content: "NEIGHBORHOODS";
