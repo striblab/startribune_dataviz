@@ -14,11 +14,11 @@ d3.select("#cities").selectAll(".row")
 
   	var color = "#888888";
 
-	if (d.IndexScore >= 300) { color = "#a50f15"; }
-	else if	(d.IndexScore >= 240) { color = "#de2d26"; }
-	else if	(d.IndexScore >= 180) { color = "#fb6a4a"; }
-	else if	(d.IndexScore >= 120) { color = "#fc9272"; }
-	else if	(d.IndexScore >= 60) { color = "#fcbba1"; }
+	if (d.IndexScore >= 300) { color = "#993404"; }
+	else if	(d.IndexScore >= 240) { color = "#d95f0e"; }
+	else if	(d.IndexScore >= 180) { color = "#fe9929"; }
+	else if	(d.IndexScore >= 120) { color = "#fec44f"; }
+	else if	(d.IndexScore >= 60) { color = "#fee391"; }
 
 	return color;
 
@@ -198,11 +198,11 @@ $('.onoffswitch :checkbox').change(function() {
 		        "type": "interval",
 		        "stops": [
 		            [0, "#888888"],
-		            [60, "#fcbba1"],
-		            [120, "#fc9272"],
-		            [180, "#fb6a4a"],
-		            [240, "#de2d26"],
-		            [300, "#a50f15"]
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
 		        ]
 		    },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
@@ -228,11 +228,11 @@ $('.onoffswitch :checkbox').change(function() {
 		        "type": "interval",
 		        "stops": [
                 [0, "#888888"],
-                [60, "#fcbba1"],
-                [120, "#fc9272"],
-                [180, "#fb6a4a"],
-                [240, "#de2d26"],
-                [300, "#a50f15"]
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
 		        ]
 		    },
            'fill-outline-color': 'rgba(255, 255, 255, 0)'
@@ -258,11 +258,11 @@ $('.onoffswitch :checkbox').change(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [60, "#fcbba1"],
-                [120, "#fc9272"],
-                [180, "#fb6a4a"],
-                [240, "#de2d26"],
-                [300, "#a50f15"]
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -288,11 +288,11 @@ $('.onoffswitch :checkbox').change(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [60, "#fcbba1"],
-                [120, "#fc9272"],
-                [180, "#fb6a4a"],
-                [240, "#de2d26"],
-                [300, "#a50f15"]
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -345,11 +345,11 @@ function metricLoad(city){
 
     var color = "#888888";
 
-    if (cityData[0].IndexScore >= 300) { color = "#a50f15"; }
-    else if (cityData[0].IndexScore >= 240) { color = "#de2d26"; }
-    else if (cityData[0].IndexScore>= 180) { color = "#fb6a4a"; }
-    else if (cityData[0].IndexScore >= 120) { color = "#fc9272"; }
-    else if (cityData[0].IndexScore >= 60) { color = "#fcbba1"; }
+    if (cityData[0].IndexScore >= 300) { color = "#993404"; }
+    else if (cityData[0].IndexScore >= 240) { color = "#d95f0e"; }
+    else if (cityData[0].IndexScore>= 180) { color = "#fe9929"; }
+    else if (cityData[0].IndexScore >= 120) { color = "#fec44f"; }
+    else if (cityData[0].IndexScore >= 60) { color = "#fee391"; }
 
     
     $("#districtName").css('background-color',color);

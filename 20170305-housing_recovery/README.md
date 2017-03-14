@@ -1,9 +1,9 @@
-Star Tribune - PROJECT NAME
+Star Tribune - Metro area housing recovery index
 ================
 
 by Frey Hargarten
 
-Built using Mike Bostock's [D3](https://github.com/mbostock/d3) and [jQuery](https://github.com/jquery/jquery).
+Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [C3](https://github.com/c3js/c3), [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) and [jQuery](https://github.com/jquery/jquery).
 
 Options for running:
 
