@@ -399,7 +399,7 @@ function metricLoad(city){
                     ['PPSF', cityData[0].PPSF2003, cityData[0].PPSF2004, cityData[0].PPSF2005, cityData[0].PPSF2006, cityData[0].PPSF2007, cityData[0].PPSF2008, cityData[0].PPSF2009, cityData[0].PPSF2010, cityData[0].PPSF2011, cityData[0].PPSF2012, cityData[0].PPSF2013, cityData[0].PPSF2014, cityData[0].PPSF2015, cityData[0].PPSF2016],
                 ],
                 names: {
-                  'PPSF':'Price per sqft'
+                  'PPSF':'Price per sq. ft.'
                 },
                 colors: { 'PPSF': '#333333' }
             },
