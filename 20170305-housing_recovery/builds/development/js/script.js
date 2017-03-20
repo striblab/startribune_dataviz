@@ -1,4 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 d3.json("./shapefiles/mn_places.json", function(error, mncities) {
 d3.json("./shapefiles/wi_places.json", function(error, wicities) {
 d3.json("./shapefiles/mpls_nb.json", function(error, mplsnb) {
@@ -13,15 +12,15 @@ d3.select("#cities").selectAll(".row")
   .attr("class",function(d) { if (d.name == "Richfield") { return "row selected" } else { return "row "; } })
   .style('background-color',function(d) { 
 
-  	var color = "#888888";
+    var color = "#888888";
 
-	if (d.IndexScore >= 300) { color = "#993404"; }
-	else if	(d.IndexScore >= 240) { color = "#d95f0e"; }
-	else if	(d.IndexScore >= 180) { color = "#fe9929"; }
-	else if	(d.IndexScore >= 120) { color = "#fec44f"; }
-	else if	(d.IndexScore >= 60) { color = "#fee391"; }
+  if (d.IndexScore >= 300) { color = "#993404"; }
+  else if (d.IndexScore >= 240) { color = "#d95f0e"; }
+  else if (d.IndexScore >= 180) { color = "#fe9929"; }
+  else if (d.IndexScore >= 120) { color = "#fec44f"; }
+  else if (d.IndexScore >= 60) { color = "#fee391"; }
 
-	return color;
+  return color;
 
   })
   .attr("latitude",function(d) { return d.latitude; })
@@ -96,212 +95,212 @@ $(".th").click(function() {
 });
 
 $(".row").click(function() {
-	$(".row").removeClass("selected");
-	$(this).addClass("selected");
+  $(".row").removeClass("selected");
+  $(this).addClass("selected");
   // var random = Math.floor(Math.random() * 4) + 1;
   // var span = Math.floor(Math.random() * 100) + -100;
   // var pitch = span / random;
   // var bearing = span / random;
   var pitch = 0;
   var bearing = 0;
-	var longitude = $(this).attr("longitude");
-	var latitude = $(this).attr("latitude");
- //  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
-	// else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
-	metricLoad($(this).find(".name").text());
+  var longitude = $(this).attr("longitude");
+  var latitude = $(this).attr("latitude");
+  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
+  else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+  metricLoad($(this).find(".name").text());
 });
 
 });
 
-// var sw = new mapboxgl.LngLat(-93.716125, 44.643254);
-// var ne = new mapboxgl.LngLat(-92.763062, 45.350215);
-// var llb = new mapboxgl.LngLatBounds(sw, ne);
+var sw = new mapboxgl.LngLat(-93.716125, 44.643254);
+var ne = new mapboxgl.LngLat(-92.763062, 45.350215);
+var llb = new mapboxgl.LngLatBounds(sw, ne);
 
-// mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
-// var map = new mapboxgl.Map({
-//     container: 'map', // container id
-//     style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
-//     center: [-93.28469849, 45.01832962], 
-//     zoom: 7.8,
-//     minZoom: 7.8
-//     // maxBounds: llb
-// });
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
+    center: [-93.28469849, 45.01832962], 
+    zoom: 7.8,
+    minZoom: 7.8
+    // maxBounds: llb
+});
 
-// map.addControl(new mapboxgl.NavigationControl());
-// map.scrollZoom.disable();
+map.addControl(new mapboxgl.NavigationControl());
+map.scrollZoom.disable();
 
-// map.on('load', function() {
+map.on('load', function() {
 
-// $('.onoffswitch :checkbox').change(function() {  
-//     if (this.checked) {
-//       checked = true;
-//     map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
-//     map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
-//     map.setLayoutProperty('mncities-layer', 'visibility', 'visible');
-//     map.setLayoutProperty('wicities-layer', 'visibility', 'visible');
-//     reset();
-//     metricLoad("Richfield");
+$('.onoffswitch :checkbox').change(function() {  
+    if (this.checked) {
+      checked = true;
+    map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('mncities-layer', 'visibility', 'visible');
+    map.setLayoutProperty('wicities-layer', 'visibility', 'visible');
+    reset();
+    metricLoad("Richfield");
 
-//     $(".row").removeClass("selected");
-//     $(".row:contains('Richfield')").addClass("selected");
+    $(".row").removeClass("selected");
+    $(".row:contains('Richfield')").addClass("selected");
 
-//       $('.row').show();
-//         $('.row').each(function(){
-//            if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
-//                $(this).hide();
-//            }
-//         });
+      $('.row').show();
+        $('.row').each(function(){
+           if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+               $(this).hide();
+           }
+        });
 
-//       $('#cities').animate({scrollTop : 0},800);
-//     } else {
-//       checked = false;
+      $('#cities').animate({scrollTop : 0},800);
+    } else {
+      checked = false;
 
-//     map.setLayoutProperty('stpnb-layer', 'visibility', 'visible');
-//     map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
-//     map.setLayoutProperty('mncities-layer', 'visibility', 'none');
-//     map.setLayoutProperty('wicities-layer', 'visibility', 'none');
-//     map.flyTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
-//     metricLoad("(MPLS) Bottineau");
+    map.setLayoutProperty('stpnb-layer', 'visibility', 'visible');
+    map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
+    map.setLayoutProperty('mncities-layer', 'visibility', 'none');
+    map.setLayoutProperty('wicities-layer', 'visibility', 'none');
+    map.flyTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
+    metricLoad("(MPLS) Bottineau");
 
-//     $(".row").removeClass("selected");
-//     $(".row:contains('(MPLS) Bottineau')").addClass("selected");
+    $(".row").removeClass("selected");
+    $(".row:contains('(MPLS) Bottineau')").addClass("selected");
 
-//       $('.row').hide();
-//       $('.row').each(function(){
-//          if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
-//              $(this).show();
-//          }
-//       });
+      $('.row').hide();
+      $('.row').each(function(){
+         if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+             $(this).show();
+         }
+      });
 
-//       $('#cities').animate({scrollTop : 0},800);
-//     }
+      $('#cities').animate({scrollTop : 0},800);
+    }
 
-//     console.log(checked);
-// });
+    console.log(checked);
+});
 
 
-//  map.addSource('mncities', {
-//    type: 'geojson',
-//    data: mncities
-//  });
+ map.addSource('mncities', {
+   type: 'geojson',
+   data: mncities
+ });
 
-//  map.addLayer({
-//        'id': 'mncities-layer',
-//        'interactive': true,
-//        'source': 'mncities',
-//        'layout': {},
-//        'type': 'fill',
-//             'paint': {
-//            'fill-antialias' : true,
-//            'fill-opacity': 0.8,
-//            'fill-color': {
-// 		        "property": "index_IndexScore",
-// 		        "type": "interval",
-// 		        "stops": [
-// 		            [0, "#888888"],
-//                 [60, "#fee391"],
-//                 [120, "#fec44f"],
-//                 [180, "#fe9929"],
-//                 [240, "#d95f0e"],
-//                 [300, "#993404"]
-// 		        ]
-// 		    },
-//            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
-//      }
-//    }, 'place-neighbourhood');
+ map.addLayer({
+       'id': 'mncities-layer',
+       'interactive': true,
+       'source': 'mncities',
+       'layout': {},
+       'type': 'fill',
+            'paint': {
+           'fill-antialias' : true,
+           'fill-opacity': 0.8,
+           'fill-color': {
+            "property": "index_IndexScore",
+            "type": "interval",
+            "stops": [
+                [0, "#888888"],
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
+            ]
+        },
+           'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
+     }
+   }, 'place-neighbourhood');
 
-//  map.addSource('wicities', {
-//    type: 'geojson',
-//    data: wicities
-//  });
+ map.addSource('wicities', {
+   type: 'geojson',
+   data: wicities
+ });
 
-//  map.addLayer({
-//        'id': 'wicities-layer',
-//        'interactive': true,
-//        'source': 'wicities',
-//        'layout': {},
-//        'type': 'fill',
-//           'paint': {
-//            'fill-antialias' : true,
-//            'fill-opacity': 0.8,
-//            'fill-color': {
-// 		        "property": "index_IndexScore",
-// 		        "type": "interval",
-// 		        "stops": [
-//                 [0, "#888888"],
-//                 [60, "#fee391"],
-//                 [120, "#fec44f"],
-//                 [180, "#fe9929"],
-//                 [240, "#d95f0e"],
-//                 [300, "#993404"]
-// 		        ]
-// 		    },
-//            'fill-outline-color': 'rgba(255, 255, 255, 0)'
-//      }
-//    }, 'place-neighbourhood');
+ map.addLayer({
+       'id': 'wicities-layer',
+       'interactive': true,
+       'source': 'wicities',
+       'layout': {},
+       'type': 'fill',
+          'paint': {
+           'fill-antialias' : true,
+           'fill-opacity': 0.8,
+           'fill-color': {
+            "property": "index_IndexScore",
+            "type": "interval",
+            "stops": [
+                [0, "#888888"],
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
+            ]
+        },
+           'fill-outline-color': 'rgba(255, 255, 255, 0)'
+     }
+   }, 'place-neighbourhood');
 
-//   map.addSource('mplsnb', {
-//    type: 'geojson',
-//    data: mplsnb
-//  });
+  map.addSource('mplsnb', {
+   type: 'geojson',
+   data: mplsnb
+ });
 
-//  map.addLayer({
-//        'id': 'mplsnb-layer',
-//        'interactive': true,
-//        'source': 'mplsnb',
-//        'layout': {},
-//        'type': 'fill',
-//           'paint': {
-//            'fill-antialias' : true,
-//            'fill-opacity': 0.8,
-//            'fill-color': {
-//             "property": "nbindex_IndexScore",
-//             "type": "interval",
-//             "stops": [
-//                 [0, "#888888"],
-//                 [60, "#fee391"],
-//                 [120, "#fec44f"],
-//                 [180, "#fe9929"],
-//                 [240, "#d95f0e"],
-//                 [300, "#993404"]
-//             ]
-//         },
-//            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
-//      }
-//    }, 'place-neighbourhood');
+ map.addLayer({
+       'id': 'mplsnb-layer',
+       'interactive': true,
+       'source': 'mplsnb',
+       'layout': {},
+       'type': 'fill',
+          'paint': {
+           'fill-antialias' : true,
+           'fill-opacity': 0.8,
+           'fill-color': {
+            "property": "nbindex_IndexScore",
+            "type": "interval",
+            "stops": [
+                [0, "#888888"],
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
+            ]
+        },
+           'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
+     }
+   }, 'place-neighbourhood');
 
-//   map.addSource('stpnb', {
-//    type: 'geojson',
-//    data: stpnb
-//  });
+  map.addSource('stpnb', {
+   type: 'geojson',
+   data: stpnb
+ });
 
-//  map.addLayer({
-//        'id': 'stpnb-layer',
-//        'interactive': true,
-//        'source': 'stpnb',
-//        'layout': {},
-//        'type': 'fill',
-//           'paint': {
-//            'fill-antialias' : true,
-//            'fill-opacity': 0.8,
-//            'fill-color': {
-//             "property": "nbindex_IndexScore",
-//             "type": "interval",
-//             "stops": [
-//                 [0, "#888888"],
-//                 [60, "#fee391"],
-//                 [120, "#fec44f"],
-//                 [180, "#fe9929"],
-//                 [240, "#d95f0e"],
-//                 [300, "#993404"]
-//             ]
-//         },
-//            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
-//      }
-//    }, 'place-neighbourhood');
+ map.addLayer({
+       'id': 'stpnb-layer',
+       'interactive': true,
+       'source': 'stpnb',
+       'layout': {},
+       'type': 'fill',
+          'paint': {
+           'fill-antialias' : true,
+           'fill-opacity': 0.8,
+           'fill-color': {
+            "property": "nbindex_IndexScore",
+            "type": "interval",
+            "stops": [
+                [0, "#888888"],
+                [60, "#fee391"],
+                [120, "#fec44f"],
+                [180, "#fe9929"],
+                [240, "#d95f0e"],
+                [300, "#993404"]
+            ]
+        },
+           'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
+     }
+   }, 'place-neighbourhood');
 
-//     map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
-//     map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
+    map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
 
 // Create a popup, but don't add it to the map yet.
 // var popup = new mapboxgl.Popup({
@@ -328,15 +327,15 @@ $(".row").click(function() {
 //         .addTo(map);
 // });
 
-// });
+});
 
 function reset(){
-	// map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
-	$('#filter_box').val("");
-	$('.row').show();
+  map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
+  $('#filter_box').val("");
+  $('.row').show();
 }
 
-function metricLoad(city){			
+function metricLoad(city){      
 
     var cityData = data.filter(function(d){ return d.name == city; })
 
@@ -357,7 +356,7 @@ function metricLoad(city){
     $("#indexRow").css('border',"3px solid " + color);
     
     $("#days").html(cityData[0].DaysMarket);
-	  $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
+    $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
     $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
     $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
 
@@ -444,4 +443,3 @@ metricLoad("Richfield");
 });
 });
 });
-},{}]},{},[1])
