@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Metro Area Pedestrian Crashes</title>
+  <meta name="description" content="Metro Area Pedestrian Crashes">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src='js/mapbox-gl.js'></script>
+<script src='js/mapbox-gl-geocoder.js'></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<div id="wrapper">
+
+  <div id="mapbox" class="adjacent">
+  <div id='map'></div>
+  <div class="breaker" id="midbreak"></div>
+  <div class="zoom">Reset View</div>
+  </div>
+
+  <div id="street-view" class="adjacent"></div>
+
+  <div class="breaker"></div>
+
+  <div id="filter"><input type="search" id="filter_box" placeholder="Search list of deaths by name, year or keyword"></input></div>
+
+<div id="deaths"></div>
+
+<script src="js/script.js"></script>
+
+<script>
+var panorama;
+      function initialize() {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('street-view'),
+            {
+              position: {lat: 44.906812, lng: -92.966923},
+              pov: {heading: 165, pitch: 0},
+              zoom: 1
+            });
+    }
+
+</script>
+
+</div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNMHyuTVUuX_f_D_PmgFv9DBPUeUk73_E&callback=initialize"></script>
+
+</body>
+
+</html>
