@@ -1,0 +1,96 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MCA Test Scores</title>
+  <meta name="description" content="MCA Test Scores">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+  <div id="wrapper">
+
+<div id="districtSelect">Select a district: <span id='thisDistrict'>All</span></div>
+
+<div style="text-align:left;">Percentage of schools in selected district by how MCA proficiency rates compare to what would be expected based on poverty rates.</div>
+
+<ul id="listedSchools" class="dropdown months" tabindex="1">
+<div id="filter2"><input type="search" id="filter_box2" placeholder="Search by district name" /></div>
+</ul>
+
+<div id="bigstats">
+<div class="chartTitle">Reading</div>
+  <div class="cell worse" data="Falling short" type="R">
+    <div class="bigNum" id="failR">0%</div>
+    <div class="label">falling short</div>
+  </div>
+  <div class="cell expected" data="About as expected" type="R">
+    <div class="bigNum" id="metR">0%</div>
+    <div class="label">as expected</div>
+  </div>
+  <div class="cell better" data="Better than expected" type="R">
+    <div class="bigNum" id="betterR">0%</div>
+    <div class="label">better</div>
+  </div>
+<div class="chartTitle">Math</div>
+  <div class="cell worse" data="Falling short" type="M">
+    <div class="bigNum" id="failM">0%</div>
+    <div class="label">falling short</div>
+  </div>
+  <div class="cell expected" data="About as expected" type="M">
+    <div class="bigNum" id="metM">0%</div>
+    <div class="label">as expected</div>
+  </div>
+  <div class="cell better" data="Better than expected" type="M">
+    <div class="bigNum" id="betterM">0%</div>
+    <div class="label">better</div>
+  </div>
+</div>
+
+<div class="zoom">Reset View</div>
+
+<div id="leftSide">
+    <div id="filter"><input type="search" id="filter_box" placeholder="Search by school name" /></div>
+    <div id="schoolsList"></div>
+</div>
+
+<div id="rightSide">
+    <div id="instructions"><p>&larr; Click on the name of the school to display proficient rates for math and reading (all grades combined).</p></div>
+
+    <div id="infobox" style="display:none;">
+      <div id="schoolname">school name</div>
+      <div class='where'><span id="district"></span> DISTRICT <span id="location"></span></div>
+      <div id="type" class='where'></div>
+      <div class="description">Among the <span id="enrolled"></span> students enrolled at this school, <span id="minority"></span> are minorities<!-- , <span id="freelunch"></span> use free lunch programs --> and <span id="poverty"></span> are in poverty.</div>
+      
+      <div class="bigPCT">READING</div>
+      <div class="bigPCT">MATH</div>
+      <div class="category" id="categoryR"></div>
+      <div class="category" id="categoryM"></div>
+      <div class="bigPCT" id="rPCT"></div>
+      <div class="bigPCT" id="mPCT"></div>
+      <div class="bigPCT" id="rPCTP"></div>
+      <div class="bigPCT" id="mPCTP"></div>
+    </div>
+
+    <div class="breaker" id="mobileBreak"></div>
+
+   <h4 id="chartLabel" style="display:none;">Proficiency change over time</h4>
+    <div id="chart"></div>
+</div>
+</div>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/c3.min.js"></script> 
+
+<script src="js/script.js"></script>
+</body>
+</html>

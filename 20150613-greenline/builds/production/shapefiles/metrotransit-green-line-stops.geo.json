@@ -1,0 +1,471 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 55,
+        "Station": "Target Field Station",
+        "X": -93.277456,
+        "Y": 44.982977,
+        "Name": "Existing - Shared",
+        "Type": "Light Rail",
+        "Transitway": "Blue / Green",
+        "GlobalID": "{69C90CE1-A73D-43AB-8637-0F56628A7576}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.27745581649839,
+          44.982976950872086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 73,
+        "Station": "West Bank",
+        "X": -93.24609,
+        "Y": 44.971963,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{FA3A6C96-0578-4BF7-B3A4-05DC8D902C73}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.24609014259524,
+          44.97196300708834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 74,
+        "Station": "Prospect Park",
+        "X": -93.215249,
+        "Y": 44.971655,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{7A8AEFFB-16BA-44A9-B067-A1E4BD14BCAC}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.21524942867212,
+          44.97165544784484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 75,
+        "Station": "Westgate",
+        "X": -93.206403,
+        "Y": 44.967474,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{64EBB616-83B5-4765-BEC3-C242B8F6FE29}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.20640339082678,
+          44.96747375352942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 76,
+        "Station": "Raymond Ave",
+        "X": -93.195519,
+        "Y": 44.963129,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{BB937AE2-2134-466D-AAB9-3F1BBAE69CB3}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.19551856292334,
+          44.96312940051673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 77,
+        "Station": "Fairview Ave",
+        "X": -93.178762,
+        "Y": 44.95641,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{BA8D7BA4-B3D4-45E1-A114-0DA3B2631B8B}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.1787619535457,
+          44.95641002651112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 78,
+        "Station": "Snelling Ave",
+        "X": -93.166976,
+        "Y": 44.955677,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{CCE3D2FF-0BAB-4DC5-BE08-25E3BA8BC265}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.1669756099281,
+          44.955677474984114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 79,
+        "Station": "Lexington Pkwy",
+        "X": -93.14661,
+        "Y": 44.955741,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{F5E4DED3-4366-4589-9BBA-00D52696ADE7}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.14660995056607,
+          44.9557410710983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 80,
+        "Station": "Dale Street",
+        "X": -93.12629,
+        "Y": 44.955717,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{065677C9-FBC4-43FF-87DB-057FE06D7B71}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.12628975804915,
+          44.95571732788478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 81,
+        "Station": "Capital / Rice Street",
+        "X": -93.10507,
+        "Y": 44.955641,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{48A6940D-1EB4-4DA7-9DCD-E76BC12A94FB}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.10506981626564,
+          44.95564109506206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 82,
+        "Station": "Robert Street",
+        "X": -93.097604,
+        "Y": 44.954117,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{2EBBEB79-067A-4855-A783-EAD8346B3762}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.09760425643064,
+          44.954117218500855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 83,
+        "Station": "10th Street",
+        "X": -93.097624,
+        "Y": 44.950722,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{5EF7D71D-8EDA-4D96-8330-E3AB2EE8A1BF}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.09762379745612,
+          44.95072194086429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 84,
+        "Station": "Union Depot",
+        "X": -93.086795,
+        "Y": 44.948209,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{FCC1E402-503B-4BB9-B2EA-D7813A4F0F9D}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.08679498658955,
+          44.948209450459075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 85,
+        "Station": "Central",
+        "X": -93.092241,
+        "Y": 44.946097,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{2411E588-8AF8-4F75-83B5-1760805F564B}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.0922410454847,
+          44.946097385175804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 86,
+        "Station": "Western Ave",
+        "X": -93.116131,
+        "Y": 44.95577,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{5B8997A7-7E32-41F1-8DB6-EC76050D02DA}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.11613059480857,
+          44.95577019173059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 87,
+        "Station": "Victoria Street",
+        "X": -93.136478,
+        "Y": 44.955721,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{E8EC6924-21F9-4EAA-9125-25E8382F74B4}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.13647751450267,
+          44.955720584423844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 88,
+        "Station": "Hamline Ave",
+        "X": -93.156832,
+        "Y": 44.955699,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{13EC8B5C-A799-4188-9464-28CB5E57E5FE}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.15683204389892,
+          44.95569933744954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 89,
+        "Station": "Stadium Village",
+        "X": -93.222875,
+        "Y": 44.974775,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{75754603-1DE1-4EFB-821D-9015090B703F}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.22287491450055,
+          44.97477512682144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 90,
+        "Station": "East Bank",
+        "X": -93.233577,
+        "Y": 44.973649,
+        "Name": "Central Corridor",
+        "Type": "Light Rail",
+        "Transitway": "Green Line",
+        "GlobalID": "{84ACC544-9111-42D0-AB9C-98E14C0F8741}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.23357733433627,
+          44.97364898727511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 91,
+        "Station": "Warehouse District",
+        "X": -93.273031,
+        "Y": 44.979989,
+        "Name": "Existing - Shared",
+        "Type": "Light Rail",
+        "Transitway": "Blue / Green",
+        "GlobalID": "{A054C4E9-4A74-45D3-8B1C-85BDA5287FB7}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.27303129911182,
+          44.979988682784196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 92,
+        "Station": "Nicollet Mall",
+        "X": -93.26995,
+        "Y": 44.978583,
+        "Name": "Existing - Shared",
+        "Type": "Light Rail",
+        "Transitway": "Blue / Green",
+        "GlobalID": "{AE9F491E-E327-444E-9A40-0F240860F2B8}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.2699498510862,
+          44.97858266525567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 93,
+        "Station": "Government Plaza",
+        "X": -93.265849,
+        "Y": 44.976813,
+        "Name": "Existing - Shared",
+        "Type": "Light Rail",
+        "Transitway": "Blue / Green",
+        "GlobalID": "{85FB4141-EDA0-458C-BF07-AAB5CDBDAFB4}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.26584879324817,
+          44.976812584841944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 94,
+        "Station": "Downtown East / Metrodome",
+        "X": -93.259907,
+        "Y": 44.974971,
+        "Name": "Existing - Shared",
+        "Type": "Light Rail",
+        "Transitway": "Blue / Green",
+        "GlobalID": "{CED76F3E-6ACA-42AF-B560-A46B1A94FD28}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.25990678257313,
+          44.97497079779636
+        ]
+      }
+    }
+  ]
+}

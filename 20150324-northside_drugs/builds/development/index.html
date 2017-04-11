@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Where do those arrested for drugs in North Minneapolis live?</title>
+  <meta name="description" content="Where do those arrested for drugs in North Minneapolis live?">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="css/style.css">
+
+<body>
+
+<div id="wrapper">
+<button id="all" class="myButton2">All</button>
+<button id="narc" class="myButton2">Narcotics</button>
+<button id="mj" class="myButton2">Marijuana</button>
+<button id="median" class="myButton2">Income</button>
+<div id="map"><svg width="630" height="600" viewBox="0 0 630 600" preserveAspectRatio="xMidYMid"></svg></div>
+
+<div class='legend' id="leg"> <nav class='legend clearfix'>   <span style='background:#fff;'>Less</span>   <span style='background:#c7e9c0;'></span>   <span style='background:#74c476;'></span>   <span style='background:#006d2c'></span>   <span style='background:#002911'></span>   <span style='background:#fff;'>Most</span></nav>
+</div>
+
+<a href="javascript:void(0);" class="zoom">Reset View</a>
+
+<p style="padding:2px;clear:both;"></p>
+<div id="nerdbox">
+
+<div id="rightside">
+<div id="infobox"></div>
+
+</div>
+
+<div id="chart"><svg></svg></div>
+</div>
+
+</div>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/nv.d3.min.js"></script>
+
+<script src="js/script.js"></script>
+</body> 
+</html>

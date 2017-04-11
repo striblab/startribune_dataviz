@@ -7,13 +7,13 @@
 	$shareImage = "http://stmedia.startribune.com/images/bike-blog.png";
 ?>
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<script src="js/d3.v3.min.js" charset="utf-8"></script>
+<script src='js/leaflet-omnivore.min.js'></script>
 <script src="js/d3.slider-master/d3.slider.js"></script>
 <script src="js/waypoints/lib/noframework.waypoints.min.js"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+<script src='js/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
-<link rel="stylesheet" href="js/d3.slider-master/d3.slider.css" />
+
 
     <script type="text/javascript">
     if( typeof window.console === 'undefined' ) {
@@ -36,7 +36,8 @@ return false;
 }
 </script>
   
-  <link rel="stylesheet" href="../_common_resources/styles/startribune_dataviz_styles.css" />
+  <link rel="stylesheet" href="css/startribune_dataviz_styles.css" />
+ <link rel="stylesheet" href="js/d3.slider-master/d3.slider.css" />
 
 <style type="text/css">	
 
@@ -554,19 +555,19 @@ var waypoint = new Waypoint({
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiODRHdjBSWSJ9.lF4ymp-69zdGvZ5X4Tokzg';
 var map = L.mapbox.map('map', 'mapbox.light').setView([30.7890, -84.7815],6);
 
-var leg1 = L.mapbox.featureLayer()
-    .loadURL('tex.geojson')
-    .addTo(map);
-var leg2 = L.mapbox.featureLayer()
-    .loadURL('sd.geojson')
-    .addTo(map);
+// var leg1 = L.mapbox.featureLayer()
+//     .loadURL('shapefiles/tex.geojson')
+//     .addTo(map);
+// var leg2 = L.mapbox.featureLayer()
+//     .loadURL('shapefiles/sd.geojson')
+//     .addTo(map);
 
 var bikeDude;
 var spot;
 </script>
 <script>
 <?php
-$jsonData = file_get_contents("https://script.googleusercontent.com/a/macros/umn.edu/echo?user_content_key=ccuHergCzNM5prs1468cqo7tJktA0_QXfGRxBLAFHhroUglt1gCBOQFT_4csXlCbMsk_XuyF3UJR3gfCVoRkA02yTZlz4NNTOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMi80zadyHLKASbbMAF6orU02DLGwV8tFzfspDFzQK6GrLM0eoOZ5TIOnqTxsArftO2Po860f-NZwzK-lIuPz36z08hnCfeSab4KwLvAsU0j-LiAXVloloiUAy7e3y2snJuMzfiZ6VcD_L_B4PaW-7gvB6hEsk2j4gZ0b2s6wiAu4sq7x9Ad11ursOF32aUKnl&lib=MMrwE3mIeiG43FmGAYlH5YDbZ7jG6IkQL");
+$jsonData = file_get_contents("./data/blog.json");
 $phpArray = json_encode(array($jsonData));
 ?>
 
@@ -578,8 +579,6 @@ scrubInit(0);
 
 function scrubInit(i){
 //$.getJSON(jsonStuff, function( data ) {
-
-
 
 $("#slider").empty();
 

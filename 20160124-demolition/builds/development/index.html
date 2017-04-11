@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Minneapolis Teardowns</title>
+  <meta name="description" content="Minneapolis Teardowns">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nv.d3.min.css">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div class="breaker"></div>
+
+<div id="sliderDiv"><div id="slider"></div></div>
+<div class="breaker"></div>
+<div id="back">&lt;&lt; prev year</div><div id="forward">next year &gt;&gt;</div>
+
+  <div class="breaker"></div>
+
+<div id='map'></div>
+
+<div id="right_rail">
+<div id="nerdbox">
+  <div id='nb_title'>Minneapolis</div> <div id="thisYear">2002-2015</div>
+
+   <div class="breaker"></div>
+
+<div class="legend_title">Teardowns</div>
+<div id="total" class="bigNum">0</div>
+
+   <div class="breaker"></div>
+
+    <div class="legend_title">Toggle map displays</div>
+     <div class="breaker"></div>
+
+      <div class="btn-group" id="menu_main" data-toggle="buttons">
+      <label class="btn btn-primary" id="demo_toggle" >
+        <input type="checkbox" name="options" id="state1" checked>Not Rebuilt
+      </label>
+      <label class="btn btn-primary" id="rebuild_toggle">
+        <input type="checkbox" name="options" id="state2" checked>Rebuilt
+      </label>
+      <label class="btn btn-primary" id="tornado_toggle">
+        <input type="checkbox" name="options" id="state3">Tornado
+      </label>
+    </div>
+
+  <div class="breaker"></div>
+
+  <div id="teardownsNum" class="num">0</div>
+  <div id="rebuildsNum" class="num">0</div>
+  <div id="tornadoOn" class="num">2011 tornado damage off</div>
+  <div id='parcelPct' class="num">0%</div>
+  
+ <div class="breaker"></div>
+
+ <div class="legend_title">Teardowns <span class="rebuild">rebuilt</span> and <span class="teardown">not rebuilt</span> by year</div>
+ <div id="chart"><svg></svg></div>
+
+
+</div>
+
+<div class="breaker"></div>
+
+<div class="legend_title">Accumulated teardowns <span class="teardown">not rebuilt</span> by region</div>
+<div class="breaker"></div>
+
+<div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary active" id="parcels_toggle">
+        <input type="checkbox" name="options">Communities
+      </label>
+     <label class="btn btn-primary" id="nb_toggle">
+        <input type="checkbox" name="options">Neighborhoods
+      </label>
+</div>
+
+<div class="breaker"></div>
+
+<div id="legendContainer">
+<div id="quantize">
+<span class='legend'>
+  <nav class='legend clearfix'>
+    <span style='background:#fff;'>Less</span>
+    <span style='background:#E65B68;'></span>
+    <span style='background:#AD1624;'></span>
+    <span style='background:#8D020F;'></span>
+    <span style='background:#64000A;'></span>
+    <span style='background:#fff;'>More</span>
+  </nav>
+</span>
+</div>
+
+<a href='javascript:void(0);' class='zoom'>Reset View</a>
+</div>
+
+<div class="breaker"></div>
+
+</div>
+</div>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/nv.d3.min.js"></script>
+<script src="js/d3.slider.js"></script>
+<script src="js/mapbox.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

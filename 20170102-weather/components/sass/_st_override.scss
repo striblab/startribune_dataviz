@@ -1,0 +1,48 @@
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
+    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
+    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
+    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
+    .mapboxgl-ctrl-attrib { display:none; }
+    .play { background-color:#fff !important; color:#000; }
+    .pause { background-color:#333 !important; color:#fff; }
+    #diverse { color:#299129; }
+ 
+    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
+    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
+    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
+    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
+    .previous { float:left; }
+    .next { float:right; }
+
+    #tracker { padding-top:10px; text-align:center; }
+    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
+    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
+    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
+    .legendContainer { text-align:center; }
+
+    #geocoder-container { width:100%; margin-top:10px; }
+    #geocoder-container > div { min-width:100%; margin-left:0; }
+    .chatter span { padding:5px; }
+
+    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+
+    .chatter { padding:20px; }  
+
+    p { font-family:$bentonSans; }  
+
+    #info { display:none; }
+
+    .zoom { text-align:center; float:none !important; }
+    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
+    .bigNum { display:inline-block; width:32%;  }
+
+    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
+    .marker-title { font-weight: 700; }
+
+    @media (max-width:500px) {
+      #map { position:static; height:400px; }
+      .map-overlay-container { width:100%; position:static; }
+      .bottom { position:static; width:100%; clear:both; }
+    }

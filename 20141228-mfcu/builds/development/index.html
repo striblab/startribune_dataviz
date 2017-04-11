@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Medicare Fraud Unit Seizures</title>
+  <meta name="description" content="Medicare Fraud Unit Seizures">
+  <meta name="author" content="Jeff Hargarten - StarTribune">
+
+  <link rel="stylesheet" href="css/style.css">
+
+<body>
+
+<div id="wrapper">
+<div id="tooltip"></div>
+
+<button id="reset" class="myButton" onclick="reset()">By State</button>
+<button id="sort" class="myButton" onclick="sortBars()">By Amount</button>
+
+<div class="chatter">Civil and criminal recoveries from Medicaid fraud cases in 2013, among states that recovered more than $5 million.</div>
+
+<div id="chart"><svg width="900" height="250"
+  viewBox="0 0 900 250"
+  preserveAspectRatio="xMidYMid"></svg></div>
+<div class="chatter" id="mc_chatter">Total 2013 Medicaid expenditures for those same states, in billions.</div>
+<div class="chatter" id="map_chatter">Total civil and criminal recoveries from Medicaid fraud cases all amounts for 2013.</div>
+<div id='legend'>
+  <nav class='legend clearfix'>
+    <span style='background:#fff;'>$390k</span>
+    <span style='background:#6c7f8c;'></span>
+    <span style='background:#4f5c65;'></span>
+    <span style='background:#404b52;'></span>
+    <span style='background:#31393f;'></span>
+    <span style='background:#22282c;'></span>
+    <span style='background:#131719;'></span>
+    <span style='background:#040506;'></span>
+    <span style='background:#fff;'>$1.0b</span>
+    </nav>
+</div>
+<p style="clear:both;"></p>
+<div class="chatter">&nbsp;</div>
+
+<div id="map2"><svg width="900" height="700" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid"></svg></div>
+<div id="map"><svg width="900" height="700" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid"></svg></div>
+
+</div>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="./js/d3.tip.v0.6.3.js"></script>
+
+<script src="js/script.js"></script>
+</body>
+</html>
