@@ -1,0 +1,244 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><title>Tracking Claims to Prince's Estate</title><meta name=description content="Tracking Claims to Prince's Estate"><meta name=author content="Frey Hargarten - StarTribune"><link rel=stylesheet href=../_common_resources/styles/startribune_dataviz_styles.css><style>
+       body { font-family:"Benton Sans",Helvetica,Arial,sans-serif; }
+        .button { padding:10px; display:inline-block; text-align:center; width:100%; background-color:#fff; font-weight:900; font-family:"Benton Sans",Helvetica,Arial,sans-serif; border:1px solid black; }
+       .button:hover, .selected, .th:hover { background-color:#7F587C !important; color:#fff !important; cursor:pointer;  }
+        .selected2 { background-color:#aaa !important; color:#fff !important; cursor:pointer;  }
+       .button { float:left; }
+       .person { background-color:#ddd; }
+
+       #filterBox { float:right; position:fixed; width:300px; }
+       #resultsBox { float:right; width:70%; display:none; }
+       #contactsBox { float:right; width:70%; }
+       #editbox, #tree, #timeline { float:right; width:70%; display:none; }
+
+       #resultsBox .profile { border-bottom:1px solid #ddd; }
+       #resultsBox .name { font-weight:900; font-size:1.5em; }
+       #resultsBox .chatter { padding:20px; }
+       .profile { padding:20px; }
+       h3 { margin-top:7px; }
+       .connected:hover { color:#000; cursor:pointer; }
+       iframe { width:100%; height:750px; }
+
+       td { word-wrap: break-word !important; overflow-wrap: break-word !important; word-break:break-word !important; word-wrap:break-word !important; hyphens:auto !important; }
+ 
+        #filter { font-family:"Benton Sans"; font-size:.9em; margin:5px; }
+        #filter input { width: 100% !important; padding: 0 10px 0 10px; font-family:"Benton Sans"; border-radius:0 !important; margin:0; width:100%; height:30px; line-height:120%; font-size: 1em; -webkit-appearance: none;
+          -webkit-border-radius:0; border-radius:0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); color: rgba(0,0,0,0.75);  -webkit-transition: all 0.30s ease-in-out; -moz-transition: all 0.30s ease-in-out; -ms-transition: all 0.30s ease-in-out; -o-transition: all 0.30s ease-in-out; background-color: #fff !important; font-family: inherit; border: 1px solid #eee !important; 
+          background-size: 14px 14px;
+          background-repeat: no-repeat; 
+          background-position: 98% 50%; }
+        #filter input:focus { width: 100% !important; font-family:"Benton Sans"; box-shadow: 0 0 5px #999; padding: 1px 10px 1px 10px; border: 1px solid #61bd1a; }
+
+        .contactRow { font-size:1em !important; font-weight:normal !important; display:block; border-bottom:1px solid #ddd; word-wrap:break-word !important; }
+        .contactRow td { width:100px; padding:10px; clear:both; word-wrap:break-word !important; text-align:center; }
+        .contactHeader { font-size:1em !important; font-weight:normal !important; display:block; }
+        .contactHeader th { width:100px; padding:10px; clear:both; font-weight:900; word-wrap:break-word !important;  }
+
+        #timeline { border-left:3px solid #333; }
+        .time { padding:20px; }
+        .event { font-weight:900; font-size:1.2em; }
+        .notes { padding:7px; }
+
+      @media (max-width:500px) {
+       #filterBox { float:none; position:static; width:100%; }
+       #resultsBox { float:none; width:100%; }
+       }
+  </style></head><body><div id=wrapper><div id=filterBox><div id=filter><input type=search id=filter_box placeholder="Search by keyword"></div></div><div id=resultsBox></div><div id=tree><iframe src="https://docs.google.com/drawings/d/1JEqPCqI19Iyg1gS9mfOtcELOz2BrlSnH3VDWGMy_vhU/edit?usp=sharing"></iframe></div><table id=contactsBox><tr class=contactHeader><th class=th data=name>Name</th><th class=th data=occupation>Occupation</th><th class=th data=relation>Relation</th><th class=th data=email>Email</th><th class=th data=phone>Phone</th><th class=th data=other>Other</th><th class=th data=contacted>Contacted?</th><th class=th data=other_media>Other Media</th><th class=th data=notes>Notes</th></tr></table><div id=editbox><iframe src="https://docs.google.com/spreadsheets/d/16gGTey1QC4Rui7SHF6nBgyrfhLAlzJoVLSkv6vCVvbI/edit?usp=sharing"></iframe></div><div id=timeline></div></div></body><script src=//code.jquery.com/jquery-latest.js></script><script src=http://d3js.org/d3.v3.min.js></script><script>
+//LIVE JSON MAGIC
+
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=strikes
+//https://script.google.com/macros/s/AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu/exec?id=1cJMavlb8PBBlbRngyzmZaG5A0yjltFwhGw0KDOC91vA&sheet=airports
+
+d3.json("./data/profiles.json", function(error, dataLoad) {
+d3.json("./data/contacts.json", function(error, dataLoadContacts) {
+d3.json("./data/timeline.json", function(error, dataLoadTime) {
+
+var data = dataLoad.profiles;
+var dataContacts = dataLoadContacts.contacts;
+var dataTime = dataLoadTime.timeline;
+
+
+function tableSort(container,party,data,col,sorted){
+   
+  d3.select(container).selectAll(".contactRow").sort(function(a, b) {
+          if (col == "name") { 
+        if (sorted == "descend") { return d3.descending(a.name, b.name); }
+        if (sorted == "ascend") { return d3.ascending(a.name, b.name); }
+     }
+          if (col == "occupation") { 
+        if (sorted == "descend") { return d3.descending(a.occupation, b.occupation); }
+        if (sorted == "ascend") { return d3.ascending(a.occupation, b.occupation); }
+     }
+           if (col == "relation") { 
+        if (sorted == "descend") { return d3.descending(a.relation, b.relation); }
+        if (sorted == "ascend") { return d3.ascending(a.relation, b.relation); }
+     }
+           if (col == "email") { 
+        if (sorted == "descend") { return d3.descending(a.email, b.email); }
+        if (sorted == "ascend") { return d3.ascending(a.email, b.email); }
+     }
+           if (col == "phone") { 
+        if (sorted == "descend") { return d3.descending(a.phone, b.phone); }
+        if (sorted == "ascend") { return d3.ascending(a.phone, b.phone); }
+     }
+           if (col == "other") { 
+        if (sorted == "descend") { return d3.descending(a.other, b.other); }
+        if (sorted == "ascend") { return d3.ascending(a.other, b.other); }
+     }
+           if (col == "contacted") { 
+        if (sorted == "descend") { return d3.descending(a.contacted, b.contacted); }
+        if (sorted == "ascend") { return d3.ascending(a.contacted, b.contacted); }
+     }
+           if (col == "other_media") { 
+        if (sorted == "descend") { return d3.descending(a.other_media, b.other_media); }
+        if (sorted == "ascend") { return d3.ascending(a.other_media, b.other_media); }
+     }
+           if (col == "notes") { 
+        if (sorted == "descend") { return d3.descending(a.notes, b.notes); }
+        if (sorted == "ascend") { return d3.ascending(a.notes, b.notes); }
+     }
+    })
+    .transition().duration(500);
+}
+
+function buildButtons(){
+
+ // d3.select("#filterBox").selectAll(".button")
+ //  .data(data).enter().append("div")
+ //  .attr("class","button person")
+ //  .attr("data",function(d){ return d.id; })
+ //  .html(function(d){ return d.name; });
+
+  $("#filterBox").append('<div class="breaker"></div><div class="button page selected" data="contacts">Contacts</div>');
+  $("#filterBox").append('<div class="button page" data="profiles">Profiles</div>');
+  $("#filterBox").append('<div class="button page" data="timeline">Timeline</div>');
+  $("#filterBox").append('<div class="button page" data="tree">Tree</div>');
+  $("#filterBox").append('<div class="button page" data="edit">Edit</div><div class="breaker"></div>');
+  $("#filterBox").append('<p></p><div class="button selected2 sort" data="all">All</div>');
+  $("#filterBox").append('<div class="button sort" data="family">Family</div>');
+  $("#filterBox").append('<div class="button sort" data="circle">Inner Circle</div>');
+  $("#filterBox").append('<div class="button sort" data="musician">Musicians</div>');
+
+  $(".page").click(function() {
+    $(".page").removeClass("selected");
+    $(this).addClass("selected");
+    if ($(this).attr("data") == "contacts") { $(".profile").show(); $("#resultsBox, #editbox, #tree, #timeline").hide(); $("#contactsBox").show(); }
+    else if ($(this).attr("data") == "profiles") { $("#resultsBox").show(); $("#contactsBox, #editbox, #tree, #timeline").hide(); }
+    else if ($(this).attr("data") == "edit") { $("#editbox").show(); $("#resultsBox, #contactsBox, #tree, #timeline").hide(); }
+    else if ($(this).attr("data") == "tree") { $("#tree").show(); $("#resultsBox, #contactsBox, #timeline, #editbox").hide(); }
+    else if ($(this).attr("data") == "timeline") { $("#timeline").show(); $("#resultsBox, #contactsBox, #tree, #editbox").hide(); }
+  });
+  $(".sort").click(function() {
+    $(".sort").removeClass("selected2");
+    $(this).addClass("selected2");
+    $(".profile, .contactRow").hide();
+    if ($(this).attr("data") == "all") { $(".profile, .contactRow").show(); }
+    else { $("." + $(this).attr("data")).show(); }
+  });
+  $(".person").click(function() {
+    $(".person, .page, .sort").removeClass("selected, selected");
+    $(this).addClass("selected");
+    $(".profile").hide();
+    $("#editbox").show(); $("#resultsBox, #contactsBox").hide();
+  });
+}
+
+function buildProfiles(){
+ d3.select("#resultsBox").selectAll(".profile")
+  .data(data).enter().append("div")
+  .attr("class",function(d) { return "profile " + d.id + " "  + d.group; })
+  .html(function(d){ 
+    var addressString = d.address + ", " + d.city + ", " + d.state + " " + d.zip;
+    var connections = String(d.connections).split(",");
+    var documents = String(d.document_names).split(",");
+    var documentURLs = String(d.document_urls).split(",");
+
+    var connectionsString = "";
+    var documentsString = "";
+
+    for (var i=0; i < connections.length; i++){
+      connectionsString += "<div class='connected'>" + connections[i] + "</div>";
+    }
+    
+    for (var i=0; i < documents.length; i++){
+      documentsString += "<div class='linkage'><a target='new_' href='" + documentURLs[i] + "'>" + documents[i] + "</a></div>";
+    }
+
+      return "<div class='photo'><img src='" + d.photo + "' /></div><div class='name'>" + d.name + "</div><div class='stat dob'>DOB: " + d.dob + "</div><div class='stat age'>Age: " + d.age + "</div><div class='stat occupation'>Occupation: " + d.occupation + "</div><div class='stat relation'>Relation to deceased: " + d.relation + "</div><div class='stat relation'>Address: <a href='http://maps.google.com/?q=" + addressString + "' target='new_'>" + addressString + "</a></div><div class='stat gender'>Gender: " + d.gender + "</div><div class='stat gender'>Group: " + d.group + "</div><div class='stat email'>Email: " + d.email + "</div><div class='stat phone'>Phone: " + d.phone + "</div><div class='stat other'>Other Contact: " + d.other_contact + "</div><div class='chatter'>Notes: " + d.notes + "</div><a href='" + d.accurant_profile + "' class='accurant' target='new_'>Accurant Profile</a><div class='connections'><h3>Connections</h3>" + connectionsString + "</div><div class='documents'><h3>Documents</h3>" + documentsString + "</div>"
+ });
+
+    $( document ).ready(function() {
+
+     $('#filter_box').keyup(function(i){
+        $('.profile, .contactRow').hide();
+        $(".button").removeClass("selected");
+        var txt = String($('#filter_box').val());
+        $('.profile, .contactRow').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+           }
+        });
+        var count = $('.item:visible').length;
+        // $('.results').show();
+        // $('.results').html(count);
+    });
+
+ $(".connected").click(function() {
+        $(".button").removeClass("selected");
+        $('.profile').hide();
+        var txt = String($(this).text());
+        $('.name').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).parent().show();
+           }
+        });
+        var count = $('.item:visible').length;
+        // $('.results').show();
+        // $('.results').html(count);
+    });
+
+});
+}
+
+function spitContacts(){
+  d3.select("#contactsBox").selectAll(".contactRow")
+  .data(dataContacts).enter().append("tr")
+  .attr("class",function(d) { return "contactRow " + d.id + " "  + d.group; })
+  .html(function(d){ 
+    var addressString = d.address + ", " + d.city + ", " + d.state + " " + d.zip;
+
+      return "<td class='name'>" + d.name + "</td><td class='stat occupation'>" + d.occupation + "</td><td class='stat relation'>" + d.relation + "</td><td class='stat email'>" + d.email + "</td><td class='stat phone'>" + d.phone + "</td><td class='stat other'>" + d.other_contact + "</td><td class='stat media'>" + d.contacted + "</td><td class='stat media'>" + d.other_media + "</td><td class='stat notes'>" + d.notes + "</td>"
+ });
+
+$(".th").click(function() {
+  $(".th").removeClass("selected");
+  $(this).addClass("selected");
+  if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
+  else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
+  tableSort("#contactsBox","prince",dataContacts,$(this).attr("data"),sorted);
+});
+
+}
+
+function spitTimeline(){
+  d3.select("#timeline").selectAll(".time")
+  .data(dataTime).enter().append("div")
+  .attr("class",function(d) { return "time"; })
+  .html(function(d){ 
+    if (d.time != null){ var time = d.time; }
+    else { var time = ""; }
+    var datestring = new Date(d.date).getFullYear() + "-" + (Number(new Date(d.date).getMonth()) + 1) + "-" + new Date(d.date).getDate();
+
+      return "<div class='event'>" + d.event + "</div><div class='date'>" + datestring + "</div><div class='notes'>" + d.notes + "</div>";
+ });
+}
+
+buildButtons();
+buildProfiles();
+spitContacts();
+spitTimeline();
+
+});
+});
+});
+</script></html>

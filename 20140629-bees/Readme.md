@@ -1,7 +1,7 @@
 Star Tribune - Bees Project Maps
 ================
 
-by Jeff Hargarten
+by Frey Hargarten
 
 Built using [Tilemill](https://github.com/mapbox/tilemill) and [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.2/).
 
