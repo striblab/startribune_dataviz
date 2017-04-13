@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+
+        <title>Party Mode :: An audio visualizer experiment.</title>
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="icomoon/style.css">
+        <link rel="stylesheet" href="css/style.css">
+
+<!--         <script src="https://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></script> -->
+<!--         <script src="bower_components/underscore/underscore.js"></script> -->
+<!--         <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script> -->
+        <script src="js/d3.js"></script>
+        <script src="js/d3.hexbin.v0.min.js?5c6e4f0"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/mousetrap.js"></script>
+        <script src="js/id3-minimized.js"></script>
+        <script src="js/main.js"></script>
+        <script src="//connect.soundcloud.com/sdk.js"></script>
+        
+
+
+ <!--        <script> $(document).ready(function() { App.init(); }); </script> -->
+    </head>
+
+    <body>
+        <div id="dragover" class="dragover"></div>
+        <div id="tooltip" class="tooltip"></div>
+        <div class="md-modal md-effect-1" id="modal-about">
+            <div class="md-content">
+                <!-- <h3>Credits</h3> -->
+                <div style='line-height: 23px;'>
+                    <i class="icon-headphones"></i>
+                    <p>Party Mode is an audio visualizer experiment powered by <a target='_blank' href='http://d3js.org'>d3.js</a> and the <a target='_blank' href='http://www.w3.org/TR/webaudio/'>web audio api</a>.  This is a work-in-progress and likely has lots of critical bugs!  It requires a modern browser (preferably Chrome) and a decent CPU.  This app was developed by <a target='_blank' href='http://preziotte.com'>Mathew Preziotte</a> with lots of <a target='_blank' href='https://github.com/preziotte/party-mode#help--inspiration'>help and inspiration</a>.<br /><br />
+
+                    Try dragging an mp3 from your desktop into the browser, or press <a href="#" class="key" style='color: black;'><span>K</span></a> for keyboard shortcuts.<br /><br />
+
+                    For a list of known issues -- to help improve this experiment -- or to download and run this app locally, visit the <a target='_blank' href='https://github.com/preziotte/party-mode'>Github</a> page.  Questions, comments and hugs can be directed <a target='_blank' href='mailto:mat.preziotte@gmail.com'>here</a>.  Thanks for looking :)  I had a lot of fun building this.<br /><br />
+                    <div style='text-align: right;'>- Mat</div>
+                    </p>
+
+                    <button class="md-close">dismiss</button>
+                </div>
+            </div>
+        </div>
+        <div class="md-modal md-effect-1" id="modal-keyboard">
+            <div class="md-content">
+                <!-- <h3>Keyboard Shortcuts</h3> -->
+                <div>
+                    <i class="icon-keyboard"></i>
+                    <ul>
+                        <li>
+                            <a href="#" class="key"><span>1</span></a> through <a href="#" class="key"><span>7</span></a> selects a visualization
+                        </li>                        
+                        <li>
+                            <a href="#" class="key" style='width: 58px;'><span>space</span></a> play / pause</a>
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>f</span></a>ull screen</a>
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>m</span></a>enu</a>
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>c</span></a>hange song</a>
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>r</span></a>andomize next song in playlist</a>
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>l</span></a>oop</a> random colors and visualizers
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>&#9650;</span></a><a href="#" class="key"><span>&#9660;</span></a> cycles vizualization</a>
+                        </li>
+                        <li>
+                            <a href="#" class="key"><span>&#9664;</span></a><a href="#" class="key"><span>&#9654;</span></a> cycles color palettes</a>
+                        </li>
+
+                    </ul>
+                    <button class="md-close">dismiss</button>
+                </div>
+            </div>
+        </div>
+        <div class="md-modal md-effect-1" id="modal-soundcloud">
+            <div class="md-content">
+                <h3>Play Audio via SoundCloud*</h3>
+                <div style='line-height: 23px;'>
+                <span style='margin-top: -35px; display: block; font-family: helvetica neue;'>*Only works in Chrome at the moment</span>
+                <i id='sc_icon' class="icon-soundcloud"></i>
+                    <p>
+                        <br />
+
+                        Simply paste in a link to a <a href='http://soundcloud.com'>SoundCloud</a> artist, track, or playlist and click import:<br />
+
+                         <input id='sc_input' placeholder='ex. https://soundcloud.com/mydevices/launch'>
+                         <button class="sc_import">import audio</button>
+
+                        <br /><br />
+
+                        You can also share it with the following URL:
+
+                        <pre id='sc_url' style='word-wrap: break-word; text-align: center;'>http://preziotte.com/partymode?sc=<span>SOUNDCLOUD_URL</span></pre>
+
+                    </p>
+
+                    <button class="md-close">dismiss</button>
+                </div>
+            </div>
+        </div>
+        <div class='menu menu-open'>
+            <ul>
+                <li id='circle' viz-num='0' class='active'><div class='clicker'></div></li>
+                <li id='chop' viz-num='1'><div class='clicker'></div></li>
+                <li id='icosahedron' viz-num='2'><div class='clicker'></div></li>
+                <li id='grid' viz-num='3'><div class='clicker'></div></li>
+                <li id='equal' viz-num='4'><div class='clicker'></div></li>
+                <li id='spin' viz-num='5'><div class='clicker'></div></li>
+                <li id='hexbin' viz-num='6'><div class='clicker'></div></li>
+<!--            <li id='voronoi' viz-num='7'></li> -->
+                <li class='buffer'>RETURN TO<br />preziotte.com</li>
+
+            </ul>
+        </div>
+
+        <div class='wrapper'>
+           <div class='vinyl-container'><i class="icon-vinyl"></i></div>
+
+            <div id="mp3_player" class='fade'>
+                <div id="audio_box"></div> <i id='fullscreen' class="icon-resize-full-alt"></i>
+            </div>
+
+            <div id='progressBar' class='progressBar'></div>
+            <div class='song-metadata'></div>
+            <div class='menu-controls'>
+                <i class="i icon-backward2"></i> 
+                <i class="i icon-pause"></i> 
+                <i class="i icon-forward2"></i> 
+                <i class="i icon-soundcloud schover" data-hovertext='Play music from a SoundCloud URL.'></i> 
+                <i class="i icon-microphone" data-hovertext='Connect to the microphone on your computer.' data-hovertext-no-ssl='Please switch to a secure https:// connection and try again'></i> 
+            </div>
+
+            <div class='menu-wide'>
+
+                <div class='options'>
+                    <i class="i icon-menu"></i>
+                    <i class="i icon-question"></i> 
+                    <i class="i icon-keyboard2"></i> 
+                    <i class="i icon-loop-on"><span>randomize visualization: <b>off</b></span></i> 
+<!--                     <i class="i icon-volume-medium"></i> -->
+                    <i class="i icon-github2"></i> 
+                    <i class="i icon-expand"></i> 
+                </div>
+
+                <div class="slider slider-volume"><span>adjust volume</span>
+                    <input min="0" max="100" value="100" id='slider-volume' type="range">
+                </div>
+                <div class="slider"><span>adjust sensitivity</span>
+                    <input min="1" max="100" value="20" id='slider' type="range">
+                </div>
+
+                <div class="dotstyle dotstyle-scaleup">
+                    <ul>
+                        <li class="current"><a class='zero' href="#">0</a></li>
+                        <li><a class='one' href="#">1</a></li>
+                        <li><a class='two' href="#">2</a></li>
+                        <li><a class='three' href="#">3</a></li>
+                        <li><a class='four' href="#">4</a></li>
+                        <li><a class='five' href="#">5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

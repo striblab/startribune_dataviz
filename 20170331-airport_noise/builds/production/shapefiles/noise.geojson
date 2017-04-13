@@ -1,0 +1,668 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.31881993,44.92870018 ]
+    },
+    "properties": {
+    "id":1,
+    "city":"Minneapolis",
+    "address":"Xerxes Ave. & 41st St.",
+    "time_over65":-152353,
+    "time_over80":-2183,
+    "time_over90":-26,
+    "time_over100":0,
+    "noise":859638
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29503007,44.92502019 ]
+    },
+    "properties": {
+    "id":2,
+    "city":"Minneapolis",
+    "address":"Fremont Ave. & 43rd St.",
+    "time_over65":-94415,
+    "time_over80":-3742,
+    "time_over90":-53,
+    "time_over100":0,
+    "noise":932406
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28062996,44.91025999 ]
+    },
+    "properties": {
+    "id":3,
+    "city":"Minneapolis",
+    "address":"West Elmwood St. & Belmont Ave.",
+    "time_over65":-236725,
+    "time_over80":-34245,
+    "time_over90":-313,
+    "time_over100":2,
+    "noise":1284560
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26517977,44.91610989 ]
+    },
+    "properties": {
+    "id":4,
+    "city":"Minneapolis",
+    "address":"Park Ave. & 48th St.",
+    "time_over65":-320859,
+    "time_over80":-29524,
+    "time_over90":-503,
+    "time_over100":-3,
+    "noise":1132763
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25779967,44.89791982 ]
+    },
+    "properties": {
+    "id":5,
+    "city":"Minneapolis",
+    "address":"12th Ave. & 58th St.",
+    "time_over65":-645495,
+    "time_over80":-111268,
+    "time_over90":-28654,
+    "time_over100":-216,
+    "noise":2148438
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23618978,44.89985973 ]
+    },
+    "properties": {
+    "id":6,
+    "city":"Minneapolis",
+    "address":"25th Ave. & 57th St.",
+    "time_over65":-950943,
+    "time_over80":-116970,
+    "time_over90":-43093,
+    "time_over100":-425,
+    "noise":2107108
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28066014,44.88701999 ]
+    },
+    "properties": {
+    "id":7,
+    "city":"Richfield",
+    "address":"Wentworth Ave. & 64th St.",
+    "time_over65":-81877,
+    "time_over80":-14759,
+    "time_over90":-863,
+    "time_over100":0,
+    "noise":798011
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24605025,44.92513016 ]
+    },
+    "properties": {
+    "id":8,
+    "city":"Minneapolis",
+    "address":"Longfellow Ave. & 43rd St.",
+    "time_over65":-222831,
+    "time_over80":-10738,
+    "time_over90":-231,
+    "time_over100":0,
+    "noise":334681
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16445008,44.9233599 ]
+    },
+    "properties": {
+    "id":9,
+    "city":"St. Paul",
+    "address":"Saratoga St. & Hartford Ave.",
+    "time_over65":-4289,
+    "time_over80":-438,
+    "time_over90":-47,
+    "time_over100":-1,
+    "noise":5502
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.18878253,44.90686243 ]
+    },
+    "properties": {
+    "id":10,
+    "city":"St. Paul",
+    "address":"Itasca Ave. & Bowdoin St.",
+    "time_over65":-1089,
+    "time_over80":-1309,
+    "time_over90":-593,
+    "time_over100":-10,
+    "noise":8540
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.18991967,44.9215997 ]
+    },
+    "properties": {
+    "id":11,
+    "city":"St. Paul",
+    "address":"Finn St. & Scheffer Ave.",
+    "time_over65":-3534,
+    "time_over80":-1094,
+    "time_over90":-285,
+    "time_over100":0,
+    "noise":3482
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16525005,44.90185998 ]
+    },
+    "properties": {
+    "id":12,
+    "city":"St. Paul",
+    "address":"Alton St. & Rockwood Ave.",
+    "time_over65":559,
+    "time_over80":-11,
+    "time_over90":0,
+    "time_over100":0,
+    "noise":4728
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.14933777,44.88407898 ]
+    },
+    "properties": {
+    "id":13,
+    "city":"Mendota Heights",
+    "address":"Southeast end of Mohican Court",
+    "time_over65":-62391,
+    "time_over80":-1090,
+    "time_over90":13,
+    "time_over100":0,
+    "noise":357471
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.14239025,44.85240005 ]
+    },
+    "properties": {
+    "id":14,
+    "city":"Eagan",
+    "address":"1st St. & McKee St.",
+    "time_over65":-462232,
+    "time_over80":-20359,
+    "time_over90":-736,
+    "time_over100":0,
+    "noise":1054432
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.14681839,44.87724207 ]
+    },
+    "properties": {
+    "id":15,
+    "city":"Mendota Heights",
+    "address":"Cullon St. & Lexington Ave.",
+    "time_over65":-119715,
+    "time_over80":-3507,
+    "time_over90":-117,
+    "time_over100":0,
+    "noise":435146
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16489043,44.85521423 ]
+    },
+    "properties": {
+    "id":16,
+    "city":"Eagan",
+    "address":"Avalon Ave. & Vilas Ln.",
+    "time_over65":-333754,
+    "time_over80":-57768,
+    "time_over90":-5394,
+    "time_over100":-10,
+    "noise":1109245
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27077016,44.85153973 ]
+    },
+    "properties": {
+    "id":17,
+    "city":"Bloomington",
+    "address":"84th St. & 4th Ave.",
+    "time_over65":-14897,
+    "time_over80":-2296,
+    "time_over90":-372,
+    "time_over100":0,
+    "noise":9544
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2504303,44.86729972 ]
+    },
+    "properties": {
+    "id":18,
+    "city":"Richfield",
+    "address":"75th St. & 17th Ave.",
+    "time_over65":-62385,
+    "time_over80":-6406,
+    "time_over90":-1489,
+    "time_over100":-17,
+    "noise":539430
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25170971,44.85150017 ]
+    },
+    "properties": {
+    "id":19,
+    "city":"Bloomington",
+    "address":"16th Ave. & 84th St.",
+    "time_over65":-191713,
+    "time_over80":-3009,
+    "time_over90":-139,
+    "time_over100":0,
+    "noise":231218
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27317007,44.86729972 ]
+    },
+    "properties": {
+    "id":20,
+    "city":"Richfield",
+    "address":"75th St. & 3rd Ave.",
+    "time_over65":-26674,
+    "time_over80":-817,
+    "time_over90":-33,
+    "time_over100":0,
+    "noise":16078
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.0639001,44.85257976 ]
+    },
+    "properties": {
+    "id":21,
+    "city":"Inver Grove Heights",
+    "address":"Barbara Ave. & 67th St.",
+    "time_over65":-113364,
+    "time_over80":-452,
+    "time_over90":0,
+    "time_over100":0,
+    "noise":68994
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.07607269,44.82641983 ]
+    },
+    "properties": {
+    "id":22,
+    "city":"Inver Grove Heights",
+    "address":"Anne Marie Trail",
+    "time_over65":-156419,
+    "time_over80":-1052,
+    "time_over90":-1,
+    "time_over100":0,
+    "noise":528422
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.159536,44.874239 ]
+    },
+    "properties": {
+    "id":23,
+    "city":"Mendota Heights",
+    "address":"End of Kenndon Ave.",
+    "time_over65":-235534,
+    "time_over80":-25270,
+    "time_over90":-5267,
+    "time_over100":-6,
+    "noise":804743
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.11878018,44.84154535 ]
+    },
+    "properties": {
+    "id":24,
+    "city":"Eagan",
+    "address":"Chapel Ln. & Wren Ln.",
+    "time_over65":-342787,
+    "time_over80":-5586,
+    "time_over90":-71,
+    "time_over100":0,
+    "noise":974882
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16221619,44.84134674 ]
+    },
+    "properties": {
+    "id":25,
+    "city":"Eagan",
+    "address":"Moonshine Park 1321 Jurdy Rd.",
+    "time_over65":831,
+    "time_over80":-811,
+    "time_over90":-10,
+    "time_over100":0,
+    "noise":396399
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.09942596,44.84989554 ]
+    },
+    "properties": {
+    "id":26,
+    "city":"Inver Grove Heights",
+    "address":"6796 Arkansas Ave. W.",
+    "time_over65":-230323,
+    "time_over80":-5394,
+    "time_over90":-30,
+    "time_over100":0,
+    "noise":179429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2989502,44.89846039 ]
+    },
+    "properties": {
+    "id":27,
+    "city":"Minneapolis",
+    "address":"Anthony School 5757 Irving Ave. S.",
+    "time_over65":-85346,
+    "time_over80":-6647,
+    "time_over90":-388,
+    "time_over100":-3,
+    "noise":372810
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25130463,44.88188553 ]
+    },
+    "properties": {
+    "id":28,
+    "city":"Richfield",
+    "address":"6645 16th Ave. S.",
+    "time_over65":-573049,
+    "time_over80":-13611,
+    "time_over90":-55,
+    "time_over100":1,
+    "noise":721191
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.22634888,44.92416763 ]
+    },
+    "properties": {
+    "id":29,
+    "city":"Minneapolis",
+    "address":"Ericsson Elem. School 4315 31st Ave. S.",
+    "time_over65":-112643,
+    "time_over80":-2115,
+    "time_over90":-3,
+    "time_over100":0,
+    "noise":218950
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23866272,44.84482956 ]
+    },
+    "properties": {
+    "id":30,
+    "city":"Bloomington",
+    "address":"8715 River Ridge Rd.",
+    "time_over65":99963,
+    "time_over80":-39905,
+    "time_over90":-3356,
+    "time_over100":0,
+    "noise":1210494
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25682831,44.83226776 ]
+    },
+    "properties": {
+    "id":31,
+    "city":"Bloomington",
+    "address":"9501 12th Ave. S.",
+    "time_over65":26625,
+    "time_over80":-1102,
+    "time_over90":-92,
+    "time_over100":0,
+    "noise":107042
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28318024,44.81591034 ]
+    },
+    "properties": {
+    "id":32,
+    "city":"Bloomington",
+    "address":"10325 Pleasant Ave. S.",
+    "time_over65":-5866,
+    "time_over80":-277,
+    "time_over90":0,
+    "time_over100":0,
+    "noise":26853
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24642,44.795768 ]
+    },
+    "properties": {
+    "id":33,
+    "city":"Burnsville",
+    "address":"North River Hills Park",
+    "time_over65":-38923,
+    "time_over80":-335,
+    "time_over90":0,
+    "time_over100":0,
+    "noise":113998
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.22846985,44.78746033 ]
+    },
+    "properties": {
+    "id":34,
+    "city":"Burnsville",
+    "address":"Red Oak Park",
+    "time_over65":-8673,
+    "time_over80":14,
+    "time_over90":-4,
+    "time_over100":0,
+    "noise":45227
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.21432509,44.80680048 ]
+    },
+    "properties": {
+    "id":35,
+    "city":"Eagan",
+    "address":"2100 Garnet Ln.",
+    "time_over65":-217477,
+    "time_over80":-789,
+    "time_over90":-8,
+    "time_over100":0,
+    "noise":223276
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.215321,44.772953 ]
+    },
+    "properties": {
+    "id":36,
+    "city":"Apple Valley",
+    "address":"Briar Oaks & Scout Pond",
+    "time_over65":-258119,
+    "time_over80":-448,
+    "time_over90":-1,
+    "time_over100":0,
+    "noise":226333
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.1922226,44.79749298 ]
+    },
+    "properties": {
+    "id":37,
+    "city":"Eagan",
+    "address":"4399 Woodgate Ln. N.",
+    "time_over65":14888,
+    "time_over80":33,
+    "time_over90":0,
+    "time_over100":0,
+    "noise":130756
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.1943512,44.81351471 ]
+    },
+    "properties": {
+    "id":38,
+    "city":"Eagan",
+    "address":"3957 Turquoise Cir.",
+    "time_over65":72189,
+    "time_over80":2126,
+    "time_over90":-2,
+    "time_over100":0,
+    "noise":254059
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.18022919,44.83036804 ]
+    },
+    "properties": {
+    "id":39,
+    "city":"Eagan",
+    "address":"3477 St. Charles Pl.",
+    "time_over65":79175,
+    "time_over80":1732,
+    "time_over90":-3,
+    "time_over100":0,
+    "noise":281143
+    }
+  }
+]
+}

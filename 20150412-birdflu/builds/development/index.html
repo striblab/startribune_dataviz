@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Turkey Flu Tracker</title>
+  <meta name="description" content="Turkey Flu Tracker">
+  <meta name="author" content="Frey Hargarten - StarTribune">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="map"><svg width="320" height="350" viewBox="0 0 500 550" preserveAspectRatio="xMidYMid"></svg></div>
+
+<div class='breaker'></div>
+
+<a href='javascript:void(0);' class='zoom'>Reset View</a>
+
+<div id="quantize">
+<span class='legend' id="aidQ">
+  <nav class='legend clearfix'>
+    <span style='background:#fff;'>Less</span>
+    <span style='background:#74C476;'></span>
+    <span style='background:#49ab4b;'></span>
+    <span style='background:#347c36;'></span>
+    <span style='background:#204c21'></span>
+    <span style='background:#163417'></span>
+    <span style='background:#fff;'>More</span>
+  </nav>
+</span>
+</div>
+
+<div class='breaker'></div>
+
+<div id="infobox">
+<div class='turkey'><div class='bigNum'>8,871,432*</div><div>poultry birds have been affected by HPAI in Minnesota</div><p></p><div>Total number of farms affected: 108</div><p></p><div>Total number of counties: 23</div></div> 
+
+</div>
+
+<!-- <a href='https://docs.google.com/spreadsheets/d/1JpW0sgMM4grkFjkj1UI6JF8ajmMCAwUsNzshTAp_EQk/pub?output=csv' target='new_'><button class='downloadButton'>&#9660; Download Data</button></a> -->
+
+</div>
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="js/d3.v3.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

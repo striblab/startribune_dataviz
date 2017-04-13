@@ -5,6 +5,18 @@ by Frey Hargarten
 
 Built using [jQueryUI](https://github.com/components/jqueryui).
 
-The files can be run in any live server setup. Just open the index.html file in your browser.
+Options for running:
 
-http://www.startribune.com/see-what-minnesota-consumers-complain-about/277129751/
+a. Download and run on LAMP/MAMP/WAMP stack. Just launch the /builds/development/index.html file in your browser.
+
+b. NPM/GULP
+
+1. Download and unpack repo
+
+2. Go to folder in Terminal
+
+3. npm install
+
+4. gulp
+
+5. Modifications can be made to styles.css, index.html and scripts.js in /builds/development and pushed to /builds/production via gulp with the NODE_ENV=production gulp command.
