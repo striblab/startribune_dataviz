@@ -2,3 +2,7 @@
 node_modules
 .tmp
 .sass-cache
+*.zip
+node_modules
+interviews
+drafts
