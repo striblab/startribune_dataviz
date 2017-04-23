@@ -6263,143 +6263,205 @@ a.ui-button:active,
 
 /* PROJECT STYLES */
 
-body {
-    margin: 0;
-    padding: 20px;
+body
+{
+  font: 13px/1.231 "Benton Sans", sans-serif;
+  margin:0;
+  padding:0;
+
 }
 
-rect.nv-bar.negative rect {
-    fill: #de2d26 !important;
-    stroke: #de2d26 !important;
+h1
+{
+  font-family: ‘Whitman Display’;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
-rect.nv-bar.positive rect {
-    fill: #31a354 !important;
-    stroke: #31a354 !important;
+rect.nv-bar.negative rect
+{
+  fill:#de2d26!important;
+  stroke:#de2d26!important;
 }
 
-path {
-    fill: #333 !important;
-    opacity: 1 !important;
+rect.nv-bar.positive rect
+{
+  fill:#31a354!important;
+  stroke:#31a354!important;
 }
 
-.nvtooltip {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 1);
-    padding: 10px;
-    border: 1px solid #000;
-    z-index: 10000;
-    width: auto;
-    font-family: Arial;
-    font-size: 16px;
-    transition: opacity 200ms linear;
-    -moz-transition: opacity 200ms linear;
-    -webkit-transition: opacity 200ms linear;
-    transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -webkit-transition-delay: 200ms;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    pointer-events: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+path
+{
+  fill:#333!important;
+  opacity:1!important;
 }
-
-.nvtooltip h3 {
-    margin: 0;
-    padding: 2px;
-    font-weight: bold;
-    text-align: left;
-    background: white !important;
-    font-size: 16px;
-}
-
-.nvtooltip p {
-    margin: 0;
-    padding: 0;
-}
-
-.nvtooltip span {
-    display: inline-block;
-    margin: 2px 0;
-}
-
-.nvtooltip-pending-removal {
-    position: absolute;
-    pointer-events: none;
-}
-
-.pos_change {
-    font-weight: bold !important;
-    font-size: 18px !important;
-}
-
-.myButton2 {
-    background-color: #888;
-    -moz-border-radius: 16px;
-    -webkit-border-radius: 16px;
-    border-radius: 3px;
-    border: 0;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: arial;
-    font-size: 12px;
-    padding: 13px;
-    text-decoration: none;
-    font-weight: 900;
-}
-
-.myButton2:active {
-    background-color: #378f00;
-}
-
-button:focus {
-    outline: 0 !important;
-}
-
-#filterButtons {
-    float: right;
-    width: 30% !important;
-}
-
-#chart svg {
-    width: 65%;
-    height: 400px;
-    float: left;
-}
-
-.myButton2 {
-    display: block !important;
-    border-radius: 0;
-    width: 100%;
-}
+.nv-axisMaxMin {display:none;}
+.legend.margin{top: 5, right:50, left:0, bottom: 10;}
 
 .nvd3 .nv-x .nv-axis .tick line {
-    fill: none;
-    display: none !important;
-    stroke: #fff;
-    shape-rendering: crispEdges;
-    opacity: 0 !important;
+ fill: none;
+ display: none !important;
+ stroke: #fff;
+ shape-rendering: crispEdges;
+ opacity: 0 !important;
+}
+.nvtooltip
+{
+  -khtml-user-select:none;
+  -moz-border-radius:16px;
+  -moz-box-shadow:1px 1px 3px 2px rgba(0,0,0,0.2);
+  -moz-transition:opacity 200ms linear;
+  -moz-transition-delay:200ms;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -webkit-border-radius:16px;
+  -webkit-box-shadow:1px 1px 3px 2px rgba(0,0,0,0.2);
+  -webkit-touch-callout:none;
+  -webkit-transition:opacity 200ms linear;
+  -webkit-transition-delay:200ms;
+  -webkit-user-select:none;
+  background-color:rgba(255,255,255,1);
+  border:none;
+  border-radius:3px;
+  box-shadow:1px 1px 3px 2px rgba(0,0,0,0.2);
+  font-family:"Benton Sans", sans-serif;
+  font-size:13px;
+  padding:10px;
+  pointer-events:none;
+  position:absolute;
+  text-align:center;
+  transition:opacity 200ms linear;
+  transition-delay:200ms;
+  user-select:none;
+  width:auto;
+  z-index:10000;
 }
 
-@media only screen and (min-width:650px) {
-    .myButton2:hover {
-        background-color: #378f00 !important;
-    }
+.nvtooltip h3
+{
+  background:#FFF!important;
+  font-size:14px;
+  font-weight:700;
+  margin:0;
+  padding:4px;
+  text-align:left;
 }
 
-@media (max-width:600px) {
-    #chart svg {
-        width: 100%;
-        float: none;
-    }
-    #filterButtons {
-        float: none;
-        width: 100% !important;
-    }
+.nvtooltip p
+{
+  margin:0;
+  padding:0;
+}
+
+.nvtooltip span
+{
+  display:inline-block;
+  margin:4px 0 2px;
+}
+
+.nvtooltip-pending-removal
+{
+  pointer-events:none;
+  position:absolute;
+}
+
+.pos_change
+{
+  font-weight:700!important;
+}
+
+.myButton2
+{
+  -moz-border-radius:16px;
+  -webkit-border-radius:16px;
+  background-color:#d7d6c5;
+  border:1px #fff solid;
+  border-radius:3px;
+  color:#848484;
+  cursor:pointer;
+  display:block!important;
+  font-family:"Benton Sans", sans-serif;
+  font-size:13px;
+  padding:13px;
+  text-decoration:none;
+  width:100%;
+}
+
+.myButton2:active
+{
+  background-color:#a9a889;
+}
+
+.downloadButton
+{
+  -moz-border-radius:16px;
+  -webkit-border-radius:16px;
+  background-color:#fff;
+  border:2px #fff solid;
+  border-radius:0;
+  color:#a9a889;
+  cursor:pointer;
+  display:inline-block;
+  font-family:"Benton Sans", sans-serif;
+  font-size:13px;
+  font-weight:400;
+  margin-top:7px;
+  padding:13px;
+  text-decoration:none;
+  width:100%;
+}
+
+.downloadButton:active
+{
+  background-color:#d7d6c5;
+}
+
+button:focus
+{
+  outline:0!important;
+}
+
+#filterButtons
+{
+  float:right;
+  width:30%!important;
+}
+
+#chart
+{
+  float:left;
+  height:400px;
+  width:65%;
+}
+
+@media only screen and min-width650px {
+  .myButton2:hover
+  {
+    background-color:#8c6451!important;
+    color:#fff!important;
+  }
+  
+  .downloadButton:hover
+  {
+    background-color:#fff!important;
+    color:#9e5332;
+  }
+}
+
+@media max-width600px {
+  #chart
+  {
+    float:none;
+    width:100%;
+  }
+  
+  #filterButtons
+  {
+    float:none;
+    width:100%!important;
+  }
 }

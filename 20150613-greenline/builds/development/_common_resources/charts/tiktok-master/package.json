@@ -1,0 +1,75 @@
+{
+  "name": "tik-tok",
+  "version": "0.1.0",
+  "description": "Tik Tok is a Javascript tool to easily create beautiful, simple, mobile-friendly, vertical timelines.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datanews/tik-tok.git"
+  },
+  "keywords": [
+    "timeline"
+  ],
+  "author": {
+    "name": "Alan Palazzolo",
+    "email": "apalzzolo@wnyc.org",
+    "url": "http://wnyc.org"
+  },
+  "contributors": [
+    {
+      "name": "Noah Veltman",
+      "email": "nveltman@wnyc.org",
+      "url": "http://wnyc.org"
+    },
+    {
+      "name": "Chris Keller",
+      "email": "ckeller@scpr.org",
+      "url": "http://scpr.org"
+    },
+    {
+      "name": "John Keefe",
+      "email": "jkeefe@wnyc.org",
+      "url": "http://wnyc.org"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datanews/tik-tok/issues"
+  },
+  "homepage": "https://github.com/datanews/tik-tok",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.10.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-mocha": "^2.1.1",
+    "gulp-plumber": "^1.0.0",
+    "gulp-recess": "^1.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "gulp-webserver": "^0.9.0",
+    "jshint-stylish": "^1.0.1",
+    "karma": "^0.12.35",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-sauce-launcher": "^0.2.11",
+    "less": "^2.5.0",
+    "mocha": "^2.2.4",
+    "phantomjs": "^1.9.17",
+    "sauce-connect-launcher": "^0.11.1",
+    "saucelabs": "^0.1.1"
+  },
+  "dependencies": {
+    "moment": "^2.10.2",
+    "underscore": "^1.8.3"
+  }
+}
