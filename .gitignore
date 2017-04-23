@@ -1,4 +1,4 @@
 *.zip
-node_modules/
-interviews/
-drafts/
+node_modules
+interviews
+drafts
