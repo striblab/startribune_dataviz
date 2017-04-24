@@ -1,12 +1,10 @@
 d3.json('./data/invasion.geojson', function(error, invasion) {
 d3.json('./shapefiles/mn_infested_waters.json', function(error, waters) {
-d3.json('./shapefiles/mn_observations.json', function(error, observations) {
-
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
+    style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
     center: [-93.28469849, 45.01832962], 
     zoom: 4,
     minZoom: 3
@@ -22,10 +20,10 @@ map.on('load', function() {
    data: waters
  });
 
-  map.addSource('observations', {
-   type: 'geojson',
-   data: observations
- });
+ //  map.addSource('observations', {
+ //   type: 'geojson',
+ //   data: observations
+ // });
 
   map.addSource('invasion', {
    type: 'geojson',
@@ -436,14 +434,14 @@ function plopLayer(data,color){
        'paint': {
            'fill-antialias' : true,
            'fill-opacity': 1,
-           'fill-color': color,
-           'fill-outline-color': 'rgba(1, 1, 1, 1)'
+           'fill-color': 'rgba("194,42,34", 1)',
+           'fill-outline-color': 'rgba("194,42,34", 1)' 
      },
                   "filter": [
                   "==",
                   "commonname",
                   "zebra mussel"]
-   }, 'place-village');
+   }, 'place-neighbourhood');
 }
 
 function hideLayer(data){
@@ -574,19 +572,24 @@ function mapFlight(long,lat,zoom,pitch,bearing){
 $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eightteen', 'nineteen'],
-    sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F', '#1BBC9B', '#7E8F7C', '#1BBC9B', '#7E8F7C'],
+    sectionsColor: ['#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999', '#999999', '#999999'],
     navigation: true,
     navigationPosition: 'right',
 
     afterLoad: function(anchorLink, index){
     var loadedSection = $(this);
+
+      Typed.new(".chatter", {
+        strings: [$(this).text()],
+        typeSpeed: 30
+      });
+
     playScript(index-1)
     }
   });
 });
 
    $("#fullpage").show();
-
 });
 
 var toggleableLayerIds = [ 'contours', 'museums' ];
@@ -617,6 +620,5 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 }
 
 
-});
 });
 });
