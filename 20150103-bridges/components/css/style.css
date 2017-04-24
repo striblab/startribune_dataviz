@@ -1013,6 +1013,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
 
 .paginate_button {
     font-family: "Popular", Helvetica, Arial, sans-serif;
+    padding:5px;
 }
 
 .dataTable {
