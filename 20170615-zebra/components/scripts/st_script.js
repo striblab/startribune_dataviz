@@ -1,13 +1,20 @@
 d3.json('./data/invasion.geojson', function(error, invasion) {
 d3.json('./shapefiles/mn_infested_waters.json', function(error, waters) {
 
+var bounds = [
+    [-168.046875, 23.150462],// Southwest coordinates
+    [-51.328125, 52.849230] // Northeast coordinates
+     
+];
+
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
     center: [-93.28469849, 45.01832962], 
     zoom: 4,
-    minZoom: 3
+    minZoom: 3,
+    maxBounds: bounds
 });
 
 map.addControl(new mapboxgl.NavigationControl());
@@ -42,30 +49,30 @@ function playScript(step){
   if (step == 0){
     unloadMarkers(1987, 2017);
     mapFlight(-82.441406,41.827619,8,0,0);
-    setTimeout(function(){ showMarkers(1986) }, 1000); 
+    showMarkers(1986);
   }
   if (step == 1){
     unloadMarkers(1991, 2017);
     mapFlight(-82.441406,41.827619,7,0,0);
-    setTimeout(function(){ showMarkers(1987); }, 1000);
+    showMarkers(1987);
 
     mapFlight(-82.441406,41.827619,6,0,0);
     setTimeout(function(){ showMarkers(1988); }, 1000);
 
     mapFlight(-82.441406,41.827619,5,0,0);
-    setTimeout(function(){ showMarkers(1989); }, 1000);
-    setTimeout(function(){ showMarkers(1990); }, 1000);
+    setTimeout(function(){ showMarkers(1989); }, 1500);
+    setTimeout(function(){ showMarkers(1990); }, 2000);
   }
   if (step == 2){
     mapFlight(-91.790771, 41.481576,6,0,0); 
     unloadMarkers(1992, 2017);
-    setTimeout(function(){ showMarkers(1991); }, 1000);
+    showMarkers(1991)
   }
   if (step == 3){
     unloadMarkers(1994, 2017);
     plopLayer('waters','#333333');
-    setTimeout(function(){ showMarkers(1992); }, 1000);
-    setTimeout(function(){ showMarkers(1993); }, 1000);
+    showMarkers(1992)
+    setTimeout(function(){ showMarkers(1993); }, 1500);
     mapFlight(-90.000000,47.212106,6,0,0); 
     
   }
@@ -77,344 +84,331 @@ function playScript(step){
   if (step == 5){
     unloadMarkers(1996, 2017);
     mapFlight(-94.203347,46.628522,8,0,0); 
-    setTimeout(function(){ showMarkers(1994); }, 1000);
-    setTimeout(function(){ showMarkers(1995); }, 1000);
+    showMarkers(1994);
+    setTimeout(function(){ showMarkers(1995); }, 1500);
   }
   if (step == 6){
       mapFlight(-93.660534, 46.252983,6,0,0);
-    setTimeout(function(){ showMarkers(1996);  }, 1000);
+    showMarkers(1996);
     setTimeout(function(){ showMarkers(1997);  }, 1000);
-    setTimeout(function(){ showMarkers(1998);  }, 1000);
-    setTimeout(function(){ showMarkers(1999);  }, 1000);
-    setTimeout(function(){ showMarkers(2000);  }, 1000);
-    setTimeout(function(){ showMarkers(2001);  }, 1000);
-    setTimeout(function(){ showMarkers(2002);  }, 1000);
-    setTimeout(function(){ showMarkers(2003);  }, 1000);
-    setTimeout(function(){ showMarkers(2004);  }, 1000);
-    setTimeout(function(){ showMarkers(2005);  }, 1000);
-    setTimeout(function(){ showMarkers(2006);  }, 1000);
-    setTimeout(function(){ showMarkers(2007);  }, 1000);
-    setTimeout(function(){ showMarkers(2008);  }, 1000);
-    setTimeout(function(){ showMarkers(2009);  }, 1000);
-    setTimeout(function(){ showMarkers(2010);  }, 1000);
-    setTimeout(function(){ showMarkers(2011);  }, 1000);
-    setTimeout(function(){ showMarkers(2012);  }, 1000);
-    setTimeout(function(){ showMarkers(2013);  }, 1000);
-    setTimeout(function(){ showMarkers(2014);  }, 1000);
-    setTimeout(function(){ showMarkers(2015);  }, 1000);
-    setTimeout(function(){ showMarkers(2016);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 7){
      mapFlight(-93.660534, 46.252983,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 8){
     mapFlight(-90.432176, 48.098151,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 9){
     mapFlight(-90.432176, 48.098151,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 10){
     mapFlight(-94.420746, 47.148660,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 11){
     mapFlight(-94.331379, 46.458510,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 12){
     mapFlight(-94.420746, 47.148660,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 13){
     mapFlight(-93.634447, 44.907342,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 14){
     mapFlight(-92.408665, 45.502494,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 15){
     mapFlight(-92.338842, 47.848619,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 16){
     mapFlight(-94.941142, 47.186053,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 17){
     mapFlight(-94.215540, 47.410950,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 18){
     mapFlight(-113.422852, 48.128518,4,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 500);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 19){
-    mapFlight(-102.480469, 39.008513,3,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 1000);
-    setTimeout(function(){ showMarkers(1997); }, 1000);
-    setTimeout(function(){ showMarkers(1998); }, 1000);
-    setTimeout(function(){ showMarkers(1999); }, 1000);
-    setTimeout(function(){ showMarkers(2000); }, 1000);
-    setTimeout(function(){ showMarkers(2001); }, 1000);
-    setTimeout(function(){ showMarkers(2002); }, 1000);
-    setTimeout(function(){ showMarkers(2003); }, 1000);
-    setTimeout(function(){ showMarkers(2004); }, 1000);
-    setTimeout(function(){ showMarkers(2005); }, 1000);
-    setTimeout(function(){ showMarkers(2006); }, 1000);
-    setTimeout(function(){ showMarkers(2007); }, 1000);
-    setTimeout(function(){ showMarkers(2008); }, 1000);
-    setTimeout(function(){ showMarkers(2009); }, 1000);
-    setTimeout(function(){ showMarkers(2010); }, 1000);
-    setTimeout(function(){ showMarkers(2011); }, 1000);
-    setTimeout(function(){ showMarkers(2012); }, 1000);
-    setTimeout(function(){ showMarkers(2013); }, 1000);
-    setTimeout(function(){ showMarkers(2014); }, 1000);
-    setTimeout(function(){ showMarkers(2015); }, 1000);
-    setTimeout(function(){ showMarkers(2016); }, 1000);
+    mapFlight(-99.081678, 40.699330,3,0,0);
+    unloadMarkers(1986, 2017);
+
+    var interval = 800;
+
+    for (var i=1986; i < 2017; i++){
+        setTimeout(function(){ showMarkers(i); }, interval);
+        interval += 200;
+    }
   }
 
 }
@@ -518,7 +512,7 @@ function animateMarker(timestamp) {
                 opacity = initialOpacity;
             } 
 
-        }, 1000 / framesPerSecond);
+        }, 2000 / framesPerSecond);
     }
 
       animateMarker(0);
@@ -542,7 +536,8 @@ function showMarkers(index){
 
 function loadMarkers(){
   for (var i=1986; i < 2017; i++){
-    plopMarker(i,'194,42,34',i);
+    // plopMarker(i,'194,42,34',i);
+    plopMarker(i,'0,191,255',i);
   }
 }
 
@@ -579,9 +574,13 @@ $(document).ready(function() {
     afterLoad: function(anchorLink, index){
     var loadedSection = $(this);
 
+    $(".chatter, .chartTitle").hide();
+
+    $(this).find(".chatter, .chartTitle").show();
+
       Typed.new(".chatter", {
         strings: [$(this).text()],
-        typeSpeed: 30
+        typeSpeed: 0
       });
 
     playScript(index-1)
