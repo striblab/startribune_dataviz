@@ -208,10 +208,12 @@ $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by address");
 
         $('.check').on('click', function(e){
 
-            if ($(this).hasClass("toggle")) {  $(this).removeClass("toggle"); $(this).removeClass("selected"); }
-            else  {  $(this).addClass("toggle"); $(this).addClass("selected"); }
+            if ($(this).hasClass("selected")) {  $(this).removeClass("selected"); }
+            else  {  $(this).addClass("selected"); }
 
             $('.card').hide();
+            $(".card").removeClass("selected");
+
             $("#filter_box").val("");
             map.setLayoutProperty('dots-layer-monday', 'visibility', 'none');
             map.setLayoutProperty('dots-layer-tuesday', 'visibility', 'none');
@@ -222,9 +224,8 @@ $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by address");
             map.setLayoutProperty('dots-layer-sunday', 'visibility', 'none');
 
             map.flyTo({ center: center, zoom: 7, pitch: 0, bearing: 0 });
-            $(".card").removeClass("selected");
 
-             $('.check.toggle').each(function() {
+             $('.check.selected').each(function() {
                 var txt = $(this).attr("layer");
                 console.log(txt);
                 $('.card').each(function(){
