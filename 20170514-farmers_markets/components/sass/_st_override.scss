@@ -1,48 +1,590 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+//colors
+$gallery: #efefef;
+$white: #fff;
+$black_20: rgba(0, 0, 0, 0.20);
+$black: #000;
+$color_mine_shaft_approx: #333;
+$color_forest_green_approx: #299129;
+$gray: #808080;
+$color_persimmon_approx: #f2614c;
+$color_salmon_approx: #ff8572;
+$color_sangria_approx: #9c0004;
+$color_mahogany_approx: #4e0002;
+$color_alto_approx: #ddd;
+$color_fountain_blue_approx: #67b4c2;
+$color_boston_blue_approx: #4192a1;
+$color_regal_blue_approx: #0d4773;
+$color_blue_whale_approx: #022642;
+$color_red_damask_approx: #e07242;
+$color_celeste_approx: #ccc;
+$white_100: rgba(255, 255, 255, 1);
+$black_50: rgba(0, 0, 0, .5);
+$black_75: rgba(0, 0, 0, 0.75);
+$steel_blue: #4682b4;
+$color_mountain_mist_approx: #999;
+$color_silver_chalice_approx: #aaa;
+$black_10: rgba(0, 0, 0, 0.10);
+$black_15: rgba(0, 0, 0, 0.15);
+$color_gallery_approx: #f0f0f0;
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+//fonts
+$font_0: Benton Sans;
+$font_1: Helvetica;
+$font_2: Arial;
+$font_3: sans-serif;
+$font_4: Helvetica Neue;
+$font_5: sans-serif !important;
+$font_6: Poynter Serif RE;
+$font_7: Georgia;
+$font_8: Times;
+$font_9: serif;
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+//@extend-elements
+//original selectors
+//.card:hover, .step:hover, .selected
+%extend_1 {
+    background-color: $color_mine_shaft_approx;
+    color: $white;
+    cursor: pointer;
+    margin: 0 !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+//original selectors
+//.legend label, .legend span
+%extend_2 {
+    color: $gray;
+    display: block;
+    float: left;
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-size: 12px;
+    height: 15px;
+    text-align: center;
+    width: 30px;
+}
 
-    .chatter { padding:20px; }  
 
-    p { font-family:$bentonSans; }  
-
-    #info { display:none; }
-
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
-
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
-
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+body {
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    margin: 0;
+    padding: 0;
+    font-size: .95em;
+}
+#map {
+    background: $gallery;
+    height: 450px;
+    width: 100%;
+}
+#wrapper {
+}
+.bottom {
+    bottom: 0;
+    clear: both;
+    position: absolute;
+    width: 100%;
+}
+.map-overlay-container {
+    width: 400px;
+}
+.map-overlay {
+    background-color: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 3px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 2px $black_20;
+    font: 12px/20px $font_4, $font_2, $font_1, $font_3;
+    padding: 10px;
+    h2 {
+        margin: 0 0 10px;
     }
+    p {
+        margin: 0 0 10px;
+    }
+}
+.mapboxgl-ctrl-attrib {
+    display: none;
+}
+.play {
+    background-color: $white !important;
+    color: $black;
+}
+.pause {
+    background-color: $color_mine_shaft_approx !important;
+    color: $white;
+}
+#diverse {
+    color: $color_forest_green_approx;
+}
+.stat {
+    margin-bottom: 6px;
+}
+#name {
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.card {
+    padding: 3px;
+    border: solid $color_celeste_approx;
+    border-width: 0 0 1px 0;
+    padding: 9px;
+    &:hover {
+        @extend %extend_1;
+        background-color: $gallery;
+        color: $black;
+        padding: 9px;
+    }
+    &.selected {
+        padding: 9px;
+    }
+}
+.step {
+    border: 1px solid $black;
+    padding: 5px;
+    background-color: $white;
+    border: 0 solid $black;
+    display: inline-block;
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-size: .9em;
+    font-weight: 900;
+    padding: 9px;
+    text-align: left;
+    width: 100%;
+    &:hover {
+        @extend %extend_1;
+        background-color: $gallery;
+        color: $black;
+        cursor: pointer;
+        margin: 0 !important;
+    }
+}
+.selected {
+    @extend %extend_1;
+    background-color: $gallery;
+    color: $black;
+    cursor: pointer;
+    margin: 0 !important;
+}
+#filter {
+    margin-top: 25px;
+    input {
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 0 !important;
+        font-family: $font_0, $font_1, $font_2, $font_5;
+        width: 100% !important;
+        &:focus {
+            width: 100% !important;
+        }
+    }
+}
+#geocoder-container {
+    margin-top: 10px;
+    width: 100%;
+    > div {
+        margin-left: 0;
+        margin-top: 18px;
+        min-width: 100%;
+    }
+}
+small {
+    clear: both;
+    color: $gray;
+    display: block;
+    font-family: $font_0, $font_1, $font_2, $font_3;
+}
+p {
+    font-family: $font_0, $font_1, $font_2, $font_3;
+}
+#infobox {
+    margin-top: 7px;
+    background: $gallery;
+    font-size: .95em;
+    margin-top: 18px;
+    min-height: 390px;
+    position: relative;
+}
+#leftSide {
+    float: left;
+    width: 32%;
+}
+#rightSide {
+    float: right;
+    height: 300px;
+    width: 58%;
+    width: 65%;
+    position: relative;
+}
+.bigNum {
+    display: inline-block;
+    width: 32%;
+}
+.mapboxgl-popup {
+    font: 12px/20px $font_4, $font_2, $font_1, $font_3;
+    max-width: 400px;
+}
+.marker-title {
+    font-weight: 700;
+}
+#legends {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 212px;
+}
+.topLegend {
+    display: none;
+}
+.legendContainer {
+    text-align: center;
+    width: 212px;
+}
+.legend {
+    label {
+        @extend %extend_2;
+    }
+    span {
+        @extend %extend_2;
+    }
+}
+.legends {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 570px;
+}
+.republican {
+    color: $color_persimmon_approx;
+    fill: $color_persimmon_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.r1 {
+    background-color: $color_salmon_approx;
+    color: $white !important;
+    fill: $color_salmon_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.r2 {
+    background-color: $color_persimmon_approx;
+    color: $white !important;
+    fill: $color_persimmon_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.r3 {
+    background-color: $color_sangria_approx;
+    color: $white !important;
+    fill: $color_sangria_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.r4 {
+    background-color: $color_mahogany_approx;
+    color: $white !important;
+    fill: $color_mahogany_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.r0 {
+    background-color: $color_persimmon_approx;
+    color: $white !important;
+    fill: $color_persimmon_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.mid {
+    background-color: $color_alto_approx;
+    color: $black !important;
+    fill: $color_alto_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.democrat {
+    color: $color_fountain_blue_approx;
+    fill: $color_fountain_blue_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.d1 {
+    background-color: $color_fountain_blue_approx;
+    color: $white !important;
+    fill: $color_fountain_blue_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.d2 {
+    background-color: $color_boston_blue_approx;
+    color: $white !important;
+    fill: $color_boston_blue_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.d3 {
+    background-color: $color_regal_blue_approx;
+    color: $white !important;
+    fill: $color_regal_blue_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.d4 {
+    background-color: $color_blue_whale_approx;
+    color: $white !important;
+    fill: $color_blue_whale_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.d0 {
+    background-color: $color_fountain_blue_approx;
+    color: $white !important;
+    fill: $color_fountain_blue_approx !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+.independent {
+    background-color: $color_red_damask_approx;
+    color: $color_mine_shaft_approx !important;
+    fill: $color_red_damask_approx;
+}
+.featherlight {
+    display: none !important;
+}
+.info-wrapper {
+    background: $gallery;
+    padding: 18px;
+    position: relative;
+    z-index: 2;
+    ul {
+        margin: 18px;
+    }
+}
+@media(max-width: 852px) {
+    #wrapper {
+        width: 100%;
+    }
+    #leftSide {
+        float: none;
+        width: 100%;
+    }
+    #rightSide {
+        float: none;
+        height: auto;
+        width: 100%;
+    }
+    .featherlight {
+        display: block;
+    }
+}
+#table {
+    max-height: 500px;
+    overflow: auto;
+    padding: 18px 0;
+    div {
+        &:first-child {
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+}
+#table::before {
+    background: linear-gradient(to bottom, $white_100 13%, rgba(255, 255, 255, 0) 100%);
+    content: " ";
+    //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+    height: 18px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    display: none;
+}
+#table::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, $white_100 87%);
+    bottom: 0;
+    content: " ";
+    //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    height: 18px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    display: none;
+}
+.item-scroll {
+    border-bottom: 0 solid $black;
+    margin-top: -18px;
+    position: relative;
+    margin-top: 0;
+}
+#filterBox {
+    height: 240px;
+    border-top: 1px solid $black;
+    .column {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+    }
+}
+.check {
+    text-align: left;
+    padding: 3px;
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
+.mapboxgl-ctrl-geocoder {
+    .geocoder-icon-search {
+        opacity: .4;
+    }
+    input[type='text'] {
+        background-color: transparent;
+        border: 0;
+        color: $black_50;
+        font-family: $font_0, $font_1, $font_2, $font_3;
+        font-size: 1.1em;
+        height: 40px;
+        margin: 0;
+        overflow: hidden;
+        padding: 10px 10px 10px 40px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+    }
+}
+.zoom {
+    text-align: left !important;
+    padding: 3px;
+}
+input {
+    background-color: $white !important;
+    border: 1px solid $color_alto_approx !important;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    color: $black_75;
+    font-family: inherit;
+    font-size: 1em;
+    height: 30px;
+    line-height: 120%;
+    margin: 0;
+    margin-left: 0 !important;
+    moz-transition: all 0.30s ease-in-out;
+    ms-transition: all 0.30s ease-in-out;
+    o-transition: all 0.30s ease-in-out;
+    webkit-appearance: none;
+    webkit-border-radius: 0;
+    webkit-transition: all 0.30s ease-in-out;
+    width: 100%;
+}
+#notes {
+    font: normal normal 1.1em/1.5em $font_6, $font_7, $font_8, $font_9;
+    margin-top: 18px;
+}
+.info-message {
+    color: $color_mountain_mist_approx;
+    font-size: 1.1em;
+    position: absolute;
+    text-align: center;
+    top: 42%;
+    width: 100%;
+    z-index: 1;
+}
+@media(max-width: 728px) {
+    #rightSide {
+        float: none;
+        width: 100%;
+    }
+    #table {
+        max-height: 3000px;
+        height: 230px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    #map {
+        height: 250px;
+    }
+    .info-message {
+        display: none;
+    }
+    #infobox {
+        background: $gallery;
+        font-size: .95em;
+        margin-top: 18px;
+        min-height: 0;
+        position: relative;
+    }
+    #filterBox .column {
+        width: 100%;
+    }
+}
+.wrapper-demo {
+    width: 100%;
+}
+.wrapper-dropdown-1 {
+    background: $color_alto_approx;
+    border: 1px solid $color_silver_chalice_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 2px 1px $black_10;
+    color: $color_mine_shaft_approx;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+    position: relative;
+    width: 100%;
+    width: 200px;
+    z-index: 900;
+    .dropdown {
+        background: $white;
+        border: 1px solid $color_silver_chalice_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 4px 5px $black_15;
+        font-weight: normal;
+        left: 0;
+        list-style: none;
+        margin-top: 0 !important;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        li:hover a {
+            background: $gallery;
+        }
+    }
+}
+header[role="banner"] {
+    background: $color_gallery_approx;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+}
+#viewSwitch {
+    display: none;
+}
+.chatter span {
+    padding: 5px;
+}
+#website a {
+    color: $steel_blue;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+ul.dropdown.months {
+    //Instead of the line below you could use @include background-clip($clip)
+    background-clip: padding-box;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0 0 4px 4px;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: -1px;
+    moz-box-sizing: border-box;
+    padding: 0;
+    webkit-box-sizing: border-box;
+}
