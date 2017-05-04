@@ -358,25 +358,78 @@ p {
         margin: 18px;
     }
 }
-@media(max-width: 852px) {
-    #wrapper {
-        width: 100%;
-    }
-    #leftSide {
-        float: none;
-        width: 100%;
-    }
-    #rightSide {
-        float: none;
-        height: auto;
-        width: 100%;
-    }
-    .featherlight {
-        display: block;
+.wrapper-demo {
+    width: 100%;
+}
+.wrapper-dropdown-1 {
+    background: $color_alto_approx;
+    border: 1px solid $color_silver_chalice_approx;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 2px 1px $black_10;
+    color: $color_mine_shaft_approx;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+    position: relative;
+    width: 100%;
+    width: 200px;
+    z-index: 900;
+    .dropdown {
+        background: $white;
+        border: 1px solid $color_silver_chalice_approx;
+        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+        box-shadow: 0 4px 5px $black_15;
+        font-weight: normal;
+        left: 0;
+        list-style: none;
+        margin-top: 0 !important;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        li:hover a {
+            background: $gallery;
+        }
     }
 }
+header[role="banner"] {
+    background: $color_gallery_approx;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+}
+#viewSwitch {
+    display: none;
+}
+.chatter span {
+    padding: 5px;
+}
+#website a {
+    color: $steel_blue;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+ul.dropdown.months {
+    //Instead of the line below you could use @include background-clip($clip)
+    background-clip: padding-box;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0 0 4px 4px;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: -1px;
+    moz-box-sizing: border-box;
+    padding: 0;
+    webkit-box-sizing: border-box;
+}
 #table {
-    max-height: 500px;
+    height: 500px;
     overflow: auto;
     padding: 18px 0;
     div {
@@ -490,6 +543,26 @@ input {
     width: 100%;
     z-index: 1;
 }
+@media(max-width: 760px) {
+    #wrapper {
+        width: 100%;
+    }
+    #leftSide {
+        float: none;
+        width: 100%;
+    }
+    #rightSide {
+        float: none;
+        height: auto;
+        width: 100%;
+    }
+    .info-wrapper {
+        height:200px;
+    }
+    .featherlight {
+        display: block;
+    }
+}
 @media(max-width: 728px) {
     #rightSide {
         float: none;
@@ -502,7 +575,7 @@ input {
         overflow-y: auto;
     }
     #map {
-        height: 250px;
+        height: 200px;
     }
     .info-message {
         display: none;
@@ -518,73 +591,8 @@ input {
         width: 100%;
     }
 }
-.wrapper-demo {
-    width: 100%;
-}
-.wrapper-dropdown-1 {
-    background: $color_alto_approx;
-    border: 1px solid $color_silver_chalice_approx;
-    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-    box-shadow: 0 2px 1px $black_10;
-    color: $color_mine_shaft_approx;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $font_0, $font_1, $font_2, $font_3;
-    font-size: 14px;
-    font-weight: bold;
-    outline: none;
-    padding: 8px;
-    position: relative;
-    width: 100%;
-    width: 200px;
-    z-index: 900;
-    .dropdown {
-        background: $white;
-        border: 1px solid $color_silver_chalice_approx;
-        //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-        box-shadow: 0 4px 5px $black_15;
-        font-weight: normal;
-        left: 0;
-        list-style: none;
-        margin-top: 0 !important;
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        li:hover a {
-            background: $gallery;
-        }
+@media(max-width: 520px) {
+    .column {
+        display:none !important;
     }
-}
-header[role="banner"] {
-    background: $color_gallery_approx;
-    height: 40px;
-    width: 100%;
-    z-index: 1000;
-}
-#viewSwitch {
-    display: none;
-}
-.chatter span {
-    padding: 5px;
-}
-#website a {
-    color: $steel_blue;
-    &:hover {
-        text-decoration: underline;
-    }
-}
-ul.dropdown.months {
-    //Instead of the line below you could use @include background-clip($clip)
-    background-clip: padding-box;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 0 0 4px 4px;
-    //Instead of the line below you could use @include box-sizing($bs)
-    box-sizing: border-box;
-    margin: 0;
-    margin-top: -1px;
-    moz-box-sizing: border-box;
-    padding: 0;
-    webkit-box-sizing: border-box;
 }
