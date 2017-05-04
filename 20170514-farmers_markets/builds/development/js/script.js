@@ -306,7 +306,6 @@ $(".zoom").click(function() {
     $(".card").show();
     $("#filter_box").val("");
     popup.remove();
-    $("li").hide();
     map.setLayoutProperty('dots-layer-monday', 'visibility', 'visible');
     map.setLayoutProperty('dots-layer-tuesday', 'visibility', 'visible');
     map.setLayoutProperty('dots-layer-wednesday', 'visibility', 'visible');
