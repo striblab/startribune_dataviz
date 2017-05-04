@@ -1,4 +1,4 @@
-Star Tribune - Taste Farmer's Market Guide
+Star Tribune - Taste Farmers Market Guide
 ================
 
 by Frey Hargarten
