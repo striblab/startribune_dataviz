@@ -493,7 +493,7 @@
     "address":"415 Central Av",
     "city":"Osseo",
     "zip":55369,
-    "website":"http://www.discoverosseo.com/event/osseo-farmers-market/",
+    "website":"http://www.discoverosseo.com/event/farmers-market/",
     "phone":"763-425-2624",
     "source":"MN GROWN & HC",
     "email":"kbroden@ci.osseo.mn.us",
@@ -570,38 +570,6 @@
     "sunday":"",
     "ebt":"No",
     "season":"6/8-10/5",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.20408585,44.90195782 ]
-    },
-    "properties": {
-    "id":19,
-    "name":"VA Medical Center Farmers Market",
-    "address":"1 Veterans Drive",
-    "city":"Minneapolis",
-    "zip":55417,
-    "website":"http://www.minneapolis.va.gov/news/farmersmarket.asp",
-    "phone":"612-467-2563",
-    "source":"WEBSITE & CALLED",
-    "email":"tonia.dockter2@va.gov",
-    "monday":"",
-    "tuesday":"TU: 2pm-5pm",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"No",
-    "season":"6/22 - 10/25",
     "notes":"",
     "designation":"Farmers Market",
     "pitch":60,
@@ -837,70 +805,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.74145919,44.90229985 ]
-    },
-    "properties": {
-    "id":27,
-    "name":"St. Boni Summer Market",
-    "address":"8535 Kennedy Memorial Drive",
-    "city":"St. Bonifacius",
-    "zip":55375,
-    "website":"http://discover-stboni.com/st-boni-summer-market/",
-    "phone":"612-419-5932",
-    "source":"MN GROWN",
-    "email":"info@discover-stboni.com",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"W: 3pm-7pm",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"No",
-    "season":"5/25-10/5",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.37886509,44.98611502 ]
-    },
-    "properties": {
-    "id":28,
-    "name":"Market in the Valley - Golden Valley",
-    "address":"7800 Golden Valley Rd",
-    "city":"Golden Valley",
-    "zip":55427,
-    "website":"http://www.marketinthevalley.org/",
-    "phone":"763-360-0588",
-    "source":"MFMA, WEBSITE",
-    "email":"info@marketinthevalley.org",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"SU: 9am-1pm",
-    "ebt":"No",
-    "season":"6/19-10/2",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.26240428,44.90862957 ]
     },
     "properties": {
@@ -941,7 +845,7 @@
     "address":"6500 Excelsior Blvd",
     "city":"St Louis Park",
     "zip":55426,
-    "website":"NA",
+    "website":"N/A",
     "phone":"952-993-1092",
     "source":"DIRECT",
     "email":"N/A",
@@ -954,38 +858,6 @@
     "sunday":"",
     "ebt":"No",
     "season":"6/21 -Mid Oct",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.34629145,44.93309374 ]
-    },
-    "properties": {
-    "id":31,
-    "name":"Park Nicollet Clinic Farmers Market",
-    "address":"3850 Park Nicollet Blvd",
-    "city":"St Louis Park",
-    "zip":55416,
-    "website":"NA",
-    "phone":"952-993-1092",
-    "source":"DIRECT",
-    "email":"N/A",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"TH:10am-1:30pm",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"No",
-    "season":"6/23 -Mid Oct",
     "notes":"",
     "designation":"Farmers Market",
     "pitch":60,
@@ -1125,12 +997,12 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.51445777,45.24255706 ]
+       "coordinates":  [ -93.425967,45.20233 ]
     },
     "properties": {
     "id":36,
     "name":"Dayton Village Farmers Market",
-    "address":"18380 Columbus St",
+    "address":"11311 Dayton River Road",
     "city":"Dayton",
     "zip":55327,
     "website":"http://cityofdaytonmn.com/index.asp?SEC=C251CA5B-3143-44E6-9F74-10DDFF7E427D&DE=F544D0C5-4894-465C-922E-570BDD0E1F36&Type=B_PR",
@@ -1261,7 +1133,7 @@
     "address":"225 6th St S",
     "city":"Minneapolis",
     "zip":55402,
-    "website":"NA",
+    "website":"N/A",
     "phone":"612-672-3011",
     "source":"",
     "email":"communitymanager@capellatowerat225.com",
@@ -1317,38 +1189,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.25886909,44.98657003 ]
-    },
-    "properties": {
-    "id":42,
-    "name":"Riverplace Market",
-    "address":"1 Main St SW",
-    "city":"Minneapolis",
-    "zip":55414,
-    "website":"https://www.facebook.com/Riverplace-Market-1234170089943695",
-    "phone":"651-983-4766",
-    "source":"",
-    "email":"Stephanie@stephaniesweeklydish.com",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"W: 3pm-7pm",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"Unknown",
-    "season":"6/1-9/28",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.25211955,44.96252391 ]
     },
     "properties": {
@@ -1370,38 +1210,6 @@
     "sunday":"Pending",
     "ebt":"No",
     "season":"Pending",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.26082888,44.97888247 ]
-    },
-    "properties": {
-    "id":44,
-    "name":"Depot Farmers Market",
-    "address":"500 S Washington Ave",
-    "city":"Minneapolis",
-    "zip":55401,
-    "website":"N/A",
-    "phone":"612-395-7190",
-    "source":"",
-    "email":"pinge@csmcorp.net ",
-    "monday":"",
-    "tuesday":"TU: 10am-2:30pm",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"No",
-    "season":"5/10-10/25",
     "notes":"",
     "designation":"Farmers Market",
     "pitch":60,
@@ -1481,7 +1289,7 @@
     },
     "properties": {
     "id":47,
-    "name":"Riverwalk Market Fair",
+    "name":"Northfield Riverwalk Market Fair",
     "address":"S Water St. and W 5th St.",
     "city":"Northfield",
     "zip":55057,
@@ -1861,38 +1669,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.664711,44.93747 ]
-    },
-    "properties": {
-    "id":60,
-    "name":"Mound Farmers Market",
-    "address":"5515 Shoreline Dr.",
-    "city":"Mound ",
-    "zip":55364,
-    "website":"N/A",
-    "phone":"612-501-1433",
-    "source":"",
-    "email":"N/A",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"SA: 8 am to 12:30 pm",
-    "sunday":"",
-    "ebt":"Unknown",
-    "season":"",
-    "notes":"Veteran�s Memorial Plaza ",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.14523,44.94191 ]
     },
     "properties": {
@@ -2203,38 +1979,6 @@
     "ebt":"Unknown",
     "season":"",
     "notes":"Corpus Christi Catholic Church",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.26641,45.03373 ]
-    },
-    "properties": {
-    "id":71,
-    "name":"Northeast Farmers Market",
-    "address":"629 2nd St. NE",
-    "city":"Minneapolis ",
-    "zip":55413,
-    "website":"http://northeastmarket.org",
-    "phone":"N/A",
-    "source":"",
-    "email":"N/A",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"SA: 9 am to 1 pm",
-    "sunday":"",
-    "ebt":"Unknown",
-    "season":"",
-    "notes":"Street Boniface Catholic Church ",
     "designation":"Farmers Market",
     "pitch":60,
     "bearing":-60,
