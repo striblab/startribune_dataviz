@@ -506,9 +506,15 @@ ul.dropdown.months {
         width: 100%;
     }
 }
-.zoom {
+.zoom, .clear, .showing {
     text-align: left !important;
     padding: 3px;
+}
+.zoom:hover, .clear:hover, .showing:hover {
+    cursor:pointer;
+}
+.number {
+    font-weight:900;
 }
 input {
     background-color: $white !important;
