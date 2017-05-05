@@ -933,38 +933,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.26953773,44.99992547 ]
-    },
-    "properties": {
-    "id":34,
-    "name":"Grainbelt Farmers Market",
-    "address":"1215 Marshall St. NE",
-    "city":"Minneapolis",
-    "zip":55413,
-    "website":"http://www.northeastmarket.org/thursday-market/",
-    "phone":"612-387-0527 ",
-    "source":"Website",
-    "email":"info@northeastmarket.org",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"TH: 4:30pm-7:30pm",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"Yes",
-    "season":"6/9-8/25",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.28593293,44.98035283 ]
     },
     "properties": {
@@ -1061,38 +1029,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.25900125,44.93440108 ]
-    },
-    "properties": {
-    "id":38,
-    "name":"The Tiny Diner Farmers Market",
-    "address":"1024 E 38th St.",
-    "city":"Minneapolis",
-    "zip":55407,
-    "website":"https://tinydinerfarm.wordpress.com/the-tiny-diner/",
-    "phone":"612-767-3322",
-    "source":"DIRECT",
-    "email":"rina.r@tinydiner.com",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"TH: 5pm-8pm",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"No",
-    "season":"6/30-10/6",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.27257694,44.97606939 ]
     },
     "properties": {
@@ -1114,38 +1050,6 @@
     "sunday":"",
     "ebt":"No",
     "season":"5/3-12/?",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.26899764,44.97524739 ]
-    },
-    "properties": {
-    "id":40,
-    "name":"Capella Tower Farmers Market",
-    "address":"225 6th St S",
-    "city":"Minneapolis",
-    "zip":55402,
-    "website":"N/A",
-    "phone":"612-672-3011",
-    "source":"",
-    "email":"communitymanager@capellatowerat225.com",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"W: 11am-2pm",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"No",
-    "season":"6/1-10/26",
     "notes":"",
     "designation":"Farmers Market",
     "pitch":60,
