@@ -2533,38 +2533,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.091021,44.949686 ]
-    },
-    "properties": {
-    "id":81,
-    "name":"St. Paul Farmers Market",
-    "address":"7th Place Mall",
-    "city":"St. Paul",
-    "zip":55101,
-    "website":"http://stpaulfarmersmarket.com",
-    "phone":"651-227-8101",
-    "source":"",
-    "email":"N/A",
-    "monday":"",
-    "tuesday":"TU: 10 am to 1:30 pm",
-    "wednesday":"",
-    "thursday":"TH: 10 am to 1:30 pm",
-    "friday":"",
-    "saturday":"",
-    "sunday":"",
-    "ebt":"Unknown",
-    "season":"",
-    "notes":"7th Place Mall",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.38395,45.19756 ]
     },
     "properties": {
