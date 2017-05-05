@@ -1061,38 +1061,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.25211955,44.96252391 ]
-    },
-    "properties": {
-    "id":43,
-    "name":"Four Sisters Farmers Market",
-    "address":"2001 Bloomington Ave S",
-    "city":"Minneapolis",
-    "zip":55404,
-    "website":"https://www.facebook.com/foursistersmarket?fref=ts",
-    "phone":"N/A",
-    "source":"MPLS",
-    "email":"afairbanks@nacdi.org",
-    "monday":"Pending",
-    "tuesday":"Pending",
-    "wednesday":"Pending",
-    "thursday":"Pending",
-    "friday":"Pending",
-    "saturday":"Pending",
-    "sunday":"Pending",
-    "ebt":"No",
-    "season":"Pending",
-    "notes":"",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.874389,45.173301 ]
     },
     "properties": {
