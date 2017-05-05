@@ -933,38 +933,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.28593293,44.98035283 ]
-    },
-    "properties": {
-    "id":35,
-    "name":"Lyndale Farmers Market Annex",
-    "address":"200 E Lyndale",
-    "city":"Minneapolis",
-    "zip":55405,
-    "website":"http://www.farmersmarketannex.com/index.html",
-    "phone":"612-573-0148 ",
-    "source":"WEB",
-    "email":"info@FarmersMarketAnnex.com",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"SA: 6:30am-1:30pm",
-    "sunday":"SU: 6:30am-1:30pm",
-    "ebt":"No",
-    "season":"4/23-10/30",
-    "notes":"FMNP taken.",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.425967,45.20233 ]
     },
     "properties": {
@@ -2363,38 +2331,6 @@
     "ebt":"",
     "season":"",
     "notes":"June 8-Oct. 12",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.315802,44.924428 ]
-    },
-    "properties": {
-    "id":88,
-    "name":"Linden Hills Farmers Market",
-    "address":"2813 W. 43rd St.",
-    "city":"Minneapolis",
-    "zip":null,
-    "website":"http://lindenhillsfarmersmarket.com",
-    "phone":"612-867-0854",
-    "source":"",
-    "email":"N/A",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"SU: 9 am to 1 pm",
-    "ebt":"",
-    "season":"",
-    "notes":"May 21-Oct. 31",
     "designation":"Farmers Market",
     "pitch":60,
     "bearing":-60,
