@@ -236,9 +236,12 @@ $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by address");
                 }); 
 
                 map.setLayoutProperty('dots-layer-' + txt, 'visibility', 'visible');
-
+                var count = $('.card:visible').length;
+                $('.number').html(d3.format(",")(count));
               });
 
+                var count = $('.card:visible').length;
+                $('.number').html(d3.format(",")(count));
         });
 
 var popup = new mapboxgl.Popup({
@@ -313,8 +316,27 @@ $(".zoom").click(function() {
     map.setLayoutProperty('dots-layer-friday', 'visibility', 'visible');
     map.setLayoutProperty('dots-layer-saturday', 'visibility', 'visible');
     map.setLayoutProperty('dots-layer-sunday', 'visibility', 'visible');
+    var count = $('.card:visible').length;
+    $('.number').html(d3.format(",")(count));
 });
 
+$(".clear").click(function() {
+    $('.check').removeClass("toggle, selected");
+    map.flyTo({ center: center, zoom: 7, pitch: 0, bearing: 0 });
+    $(".stat").html("");
+    $(".card").removeClass("selected");
+    $(".card").hide();
+    popup.remove();
+    map.setLayoutProperty('dots-layer-monday', 'visibility', 'none');
+    map.setLayoutProperty('dots-layer-tuesday', 'visibility', 'none');
+    map.setLayoutProperty('dots-layer-wednesday', 'visibility', 'none');
+    map.setLayoutProperty('dots-layer-thursday', 'visibility', 'none');
+    map.setLayoutProperty('dots-layer-friday', 'visibility', 'none');
+    map.setLayoutProperty('dots-layer-saturday', 'visibility', 'none');
+    map.setLayoutProperty('dots-layer-sunday', 'visibility', 'none');
+    var count = $('.card:visible').length;
+    $('.number').html(d3.format(",")(count));
+});
 
 
 
