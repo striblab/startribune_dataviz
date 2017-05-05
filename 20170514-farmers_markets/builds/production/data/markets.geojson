@@ -741,38 +741,6 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.37878,44.98696 ]
-    },
-    "properties": {
-    "id":68,
-    "name":"Golden Valley Farmers Market",
-    "address":"7800 Golden Valley RD",
-    "city":"Golden Valley",
-    "zip":55427,
-    "website":"http://marketinthevalley.org",
-    "phone":"612-440-2648",
-    "source":"",
-    "email":"N/A",
-    "monday":"",
-    "tuesday":"",
-    "wednesday":"",
-    "thursday":"",
-    "friday":"",
-    "saturday":"",
-    "sunday":"SU: 9 am to 1 pm",
-    "ebt":"Unknown",
-    "season":"",
-    "notes":"June 18-Oct. 1",
-    "designation":"Farmers Market",
-    "pitch":60,
-    "bearing":-60,
-    "icon":""
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
        "coordinates":  [ -93.41156024,44.92378331 ]
     },
     "properties": {
