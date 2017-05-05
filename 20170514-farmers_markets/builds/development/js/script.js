@@ -46,7 +46,7 @@ d3.select("#table").selectAll(".card")
     $("#infobox #name, .pname").html(d.name);
     $("#infobox #address, .paddress").html(d.address + ", " + d.city + ", MN " + d.zip);
     $("#infobox #phone, .pphone").html(d.phone);
-    $("#infobox #website, .pwebsite").html("<a href='" + d.website + "' target='new_'>Website</a>");
+    if (d.website != "N/A") { $("#infobox #website, .pwebsite").html("<a href='" + d.website + "' target='new_'>Website</a>"); }
     $("#infobox #area, .parea").html(d.where);
     $("#infobox #monday").html(d.monday);
     $("#infobox #tuesday").html(d.tuesday);
