@@ -1,7 +1,7 @@
 Star Tribune - Minneapolis Institute of Arts Collection Data Visualization
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [NVD3](http://nvd3.org/) and [jQuery](https://github.com/jquery/jquery).
 

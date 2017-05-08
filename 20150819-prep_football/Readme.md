@@ -1,7 +1,7 @@
 Star Tribune - Prep Football League Divisions
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.2/).
 

@@ -1,7 +1,7 @@
 Star Tribune - How charters compare to public districts
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [NVD3](http://nvd3.org/) and [DataTables](https://www.datatables.net/).
 

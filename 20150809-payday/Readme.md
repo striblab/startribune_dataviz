@@ -1,7 +1,7 @@
 Star Tribune - Payday lender donations to Minnesota lawmakers
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [NVD3](https://github.com/novus/nvd3), [DataTables](https://github.com/DataTables/DataTables) and [jQuery](https://github.com/jquery/jquery).
 

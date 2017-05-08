@@ -1,7 +1,7 @@
 Star Tribune - Chart for Cut off: Veterans struggle to live with VA's new painkiller policy
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [NVD3](http://nvd3.org/) and [jQuery](https://github.com/jquery/jquery).
 

@@ -1,7 +1,7 @@
 Star Tribune - Sports schedule overlaps
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [Google Charts](https://github.com/GoogleWebComponents/google-chart) and [jQuery](https://github.com/jquery/jquery).
 

@@ -1,7 +1,7 @@
 Star Tribune - Survey: How often does the Met Council use transit?
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [jQuery](https://github.com/jquery/jquery).
 

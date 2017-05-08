@@ -1,7 +1,7 @@
 Star Tribune Data Drop - Philando Castile Traffic Stops Timeline
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [C3](https://github.com/masayuki0812/c3) and [jQuery](https://github.com/jquery/jquery).
 

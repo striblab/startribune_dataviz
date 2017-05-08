@@ -1,7 +1,7 @@
 Star Tribune - Adverse events at Minnesota hospitals 2005-2016
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [C3](https://github.com/masayuki0812/c3), [jQuery](https://github.com/jquery/jquery) and [DataTables](https://www.datatables.net/).
 

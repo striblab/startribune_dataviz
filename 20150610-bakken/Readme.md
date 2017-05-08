@@ -1,7 +1,7 @@
 Star Tribune - Is Minnesota prepared for an oil train disaster?
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [NVD3](http://nvd3.org/), [jQuery](https://github.com/jquery/jquery), [DataTables](https://www.datatables.net/) and Mapbox.js.
 

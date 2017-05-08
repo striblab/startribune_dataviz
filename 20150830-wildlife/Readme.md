@@ -1,7 +1,7 @@
 Star Tribune - Wildlife Specimens Passing Through U.S. Customs
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Build using [ChartBuilder](https://quartz.github.io/Chartbuilder/).
 

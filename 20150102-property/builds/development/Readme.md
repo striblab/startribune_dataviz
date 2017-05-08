@@ -1,7 +1,7 @@
 Star Tribune - Minneapolis Property Value Change by Neighborhood Data Visualization
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.2/).
 

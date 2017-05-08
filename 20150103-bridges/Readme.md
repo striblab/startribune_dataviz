@@ -1,7 +1,7 @@
 Star Tribune - Worst Bridges in Minnesota Data Visualization
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [jQuery](https://github.com/jquery/jquery) and [DataTables](https://www.datatables.net/) and [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.2/).
 
