@@ -1,7 +1,7 @@
 Star Tribune - Explore Minneapolis 311 Calls
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [jQuery](https://github.com/jquery/jquery) and [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.4/).
 

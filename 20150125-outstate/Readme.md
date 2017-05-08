@@ -1,7 +1,7 @@
 Star Tribune - Metro vs. outstate: Which counties pay most taxes and which get most aid?
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3) and [jQuery](https://github.com/jquery/jquery).
 

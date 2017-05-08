@@ -1,7 +1,7 @@
 Star Tribune - Giants Ridge: A decade of losses
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [NVD3](http://nvd3.org/).
 

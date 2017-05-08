@@ -1,0 +1,230 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24788,45.00741 ]
+    },
+    "properties": {
+    "street":"central",
+    "name":"Maya Cuisine & Bar",
+    "address":"1840 Central",
+    "city":"Minneapolis",
+    "url":"mayacuisineusa.com",
+    "description":"Take a quick, flavorful trip to Mexico via Maya Cuisine & Bar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24694,45.01201 ]
+    },
+    "properties": {
+    "street":"central",
+    "name":"Crescent Moon Bakery",
+    "address":"2339 Central",
+    "city":"Minneapolis",
+    "url":"crescentmoonbakery.com",
+    "description":"Afghani classics mix with pizza at Crescent Moon Bakery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24787,45.01281 ]
+    },
+    "properties": {
+    "street":"central",
+    "name":"Durango Bakery",
+    "address":"2418 Central",
+    "city":"Minneapolis",
+    "url":"",
+    "description":"Revel in a greatest-hits selection of Central American sweets at Durango Bakery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.246805,45.013684 ]
+    },
+    "properties": {
+    "street":"central",
+    "name":"Holy Land",
+    "address":"2513 Central",
+    "city":"Minneapolis",
+    "url":"holylandbrand.com",
+    "description":"Find all things Middle Eastern under one roof at Holy Land"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2468,45.02022 ]
+    },
+    "properties": {
+    "street":"central",
+    "name":"Chimborazo",
+    "address":"2851 Central",
+    "city":"Minneapolis",
+    "url":"chimborazorestaurant.com",
+    "description":"Chimborazo extends a welcoming Ecuadorean greeting"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27743,44.95534 ]
+    },
+    "properties": {
+    "street":"nicollet",
+    "name":"Black Forest Inn",
+    "address":"1 E. 26th St.",
+    "city":"Minneapolis",
+    "url":"blackforestinnmpls.com",
+    "description":"German expat Erich Christ founded Black Forest Inn in 1965"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27832,44.95511 ]
+    },
+    "properties": {
+    "street":"nicollet",
+    "name":"Peninsula",
+    "address":"2608 Nicollet",
+    "city":"Minneapolis",
+    "url":"peninsulamalaysiancuisine.com",
+    "description":"It's all about lively Malaysian flavors at Peninsula"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27751,44.95308 ]
+    },
+    "properties": {
+    "street":"nicollet",
+    "name":"Quang",
+    "address":"2719 Nicollet",
+    "city":"Minneapolis",
+    "url":"quang-restaurant.com",
+    "description":"Quang has been a quintessential Vietnamese go-to for 27 years"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2775,44.95397 ]
+    },
+    "properties": {
+    "street":"nicollet",
+    "name":"Harry Singh's",
+    "address":"2653 Nicollet",
+    "city":"Minneapolis",
+    "url":"harrysinghs.com",
+    "description":"The place for comfort food, Trinidad-style, is Harry Singh's"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27782051,44.95300883 ]
+    },
+    "properties": {
+    "street":"nicollet",
+    "name":"Rainbow Chinese Restaurant & Bar",
+    "address":"2739 Nicollet",
+    "city":"Minneapolis",
+    "url":"rainbowrestaurant.com",
+    "description":"Rainbow Chinese Restaurant & Bar is an Eat Street institution"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.11943,44.95546 ]
+    },
+    "properties": {
+    "street":"university",
+    "name":"Cheng Heng",
+    "address":"448 W. University",
+    "city":"Minneapolis",
+    "url":"",
+    "description":"At modest Cheng Heng, the beautiful, nuanced cooking is"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.11756,44.95527 ]
+    },
+    "properties": {
+    "street":"university",
+    "name":"Little Szechuan",
+    "address":"422 W. University",
+    "city":"Minneapolis",
+    "url":"littleszechuan.com",
+    "description":"Little Szechuan knows how to turn up the heat, and how"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.131066,44.956108 ]
+    },
+    "properties": {
+    "street":"university",
+    "name":"Trung Nam French Bakery",
+    "address":"739 W. University",
+    "city":"Minneapolis",
+    "url":"",
+    "description":"Affordable Gallic pastries meet Vietnamese flair at Trung Nam French Bakery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15421002,44.9560963 ]
+    },
+    "properties": {
+    "street":"university",
+    "name":"Flamingo Restaurant",
+    "address":"490 N. Syndicate St.",
+    "city":"Minneapolis",
+    "url":"flamingorestaurantmn.com",
+    "description":"Flamingo Restaurant serves East African warmth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16846,44.95599 ]
+    },
+    "properties": {
+    "street":"university",
+    "name":"On's Kitchen",
+    "address":"1613 W. University",
+    "city":"Minneapolis",
+    "url":"onskitchen.com",
+    "description":"Owner On Khumchaya cooks Thai from her heart at On's Kitchen"
+    }
+  }
+]
+}
