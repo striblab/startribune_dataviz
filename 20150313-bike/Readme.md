@@ -1,7 +1,7 @@
 Star Tribune - Bicycling America Blog
 ================
 
-by Jeff Hargarten
+by [Frey Hargarten](http://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3) and [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.4/).
 

@@ -1,33 +1,22 @@
-# Web Project Workflows with Gulp.js, Git, and Browserify
-![Web Project Workflows with Gulp.js, Git, and Browserify](hero.png)
-This is the repository for my course, [Web Project Workflows with Gulp.js, Git, and Browserify](http://www.lynda.com/AngularJS-tutorials/Building-Data-Driven-App-AngularJS/174237-2.html). The full course is available at [lynda.com](http://lynda.com).
+Star Tribune - LRT Green Line ridership
+================
 
-## Course Description
-Modern front-end development means more than just writing HTML, CSS, and JavaScript. Developing an efficient workflow will help you write better code and test and deploy your web applications easily and efficiently. Staff author Ray Villalobos is here to show you how to generate a workflow that makes it easier to build websites with processed languages like Sass, Compass, and CoffeeScript. He'll show how to automate development and production versions of your sites, track and share project files with Git and GitHub, and add libraries like jQuery and Mustache.js with Browserify. All of these techniques should easily translate to building your own web projects.
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
-## Topics include:
-- Why workflow management?
-- Processing tasks with gulp-coffee
-- Importing libraries with Browserify
-- Processing Sass and Compass
-- Issuing tasks in sequence
-- Watching changes to files
-- Adding static reloads
-- Setting up environment variables
-- Minifying HTML
-- Compressing images
+Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [NVD3](https://github.com/novus/nvd3), [DataTables](https://github.com/DataTables/DataTables) and [jQuery](https://github.com/jquery/jquery).
 
-## Instructions
+Options for running:
 
-1. Make sure you have these installed
-	- [node.js](http://nodejs.org/)
-	- [git](http://git-scm.com/)
-	- [gulp](http://gulpjs.com/)
-2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `> git clone https://github.com/planetoftheweb/workflows.git`
-3. CD to the folder `cd workflows`
-4. Run `> npm-install` to install the project dependencies
-5. Install gulp.js via the Mac terminal or Gitbash on a PC `> npm install -g gulp`
-5. Run the Gulp command `> gulp`
-6. Fire up your browser at `http://localhost:8080`
+a. Download and run on LAMP/MAMP/WAMP stack. Just launch the /builds/development/index.html file in your browser.
 
+b. NPM/GULP
 
+1. Download and unpack repo
+
+2. Go to folder in Terminal
+
+3. npm install
+
+4. gulp
+
+5. Modifications can be made to styles.css, index.html and scripts.js in /builds/development and pushed to /builds/production via gulp with the NODE_ENV=production gulp command.
