@@ -1,7 +1,7 @@
 Star Tribune Data Drop - Metro Area community social media groups
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [jQuery](https://github.com/jquery/jquery) and [Mapbox GL](https://www.mapbox.com/mapbox-gl-js/).
 

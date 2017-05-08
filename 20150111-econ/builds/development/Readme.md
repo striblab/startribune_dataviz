@@ -1,7 +1,7 @@
 Star Tribune - Signs point to a growing economy
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [NVD3](http://nvd3.org/) and [jQuery](https://github.com/jquery/jquery).
 

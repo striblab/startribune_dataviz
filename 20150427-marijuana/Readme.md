@@ -1,7 +1,7 @@
 Star Tribune - Marijuana in Minnesota Data Visualization
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [NVD3](http://nvd3.org/), [jQuery](https://github.com/jquery/jquery) and [Mapbox.js](https://www.mapbox.com/mapbox.js/api/v2.2.4/). 
 

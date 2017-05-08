@@ -579,10 +579,10 @@ $(document).ready(function() {
 
     $(this).find(".chatter, .chartTitle").show();
 
-      Typed.new(".chatter", {
-        strings: [$(this).text()],
-        typeSpeed: 0
-      });
+      // Typed.new(".chatter", {
+      //   strings: [$(this).text()],
+      //   typeSpeed: 0
+      // });
 
     playScript(index-1)
     }

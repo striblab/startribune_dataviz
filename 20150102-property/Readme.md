@@ -1,7 +1,7 @@
 Star Tribune - Minneapolis neighborhood property value changes
 ================
 
-by Frey Hargarten
+by [Frey Hargarten](https://github.com/jeffhargarten)
 
 Built using [Mapbox](https://github.com/mapbox/mapbox.js) and [jQuery](https://github.com/jquery/jquery).
 
