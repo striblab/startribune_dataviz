@@ -11,7 +11,8 @@ var bounds = [
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
+    // style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
+    style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
     center: [-93.28469849, 45.01832962], 
     zoom: 4,
     minZoom: 3,
@@ -377,7 +378,7 @@ function playScript(step){
     setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 18){
-    mapFlight(-113.422852, 48.128518,4,0,0);
+    mapFlight(-94.215540, 47.410950,4,0,0);
     setTimeout(function(){ showMarkers(1996); }, 500);
     setTimeout(function(){ showMarkers(1997);  }, 1000);
     setTimeout(function(){ showMarkers(1998);  }, 1200);
@@ -401,7 +402,7 @@ function playScript(step){
     setTimeout(function(){ showMarkers(2016);  }, 4800);
   }
   if (step == 19){
-    mapFlight(-99.081678, 40.699330,3,0,0);
+    
     unloadMarkers(1986, 2017);
 
     var interval = 800;
@@ -410,7 +411,11 @@ function playScript(step){
         setTimeout(function(){ showMarkers(i); }, interval);
         interval += 200;
     }
+
+    mapFlight(-94.215540, 47.410950,4,0,0);
   }
+
+  
 
 }
 
@@ -537,8 +542,8 @@ function showMarkers(index){
 
 function loadMarkers(){
   for (var i=1986; i < 2017; i++){
-    // plopMarker(i,'194,42,34',i);
-    plopMarker(i,'0,191,255',i);
+    plopMarker(i,'194,42,34',i);
+    // plopMarker(i,'0,191,255',i);
   }
 }
 
