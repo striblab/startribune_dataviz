@@ -18,7 +18,7 @@ var map = new mapboxgl.Map({
     container: 'central', // container id
     style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
     center: [-93.247128, 45.013828], 
-    zoom: 14,
+    zoom: 13,
     minZoom: 3
 });
 
@@ -75,7 +75,7 @@ var map2 = new mapboxgl.Map({
     container: 'university', // container id
     style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
     center: [-93.131066, 44.956108], 
-    zoom: 13,
+    zoom: 12,
     minZoom: 3
 });
 
@@ -133,12 +133,12 @@ var map3 = new mapboxgl.Map({
     container: 'nicollet', // container id
     style: 'mapbox://styles/shadowflare/cilea5110001ra8ktm7409xze',
     center: [-93.277625, 44.953899], 
-    zoom: 16,
+    zoom: 15,
     minZoom: 3
 });
 
 map3.addControl(new mapboxgl.NavigationControl());
-map.scrollZoom.disable();
+map3.scrollZoom.disable();
 
 map3.on('load', function() {
 
