@@ -1,0 +1,246 @@
+/* PROJECT STYLES */
+#wrapper  {
+     width: 850px;
+     font-family: $bentonSans;
+     margin-left:auto;
+     margin-right:auto;
+ }
+
+#map  {
+     height: 330px;
+     width: 100%;
+ }
+
+.mapboxgl-ctrl-attrib  {
+     display: none !important;
+ }
+
+#listing  {
+     float: left;
+     width: 30%;
+}
+
+#cities {
+     height:335px;
+     overflow-y:auto;
+}
+
+#reference {
+  vertical-align:top;
+}
+
+.row { 
+  padding:5px; 
+}
+
+.row:hover {
+  opacity:0.8;
+  cursor:pointer;
+}
+
+.th { 
+  padding:5px; 
+  font-weight:900;
+}
+
+.th:hover {
+  opacity:0.8;
+  cursor:pointer;
+}
+
+.selected3 {
+  text-decoration:underline;
+}
+
+.col { 
+  display:inline-block; 
+}
+
+.name { 
+  width:83%; 
+}
+
+#legendContainer {
+  float:left;
+}
+
+.score {
+  font-weight:900;
+  text-align:right;
+  width:15%; 
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+
+#metrics  {
+  float: right;
+  width: 68%;
+  text-align:center;
+ }
+
+.smallBreak {
+  padding:7px;
+}
+
+.selected {
+  margin-bottom:0 !important;
+}
+
+h5 { 
+  margin-left:28px; 
+}
+
+.metricCol {
+  display:inline-block;
+  width:24%;
+  text-align:center;
+  vertical-align:top;
+}
+
+.metricCol div {
+  padding:1px;
+}
+
+.metric {
+  font-weight:900;
+  font-size:1.5em;
+}
+
+#districtName {
+  font-weight:900;
+  font-size:1.5em;
+  text-align:center;
+  padding:7px;
+}
+
+#chart, #chart svg {
+  height:200px;
+}
+
+#chart .c3-line {
+  stroke-width: 6px !important;
+}
+
+/*#income {
+  font-weight:900;
+  font-size:1.2em;
+  text-align:center;
+  padding:5px;  
+}*/
+
+.c3-tooltip {
+    -webkit-box-shadow: 0px !important;
+    box-shadow: 0px 0px 0px 0px !important;
+    width:200px;   
+}
+
+#source a { 
+  color:steelblue;
+}
+
+.mobileshow {
+  display:none;
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass { 
+  display:none !important;
+}
+
+.onoffswitch {
+    float:right;
+    position: relative; width: 187px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "CITIES/TOWNS";
+    padding-left: 10px;
+    background-color: #807dba; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "NEIGHBORHOODS";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 28px; margin: 1px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 153px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+@media only screen and (max-width:840px)  {
+
+#map {
+  height:200px;
+}
+
+#wrapper  {
+  width: 100%;
+ }
+
+#cities {
+  height:157px;
+}
+
+#chart, #chart svg {
+  height:200px;
+}
+
+#listing, #metrics { 
+  float:none;
+  width:100%;
+}
+
+.metric {
+  font-size:1.2em;
+}
+
+.metricLabel {
+  font-size:0.9em;
+}
+
+#source {
+  font-size:0.8em;
+}
+
+}
+
+@media only screen and (max-width:500px)  {
+
+.mobilekill {
+  display:none;
+}
+
+.mobileshow {
+  display:block;
+}
+
+#districtName {
+  font-size:1em;
+}
+
+}
