@@ -248,7 +248,7 @@ function metricLoad(city){
     else if  (cityData[0].EffectiveNegEqRate >= 0) { color = "#dadaeb"; }
 
     $("#districtName").css('background-color',color);
-    $("#indexRow").css('border',"3px solid " + color);
+    $("#indexRow").css('border',"0 solid " + color);
     
     $("#days").html(cityData[0].starter2017);
     $("#distressed").html(cityData[0].tradeup2017);
@@ -297,6 +297,9 @@ function metricLoad(city){
                 },
                 colors: { 'PPSF': '#333333' }
             },
+            point: {
+                show: false
+            },
             legend: {
                 show: false
             },
@@ -306,6 +309,7 @@ function metricLoad(city){
                     min: 0,
                     padding: {bottom: 0, top: 0},
                     tick: {
+                        values: [100,250,400],
                         count: 4,
                         format: d3.format('$.0f')
                     }

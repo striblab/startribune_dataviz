@@ -1,48 +1,355 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    line-height: 130%;
+    overflow-x: hidden;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#wrapper {
+    width: 100%;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.bar.positive {
+    fill: steelblue;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.bar.negative {
+    fill: brown;
+}
 
-    .chatter { padding:20px; }  
+.axis text {
+    font: 10px sans-serif;
+}
 
-    p { font-family:$bentonSans; }  
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
 
-    #info { display:none; }
+.sectionHead {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 90px;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.sectionIcon {
+    float: left;
+    text-align: left;
+    display: block;
+    height: 80px;
+    width: 105px;
+    background-color: none
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.sectionIcon img {
+    width: 80px;
+    height: 80px;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.sectionTitle {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+#menu {
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.myButton2 {
+    padding: 8px;
+    width: 12%;
+    font-size: 1em;
+    font-weight: normal;
+    background-color: #918677;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    color: #fff;
+    border: none;
+}
+
+.myButton2:hover {
+    background-color: #ccbe9a !important;
+    ;
+    color: #fff;
+    !important;
+}
+
+.legend {
+    margin-left: 11%;
+}
+
+.countyName {
+    font-weight: bold;
+}
+
+.above {
+    background-color: #121212;
+}
+
+.mid {
+    background-color: #888888;
+}
+
+.below {
+    background-color: #c7c7c7;
+}
+
+.breaker {
+    clear: both;
+    margin: 7px;
+    padding: 10px;
+    width: 100%;
+}
+
+.section {
+    margin-top: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.sideBox {
+    height: auto;
+    float: right;
+    width: 40%;
+    margin-right: 8%
+}
+
+.map {
+    width: 40%;
+    float: left;
+    margin-left: 8%;
+}
+
+.map path:hover {
+    fill: #333 !important;
+    cursor: pointer;
+}
+
+.chatter {
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.chart svg {
+    width:100%;
+    height: 330px;
+}
+
+.countyName {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.legend label,
+.legend span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 60px;
+    text-align: center;
+    font-size: 12px;
+    color: #808080;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+.nvd3 .nv-x .nv-axis .tick line,
+.nvd3 .nv-y .nv-axis .tick line {
+    fill: none;
+    display: none !important;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+    opacity: 0 !important;
+}
+
+.nvtooltip {
+    border-radius: 0 !important;
+    background-color: #fff;
+    border-color: #000;
+    font-size: 1em;
+}
+
+.zoom {
+    display: block;
+    text-align: center !important;
+    clear: both !important;
+    width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.metric {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+.source {
+    font-size: .65em;
+    color: #999;
+    line-height: 130%;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    clear: both;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.source a {
+    color: #999;
+    text-decoration: none;
+}
+
+.source a:hover {
+    color: #333;
+}
+
+.selected {
+    background-color: #bc2d26 !important;
+    color: #fff !important;
+}
+
+.selected:hover {
+    color: #fff !important
+}
+
+.chatter {
+    min-width: 180px !important;
+}
+
+.infobox {
+    margin-left: 25px;
+}
+
+.context {
+    text-align: center;
+    font-size: .8em;
+}
+
+
+/*DOWNLOAD BUTTON STYLES*/
+
+.downloadButton9 {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    border: none;
+    font-size: .9em;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 1%;
+    padding-top: 0px;
+    width: 99%;
+    background-color: #fff;
+    color: #333;
+    background-image: url('../_common_resources/img/downloadDoc.svg');
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: 42% 76%;
+}
+
+.downloadButton9:hover {
+    background-color: #fff !important;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.downloadButton9:active {
+    background-color: #fff !important;
+}
+
+@media (max-width: 570px) {
+    .sideBox,
+    .map {
+        width: 100%;
+        clear: both;
     }
+    .zoom,
+    .legendContainer,
+    .source {
+        width: 100%;
+        text-align: center;
+        clear: both;
+        margin: 7px;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .legend nav {
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .countyName,
+    .metric {
+        text-align: center;
+    }
+    .chart svg {
+        height: 230px;
+    }
+    .myButton2 {
+        width: 48%;
+        margin-bottom: 5px;
+    }
+    .downloadButton9 {
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        color: #333333;
+        border: none;
+        font-size: .9em;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 1%;
+        padding-top: 0px;
+        width: 99%;
+        background-color: #fff;
+        color: #333;
+        background-image: none !important;
+    }
+}
+
+.nv-bar rect {
+    stroke: #fff !important;
+    stroke-width: 4 !important;
+    stroke-opacity: 1 !important;
+}
+
+@media (min-device-width: 320px) and (max-device-width:640px) {
+    .myButton2 {
+        width: 48%;
+    }
+    .map {
+        width: 90%;
+        float: left;
+        margin: 0 auto 20px auto;
+    }
+    .downloadButton9 {
+        font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        color: #333333;
+        border: none;
+        font-size: .9em;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 0%;
+        margin-bottom: 20px;
+        padding-bottom: 0;
+        width: 99%;
+        background-color: #fff;
+        color: #333;
+        background-image: url('../_common_resources/img/downloadDoc.svg');
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        background-position: 28% 0%;
+    }
+}
