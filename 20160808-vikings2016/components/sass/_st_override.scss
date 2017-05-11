@@ -1,48 +1,216 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body,
+#filter,
+#filter input:focus {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#wrapper {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    /*width:520px;*/
+    margin-right: auto;
+    margin-left: auto;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+#headlineBox {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    background-color: #dfdfdf;
+    padding: 15px;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+#headlineBox img {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+}
 
-    .chatter { padding:20px; }  
+#headlineBox .textBox {
+    width: auto;
+    padding-left: 20px;
+    display: block;
+}
 
-    p { font-family:$bentonSans; }  
+#headlineBox .textBox h3 {
+    text-align: left;
+    font-size: 1.5em;
+}
 
-    #info { display:none; }
+#headlineBox .textBox h4 {
+    margin-top: 1em;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.fieldsection {
+    width: 24%;
+    height: 300px;
+    /*background-color:transparent;*/
+    /*background-color:#2AED6B;*/
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../img/fieldDB2.png");
+    background-size: 100% 100%;
+    margin-bottom: 5px;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.bar {
+    width: 100%;
+    height: 100px;
+    /*vertical-align:middle;*/
+    padding-top: 5%;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.avgsection {
+    width: 24%;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.hashes {
+    background-color: transparent;
+    height: 20px;
+    display: inline-block;
+}
+
+.hashes div {
+    width: 11.1%;
+    height: 20px;
+    border-left: 3px solid #fff;
+    display: inline-block;
+}
+
+.los {
+    border-right: 5px red solid;
+}
+
+.otherstats {
+    display: none;
+}
+
+.bar:hover {
+    opacity: 0.9;
+}
+
+#rb .fieldsection {
+    border-top: 10px #C5D86D solid;
+}
+
+.highlight {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.wrapper-demo {
+    text-align: left;
+}
+
+.wrapper-dropdown-1 {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wrapper-dropdown-1.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 0 !important;
+}
+
+.touchdown {
+    border: 2px solid #00f;
+}
+
+.interception {
+    border: 2px solid #f00;
+}
+
+.both {
+    border: 2px solid #f0f;
+}
+
+.bigNum {
+    font-size: 2em !important;
+}
+
+#fieldQB {
+    /*background-image: url("img/field.png");*/
+}
+
+#rb .fieldsection {
+    width: 97%;
+}
+
+#rb .bar {
+    display: inline-block;
+    width: 15% !important;
+    height: 290px;
+}
+
+#rb .avg {
+    display: inline-block;
+    width: 15% !important;
+}
+
+#smallLegend .key {
+    margin: 0 5px 10px 5px;
+    height: 12px;
+    display: inline-block;
+    background-image: url("img/fieldDBkey.png");
+}
+
+#smallLegend .key div {
+    height: 12px;
+    width: 30px;
+    display: inline-block;
+}
+
+#smallLegend {
+    font-size: 0.8em;
+    color: #bbb;
+    margin-top: 15px;
+}
+
+.tinybreak {
+    padding: 3px;
+}
+
+h4 {
+    text-align: left !important;
+}
+
+@media (max-width:450px) {
+    #wrapper {
+        width: 100%;
     }
+    #headlineBox {
+        padding: 0;
+    }
+    #headlineBox img {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+    #headlineBox .textBox {
+        width: 100%;
+        padding-left: 0 !important;
+    }
+    .wrapper-dropdown-1 {
+        width: 100%;
+    }
+    .avgsection,
+    .fieldsection {
+        width: 24%;
+    }
+    .otherstats {
+        font-size: 0.8em;
+    }
+    #viewSwitch {
+        margin-left: 0px;
+    }
+    .bigNum {
+        font-size: 2em !important;
+    }
+}

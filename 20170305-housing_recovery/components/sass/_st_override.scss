@@ -1,48 +1,243 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+#wrapper  {
+     width: 850px;
+ }
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#map  {
+     height: 330px;
+     width: 100%;
+ }
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.mapboxgl-ctrl-attrib  {
+     display: none !important;
+ }
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+#listing  {
+     float: left;
+     width: 30%;
+}
 
-    .chatter { padding:20px; }  
+#cities {
+     height:335px;
+     overflow-y:auto;
+}
 
-    p { font-family:$bentonSans; }  
+#reference {
+  vertical-align:top;
+}
 
-    #info { display:none; }
+.row { 
+  padding:5px; 
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.row:hover {
+  opacity:0.8;
+  cursor:pointer;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.th { 
+  padding:5px; 
+  font-weight:900;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
-    }
+.th:hover {
+  opacity:0.8;
+  cursor:pointer;
+}
+
+.selected3 {
+  text-decoration:underline;
+}
+
+.col { 
+  display:inline-block; 
+}
+
+.name { 
+  width:83%; 
+}
+
+#legendContainer {
+  float:left;
+}
+
+.score {
+  font-weight:900;
+  text-align:right;
+  width:15%; 
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+
+#metrics  {
+  float: right;
+  width: 68%;
+  text-align:center;
+ }
+
+.smallBreak {
+  padding:7px;
+}
+
+.selected {
+  margin-bottom:0 !important;
+}
+
+h5 { 
+  margin-left:32px; 
+}
+
+.metricCol {
+  display:inline-block;
+  width:24%;
+  text-align:center;
+  vertical-align:top;
+}
+
+.metricCol div {
+  padding:1px;
+}
+
+.metric {
+  font-weight:900;
+  font-size:1.5em;
+}
+
+#districtName {
+  font-weight:900;
+  font-size:1.5em;
+  text-align:center;
+  padding:7px;
+}
+
+#chart, #chart svg {
+  height:200px;
+}
+
+#chart .c3-line {
+  stroke-width: 6px !important;
+}
+
+/*#income {
+  font-weight:900;
+  font-size:1.2em;
+  text-align:center;
+  padding:5px;  
+}*/
+
+.c3-tooltip {
+    -webkit-box-shadow: 0px !important;
+    box-shadow: 0px 0px 0px 0px !important;
+    width:200px;   
+}
+
+#source a { 
+  color:steelblue;
+}
+
+.mobileshow {
+  display:none;
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass { 
+  display:none !important;
+}
+
+.onoffswitch {
+    float:right;
+    position: relative; width: 187px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "CITIES/TOWNS";
+    padding-left: 10px;
+    background-color: #d95f0e; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "NEIGHBORHOODS";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 28px; margin: 1px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 153px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+@media only screen and (max-width:840px)  {
+
+#map {
+  height:200px;
+}
+
+#wrapper  {
+  width: 100%;
+ }
+
+#cities {
+  height:157px;
+}
+
+#chart, #chart svg {
+  height:200px;
+}
+
+#listing, #metrics { 
+  float:none;
+  width:100%;
+}
+
+.metric {
+  font-size:1.2em;
+}
+
+.metricLabel {
+  font-size:0.9em;
+}
+
+#source {
+  font-size:0.8em;
+}
+
+}
+
+@media only screen and (max-width:500px)  {
+
+.mobilekill {
+  display:none;
+}
+
+.mobileshow {
+  display:block;
+}
+
+#districtName {
+  font-size:1em;
+}
+
+}

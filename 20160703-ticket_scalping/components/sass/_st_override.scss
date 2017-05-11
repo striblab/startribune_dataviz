@@ -1,48 +1,223 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+#wrapper {
+    width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+.section {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    padding: 20px;
+    border-bottom: solid 1px #ddd;
+    clear: both;
+    height: auto;
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 5px #888888;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
 
-    .chatter { padding:20px; }  
+/*.seating, .infobox { float:left; width:48%; text-align:center; }
+   .chart, .datapoints { float:right; width:48%; height:200px; }*/
 
-    p { font-family:$bentonSans; }  
+.chatter {
+    clear: both;
+}
 
-    #info { display:none; }
+.seating img {
+    width: 300px;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+#chart .c3-line {
+    stroke-width: 6px !important;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.chartTitle {
+    font-size: 1em;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.date {
+    font-size: .8em;
+    padding: 7px;
+}
+
+.restricted {
+    background-color: #F28670;
+    font-weight: 900;
+}
+
+.unrestricted {
+    background-color: #9EE384;
+    font-weight: 900;
+}
+
+.mixed {
+    background-color: #AFA8C9;
+    font-weight: 900;
+}
+
+.wrapper-dropdown-1 {
+    display: inline-block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    z-index: 900;
+    background: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+    position: relative;
+    width: 200px;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    width: 250px;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border: 1px solid #aaa;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 0px !important;
+}
+
+ul.dropdown.months {
+    box-sizing: border-box;
+    margin: 0;
+    moz-box-sizing: border-box;
+    padding: 0;
+    webkit-box-sizing: border-box;
+    margin-top: -1px;
+    border-radius: 0 0 4px 4px;
+    background-clip: padding-box;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border: 1px solid #aaa;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 0px !important;
+}
+
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #EFEFEF;
+}
+
+header[role="banner"] {
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    background: #f0f0f0;
+}
+
+.c3-tooltip th {
+    background-color: #aaa;
+    font-size: 12px;
+    padding: 2px 5px;
+    text-align: left;
+    color: #FFF;
+    font-family: "Benton Sans";
+}
+
+.primary {
+    background-color: #226666;
+    color: #fff;
+    padding: 5px;
+}
+
+.secondary {
+    background-color: #AA6C39;
+    color: #fff;
+    padding: 5px;
+}
+
+.type {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 3px;
+}
+
+.icon {
+    float: left;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.icon img {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.bigNum {
+    text-align: center;
+}
+
+.p1 {
+    background-color: #F4F3F7;
+}
+
+.p2 {
+    background-color: #D6D2E4;
+}
+
+.p3 {
+    background-color: #AFA8C9;
+}
+
+.p4 {
+    background-color: #857BAA;
+}
+
+.p5 {
+    background-color: #5E528E;
+}
+
+.legends {
+    width: 570px;
+    height: auto;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width:920px) {
+    .seating,
+    .infobox,
+    .chart,
+    .datapoints,
+    .section,
+    #wrapper {
+        float: none;
+        width: 100%;
     }
+}

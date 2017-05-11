@@ -1,48 +1,199 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+#wrapper {
+    text-align: center;
+    width: 100%;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#map {
+    width: 100%;
+    height: 342px;
+    text-align: center;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.tableHead {
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 900;
+    font-family: "Poynter Serif RE";
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.tableCell {
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-family: "Benton Sans";
+}
 
-    .chatter { padding:20px; }  
+.tableBreak {
+    clear: both;
+    display: block;
+}
 
-    p { font-family:$bentonSans; }  
+.table {
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 670px;
+}
 
-    #info { display:none; }
+#table {
+    font-size: .7em;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.change,
+.pct {
+    font-weight: 900;
+    width: 20%;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.cityCell {
+    width: 40%;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.rents {
+    width: 20%;
+}
+
+.switch {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 49.5%;
+    background-color: #fff;
+    font-weight: 900;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    border: 1px solid black;
+}
+
+.switch:hover,
+.city:hover,
+.rSort:hover {
+/*    background-color: #333;
+    color: #fff !important;*/
+    cursor: pointer;
+}
+
+.selected {
+    text-decoration:underline;
+    background-color:#ffffff !important;
+    color:#000000 !important;
+}
+
+#infobox {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.zoom {
+    float: none !important;
+    text-align: center;
+}
+
+small {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    color: #808080;
+    clear: both;
+    display: block;
+}
+
+.legends {
+    width: 315px;
+    height: auto;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#filter input,
+#filter input:focus {
+    width: 99% !important;
+    border-radius: 0 !important;
+}
+
+.negDark {
+    fill: #752304;
+    background-color: #752304;
+    color: #fff;
+}
+
+.negMid {
+    fill: #BF5F3C;
+    background-color: #BF5F3C;
+    color: #fff;
+}
+
+.negLight {
+    fill: #E28765;
+    background-color: #E28765;
+}
+
+.neutral {
+    fill: #ddd;
+    background-color: #ddd;
+}
+
+.posLight {
+    fill: #94D181;
+    background-color: #94D181;
+}
+
+.posMid {
+    fill: #67AF50;
+    background-color: #67AF50;
+    color: #fff;
+}
+
+.posDark {
+    fill: #24680E;
+    background-color: #24680E;
+    color: #fff;
+}
+
+.chartBar {
+    fill: #636363;
+    background-color: #636363;
+    color: #fff;
+}
+
+#leftSide {
+    float: left;
+    width: 48%;
+}
+
+#rightSide {
+    float: right;
+    width: 48%;
+}
+
+#rentalChange {
+    text-align: center;
+}
+
+#infobox,
+.chartTitle {
+    text-align: center;
+}
+
+#chart .c3-line {
+  stroke-width: 6px !important;
+}
+
+@media (max-width: 750px) {
+    #leftSide,
+    #rightSide {
+        float: none;
+        width: 100%;
     }
+    #table {
+        height: 120px;
+    }
+    .chartTitle {
+        font-size: 1em;
+    }
+}

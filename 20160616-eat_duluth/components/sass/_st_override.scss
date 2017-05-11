@@ -1,48 +1,643 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#map {
+    background: #efefef;
+    height: 250px;
+    width: 100%;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.bottom {
+    bottom: 0;
+    clear: both;
+    position: absolute;
+    width: 100%;
+}
 
-    .chatter { padding:20px; }  
+.map-overlay-container {
+    width: 400px;
+}
 
-    p { font-family:$bentonSans; }  
+.map-overlay {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
 
-    #info { display:none; }
+.map-overlay h2,
+.map-overlay p {
+    margin: 0 0 10px;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.mapboxgl-ctrl-attrib {
+    display: none;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.play {
+    background-color: #fff !important;
+    color: #000;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.pause {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+#diverse {
+    color: #299129;
+}
+
+.stat {
+    margin-bottom: 6px;
+}
+
+#name {
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.card {
+    padding: 3px;
+}
+
+.card:hover,
+.step:hover,
+.selected {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.step {
+    background-color: #fff;
+    border: 1px solid black;
+    display: inline-block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: .9em;
+    font-weight: 900;
+    padding: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+#filter input:focus {
+    width: 100% !important;
+}
+
+#filter input {
+    border-radius: 0 !important;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    width: 100% !important;
+}
+
+#geocoder-container {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#geocoder-container > div {
+    margin-left: 0;
+    min-width: 100%;
+}
+
+.chatter span {
+    padding: 5px;
+}
+
+small {
+    clear: both;
+    color: #808080;
+    display: block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+p {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+#infobox {
+    margin-top: 7px;
+    position: relative;
+}
+
+#leftSide {
+    float: left;
+    width: 32%;
+}
+
+#rightSide {
+    float: right;
+    height: 300px;
+    width: 58%;
+}
+
+.zoom {
+    float: none !important;
+    padding: 20px;
+    text-align: center;
+}
+
+.bigNum {
+    display: inline-block;
+    width: 32%;
+}
+
+.mapboxgl-popup {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    max-width: 400px;
+}
+
+.marker-title {
+    font-weight: 700;
+}
+
+#legends {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 212px;
+}
+
+.topLegend {
+    display: none;
+}
+
+.legendContainer {
+    text-align: center;
+    width: 212px;
+}
+
+.legend label,
+.legend span {
+    color: #808080;
+    display: block;
+    float: left;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 15px;
+    text-align: center;
+    width: 30px;
+}
+
+.legends {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 570px;
+}
+
+.republican {
+    color: #F2614C;
+    fill: #F2614C !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.r1 {
+    background-color: #FF8572;
+    color: white !important;
+    fill: #FF8572 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.r2 {
+    background-color: #F2634C;
+    color: white !important;
+    fill: #F2634C !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.r3 {
+    background-color: #9C0004;
+    color: white !important;
+    fill: #9C0004 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.r4 {
+    background-color: #4E0002;
+    color: white !important;
+    fill: #4E0002 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.r0 {
+    background-color: #F2614C;
+    color: white !important;
+    fill: #F2614C !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.mid {
+    background-color: #ddd;
+    color: black !important;
+    fill: #ddd !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.democrat {
+    color: #67B4C2;
+    fill: #67B4C2 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.d1 {
+    background-color: #67B4C2;
+    color: white !important;
+    fill: #67B4C2 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.d2 {
+    background-color: #4192A1;
+    color: white !important;
+    fill: #4192A1 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.d3 {
+    background-color: #0D4773;
+    color: white !important;
+    fill: #0D4773 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.d4 {
+    background-color: #022642;
+    color: white !important;
+    fill: #022642 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.d0 {
+    background-color: #67B4C2;
+    color: white !important;
+    fill: #67B4C2 !important;
+    font-weight: bold;
+    pointer-events: all;
+}
+
+.independent {
+    background-color: #E07242;
+    color: #333 !important;
+    fill: #E07242;
+}
+
+small {
+    clear: both;
+    color: #808080;
+    display: block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+.featherlight {
+    display: none !important;
+}
+
+.info-wrapper ul {
+    margin: 18px;
+}
+
+@media (max-width: 852px) {
+    #wrapper {
+        width: 100%;
     }
+    #leftSide {
+        float: none;
+        width: 100%;
+    }
+    #rightSide {
+        float: none;
+        height: auto;
+        width: 100%;
+    }
+    .featherlight {
+        display: block;
+    }
+}
+
+.step {
+    background-color: #fff;
+    border: 0 solid black;
+    display: inline-block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: .9em;
+    font-weight: 900;
+    padding: 9px;
+    text-align: left;
+    width: 100%;
+}
+
+.step:hover,
+.selected {
+    background-color: #efefef;
+    color: #000;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+body {
+    font-size: .95em;
+}
+
+.card {
+    border: solid #ccc;
+    border-width: 0 0 1px 0;
+    padding: 9px;
+}
+
+.card:hover {
+    background-color: #efefef;
+    color: #000;
+    padding: 9px;
+}
+
+.card.selected {
+    padding: 9px;
+}
+
+#table div:first-child {}
+
+#table div:last-child {
+    border: none;
+}
+
+#wrapper {}
+
+#rightSide {
+    width: 65%;
+}
+
+#table::before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
+    content: " ";
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+    height: 18px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#table::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
+    bottom: 0;
+    content: " ";
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    height: 18px;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.item-scroll {
+    border-bottom: 0 solid #000;
+    margin-top: -18px;
+    position: relative;
+}
+
+#table {
+    max-height: 675px;
+    overflow: auto;
+    padding: 18px 0 18px 0;
+}
+
+#infobox {
+    background: #efefef;
+    font-size: .95em;
+    margin-top: 18px;
+    min-height: 390px;
+    position: relative;
+}
+
+.info-wrapper {
+    background: #efefef;
+    padding: 18px;
+    position: relative;
+    z-index: 2;
+}
+
+#rightSide {
+    position: relative;
+}
+
+.mapboxgl-ctrl-geocoder .geocoder-icon-search {
+    opacity: .4;
+}
+
+.mapboxgl-ctrl-geocoder input[type='text'] {
+    background-color: transparent;
+    border: 0;
+    color: rgba(0, 0, 0, .5);
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    height: 40px;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 10px 10px 40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#geocoder-container > div {
+    margin-left: 0;
+    margin-top: 18px;
+    min-width: 100%;
+}
+
+.zoom {
+    bottom: 15%;
+    color: black;
+    font-size: .9em;
+    position: absolute;
+    z-index: 2;
+}
+
+.zoom:hover {
+    text-decoration: underline;
+}
+
+input {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.75);
+    font-family: inherit;
+    font-size: 1em;
+    height: 30px;
+    line-height: 120%;
+    margin: 0;
+    margin-left: 0 !important;
+    moz-transition: all 0.30s ease-in-out;
+    ms-transition: all 0.30s ease-in-out;
+    o-transition: all 0.30s ease-in-out;
+    webkit-appearance: none;
+    webkit-border-radius: 0;
+    webkit-transition: all 0.30s ease-in-out;
+    width: 100%;
+}
+
+#website a {
+    color: #4682b4;
+}
+
+#website a:hover {
+    text-decoration: underline;
+}
+
+#notes {
+    font: normal normal 1.1em/1.5em "Poynter Serif RE", Georgia, Times, serif;
+    margin-top: 18px;
+}
+
+.info-message {
+    color: #999;
+    font-size: 1.1em;
+    position: absolute;
+    text-align: center;
+    top: 42%;
+    width: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 728px) {
+    #rightSide {
+        float: none;
+        width: 100%;
+    }
+    #table {
+        max-height: 3000px;
+        overflow: visible;
+    }
+    .zoom {
+        right: 0;
+        top: 200px;
+    }
+    .info-message {
+        display: none;
+    }
+    #infobox {
+        background: #efefef;
+        font-size: .95em;
+        margin-top: 18px;
+        min-height: 0;
+        position: relative;
+    }
+    #table::after,
+    #table::before {
+        display: none;
+    }
+    .item-scroll {
+        margin-top: 0px;
+    }
+}
+
+.wrapper-demo {
+    width: 100%;
+}
+
+.wrapper-dropdown-1 {
+    background: #ddd;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.10);
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+    position: relative;
+    width: 100%;
+    width: 200px;
+    z-index: 900;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    margin-top: 0px !important;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+ul.dropdown.months {
+    background-clip: padding-box;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: -1px;
+    moz-box-sizing: border-box;
+    padding: 0;
+    webkit-box-sizing: border-box;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    margin-top: 0px !important;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #EFEFEF;
+}
+
+header[role="banner"] {
+    background: #f0f0f0;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+}
+
+#viewSwitch {
+    display: none;
+}
