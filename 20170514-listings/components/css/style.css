@@ -2359,7 +2359,7 @@ header[role="banner"] {
 }
 
 #map {
-  height: 330px;
+  height: 400px;
   width: 100%;
 }
 
@@ -2414,6 +2414,11 @@ header[role="banner"] {
 
 #legendContainer {
   float: left;
+}
+
+.source {
+  color: #333;
+  font-size: 0.8em;
 }
 
 .score {
@@ -2498,7 +2503,7 @@ h5 {
 
 @media only screen and (max-width: 840px) {
   #map {
-    height: 200px;
+    height: 400px;
   }
 
   #wrapper {

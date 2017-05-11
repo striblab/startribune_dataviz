@@ -1,4 +1,24 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('map');
+
+if (selected != null){
+ selected = "embed";
+}
+
+if (selected == "embed"){
+  $("#metrics").hide();
+  $("#listing").hide();
+  $("#filter").hide();
+  $(".mobilekill").show();
+  $("#key").hide();
+}
+
 d3.json("./shapefiles/mn_places.json", function(error, mncities) {
 d3.json("./shapefiles/wi_places.json", function(error, wicities) {
 d3.json("./shapefiles/mpls_nb.json", function(error, mplsnb) {
@@ -10,7 +30,7 @@ var checked = false;
 
 d3.select("#cities").selectAll(".row")
   .data(data.sort(function(a,b) { return b.EffectiveNegEqRate - a.EffectiveNegEqRate; })).enter().append("div")
-  .attr("class",function(d) { if (d.name == "St. Francis") { return "row selected" } else { return "row "; } })
+  .attr("class",function(d) { if (d.area == "Willernie") { return "row selected" } else { return "row "; } })
   .style('background-color',function(d) { 
 
   	var color = "#888888";
@@ -29,15 +49,15 @@ d3.select("#cities").selectAll(".row")
   .html(function(d,i){ 
 
 
-    return "<div class='col name'>" + d.name + "</div><div class='col score'>" + d3.format("%")(d.EffectiveNegEqRate) + "</div>";
+    return "<div class='col name'>" + d.area + "</div><div class='col score'>" + d3.format("%")(d.EffectiveNegEqRate) + "</div>";
   });
 
 function tableSort(container,party,data,candidate,sorted){
    
   d3.select(container).selectAll(".row").sort(function(a, b) {
           if (candidate == "name") { 
-        if (sorted == "descend") { return d3.descending(a.name, b.name); }
-        if (sorted == "ascend") { return d3.ascending(a.name, b.name); }
+        if (sorted == "descend") { return d3.descending(a.area, b.area); }
+        if (sorted == "ascend") { return d3.ascending(a.area, b.area); }
      }
           if (candidate == "index") { 
         if (sorted == "descend") { return d3.descending(a.EffectiveNegEqRate, b.EffectiveNegEqRate); }
@@ -139,53 +159,6 @@ map.scrollZoom.disable();
 
 map.on('load', function() {
 
-$('.onoffswitch :checkbox').change(function() {  
-    if (this.checked) {
-      checked = true;
-    map.setLayoutProperty('stpnb-layer', 'visibility', 'none');
-    map.setLayoutProperty('mplsnb-layer', 'visibility', 'none');
-    map.setLayoutProperty('mncities-layer', 'visibility', 'visible');
-    map.setLayoutProperty('wicities-layer', 'visibility', 'visible');
-    reset();
-    metricLoad("Minneapolis");
-
-    $(".row").removeClass("selected");
-    $(".row:contains('St. Francis')").addClass("selected");
-
-      $('.row').show();
-        $('.row').each(function(){
-           if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
-               $(this).hide();
-           }
-        });
-
-      $('#cities').animate({scrollTop : 0},800);
-    } else {
-      checked = false;
-
-    map.setLayoutProperty('stpnb-layer', 'visibility', 'visible');
-    map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
-    map.setLayoutProperty('mncities-layer', 'visibility', 'none');
-    map.setLayoutProperty('wicities-layer', 'visibility', 'none');
-    map.flyTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
-    metricLoad("(MPLS) Bottineau");
-
-    $(".row").removeClass("selected");
-    $(".row:contains('(MPLS) Bottineau')").addClass("selected");
-
-      $('.row').hide();
-      $('.row').each(function(){
-         if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
-             $(this).show();
-         }
-      });
-
-      $('#cities').animate({scrollTop : 0},800);
-    }
-
-    console.log(checked);
-});
-
 $(".zoom").on("click", function(){
   reset();
 });
@@ -195,10 +168,16 @@ $(".zoom").on("click", function(){
    data: mncities
  });
 
+  map.addSource('wicities', {
+   type: 'geojson',
+   data: wicities
+ });
+
  map.addLayer({
        'id': 'mncities-layer',
        'interactive': true,
        'source': 'mncities',
+       "filter": ["!=", "index_EffectiveNegEqRate", 0],
        'layout': {},
        'type': 'fill',
             'paint': {
@@ -208,7 +187,7 @@ $(".zoom").on("click", function(){
 		        "property": "index_EffectiveNegEqRate",
 		        "type": "interval",
 		        "stops": [
-              [0, "#888888"],
+              [0, "rgba(255, 255, 255, 0)"],
               [.01, "#dadaeb"],
               [.12, "#bcbddc"],
               [.17, "#9e9ac8"],
@@ -220,6 +199,60 @@ $(".zoom").on("click", function(){
      }
    }, 'place-neighbourhood');
 
+
+ map.addLayer({
+       'id': 'wicities-layer',
+       'interactive': true,
+       'source': 'wicities',
+       "filter": ["!=", "index_EffectiveNegEqRate", 0],
+       'layout': {},
+       'type': 'fill',
+            'paint': {
+           'fill-antialias' : true,
+           'fill-opacity': 0.8,
+           'fill-color': {
+            "property": "index_EffectiveNegEqRate",
+            "type": "interval",
+            "stops": [
+              [0, "rgba(255, 255, 255, 0)"],
+              [.01, "#dadaeb"],
+              [.12, "#bcbddc"],
+              [.17, "#9e9ac8"],
+              [.23, "#807dba"],
+              [.27, "#6a51a3"]
+           ]
+        },
+           'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
+     }
+   }, 'place-neighbourhood');
+
+if (selected == "embed"){
+var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
+map.on('mousemove', function(e) {
+    var features = map.queryRenderedFeatures(e.point, { layers: ['wicities-layer', 'mncities-layer'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+    popup.setLngLat(e.lngLat)
+        .setHTML("<h4>" + feature.properties.NAME + "</h4>" + d3.format("%")(feature.properties.index_EffectiveNegEqRate))
+        .addTo(map);
+
+});
+}
+
 });
 
 function reset(){
@@ -228,17 +261,17 @@ function reset(){
 	$('.row').show();
   $(".row").removeClass("selected");
   $('#cities').animate({scrollTop : 0},800);
-  metricLoad("St. Francis");
-  $(".row:contains('St. Francis')").addClass("selected");
+  metricLoad("Willernie");
+  $(".row:contains('Willernie')").addClass("selected");
 }
 
 function metricLoad(city){			
 
-    var cityData = data.filter(function(d){ return d.name == city; })
+    var cityData = data.filter(function(d){ return d.area == city; })
 
-    if (String(city).indexOf("(MPLS)") != -1) { $("#districtName").html(cityData[0].CityState + ", Minneapolis, MN"); }
-    else if (String(city).indexOf("(STP)") != -1) { $("#districtName").html(cityData[0].CityState + ", St. Paul, MN"); }
-    else { $("#districtName").html(cityData[0].CityState); }
+    if (String(city).indexOf("(MPLS)") != -1) { $("#districtName").html(cityData[0].area + ", Minneapolis, MN"); }
+    else if (String(city).indexOf("(STP)") != -1) { $("#districtName").html(cityData[0].area + ", St. Paul, MN"); }
+    else { $("#districtName").html(cityData[0].area); }
 
     var color = "#888888";
 
@@ -256,13 +289,20 @@ function metricLoad(city){
     $("#ppsf").html(cityData[0].premium2017);
     $("#change").html(d3.format("+%")(cityData[0].percentchange));
 
-    $("#income").html(d3.format("$,.0f")(cityData[0].MedianHHincome));
-    $("#homes").html(d3.format("%")(cityData[0].PctSingleFamilyUnits));
-    $("#apartments").html(d3.format("%")(cityData[0].PctLargeApartmentBldgs));
-    $("#kids").html(d3.format("%")(cityData[0].PctKids));
-    $("#renters").html(d3.format("%")(cityData[0].PctRenters));
+    if (cityData[0].MedianHHincome != 0) { $("#income").html(d3.format("$,.0f")(cityData[0].MedianHHincome)); }
+    else { $("#income").html("N/A"); }
 
-    console.log(cityData[0].PPSF2016);
+    if (cityData[0].PctSingleFamilyUnits != 0) { $("#homes").html(d3.format("%")(cityData[0].PctSingleFamilyUnits)); }
+    else { $("#homes").html("N/A"); }
+
+    if (cityData[0].PctLargeApartmentBldgs != 0) { $("#apartments").html(d3.format("%")(cityData[0].PctLargeApartmentBldgs)); }
+    else { $("#apartments").html("N/A"); }
+    
+    if (cityData[0].PctKids != 0) { $("#kids").html(d3.format("%")(cityData[0].PctKids)); }
+    else { $("#kids").html("N/A"); }  
+
+    if (cityData[0].PctRenters != 0) { $("#renters").html(d3.format("%")(cityData[0].PctRenters)); }
+    else { $("#renters").html("N/A"); }        
 
     chart.load({
                 columns: [
@@ -336,7 +376,7 @@ d3.select("#chart svg").append("text")
 // }
 
 // loadChart("Richfield");
-metricLoad("St. Francis");
+metricLoad("Willernie");
 
 });
 });
