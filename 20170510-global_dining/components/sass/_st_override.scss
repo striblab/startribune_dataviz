@@ -9,8 +9,11 @@ body {
 	width: 100%;
 }
 .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
-    display:none;
+    display:none !important;
 }
-.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass { 
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass, .mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out, .mapboxgl-ctrl-icon.mapboxgl-ctrl-compass { 
   display:none !important;
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl, .mapboxgl-ctrl-icon {
+    display:none !important;
 }

@@ -1,48 +1,245 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+#topChatter {
+    width: 100%;
+    height: 150px;
+    background-color: tomato;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#map {
+    width: 100%;
+    height: 250px;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.mapbox-logo,
+.leaflet-control-attribution {
+    display: none !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.map-legend .swatch {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+}
 
-    .chatter { padding:20px; }  
+.leaflet-popup-close-button {
+    display: none;
+}
 
-    p { font-family:$bentonSans; }  
+.leaflet-popup-content-wrapper {
+    pointer-events: none;
+}
 
-    #info { display:none; }
+.d3-slider-handle {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #ddd !important;
+    border-radius: 0;
+    background: #ddd !important;
+    z-index: 3;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.d3-slider-handle:hover {
+    background: #333 !important;
+    cursor: pointer;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.chart {
+    width: 100%;
+    min-height: 230px;
+    height: auto;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.myButton2 {
+    background-color: #fff;
+    width: 32.68%;
+    margin-top: 5px;
+}
+
+.myButton2:hover {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+.zoom {
+    text-decoration: none;
+    font-weight: bold;
+    color: steelblue;
+}
+
+.breaker {
+    clear: both;
+    margin: 5px;
+    padding: 10px;
+}
+
+.downloadButton {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: .9em;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 1%;
+    width: 99%;
+    background-color: #fff;
+    color: #333;
+    border-top: 1px solid #ccc;
+    background-image: url('img/downloadDoc.svg');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+}
+
+.downloadButton:hover {
+    background-color: #fff !important;
+    opacity: .5;
+}
+
+.downloadButton:active {
+    background-color: #fff !important;
+}
+
+.chartTitle {
+    font-family: "Whitman OSF";
+    font-weight: 900;
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+.chatter {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.yearChatter {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    height: 80px;
+}
+
+.d_swatch {
+    color: #1F6D6D;
+    font-weight: 900;
+}
+
+.s_swatch {
+    color: #B53434;
+    font-weight: 900;
+}
+
+.o_swatch {
+    color: #B56E34;
+    font-weight: 900;
+}
+
+.g_swatch {
+    color: #299129;
+    font-weight: 900;
+}
+
+th,
+text {
+    color: #000 !important;
+    font-family: "Popular";
+}
+
+.value {
+    color: #000 !important;
+    font-family: "Popular";
+    font-weight: 900;
+}
+
+.name {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+#toggle {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 23px;
+    font-size: 1em;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#toggle:hover {
+    background-color: #333 !important;
+    color: #fff;
+    cursor: pointer;
+}
+
+.play {
+    background-color: #fff !important;
+    color: #000;
+}
+
+.pause {
+    background-color: #333 !important;
+    color: #fff;
+}
+
+#seg {
+    color: #D6935D;
+}
+
+#diverse {
+    color: #299129;
+}
+
+.navButtons {
+    display: block;
+    text-align: center;
+    background-color: #fff !important;
+    width: 40px;
+    font-size: 1em;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    font-weight: 900;
+}
+
+.navButtons:hover {
+    background-color: #333 !important;
+    color: #fff;
+    cursor: pointer;
+}
+
+.previous {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+.leaflet-tile-pane {
+    opacity: .5;
+}
+
+#slider2 {
+    display: none;
+}
+
+@media only screen and (max-width:484px) {
+    .myButton2,
+    #toggle {
+        width: 49% !important;
     }
+}
+
+@media only screen and (max-width:300px) {
+    .myButton2,
+    #toggle {
+        width: 100% !important;
+    }
+}

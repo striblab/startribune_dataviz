@@ -1,48 +1,253 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    overflow-x: hidden !important;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 840px;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.graph-label {
+    display: none;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+#calendar {
+    width: 100%;
+}
 
-    .chatter { padding:20px; }  
+.graph-domain {
+    display: inline-block !important;
+}
 
-    p { font-family:$bentonSans; }  
+.metric {
+    font-weight: 900;
+}
 
-    #info { display:none; }
+.year {
+    width: 100%;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.yearLabel {
+    color: #bbb;
+    font-size: 8px;
+    display: inline-block;
+    float: left;
+    width: 20px;
+    text-align: center;
+    margin-left: 10px;
+    position: relative;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.month {
+    display: block;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.block {
+    height: 10px;
+    width: 10px;
+    float: left;
+    margin: 0;
+    white-space: normal;
+    border: 0.5px solid #fff !important;
+    font-size: 0;
+    background-color: #efc2af;
+}
+
+.confined {
+    background-color: #f47a44;
+}
+
+.out {
+    background-color: #ffffff;
+    border: 1px solid #000000 !important;
+}
+
+.overlap {
+    background-color: #A59DC9;
+}
+
+.health {
+    background-color: #7EA9CF !important;
+}
+
+#healthDays {
+    color: #7EA9CF;
+}
+
+#total {
+    color: #f47a44;
+}
+
+#consecutive,
+#overlapping {
+    color: #f47a44;
+}
+
+#legend {
+    float: right;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+#legend .block {
+    height: 13px;
+    width: 13px;
+    display: inline-block;
+    float: none;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: -3px;
+    border: 0;
+}
+
+#topmonths {
+    display: none;
+}
+
+.selectedBlock {
+    background-color: #f47a44;
+    border: 1px solid #f47a44;
+    /*-webkit-transition: all 0.5s ease 0.5s; -moz-transition: all 0.5s ease 0.5s; -o-transition: all 0.5s ease 0.5s; transition: all 0.5s ease 0.5s;*/
+}
+
+.breaker {
+    padding: 1px;
+}
+
+#addendum div {
+    display: none;
+}
+
+#addendum {
+    height: 18px;
+}
+
+.year {
+    width: 100%;
+}
+
+#topmonths .month {
+    width: 8.1%;
+    border-bottom: 0;
+    display: inline-block;
+    height: auto;
+    font-size: 0.6em;
+    color: #bbb;
+    vertical-align: top;
+}
+
+.step {
+    padding: 5px;
+}
+
+
+/*FANCY DROPDOWNS*/
+
+.wrapper-demo {
+    width: 200px;
+}
+
+.wrapper-dropdown-1 {
+    display: inline-block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    z-index: 900;
+    background: #ddd;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+    position: relative;
+    width: 200px;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    width: 100%;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border: 1px solid #aaa;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 0px !important;
+}
+
+ul.dropdown.months {
+    box-sizing: border-box;
+    margin: 0;
+    moz-box-sizing: border-box;
+    padding: 0;
+    webkit-box-sizing: border-box;
+    margin-top: -1px;
+    border-radius: 0 0 4px 4px;
+    background-clip: padding-box;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border: 1px solid #aaa;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 0px !important;
+}
+
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #EFEFEF;
+}
+
+header[role="banner"] {
+    width: 100%;
+    height: 40px;
+    z-index: 1000;
+    background: #f0f0f0;
+}
+
+#viewSwitch {
+    float: left;
+}
+
+.yearLabel,
+.out {
+    display: none;
+}
+
+#name {
+    font-weight: 900;
+}
+
+@media (max-width:840px) {
+    #wrapper {
+        width: 100%;
     }
+    .wrapper-demo {
+        width: 100%;
+    }
+    #legend,
+    #viewSwitch {
+        float: none !important;
+        text-align: left;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

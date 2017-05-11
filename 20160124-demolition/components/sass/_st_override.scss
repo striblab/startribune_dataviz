@@ -1,48 +1,339 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#map {
+    height: 780px;
+    width: 50%;
+    display: inline-block;
+    float: left !important;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.mapbox-logo,
+.leaflet-control-attribution {
+    display: none !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.map-legend .swatch {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 10px;
+}
 
-    .chatter { padding:20px; }  
+.leaflet-popup-close-button {
+    display: none;
+}
 
-    p { font-family:$bentonSans; }  
+.leaflet-popup-content-wrapper {
+    pointer-events: none;
+}
 
-    #info { display:none; }
+#wrapper {
+    width: 98%;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+#right_rail {
+    width: 400px;
+    height: auto;
+    float: right;
+    display: inline-block
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.zoom {
+    text-decoration: none;
+    font-weight: bold;
+    color: steelblue;
+    float: right;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+button:focus {
+    outline: 0 !important;
+}
+
+.btn-group {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-primary {
+    width: 130px;
+    text-align: center;
+    background-color: #333;
+    border: 0;
+    border-radius: 0;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-size: .7em;
+    font-weight: 900;
+    moz-border-radius: 0;
+    padding: 13px 26px;
+    text-decoration: none;
+    webkit-border-radius: 0;
+}
+
+.btn-primary input[type=checkbox] {
+    border: none;
+    display: none !important;
+}
+
+.btn-primary:hover {
+    background-color: #aaa !important;
+}
+
+#demo_toggle.active {
+    background-color: #AD1625;
+}
+
+#rebuild_toggle.active {
+    background-color: #777;
+}
+
+#parcels_toggle.active {
+    background-color: #801515;
+}
+
+#nb_toggle.active {
+    background-color: #801515;
+}
+
+#tornado_toggle.active {
+    background-color: #B35817;
+}
+
+#build_toggle.active {
+    background-color: #ddd;
+}
+
+#build_toggle {
+    width: 10px;
+    height: 10px;
+    padding: 10px;
+}
+
+#buildButton {
+    width: 100%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#nerdbox {
+    min-height: 200px;
+    display: block;
+}
+
+#nb_title {
+    font-weight: 900;
+    font-size: 1em;
+    float: left;
+    font-family: "Poynter Serif RE";
+}
+
+.num {
+    text-align: center;
+    width: 32.5%;
+    display: inline-block;
+    font-size: 2.4em;
+    font-weight: 900;
+    font-family: "Popular";
+}
+
+#teardownsNum,
+.teardown {
+    color: #801515;
+    font-weight: 900;
+}
+
+#rebuildsNum,
+.rebuild {
+    /*color:#2A9513;*/
+    font-weight: 900;
+    color: #777;
+}
+
+#parcelPct,
+.parcel {
+    /*color:#0E7063;*/
+    color: #801515;
+    font-weight: 900;
+}
+
+#tornadoNum,
+.tornado {
+    color: #B35817;
+    font-weight: 900;
+}
+
+.breaker {
+    clear: both;
+    margin: 5px;
+    padding: 10px;
+}
+
+#legendContainer {
+    width: 100%;
+}
+
+.legend label,
+.legend span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 35px;
+    text-align: center;
+    font-size: 11px;
+    color: #808080;
+}
+
+#quantize {
+    padding: 5px;
+    text-align: center;
+}
+
+.legend_title {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.d3-slider-handle {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #333;
+    border-radius: 0;
+    background: #eee;
+    background: #333;
+    z-index: 3;
+}
+
+.d3-slider-handle:hover {
+    background: #5cbf2a;
+    cursor: pointer;
+}
+
+#sliderDiv {
+    height: 20px;
+    padding: 15px;
+}
+
+#thisYear {
+    float: right;
+    font-weight: 900;
+    font-size: 1em;
+    font-family: "Poynter Serif RE";
+}
+
+#total {
+    text-align: center;
+}
+
+#chart svg {
+    width: 100%;
+    height: 300px
+}
+
+.teardownsBar {
+    background-color: #AD1625;
+    height: 20px;
+    display: inline-block;
+}
+
+.rebuildsBar {
+    background-color: #777;
+    height: 20px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.yearBar {
+    height: 20px;
+    margin: 5px;
+    line-height: 120%;
+}
+
+#parcelPct {
+    display: none !important;
+}
+
+#parcels_toggle {
+    width: 48%;
+}
+
+#nb_toggle {
+    width: 48%;
+}
+
+#tornadoOn {
+    font-size: 14px;
+}
+
+.stat {
+    display: none;
+}
+
+.breaker {
+    padding: 2px;
+}
+
+#sliderDiv {
+    margin: 18px;
+}
+
+#back {
+    margin:20px;
+    float: left;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: "Popular";
+}
+
+#forward {
+    margin:20px;
+    float: right;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: "Popular";
+}
+
+.leaflet-left {
+    display:none;
+}
+
+#back:hover,
+#forward:hover {
+    cursor: pointer;
+}
+
+@media (max-width:845px) {
+    #map {
+        display: block;
+        width: 100%;
+        height: 390px;
     }
+    #right_rail {
+        display: block;
+        width: 100%;
+    }
+    #wrapper {
+        width: 100%;
+    }
+    .btn-primary {
+        width: 32% !important;
+    }
+    .num {
+        width: 32.5%;
+    }
+    #parcels_toggle {
+        width: 100% !important;
+    }
+    #nb_toggle {
+        width: 100% !important;
+    }
+}

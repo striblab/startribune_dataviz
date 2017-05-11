@@ -1,48 +1,307 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body,
+#filter,
+#filter input:focus,
+p {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#chart .c3-line {
+    stroke-width: 6px !important;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+p {
+    text-align: left !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+#map {
+    width: 100%;
+    height: 200px;
+}
 
-    .chatter { padding:20px; }  
+.map-overlay-container {
+    position: absolute;
+    width: 400px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1;
+}
 
-    p { font-family:$bentonSans; }  
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+}
 
-    #info { display:none; }
+.map-overlay h2,
+.map-overlay p {
+    margin: 0 0 10px;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.mapboxgl-ctrl-attrib {
+    display: none;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+#wrapper {
+    text-align: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+#leftSide {
+    width: 30%;
+    float: left;
+}
+
+#rightSide {
+    width: 68%;
+    float: right;
+}
+
+#infobox {
+    text-align: left;
+    padding: 30px;
+}
+
+#schoolsList {
+    height: 457px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.stat {
+    font-weight: 900;
+}
+
+#filter {
+    padding: 12px;
+}
+
+#chart {
+    height: 230px;
+}
+
+.source {
+    font-size: 0.8em;
+}
+
+.where {
+    font-size: 0.9em;
+}
+
+.bigPCT,
+.category {
+    display: inline-block;
+    width: 48%;
+}
+
+#instructions {
+    color: #999;
+    font-size: 1.1em;
+    top: 100px;
+    width: 100%;
+    z-index: 1;
+    margin-top: 30%;
+    text-align: center !important;
+}
+
+#filter input {
+    border-radius: 0 !important;
+    width: 100% !important;
+}
+
+#filter {
+    padding: 0px !important;
+}
+
+#filter2 input {
+    border-radius: 0 !important;
+    width: 100% !important;
+}
+
+#filter2 {
+    padding: 0px !important;
+}
+
+#schoolname {
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+p {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15px;
+}
+
+#geocoder-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#geocoder-container > div {
+    min-width: 100%;
+    margin-left: 0;
+}
+
+.description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.better {
+    background-color: #AEBFAC;
+    color: #fff;
+}
+
+.worse {
+    background-color: #BF7E7C;
+    color: #fff;
+}
+
+.expected {
+    background-color: #BBA4BC;
+    color: #fff;
+}
+
+.nan {
+    background-color: #fff;
+    color: #000;
+}
+
+#districtSelect {
+    font-weight: 900;
+    font-size: 1.7em;
+    text-align: left;
+}
+
+#districtSelect:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+#listedSchools {
+    display: block;
+    height: 369px;
+    overflow-y: auto;
+    display: none;
+    z-index: 90;
+}
+
+li.district {
+    text-align: left !important;
+}
+
+li.district:hover {
+    background-color: #4C4C39 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.cell:hover,
+.selected2 {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.zoom {
+    float: none !important;
+    text-align: center;
+    padding: 15px;
+}
+
+.gray3 {
+    color: #fff;
+}
+
+.chartTitle {
+    color: #000 !important;
+    text-align: left;
+}
+
+.switch {
+    padding: 1px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    background-color: #fff;
+    font-weight: 900;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    border: 1px solid white;
+    color: #000 !important;
+    margin: 0 !important;
+    font-size: .8em;
+}
+
+.switch:hover,
+.selected,
+.step:hover {
+    background-color: #4C4C39 !important;
+    color: #fff !important;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+.cell {
+    display: inline-block;
+    width: 33%;
+}
+
+.read {
+    stroke-dasharray: 5, 5;
+    stroke: #463F3A;
+}
+
+.math {
+    stroke-dasharray: 5, 5;
+    stroke: #BCB8B1;
+}
+
+.bigNum {
+    font-size: 2em;
+}
+
+#mobileBreak {
+    display: none;
+}
+
+@media (max-width:690px) {
+    #districtSelect {
+        font-weight: 900;
+        font-size: 1.2em;
+        text-align: left;
     }
+    .cell {
+        display: inline-block;
+        width: 32%;
+    }
+    #wrapper {
+        width: 100%;
+    }
+    #leftSide {
+        width: 100%;
+        float: none;
+    }
+    #rightSide {
+        width: 100%;
+        float: none;
+    }
+    #schoolsList {
+        height: 100px;
+    }
+    .label {
+        font-size: 0.8em;
+    }
+    #mobileBreak {
+        display: block;
+    }
+    #infobox {
+        padding: 0;
+        margin-top: 30px;
+    }
+}

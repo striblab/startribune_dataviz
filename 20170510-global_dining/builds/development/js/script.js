@@ -23,7 +23,7 @@ var map = new mapboxgl.Map({
     minZoom: 3
 });
 
-map.addControl(new mapboxgl.NavigationControl());
+// map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 
 map.on('load', function() {
@@ -80,7 +80,7 @@ var map2 = new mapboxgl.Map({
     minZoom: 3
 });
 
-map2.addControl(new mapboxgl.NavigationControl());
+// map2.addControl(new mapboxgl.NavigationControl());
 map2.scrollZoom.disable();
 
 map2.on('load', function() {
@@ -138,7 +138,7 @@ var map3 = new mapboxgl.Map({
     minZoom: 3
 });
 
-map3.addControl(new mapboxgl.NavigationControl());
+// map3.addControl(new mapboxgl.NavigationControl());
 map3.scrollZoom.disable();
 
 map3.on('load', function() {

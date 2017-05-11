@@ -1,48 +1,241 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#viewSwitch {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.chartHeader {
+    height: auto;
+    padding: 12px;
+    padding-bottom: 5px;
+    text-align: center;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.chatter {
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    text-align: left;
+}
 
-    .chatter { padding:20px; }  
+#chart .c3-line {
+    opacity: 0 !important;
+    stroke-width: 5px !important;
+}
 
-    p { font-family:$bentonSans; }  
+#chart_m .c3-line {
+    opacity: 0 !important;
+    stroke-width: 5px !important;
+}
 
-    #info { display:none; }
+.container {
+    text-align: center;
+    width: 100%;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.legendChart {
+    width: 100%;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.c3-area {
+    opacity: 0.8 !important;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.byline {
+    font-size: .8em;
+    text-align: right !important;
+}
+
+.byline a {
+    color: #ccc !important;
+    font-weight: 400;
+}
+
+p {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+h4 {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+.wrapper-dropdown-1 {
+    background: #ddd;
+    border: 1px solid #aaa;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.10);
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+    position: relative;
+    width: 200px;
+    width: 250px;
+    z-index: 900;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    margin-top: 0px !important;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+ul.dropdown.months {
+    background-clip: padding-box;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: -1px;
+    moz-box-sizing: border-box;
+    padding: 0;
+    webkit-box-sizing: border-box;
+}
+
+.wrapper-dropdown-1 .dropdown {
+    background: #fff;
+    border: 1px solid #aaa;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    font-weight: normal;
+    left: 0;
+    list-style: none;
+    margin-top: 0px !important;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+}
+
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #EFEFEF;
+}
+
+header[role="banner"] {
+    background: #f0f0f0;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.c3-tooltip th {
+    background-color: #aaa;
+    color: #FFF;
+    font-family: "Benton Sans";
+    font-size: 12px;
+    padding: 2px 5px;
+    text-align: left;
+}
+
+.byline {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.footnote {
+    color: #ccc;
+    font-size: 0.7em;
+}
+
+#chart_m {
+    display: none;
+}
+
+#totals {
+    color: #333;
+    font-size: 2.75em;
+    letter-spacing: -.5px;
+    margin-top: 3px;
+}
+
+#all {
+    background-color: #ddd;
+    border-radius: 5px;
+    float: left;
+    font-size: .9em;
+    height: 82px;
+    margin-top: 3px;
+    padding-top: 33px;
+    vertical-align: center;
+    width: 14.5%;
+}
+
+.legendChart {
+    float: right;
+    width: 85%;
+}
+
+.legendChart div {
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .9em;
+    margin: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 19%;
+}
+
+.legendChart div:hover,
+#all:hover,
+.selected2 {
+    background-color: #557799 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.chartTitle {
+    font-size: 1em;
+}
+
+@media (max-width:500px) {
+    #chart {
+        display: none;
     }
+    #chart_m {
+        display: block;
+    }
+    #all {
+        float: none;
+        width: 97%;
+        margin: 0 auto 3px auto;
+    }
+    .legendChart {
+        width: 100%;
+    }
+    .legendChart div {
+        width: 47%;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        color: #000;
+    }
+}
