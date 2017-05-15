@@ -1,17 +1,40 @@
 INVASION!
 
+This is scrolling, map-based storytelling detailing the spread of zebra mussels in the U.S. with special focus on Minnesota lakes.
+
 1: TITLE + WORLD SPREAD
-2: FIRST ONE AND COUNTRY SPREAD
+--This will be Ray's world map along with some opening text explaining zebra mussels
+
+2: FIRST INFESTATION AND SPREAD ACROSS GREAT LAKES
+--zoom on the Great Lakes, marking the first infestation in Lake Erie, talking about its spread 
+
 3: ENTERING MINNESOTA
-4: MILLE LACS
-5: CHRISTMAS
-6: MINNETONKA
-7: WINNE
+--The spread up the Mississippi and infested Minnesota waters
+
+4: LAKE MILLE LACS
+--zoom on Lake Mille Lacs
+
+5: CHRISTMAS LAKE
+--zoom on Christmas Lake
+
+6: LAKE MINNETONKA
+--zoom on Lake Minnetonka
+
+7: LAKE WINNE
+--zoom on Lake Winne
+
 8: GENETIC MARKERS
+--genetic markers map with annotations
+
 9: MASSIVE SPREAD
+--nationwide spread with annotations
+
 10: WATERS LOOKUP
+--a tool for looking up infested waters in Minnesota
 
-NEEDED:
+THINGS TO DO:
 
-SMALL CONTEXT MAP
-LOOKUP TABLE
+1. RAY'S WORLD MAP
+1. SMALL CONTEXT MAP
+2. LOOKUP TABLE
+3. DATE COUNTER
