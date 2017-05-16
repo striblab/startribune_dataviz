@@ -5,7 +5,12 @@
 @import "compass";
 @import "compass/reset";
 // @import "compass/css3/box-shadow";
- 
+
+// JH JS partials
+//@import "mapbox_gl";
+//@import "mapbox_gl_geocoder";
+//@import "c3";
+
 //Core partials
 @import "st_fonts";
 @import "variables";
@@ -17,8 +22,3 @@
 // JS partials
 // @import "pixgrid";
 // @import "rclick";
-
-// JH JS partials
-@import "mapbox_gl";
-@import "mapbox_gl_geocoder";
-@import "c3";

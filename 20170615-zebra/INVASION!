@@ -1,6 +1,14 @@
 INVASION!
 
+http://striblab.github.io/startribune_dataviz/20170615-zebra/builds/development/
+
 This is scrolling, map-based storytelling detailing the spread of zebra mussels in the U.S. with special focus on Minnesota lakes.
+
+Not every slide works or does all the things it needs to right now. I'll be building out the specific storytelling beats based on this tentative script. Details are subject to change. 
+
+As the user scrolls through the story, the map will do some or all of the following on each slide: add more markers, keep track of our place in time by year, pan and zoom on areas of focus, popup annotations on locations interest, add or remove shapefile layers and change a small nationwide contextual map in the corner. At any time, a user can scroll forward, backwards or be able to stop and explore the current state of the map.
+
+Aside from a handful of features to add and bugs to fix, these slides will need
 
 1: TITLE + WORLD SPREAD
 --This will be Ray's world map along with some opening text explaining zebra mussels
@@ -35,6 +43,7 @@ This is scrolling, map-based storytelling detailing the spread of zebra mussels 
 THINGS TO DO:
 
 1. RAY'S WORLD MAP
-1. SMALL CONTEXT MAP
-2. LOOKUP TABLE
-3. DATE COUNTER
+2. SMALL CONTEXT MAP
+3. LOOKUP TABLE
+4. DATE COUNTER
+5. ANNOTATIONS LIST

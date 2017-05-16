@@ -1,48 +1,262 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#menu {
+    float: left;
+    width: 100%;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+#menu a {
+    color: #000;
+    text-decoration: none;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+#menu a:hover {
+    color: #000;
+    text-decoration: none;
+}
 
-    .chatter { padding:20px; }  
+#menu .active {
+    background-color: #fff;
+    color: #000;
+}
 
-    p { font-family:$bentonSans; }  
+#menu .active a {
+    color: #fff;
+}
 
-    #info { display:none; }
+path:hover {
+    fill-opacity: 0.5;
+    stroke: #fff !important;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+td {
+    padding: 4px !important;
+    text-align: center;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.symbol {
+    fill: #efefef;
+    fill-opacity: 1;
+    stroke: #fff;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.tooltip {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    height: 50px;
+    margin: 10px;
+    moz-border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    webkit-border-radius: 10px;
+    width: 150px;
+}
+
+label > input {
+    display: none;
+}
+
+label > input + img {
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+label > input:checked + img {
+    border: 2px solid #efefef;
+}
+
+.map {
+    float: left;
+    height: 500px;
+    width: 25%;
+}
+
+.circle {
+    border-radius: 50%;
+    float: left;
+    height: 58px;
+    margin: 0 12px 12px 0;
+    width: 58px;
+}
+
+.used {
+    background: url(img/goto-background.png) #74a31e no-repeat -1px -1px;
+    cursor: pointer;
+}
+
+.notused {
+    background: #efefef;
+}
+
+.used:hover {
+    background: url(img/goto-background.png) #74a31e no-repeat -1px -1px;
+    opacity: .65;
+}
+
+.tooltip {
+    background-color: #161616;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    font-size: 12px Arial;
+    padding: 10px;
+    position: absolute;
+    height: auto !important;
+}
+
+.resizeFont h3 {
+    margin: 0 0 18px 0;
+}
+
+.resizeFont h3 span {
+    font-weight: normal;
+}
+
+#passes {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+#member-data {
+    margin-bottom: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+#menu {
+    border: none;
+    border-collapse: collapse;
+}
+
+#menu td {
+    float: left;
+    width: 140px;
+}
+
+#menu a {
+    background: #efefef;
+    border-top: 1px #fff solid;
+    display: block;
+    font-size: 1.5em;
+    padding: 6px 12px 6px 12px;
+    text-align: left;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background: #ccc;
+    text-decoration: none;
+}
+
+.map {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#menu td.active a {
+    background: #666;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+#menu td.first a {
+    border: none;
+}
+
+.active {
+    background-color: #fff !important;
+}
+
+ul.leaders {
+    list-style: none;
+    max-width: 40em;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+ul.leaders li:before {
+    content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+    float: left;
+    white-space: nowrap;
+    width: 0;
+}
+
+ul.leaders span:first-child {
+    background: white;
+    font-weight: bold;
+    padding-right: 0.33em;
+}
+
+ul.leaders span + span {
+    background: white;
+    float: right;
+    padding-left: 0.33em;
+}
+
+.bio ul li {
+    line-height: 130%;
+    padding: 6px 0 6px 0;
+}
+
+.bio ul li.header {
+    padding: 6px 0 0px 0;
+}
+
+.bioColumn img {
+    margin-bottom: 18px;
+}
+
+.bioColumn h3 {
+    font-family: popular-bold;
+    font-size: 1.75em;
+}
+
+.district {
+    font-size: 1em;
+    position: absolute;
+    right: 50px;
+    top: 170px;
+}
+
+.map {
+    width: 163px;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+h3 {
+    font-family: Popular;
+}
+
+@media (max-width:500px) {
+    .map {
+        float: none !important;
+        position: relative !important;
+        clear: both;
+        height: auto;
     }
+    .tab-content img {
+        float: none !important;
+        position: relative;
+        clear: both;
+    }
+    section {
+        vertical-align: top !important;
+    }
+}
