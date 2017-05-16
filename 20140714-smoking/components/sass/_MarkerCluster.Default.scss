@@ -1,0 +1,77 @@
+//colors
+$color_feijoa_60_approx: rgba(181, 226, 140, 0.6);
+$color_lima_60_approx: rgba(110, 204, 57, 0.6);
+$color_confetti_60_approx: rgba(241, 211, 87, 0.6);
+$color_corn_60_approx: rgba(240, 194, 12, 0.6);
+$color_atomic_tangerine_60_approx: rgba(253, 156, 115, 0.6);
+$color_tango_60_approx: rgba(241, 128, 23, 0.6);
+$color_feijoa_approx: rgb(181, 226, 140);
+$color_lima_approx: rgb(110, 204, 57);
+$color_confetti_approx: rgb(241, 211, 87);
+$color_corn_approx: rgb(240, 194, 12);
+$color_atomic_tangerine_approx: rgb(253, 156, 115);
+$color_tango_approx: rgb(241, 128, 23);
+
+//fonts
+$font_0: Helvetica Neue;
+$font_1: Arial;
+$font_2: Helvetica;
+$font_3: sans-serif;
+
+.marker-cluster-small {
+	background-color: $color_feijoa_60_approx;
+	div {
+		background-color: $color_lima_60_approx;
+	}
+}
+.marker-cluster-medium {
+	background-color: $color_confetti_60_approx;
+	div {
+		background-color: $color_corn_60_approx;
+	}
+}
+.marker-cluster-large {
+	background-color: $color_atomic_tangerine_60_approx;
+	div {
+		background-color: $color_tango_60_approx;
+	}
+}
+.leaflet-oldie {
+	.marker-cluster-small {
+		background-color: $color_feijoa_approx;
+		div {
+			background-color: $color_lima_approx;
+		}
+	}
+	.marker-cluster-medium {
+		background-color: $color_confetti_approx;
+		div {
+			background-color: $color_corn_approx;
+		}
+	}
+	.marker-cluster-large {
+		background-color: $color_atomic_tangerine_approx;
+		div {
+			background-color: $color_tango_approx;
+		}
+	}
+}
+.marker-cluster {
+	//Instead of the line below you could use @include background-clip($clip)
+	background-clip: padding-box;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 20px;
+	div {
+		width: 30px;
+		height: 30px;
+		margin-left: 5px;
+		margin-top: 5px;
+		text-align: center;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 15px;
+		font: 12px $font_0, $font_1, $font_2, $font_3;
+	}
+	span {
+		line-height: 30px;
+	}
+}

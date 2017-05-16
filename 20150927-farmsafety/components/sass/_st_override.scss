@@ -1,48 +1,1031 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+@import url("https://api.tiles.mapbox.com/mapbox.js/v2.1.6/mapbox.css");
+#wrapper {
+    width: 100%;
+    background-color: white;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+#rightside {
+    float: right;
+    width: 50%;
+    height: auto;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.leaflet-control-attribution {
+    display: none !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.leaflet-control-zoom {
+    display: none;
+}
 
-    .chatter { padding:20px; }  
+.mapbox-logo {
+    display: none !important;
+}
 
-    p { font-family:$bentonSans; }  
+.barDiv_b {
+    display: inline-block;
+    margin: 2px;
+    padding-left: 7px;
+    width: 100px;
+    float: left;
+    font-size: 12px;
+}
 
-    #info { display:none; }
+.barDiv {
+    display: inline-block;
+    margin: 5px;
+    padding-left: 7px;
+    width: 70%;
+    height: 20px;
+    text-align: left;
+    float: right;
+    border-left: 1px solid #000;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.barLine:hover {
+    cursor: pointer;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.breaker {
+    clear: both;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+.records {
+    font-weight: 900;
+    font-family: "Popular Bold";
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.6em;
+    display: block;
+    width: 30px;
+    text-align: center;
+}
+
+.dude_box {
+    background-color: #de2d26;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 11px;
+    padding: 1px;
+    text-decoration: none;
+    font-weight: 900;
+    width: 3px;
+    height: 20px;
+    margin-left: 1px;
+}
+
+.dude_box:active {
+    background-color: #333;
+}
+
+.dude_box:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.death_box {
+    background-color: #de2d26;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #fff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 11px;
+    padding: 1px;
+    text-decoration: none;
+    font-weight: 900;
+    width: 20px;
+    height: 20px;
+    margin-left: 1px;
+}
+
+.death_box:active {
+    opacity: .5;
+}
+
+.death_box:hover {
+    cursor: default;
+    opacity: .5;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+.d3-slider-handle {
+    position: absolute;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #8C101C;
+    border-radius: 0;
+    background: #eee;
+    background: #8C101C;
+    z-index: 3;
+}
+
+.d3-slider-handle:hover {
+    background: #ad645e;
+    cursor: pointer;
+}
+
+#sliderDiv {
+    height: 20px;
+    padding: 15px;
+}
+
+.mn {
+    fill: #44c767;
+    pointer-events: all;
+}
+
+.state-groups:hover {
+    opacity: .5 !important;
+    cursor: pointer;
+}
+
+.state-groups text {
+    font-size: 9px !important;
+    fill: #fff !important;
+}
+
+.state-groups text:hover {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+text {
+    font-family: sans-serif;
+    font-size: 9px;
+    font-color: #fff !important;
+    fill: #000 !important;
+    cursor: default;
+}
+
+.cartoButton:hover {
+    background-color: #ad645e !important;
+}
+
+.cartoButton {
+    background-color: #eee;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 0;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 13px;
+    text-decoration: none;
+    font-weight: 900;
+    margin: 2px;
+    width: 45%;
+}
+
+.cartoButton:active {
+    background-color: #ad645e;
+}
+
+#cartoMapChatter {
+    float: right;
+    height: 300px;
+    width: 255px;
+}
+
+#cartoBox {
+    float: left;
+}
+
+#cartoLegend {
+    width: 300px;
+    text-align: ;
+}
+
+.states text {
+    color: white !important;
+    font-size: 10px !important;
+    pointer-events: all;
+}
+
+.dq1 {
+    fill: #040506;
+    color: white !important;
+    pointer-events: all;
+}
+
+.dq2 {
+    fill: #22282c;
+    color: white !important;
+    pointer-events: all;
+}
+
+.dq3 {
+    fill: #404b52;
+    color: white !important;
+    pointer-events: all;
+}
+
+.dq4 {
+    fill: #6c7f8c;
+    color: white !important;
+    pointer-events: all;
+}
+
+.mid {
+    fill: #ccc;
+}
+
+.dq5 {
+    fill: #fcae91;
+    color: white !important;
+    pointer-events: all;
+}
+
+.dq6 {
+    fill: #fb6a4a;
+    color: white !important;
+    pointer-events: all;
+}
+
+.dq7 {
+    fill: #de2d26;
+    color: white !important;
+    pointer-events: all;
+}
+
+.dq8 {
+    fill: #a50f15;
+    color: white !important;
+    pointer-events: all;
+}
+
+.none {
+    fill: #fff;
+    pointer-events: all;
+}
+
+.selected {
+    stroke-width: 2px;
+    stroke: #333 !important;
+}
+
+.faded {
+    opacity: .2 !important;
+}
+
+text.none {
+    fill: #000 !important;
+    color: #000 !important;
+    pointer-events: all;
+}
+
+.tdq1 {
+    color: #040506;
+    font-weight: 900;
+}
+
+.tdq2 {
+    color: #22282c;
+    font-weight: 900;
+}
+
+.tdq3 {
+    color: #404b52;
+    font-weight: 900;
+}
+
+.tdq4 {
+    color: #6c7f8c;
+    font-weight: 900;
+}
+
+.tmid {
+    color: #ccc;
+    font-weight: 900;
+}
+
+.tdq5 {
+    color: #fcae91;
+    font-weight: 900;
+}
+
+.tdq6 {
+    color: #fb6a4a;
+    font-weight: 900;
+}
+
+.tdq7 {
+    color: #de2d26;
+    font-weight: 900;
+}
+
+.tdq8 {
+    color: #a50f15;
+    font-weight: 900;
+}
+
+.tnone {
+    color: #000;
+    font-weight: 900;
+}
+
+#sliderDiv {
+    background: #fff;
+    z-index: 9999 !important;
+}
+
+#mapbox {
+    width: 100%;
+    display: inline-block;
+}
+
+#rankbox {
+    width: 100%;
+    display: inline-block;
+}
+
+#bigChart {
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+#deathsMap {
+    width: 90%;
+}
+
+#buttonBox {
+    float: right;
+    width: 100%;
+}
+
+.legend label,
+.legend span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 9%;
+    text-align: center;
+    font-size: 11px;
+    color: #808080;
+}
+
+#victims_nerdbox {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+}
+
+.victims_nerdbox {
+    width: 100%;
+}
+
+.victims_nerdbox.deathIcon {
+    display: none !important;
+}
+
+.victims_nerdbox:hover {
+    cursor: pointer;
+}
+
+#victimsHeader {
+    font-size: 1.8em;
+    float: left;
+    clear: left;
+    margin: 20px;
+}
+
+#recordsReturned {
+    float: right;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.zoom {
+    text-decoration: none;
+    font-weight: bold;
+    color: steelblue;
+    float: left !important;
+}
+
+#headerDiv {
+    background: white;
+}
+
+.deathIcon img {
+    width: 150px;
+    height: 100px;
+}
+
+#cartoZoom {
+    float: right;
+}
+
+#leftRail {
+    width: 100%;
+    float: left;
+}
+
+.typeIcons {
+    width: 100%;
+    text-align: center;
+    padding: 0px 0 15px 0;
+}
+
+.iconLegend img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hideMe {
+    display: none;
+}
+
+.mapSide {
+    float: left;
+    width: 73%;
+    height: 280px;
+    display: none;
+}
+
+.mainFact {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+}
+
+.downloadButton {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: .9em;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 1%;
+    width: 99%;
+    background-color: #fff;
+    color: #333;
+    border-top: 1px solid #ccc;
+}
+
+.downloadButton:hover {
+    background-color: #fff !important;
+    opacity: .5;
+}
+
+.downloadButton:active {
+    background-color: #fff !important;
+}
+
+.zoom {
+    display: none;
+}
+
+
+/*  colorbox*/
+
+#cboxWrapper {
+    font-family: "Benton Sans";
+    font-size: .9em;
+}
+
+#cboxLoadedContent {
+    height: 1px !important;
+    font-family: "Benton Sans";
+    line-height: 135%;
+}
+
+#cboxTopLeft {
+    width: 14px;
+    height: 14px;
+    background: url(images/controls.png) no-repeat 0 0;
+    background-color: white;
+}
+
+#cboxTopCenter {
+    height: 14px;
+    background: url(images/border.png) repeat-x top left;
+    background-color: white;
+}
+
+#cboxTopRight {
+    width: 14px;
+    height: 14px;
+    background: url(images/controls.png) no-repeat -36px 0;
+    background-color: white;
+}
+
+#cboxBottomLeft {
+    width: 14px;
+    height: 43px;
+    background: url(images/controls.png) no-repeat 0 -32px;
+    background-color: white;
+}
+
+#cboxBottomCenter {
+    height: 43px;
+    background: url(images/border.png) repeat-x bottom left;
+    background-color: white;
+}
+
+#cboxBottomRight {
+    width: 14px;
+    height: 43px;
+    background: url(images/controls.png) no-repeat -36px -32px;
+    background-color: white;
+}
+
+#cboxMiddleLeft {
+    width: 14px;
+    background: url(images/controls.png) repeat-y -175px 0;
+    background-color: white;
+}
+
+#cboxMiddleRight {
+    width: 14px;
+    background: url(images/controls.png) repeat-y -211px 0;
+    background-color: white;
+}
+
+.obitzLink a {
+    font-family: "Benton Sans";
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: .5px;
+    text-decoration: none;
+    color: #999;
+    padding: 2px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 4px solid #999;
+    display: table;
+}
+
+#mobileHeader {
+    font-size: 2.3em;
+    font-weight: bold;
+    font-family: "Benton Sans";
+}
+
+#cartoBox,
+#chatterBox,
+#recordsReturned,
+#mobileHeader,
+.deathIcon img {
+    display: none !important;
+}
+
+.headlineTitle {
+    font-size: 3.2em;
+    font-family: "Whitman Display";
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.chatterTop {
+    font-family: "Benton Sans";
+    text-align: center;
+    line-height: 150%;
+    margin: 0 70px 24px 70px;
+}
+
+#eachDeath {
+    display: none;
+}
+
+.sortHed {
+    font-family: "Benton Sans";
+    font-size: .9em;
+    color: #333;
+    text-align: center;
+    margin: -28px 18px 18px 18px;
+    z-index: 1;
+}
+
+.sortSpan {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    padding: 2px 8px 2px 8px;
+}
+
+.sortBracket {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    width: 95% !important;
+}
+
+.iconLegend {
+    font-family: "Benton Sans";
+    font-size: .85em;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+    pointer-events: all;
+    width: 76px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 1px;
+    text-align: center;
+}
+
+.iconLegend:hover {
+    background-color: #666 !important;
+    cursor: pointer;
+    color: #fff;
+}
+
+.records {
+    font-family: "Benton Sans";
+    font-weight: normal;
+}
+
+.deathSwatch {
+    background-color: #999999;
+    color: white;
+    border-color: #999999;
+    padding: 5px 3px 4px 3px;
+}
+
+.atvSwatch {
+    background-color: #76909f;
+    color: white;
+    border-color: #76909f;
+    padding: 5px 3px 4px 3px;
+}
+
+.siloSwatch {
+    background-color: #a17a94;
+    color: white;
+    border-color: #a17a94;
+    padding: 5px 3px 4px 3px;
+}
+
+.landscapeSwatch {
+    background-color: #6f9a7c;
+    color: white;
+    border-color: #6f9a7c;
+    padding: 5px 3px 4px 3px;
+}
+
+.livestockSwatch {
+    background-color: #ca7a68;
+    color: white;
+    border-color: #ca7a68;
+    padding: 5px 3px 4px 3px;
+}
+
+.skidSwatch {
+    background-color: #b1ae68;
+    color: white;
+    border-color: #b1ae68;
+    padding: 5px 3px 4px 3px;
+}
+
+.truckSwatch {
+    background-color: #9c8f68;
+    color: white;
+    border-color: #9c8f68;
+    padding: 5px 3px 4px 3px;
+}
+
+.tractorSwatch {
+    background-color: #b96569;
+    color: white;
+    border-color: #b96569;
+    padding: 5px 3px 4px 3px;
+}
+
+.otherSwatch {
+    background-color: #cf995a;
+    color: white;
+    border-color: #cf995a;
+    padding: 5px 3px 4px 3px;
+}
+
+.desaturate {
+    background-color: #eee;
+    border-color: #eee;
+    color: #000;
+    padding: 5px 3px 4px 3px;
+}
+
+.records:hover {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+#sliderDiv {
+    display: none;
+}
+
+.yearIcon {
+    width: 55px;
+    padding: 4px;
+    background-color: #eee;
+    font-family: "Benton Sans";
+    font-size: .85em;
+    display: inline-block;
+    margin: 1px;
+    border-radius: 5px;
+}
+
+.yearIcon:hover {
+    background-color: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
+.yearSelected {
+    background-color: #999;
+    color: #fff;
+}
+
+.breakerTop {
+    clear: both;
+    padding: 10px;
+    margin: 12px;
+}
+
+.resultBox {
+    width: 100%;
+    height: 235px;
+    background-color: white;
+}
+
+#leftSide {
+    float: left;
+    width: 73% !important;
+    display: block;
+    margin-left: 0
+}
+
+.typeIcon {
+    width: 130px;
+    float: left;
+    height: 130px;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+.types {
+    height: auto;
+}
+
+.types h2 {
+    font-weight: 900;
+    font-family: "Benton Sans";
+    font-size: 1.7em;
+    color: #333333;
+    margin: 0
+}
+
+.deathHeader {
+    float: left;
+}
+
+.deathChatter {
+    width: 73%;
+    min-height: 164px;
+    max-height: 164px;
+    display: inline-block;
+}
+
+#map {
+    height: 230px;
+    width: 25%;
+    float: right;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+#filter {
+    font-family: "Benton Sans";
+    font-size: .9em;
+}
+
+#filter input {
+    width: 95% !important;
+    padding: 0 10px 0 10px;
+    font-family: "Benton Sans";
+    border-radius: 5px !important;
+    margin: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 120%;
+    font-size: 1em;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    background-color: #fff !important;
+    font-family: inherit;
+    border: 1px solid #eee !important;
+    background-image: url('img/search-icon.svg');
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+}
+
+#filter input:focus {
+    width: 95% !important;
+    font-family: "Benton Sans";
+    box-shadow: 0 0 5px #999;
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #61bd1a;
+}
+
+input:focus {
+    outline: 0 !important;
+}
+
+.chatter {
+    font-family: "Benton Sans";
+}
+
+.module {
+    height: auto;
+    width: 101%;
+    margin-left: -1%;
+}
+
+.victimCard {
+    position: relative;
+    font-family: "Benton Sans";
+    font-size: .85em;
+    line-height: 135%;
+    width: 30%;
+    border-radius: 5px;
+    height: auto;
+    background: #eee;
+    display: inline-block;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding: 0px;
+}
+
+.victimContent {
+    margin: 8px 12px 8px 12px
+}
+
+.victimCard:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.victimName {
+    font-size: 1em;
+    font-family: "Benton Sans";
+    font-weight: 900;
+}
+
+.victimAge {
+    font-size: 1em;
+    font-family: "Benton Sans";
+    font-weight: normal;
+}
+
+.ender {
+    position: absolute;
+    width: 10px;
+    height: 22px;
+    border-radius: 5px;
+    top: 10px;
+    right: 10px;
+}
+
+@media (max-width: 970px) {
+    .victimCard {
+        width: 49%;
     }
+    #rightside {
+        width: 100%;
+    }
+    #bigChart {
+        width: 100%;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 710px) {
+    #buttonBox {
+        width: 100%;
+    }
+    #carto1,
+    #carto2 {
+        height: auto;
+        width: 100%;
+    }
+    #cartoBox {
+        width: 100%;
+    }
+    #map {
+        width: 100%;
+        display: none !important;
+    }
+    #leftSide {
+        width: 100% !important;
+        margin-left: 7px;
+    }
+    #yearSelect {
+        display: none;
+    }
+    .breakerTop {
+        display: none;
+    }
+    .deathChatter {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    #cartoMapChatter {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .victimCard {
+        width: 94%;
+    }
+    .deathChatter {
+        width: 100%;
+        display: block;
+        clear: both;
+    }
+    .headlineTitle,
+    #topChatter {
+        display: none;
+    }
+    #mobileHeader {
+        display: block !important;
+    }
+}
+
+.allB {
+    border: 2px solid #999999;
+}
+
+.tractorB {
+    border: 2px solid #b96569;
+}
+
+.landscapeB {
+    border: 2px solid #6f9a7c;
+}
+
+.otherB {
+    border: 2px solid #cf995a;
+}
+
+.siloB {
+    border: 2px solid #a17a94;
+}
+
+.skidB {
+    border: 2px solid #b1ae68;
+}
+
+.atvB {
+    border: 2px solid #76909f;
+}
+
+.truckB {
+    border: 2px solid #9c8f68;
+}
+
+.livestockB {
+    border: 2px solid #ca7a68;
+}

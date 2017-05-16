@@ -1,6 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 d3.json('./data/invasion.geojson', function(error, invasion) {
-d3.json('./shapefiles/mn_infested_waters.json', function(error, waters) {
+d3.json('./data/invasion.json', function(error, invasionList) {
+d3.json('./shapefiles/waters.json', function(error, waters) {
+d3.json('./shapefiles/extent.json', function(error, extent) {
+
+var dataAll = invasionList.waters;
 
 var bounds = [
     [-168.046875, 23.150462],// Southwest coordinates
@@ -13,10 +17,10 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     // style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
-    center: [-93.28469849, 45.01832962], 
-    zoom: 4,
-    minZoom: 3,
-    maxBounds: bounds
+    center: [-53.964844, 35.380093], 
+    zoom: 2,
+    minZoom: 2,
+    // maxBounds: bounds
 });
 
 map.addControl(new mapboxgl.NavigationControl());
@@ -29,10 +33,10 @@ map.on('load', function() {
    data: waters
  });
 
- //  map.addSource('observations', {
- //   type: 'geojson',
- //   data: observations
- // });
+  map.addSource('extent', {
+   type: 'geojson',
+   data: extent
+ });
 
   map.addSource('invasion', {
    type: 'geojson',
@@ -41,21 +45,46 @@ map.on('load', function() {
 
 index = 0;
 
+var yearSpan = ["A long time ago","1986-1992","1993-1998","1999-2016","1999-2016","1999-2016","1999-2016","1999-2016","1986-2016","1986-2016"];
+
+loadMarkers();
+
 function playScript(step){
 
   $(".trackDot").removeClass("selected");
   $("#d" + step).addClass("selected");
 
+  $(".year").html(yearSpan[step]);
+
   index = step;
 
   if (step == 0){
-    unloadMarkers(1987, 2017);
-    mapFlight(-82.441406,41.827619,8,0,0);
-    showMarkers(1986);
+    hideLayer("waters");
+    unloadMarkers(1986, 2016);
+
+    var id = window.setTimeout(function() {}, 0);
+    while (id--) {
+        window.clearTimeout(id);
+    }
+
+    showLayer('extent');
+    plopPopup(50.668945,41.934977,"<h3>The Caspian Sea</h3><div>Zebra mussels come from here!</div>");
+    mapFlight(-53.964844, 35.380093,2,0,0);
   }
   if (step == 1){
-    unloadMarkers(1991, 2017);
+    hideLayer("extent");
+    hideLayer("waters");
+    unloadMarkers(1991, 2016);
+
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    plopPopup(-82.691543,42.435650,"<h3>Lake Saint Claire</h3><div>Help! Zebra mussles first appear in America!</div>");
+
     mapFlight(-82.441406,41.827619,7,0,0);
+    showMarkers(1986);
     showMarkers(1987);
 
     mapFlight(-82.441406,41.827619,6,0,0);
@@ -66,32 +95,144 @@ function playScript(step){
     setTimeout(function(){ showMarkers(1990); }, 2000);
   }
   if (step == 2){
-    mapFlight(-91.790771, 41.481576,6,0,0); 
-    unloadMarkers(1992, 2017);
+    hideLayer("extent");
+    hideLayer("waters");
+    unloadMarkers(1992, 2016);
+
     showMarkers(1991)
+    mapFlight(-95.954590,46.489884,6,0,0); 
   }
   if (step == 3){
-    unloadMarkers(1994, 2017);
-    plopLayer('waters','#333333');
+    hideLayer("extent");
+    unloadMarkers(1994, 2016);
+
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    mapFlight(-95.954590,46.489884,6,0,0); 
     showMarkers(1992)
-    setTimeout(function(){ showMarkers(1993); }, 1500);
-    mapFlight(-90.000000,47.212106,6,0,0); 
+    setTimeout(function(){ showMarkers(1992); }, 200);
+    setTimeout(function(){ showMarkers(1993); }, 400);
+    setTimeout(function(){ showMarkers(1994); }, 800);
+    setTimeout(function(){ showMarkers(1995); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 1000);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
+    setTimeout(function(){ showLayer('waters');  }, 5000);
     
   }
   if (step == 4){
-    unloadMarkers(1994, 2017);
-    mapFlight(-92.312303,44.536276,8,0,0); 
+    hideLayer("extent");
+    // unloadMarkers(1994, 2016);
 
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    showLayer('waters');
+    showMarkers(1992)
+    setTimeout(function(){ showMarkers(1992); }, 200);
+    setTimeout(function(){ showMarkers(1993); }, 400);
+    setTimeout(function(){ showMarkers(1994); }, 800);
+    setTimeout(function(){ showMarkers(1995); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 1000);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
+    mapFlight(-93.660534, 46.252983,9,0,0);
   }
-  if (step == 5){
-    unloadMarkers(1996, 2017);
-    mapFlight(-94.203347,46.628522,8,0,0); 
-    showMarkers(1994);
-    setTimeout(function(){ showMarkers(1995); }, 1500);
+  if (step == 5){ 
+    hideLayer("extent");
+    // unloadMarkers(1994, 2016);
+
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    showLayer('waters');
+    showMarkers(1992)
+    setTimeout(function(){ showMarkers(1992); }, 200);
+    setTimeout(function(){ showMarkers(1993); }, 400);
+    setTimeout(function(){ showMarkers(1994); }, 800);
+    setTimeout(function(){ showMarkers(1995); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 1000);
+    setTimeout(function(){ showMarkers(1997);  }, 1000);
+    setTimeout(function(){ showMarkers(1998);  }, 1200);
+    setTimeout(function(){ showMarkers(1999);  }, 1400);
+    setTimeout(function(){ showMarkers(2000);  }, 1600);
+    setTimeout(function(){ showMarkers(2001);  }, 1800);
+    setTimeout(function(){ showMarkers(2002);  }, 2000);
+    setTimeout(function(){ showMarkers(2003);  }, 2200);
+    setTimeout(function(){ showMarkers(2004);  }, 2400);
+    setTimeout(function(){ showMarkers(2005);  }, 2600);
+    setTimeout(function(){ showMarkers(2006);  }, 2800);
+    setTimeout(function(){ showMarkers(2007);  }, 3000);
+    setTimeout(function(){ showMarkers(2008);  }, 3200);
+    setTimeout(function(){ showMarkers(2009);  }, 3400);
+    setTimeout(function(){ showMarkers(2010);  }, 3600);
+    setTimeout(function(){ showMarkers(2011);  }, 3800);
+    setTimeout(function(){ showMarkers(2012);  }, 4000);
+    setTimeout(function(){ showMarkers(2013);  }, 4200);
+    setTimeout(function(){ showMarkers(2014);  }, 4400);
+    setTimeout(function(){ showMarkers(2015);  }, 4600);
+    setTimeout(function(){ showMarkers(2016);  }, 4800);
+    mapFlight(-93.634447, 44.907342,8,0,0);
   }
   if (step == 6){
-      mapFlight(-93.660534, 46.252983,6,0,0);
-    showMarkers(1996);
+    hideLayer("extent");
+    // unloadMarkers(1994, 2016);
+
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    showLayer('waters');
+    showMarkers(1992)
+    setTimeout(function(){ showMarkers(1992); }, 200);
+    setTimeout(function(){ showMarkers(1993); }, 400);
+    setTimeout(function(){ showMarkers(1994); }, 800);
+    setTimeout(function(){ showMarkers(1995); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 1000);
     setTimeout(function(){ showMarkers(1997);  }, 1000);
     setTimeout(function(){ showMarkers(1998);  }, 1200);
     setTimeout(function(){ showMarkers(1999);  }, 1400);
@@ -112,10 +253,24 @@ function playScript(step){
     setTimeout(function(){ showMarkers(2014);  }, 4400);
     setTimeout(function(){ showMarkers(2015);  }, 4600);
     setTimeout(function(){ showMarkers(2016);  }, 4800);
+    mapFlight(-94.215540, 47.410950,8,0,0);
   }
   if (step == 7){
-     mapFlight(-93.660534, 46.252983,9,0,0);
-    setTimeout(function(){ showMarkers(1996); }, 500);
+    hideLayer("extent");
+    // unloadMarkers(1994, 2016);
+
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    showLayer('waters');
+    showMarkers(1992);
+    setTimeout(function(){ showMarkers(1992); }, 200);
+    setTimeout(function(){ showMarkers(1993); }, 400);
+    setTimeout(function(){ showMarkers(1994); }, 800);
+    setTimeout(function(){ showMarkers(1995); }, 1000);
+    setTimeout(function(){ showMarkers(1996); }, 1000);
     setTimeout(function(){ showMarkers(1997);  }, 1000);
     setTimeout(function(){ showMarkers(1998);  }, 1200);
     setTimeout(function(){ showMarkers(1999);  }, 1400);
@@ -136,22 +291,46 @@ function playScript(step){
     setTimeout(function(){ showMarkers(2014);  }, 4400);
     setTimeout(function(){ showMarkers(2015);  }, 4600);
     setTimeout(function(){ showMarkers(2016);  }, 4800);
+    mapFlight(-94.203347,46.628522,6,0,0); 
   }
   if (step == 8){
     
-    // unloadMarkers(1986, 2017);
+    unloadMarkers(1986, 2016);
+
+    hideLayer("extent");
+    hideLayer('waters');
 
     var interval = 800;
 
-    for (var i=1986; i < 2017; i++){
-        setTimeout(function(){ showMarkers(i); }, interval);
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    for (var i=1986; i <= 2016; i++){
+        if (i != 2017) { setTimeout(function(){ showMarkers(i); }, interval); }
         interval += 200;
     }
 
-    mapFlight(-94.215540, 47.410950,4,0,0);
+    mapFlight(-104.941406, 40.371659,4,0,0);
   }
   if (step == 9){
+    hideLayer("extent");
+    showLayer('waters');
+
     mapFlight(-94.203347,46.628522,6,0,0); 
+
+    var interval = 800;
+
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
+
+    for (var i=1986; i <= 2016; i++){
+        if (i != 2017) { setTimeout(function(){ showMarkers(i); }, interval); }
+        interval += 200;
+    }
   }
   
 
@@ -172,13 +351,13 @@ function plopLayer(data,color){
        'paint': {
            'fill-antialias' : true,
            'fill-opacity': 1,
-           'fill-color': 'rgba("194,42,34", 1)',
-           'fill-outline-color': 'rgba("194,42,34", 1)' 
+           'fill-color': '#b24e49',
+           'fill-outline-color': '#333333' 
      },
-                  "filter": [
-                  "==",
-                  "commonname",
-                  "zebra mussel"]
+                  // "filter": [
+                  // "==",
+                  // "commonname",
+                  // "zebra mussel"]
    }, 'place-neighbourhood');
 }
 
@@ -189,6 +368,9 @@ function hideLayer(data){
 function showLayer(data){
     map.setLayoutProperty(data + '-layer', 'visibility', 'visible');
 }
+
+plopLayer('extent','#333333');
+plopLayer('waters','#333333');
 
 function plopMarker(year,rgb,index){
 
@@ -270,7 +452,6 @@ function hideMarkers(index){
     map.setLayoutProperty('invasion-layer-' + index, 'visibility', 'none');
     // map.removeLayer('invasion-layer1-' + index);
     // map.removeLayer('invasion-layer-' + index);
-
 }
 
 function showMarkers(index){
@@ -279,16 +460,16 @@ function showMarkers(index){
 }
 
 function loadMarkers(){
-  for (var i=1986; i < 2017; i++){
-    plopMarker(i,'194,42,34',i);
+  for (var i=1986; i <= 2016; i++){
+    plopMarker(i,'178,78,73',i);
     // plopMarker(i,'0,191,255',i);
   }
 }
 
-loadMarkers();
+plopMarker(i,'178,78,73',2016);
 
 function unloadMarkers(start, cap){
-  for (var i=start; i < cap; i++){
+  for (var i=start; i <= cap; i++){
     map.setLayoutProperty('invasion-layer1-' + i, 'visibility', 'none');
     map.setLayoutProperty('invasion-layer-' + i, 'visibility', 'none');
   }
@@ -362,7 +543,20 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     };
 }
 
+d3.select("#listing").selectAll(".row")
+  .data(dataAll.filter(function(d){ return d.State == "MN"; })).enter().append("div")
+  .attr("class",function(d) { return "row"; })
+  .attr("latitude",function(d) { return d.Lat; })
+  .attr("longitude",function(d) { return d.Lon; })
+  .on("mousedown",function(d) {
+    map.flyTo({ center: [d.Lon, d.Lat], zoom:9 });
+  })
+  .html(function(d,i){ 
+    return "<div class='col name'>" + d.Locality + "</div><div class='col county'>" + d.County + "</div>";
+  });
 
+});
+});
 });
 });
 },{}]},{},[1])

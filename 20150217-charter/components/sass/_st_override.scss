@@ -1,48 +1,283 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+#wrapper {
+    width: 100%;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Popular";
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+tr.odd td.sorting_1 {
+    background-color: #efefef;
+}
 
-    .chatter { padding:20px; }  
+tr.even td.sorting_1 {
+    background-color: #efefef;
+}
 
-    p { font-family:$bentonSans; }  
+tr.even {
+    background-color: white;
+}
 
-    #info { display:none; }
+tr.odd {
+    background-color: #efefef;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+a:link {
+    color: #9c2726;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+a:visited {
+    color: #9c2726;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+a:hover {
+    color: #9c2726;
+}
+
+a:active {
+    color: #9c2726;
+}
+
+td {
+    padding: 9px !important;
+}
+
+.clickified {
+    background: #333 !important;
+    color: white;
+}
+
+.dataTables_filter {
+    padding-bottom: 18px;
+    font-size: 1em;
+}
+
+.dataTables_length {
+    display: none;
+}
+
+.dataTables_filter {
+    float: left;
+    text-align: left;
+    font-weight: bold;
+}
+
+.dataTable {
+    margin-bottom: 18px;
+}
+
+.dataTables_info {
+    display: none;
+}
+
+th {
+    background: #ccc !important;
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+tr:hover {
+    border: 1px solid black !important;
+}
+
+.School-cell {
+    font-weight: 900;
+}
+
+.School-cell:hover {
+    cursor: pointer;
+    background: #333 !important;
+    color: white;
+}
+
+#stuff {
+    width: 100%;
+    font-size: 11px;
+}
+
+.dataTables_scrollHeadInner {
+    box-sizing: initial !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    height: 37px !important;
+}
+
+table.dataTable.no-footer {
+    margin-bottom: 0 !important;
+}
+
+.dataTables_scrollBody thead {
+    visibility: hidden;
+    height: 0 !important;
+}
+
+th.sorting_asc,
+th.sorting_desc {
+    background: #333 !important;
+    font-weight: bold;
+    color: #fff;
+}
+
+th {
+    display: table-cell;
+    vertical-align: initial;
+}
+
+.dataTables_scrollHead {
+    height: 37px !important;
+}
+
+.nvtooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 10000;
+    width: 400px;
+    font-family: Arial;
+    font-size: 13px;
+    transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    -webkit-transition: opacity 200ms linear;
+    transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -webkit-transition-delay: 200ms;
+    -moz-border-radius: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nvtooltip h3 {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-weight: 900;
+    background: white !important;
+    font-size: 16px;
+}
+
+.nvtooltip p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nvtooltip span {
+    display: inline-block;
+    margin: 2px 0;
+}
+
+.nvtooltip-pending-removal {
+    position: absolute;
+    pointer-events: none;
+}
+
+.myButton {
+    background-color: #61bd1a;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 14px;
+    padding: 13px;
+    width: 19%;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.myButton:active {
+    background-color: #378f00;
+}
+
+#wrapper {
+    width: 97%;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+.labeling {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+#chart svg {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+#chart2 svg {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+#overview {
+    height: 397px !important;
+}
+
+rect:hover {
+    fill: #5cbf2a !important;
+}
+
+.cat {
+    float: left;
+    font-weight: bold;
+}
+
+.num {
+    float: right;
+}
+
+hr {
+    clear: both;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 0;
+}
+
+#overview_link {
+    color: steelblue;
+    font-weight: bold;
+    float: right;
+    text-decoration: none;
+}
+
+#chart svg.nv-barsWrap {
+    margin-right: 700px !important;
+}
+
+th {
+    font-weight: bold !important;
+    font-size: 16px !important;
+    font-family: Arial !important;
+    padding: 5px !important;
+}
+
+@media only screen and (max-width:650px) {
+    .myButton {
+        width: 24%;
     }
+}
