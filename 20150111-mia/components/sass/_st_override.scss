@@ -1,48 +1,24 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
-
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
-
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
-
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
-
-    .chatter { padding:20px; }  
-
-    p { font-family:$bentonSans; }  
-
-    #info { display:none; }
-
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
-
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
-
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
-    }
+/* PROJECT STYLES */
+  .nvtooltip { position: absolute; background-color: rgba(255,255,255,1); padding: 10px; border: 1px solid #ddd; z-index: 10000; width:280px; font-family: helvetiva, sans-serif;   font-size: 16px; transition: opacity 200ms linear; -moz-transition: opacity 200ms linear; -webkit-transition: opacity 200ms linear; transition-delay: 200ms; -moz-transition-delay: 200ms; -webkit-transition-delay: 200ms; -moz-box-shadow: 4px 4px 8px rgba(0,0,0,.5); -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,.5); box-shadow: 4px 4px 8px rgba(0,0,0,.5); -moz-border-radius: 10px; border-radius: 10px; pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+  .nvtooltip h3 { margin: 0; padding: 5px; text-align: center; font-weight:900; background:white !important; font-size:14px; }
+  .nvtooltip p { margin: 5px 0 0 0; padding: 0; text-align: center; font-size: 13px; }
+  .nvtooltip span { display: inline-block; margin: 2px 0; }
+  .nvtooltip-pending-removal { position: absolute; pointer-events: none; }
+  .d3-tip { line-height: 1; font-weight: bold; padding: 12px; background: rgba(0, 0, 0, 0.8); color: #fff; border-radius: 2px; }
+  .d3-tip:after { box-sizing: border-box; display: inline;font-size: 10px; width: 100%; line-height: 1; color: rgba(0, 0, 0, 0.8); content: "\25BC"; position: absolute; text-align: center; }
+  .d3-tip.n:after { margin: -1px 0 0 0; top: 100%; left: 0; }
+  #africa{ background-color: #00996f; }
+  #americas{ background-color: #d90d31; }
+  #oceania{ background-color: #ffb818; }
+  #asia{ background-color: #009ac8; }
+  #japanese{ background-color: #ff6600; }
+  #decorative{ background-color: #7a9900; }
+  #paintings{ background-color: #850dd9; }
+  #photography{ background-color: #d90dd7; }
+  #drawings{ background-color: #18e7ff; }
+  .myButton { -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family: helvetiva, sans-serif;  font-size:12px; padding:5px; text-decoration:none; }
+  .myButton:hover { background-color:#444 !important; }
+  button:focus {outline:0 !important;} 
+  .labeling{font-family: helvetiva, sans-serif;position:absolute; left:100px; top:95px; font-size:18px; font-weight:900;}
+  svg{width:630 !important; height:320 !important;}
+  p {font-family: helvetiva, sans-serif; font-size:12px;}

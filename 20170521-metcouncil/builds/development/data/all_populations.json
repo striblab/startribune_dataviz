@@ -1,0 +1,192 @@
+{"populations":[
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Census Bureau",
+    "YEAR": 1970,
+    "POPULATION": 1874612,
+    "HOUSEHOLDS": 573634,
+    "GROUP_QUARTERS_POP": 42539,
+    "POPULATION_IN_HOUSEHOLDS": 1832073
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Census Bureau",
+    "YEAR": 1980,
+    "POPULATION": 1985873,
+    "HOUSEHOLDS": 721357,
+    "GROUP_QUARTERS_POP": 46963,
+    "POPULATION_IN_HOUSEHOLDS": 1938910
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Census Bureau",
+    "YEAR": 1990,
+    "POPULATION": 2288721,
+    "HOUSEHOLDS": 875504,
+    "GROUP_QUARTERS_POP": 47135,
+    "POPULATION_IN_HOUSEHOLDS": 2241586
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Census Bureau",
+    "YEAR": 2000,
+    "POPULATION": 2642062,
+    "HOUSEHOLDS": 1021456,
+    "GROUP_QUARTERS_POP": 56156,
+    "POPULATION_IN_HOUSEHOLDS": 2585906
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2001,
+    "POPULATION": 2674927,
+    "HOUSEHOLDS": 1036074,
+    "GROUP_QUARTERS_POP": 48504,
+    "POPULATION_IN_HOUSEHOLDS": 2626423
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2002,
+    "POPULATION": 2708916,
+    "HOUSEHOLDS": 1053853,
+    "GROUP_QUARTERS_POP": 58472,
+    "POPULATION_IN_HOUSEHOLDS": 2650444
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2003,
+    "POPULATION": 2740985,
+    "HOUSEHOLDS": 1067453,
+    "GROUP_QUARTERS_POP": 59002,
+    "POPULATION_IN_HOUSEHOLDS": 2681983
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2004,
+    "POPULATION": 2771030,
+    "HOUSEHOLDS": 1081023,
+    "GROUP_QUARTERS_POP": 59779,
+    "POPULATION_IN_HOUSEHOLDS": 2711251
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2005,
+    "POPULATION": 2810179,
+    "HOUSEHOLDS": 1099871,
+    "GROUP_QUARTERS_POP": 60151,
+    "POPULATION_IN_HOUSEHOLDS": 2750028
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2006,
+    "POPULATION": 2821779,
+    "HOUSEHOLDS": 1109836,
+    "GROUP_QUARTERS_POP": 60797,
+    "POPULATION_IN_HOUSEHOLDS": 2760982
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2007,
+    "POPULATION": 2849003,
+    "HOUSEHOLDS": 1121535,
+    "GROUP_QUARTERS_POP": 60710,
+    "POPULATION_IN_HOUSEHOLDS": 2788293
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2008,
+    "POPULATION": 2870250,
+    "HOUSEHOLDS": 1129966,
+    "GROUP_QUARTERS_POP": 61532,
+    "POPULATION_IN_HOUSEHOLDS": 2808718
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2009,
+    "POPULATION": 2881812,
+    "HOUSEHOLDS": 1138512,
+    "GROUP_QUARTERS_POP": 60859,
+    "POPULATION_IN_HOUSEHOLDS": 2820953
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Census Bureau",
+    "YEAR": 2010,
+    "POPULATION": 2849567,
+    "HOUSEHOLDS": 1117749,
+    "GROUP_QUARTERS_POP": 55023,
+    "POPULATION_IN_HOUSEHOLDS": 2794544
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2011,
+    "POPULATION": 2873444,
+    "HOUSEHOLDS": 1127600,
+    "GROUP_QUARTERS_POP": 57731,
+    "POPULATION_IN_HOUSEHOLDS": 2815713
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2012,
+    "POPULATION": 2909001,
+    "HOUSEHOLDS": 1135271,
+    "GROUP_QUARTERS_POP": 57316,
+    "POPULATION_IN_HOUSEHOLDS": 2851685
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2013,
+    "POPULATION": 2950885,
+    "HOUSEHOLDS": 1153538,
+    "GROUP_QUARTERS_POP": 57017,
+    "POPULATION_IN_HOUSEHOLDS": 2893868
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2014,
+    "POPULATION": 2979343,
+    "HOUSEHOLDS": 1165657,
+    "GROUP_QUARTERS_POP": 60316,
+    "POPULATION_IN_HOUSEHOLDS": 2919027
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "DATASOURCE_DESC": "Metropolitan Council Research",
+    "YEAR": 2015,
+    "POPULATION": 3005419,
+    "HOUSEHOLDS": 1176655,
+    "GROUP_QUARTERS_POP": 59620,
+    "POPULATION_IN_HOUSEHOLDS": 2945799
+  }
+]}

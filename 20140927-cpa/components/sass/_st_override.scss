@@ -1,48 +1,326 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    background: #fff 50% 50% repeat-x;
+    border: 1px solid #d3d3d3;
+    color: #555555;
+    font-weight: normal;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+hr {
+    border: 0;
+    border-bottom: dashed 1px #ccc;
+    margin: 1em 0 1em 0;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.ui-widget {
+    font-family: helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.ui-widget p {
+    margin: 0;
+    padding: 0;
+}
 
-    .chatter { padding:20px; }  
+.ui-widget h3 {
+    padding-left: 40px !important;
+}
 
-    p { font-family:$bentonSans; }  
+.ui-accordion .ui-accordion-content {
+    padding: 18px 18px 18px 36px;
+    height: auto !important;
+}
 
-    #info { display:none; }
+.ui-accordion .ui-accordion-content h4 {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.ui-accordion-header {
+    font-family: popular;
+    font-size: 1.25em !important;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.ui-accordion-content-active {
+    border: solid 4px #333333;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
-    }
+.ui-state-active {
+    border: none;
+    cursor: move !important;
+    font-family: popular;
+}
+
+h3.ui-state-active {
+    background: #333;
+    border: none;
+    color: #fff;
+}
+
+h3.ui-state-active span {
+    display: none;
+}
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    left: .25em;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+}
+
+.ui-accordion .ui-accordion-header {
+    border-color: #ddd;
+    margin: 6px 0 0 0;
+}
+
+.two {
+    background: linear-gradient(to right, #ddd 4%, #fff 4%);
+    background: -moz-linear-gradient(left center, #ddd 4%, #fff 4%);
+    background: -o-linear-gradient(left, #ddd 4%, #fff 4%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(4%, #ddd), color-stop(4%, #fff));
+}
+
+.four {
+    background: linear-gradient(to right, #ddd 8%, #fff 8%);
+    background: -moz-linear-gradient(left center, #ddd 8%, #fff 8%);
+    background: -o-linear-gradient(left, #ddd 8%, #fff 8%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, #ddd), color-stop(8%, #fff));
+}
+
+.six {
+    background: linear-gradient(to right, #ddd 12%, #fff 12%);
+    background: -moz-linear-gradient(left center, #ddd 12%, #fff 12%);
+    background: -o-linear-gradient(left, #ddd 12%, #fff 12%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(12%, #ddd), color-stop(12%, #fff));
+}
+
+.eight {
+    background: linear-gradient(to right, #ddd 16%, #fff 16%);
+    background: -moz-linear-gradient(left center, #ddd 16%, #fff 16%);
+    background: -o-linear-gradient(left, #ddd 16%, #fff 16%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(16%, #ddd), color-stop(16%, #fff));
+}
+
+.ten {
+    background: linear-gradient(to right, #ddd 20%, #fff 20%);
+    background: -moz-linear-gradient(left center, #ddd 20%, #fff 20%);
+    background: -o-linear-gradient(left, #ddd 20%, #fff 20%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(20%, #ddd), color-stop(20%, #fff));
+}
+
+.twelve {
+    background: linear-gradient(to right, #ddd 24%, #fff 24%);
+    background: -moz-linear-gradient(left center, #ddd 24%, #fff 24%);
+    background: -o-linear-gradient(left, #ddd 24%, #fff 24%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(24%, #ddd), color-stop(24%, #fff));
+}
+
+.fourteen {
+    background: linear-gradient(to right, #ddd 28%, #fff 28%);
+    background: -moz-linear-gradient(left center, #ddd 28%, #fff 28%);
+    background: -o-linear-gradient(left, #ddd 28%, #fff 28%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(28%, #ddd), color-stop(28%, #fff));
+}
+
+.sixteen {
+    background: linear-gradient(to right, #ddd 32%, #fff 32%);
+    background: -moz-linear-gradient(left center, #ddd 32%, #fff 32%);
+    background: -o-linear-gradient(left, #ddd 32%, #fff 32%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(32%, #ddd), color-stop(32%, #fff));
+}
+
+.eighteen {
+    background: linear-gradient(to right, #ddd 36%, #fff 36%);
+    background: -moz-linear-gradient(left center, #ddd 36%, #fff 36%);
+    background: -o-linear-gradient(left, #ddd 36%, #fff 36%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(36%, #ddd), color-stop(36%, #fff));
+}
+
+.twenty {
+    background: linear-gradient(to right, #ddd 40%, #fff 40%);
+    background: -moz-linear-gradient(left center, #ddd 40%, #fff 40%);
+    background: -o-linear-gradient(left, #ddd 40%, #fff 40%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(40%, #ddd), color-stop(40%, #fff));
+}
+
+.twentytwo {
+    background: linear-gradient(to right, #ddd 44%, #fff 4%);
+    background: -moz-linear-gradient(left center, #ddd 44%, #fff 44%);
+    background: -o-linear-gradient(left, #ddd 44%, #fff 44%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(44%, #ddd), color-stop(44%, #fff));
+}
+
+.twentyfour {
+    background: linear-gradient(to right, #ddd 48%, #fff 48%);
+    background: -moz-linear-gradient(left center, #ddd 48%, #fff 48%);
+    background: -o-linear-gradient(left, #ddd 48%, #fff 48%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(48%, #ddd), color-stop(48%, #fff));
+}
+
+.twentysix {
+    background: linear-gradient(to right, #ddd 52%, #fff 52%);
+    background: -moz-linear-gradient(left center, #ddd 52%, #fff 52%);
+    background: -o-linear-gradient(left, #ddd 52%, #fff 52%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(52%, #ddd), color-stop(52%, #fff));
+}
+
+.twentyeight {
+    background: linear-gradient(to right, #ddd 56%, #fff 56%);
+    background: -moz-linear-gradient(left center, #ddd 56%, #fff 56%);
+    background: -o-linear-gradient(left, #ddd 56%, #fff 56%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(56%, #ddd), color-stop(56%, #fff));
+}
+
+.thirty {
+    background: linear-gradient(to right, #ddd 60%, #fff 60%);
+    background: -moz-linear-gradient(left center, #ddd 60%, #fff 60%);
+    background: -o-linear-gradient(left, #ddd 60%, #fff 60%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(60%, #ddd), color-stop(60%, #fff));
+}
+
+.thirtytwo {
+    background: linear-gradient(to right, #ddd 64%, #fff 64%);
+    background: -moz-linear-gradient(left center, #ddd 64%, #fff 64%);
+    background: -o-linear-gradient(left, #ddd 64%, #fff 64%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(64%, #ddd), color-stop(64%, #fff));
+}
+
+.thirtyfour {
+    background: linear-gradient(to right, #ddd 68%, #fff 68%);
+    background: -moz-linear-gradient(left center, #ddd 68%, #fff 68%);
+    background: -o-linear-gradient(left, #ddd 68%, #fff 68%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(68%, #ddd), color-stop(68%, #fff));
+}
+
+.thirtysix {
+    background: linear-gradient(to right, #ddd 72%, #fff 72%);
+    background: -moz-linear-gradient(left center, #ddd 72%, #fff 72%);
+    background: -o-linear-gradient(left, #ddd 72%, #fff 72%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(72%, #ddd), color-stop(72%, #fff));
+}
+
+.thirtyeight {
+    background: linear-gradient(to right, #ddd 76%, #fff 76%);
+    background: -moz-linear-gradient(left center, #ddd 76%, #fff 76%);
+    background: -o-linear-gradient(left, #ddd 76%, #fff 76%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(76%, #ddd), color-stop(76%, #fff));
+}
+
+.forty {
+    background: linear-gradient(to right, #ddd 80%, #fff 80%);
+    background: -moz-linear-gradient(left center, #ddd 80%, #fff 80%);
+    background: -o-linear-gradient(left, #ddd 80%, #fff 80%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(80%, #ddd), color-stop(80%, #fff));
+}
+
+.fortytwo {
+    background: linear-gradient(to right, #ddd 84%, #fff 84%);
+    background: -moz-linear-gradient(left center, #ddd 84%, #fff 84%);
+    background: -o-linear-gradient(left, #ddd 84%, #fff 84%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(84%, #ddd), color-stop(84%, #fff));
+}
+
+.fortyfour {
+    background: linear-gradient(to right, #ddd 88%, #fff 88%);
+    background: -moz-linear-gradient(left center, #ddd 88%, #fff 88%);
+    background: -o-linear-gradient(left, #ddd 88%, #fff 88%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(88%, #ddd), color-stop(88%, #fff));
+}
+
+.fortysix {
+    background: linear-gradient(to right, #ddd 92%, #fff 92%);
+    background: -moz-linear-gradient(left center, #ddd 92%, #fff 92%);
+    background: -o-linear-gradient(left, #ddd 92%, #fff 92%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(92%, #ddd), color-stop(92%, #fff));
+}
+
+.fortyeight {
+    background: linear-gradient(to right, #ddd 96%, #fff 96%);
+    background: -moz-linear-gradient(left center, #ddd 96%, #fff 4%);
+    background: -o-linear-gradient(left, #ddd 96%, #fff 96%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(96%, #ddd), color-stop(96%, #fff));
+}
+
+.fifty {
+    background: linear-gradient(to right, #ddd 100%, #fff 100%);
+    background: -moz-linear-gradient(left center, #ddd 100%, #fff 100%);
+    background: -o-linear-gradient(left, #ddd 100%, #fff 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(100%, #ddd), color-stop(100%, #fff));
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+h3[aria-selected="true"] {
+    border: 1px solid #000 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+    background: #ffffff 50% 50% repeat-x;
+    border: 1px solid #ddd !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    color: #212121;
+    font-weight: normal;
+}
+
+.articleStoryContainer {
+    margin: 12px 0 20px 0;
+}
+
+:focus {
+    outline: 0;
+}

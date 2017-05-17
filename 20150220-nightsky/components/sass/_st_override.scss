@@ -1,48 +1,179 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+.marker-cluster-small {
+    background-color: rgba(124, 132, 174, 0.7);
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+.marker-cluster-small div {
+    background-color: rgba(124, 132, 174, 0.7);
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+.marker-cluster-medium {
+    background-color: rgba(82, 92, 145, 0.7);
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.marker-cluster-medium div {
+    background-color: rgba(82, 92, 145, 0.7);
+}
 
-    .chatter { padding:20px; }  
+.marker-cluster-large {
+    background-color: rgba(7, 15, 58, 0.7);
+    color: white !important;
+}
 
-    p { font-family:$bentonSans; }  
+.marker-cluster-large div {
+    background-color: rgba(7, 15, 58, 0.7);
+    color: white !important;
+}
 
-    #info { display:none; }
+path {
+    fill: #333 !important;
+    fill-opacity: 0.6 !important;
+    stroke: #333 !important;
+    stroke-opacity: 0.3 !important;
+    stroke-width: 1px !important;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+body {
+    margin: 0;
+    padding: 0;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+#map {
+    width: 100%;
+    height: 600px;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+#buttons {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+input[name=clicky] {
+    display: none;
+}
+
+.clicky_select {
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    padding: 0;
+}
+
+.clicky_select li {
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.clicky_select label {
+    padding: 5px;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -o-appearance: button;
+    -ms-appearance: button;
+    appearance: button;
+    position: relative;
+    vertical-align: top;
+    padding: 4px;
+    width: 100px;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-group {
+    margin: auto !important;
+}
+
+.btn-primary {
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 13px 26px;
+    font-weight: 900;
+}
+
+.btn-primary input[type=checkbox] {
+    display: none !important;
+    border: none;
+}
+
+.btn-primary:checked {
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 3px;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 13px;
+    padding: 13px 26px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.active {
+    background-color: #182257
+}
+
+.inactive {
+    top: 1px;
+    background: #fff !important;
+    color: #000 !important;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Popular, sans-serif;
+}
+
+.legend label,
+.legend span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 20%;
+    text-align: center;
+    font-size: 9px;
+    color: #808080;
+}
+
+.leaflet-control-attribution {
+    display: none !important;
+}
+
+#wrapper {
+    width: 100%
+}
+
+#menu_main {
+    float: left;
+}
+
+@media only screen and (min-width:650px) {
+    .clicky_select label:hover {
+        background: #454545;
+        color: #fff;
     }
+    path:hover {
+        fill: #000 !important;
+        fill-opacity: 0.8 !important;
+    }
+    .btn-primary:hover {
+        background-color: #525C91 !important;
+    }
+}

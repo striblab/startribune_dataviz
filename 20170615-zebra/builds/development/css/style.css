@@ -2260,6 +2260,31 @@ body {
   cursor: pointer;
 }
 
+.col {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.name {
+  width: 70%;
+}
+
+.county {
+  width: 25%;
+}
+
+.row:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#listing {
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
 .previous {
   float: left;
 }
@@ -2323,7 +2348,7 @@ small {
 }
 
 .chatter {
-  padding: 20px;
+  padding: 10px;
 }
 
 p {
@@ -2364,6 +2389,20 @@ p {
 
 .marker-title {
   font-weight: 700;
+}
+
+.cell {
+  display: inline-block;
+}
+
+.th {
+  font-weight: 900;
+}
+
+.th:hover {
+  text-decoration: underline;
+  opacity: 0.8em;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {

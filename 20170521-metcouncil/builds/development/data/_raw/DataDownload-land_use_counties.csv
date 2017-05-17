@@ -1,0 +1,884 @@
+CO_CODE,CO_NAME,YEAR,LAND_USE,LAND_USE_DESCRIPTION,ACRES
+003,Anoka County,1970,3,Commercial,1578
+003,Anoka County,1970,4,Industrial,3892
+003,Anoka County,1970,9,Major Four Lane Highways,2536
+003,Anoka County,1970,10,Open Water Bodies,12734
+003,Anoka County,1970,21,Residential,26276
+003,Anoka County,1970,57,Institutional and Recreation,24667
+003,Anoka County,1970,80,Non-Urbanized,214157
+003,Anoka County,1975,3,Commercial,1783
+003,Anoka County,1975,4,Industrial,4251
+003,Anoka County,1975,9,Major Four Lane Highways,2536
+003,Anoka County,1975,10,Open Water Bodies,12734
+003,Anoka County,1975,21,Residential,31070
+003,Anoka County,1975,57,Institutional and Recreation,29513
+003,Anoka County,1975,80,Non-Urbanized,203626
+003,Anoka County,1980,1,Single Family Residential,33351
+003,Anoka County,1980,2,Multifamily Residential,760
+003,Anoka County,1980,3,Commercial,2027
+003,Anoka County,1980,4,Industrial,4542
+003,Anoka County,1980,5,Public Semi-Public,3100
+003,Anoka County,1980,7,Parks & Recreation Areas,26572
+003,Anoka County,1980,9,Major Four Lane Highways,2536
+003,Anoka County,1980,10,Open Water Bodies,12734
+003,Anoka County,1980,11,Farmsteads,1134
+003,Anoka County,1980,80,Non-Urbanized,198757
+003,Anoka County,1984,1,Single Family Residential,35317
+003,Anoka County,1984,2,Multifamily Residential,1071
+003,Anoka County,1984,3,Commercial,2124
+003,Anoka County,1984,4,Industrial,4778
+003,Anoka County,1984,5,Public Semi-Public,3135
+003,Anoka County,1984,7,Parks & Recreation Areas,27094
+003,Anoka County,1984,9,Major Four Lane Highways,2536
+003,Anoka County,1984,10,Open Water Bodies,12758
+003,Anoka County,1984,11,Farmsteads,1152
+003,Anoka County,1984,80,Non-Urbanized,195548
+003,Anoka County,1990,1,Single Family Residential,41849.5
+003,Anoka County,1990,2,Multifamily Residential,1520.1
+003,Anoka County,1990,3,Commercial,2648.9
+003,Anoka County,1990,4,Industrial,3301.8
+003,Anoka County,1990,5,Public Semi-Public,3302.7
+003,Anoka County,1990,6,Airports,2005.8
+003,Anoka County,1990,7,Parks & Recreation Areas,29079.7
+003,Anoka County,1990,8,Vacant/Agricultural,184561.8
+003,Anoka County,1990,9,Major Four Lane Highways,2686.9
+003,Anoka County,1990,10,Open Water Bodies,12581.1
+003,Anoka County,1990,11,Farmsteads,1198.5
+003,Anoka County,1990,41,Industrial Parks not Developed,116.9
+003,Anoka County,1990,51,Public & Semi-Public Vacant,272.5
+003,Anoka County,1997,1,Single Family Residential,43514.7
+003,Anoka County,1997,2,Multifamily Residential,2092.2
+003,Anoka County,1997,3,Commercial,2559.7
+003,Anoka County,1997,4,Industrial,3408.9
+003,Anoka County,1997,5,Public Semi-Public,2966.8
+003,Anoka County,1997,6,Airports,43.9
+003,Anoka County,1997,7,Parks & Recreation Areas,33011.3
+003,Anoka County,1997,8,Vacant/Agricultural,158719.9
+003,Anoka County,1997,9,Major Four Lane Highways,2109.2
+003,Anoka County,1997,10,Open Water Bodies,12704.9
+003,Anoka County,1997,11,Farmsteads,1568.4
+003,Anoka County,1997,12,Extractive (1997 only),9.1
+003,Anoka County,1997,41,Industrial Parks not Developed,593.2
+003,Anoka County,1997,51,Public & Semi-Public Vacant,307.4
+003,Anoka County,1997,54,Public Industrial  (1997 only),67.6
+003,Anoka County,2000,100,Agriculture,38384.1
+003,Anoka County,2000,111,Farmstead,1697.2
+003,Anoka County,2000,112,Seasonal/Vacation,31.4
+003,Anoka County,2000,113,Single Family Detached,52431.9
+003,Anoka County,2000,114,Single Family Attached,1861.9
+003,Anoka County,2000,115,Multifamily,1038.6
+003,Anoka County,2000,116,Manufactured Housing Park,812.8
+003,Anoka County,2000,120,Retail and Other Commercial,3365.3
+003,Anoka County,2000,130,Office,159.5
+003,Anoka County,2000,141,Mixed Use Residential,6.2
+003,Anoka County,2000,143,Mixed Use Commercial and Other,5.7
+003,Anoka County,2000,151,Industrial and Utility,4512.2
+003,Anoka County,2000,153,Extractive,53.9
+003,Anoka County,2000,160,Institutional,3609.8
+003,Anoka County,2000,170,"Park, Recreational or Preserve",32082.5
+003,Anoka County,2000,173,Golf Course,2140.6
+003,Anoka County,2000,201,Major Highway,2967.8
+003,Anoka County,2000,202,Railway,382.2
+003,Anoka County,2000,203,Airport,1679.3
+003,Anoka County,2000,210,Undeveloped Land,122668
+003,Anoka County,2000,220,Open Water,15277.2
+003,Anoka County,2005,100,Agriculture,34429.8
+003,Anoka County,2005,111,Farmstead,1310.9
+003,Anoka County,2005,112,Seasonal/Vacation,89.2
+003,Anoka County,2005,113,Single Family Detached,58094.3
+003,Anoka County,2005,114,Single Family Attached,2550
+003,Anoka County,2005,115,Multifamily,1023.8
+003,Anoka County,2005,116,Manufactured Housing Park,785.3
+003,Anoka County,2005,120,Retail and Other Commercial,4012.2
+003,Anoka County,2005,130,Office,210.3
+003,Anoka County,2005,141,Mixed Use Residential,22.7
+003,Anoka County,2005,142,Mixed Use Industrial,137.2
+003,Anoka County,2005,143,Mixed Use Commercial and Other,12.5
+003,Anoka County,2005,151,Industrial and Utility,5077.7
+003,Anoka County,2005,153,Extractive,83.1
+003,Anoka County,2005,160,Institutional,3436.2
+003,Anoka County,2005,170,"Park, Recreational or Preserve",36495.6
+003,Anoka County,2005,173,Golf Course,2803
+003,Anoka County,2005,201,Major Highway,3452.9
+003,Anoka County,2005,202,Railway,393.6
+003,Anoka County,2005,203,Airport,708.6
+003,Anoka County,2005,210,Undeveloped Land,114700.2
+003,Anoka County,2005,220,Open Water,15422.3
+003,Anoka County,2010,100,Agriculture,32359.2
+003,Anoka County,2010,111,Farmstead,1198.1
+003,Anoka County,2010,112,Seasonal/Vacation,94
+003,Anoka County,2010,113,Single Family Detached,62170.8
+003,Anoka County,2010,114,Single Family Attached,2879.5
+003,Anoka County,2010,115,Multifamily,1045.2
+003,Anoka County,2010,116,Manufactured Housing Park,789.3
+003,Anoka County,2010,120,Retail and Other Commercial,4019.4
+003,Anoka County,2010,130,Office,426.7
+003,Anoka County,2010,141,Mixed Use Residential,72.6
+003,Anoka County,2010,142,Mixed Use Industrial,148.6
+003,Anoka County,2010,143,Mixed Use Commercial and Other,13.2
+003,Anoka County,2010,151,Industrial and Utility,5428.1
+003,Anoka County,2010,153,Extractive,131.6
+003,Anoka County,2010,160,Institutional,3852.5
+003,Anoka County,2010,170,"Park, Recreational or Preserve",38333.7
+003,Anoka County,2010,173,Golf Course,2828
+003,Anoka County,2010,201,Major Highway,3516.3
+003,Anoka County,2010,202,Railway,442.2
+003,Anoka County,2010,203,Airport,857.7
+003,Anoka County,2010,210,Undeveloped Land,108935.6
+003,Anoka County,2010,220,Open Water,15708.8
+019,Carver County,1970,3,Commercial,301
+019,Carver County,1970,4,Industrial,401
+019,Carver County,1970,9,Major Four Lane Highways,122
+019,Carver County,1970,10,Open Water Bodies,12660
+019,Carver County,1970,21,Residential,8703
+019,Carver County,1970,57,Institutional and Recreation,8352
+019,Carver County,1970,80,Non-Urbanized,210144
+019,Carver County,1975,3,Commercial,343
+019,Carver County,1975,4,Industrial,491
+019,Carver County,1975,9,Major Four Lane Highways,225
+019,Carver County,1975,10,Open Water Bodies,12660
+019,Carver County,1975,21,Residential,9277
+019,Carver County,1975,57,Institutional and Recreation,8804
+019,Carver County,1975,80,Non-Urbanized,208883
+019,Carver County,1980,1,Single Family Residential,6096
+019,Carver County,1980,2,Multifamily Residential,150
+019,Carver County,1980,3,Commercial,365
+019,Carver County,1980,4,Industrial,539
+019,Carver County,1980,5,Public Semi-Public,1064
+019,Carver County,1980,7,Parks & Recreation Areas,8785
+019,Carver County,1980,9,Major Four Lane Highways,225
+019,Carver County,1980,10,Open Water Bodies,12660
+019,Carver County,1980,11,Farmsteads,3829
+019,Carver County,1980,80,Non-Urbanized,206970
+019,Carver County,1984,1,Single Family Residential,6682
+019,Carver County,1984,2,Multifamily Residential,176
+019,Carver County,1984,3,Commercial,391
+019,Carver County,1984,4,Industrial,638
+019,Carver County,1984,5,Public Semi-Public,1071
+019,Carver County,1984,7,Parks & Recreation Areas,8832
+019,Carver County,1984,9,Major Four Lane Highways,225
+019,Carver County,1984,10,Open Water Bodies,12660
+019,Carver County,1984,11,Farmsteads,3828
+019,Carver County,1984,80,Non-Urbanized,206180
+019,Carver County,1990,1,Single Family Residential,8080.5
+019,Carver County,1990,2,Multifamily Residential,316.7
+019,Carver County,1990,3,Commercial,502.6
+019,Carver County,1990,4,Industrial,965.8
+019,Carver County,1990,5,Public Semi-Public,1225
+019,Carver County,1990,7,Parks & Recreation Areas,9868.7
+019,Carver County,1990,8,Vacant/Agricultural,202572.7
+019,Carver County,1990,9,Major Four Lane Highways,232.6
+019,Carver County,1990,10,Open Water Bodies,12522
+019,Carver County,1990,11,Farmsteads,3922.8
+019,Carver County,1990,41,Industrial Parks not Developed,182.4
+019,Carver County,1990,51,Public & Semi-Public Vacant,75.9
+019,Carver County,1997,1,Single Family Residential,10293.8
+019,Carver County,1997,2,Multifamily Residential,422.5
+019,Carver County,1997,3,Commercial,610.6
+019,Carver County,1997,4,Industrial,1116.5
+019,Carver County,1997,5,Public Semi-Public,1424.8
+019,Carver County,1997,7,Parks & Recreation Areas,10718.7
+019,Carver County,1997,8,Vacant/Agricultural,198354.1
+019,Carver County,1997,9,Major Four Lane Highways,258.3
+019,Carver County,1997,10,Open Water Bodies,12646.9
+019,Carver County,1997,11,Farmsteads,4185.8
+019,Carver County,1997,12,Extractive (1997 only),210.6
+019,Carver County,1997,41,Industrial Parks not Developed,111.1
+019,Carver County,1997,51,Public & Semi-Public Vacant,0.1
+019,Carver County,1997,54,Public Industrial  (1997 only),68.2
+019,Carver County,2000,100,Agriculture,138234.4
+019,Carver County,2000,111,Farmstead,4649.4
+019,Carver County,2000,112,Seasonal/Vacation,16.7
+019,Carver County,2000,113,Single Family Detached,11951.6
+019,Carver County,2000,114,Single Family Attached,380.3
+019,Carver County,2000,115,Multifamily,194
+019,Carver County,2000,116,Manufactured Housing Park,185.2
+019,Carver County,2000,120,Retail and Other Commercial,627.1
+019,Carver County,2000,130,Office,65.7
+019,Carver County,2000,141,Mixed Use Residential,26.6
+019,Carver County,2000,142,Mixed Use Industrial,10.9
+019,Carver County,2000,143,Mixed Use Commercial and Other,6.1
+019,Carver County,2000,151,Industrial and Utility,1288.2
+019,Carver County,2000,153,Extractive,344
+019,Carver County,2000,160,Institutional,1363.7
+019,Carver County,2000,170,"Park, Recreational or Preserve",9811
+019,Carver County,2000,173,Golf Course,1367.1
+019,Carver County,2000,201,Major Highway,727.6
+019,Carver County,2000,202,Railway,25.2
+019,Carver County,2000,203,Airport,11.8
+019,Carver County,2000,210,Undeveloped Land,55221.3
+019,Carver County,2000,220,Open Water,14023.2
+019,Carver County,2005,100,Agriculture,136575.9
+019,Carver County,2005,111,Farmstead,4436.3
+019,Carver County,2005,112,Seasonal/Vacation,24.1
+019,Carver County,2005,113,Single Family Detached,13859.8
+019,Carver County,2005,114,Single Family Attached,666.2
+019,Carver County,2005,115,Multifamily,260.7
+019,Carver County,2005,116,Manufactured Housing Park,169.3
+019,Carver County,2005,120,Retail and Other Commercial,909.4
+019,Carver County,2005,130,Office,84.6
+019,Carver County,2005,141,Mixed Use Residential,155.6
+019,Carver County,2005,142,Mixed Use Industrial,25
+019,Carver County,2005,143,Mixed Use Commercial and Other,23.7
+019,Carver County,2005,151,Industrial and Utility,1270.4
+019,Carver County,2005,153,Extractive,312
+019,Carver County,2005,160,Institutional,1559.8
+019,Carver County,2005,170,"Park, Recreational or Preserve",11322.3
+019,Carver County,2005,173,Golf Course,1580.3
+019,Carver County,2005,201,Major Highway,826.4
+019,Carver County,2005,202,Railway,25.7
+019,Carver County,2005,203,Airport,23.8
+019,Carver County,2005,210,Undeveloped Land,52392.7
+019,Carver County,2005,220,Open Water,13970.1
+019,Carver County,2010,100,Agriculture,134701.6
+019,Carver County,2010,111,Farmstead,4215.7
+019,Carver County,2010,112,Seasonal/Vacation,12.8
+019,Carver County,2010,113,Single Family Detached,14805.5
+019,Carver County,2010,114,Single Family Attached,832.6
+019,Carver County,2010,115,Multifamily,266.2
+019,Carver County,2010,116,Manufactured Housing Park,179.2
+019,Carver County,2010,120,Retail and Other Commercial,975.3
+019,Carver County,2010,130,Office,131.7
+019,Carver County,2010,141,Mixed Use Residential,108.8
+019,Carver County,2010,142,Mixed Use Industrial,32.2
+019,Carver County,2010,143,Mixed Use Commercial and Other,28.3
+019,Carver County,2010,151,Industrial and Utility,1408.8
+019,Carver County,2010,153,Extractive,347.8
+019,Carver County,2010,160,Institutional,1795.1
+019,Carver County,2010,170,"Park, Recreational or Preserve",13153.5
+019,Carver County,2010,173,Golf Course,1447.8
+019,Carver County,2010,201,Major Highway,1490.5
+019,Carver County,2010,202,Railway,38.1
+019,Carver County,2010,203,Airport,35.8
+019,Carver County,2010,210,Undeveloped Land,50380.8
+019,Carver County,2010,220,Open Water,14091.7
+037,Dakota County,1970,3,Commercial,1365
+037,Dakota County,1970,4,Industrial,3521
+037,Dakota County,1970,9,Major Four Lane Highways,1736
+037,Dakota County,1970,10,Open Water Bodies,11719
+037,Dakota County,1970,21,Residential,20150
+037,Dakota County,1970,57,Institutional and Recreation,9492
+037,Dakota County,1970,80,Non-Urbanized,327329
+037,Dakota County,1975,3,Commercial,1713
+037,Dakota County,1975,4,Industrial,4386
+037,Dakota County,1975,9,Major Four Lane Highways,1876
+037,Dakota County,1975,10,Open Water Bodies,11719
+037,Dakota County,1975,21,Residential,24408
+037,Dakota County,1975,57,Institutional and Recreation,14034
+037,Dakota County,1975,80,Non-Urbanized,317176
+037,Dakota County,1980,1,Single Family Residential,22795
+037,Dakota County,1980,2,Multifamily Residential,1543
+037,Dakota County,1980,3,Commercial,2070
+037,Dakota County,1980,4,Industrial,5012
+037,Dakota County,1980,5,Public Semi-Public,3149
+037,Dakota County,1980,7,Parks & Recreation Areas,11933
+037,Dakota County,1980,9,Major Four Lane Highways,2161
+037,Dakota County,1980,10,Open Water Bodies,11719
+037,Dakota County,1980,11,Farmsteads,3784
+037,Dakota County,1980,80,Non-Urbanized,311059
+037,Dakota County,1984,1,Single Family Residential,25100
+037,Dakota County,1984,2,Multifamily Residential,2044
+037,Dakota County,1984,3,Commercial,2318
+037,Dakota County,1984,4,Industrial,5385
+037,Dakota County,1984,5,Public Semi-Public,3289
+037,Dakota County,1984,7,Parks & Recreation Areas,11971
+037,Dakota County,1984,9,Major Four Lane Highways,2647
+037,Dakota County,1984,10,Open Water Bodies,11719
+037,Dakota County,1984,11,Farmsteads,3762
+037,Dakota County,1984,80,Non-Urbanized,306990
+037,Dakota County,1990,1,Single Family Residential,33216.5
+037,Dakota County,1990,2,Multifamily Residential,3371.9
+037,Dakota County,1990,3,Commercial,3314.1
+037,Dakota County,1990,4,Industrial,6406.8
+037,Dakota County,1990,5,Public Semi-Public,3980
+037,Dakota County,1990,6,Airports,332
+037,Dakota County,1990,7,Parks & Recreation Areas,13067.8
+037,Dakota County,1990,8,Vacant/Agricultural,277558.6
+037,Dakota County,1990,9,Major Four Lane Highways,3564.4
+037,Dakota County,1990,10,Open Water Bodies,11738.3
+037,Dakota County,1990,11,Farmsteads,3880.6
+037,Dakota County,1990,41,Industrial Parks not Developed,5798.7
+037,Dakota County,1990,51,Public & Semi-Public Vacant,8766.9
+037,Dakota County,1997,1,Single Family Residential,40194.6
+037,Dakota County,1997,2,Multifamily Residential,4606.4
+037,Dakota County,1997,3,Commercial,4664.6
+037,Dakota County,1997,4,Industrial,5799.6
+037,Dakota County,1997,5,Public Semi-Public,6033.5
+037,Dakota County,1997,6,Airports,796.8
+037,Dakota County,1997,7,Parks & Recreation Areas,17550.6
+037,Dakota County,1997,8,Vacant/Agricultural,260371
+037,Dakota County,1997,9,Major Four Lane Highways,3980.7
+037,Dakota County,1997,10,Open Water Bodies,12078.5
+037,Dakota County,1997,11,Farmsteads,4754
+037,Dakota County,1997,12,Extractive (1997 only),2031.7
+037,Dakota County,1997,41,Industrial Parks not Developed,3443.1
+037,Dakota County,1997,51,Public & Semi-Public Vacant,8696.2
+037,Dakota County,1997,54,Public Industrial  (1997 only),169.1
+037,Dakota County,2000,100,Agriculture,195568.1
+037,Dakota County,2000,111,Farmstead,4615.1
+037,Dakota County,2000,112,Seasonal/Vacation,11.6
+037,Dakota County,2000,113,Single Family Detached,42597.6
+037,Dakota County,2000,114,Single Family Attached,3411.6
+037,Dakota County,2000,115,Multifamily,2089.5
+037,Dakota County,2000,116,Manufactured Housing Park,750.7
+037,Dakota County,2000,120,Retail and Other Commercial,4455.7
+037,Dakota County,2000,130,Office,654.3
+037,Dakota County,2000,141,Mixed Use Residential,0.6
+037,Dakota County,2000,142,Mixed Use Industrial,442.1
+037,Dakota County,2000,143,Mixed Use Commercial and Other,8.5
+037,Dakota County,2000,151,Industrial and Utility,6909.5
+037,Dakota County,2000,153,Extractive,2140.4
+037,Dakota County,2000,160,Institutional,5453.5
+037,Dakota County,2000,170,"Park, Recreational or Preserve",18143
+037,Dakota County,2000,173,Golf Course,3206.3
+037,Dakota County,2000,201,Major Highway,4664.2
+037,Dakota County,2000,202,Railway,289.2
+037,Dakota County,2000,203,Airport,505.2
+037,Dakota County,2000,210,Undeveloped Land,66432.6
+037,Dakota County,2000,220,Open Water,13062
+037,Dakota County,2005,100,Agriculture,190570.1
+037,Dakota County,2005,111,Farmstead,3949.6
+037,Dakota County,2005,112,Seasonal/Vacation,9.4
+037,Dakota County,2005,113,Single Family Detached,46088.8
+037,Dakota County,2005,114,Single Family Attached,5267.2
+037,Dakota County,2005,115,Multifamily,2185.4
+037,Dakota County,2005,116,Manufactured Housing Park,778
+037,Dakota County,2005,120,Retail and Other Commercial,4227.6
+037,Dakota County,2005,130,Office,1407.6
+037,Dakota County,2005,141,Mixed Use Residential,177.7
+037,Dakota County,2005,142,Mixed Use Industrial,559.6
+037,Dakota County,2005,143,Mixed Use Commercial and Other,18.7
+037,Dakota County,2005,151,Industrial and Utility,7675.9
+037,Dakota County,2005,153,Extractive,2623.7
+037,Dakota County,2005,160,Institutional,5749.6
+037,Dakota County,2005,170,"Park, Recreational or Preserve",20141.6
+037,Dakota County,2005,173,Golf Course,3360.5
+037,Dakota County,2005,201,Major Highway,5327.7
+037,Dakota County,2005,202,Railway,285.9
+037,Dakota County,2005,203,Airport,548.2
+037,Dakota County,2005,210,Undeveloped Land,61385.8
+037,Dakota County,2005,220,Open Water,12850.9
+037,Dakota County,2010,100,Agriculture,184438.5
+037,Dakota County,2010,111,Farmstead,3626.2
+037,Dakota County,2010,112,Seasonal/Vacation,7.6
+037,Dakota County,2010,113,Single Family Detached,47805.1
+037,Dakota County,2010,114,Single Family Attached,5864.6
+037,Dakota County,2010,115,Multifamily,2262.2
+037,Dakota County,2010,116,Manufactured Housing Park,788.3
+037,Dakota County,2010,120,Retail and Other Commercial,4534.3
+037,Dakota County,2010,130,Office,1666.4
+037,Dakota County,2010,141,Mixed Use Residential,118.2
+037,Dakota County,2010,142,Mixed Use Industrial,655.6
+037,Dakota County,2010,143,Mixed Use Commercial and Other,28.3
+037,Dakota County,2010,151,Industrial and Utility,8044
+037,Dakota County,2010,153,Extractive,2593.6
+037,Dakota County,2010,160,Institutional,6165.6
+037,Dakota County,2010,170,"Park, Recreational or Preserve",26618.1
+037,Dakota County,2010,173,Golf Course,3252
+037,Dakota County,2010,201,Major Highway,5385.5
+037,Dakota County,2010,202,Railway,344.7
+037,Dakota County,2010,203,Airport,552.9
+037,Dakota County,2010,210,Undeveloped Land,57545.4
+037,Dakota County,2010,220,Open Water,12888.2
+053,Hennepin County,1970,3,Commercial,6457
+053,Hennepin County,1970,4,Industrial,15231
+053,Hennepin County,1970,9,Major Four Lane Highways,6103
+053,Hennepin County,1970,10,Open Water Bodies,32070
+053,Hennepin County,1970,21,Residential,85397
+053,Hennepin County,1970,57,Institutional and Recreation,42912
+053,Hennepin County,1970,80,Non-Urbanized,200014
+053,Hennepin County,1975,3,Commercial,7281
+053,Hennepin County,1975,4,Industrial,16156
+053,Hennepin County,1975,9,Major Four Lane Highways,6201
+053,Hennepin County,1975,10,Open Water Bodies,32070
+053,Hennepin County,1975,21,Residential,90532
+053,Hennepin County,1975,57,Institutional and Recreation,46852
+053,Hennepin County,1975,80,Non-Urbanized,189092
+053,Hennepin County,1980,1,Single Family Residential,87733
+053,Hennepin County,1980,2,Multifamily Residential,8797
+053,Hennepin County,1980,3,Commercial,8053
+053,Hennepin County,1980,4,Industrial,17515
+053,Hennepin County,1980,5,Public Semi-Public,10877
+053,Hennepin County,1980,7,Parks & Recreation Areas,36883
+053,Hennepin County,1980,9,Major Four Lane Highways,6361
+053,Hennepin County,1980,10,Open Water Bodies,32070
+053,Hennepin County,1980,11,Farmsteads,2123
+053,Hennepin County,1980,80,Non-Urbanized,177928
+053,Hennepin County,1984,1,Single Family Residential,91830
+053,Hennepin County,1984,2,Multifamily Residential,9865
+053,Hennepin County,1984,3,Commercial,8741
+053,Hennepin County,1984,4,Industrial,18164
+053,Hennepin County,1984,5,Public Semi-Public,10937
+053,Hennepin County,1984,7,Parks & Recreation Areas,36982
+053,Hennepin County,1984,9,Major Four Lane Highways,6731
+053,Hennepin County,1984,10,Open Water Bodies,32070
+053,Hennepin County,1984,11,Farmsteads,2125
+053,Hennepin County,1984,80,Non-Urbanized,170895
+053,Hennepin County,1990,1,Single Family Residential,99504.4
+053,Hennepin County,1990,2,Multifamily Residential,11677.3
+053,Hennepin County,1990,3,Commercial,10168
+053,Hennepin County,1990,4,Industrial,15920.6
+053,Hennepin County,1990,5,Public Semi-Public,11391.8
+053,Hennepin County,1990,6,Airports,3553.7
+053,Hennepin County,1990,7,Parks & Recreation Areas,39828.9
+053,Hennepin County,1990,8,Vacant/Agricultural,152329.5
+053,Hennepin County,1990,9,Major Four Lane Highways,7332.6
+053,Hennepin County,1990,10,Open Water Bodies,32601.3
+053,Hennepin County,1990,11,Farmsteads,2236.6
+053,Hennepin County,1990,41,Industrial Parks not Developed,966.5
+053,Hennepin County,1990,51,Public & Semi-Public Vacant,417.2
+053,Hennepin County,1997,1,Single Family Residential,104758.5
+053,Hennepin County,1997,2,Multifamily Residential,14642.6
+053,Hennepin County,1997,3,Commercial,11979.7
+053,Hennepin County,1997,4,Industrial,14200.9
+053,Hennepin County,1997,5,Public Semi-Public,11904.8
+053,Hennepin County,1997,6,Airports,3710.8
+053,Hennepin County,1997,7,Parks & Recreation Areas,44069.4
+053,Hennepin County,1997,8,Vacant/Agricultural,136635.2
+053,Hennepin County,1997,9,Major Four Lane Highways,7997.4
+053,Hennepin County,1997,10,Open Water Bodies,32679.5
+053,Hennepin County,1997,11,Farmsteads,2234
+053,Hennepin County,1997,12,Extractive (1997 only),1633
+053,Hennepin County,1997,41,Industrial Parks not Developed,764.3
+053,Hennepin County,1997,51,Public & Semi-Public Vacant,499.2
+053,Hennepin County,1997,54,Public Industrial  (1997 only),240.8
+053,Hennepin County,2000,100,Agriculture,52014.2
+053,Hennepin County,2000,111,Farmstead,2837.5
+053,Hennepin County,2000,112,Seasonal/Vacation,198.9
+053,Hennepin County,2000,113,Single Family Detached,108431.5
+053,Hennepin County,2000,114,Single Family Attached,8108.4
+053,Hennepin County,2000,115,Multifamily,7433.4
+053,Hennepin County,2000,116,Manufactured Housing Park,121.1
+053,Hennepin County,2000,120,Retail and Other Commercial,10680.1
+053,Hennepin County,2000,130,Office,2173.3
+053,Hennepin County,2000,141,Mixed Use Residential,41.6
+053,Hennepin County,2000,142,Mixed Use Industrial,1031.6
+053,Hennepin County,2000,143,Mixed Use Commercial and Other,95.9
+053,Hennepin County,2000,151,Industrial and Utility,13379.7
+053,Hennepin County,2000,153,Extractive,1362.7
+053,Hennepin County,2000,160,Institutional,11590
+053,Hennepin County,2000,170,"Park, Recreational or Preserve",38784.8
+053,Hennepin County,2000,173,Golf Course,7141.6
+053,Hennepin County,2000,201,Major Highway,9138.5
+053,Hennepin County,2000,202,Railway,842.3
+053,Hennepin County,2000,203,Airport,3673.7
+053,Hennepin County,2000,210,Undeveloped Land,74390
+053,Hennepin County,2000,220,Open Water,34473.3
+053,Hennepin County,2005,100,Agriculture,49584.8
+053,Hennepin County,2005,111,Farmstead,2167.2
+053,Hennepin County,2005,112,Seasonal/Vacation,138.6
+053,Hennepin County,2005,113,Single Family Detached,111620.7
+053,Hennepin County,2005,114,Single Family Attached,9403.1
+053,Hennepin County,2005,115,Multifamily,7582.1
+053,Hennepin County,2005,116,Manufactured Housing Park,99.7
+053,Hennepin County,2005,120,Retail and Other Commercial,10241.4
+053,Hennepin County,2005,130,Office,2808.7
+053,Hennepin County,2005,141,Mixed Use Residential,428.6
+053,Hennepin County,2005,142,Mixed Use Industrial,1084.2
+053,Hennepin County,2005,143,Mixed Use Commercial and Other,182
+053,Hennepin County,2005,151,Industrial and Utility,13750.7
+053,Hennepin County,2005,153,Extractive,1231.6
+053,Hennepin County,2005,160,Institutional,12240.2
+053,Hennepin County,2005,170,"Park, Recreational or Preserve",42357.3
+053,Hennepin County,2005,173,Golf Course,7152.7
+053,Hennepin County,2005,201,Major Highway,9668.6
+053,Hennepin County,2005,202,Railway,775.8
+053,Hennepin County,2005,203,Airport,3793.5
+053,Hennepin County,2005,210,Undeveloped Land,67038.5
+053,Hennepin County,2005,220,Open Water,34513.5
+053,Hennepin County,2010,100,Agriculture,47409.8
+053,Hennepin County,2010,111,Farmstead,2010
+053,Hennepin County,2010,112,Seasonal/Vacation,124.4
+053,Hennepin County,2010,113,Single Family Detached,114161.9
+053,Hennepin County,2010,114,Single Family Attached,10236.5
+053,Hennepin County,2010,115,Multifamily,7489.2
+053,Hennepin County,2010,116,Manufactured Housing Park,113.7
+053,Hennepin County,2010,120,Retail and Other Commercial,10086.5
+053,Hennepin County,2010,130,Office,3565.1
+053,Hennepin County,2010,141,Mixed Use Residential,435.3
+053,Hennepin County,2010,142,Mixed Use Industrial,1161.9
+053,Hennepin County,2010,143,Mixed Use Commercial and Other,260.2
+053,Hennepin County,2010,151,Industrial and Utility,13500.1
+053,Hennepin County,2010,153,Extractive,1007.8
+053,Hennepin County,2010,160,Institutional,12606.9
+053,Hennepin County,2010,170,"Park, Recreational or Preserve",44190.3
+053,Hennepin County,2010,173,Golf Course,7250
+053,Hennepin County,2010,201,Major Highway,9967.5
+053,Hennepin County,2010,202,Railway,952.6
+053,Hennepin County,2010,203,Airport,4079.6
+053,Hennepin County,2010,210,Undeveloped Land,62724
+053,Hennepin County,2010,220,Open Water,34600.2
+123,Ramsey County,1970,3,Commercial,3035
+123,Ramsey County,1970,4,Industrial,7661
+123,Ramsey County,1970,9,Major Four Lane Highways,3350
+123,Ramsey County,1970,10,Open Water Bodies,9757
+123,Ramsey County,1970,21,Residential,37522
+123,Ramsey County,1970,57,Institutional and Recreation,14200
+123,Ramsey County,1970,80,Non-Urbanized,33289
+123,Ramsey County,1975,3,Commercial,3413
+123,Ramsey County,1975,4,Industrial,7927
+123,Ramsey County,1975,9,Major Four Lane Highways,3350
+123,Ramsey County,1975,10,Open Water Bodies,9757
+123,Ramsey County,1975,21,Residential,39551
+123,Ramsey County,1975,57,Institutional and Recreation,16499
+123,Ramsey County,1975,80,Non-Urbanized,28317
+123,Ramsey County,1980,1,Single Family Residential,38235
+123,Ramsey County,1980,2,Multifamily Residential,3017
+123,Ramsey County,1980,3,Commercial,3586
+123,Ramsey County,1980,4,Industrial,8236
+123,Ramsey County,1980,5,Public Semi-Public,5950
+123,Ramsey County,1980,7,Parks & Recreation Areas,10950
+123,Ramsey County,1980,9,Major Four Lane Highways,3350
+123,Ramsey County,1980,10,Open Water Bodies,9757
+123,Ramsey County,1980,11,Farmsteads,34
+123,Ramsey County,1980,80,Non-Urbanized,25699
+123,Ramsey County,1984,1,Single Family Residential,38909
+123,Ramsey County,1984,2,Multifamily Residential,3315
+123,Ramsey County,1984,3,Commercial,3825
+123,Ramsey County,1984,4,Industrial,8394
+123,Ramsey County,1984,5,Public Semi-Public,5952
+123,Ramsey County,1984,7,Parks & Recreation Areas,10996
+123,Ramsey County,1984,9,Major Four Lane Highways,3369
+123,Ramsey County,1984,10,Open Water Bodies,9753
+123,Ramsey County,1984,11,Farmsteads,34
+123,Ramsey County,1984,80,Non-Urbanized,24267
+123,Ramsey County,1990,1,Single Family Residential,40663.9
+123,Ramsey County,1990,2,Multifamily Residential,3855.3
+123,Ramsey County,1990,3,Commercial,4379.6
+123,Ramsey County,1990,4,Industrial,7908.7
+123,Ramsey County,1990,5,Public Semi-Public,6017.2
+123,Ramsey County,1990,6,Airports,647.9
+123,Ramsey County,1990,7,Parks & Recreation Areas,11139.3
+123,Ramsey County,1990,8,Vacant/Agricultural,18281.4
+123,Ramsey County,1990,9,Major Four Lane Highways,3577.4
+123,Ramsey County,1990,10,Open Water Bodies,9760.1
+123,Ramsey County,1990,11,Farmsteads,32.2
+123,Ramsey County,1990,41,Industrial Parks not Developed,397.6
+123,Ramsey County,1990,51,Public & Semi-Public Vacant,2053.9
+123,Ramsey County,1997,1,Single Family Residential,43592.2
+123,Ramsey County,1997,2,Multifamily Residential,7064.7
+123,Ramsey County,1997,3,Commercial,5516.2
+123,Ramsey County,1997,4,Industrial,8825.3
+123,Ramsey County,1997,5,Public Semi-Public,6608.7
+123,Ramsey County,1997,6,Airports,2350.9
+123,Ramsey County,1997,7,Parks & Recreation Areas,13553.5
+123,Ramsey County,1997,8,Vacant/Agricultural,26042.1
+123,Ramsey County,1997,9,Major Four Lane Highways,3833.4
+123,Ramsey County,1997,10,Open Water Bodies,9829.4
+123,Ramsey County,1997,11,Farmsteads,98.9
+123,Ramsey County,1997,41,Industrial Parks not Developed,192
+123,Ramsey County,1997,51,Public & Semi-Public Vacant,2313.7
+123,Ramsey County,1997,54,Public Industrial  (1997 only),340.5
+123,Ramsey County,2000,100,Agriculture,561.4
+123,Ramsey County,2000,111,Farmstead,11.4
+123,Ramsey County,2000,113,Single Family Detached,39259.3
+123,Ramsey County,2000,114,Single Family Attached,3625.5
+123,Ramsey County,2000,115,Multifamily,3361.4
+123,Ramsey County,2000,116,Manufactured Housing Park,453.7
+123,Ramsey County,2000,120,Retail and Other Commercial,4265.3
+123,Ramsey County,2000,130,Office,846.1
+123,Ramsey County,2000,141,Mixed Use Residential,24.7
+123,Ramsey County,2000,142,Mixed Use Industrial,1453.1
+123,Ramsey County,2000,143,Mixed Use Commercial and Other,164.3
+123,Ramsey County,2000,151,Industrial and Utility,6339.5
+123,Ramsey County,2000,160,Institutional,5839.5
+123,Ramsey County,2000,170,"Park, Recreational or Preserve",13279.6
+123,Ramsey County,2000,173,Golf Course,1865.6
+123,Ramsey County,2000,201,Major Highway,3641.7
+123,Ramsey County,2000,202,Railway,852
+123,Ramsey County,2000,203,Airport,578.5
+123,Ramsey County,2000,210,Undeveloped Land,11986
+123,Ramsey County,2000,220,Open Water,10268.4
+123,Ramsey County,2005,100,Agriculture,660.7
+123,Ramsey County,2005,111,Farmstead,8.9
+123,Ramsey County,2005,112,Seasonal/Vacation,15.9
+123,Ramsey County,2005,113,Single Family Detached,39571
+123,Ramsey County,2005,114,Single Family Attached,3734.9
+123,Ramsey County,2005,115,Multifamily,3339.8
+123,Ramsey County,2005,116,Manufactured Housing Park,446.8
+123,Ramsey County,2005,120,Retail and Other Commercial,4681.6
+123,Ramsey County,2005,130,Office,1215.9
+123,Ramsey County,2005,141,Mixed Use Residential,107.2
+123,Ramsey County,2005,142,Mixed Use Industrial,1491.8
+123,Ramsey County,2005,143,Mixed Use Commercial and Other,198
+123,Ramsey County,2005,151,Industrial and Utility,5768.5
+123,Ramsey County,2005,160,Institutional,6041.7
+123,Ramsey County,2005,170,"Park, Recreational or Preserve",14170.6
+123,Ramsey County,2005,173,Golf Course,1941
+123,Ramsey County,2005,201,Major Highway,4142.2
+123,Ramsey County,2005,202,Railway,864.2
+123,Ramsey County,2005,203,Airport,577.9
+123,Ramsey County,2005,210,Undeveloped Land,9523.5
+123,Ramsey County,2005,220,Open Water,10247.9
+123,Ramsey County,2010,100,Agriculture,605.8
+123,Ramsey County,2010,112,Seasonal/Vacation,8.8
+123,Ramsey County,2010,113,Single Family Detached,39679.6
+123,Ramsey County,2010,114,Single Family Attached,3961.7
+123,Ramsey County,2010,115,Multifamily,3316.7
+123,Ramsey County,2010,116,Manufactured Housing Park,441
+123,Ramsey County,2010,120,Retail and Other Commercial,4480.7
+123,Ramsey County,2010,130,Office,1362.4
+123,Ramsey County,2010,141,Mixed Use Residential,196.8
+123,Ramsey County,2010,142,Mixed Use Industrial,1591.2
+123,Ramsey County,2010,143,Mixed Use Commercial and Other,206.4
+123,Ramsey County,2010,151,Industrial and Utility,5620.5
+123,Ramsey County,2010,153,Extractive,20.8
+123,Ramsey County,2010,160,Institutional,6304.4
+123,Ramsey County,2010,170,"Park, Recreational or Preserve",14623
+123,Ramsey County,2010,173,Golf Course,1844.4
+123,Ramsey County,2010,201,Major Highway,4064.8
+123,Ramsey County,2010,202,Railway,907.2
+123,Ramsey County,2010,203,Airport,575.1
+123,Ramsey County,2010,210,Undeveloped Land,8599.4
+123,Ramsey County,2010,220,Open Water,10261.9
+139,Scott County,1970,3,Commercial,443
+139,Scott County,1970,4,Industrial,1292
+139,Scott County,1970,9,Major Four Lane Highways,1181
+139,Scott County,1970,10,Open Water Bodies,8536
+139,Scott County,1970,21,Residential,8698
+139,Scott County,1970,57,Institutional and Recreation,8192
+139,Scott County,1970,80,Non-Urbanized,206012
+139,Scott County,1975,3,Commercial,829
+139,Scott County,1975,4,Industrial,1553
+139,Scott County,1975,9,Major Four Lane Highways,1181
+139,Scott County,1975,10,Open Water Bodies,8536
+139,Scott County,1975,21,Residential,9521
+139,Scott County,1975,57,Institutional and Recreation,12933
+139,Scott County,1975,80,Non-Urbanized,199801
+139,Scott County,1980,1,Single Family Residential,7456
+139,Scott County,1980,2,Multifamily Residential,123
+139,Scott County,1980,3,Commercial,924
+139,Scott County,1980,4,Industrial,1860
+139,Scott County,1980,5,Public Semi-Public,843
+139,Scott County,1980,7,Parks & Recreation Areas,12249
+139,Scott County,1980,9,Major Four Lane Highways,1181
+139,Scott County,1980,10,Open Water Bodies,8536
+139,Scott County,1980,11,Farmsteads,3156
+139,Scott County,1980,80,Non-Urbanized,198994
+139,Scott County,1984,1,Single Family Residential,8407
+139,Scott County,1984,2,Multifamily Residential,181
+139,Scott County,1984,3,Commercial,966
+139,Scott County,1984,4,Industrial,1977
+139,Scott County,1984,5,Public Semi-Public,864
+139,Scott County,1984,7,Parks & Recreation Areas,12288
+139,Scott County,1984,9,Major Four Lane Highways,1181
+139,Scott County,1984,10,Open Water Bodies,8536
+139,Scott County,1984,11,Farmsteads,3159
+139,Scott County,1984,80,Non-Urbanized,197763
+139,Scott County,1990,1,Single Family Residential,10500.3
+139,Scott County,1990,2,Multifamily Residential,260.7
+139,Scott County,1990,3,Commercial,1375.8
+139,Scott County,1990,4,Industrial,2468.3
+139,Scott County,1990,5,Public Semi-Public,1179.5
+139,Scott County,1990,7,Parks & Recreation Areas,12565.1
+139,Scott County,1990,8,Vacant/Agricultural,191596.2
+139,Scott County,1990,9,Major Four Lane Highways,1201.5
+139,Scott County,1990,10,Open Water Bodies,8686.1
+139,Scott County,1990,11,Farmsteads,3238.1
+139,Scott County,1990,41,Industrial Parks not Developed,1995.3
+139,Scott County,1990,51,Public & Semi-Public Vacant,127.5
+139,Scott County,1997,1,Single Family Residential,14196.3
+139,Scott County,1997,2,Multifamily Residential,389.1
+139,Scott County,1997,3,Commercial,1321.7
+139,Scott County,1997,4,Industrial,2029.3
+139,Scott County,1997,5,Public Semi-Public,1499.3
+139,Scott County,1997,7,Parks & Recreation Areas,15106.5
+139,Scott County,1997,8,Vacant/Agricultural,185203.4
+139,Scott County,1997,9,Major Four Lane Highways,1675.2
+139,Scott County,1997,10,Open Water Bodies,8700.7
+139,Scott County,1997,11,Farmsteads,3520.7
+139,Scott County,1997,12,Extractive (1997 only),1021.8
+139,Scott County,1997,41,Industrial Parks not Developed,404.4
+139,Scott County,1997,51,Public & Semi-Public Vacant,140.6
+139,Scott County,1997,54,Public Industrial  (1997 only),175
+139,Scott County,2000,100,Agriculture,110128.9
+139,Scott County,2000,111,Farmstead,3595.9
+139,Scott County,2000,112,Seasonal/Vacation,49.5
+139,Scott County,2000,113,Single Family Detached,15888.3
+139,Scott County,2000,114,Single Family Attached,685
+139,Scott County,2000,115,Multifamily,180.5
+139,Scott County,2000,116,Manufactured Housing Park,153.9
+139,Scott County,2000,120,Retail and Other Commercial,1663.3
+139,Scott County,2000,141,Mixed Use Residential,11.3
+139,Scott County,2000,142,Mixed Use Industrial,23.2
+139,Scott County,2000,143,Mixed Use Commercial and Other,46.2
+139,Scott County,2000,151,Industrial and Utility,2466.1
+139,Scott County,2000,153,Extractive,1000.1
+139,Scott County,2000,160,Institutional,1312
+139,Scott County,2000,170,"Park, Recreational or Preserve",13940.2
+139,Scott County,2000,173,Golf Course,1234.2
+139,Scott County,2000,201,Major Highway,1851.7
+139,Scott County,2000,202,Railway,116.1
+139,Scott County,2000,210,Undeveloped Land,70176.7
+139,Scott County,2000,220,Open Water,11299.9
+139,Scott County,2005,100,Agriculture,105463.4
+139,Scott County,2005,111,Farmstead,3237.2
+139,Scott County,2005,112,Seasonal/Vacation,36.7
+139,Scott County,2005,113,Single Family Detached,21078.8
+139,Scott County,2005,114,Single Family Attached,1240.7
+139,Scott County,2005,115,Multifamily,233.8
+139,Scott County,2005,116,Manufactured Housing Park,144.8
+139,Scott County,2005,120,Retail and Other Commercial,2151.4
+139,Scott County,2005,130,Office,13
+139,Scott County,2005,141,Mixed Use Residential,17.5
+139,Scott County,2005,142,Mixed Use Industrial,78.7
+139,Scott County,2005,143,Mixed Use Commercial and Other,41.2
+139,Scott County,2005,151,Industrial and Utility,2720.3
+139,Scott County,2005,153,Extractive,1027.5
+139,Scott County,2005,160,Institutional,1539.4
+139,Scott County,2005,170,"Park, Recreational or Preserve",16122.4
+139,Scott County,2005,173,Golf Course,1522
+139,Scott County,2005,201,Major Highway,2081
+139,Scott County,2005,202,Railway,105.3
+139,Scott County,2005,210,Undeveloped Land,65861.9
+139,Scott County,2005,220,Open Water,11291.1
+139,Scott County,2010,100,Agriculture,102693.5
+139,Scott County,2010,111,Farmstead,2880.4
+139,Scott County,2010,112,Seasonal/Vacation,30
+139,Scott County,2010,113,Single Family Detached,22639.6
+139,Scott County,2010,114,Single Family Attached,1499.5
+139,Scott County,2010,115,Multifamily,254
+139,Scott County,2010,116,Manufactured Housing Park,139.9
+139,Scott County,2010,120,Retail and Other Commercial,2279.4
+139,Scott County,2010,130,Office,56.6
+139,Scott County,2010,141,Mixed Use Residential,45.3
+139,Scott County,2010,142,Mixed Use Industrial,124.9
+139,Scott County,2010,143,Mixed Use Commercial and Other,148.3
+139,Scott County,2010,151,Industrial and Utility,2842.9
+139,Scott County,2010,153,Extractive,1086.7
+139,Scott County,2010,160,Institutional,1820.4
+139,Scott County,2010,170,"Park, Recreational or Preserve",18195.4
+139,Scott County,2010,173,Golf Course,1551.3
+139,Scott County,2010,201,Major Highway,2257.6
+139,Scott County,2010,202,Railway,105.1
+139,Scott County,2010,203,Airport,22
+139,Scott County,2010,210,Undeveloped Land,63989.8
+139,Scott County,2010,220,Open Water,11347
+163,Washington County,1970,3,Commercial,947
+163,Washington County,1970,4,Industrial,2969
+163,Washington County,1970,9,Major Four Lane Highways,1722
+163,Washington County,1970,10,Open Water Bodies,23602
+163,Washington County,1970,21,Residential,19850
+163,Washington County,1970,57,Institutional and Recreation,10951
+163,Washington County,1970,80,Non-Urbanized,209938
+163,Washington County,1975,3,Commercial,1068
+163,Washington County,1975,4,Industrial,3369
+163,Washington County,1975,9,Major Four Lane Highways,1722
+163,Washington County,1975,10,Open Water Bodies,23602
+163,Washington County,1975,21,Residential,22479
+163,Washington County,1975,57,Institutional and Recreation,12204
+163,Washington County,1975,80,Non-Urbanized,205535
+163,Washington County,1980,1,Single Family Residential,22344
+163,Washington County,1980,2,Multifamily Residential,493
+163,Washington County,1980,3,Commercial,1270
+163,Washington County,1980,4,Industrial,3550
+163,Washington County,1980,5,Public Semi-Public,2122
+163,Washington County,1980,7,Parks & Recreation Areas,10104
+163,Washington County,1980,9,Major Four Lane Highways,1743
+163,Washington County,1980,10,Open Water Bodies,23602
+163,Washington County,1980,11,Farmsteads,2168
+163,Washington County,1980,80,Non-Urbanized,202583
+163,Washington County,1984,1,Single Family Residential,23648
+163,Washington County,1984,2,Multifamily Residential,721
+163,Washington County,1984,3,Commercial,1349
+163,Washington County,1984,4,Industrial,3651
+163,Washington County,1984,5,Public Semi-Public,2135
+163,Washington County,1984,7,Parks & Recreation Areas,10167
+163,Washington County,1984,9,Major Four Lane Highways,1797
+163,Washington County,1984,10,Open Water Bodies,23602
+163,Washington County,1984,11,Farmsteads,2212
+163,Washington County,1984,80,Non-Urbanized,200697
+163,Washington County,1990,1,Single Family Residential,28215.2
+163,Washington County,1990,2,Multifamily Residential,1108.6
+163,Washington County,1990,3,Commercial,1680.6
+163,Washington County,1990,4,Industrial,3416.1
+163,Washington County,1990,5,Public Semi-Public,2357.4
+163,Washington County,1990,6,Airports,907
+163,Washington County,1990,7,Parks & Recreation Areas,11215
+163,Washington County,1990,8,Vacant/Agricultural,193332.2
+163,Washington County,1990,9,Major Four Lane Highways,2112.2
+163,Washington County,1990,10,Open Water Bodies,23328.2
+163,Washington County,1990,11,Farmsteads,2230.3
+163,Washington County,1990,41,Industrial Parks not Developed,128.4
+163,Washington County,1990,51,Public & Semi-Public Vacant,538.9
+163,Washington County,1997,1,Single Family Residential,36582.2
+163,Washington County,1997,2,Multifamily Residential,1722.2
+163,Washington County,1997,3,Commercial,2669.5
+163,Washington County,1997,4,Industrial,2286.6
+163,Washington County,1997,5,Public Semi-Public,2996.1
+163,Washington County,1997,6,Airports,993.9
+163,Washington County,1997,7,Parks & Recreation Areas,16831.3
+163,Washington County,1997,8,Vacant/Agricultural,175746.7
+163,Washington County,1997,9,Major Four Lane Highways,2085.2
+163,Washington County,1997,10,Open Water Bodies,23648.5
+163,Washington County,1997,11,Farmsteads,2444.6
+163,Washington County,1997,12,Extractive (1997 only),1702.7
+163,Washington County,1997,41,Industrial Parks not Developed,524.8
+163,Washington County,1997,51,Public & Semi-Public Vacant,517.6
+163,Washington County,1997,54,Public Industrial  (1997 only),10.6
+163,Washington County,2000,100,Agriculture,72960.3
+163,Washington County,2000,111,Farmstead,2352
+163,Washington County,2000,112,Seasonal/Vacation,280.5
+163,Washington County,2000,113,Single Family Detached,40019.4
+163,Washington County,2000,114,Single Family Attached,1637.4
+163,Washington County,2000,115,Multifamily,784
+163,Washington County,2000,116,Manufactured Housing Park,298.7
+163,Washington County,2000,120,Retail and Other Commercial,2775.3
+163,Washington County,2000,130,Office,208.9
+163,Washington County,2000,141,Mixed Use Residential,4.6
+163,Washington County,2000,142,Mixed Use Industrial,19.6
+163,Washington County,2000,143,Mixed Use Commercial and Other,6.7
+163,Washington County,2000,151,Industrial and Utility,2399.5
+163,Washington County,2000,153,Extractive,1537.9
+163,Washington County,2000,160,Institutional,3379.1
+163,Washington County,2000,170,"Park, Recreational or Preserve",16998.1
+163,Washington County,2000,173,Golf Course,3295.9
+163,Washington County,2000,201,Major Highway,2466.2
+163,Washington County,2000,202,Railway,255
+163,Washington County,2000,203,Airport,317.1
+163,Washington County,2000,210,Undeveloped Land,93023.8
+163,Washington County,2000,220,Open Water,25494
+163,Washington County,2005,100,Agriculture,68708.9
+163,Washington County,2005,111,Farmstead,2054.7
+163,Washington County,2005,112,Seasonal/Vacation,252.3
+163,Washington County,2005,113,Single Family Detached,44297.4
+163,Washington County,2005,114,Single Family Attached,2369.3
+163,Washington County,2005,115,Multifamily,723.6
+163,Washington County,2005,116,Manufactured Housing Park,303.2
+163,Washington County,2005,120,Retail and Other Commercial,2993.3
+163,Washington County,2005,130,Office,347.3
+163,Washington County,2005,141,Mixed Use Residential,41.9
+163,Washington County,2005,142,Mixed Use Industrial,36.7
+163,Washington County,2005,143,Mixed Use Commercial and Other,8.1
+163,Washington County,2005,151,Industrial and Utility,2659.5
+163,Washington County,2005,153,Extractive,1683.7
+163,Washington County,2005,160,Institutional,3597.5
+163,Washington County,2005,170,"Park, Recreational or Preserve",19257.1
+163,Washington County,2005,173,Golf Course,3473.4
+163,Washington County,2005,201,Major Highway,2850.6
+163,Washington County,2005,202,Railway,246.7
+163,Washington County,2005,203,Airport,314.7
+163,Washington County,2005,210,Undeveloped Land,88692.8
+163,Washington County,2005,220,Open Water,25842.8
+163,Washington County,2010,100,Agriculture,66054.1
+163,Washington County,2010,111,Farmstead,1812.9
+163,Washington County,2010,112,Seasonal/Vacation,278.3
+163,Washington County,2010,113,Single Family Detached,46894.4
+163,Washington County,2010,114,Single Family Attached,2867.1
+163,Washington County,2010,115,Multifamily,754.5
+163,Washington County,2010,116,Manufactured Housing Park,271.9
+163,Washington County,2010,120,Retail and Other Commercial,3231
+163,Washington County,2010,130,Office,470
+163,Washington County,2010,141,Mixed Use Residential,69.1
+163,Washington County,2010,142,Mixed Use Industrial,164.7
+163,Washington County,2010,143,Mixed Use Commercial and Other,15.4
+163,Washington County,2010,151,Industrial and Utility,2732.2
+163,Washington County,2010,153,Extractive,1612.4
+163,Washington County,2010,160,Institutional,3867
+163,Washington County,2010,170,"Park, Recreational or Preserve",22667.9
+163,Washington County,2010,173,Golf Course,3538.1
+163,Washington County,2010,201,Major Highway,2861
+163,Washington County,2010,202,Railway,253.2
+163,Washington County,2010,203,Airport,327.4
+163,Washington County,2010,210,Undeveloped Land,84239.6
+163,Washington County,2010,220,Open Water,25778.1

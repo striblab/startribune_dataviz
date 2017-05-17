@@ -1,48 +1,278 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
+body {
+    margin: 10px !important;
+}
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+button:focus {
+    outline: 0 !important;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+svg {
+    height: 500 !important;
+    width: 960 !important;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+#wrapper {
+    margin: 15px;
+    position: relative;
+    width: 97%;
+}
 
-    .chatter { padding:20px; }  
+#legend_label {
+    font-weight: 900;
+}
 
-    p { font-family:$bentonSans; }  
+#infobox {
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 2px;
+    height: 70px;
+    padding: 15px;
+    width: 97%;
+}
 
-    #info { display:none; }
+.county_name {
+    font-family: "Popular";
+    font-size: 16px;
+    font-weight: 900;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+.prevalence {
+    font-family: Arial;
+    font-size: 28px;
+    font-weight: 900;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+hr {
+    background: #999;
+    border: 0;
+    border-bottom: 1px dashed #aaa;
+    clear: both;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+#infobox h4 {
+    font-weight: 900;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1.83em;
+}
+
+.arrow {
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    border-top: 5px solid transparent;
+    float: left;
+    height: 0;
+    margin-right: 2px;
+    width: 0;
+}
+
+#chart1 svg {
+    height: 330px !important;
+}
+
+.zoom {
+    float: none;
+    text-align: center;
+}
+
+#chart1 {
+    width: 65%;
+}
+
+#map {
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.chatter {
+    padding: 10px;
+}
+
+.nvtooltip {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial;
+    font-size: 16px;
+    khtml-user-select: none;
+    moz-border-radius: 5px;
+    moz-transition: opacity 200ms linear;
+    moz-transition-delay: 200ms;
+    moz-user-select: none;
+    ms-user-select: none;
+    padding: 10px;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 200ms linear;
+    transition-delay: 200ms;
+    user-select: none;
+    webkit-touch-callout: none;
+    webkit-transition: opacity 200ms linear;
+    webkit-transition-delay: 200ms;
+    webkit-user-select: none;
+    width: auto;
+    z-index: 10000;
+}
+
+.nvtooltip h3 {
+    background: white !important;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.nvtooltip p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nvtooltip span {
+    display: inline-block;
+    margin: 2px 0;
+}
+
+.nvtooltip-pending-removal {
+    pointer-events: none;
+    position: absolute;
+}
+
+.myButton:hover {
+    background-color: #378f00 !important;
+}
+
+path:hover {
+    cursor: pointer;
+    fill: #378f00 !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Popular";
+}
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+#states {
+    fill: #aaa;
+}
+
+#state-borders {
+    fill: none;
+    pointer-events: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+}
+
+.tooltip {
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid black;
+    border-radius: 0;
+    font-family: Arial;
+    font-size: 12px;
+    moz-border-radius: 10px;
+    padding: 10px;
+    webkit-border-radius: 10px;
+    width: 150px;
+    height: auto !important;
+}
+
+#states .active {
+    fill: #333 !important;
+    fill-opacity: 1 !important;
+}
+
+.faded {
+    fill-opacity: 0.5 !important;
+}
+
+#states .active:hover {
+    fill: #333 !important;
+}
+
+#timeline {
+    font-weight: 900;
+}
+
+.selected {
+    color: black !important;
+    font-weight: 900;
+    text-decoration: none !important;
+}
+
+.legend label,
+.legend span {
+    color: #808080;
+    display: block;
+    float: left;
+    font-size: 11px;
+    height: 15px;
+    text-align: center;
+    width: 30px;
+}
+
+#chart1 {
+    float: left;
+}
+
+#sidebox2 {
+    float: right;
+    padding: 15px;
+    width: 25%;
+}
+
+#sidebox {
+    display: block;
+    width: 98%;
+}
+
+.myButton {
+    background-color: #888;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 13px 26px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.myButton:active {
+    background-color: #378f00;
+}
+
+@media only screen and (max-width:650px) {
+    #sidebox2 {
+        float: none;
+        padding: 15px;
+        width: 100%;
     }
+    #map {
+        width: 100%;
+    }
+    .zoom {
+        text-align: center !important;
+        float: none !important;
+    }
+}

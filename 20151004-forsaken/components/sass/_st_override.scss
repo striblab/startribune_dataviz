@@ -1,48 +1,257 @@
-    body { margin:0; padding:0; }
-    #map { position:absolute; top:0; bottom:0; width:100%; }
-    .bottom { position:absolute; bottom:0; width:100%; clear:both; }
-    .map-overlay-container { position: absolute; width:400px; top: 0; left: 0; padding: 10px; z-index: 1; }
-    .map-overlay { font: 12px/20px $bentonSans; background-color: #fff; border-radius: 3px; padding: 10px; box-shadow:0 1px 2px rgba(0,0,0,0.20); }
-    .map-overlay h2, .map-overlay p { margin: 0 0 10px; }
-    .mapboxgl-ctrl-attrib { display:none; }
-    .play { background-color:#fff !important; color:#000; }
-    .pause { background-color:#333 !important; color:#fff; }
-    #diverse { color:#299129; }
- 
-    #toggle { margin:0; padding:0; width:80px; height:23px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; margin-left:auto; margin-right:auto; display:block; }
-    #toggle:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .navButtons { display:block; text-align:center; background-color:#fff !important; width:40px; font-size:2em; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; font-weight:900; }
-    .navButtons:hover { background-color:#333 !important; color:#fff; cursor:pointer; }
-    .previous { float:left; }
-    .next { float:right; }
+/* PROJECT STYLES */
 
-    #tracker { padding-top:10px; text-align:center; }
-    .trackDot { border-radius:50%; width:10px; height:10px; display:inline-block; margin:6px; background-color:#ddd; }
-    .trackDot:hover, .current { background-color:#333; cursor:pointer; }
-    .dot { border-radius:50%; width:15px; height:15px; text-align:center; margin-right:auto; margin-left:auto; }
-    .legendContainer { text-align:center; }
+body,
+p {
+    font-family: "Benton Sans";
+    font-size: .9em;
+    margin: 0px;
+    width: 375px;
+}
 
-    #geocoder-container { width:100%; margin-top:10px; }
-    #geocoder-container > div { min-width:100%; margin-left:0; }
-    .chatter span { padding:5px; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Benton Sans";
+    font-weight: bold;
+}
 
-    small { font-family:$bentonSans; color:#808080; clear:both; display:block; }  
+.background {
+    fill: none;
+    pointer-events: all;
+}
 
-    .chatter { padding:20px; }  
+#states {
+    fill: #aaa;
+}
 
-    p { font-family:$bentonSans; }  
+#state-borders {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    pointer-events: none;
+}
 
-    #info { display:none; }
+.tooltip {
+    background-color: rgba(255, 255, 255, 1);
+    height: auto;
+    width: auto;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 0;
+    border: 1px solid black;
+    font-size: 13px;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    ;
+}
 
-    .zoom { text-align:center; float:none !important; }
-    .legends { width:247px; height:auto; text-align:center; margin-right:auto; margin-left:auto; display:none; }
-    .bigNum { display:inline-block; width:32%;  }
+#states .active {
+    fill: #333 !important;
+    fill-opacity: 1 !important;
+}
 
-    .mapboxgl-popup { max-width:400px; font: 12px/20px $bentonSans; }
-    .marker-title { font-weight: 700; }
+.faded {
+    fill-opacity: 0.5 !important;
+}
 
-    @media (max-width:500px) {
-      #map { position:static; height:400px; }
-      .map-overlay-container { width:100%; position:static; }
-      .bottom { position:static; width:100%; clear:both; }
+#map {
+    float: left;
+}
+
+#infobox h4 {
+    margin-top: 1.83em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 900;
+}
+
+#infobox {
+    width: 100%;
+    height: auto;
+    float: right;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+.downloadButton {
+    background-color: #61bd1a;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    border-radius: 3px;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Benton Sans";
+    font-size: 13px;
+    padding: 13px;
+    text-decoration: none;
+    font-weight: 900;
+    margin: 5px;
+    width: 200px;
+}
+
+.downloadButton:active {
+    background-color: transparent;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+.county_name {
+    font-size: 20px;
+    font-family: "Benton Sans";
+    font-weight: bold;
+}
+
+.legend {}
+
+.legend label,
+.legend span {
+    display: block;
+    font-family: "Benton Sans";
+    float: left;
+    height: 15px;
+    width: 35px;
+    text-align: center;
+    font-size: 11px;
+    color: #444444;
+}
+
+#quantize p {
+    margin-bottom: 8px;
+}
+
+#quantize {}
+
+.prevalence {
+    float: left;
+    font-weight: bold;
+}
+
+.prevalence a {
+    text-decoration: none;
+    font-weight: bold;
+    color: steelblue;
+}
+
+.num {
+    float: right;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #2ca25f;
+}
+
+.bigNum {
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #2ca25f;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    background: #999;
+    clear: both;
+    margin-top: 5px;
+}
+
+path:hover {
+    /*fill:transparent !important;*/
+    cursor: pointer;
+}
+
+#states .active:hover {
+    fill: #333 !important;
+}
+
+.downloadButton {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: .9em;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 0;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    border-top: 1px solid #ccc;
+    /*background-image: url('img/downloadDoc.svg')*/
+    ;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+}
+
+.downloadButton:hover {
+    background-color: #fff !important;
+    opacity: .5;
+}
+
+.downloadButton:active {
+    background-color: #fff !important;
+}
+
+.breaker {
+    clear: both;
+    padding: 5px 0;
+}
+
+.swatch {
+    color: #111111;
+    font-weight: 900;
+}
+
+.chatter h2 {
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.2em;
+}
+
+.boxRight {
+    width: 160px;
+    float: right;
+    text-align: left;
+}
+
+.boxLeft {
+    width: 180px;
+    float: left;
+    text-align: left;
+}
+
+.zoom {
+    float: none !important;
+}
+
+@media only screen and (max-width:950px) {
+    body {
+        width: 320px;
     }
+    .boxRight {
+        width: 160px;
+        float: right;
+        text-align: left;
+    }
+    .boxLeft {
+        width: 160px;
+        float: left;
+        text-align: left;
+    }
+    #infobox {
+        width: 100% !important;
+        float: none;
+    }
+    #map {
+        float: none;
+        left: -30px;
+        position: relative;
+    }
+}

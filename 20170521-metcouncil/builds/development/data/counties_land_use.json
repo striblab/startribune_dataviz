@@ -1,0 +1,7066 @@
+{"land":[
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1578
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3892
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2536
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12734
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 26276
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 24667
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 214157
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1783
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 4251
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2536
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12734
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 31070
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 29513
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 203626
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 33351
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 760
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2027
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 4542
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 3100
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 26572
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2536
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12734
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 1134
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 198757
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 35317
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 1071
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2124
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 4778
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 3135
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 27094
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2536
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12758
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 1152
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 195548
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 41849.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 1520.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2648.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3301.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 3302.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 2005.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 29079.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 184561.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2686.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12581.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 1198.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 116.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 272.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 43514.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 2092.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2559.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3408.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 2966.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 43.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 33011.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 158719.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2109.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12704.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 1568.4
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 9.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 593.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 307.4
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 67.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 38384.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 1697.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 31.4
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 52431.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 1861.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 1038.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 812.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 3365.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 159.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 6.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 5.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 4512.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 53.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 3609.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 32082.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 2140.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 2967.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 382.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 1679.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 122668
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 15277.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 34429.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 1310.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 89.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 58094.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 2550
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 1023.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 785.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4012.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 210.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 22.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 137.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 12.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 5077.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 83.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 3436.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 36495.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 2803
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 3452.9
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 393.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 708.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 114700.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 15422.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 32359.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 1198.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 94
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 62170.8
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 2879.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 1045.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 789.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4019.4
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 426.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 72.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 148.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 13.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 5428.1
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 131.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 3852.5
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 38333.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 2828
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 3516.3
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 442.2
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 857.7
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 108935.6
+  },
+  {
+    "CO_CODE": 3,
+    "CO_NAME": "Anoka County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 15708.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 301
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 401
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 122
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12660
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 8703
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 8352
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 210144
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 343
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 491
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 225
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12660
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 9277
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 8804
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 208883
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 6096
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 150
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 365
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 539
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 1064
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 8785
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 225
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12660
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3829
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 206970
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 6682
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 176
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 391
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 638
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 1071
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 8832
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 225
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12660
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3828
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 206180
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 8080.5
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 316.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 502.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 965.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 1225
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 9868.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 202572.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 232.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12522
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3922.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 182.4
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 75.9
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 10293.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 422.5
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 610.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 1116.5
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 1424.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 10718.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 198354.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 258.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12646.9
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 4185.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 210.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 111.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 0.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 68.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 138234.4
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 4649.4
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 16.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 11951.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 380.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 194
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 185.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 627.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 65.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 26.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 10.9
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 6.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 1288.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 344
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 1363.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 9811
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1367.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 727.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 25.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 11.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 55221.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 14023.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 136575.9
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 4436.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 24.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 13859.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 666.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 260.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 169.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 909.4
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 84.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 155.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 25
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 23.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 1270.4
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 312
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 1559.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 11322.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1580.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 826.4
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 25.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 23.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 52392.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 13970.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 134701.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 4215.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 12.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 14805.5
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 832.6
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 266.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 179.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 975.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 131.7
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 108.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 32.2
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 28.3
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 1408.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 347.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 1795.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 13153.5
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1447.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 1490.5
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 38.1
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 35.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 50380.8
+  },
+  {
+    "CO_CODE": 19,
+    "CO_NAME": "Carver County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 14091.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1365
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3521
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1736
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 11719
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 20150
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 9492
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 327329
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1713
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 4386
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1876
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 11719
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 24408
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 14034
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 317176
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 22795
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 1543
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2070
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 5012
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 3149
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 11933
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2161
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 11719
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3784
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 311059
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 25100
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 2044
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2318
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 5385
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 3289
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 11971
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2647
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 11719
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3762
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 306990
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 33216.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 3371.9
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 3314.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 6406.8
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 3980
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 332
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 13067.8
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 277558.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3564.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 11738.3
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3880.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 5798.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 8766.9
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 40194.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 4606.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 4664.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 5799.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 6033.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 796.8
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 17550.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 260371
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3980.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 12078.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 4754
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 2031.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 3443.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 8696.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 169.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 195568.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 4615.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 11.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 42597.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 3411.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 2089.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 750.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4455.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 654.3
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 0.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 442.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 8.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 6909.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 2140.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 5453.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 18143
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 3206.3
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 4664.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 289.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 505.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 66432.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 13062
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 190570.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 3949.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 9.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 46088.8
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 5267.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 2185.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 778
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4227.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 1407.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 177.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 559.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 18.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 7675.9
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 2623.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 5749.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 20141.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 3360.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 5327.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 285.9
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 548.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 61385.8
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 12850.9
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 184438.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 3626.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 7.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 47805.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 5864.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 2262.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 788.3
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4534.3
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 1666.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 118.2
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 655.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 28.3
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 8044
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 2593.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 6165.6
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 26618.1
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 3252
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 5385.5
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 344.7
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 552.9
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 57545.4
+  },
+  {
+    "CO_CODE": 37,
+    "CO_NAME": "Dakota County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 12888.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 6457
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 15231
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 6103
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 32070
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 85397
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 42912
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 200014
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 7281
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 16156
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 6201
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 32070
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 90532
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 46852
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 189092
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 87733
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 8797
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 8053
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 17515
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 10877
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 36883
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 6361
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 32070
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2123
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 177928
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 91830
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 9865
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 8741
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 18164
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 10937
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 36982
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 6731
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 32070
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2125
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 170895
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 99504.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 11677.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 10168
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 15920.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 11391.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 3553.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 39828.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 152329.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 7332.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 32601.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2236.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 966.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 417.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 104758.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 14642.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 11979.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 14200.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 11904.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 3710.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 44069.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 136635.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 7997.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 32679.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2234
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 1633
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 764.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 499.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 240.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 52014.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 2837.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 198.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 108431.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 8108.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 7433.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 121.1
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 10680.1
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 2173.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 41.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 1031.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 95.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 13379.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1362.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 11590
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 38784.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 7141.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 9138.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 842.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 3673.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 74390
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 34473.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 49584.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 2167.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 138.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 111620.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 9403.1
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 7582.1
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 99.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 10241.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 2808.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 428.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 1084.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 182
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 13750.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1231.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 12240.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 42357.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 7152.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 9668.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 775.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 3793.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 67038.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 34513.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 47409.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 2010
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 124.4
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 114161.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 10236.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 7489.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 113.7
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 10086.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 3565.1
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 435.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 1161.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 260.2
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 13500.1
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1007.8
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 12606.9
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 44190.3
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 7250
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 9967.5
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 952.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 4079.6
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 62724
+  },
+  {
+    "CO_CODE": 53,
+    "CO_NAME": "Hennepin County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 34600.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 3035
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 7661
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3350
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 9757
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 37522
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 14200
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 33289
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 3413
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 7927
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3350
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 9757
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 39551
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 16499
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 28317
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 38235
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 3017
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 3586
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 8236
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 5950
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 10950
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3350
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 9757
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 34
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 25699
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 38909
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 3315
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 3825
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 8394
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 5952
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 10996
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3369
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 9753
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 34
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 24267
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 40663.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 3855.3
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 4379.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 7908.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 6017.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 647.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 11139.3
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 18281.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3577.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 9760.1
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 32.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 397.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 2053.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 43592.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 7064.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 5516.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 8825.3
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 6608.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 2350.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 13553.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 26042.1
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 3833.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 9829.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 98.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 192
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 2313.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 340.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 561.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 11.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 39259.3
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 3625.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 3361.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 453.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4265.3
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 846.1
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 24.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 1453.1
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 164.3
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 6339.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 5839.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 13279.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1865.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 3641.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 852
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 578.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 11986
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 10268.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 660.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 8.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 15.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 39571
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 3734.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 3339.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 446.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4681.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 1215.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 107.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 1491.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 198
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 5768.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 6041.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 14170.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1941
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 4142.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 864.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 577.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 9523.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 10247.9
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 605.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 8.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 39679.6
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 3961.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 3316.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 441
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 4480.7
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 1362.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 196.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 1591.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 206.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 5620.5
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 20.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 6304.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 14623
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1844.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 4064.8
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 907.2
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 575.1
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 8599.4
+  },
+  {
+    "CO_CODE": 123,
+    "CO_NAME": "Ramsey County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 10261.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 443
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 1292
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1181
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 8536
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 8698
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 8192
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 206012
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 829
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 1553
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1181
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 8536
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 9521
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 12933
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 199801
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 7456
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 123
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 924
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 1860
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 843
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 12249
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1181
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 8536
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3156
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 198994
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 8407
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 181
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 966
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 1977
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 864
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 12288
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1181
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 8536
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3159
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 197763
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 10500.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 260.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1375.8
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 2468.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 1179.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 12565.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 191596.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1201.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 8686.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3238.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 1995.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 127.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 14196.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 389.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1321.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 2029.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 1499.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 15106.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 185203.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1675.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 8700.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 3520.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 1021.8
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 404.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 140.6
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 175
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 110128.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 3595.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 49.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 15888.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 685
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 180.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 153.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 1663.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 11.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 23.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 46.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 2466.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1000.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 1312
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 13940.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1234.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 1851.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 116.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 70176.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 11299.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 105463.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 3237.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 36.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 21078.8
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 1240.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 233.8
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 144.8
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 2151.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 13
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 17.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 78.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 41.2
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 2720.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1027.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 1539.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 16122.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1522
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 2081
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 105.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 65861.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 11291.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 102693.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 2880.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 30
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 22639.6
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 1499.5
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 254
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 139.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 2279.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 56.6
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 45.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 124.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 148.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 2842.9
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1086.7
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 1820.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 18195.4
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 1551.3
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 2257.6
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 105.1
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 22
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 63989.8
+  },
+  {
+    "CO_CODE": 139,
+    "CO_NAME": "Scott County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 11347
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 947
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 2969
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1722
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 23602
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 19850
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 10951
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 209938
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1068
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3369
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1722
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 23602
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 22479
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 12204
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 205535
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 22344
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 493
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1270
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3550
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 2122
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 10104
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1743
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 23602
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2168
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 202583
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 23648
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 721
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1349
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3651
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 2135
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 10167
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 1797
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 23602
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2212
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 200697
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 28215.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 1108.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 1680.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 3416.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 2357.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 907
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 11215
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 193332.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2112.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 23328.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2230.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 128.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 538.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 36582.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 1722.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 2669.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 2286.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 2996.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 993.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 16831.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 175746.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 2085.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 23648.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 2444.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 1702.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 524.8
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 517.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 10.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 72960.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 2352
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 280.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 40019.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 1637.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 784
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 298.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 2775.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 208.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 4.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 19.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 6.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 2399.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1537.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 3379.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 16998.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 3295.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 2466.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 255
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 317.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 93023.8
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 25494
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 68708.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 2054.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 252.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 44297.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 2369.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 723.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 303.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 2993.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 347.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 41.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 36.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 8.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 2659.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1683.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 3597.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 19257.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 3473.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 2850.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 246.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 314.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 88692.8
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 25842.8
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 66054.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 1812.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 278.3
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 46894.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 2867.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 754.5
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 271.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 3231
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 470
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 69.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 164.7
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 15.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 2732.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 1612.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 3867
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 22667.9
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 3538.1
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 2861
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 253.2
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 327.4
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 84239.6
+  },
+  {
+    "CO_CODE": 163,
+    "CO_NAME": "Washington County",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 25778.1
+  }
+]}
