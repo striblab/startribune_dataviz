@@ -1,0 +1,1026 @@
+{"land":[
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 14126
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 34967
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 16750
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 111078
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 206596
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 118766
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1970,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 1400883
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 16430
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 38133
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 17091
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 111078
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 21,
+    "LAND_USE_DESCRIPTION": "Residential",
+    "ACRES": 226838
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 57,
+    "LAND_USE_DESCRIPTION": "Institutional and Recreation",
+    "ACRES": 140839
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1975,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 1352430
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 218010
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 14883
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 18295
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 41254
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 27105
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 117476
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 17557
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 111078
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 16228
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1980,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 1321990
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 229893
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 17373
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 19714
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 42987
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 27383
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 118330
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 18486
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 111098
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 16272
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1984,
+    "LAND_USE": 80,
+    "LAND_USE_DESCRIPTION": "Non-Urbanized",
+    "ACRES": 1302340
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 262030
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 22111
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 24070
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 40388
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 29454
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 7446
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 126765
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 1220233
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 20708
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 111217
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 16739
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 9586
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1990,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 12253
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 1,
+    "LAND_USE_DESCRIPTION": "Single Family Residential",
+    "ACRES": 293132
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 2,
+    "LAND_USE_DESCRIPTION": "Multifamily Residential",
+    "ACRES": 30940
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 3,
+    "LAND_USE_DESCRIPTION": "Commercial",
+    "ACRES": 29322
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 4,
+    "LAND_USE_DESCRIPTION": "Industrial",
+    "ACRES": 37667
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 5,
+    "LAND_USE_DESCRIPTION": "Public Semi-Public",
+    "ACRES": 33434
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 6,
+    "LAND_USE_DESCRIPTION": "Airports",
+    "ACRES": 7896
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 7,
+    "LAND_USE_DESCRIPTION": "Parks & Recreation Areas",
+    "ACRES": 150841
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 8,
+    "LAND_USE_DESCRIPTION": "Vacant/Agricultural",
+    "ACRES": 1141072
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 9,
+    "LAND_USE_DESCRIPTION": "Major Four Lane Highways",
+    "ACRES": 21940
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 10,
+    "LAND_USE_DESCRIPTION": "Open Water Bodies",
+    "ACRES": 112289
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 11,
+    "LAND_USE_DESCRIPTION": "Farmsteads",
+    "ACRES": 18806
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 12,
+    "LAND_USE_DESCRIPTION": "Extractive (1997 only)",
+    "ACRES": 6609
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 41,
+    "LAND_USE_DESCRIPTION": "Industrial Parks not Developed",
+    "ACRES": 6033
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 51,
+    "LAND_USE_DESCRIPTION": "Public & Semi-Public Vacant",
+    "ACRES": 12475
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 1997,
+    "LAND_USE": 54,
+    "LAND_USE_DESCRIPTION": "Public Industrial  (1997 only)",
+    "ACRES": 1072
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 607851
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 19758
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 589
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 310580
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 19710
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 15081
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 2776
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 27832
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 4108
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 116
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 2980
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 333
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 37295
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 6439
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 32548
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 143039
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 20251
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 25458
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 2762
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 6766
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 493898
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2000,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 123898
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 585994
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 17165
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 566
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 334611
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 25232
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 15349
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 2727
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 29217
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 6087
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 951
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 3413
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 484
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 38923
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 6962
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 34164
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 159867
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 21833
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 28349
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 2697
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 5967
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 459595
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2005,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 124139
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 100,
+    "LAND_USE_DESCRIPTION": "Agriculture",
+    "ACRES": 568262
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 111,
+    "LAND_USE_DESCRIPTION": "Farmstead",
+    "ACRES": 15743
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 112,
+    "LAND_USE_DESCRIPTION": "Seasonal/Vacation",
+    "ACRES": 556
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 113,
+    "LAND_USE_DESCRIPTION": "Single Family Detached",
+    "ACRES": 348157
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 114,
+    "LAND_USE_DESCRIPTION": "Single Family Attached",
+    "ACRES": 28142
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 115,
+    "LAND_USE_DESCRIPTION": "Multifamily",
+    "ACRES": 15388
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 116,
+    "LAND_USE_DESCRIPTION": "Manufactured Housing Park",
+    "ACRES": 2723
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 120,
+    "LAND_USE_DESCRIPTION": "Retail and Other Commercial",
+    "ACRES": 29607
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 130,
+    "LAND_USE_DESCRIPTION": "Office",
+    "ACRES": 7679
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 141,
+    "LAND_USE_DESCRIPTION": "Mixed Use Residential",
+    "ACRES": 1046
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 142,
+    "LAND_USE_DESCRIPTION": "Mixed Use Industrial",
+    "ACRES": 3879
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 143,
+    "LAND_USE_DESCRIPTION": "Mixed Use Commercial and Other",
+    "ACRES": 700
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 151,
+    "LAND_USE_DESCRIPTION": "Industrial and Utility",
+    "ACRES": 39577
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 153,
+    "LAND_USE_DESCRIPTION": "Extractive",
+    "ACRES": 6801
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 160,
+    "LAND_USE_DESCRIPTION": "Institutional",
+    "ACRES": 36412
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 170,
+    "LAND_USE_DESCRIPTION": "Park, Recreational or Preserve",
+    "ACRES": 177782
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 173,
+    "LAND_USE_DESCRIPTION": "Golf Course",
+    "ACRES": 21712
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 201,
+    "LAND_USE_DESCRIPTION": "Major Highway",
+    "ACRES": 29543
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 202,
+    "LAND_USE_DESCRIPTION": "Railway",
+    "ACRES": 3043
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 203,
+    "LAND_USE_DESCRIPTION": "Airport",
+    "ACRES": 6451
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 210,
+    "LAND_USE_DESCRIPTION": "Undeveloped Land",
+    "ACRES": 436415
+  },
+  {
+    "REGION_ID": "R11000",
+    "REGION_NAME": "Twin Cities Region (7-county)",
+    "YEAR": 2010,
+    "LAND_USE": 220,
+    "LAND_USE_DESCRIPTION": "Open Water",
+    "ACRES": 124676
+  }
+]}

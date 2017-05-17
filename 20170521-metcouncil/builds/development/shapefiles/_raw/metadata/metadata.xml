@@ -1,0 +1,479 @@
+<?xml version="1.0"?><metadata><idinfo><citation><citeinfo><origin>Metropolitan Council</origin><pubdate>periodically revised</pubdate><title>Generalized Land Use Historical (1984, 1990, 1997, 2000, 2005, 2010)</title><mgmg1cid></mgmg1cid><pubinfo><publish>Metropolitan Council</publish></pubinfo><onlink>https://gisdata.mn.gov/dataset/us-mn-state-metc-plan-generl-lnduse-historical</onlink></citeinfo></citation><descript><abstract>The Historical Generalized Land Use dataset encompasses the seven county Twin Cities (Minneapolis and St. Paul) Metropolitan Area in Minnesota. The dataset was developed by the Metropolitan Council, a regional governmental organization that deals, in part, with regional issues and long range planning for the Twin Cities area. The data were interpreted from 1984, 1990, 1997, 2000, 2005 and 2010 air photos and other source data, with additional assistance from county parcel data and assessor's information. 
+
+The Metropolitan Council has routinely developed generalized land use for the Twin Cities region since 1984 to support its statutory responsibilities and assist in long range planning for the Twin Cities area. The Council uses land use information to monitor growth and to evaluate changing trends in land consumption for various urban purposes. The Council uses the land use trend data in combination with its forecasts of households and jobs to plan for the future needs and financing of Metropolitan services (i.e. Transit, Wastewater Services, etc.). Also, in concert with individual local units of government, the land use and forecast data are used to evaluate expansions of the metropolitan urban service area (MUSA). 
+
+The Council does not specifically survey the rights-of-way of minor highways, local streets, parking lots, railroads, or other utility easements. The area occupied by these uses is included with the adjacent land uses, whose boundaries are extended to the centerline of the adjacent rights-of way or easements. The accuracy of Council land use survey data is suitable for regional planning purposes, but should not be used for detailed area planning, nor for engineering work. 
+
+Until 1997, the Metropolitan Council had manually interpreted aerial photos on mylar tracing paper into a 13-category land-use classification system to aggregate and depict changing land use data. In 1997, with technological advances in GIS and improved data, the Metropolitan Council was able to delineate land uses from digital aerial photography with counties' parcel and assessor data and captured information with straight 'heads-up' digitizing with GIS software. Also, understanding that land use data collected and maintained at the county and city level are collected at different resolutions using different classification schemes, the Metropolitan Council worked with local communities and organizations to develop a cooperative solution to integrate the Council's land use interpretation with a generally agreed upon regional classification system. By 2000, the Metropolitan Council had not only expanded their Generalized Land Use Classification system to include 22 categories, but had refined how they categorized land (removing all ownership categories) to reflect actual use. See the Entities and Atributes section of the metadata for a detailed description of each of the land use categories and available subcategories. 
+
+With the completion of the 2010 Generalized Land Use dataset, regional and local planners have the ability to map changes in urban growth and development in a geographic information system (GIS) database. By tracking land use changes, the Metropolitan Council and local planners can better visualize development trends and anticipate future growth needs. 
+
+
+NOTE ABOUT COMPARATIVE ANALYSIS: 
+
+It is important to understand the changes between land use inventory years and how to compare recent land use data to historical data. 
+
+In general, over the land use years, more detailed land use information has been captured. Understanding these changes can help interpret land use changes and trends in land consumption. For detailed category definitions, specific land use comparisons and how best to compare the land uses between 1984 and 2010, please refer to the Attribute Accuracy or the Data Quality section of the metadata. 
+
+It is also important to note that changes in data collection methodology also effects the ability to compare land use years: 
+
+- In 2000, the land use categories were modified to more accurately reflect the use of the land rather than ownership. Although this has minimal effect on associating categories between 1997 and 2000, is may have had an affect on some particular land use. For example, land owned by a community or county but had no apparent active use could have been classified as 'Public/ Semi-Public' prior to 2000. In 2000, land with no apparent use, regardless of who owns it, is classified as 'Undeveloped.' 
+
+- With better resolution of air photos beginning in 2000, the incorporation of property information from county assessors and the use of more accurate political boundaries (particularly on the exterior boundaries of the region), positive impacts were made on the accuracy of new land use delineations between pre-2000 land use data and data collected in 2000, 2005 and 2010. With the improved data, beginning in 2000, a greater effort to align land use designations, both new and old, to correspond with property boundaries (county parcels) where appropriate. In addition, individual properties were reviewed to assess the extent of development. In most cases, if properties under 5 acres were assessed to be at least 75% developed, then the entire property was classified as a developed land use (not 'Undeveloped'). As a result of these realignments and development assessments, changes in land use between early land use years (1984-1997) and more recent years (2000-2010) will exist in the data that do NOT necessarily represent actual land use change. These occurrences can be found throughout the region. 
+
+There are also numerous known deficiencies in the datasets. Some known deficiencies are specific to a particular year while others may span the entire time series. For more details, please refer to Attribute Accuracy of the Data Quality section of the metadata.</abstract><purpose>To aid in forecasting region-wide land supply and demand and to be used as a general regional planning tool. This data does not indicate developability of land, but does show the location of 'Vacant and Agricultural' land (1984, 1990 &amp; 1997) or 'Undeveloped' land (2000, 2005 and 2010) based on the definitions described in Section 5 of this metadata.</purpose><supplinf>Twin Cities 7 County Metropolitan Area.  This includes the counties of Anoka, Carver, Dakota, Hennepin, Ramsey, Scott and Washington in Minnesota.</supplinf></descript><timeperd><timeinfo><sngdate><caldate>20100420</caldate></sngdate></timeinfo><current>Ground conditition dates for the data are as follows:
+
+2010: Aerial photography was taken  April 7 - 18, 2010. County parcel and assessors data was from varying dates in the spring of 2010 with the exception of Washington County where the date was July 2010. 
+
+2005: Aerial photography was taken  April 8, 13 and 14, 2005. County parcel and assessors data was from varying dates in the spring of 2005. 
+
+2000:   Aerial photography was taken May 1, 2000 (West Half of the metro) and May 2, 2000 (East Half of the metro).   County parcel and assessors data was from varying dates in the spring of 2000.
+
+1997:  Air photos were taken April 13th and 14th, 1997.  Parcel and assessors data was from varying dates in the spring of 1997.
+
+1990:  Aerial photography was taken May 4th &amp; 5th, 1990.
+
+1984:  Aerial photography was taken sometime in spring of 1984.</current></timeperd><status><progress>Complete</progress><update>Approximately every 5 years.</update></status><spdom><bounding><westbc>-94.012</westbc><eastbc>-92.732</eastbc><northbc>45.415</northbc><southbc>44.471</southbc></bounding></spdom><keywords><theme><themekt>None</themekt><themekey>land use, planning and development, land type, single family residential, multifamily residential, office, retail and other commercial, mixed use, industrial and utility, extractive, institutional, park, recreational, preserve, golf course, major highway, railway, airport, agriculture, undeveloped, water, generalized land use</themekey></theme><place><placekey>Twin Cities, Anoka County, Carver County, Dakota County, Hennepin County, Ramsey County, Scott County, Washington County</placekey></place></keywords><accconst>None</accconst><useconst>None</useconst><browse><browsen>ftp://ftp.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_metc/plan_generl_lnduse_historical/metadata/preview.jpg</browsen></browse><native>ArcGIS Version 10x</native><crossref><citeinfo><title>Generalized Land Use 2005 for the Twin Cities Metropolitan Area, Generalized Land Use 2010 for the Twin Cities Metropolitan Area</title></citeinfo></crossref><ptcontac><cntinfo><cntperp><cntorg>Metropolitan Council</cntorg><cntper>Paul E. Hanson</cntper></cntperp><cntpos>GIS Specialist</cntpos><cntaddr><addrtype> mailing and physical address </addrtype><address>390 Robert Street North</address><city>St. Paul</city><state>Minnesota</state><postal>55101-1805</postal></cntaddr><cntvoice>651-602-1718</cntvoice><cntemail>paul.hanson@metc.state.mn.us</cntemail></cntinfo></ptcontac></idinfo><dataqual><attracc><attraccr>GENERAL INFORMATION:
+In general, over the land use years, more detailed land use information has been captured. Understanding these changes and how changes in classifications can effect the attribution accuracy. 
+
+A data collection procedure that has a significant impact on the overall attribution accuracy is the classification of transportation corridors or rights-of-way. The Council does not specifically survey the rights-of-way of minor highways, local streets, parking lots, minor railways, or other utility easements. The area occupied by these uses is included with the adjacent land uses, whose boundaries are extended to the centerline of the adjacent rights-of way or easements. The accuracy of Council land use survey data is suitable for regional planning purposes, but should not be used for detailed area planning, nor for engineering work. 
+
+It is also important to note that changes in data collection methodology also effects the attribution accuracy from year to year: 
+
+- In 2000, the land use categories were modified to more accurately reflect the use of the land rather than ownership. Although this has minimal effect on associating categories between 1997 and 2000, is may have had an affect on some particular land use. For example, land owned by a community or county but had no apparent active use could have been classified as 'Public/ Semi-Public' prior to 2000. In 2000, land with no apparent use, regardless of who owns it, is classified as 'Undeveloped.' 
+
+- With better resolution of air photos beginning in 2000, the incorporation of property information from county assessors and the use of more accurate political boundaries (particularly on the exterior boundaries of the region), positive impacts were made on the accuracy of new land use delineations between pre-2000 land use data and data collected in 2000 and 2005. With the improved data, beginning in 2000, a greater effort to align land use designations, both new and old, to correspond with property boundaries (county parcels) where appropriate. In addition, individual properties were reviewed to assess the extent of development. In most cases, if properties under 5 acres were assessed to be at least 75% developed, then the entire property was classified as a developed land use (not 'Undeveloped'). As a result of these realignments and development assessments, changes in land use between early land use years (1984-1997) and more recent years (2000-2005) will exist in the data that do NOT necessarily represent actual land use change. These occurrences can be found throughout the region. 
+
+COMPARATIVE ANALYSIS BETWEEN LAND USE YEARS: 
+There are numerous changes in the data collection methodolgy and classification over the years, all of which impacts the attribution accuracy. to gain a better understanding of how to compare land use categories between land use years, please refer to www. 
+
+The following general information describes changes between land use inventory years and how to compare 2005 Generalized Land Use data to historical datasets. 
+
+In 1997, two new categories were added: Public Industrial and Extractive. The 'Public Industrial' category was created to extract public utilities, such as wastewater treatment plants, from 'Public/Semi-Public' category, predominantly representing things like schools and churches. The 'Extractive' category was subdivided from the 'Industrial' category to have a better understanding of active sand and gravel mining is occurring in the region - an important natural resources vital for construction. 
+
+In 2000, several changes were implemented: new land use categories were added (i.e., 'Mixed-Use', 'Railway'); some categories were further subdivided (i.e., 'Single-Family Residential', 'Multifamily Residential', and the park and recreation category), and many of the categories were renamed (i.e., 'Major Four Lane Highways' to 'Major Highway') (For more specifics, please refer to the &lt;a href="landuse_notes.pdf" target=_blank&gt;landuse notes&lt;/a&gt; document). In addition, the 'Vacant/Agriculture' category was separated into active ('Agricultural') and non-active ('Undeveloped') farming activities. 'Agricultural' land uses included land activities such as pasture lands, land in cultivation, or other activities that support farming not associated with a residential 'Farmstead' (see definition), while 'Undeveloped' included lands no long in agricultural production, woodlots, river and stream riparian areas (grassy buffers), or other non-classified lands. 'Undeveloped' also includes land in more urban environments with no discernable use and no noticeable buildings. 
+
+It is also important to note that a significant reorganization of how land use is classified was implemented starting in 2000. This reorganization impacted the land use categories. Previous to 2000, several land use categories more precisely define ownership rather than 'use' (i.e., 'Public Industrial', 'Public Semi-Public', 'Public &amp; Semi-Public Vacant', and even to some extent, 'Airports'). In an effort to more accurately classify land by its 'use' rather than ownership, these categories were discarded and new categories were established ('Airport' being the exception, see below). In most cases, this transition is fairly seamless (i.e., 'Public Industrial' (i.e., Utilities) went to ' 'Industrial and Utility', 'Public &amp; Semi-Public Vacant' went to ' 'Undeveloped', 'Public/Semi-Public' went to ' 'Institutional'). For safety and noise consideration, 'Airport' owned lands include large areas of inactive use. However, in recent years, more and more subsequent activities are being allowed on portions of 'Airport' owned lands that have limited effect on general 'Airport' activities and are subject to limited safety threats (i.e., recreational facilities including baseball, tennis, and golf). Previous to 2005, most, if not all land owned by the airport, was classified as 'Airport.' In an effort to classify land based on activity and not ownership (or even rights to land), these subsequent activities become the predominant activity of the land and therefore dictate a more appropriate land use designations (i.e., 'Parks, Recreation, or Preserve'). This translates into an apparent loss in airport land that in fact is NOT true. Although changes in land use from 'Airport' to some other active land use may represent an actual land use change, changes from 'Airport' to 'Undeveloped' typically do not. 
+
+New categories in the 2000 Generalized Land Use are 'Mixed Use', 'Railway', and to a lesser extent, 'Undeveloped' and 'Agricultural' (see above). In addition, there are many new sub-categories in the 2000 Generalized Land Use data set that are rolled into a generalized category for use on the web. The sub-categories are as follows (with the corresponding generalized category in parenthesis): 'Seasonal/Vacation' ('Single Family Residential'), 'Single Family, Detached' ('Single Family Residential'), 'Manufactured Housing Park' ('Single Family Residential'), 'Single Family, Attached' ('Multifamily Residential'), 'Office' ('Retail and Other Commercial'), 'Mixed Use Residential' ('Mixed Use'), 'Mixed Use Industrial' ('Mixed Use'), 'Mixed Use Commercial' ('Mixed Use'), and 'Golf Course' ('Parks, Recreation, and Preserves'). 
+
+SPECIFIC CATEGORY COMPARISONS: 
+Undeveloped and Agricultural --- Previously combined in one category, these two categories were delineated into their own categories. NOTE: It is not possible to discern all agricultural lands based on the available data (aerial photography and county assessors' data) and community input. Some agricultural land may still be placed in the 'Undeveloped' category. To compare previous years, 2005 'Undeveloped' and 'Agricultural' categories need to be combined, as well as, the 1990, 1997 and 2000 categories, 'Industrial Not Developed' and 'Public/Semi-Public Not Developed', need to be combined with the Vacant category. 
+
+Mixed Use --- Mixed Use consists of land containing a building with mixed uses that includes the following: 'Mixed Use Residential', 'Mixed Use Commercial', and 'Mixed Use Industrial.' During the interpretation process, this category was collected using the three sub-categories based on available data (aerial photography and county assessors' data) and community input. For mapping purposes, we have combined these categories into one generalized category. To compare to previous years, the sub-categories would be needed ('Mixed Use Residential' combine with 'Multifamily', 'Mixed Use Commercial' combine with 'Commercial', and 'Mixed Use Industrial' combine with 'Industrial'). 
+
+Multifamily, Commercial, and Industrial --- There are discrepancies from previous years when comparing 'Multifamily', 'Commercial', and 'Industrial and Utility' categories in the 2005 and 2000 data. The Mixed Use category is comprised of 'Mixed Use Residential', 'Mixed Use Industrial', and 'Mixed Use Commercial' (see above) that would have historically been classified in the 'Multifamily', 'Commercial', and 'Industrial' categories, respectfully. The tables on the web do not show a comparison in these areas. 
+
+Railway --- 'Major Railway' was collected as a separate category in the 2000 Generalized Land Use data. Previously in 1990 and 1997, this land was put in the 'Industrial' category. To compare historically, 'Major Railway' should be included with the 'Industrial and Utility' category for 2000 data. 
+
+The 1997 Public Industrial category is not a separate category in the 1990, 2000 or 2005 data. To compare historically, 'Public Industrial' should be included with the 'Industrial' category for 1997 data. 
+
+Water --- During the interpretation process for the 2000 Generalized Land Use, the guideline for the delineated open water area was changed to 3 acres or greater (approximately). This was maintained in 2005. Historically, the area of open water was delineated at approximately 5 acres or greater. There is no way to compare this change to previous years; therefore, there will be a noticeable increase from the total water acreage found in 2000 versus 1997 and earlier. 
+
+Parks, Recreation, and Preserves --- During the interpretation process for the 2000 Generalized Land Use, this category was broadened to include recreational passive activities or land use areas, such as park preserves, wildlife refuges, habitat areas, public plazas, river walks, DNR or US Fish and Wildlife owned land, and greenways. This category also includes a small number of 'non-developable' areas based on Planned Unit Developments (PUD). Areas designated as PUD represent open areas within or adjacent to urban development (i.e. housing) which together fulfill or meet overall density guidelines for such urban developments as outlined by the city. There is no way to compare this change to previous years. The change in this category will be most noticeable in the 'Undeveloped' category (or 1990's and 1997's 'Vacant/Agriculture' category), since historically these areas would have been classified as 'Vacant/Agriculture.' 
+
+KNOWN DEFICIENCIES: 
+No documentation exists related to the process used for the 1984 land use interpretation. Many problems have been found in the 1984 data and many more are likely to exist. The 1984 data can be used for regional analysis, and possibly for general numbers for a community. THE 1984 LAND USE DATA IS UNRELIABLE FOR DETERMINING WHAT THE LAND USE WAS FOR ANY GIVEN LOCATION IN 1984. 
+
+Known deficiencies in all datasets include: 
+- The only delineated roads are those with at lease 4 lanes, controlled access and a 200 ft. right-of-way (and beginning in 1997, all 4-lane roads with a Metropolitan Council functional class designation of 'Principal Arterial'). All other roads are incorporated into the adjacent land use category. 
+- Horticultural specialty land uses (the growing of nursery stock, flowers, seeds, sod, and food crops grown indoors) are included in the 'Industrial' category where they could be delineated (e.g. large greenhouses). However, most of these facilities that are outdoors are included in the 'Vacant/Agriculture' lands class in 1990 and 1997, 'Agricultural' in 2000. In 2005, this category was further refined. See Known deficiencies in the 2005 dataset below. 
+- The interpretation of the 'Public &amp; Semi-Public' ('Institutional' in 2000, 2005 and 2010) and 'Parks &amp; Recreation' ('Park, Recreation, or Preserve' in 2000, 2005 and 2010)) classes can be fuzzy. For example, ball fields adjacent to a school are classed as 'Public/Semi-Public' ('Institutional'), while ball fields in other areas are classified as 'Park &amp; Recreation' if they are not owned by a school district. 
+- The interpretation of a discernable shoreline for a body of open water or flowing waterway may vary. In many cases, the shoreline was taken to the treeline. 
+
+Known deficiencies in the 1990 dataset include: 
+- Gravel pits are classified as 'Industrial.' 
+- Publicly owned lands that have been left in a natural state but have not been dedicated as parks have been classified as 'Vacant/Agriculture' lands. Additionally, some publicly-owned dedicated park lands may have also been classified as 'Vacant/Agriculture' lands. 
+- Distinguishing between 'Single-Family' and 'Multifamily' residential land uses were generally very difficult to delineate from photography alone. General areas of 'Multifamily' residential land use are designated. 
+
+Known deficiencies in the 1997 dataset include: 
+- The only delineated railroads are those with at least 2 tracks side-by-side and they are classified as 'Industrial.' All single track railroads are incorporated into the adjacent land use category. However, in some instances, a single track railroad may have been included in 'Industrial' or classified as 'Vacant/Agriculture.' 
+- Although the inclusion of county assessor's attribution help more precisely delineate between 'Single-Family' and 'Multifamily' residential land use, the distinction between the two is somewhat blurred in lower density multifamily residential and single-family, attached housing. 
+
+Known deficiencies in the 2000, 2005 &amp; 2010 datasets include: 
+- The only delineated railroads are those with at least 2 tracks side-by-side and they are classified as Major Railway.' All single track railroads are incorporated into the adjacent land use category. However, in some instances, a single track railroad may have been included in 'Major Railway' or classified as 'Undeveloped' 
+- In general, horticultural activities are classified as 'Agricultural.' Exceptions include commercial nurseries that have portions open for retail sales - these portions should be coded as 'Retail and Other Commercial,' and nurseries with large greenhouse facilities (buildings) that indicate larger traffic volumes (e.g. paved surfaces, etc) and/or intricate irrigation and fertilization systems - these areas should be coded as 'Industrial.' 
+- Although additional 'Single-Family' residential definitions and more precisely articulated definitions were incorporated into the 2000 dataset, some discrepancies remain between attached housing and low-density multifamily residential. 
+- Although most 'Office' land use was extracted from 'Retail and Other Commercial' lands, some 'Public/ Semi-Public' or 'Institutional' land uses are included in the 'Office' category. Public buildings such as the State Capital or the Washington County Government Center include 'Office' use, there are owned by the government and therefore are classified as 'Institutional.' Buildings, leased by governments from private entities for office purposes are to be classified as 'Office.' 
+- Country clubs having a 'Golf Course' are included in 'Golf Course' even though not all land use is for golfing. 
+- Mixed Use buildings or land with any combination including a residence is classified as 'Mixed Use Residential.' Any mixed use consisting of an industrial use but no residential use is classified as 'Mixed Use Industrial.' Any mixed use not including a residence or industrial use is classified as 'Mixed Use Commercial and Other.' 
+- In 2000, Funeral Homes were classified as 'Institutional.' Before 2000 and in 2005 &amp; 2010, are classified as 'Commercial.' 
+- Group homes (dormitories, nursing homes, orphanages, prisons, workhouses, etc) general are included in 'Institutional.'</attraccr></attracc><logic>The dataset is topologically 'clean'.</logic><complete>Entire seven county geographic area is covered.  Incompleteness in attribute information is discussed under 'Attribute Accuracy' above.</complete><posacc><horizpa><horizpar>Estimating the horizontal positional accuracy of this layer is somewhat complicated due to a number of factors.  For this reason, a general description of the accuracy of each year and some of the comtrinuting factors seems instructive.
+
+1984 LAND USE:
+The 1984 data is expected to have the worse positional accuracy. Many problems have been found in the 1984 data and many more are likely to exist.  It is recommended that the 1984 data be used for regional analysis, and possibly for general numbers for a community but IS UNRELIABLE FOR DETERMINING WHAT THE LAND USE WAS FOR ANY SPECIFIC LOCATION IN 1984.
+
+1990 LAND USE:
+The 1990 dataset was developed with the intention of meeting National Mapping Accuracy Standards at 1:24,000 (within approximately 50 feet of actual location).  While in many areas the positional accuracy meets this criteria, positional errors greater than this have been found in many places in the dataset.  A few instances of offsets of as much as 70 meters have been noticed.  
+
+1997 LAND USE:
+Starting in 1997, in urbanized areas county parcel boundaries were used to help delineate land uses. However, the positional accuracy of these data varied greatly between counties datasets as well as the documentation of that accuracy. Furthermore, positional accuracy within the same county statset may vary dramatically across the dataset. 
+
+In rural areas, parcel boundaries were often not used. Rural residential land use boundaries were defined by the mowed lawns or used areas around the dwellings as viewed on the Metropolitan Council digital orthophotos. For this reason a positional accuracy estimate would have to describe the accuracy with which the interpreted boundary of this area was defined as well as whether the interpretation of the boundary was correct or inaccurate (causing a positional error) - a very difficult thing to do.
+
+An additional factor that affects the positional accuracy is the degree to which Metropolitan Council staff matched the land use delineation with the parcel boundaries in heads up digitizing.  The scale at which lines were digitized varied as staff zoomed in and out while heads-up digitizing, however most lines were digitized at an on-screen scale of no smaller than 1:3000.  In highly urbanized areas, 1:1500 was more common. No line snapping was used in the 1997 data collection.
+
+Also worthy to note, water features boundaries were based on digital orthophotos taken in April of 1997 - the height of a major flood on the three major metro rivers. Therefore the water boundaries for the rivers were taken from the 1990 land use in many cases.  Lake boundaries were taken from the orthophotos. We do not have an estimate as to what degree the wet spring influenced any of the lake levels in the metro area. For 2000 (non-flood year), the boundaries of the rivers were taken directly from the aerial photography.
+
+2000, 2005 and 2010 LAND USE: 
+
+With better resolution of air photos beginning in 2000, it is safe to state the positional accuracy in areas delineated by user interpretation is likely better than the accuracy of previous years, however, it is still difficult to quantify that accuracy. Improvements in the property information from county assessors (accuracy and documentation) and the use of more accurate political boundaries (particularly on the exterior boundaries of the region), also had positive impacts on the accuracy of new land use delineations. But here again, at best, the positional accuracy similar or unquntifably better than the county parcel data. 
+
+These are some of the basic factors that play a role in the positional accuracy of this layer, undoubtably there are others. The information in the Entity and Attribute Detailed Citation (Section 5 of the metadata) may shed light on some positional issues with respect to this dataset (based on land use classifications). 
+
+As a general rule when developing this dataset after 1997, it was the Metropolitan Council's intention to meet the National Mapping Accuracy Standards at 1:24,000 (within approximately 40 feet of actual location). No testing has been conducted to verify this. 
+These are some of the basic factors that play a role in the positional accuracy of this layer, undoubtably there are others.  The information in the Entity and Attribute Detailed Citation (Section 5 of the metadata) may shed light on some positional issues with respect to this dataset (based on land use classifications).
+
+As a general rule when developing this dataset after 1997, it was the Metropolitan Council's intention to meet the National Mapping Accuracy Standards at 1:24,000 (within approximately 40 feet of actual location).  No testing has been conducted to verify this.</horizpar></horizpa></posacc><lineage><srcinfo><srcscale></srcscale></srcinfo><procstep><procdesc>DATA SOURCES FOR 1984: 
+- manually rectified air photos from approximately 20,000 feet. 
+
+DATA SOURCES FOR 1990: 
+- manually rectified air photos from 19,200 feet. 
+- mylars showing 1980 and 1984 land use delineations (1:9600). 
+- MNDOT's road centerline layer (1:24,000). 
+- reverse directories and field checks 
+
+DATA SOURCES FOR 1997: 
+- 1997 digital orthophoto quarter quads (0.6 meter resolution) 
+- 1990 land use delineations (1:24,000). 
+- The Lawrence Group's road centerline layer (1:24,000). 
+- parcel data from all seven counties - no standardization 
+- reverse directories and field checks 
+- community feedback from preliminary maps sent out to them 
+
+DATA SOURCES FOR 2000: 
+- 2000 digital orthophoto quarter quads (0.6 meter resolution) 
+- 1997 land use delineations 
+- parcel data from all seven counties - standardized fields, not attribution 
+- The Lawrence Group's road centerline layer 
+- reverse directories and field checks 
+- community feedback from preliminary maps sent out to them 
+
+DATA SOURCES FOR 2005: 
+- 2005 digital orthophoto quarter quads (0.6 meter resolution) 
+- 2000 land use delineations 
+- parcel data from all seven counties - standardized fields, not attribution 
+- The Lawrence Group's road centerline layer 
+- reverse directories and field checks 
+- Internet resources 
+- community feedback from preliminary maps sent out to them 
+
+DATA SOURCES FOR 2010: 
+- 2010 digital orthophoto quarter quads (0.6 meter resolution) 
+- 2005 land use delineations 
+- parcel data from all seven counties - standardized fields, not attribution 
+- NCompass Technologies road centerline layer 
+- Internet resources and field checks 
+- community feedback from preliminary maps sent out to them 
+
+
+HISTORY OF THE LAND USE DATA: 
+The Metropolitan Council has conducted analyses of land use for the years 1966, '70, '74/'75, '78, '80, '84, '90 and '97. Each project included analysis of aerial photography as well as field checks and the use of other sources to delineate land use and land use change. 
+
+Land use maps were developed from these data for the years 1966, '75, '84, '90 and '97. In addition, reports on land use change were prepared for the periods of 1960-1975, 1970-1978, 1970-1980, 1980-1990, and 1990-1997. 
+
+
+NO INFORMATION EXISTS DOCUMENTING THE PROCESSING STEPS OF THE 1984 LAND USE LAYER. 
+
+PROCESSING STEPS FOR THE 1990 LAND USE LAYER: 
+Air photos taken from 19,200 feet (1:38,400 negative scale) were rectified by MarkHurd to match the corner tics of the air photo grid used by the Metropolitan Council. These tics are located every 20,000 feet in a grid pattern. Then 36' x 36' mylar overlays at an '800 scale' (1:9600) from the previous land use layers were placed over the 1990 air photos. Colored pencil lines on these mylars showed: existing land use in 1980 (black), change between May 1980 and May 1984 (green), change between 1984 and 1987 for Dakota County only (orange). The entire region was interpreted in 1990 using purple lines to show growth and change in land use between 1984 and 1990. 
+
+During the interpretation of the aerial photography, reverse directories, non-residential building permits and field checks were used when land uses could not be determined from the photos. Also, comments and corrections for the 1984 data from the cities and townships (each of which was given a copy of the 1984 data) were used to update the 1990 layer. 
+
+The original categories used for land use breakdowns were established in 1962 and have been modified only slightly over the years of generating the Twin Cities generalized land use maps (1966, 1975, 1984, and 1990). The classes for the 1990 land use layer are described in the Entity and Attribute Overview section. Included in the class descriptions are various decisions that were made related to delineating each land use class. 
+
+The mylar overlays were then digitized using PC Arc/INFO. Coverages were created for each of the 251 individual photo tiles. The digitized data were projected into state plane coordinates using LMIC's section tic file (from USGS 1:24,000 quads) as a registration source. Finally the photo tiles were edgematched and additional registration corrections were made using the Minnesota Department of Transportation's roadway centerline files (digitized at 1:24,000 after the 1992 construction season). These registration corrections involved aligning to the street centerlines all parcels that were more than 60 feet in error. 
+
+PROCESSING STEPS FOR THE 1997 LAND USE LAYER: 
+The 1997 land use layer was developed on the base of the 1990 land use dataset. The primary tools used for the 1997 land use interpretation were the 1997 digital orthophotos and county parcel data with assessors attributes indicating various land use type information. 
+
+It is important to note that the assessors attributes varied greatly from county to county. In many cases the land type or use categories used by the county for assessment purposes did not match the categories used in this dataset. The assessors attributes were matched as closely as possible to Council land use categories. Additionally the property owner name from the parcel data and entries in reverse directories were also used as aides in the land use interpretation. Where these sources were insufficient to determine the land use category, field checks were performed. 
+
+The land use catgories for the 1997 land use layer altered only slightly from the 1990 categories. For more details on the changes, see Attribution Accuracy in the Data Quality section of the metadata or review the &lt;a href="landuse_notes.pdf" target=_blank&gt;landuse notes&lt;/a&gt; overview document. A full list of land use categories used in the 1997 land use data collection are listed in the Entities and Attribution section. Included in the class descriptions are various decisions that were made related to delineating each land use class. 
+
+The interpretation was conducted on 3.25 minute quadrangles (USGS quarter quads). The editing was done using ArcView 3.1 software. Once completed, the shape files were converted to polygon ArcInfo coverages and then the tiles were combined into one metro wide layer, where small sliver polygons were removed and other miscellaneous editing was done. The 1997 land use layer was then dissolved out of the 1984-90-97 combined layer. 
+
+Once the preliminary 1997 land use dataset was completed, each of the approximately 200 cities and townships within the metro area was sent a map of the preliminary data and asked to provide comments and corrections. 85% of the those cities and townships responded and their comments were used to enhance the accuracy of the 1997 land use data. 
+
+PROCESSING STEPS FOR THE 2000 LAND USE LAYER: 
+The 2000 land use layer was developed on the base of the 1997 land use dataset. The primary tools used for the 2000 land use interpretation were the 2000 digital orthophotos and county parcel data with assessors attributes indicating various land use type information. 
+
+Starting in 2000, the county assessor information was gathered through the efforts of MetroGIS - a coalition of over 250 local governments and organizations that foster sharing of geospatial data in the Twin Cities region. Although, the data fields and field spacifications were standardized, the attribution or population of fields varied greatly from county to county. In many cases the land type or use categories used by the county for assessment purposes did not match the categories used in this dataset. The assessors attributes were matched as closely as possible to Council land use categories. The date of the assessor information closely matched the data of the aerial flight (May 2000). Additionally the property owner name from the parcel data and entries in reverse directories were also used to aid the land use interpretation. In many cases where these sources were insufficient to determine the land use category, field checks were performed. Otherwise, no change was made. 
+
+The land use catgories for the 2000 land use layer altered significantly from the 1997 categories. For more details on the changes, see Attribution Accuracy in the Data Quality section of the metadata or review the &lt;a href="landuse_notes.pdf" target=_blank&gt;landuse notes&lt;/a&gt; document. A full list of land use categories used in the 2000 land use data collection are listed in the Entities and Attribution section. Included in the class descriptions are various decisions that were made related to delineating each land use class. 
+
+The interpretation was conducted on 3.25 minute quadrangles tiles (USGS quarter quads). The editing was done using a Pre-release version of ArcView 8.1 software in personal geodatabase format. Once completed, the geodatabases were converted into polygon ArcInfo coverages and then the tiles were merged into a single metro-wide coverage, where small sliver polygons were removed or classified and other miscellaneous editing was conducted. The 2000 land use layer was then dissolved out of the 1984-90-97-2000 combined layer. 
+
+Once the preliminary 2000 land use dataset was completed, each of the approximately 200 cities and townships within the metro area was sent a map of the preliminary data and asked to provide comments and corrections. Eighty-six percent (86%) of the those cities and townships responded and their comments were used to enhance the accuracy of the 2000 land use data. 
+
+PROCESSING STEPS FOR THE 2005 &amp; 2010 LAND USE LAYERS: 
+The land use layers were developed on the base of the previous land use dataset. Minor errors were discovered in the previous land use data layer that were resolved proir to the start of the new data collection process. The primary tools used for the land use interpretation were the current digital orthophotos and county parcel data with assessors attributes indicating various land use type information. 
+
+The county assessor information used for the land use collection was similar to that used in 2000 The date of the assessor information closely matched the data of the aerial flight (Spring of Update year). Other data collection procedures were the same (see metadata for Generalized Land Use 2005 for the Twin Cities Metropolitan Area or Generalized Land Use 2010 for the Twin Cities Metropolitan Area) 
+
+The land use catgories for the 2005 &amp; 2010 land use layer are the same as those established in 2000. For more details, see Attribution Accuracy in the Data Quality section of the metadata or review the &lt;a href="landuse_notes.pdf" target=_blank&gt;landuse notes&lt;/a&gt; document. A full list of land use categories used in the 2005 &amp; 2010 land use data collection are listed in the Entities and Attribution section. Included in the class descriptions are various decisions that were made related to delineating each land use class. 
+
+The interpretation was conducted on 3.25 minute quadrangles tiles (USGS quarter quads). The editing of the 2005 Land Use Inventory was done using a Pre-release version of ArcView 9.1 software in personal geodatabase format. Once completed, the geodatabases were converted into polygon ArcInfo coverages and then the tiles were merged into a single metro-wide coverage, where small sliver polygons were removed or classified and other miscellaneous editing was conducted. 
+
+The 2010 Land Use Inventory was done using ArcView 9.3 software in file geodatabase format. Once completed, the geodatabases were merged into a single File Geodatabase and topology was used to eliminate gaps and overlaps in the data. 
+
+Once the preliminary 2005 &amp; 2010 land use dataset was completed, each of the approximately 190 cities and townships within the metro area was sent a map of the preliminary data and asked to provide comments and corrections. Eighty-six percent (86%) and seventy (70%) of the those cities and townships responded and their comments were used to enhance the accuracy of the 2005 &amp; 2010 land use data, respectively. 
+
+The 2005 &amp; 2010 land use layer was created using the 'corrected' land use data from the previous inventory but had not included the historical land use information of 1984-90-97. Due to improvements in the accuracy or parcel, community and county boundaries, once the 2010 land use was combined with previous land use inventories, improvements were made to some of the historical land use data to account for previously uninventoried lands around the edge of the seven-county region.</procdesc></procstep></lineage></dataqual><spdoinfo><indspref>None</indspref><direct>Vector</direct><mgmg3obj>polygon shapes</mgmg3obj><mgmg3til>One layer for entire seven county region.</mgmg3til></spdoinfo><eainfo><overview><eaover>Polygon Attributes:
+See Entity and Attribute Detailed Citation below for more information:
+ 
+
+ACRES:      Acres of polygon
+
+  
+LUSE1984, LUSE1990 and LUSE1997: 
+            1984, 1990 and 1997 land use codes (2 digit integer field type)
+                  0 = No Data (for 1984 and 1990 only)
+                  1 = Single Family Residential
+                  2 = Multi-Family Residential
+                  3 = Commercial
+                  4 = Industrial
+                  5 = Public Semi-Public
+                  6 = Airports
+                  7 = Parks &amp; Recreation Areas
+                  8 = Vacant/Agricultural
+                  9 = Major Four Lane Highways
+                 10 = Open Water Bodies
+                 11 = Farmsteads
+                 12 = Extractive (1997 only)
+                 41 = Industrial Parks not Developed
+                 51 = Public &amp; Semi-Public Vacant
+                 54 = Public Industrial  (1997 only)
+ 
+LUSE2000, LUSE2005 and LUSE2010: 
+            2000, 2005 and 2010 land use codes (3 character text field type).
+                100 = Agricultural
+                111 = Farmstead
+                112 = Seasonal/Vacation
+                113 = Single Family Detached
+                114 = Single Family Attached
+                115 = Multifamily
+                116 = Manufactured Housing Parks
+                120 = Retail and Other Commercial
+                130 = Office
+                141 = Mixed Use Residential
+                142 = Mixed Use Industrial
+                143 = Mixed Use Commercial and Other
+                151 = Industrial and Utility 
+                153 = Extractive 
+                160 = Institutional 
+                170 = Park, Recreational, or Preserve
+                173 = Golf Course
+                201 = Major Highway
+                202 = Railway
+                203 = Airport
+                210 = Undeveloped 
+                220 = Water
+ 
+ 
+LUSE84_10:  Concatonation of codes for all years where integer data fields were 
+            converted to text characters (12 character text field type).
+
+            For Example....
+            '080808210210210' = 'Vacant/Agricultural' from 1984-1997 and 
+                             'Undeveloped' from 2000-2010.
+
+            '080108210100100' = 'Vacant/Agricultural' in 1984,
+                             'Single Family Residential' in 1990, 
+                             'Vacant/Agricultural' 1997, 
+                             'Undeveloped' in 2000 and  
+                             'Agricultural' in 2005 &amp; 2010. 
+            It would appear that the change in 1990 was inappropriate and was 
+            corrected in 1997 and that based on the definitions on 
+            'Agricultural' and 'Undeveloped' it was determined in 2005 that the 
+            land was being used as agricultural purposes, likely either a 
+            fallow field was brought back into production or it was determined 
+            from aerial imagery that the land was in fact being used as 
+            pasture.
+
+Descrpt1984:  Land use description based on code in LUSE1984 field
+
+Descrpt1990:  Land use description based on code in LUSE1990 field
+
+Descrpt1997:  Land use description based on code in LUSE1997 field
+
+Descrpt2000:  Land use description based on code in LUSE2000 field
+
+Descrpt2005:  Land use description based on code in LUSE2005 field
+
+Descrpt2010:  Land use description based on code in LUSE2010 field</eaover><eadetcit>The land use categories used prior 2000 were based on original categories established in 1962 and have been subject to only minor modifications over the years (1966, 1975, 1984,  1990, and 1997 -- NOTE:1962, 1966 and 1975 are not in electronic form). In 2000, the classification scheme changes significantly.  
+
+CLASSES FOR 1984, 1990 AND 1997 LAND USE (LUSE1984, LUSE1990 &amp; LUSE1997)
+
+00 - No Data
+The exterior boundary of the seven county metro area was different for the 1984 and 1990 land use layers than it was for the 1997 and 2000 layers.  The more accurate 2000 boundary is used in this combined dataset.  For this reason a number of small sliver polygons exist around the boundary with no land use values 1997 and earlier. 
+
+01 - Single Family Residential
+Includes all individual, free standing single family housing (including manufactured housing).  Within the MUSA (metropolitan urban service area) and in residential developments outside the MUSA, the lot lines visible on the photos were used for determining residential land use boundaries.  Where residential developments were visibly not complete, the undeveloped area was classified as vacant.  For the scattered, rural residential areas outside the MUSA, only the portion of lots used for residences was assigned to the residential category.
+
+02 - Multi-Family Residential
+Includes all multiple dwelling units such as duplexes, bungalows, twin homes, townhouses, quad homes and apartment complexes.  Also, buildings that are primarily apartments that have some group dining facilities are included (however, not those buildings that fit the census definition of 'Group Quarters', such as, dormitories, nursing homes or medical care facilities).
+
+03 - Commercial
+Includes all retail sales, services, hotels and motels, health care facilities (e.g. medical and dental clinics and offices and medical laboratories, but not hospitals and nursing homes) and recreational services that are predominantly privately owned and operated for profit (e.g. theaters, bowling alleys, equestrian ranches) except golf courses.  Hospitals and nursing homes are included in the 'Public &amp; Semi-Public' category and golf courses are in the 'Parks &amp; Recreation Areas' class.  For large shopping centers, only actual developed areas are shown.  This is done so that over the years new development can be shown (e.g. restaurants or gas stations on perimeter roads).
+
+04 - Industrial
+Includes the Federal Standard Industrial Classification (SIC) codes 14 through 50.  This includes manufacturing, transportation, construction, communications, utilities, and wholesale trade.  Also included in the 'Industrial' category are some horticultural specialty land uses (e.g. large greenhouses that do not sell to the public).  As of 1997, gravel pits and quarrying have been placed in a new category called 'Extractive' and all publicly owned areas that are predominantly of industrial nature have been placed in a new category called 'Public Industrial.'
+
+05 - Public Semi-Public
+Includes the land under and adjacent to schools (public and private), hospitals, churches, cemeteries, ice arenas and all facilities of local, state and federal governments, including convalescent homes, mental institutions and penal facilities maintained by any level of government.  All lands within the boundaries of these institutions and facilities are included in this category.  However, in certain instances unused lands were included in the 'Public &amp; Semi-Public Vacant' category (e.g. the University of Minnesota's property in Rosemount, or part of the land adjacent to the Minnesota Veterans Home in Hastings).
+
+06 - Airports
+All types of airports.
+
+07 - Parks &amp; Recreation Areas
+Includes all parks (city, regional and state), wildlife refuges, playgrounds, zoos, gun clubs, golf courses and similar areas (this includes DNR wildlife management areas and scientific and natural areas).  Parks are delineated using their actual boundaries taken directly off comprehensive plans, park maps or county parcel data.
+
+08 - Vacant/Agricultural
+Includes land identifiable from aerial photos as open and in agriculture uses, other uses where no buildings are present or unused land.  Please note that indoor horticultural specialty land uses (the growing of nursery stock, flowers, seeds, sod and food crops in large greenhouses that do not sell to the public; and large concentrations of agricultural buildings (e.g., barns, sheds and silos)) are included in the 'Industrial' category where they can be delineated.  Where residential uses are on larger lots, the residential land use category my include only the house and mowed portion of the parcel, with the rest being placed in this Vacant and Agricultural category.
+
+09 - Major Four Lane Highways
+Includes only the major interstate freeways and 4 lane divided highways with rights-of-way of 200 feet or greater.  Also included in 1997 are all 4-lane roads with a Metropolitan Council functional class designation of 'Principal Arterial.'
+
+10 - Open Water Bodies
+Includes lakes larger than 5 acres and rivers wider than 200 feet.
+
+11 - Farmsteads
+Includes only that portion of land that encompasses the buildings on the farmstead.
+
+12 - Extractive
+New category in 1997.  Includes all gravel pits and quarries.
+
+41 - Industrial Parks not Developed
+Parcels of land in a designated (named) industrial park but not developed.
+
+51 - Public &amp; Semi-Public Vacant
+A government or university owned parcel of land that is undeveloped (e.g. part of arsenal site in Arden Hills or the University property in Rosemount).
+
+54 - Public Industrial
+New category in 1997.  Includes all publicly owned areas that are predominantly of an industrial nature (e.g. waste water treatment plants, city bus garages, and Dept. of Transportation sand and salt stockpiling areas).  In the past, some of these have been coded as industrial and others as public.
+
+
+
+CLASSES FOR 2000, 2005 and 2010 LAND USE (LUSE2000, LUSE2005 &amp; LUSE2010) 
+
+LUSE2000, LUSE2005 and LUSE2010: 
+2000 and 2005 land use codes (3 character text field type). 
+100 = Agricultural 
+111 = Farmstead 
+112 = Seasonal/Vacation 
+113 = Single Family Detached 
+114 = Single Family Attached 
+115 = Multifamily 
+116 = Manufactured Housing Parks 
+120 = Retail and Other Commercial 
+130 = Office 
+141 = Mixed Use Residential 
+142 = Mixed Use Industrial 
+143 = Mixed Use Commercial and Other 
+151 = Industrial and Utility 
+153 = Extractive 
+160 = Institutional 
+170 = Park, Recreational, or Preserve 
+173 = Golf Course 
+201 = Major Highway 
+202 = Railway 
+203 = Airport 
+210 = Undeveloped 
+220 = Water 
+
+DETAILED DESCRIPTIONS (NOTE: not in numeric order): 
+
+SINGLE FAMILY RESIDENTIAL 
+Land used exclusively for residential purposes and containing a single dwelling unit. Includes the following four codes: 
+
+111 - FARMSTEAD 
+Land that encompasses the single family residential dwelling and associated buildings of a farm. Associated buildings of a farm may include buildings used for animal husbandry (barns, chicken coops, grain solos, etc.) along with accessory uses, provided that such accessory uses are incidental to the agricultural activities. 
+
+112 - SEASONAL/VACATION 
+Land meeting the general definition of single-family residential containing a dwelling unit occupied seasonally or used as vacation property. 
+
+113 - SINGLE FAMILY DETACHED 
+Land meeting the general definition of single-family residential and detached from any other residential dwelling unit (i.e., with open space on all four sides, includes detached town homes). 
+
+116 - MANUFACTURED HOUSING PARK 
+Land meeting the general definition of Single-Family, Detached dwelling and designated for the placement of multiple manufactured housing structures. Note: this classification IS NOT used for an individual manufactured home. 
+
+MULTIFAMILY RESIDENTIAL 
+Land used exclusively for residential multiple-family dwellings containing a building or multiple buildings. Includes the following two codes: 
+
+114 - SINGLE FAMILY ATTACHED 
+Land meeting the general definition of multifamily residential containing two or more attached dwelling units (share a common wall, each with primary ground floor access to the outside regardless of the number of units or size. Ex: Attached townhouse, double bungalow, triplex, etc. 
+
+115 - MULTIFAMILY 
+Land meeting the general definition of multifamily residential containing two or more attached dwelling units, one or more not having primary ground floor access to the outside. Ex: Apartment building, condominiums or elderly housing - with minimal assisted living facilities - with a main entrance for all residents. 
+
+Note: Where it was not possible to differentiate between these two categories based on aerial photography and assessors data, the next criteria for differentiation was the number of units. If an indistinguishable parcel contained two to four units, it was coded Single Family Attached. If it had 5 or more units, it was coded Multifamily. If the number of units also was not available, then the final distinction was made using the house like test. If it looked like a house from the photo (e.g. large house split into apartments), it was classified as Single Family Attached, otherwise it became Multifamily. 
+
+COMMERCIAL 
+Includes the following two codes: 
+
+120 - RETAIL AND OTHER COMMERCIAL 
+Land used for the provision of goods or services. This category is for general sales and services that comprise the vast majority of establishments typically associated with commercial land use. This category is used as the default for commercial/retail land uses. Ex include: store, restaurant, hotel, bank, Metrodome, Excel Center - large commercial stadiums or arenas, Mini-storage, Canterbury Downs, YMCA, seasonal RV-Parks, American Legion, thrift stores (e.g. Goodwill, Salvation Army, etc) skeet clubs and outdoor gun ranges (large game/gun clubs (80+ acres) should be Park, Recreation or Preserve). 
+
+130 - OFFICE 
+Land used predominantly for administrative, professional, or clerical services. Examples are, law offices, accounting firms, clinics (but not hospitals), and veterinarian clinic or hospital. 
+
+MIXED USE 
+Land containing a building with mixed uses. Includes the following three codes: 
+
+141 - MIXED USE RESIDENTIAL 
+Land containing a building with multiple uses in combination with at least a residential unit(s). Examples include: Galtier Plaza in St. Paul, a mom &amp; pop bakery with living space above it. 
+
+142 - MIXED USE INDUSTRIAL 
+Land containing a building with multiple uses in combination with industrial uses and NO residential units. An example would be a building containing a warehouse, offices, and stores. 
+
+143 - MIXED USE COMMERCIAL AND OTHER 
+Land containing a building with multiple uses but with NO residential units or industrial uses. An example would be a building containing commercial shops, childcare facility, offices, and/or restaurants. Downtown areas usually have buildings where the first and/or second floor is commercial and the rest is office (e.g. Lawson Software Building), these types of buildings would be coded under this category. 
+
+INDUSTRIAL 
+Includes the following two codes: 
+
+151 - INDUSTRIAL AND UTILITY 
+Land containing manufacturing, transportation, construction companies, communications, utilities (including water towers) or wholesale trade. This category includes publicly owned industrial lands (e.g. waste water treatment plant, warehouses (including commercial warehouses), automotive junk yards, and some special horticultural uses (large greenhouses that do not sell to the public). 
+
+153 - EXTRACTIVE 
+Land containing extractive industry (Ex: Gravel Pits and Quarries). 
+
+160 - INSTITUTIONAL 
+Land used primarily for religious, governmental, educational, social, cultural or major health care facilities - patients with overnight stays (Ex: hospitals, schools, places of worship, cemeteries, city halls, museums, and county and state fairgrounds). 
+
+NOTE: All land should be classified based on use NOT Ownership! If land is owned by a church but appears to be Single-Family, Detached housing, say for the minister, or clergy, then the land use should be Single-Family, Detached residential NOT Institutional. 
+Institutional category includes all publicly owned land that is not clearly in any other category (e.g. not in office, parks, or industrial, etc.). Clinics and health care facilities where there are only out-patient procedures will be classified as Office NOT Institutional. 
+
+PARK AND RECREATION 
+Includes the following two codes: 
+
+170 - PARK, RECREATIONAL OR PRESERVE 
+Land used for park and recreational assembly (Ex: community level ball fields, regional or small urban parks - public or private, playgrounds, rest areas, and other venues - indoors or outdoors - for sporting events or like purposes). Also includes passive activity uses such as park preserves, wildlife refuges, habitat area, public plazas, river walk, DNR owned land, greenways, and other public or private preserved land. 
+
+173 - GOLF COURSE 
+Land used for golfing, including driving range and practice areas and in most cases includes all land belonging to a country club if the predominant land use is golf course. 
+
+TRANSPORTATION 
+Includes the following three codes: 
+
+201 - MAJOR HIGHWAY 
+Major roadway strips of land or area, on which a vehicular rights-of-passage exists under the following conditions: all interstate highways; all 4-lane divided highways with rights-of-way of 200 feet or greater in width; or all 4-lane roads with a Metropolitan Council functional class designation of 'Principal Arterial'. 
+
+NOTE: Where closely aligned frontage roads exist along vehicular rights-of-way which meet the preceding criteria, these frontage roads will be included in the total rights-of-way. Additionally, land uses occurring within a Major Highway rights-of-way, as specified above, but clearly has a different use (i.e., agriculture - row crops) are to be classified by its actual use. In addition, for consistency, if some major roadways that don't meet the above criteria yet have been classified as a Major Highway in past land use dataset, will remain Major Highway. 
+
+202 - RAILWAY 
+Land used and occupied or intended to be occupied by multiple-track railroad lines or similar use including railroad classification, storage and repair yards, intermodal containerized freight and transload facilities, depots, etc. that could be classified under an industrial land use. 
+
+203 - AIRPORT 
+Land used for the operation of aircraft and any related uses that are on the airport property (Ex: parking lot or car rental) Uses such as ball fields on the airport property would not be included in this category. 
+
+100 - AGRICULTURAL 
+Land used for agricultural purposes. Includes discernable cultivation (Ex: ground tillage or crop rows) horticulture, floriculture (exotic flowers), viticulture (grapes) activities, pasture, and a broad range of other agricultural activities (Ex: horse boarding and training, kennels, sod farms, tree farms, fish production and processing, storage areas or buildings). Agricultural buildings (including feedlots) that are not part of the farmstead (see definition below) are included in this category. Note: Not all agricultural lands are discernable based on available data (aerial photography and assessors data). Thus, a significant amount of agricultural land may be placed in the Undeveloped category. Previously, large feedlots were put in the industrial category. 
+
+210 - UNDEVELOPED 
+Land not currently used for any defined purpose that may or may not contain buildings or other structures or has no discernable use based upon the aerial photos or available data. Undeveloped may include non-protected wetlands or lands currently under development. 
+
+220 - WATER 
+A body of open water or flowing waterway inclusive within a discernable shoreline. This typically does not include wetlands or periodically flooded areas. Generally only features three acres or greater in size are to be delineated. Areas definable as another land use type will not be depicted as in the Water category (e.g. major highway bridge over a river and marina).</eadetcit></overview></eainfo><distinfo><resdesc>GeneralizedLandUseHistorical</resdesc><distliab>NOTICE:  The Geographic Information System (GIS) Data to which this notice is attached are made available pursuant to the Minnesota Government Data Practices Act (Minnesota Statutes Chapter 13).  THE GIS DATA ARE PROVIDED TO YOU AS IS AND WITHOUT ANY WARRANTY AS TO THEIR PERFORMANCE, MERCHANTABILITY, OR FITNESS FOR ANY PARTICULAR PURPOSE.  The GIS Data were developed by the Metropolitan Council for its own internal business purposes.  The Metropolitan Council does not represent or warrant that the GIS Data or the data documentation are error-free, complete, current, or accurate.  You are responsible for any consequences resulting from your use of the GIS Data or your reliance on the GIS Data.  You should consult the data documentation for this particular GIS Data to determine the limitations of the GIS Data and the precision with which the GIS Data may depict distance, direction, location, or other geographic features.  If you transmit or provide the GIS Data (or any portion of it) to another user, it is recommended that the GIS Data include a copy of this disclaimer and this metadata.</distliab><stdorder><digform><digtinfo><formname>ArcView shape file</formname><formvern>ArcGIS 10x</formvern><transize>75 MB for zip file.</transize></digtinfo></digform><ordering>See Online Linkage Below</ordering></stdorder><distrib><cntinfo><cntperp><cntorg>Metropolitan Council</cntorg><cntper>Jonathon Hoekenga</cntper></cntperp><cntpos>GIS Specialist</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>390 Robert Street North</address><city>St. Paul</city><state>Minnesota</state><postal>55101-1805</postal></cntaddr><cntvoice>651-602-1561</cntvoice><cntemail>jonathon.hoekenga@metc.state.mn.us</cntemail></cntinfo></distrib></distinfo><metainfo><metd>20110824</metd><metstdn>Minnesota Geographic Metadata Guidelines</metstdn><metstdv>1.2</metstdv><metextns><onlink>http://www.gis.state.mn.us/stds/metadata.htm</onlink></metextns><metc><cntinfo><cntperp><cntorg>Metropolitan Council</cntorg><cntper>Paul E. Hanson</cntper></cntperp><cntpos>GIS Specialist</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>390 Robert Street North</address><city>St. Paul</city><state>Minnesota</state><postal>55101-1805</postal></cntaddr><cntvoice>651-602-1642</cntvoice><cntemail>paul.hanson@metc.state.mn.us</cntemail></cntinfo></metc></metainfo><spref><horizsys><planar><gridsys><gridsysn>Universal Transverse Mercator</gridsysn><utm><utmzone>15</utmzone></utm></gridsys><planci><plandu>meters</plandu></planci></planar><geodetic><horizdn>NAD83</horizdn><ellips>GRS80</ellips></geodetic></horizsys></spref></metadata>
