@@ -62,10 +62,10 @@ function playScript(step){
     hideLayer("waters");
     unloadMarkers(1986, 2016);
 
-    var id = window.setTimeout(function() {}, 0);
-    while (id--) {
-        window.clearTimeout(id);
-    }
+    // var id = window.setTimeout(function() {}, 0);
+    // while (id--) {
+    //     window.clearTimeout(id);
+    // }
 
     showLayer('extent');
     plopPopup(50.668945,41.934977,"<h3>The Caspian Sea</h3><div>Zebra mussels come from here!</div>");

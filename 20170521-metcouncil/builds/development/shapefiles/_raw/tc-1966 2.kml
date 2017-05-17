@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2"> <NetworkLink>
+<open>1</open>
+<name>tc-1966</name>
+<LookAt>
+<longitude>-93.1665003748142</longitude>
+<latitude>45.041504087816584</latitude>
+<range>47825.534115276656</range>
+</LookAt>
+<Link>
+<viewRefreshMode>onRequest</viewRefreshMode>
+<href>http://gis.uspatial.umn.edu/arcgis/services/Libraries/MSPAerialMosaic_1966/MapServer/KmlServer?Composite=false&amp;LayerIDs=0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8</href>
+<viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth];CAMERA=[lookatLon],[lookatLat],[lookatRange],[lookatTilt],[lookatHeading];VIEW=[horizFov],[vertFov],[horizPixels],[vertPixels],[terrainEnabled]</viewFormat>
+</Link>
+</NetworkLink>
+</kml>

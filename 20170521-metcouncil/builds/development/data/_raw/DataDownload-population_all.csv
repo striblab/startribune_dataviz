@@ -1,0 +1,20 @@
+REGION_ID,REGION_NAME,DATASOURCE_DESC,YEAR,POPULATION,HOUSEHOLDS,GROUP_QUARTERS_POP,POPULATION_IN_HOUSEHOLDS
+R11000,Twin Cities Region (7-county),Census Bureau,1970,1874612,573634,42539,1832073
+R11000,Twin Cities Region (7-county),Census Bureau,1980,1985873,721357,46963,1938910
+R11000,Twin Cities Region (7-county),Census Bureau,1990,2288721,875504,47135,2241586
+R11000,Twin Cities Region (7-county),Census Bureau,2000,2642062,1021456,56156,2585906
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2001,2674927,1036074,48504,2626423
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2002,2708916,1053853,58472,2650444
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2003,2740985,1067453,59002,2681983
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2004,2771030,1081023,59779,2711251
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2005,2810179,1099871,60151,2750028
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2006,2821779,1109836,60797,2760982
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2007,2849003,1121535,60710,2788293
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2008,2870250,1129966,61532,2808718
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2009,2881812,1138512,60859,2820953
+R11000,Twin Cities Region (7-county),Census Bureau,2010,2849567,1117749,55023,2794544
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2011,2873444,1127600,57731,2815713
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2012,2909001,1135271,57316,2851685
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2013,2950885,1153538,57017,2893868
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2014,2979343,1165657,60316,2919027
+R11000,Twin Cities Region (7-county),Metropolitan Council Research,2015,3005419,1176655,59620,2945799

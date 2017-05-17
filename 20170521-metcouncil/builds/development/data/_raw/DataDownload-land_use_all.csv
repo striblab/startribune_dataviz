@@ -1,0 +1,129 @@
+REGION_ID,REGION_NAME,YEAR,LAND_USE,LAND_USE_DESCRIPTION,ACRES
+R11000,Twin Cities Region (7-county),1970,3,Commercial,14126
+R11000,Twin Cities Region (7-county),1970,4,Industrial,34967
+R11000,Twin Cities Region (7-county),1970,9,Major Four Lane Highways,16750
+R11000,Twin Cities Region (7-county),1970,10,Open Water Bodies,111078
+R11000,Twin Cities Region (7-county),1970,21,Residential,206596
+R11000,Twin Cities Region (7-county),1970,57,Institutional and Recreation,118766
+R11000,Twin Cities Region (7-county),1970,80,Non-Urbanized,1400883
+R11000,Twin Cities Region (7-county),1975,3,Commercial,16430
+R11000,Twin Cities Region (7-county),1975,4,Industrial,38133
+R11000,Twin Cities Region (7-county),1975,9,Major Four Lane Highways,17091
+R11000,Twin Cities Region (7-county),1975,10,Open Water Bodies,111078
+R11000,Twin Cities Region (7-county),1975,21,Residential,226838
+R11000,Twin Cities Region (7-county),1975,57,Institutional and Recreation,140839
+R11000,Twin Cities Region (7-county),1975,80,Non-Urbanized,1352430
+R11000,Twin Cities Region (7-county),1980,1,Single Family Residential,218010
+R11000,Twin Cities Region (7-county),1980,2,Multifamily Residential,14883
+R11000,Twin Cities Region (7-county),1980,3,Commercial,18295
+R11000,Twin Cities Region (7-county),1980,4,Industrial,41254
+R11000,Twin Cities Region (7-county),1980,5,Public Semi-Public,27105
+R11000,Twin Cities Region (7-county),1980,7,Parks & Recreation Areas,117476
+R11000,Twin Cities Region (7-county),1980,9,Major Four Lane Highways,17557
+R11000,Twin Cities Region (7-county),1980,10,Open Water Bodies,111078
+R11000,Twin Cities Region (7-county),1980,11,Farmsteads,16228
+R11000,Twin Cities Region (7-county),1980,80,Non-Urbanized,1321990
+R11000,Twin Cities Region (7-county),1984,1,Single Family Residential,229893
+R11000,Twin Cities Region (7-county),1984,2,Multifamily Residential,17373
+R11000,Twin Cities Region (7-county),1984,3,Commercial,19714
+R11000,Twin Cities Region (7-county),1984,4,Industrial,42987
+R11000,Twin Cities Region (7-county),1984,5,Public Semi-Public,27383
+R11000,Twin Cities Region (7-county),1984,7,Parks & Recreation Areas,118330
+R11000,Twin Cities Region (7-county),1984,9,Major Four Lane Highways,18486
+R11000,Twin Cities Region (7-county),1984,10,Open Water Bodies,111098
+R11000,Twin Cities Region (7-county),1984,11,Farmsteads,16272
+R11000,Twin Cities Region (7-county),1984,80,Non-Urbanized,1302340
+R11000,Twin Cities Region (7-county),1990,1,Single Family Residential,262030
+R11000,Twin Cities Region (7-county),1990,2,Multifamily Residential,22111
+R11000,Twin Cities Region (7-county),1990,3,Commercial,24070
+R11000,Twin Cities Region (7-county),1990,4,Industrial,40388
+R11000,Twin Cities Region (7-county),1990,5,Public Semi-Public,29454
+R11000,Twin Cities Region (7-county),1990,6,Airports,7446
+R11000,Twin Cities Region (7-county),1990,7,Parks & Recreation Areas,126765
+R11000,Twin Cities Region (7-county),1990,8,Vacant/Agricultural,1220233
+R11000,Twin Cities Region (7-county),1990,9,Major Four Lane Highways,20708
+R11000,Twin Cities Region (7-county),1990,10,Open Water Bodies,111217
+R11000,Twin Cities Region (7-county),1990,11,Farmsteads,16739
+R11000,Twin Cities Region (7-county),1990,41,Industrial Parks not Developed,9586
+R11000,Twin Cities Region (7-county),1990,51,Public & Semi-Public Vacant,12253
+R11000,Twin Cities Region (7-county),1997,1,Single Family Residential,293132
+R11000,Twin Cities Region (7-county),1997,2,Multifamily Residential,30940
+R11000,Twin Cities Region (7-county),1997,3,Commercial,29322
+R11000,Twin Cities Region (7-county),1997,4,Industrial,37667
+R11000,Twin Cities Region (7-county),1997,5,Public Semi-Public,33434
+R11000,Twin Cities Region (7-county),1997,6,Airports,7896
+R11000,Twin Cities Region (7-county),1997,7,Parks & Recreation Areas,150841
+R11000,Twin Cities Region (7-county),1997,8,Vacant/Agricultural,1141072
+R11000,Twin Cities Region (7-county),1997,9,Major Four Lane Highways,21940
+R11000,Twin Cities Region (7-county),1997,10,Open Water Bodies,112289
+R11000,Twin Cities Region (7-county),1997,11,Farmsteads,18806
+R11000,Twin Cities Region (7-county),1997,12,Extractive (1997 only),6609
+R11000,Twin Cities Region (7-county),1997,41,Industrial Parks not Developed,6033
+R11000,Twin Cities Region (7-county),1997,51,Public & Semi-Public Vacant,12475
+R11000,Twin Cities Region (7-county),1997,54,Public Industrial  (1997 only),1072
+R11000,Twin Cities Region (7-county),2000,100,Agriculture,607851
+R11000,Twin Cities Region (7-county),2000,111,Farmstead,19758
+R11000,Twin Cities Region (7-county),2000,112,Seasonal/Vacation,589
+R11000,Twin Cities Region (7-county),2000,113,Single Family Detached,310580
+R11000,Twin Cities Region (7-county),2000,114,Single Family Attached,19710
+R11000,Twin Cities Region (7-county),2000,115,Multifamily,15081
+R11000,Twin Cities Region (7-county),2000,116,Manufactured Housing Park,2776
+R11000,Twin Cities Region (7-county),2000,120,Retail and Other Commercial,27832
+R11000,Twin Cities Region (7-county),2000,130,Office,4108
+R11000,Twin Cities Region (7-county),2000,141,Mixed Use Residential,116
+R11000,Twin Cities Region (7-county),2000,142,Mixed Use Industrial,2980
+R11000,Twin Cities Region (7-county),2000,143,Mixed Use Commercial and Other,333
+R11000,Twin Cities Region (7-county),2000,151,Industrial and Utility,37295
+R11000,Twin Cities Region (7-county),2000,153,Extractive,6439
+R11000,Twin Cities Region (7-county),2000,160,Institutional,32548
+R11000,Twin Cities Region (7-county),2000,170,"Park, Recreational or Preserve",143039
+R11000,Twin Cities Region (7-county),2000,173,Golf Course,20251
+R11000,Twin Cities Region (7-county),2000,201,Major Highway,25458
+R11000,Twin Cities Region (7-county),2000,202,Railway,2762
+R11000,Twin Cities Region (7-county),2000,203,Airport,6766
+R11000,Twin Cities Region (7-county),2000,210,Undeveloped Land,493898
+R11000,Twin Cities Region (7-county),2000,220,Open Water,123898
+R11000,Twin Cities Region (7-county),2005,100,Agriculture,585994
+R11000,Twin Cities Region (7-county),2005,111,Farmstead,17165
+R11000,Twin Cities Region (7-county),2005,112,Seasonal/Vacation,566
+R11000,Twin Cities Region (7-county),2005,113,Single Family Detached,334611
+R11000,Twin Cities Region (7-county),2005,114,Single Family Attached,25232
+R11000,Twin Cities Region (7-county),2005,115,Multifamily,15349
+R11000,Twin Cities Region (7-county),2005,116,Manufactured Housing Park,2727
+R11000,Twin Cities Region (7-county),2005,120,Retail and Other Commercial,29217
+R11000,Twin Cities Region (7-county),2005,130,Office,6087
+R11000,Twin Cities Region (7-county),2005,141,Mixed Use Residential,951
+R11000,Twin Cities Region (7-county),2005,142,Mixed Use Industrial,3413
+R11000,Twin Cities Region (7-county),2005,143,Mixed Use Commercial and Other,484
+R11000,Twin Cities Region (7-county),2005,151,Industrial and Utility,38923
+R11000,Twin Cities Region (7-county),2005,153,Extractive,6962
+R11000,Twin Cities Region (7-county),2005,160,Institutional,34164
+R11000,Twin Cities Region (7-county),2005,170,"Park, Recreational or Preserve",159867
+R11000,Twin Cities Region (7-county),2005,173,Golf Course,21833
+R11000,Twin Cities Region (7-county),2005,201,Major Highway,28349
+R11000,Twin Cities Region (7-county),2005,202,Railway,2697
+R11000,Twin Cities Region (7-county),2005,203,Airport,5967
+R11000,Twin Cities Region (7-county),2005,210,Undeveloped Land,459595
+R11000,Twin Cities Region (7-county),2005,220,Open Water,124139
+R11000,Twin Cities Region (7-county),2010,100,Agriculture,568262
+R11000,Twin Cities Region (7-county),2010,111,Farmstead,15743
+R11000,Twin Cities Region (7-county),2010,112,Seasonal/Vacation,556
+R11000,Twin Cities Region (7-county),2010,113,Single Family Detached,348157
+R11000,Twin Cities Region (7-county),2010,114,Single Family Attached,28142
+R11000,Twin Cities Region (7-county),2010,115,Multifamily,15388
+R11000,Twin Cities Region (7-county),2010,116,Manufactured Housing Park,2723
+R11000,Twin Cities Region (7-county),2010,120,Retail and Other Commercial,29607
+R11000,Twin Cities Region (7-county),2010,130,Office,7679
+R11000,Twin Cities Region (7-county),2010,141,Mixed Use Residential,1046
+R11000,Twin Cities Region (7-county),2010,142,Mixed Use Industrial,3879
+R11000,Twin Cities Region (7-county),2010,143,Mixed Use Commercial and Other,700
+R11000,Twin Cities Region (7-county),2010,151,Industrial and Utility,39577
+R11000,Twin Cities Region (7-county),2010,153,Extractive,6801
+R11000,Twin Cities Region (7-county),2010,160,Institutional,36412
+R11000,Twin Cities Region (7-county),2010,170,"Park, Recreational or Preserve",177782
+R11000,Twin Cities Region (7-county),2010,173,Golf Course,21712
+R11000,Twin Cities Region (7-county),2010,201,Major Highway,29543
+R11000,Twin Cities Region (7-county),2010,202,Railway,3043
+R11000,Twin Cities Region (7-county),2010,203,Airport,6451
+R11000,Twin Cities Region (7-county),2010,210,Undeveloped Land,436415
+R11000,Twin Cities Region (7-county),2010,220,Open Water,124676
