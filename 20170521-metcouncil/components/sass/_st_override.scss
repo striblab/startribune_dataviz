@@ -38,6 +38,14 @@ body * {
     height:500px;
 }
 
+.mapOther {
+    width:800px; 
+    position:absolute; 
+    top:0; 
+    bottom:700px; 
+    height:500px;
+}
+
 .blockSpace {
     height:530px;
 }
@@ -147,6 +155,33 @@ body * {
 
 .neg {
     color:#857AAA;
+}
+
+.topLabels {
+    padding:20px;
+}
+
+.topLabels div {
+    width:48%;
+    display:inline-block;
+}
+
+.rightSide {
+    text-align:right;
+    font-weight:900;
+}
+
+.leftSide {
+    text-align:left;
+    font-weight:900;
+}
+
+#legendContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 282px;
+    height: 30px;
+    text-align: center;
 }
 
 @media only screen and (max-width:800px)  {
