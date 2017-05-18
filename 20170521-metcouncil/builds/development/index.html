@@ -36,6 +36,27 @@
 
 <div class="blockSpace"></div>
 
+<div id="legendContainer">
+    <h5>Population by census tract</h5>
+<div id="quantize">
+<span class='legend'>
+  <nav class='legend clearfix'>
+    <span style='background:#fff;'>Less</span>
+    <span style='background:#f7f7f7;'></span>
+    <span style='background:#d9d9d9;'></span>
+    <span style='background:#bdbdbd;'></span>
+    <span style='background:#969696;'></span>
+    <span style='background:#636363;'></span>
+    <span style='background:#252525;'></span>
+    <span style='background:#fff;'>More</span>
+    <span style='background:#fff;'></span>
+  </nav>
+</span>
+</div>
+</div>
+
+<div class="topLabels"><div class="leftSide">&#60;&#60;2010</div><div class="rightSide">1970&#62;&#62;</div></div>
+
 <div id="districtSelect">Select area: <span id='thisDistrict'>Twin Cities Region (7-county)</span></div>
 
 <div id="listing">
@@ -54,7 +75,6 @@
 
 <div class="breaker"></div>
 
-<div class="slide" id="tracker">
 <!-- <div class="chatter">
 TEXT HERE
 </div> -->
@@ -96,12 +116,22 @@ TEXT HERE
 </div>
 
 </div>
-</div>
 
-<div class="slide" id="land">
 
 </div>
 
+<div class="slide" id="satellite">
+  <div id="mapboxHolder">
+  
+  <div id="old" class="mapOther"></div>
+  <div id="current" class="mapOther"></div>
+  </div>
+
+  <div class="blockSpace"></div>
+
+  <div class="topLabels"><div class="leftSide">&#60;&#60;2010</div><div class="rightSide">1966&#62;&#62;</div></div>
+
+</div>
 </div>
 <script src="//code.jquery.com/jquery-latest.js"></script>
 <script src="js/d3.v3.min.js"></script>
@@ -109,9 +139,6 @@ TEXT HERE
 <script src='js/mapbox-gl.js'></script>
 <script src='js/mapbox-gl-geocoder.js'></script>
 <script src='js/mapbox-gl-compare.js'></script>
-
- <!--<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
- -->
 
 <script src="js/script.js"></script>
  
