@@ -551,8 +551,9 @@ $(".row").click(function() {
             },
             axis: {
                 y: {
+                    max: 0.60,
                     min: 0,
-                    padding: {bottom: 0, top: 10},
+                    padding: {bottom: 0, top: 0},
                     tick: {
                         count: 4,
                         format: d3.format('%')
@@ -652,7 +653,8 @@ if (dataType == "population"){
   if (pctChange < 0) { $("#populationChange").addClass("neg"); }
   else if (pctChange > 0) { $("#populationChange").addClass("pos"); }
 
-  $("#populationChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#populationChange").html(d3.format("+%")(pctChange)); }
+  else { $("#populationChange").html("--"); }
 
   if (values == "population") { return populations; }
   else if (values == "years") { return years; }
@@ -671,7 +673,7 @@ if (dataType == "income"){
           incomeYears[i+1] = incomeData[i].YEAR; 
     }
 
-  var pctChange = ((income[income.length-1] - income[1]) / income[1]);
+  var pctChange = ((income[income.length-2] - income[1]) / income[1]);
 
   $("#incomeChange").removeClass("pos");
   $("#incomeChange").removeClass("neg");
@@ -679,7 +681,8 @@ if (dataType == "income"){
   if (pctChange < 0) { $("#incomeChange").addClass("neg"); }
   else if (pctChange > 0) { $("#incomeChange").addClass("pos"); }
 
-  $("#incomeChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#incomeChange").html(d3.format("+%")(pctChange)); }
+  else { $("#incomeChange").html("--"); }
 
   if (values == "income") { return income; }
   else if (values == "years") { return incomeYears; }
@@ -706,7 +709,8 @@ if (dataType == "poverty"){
   if (pctChange < 0) { $("#povertyChange").addClass("neg"); }
   else if (pctChange > 0) { $("#povertyChange").addClass("pos"); }
 
-  $("#povertyChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#povertyChange").html(d3.format("+%")(pctChange)); }
+  else { $("#povertyChange").html("--"); }
 
   if (values == "poverty") { return poverty; }
   else if (values == "years") { return povYears; }
@@ -733,7 +737,8 @@ if (dataType == "degrees"){
   if (pctChange < 0) { $("#degreesChange").addClass("neg"); }
   else if (pctChange > 0) { $("#degreesChange").addClass("pos"); }
 
-  $("#degreesChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#degreesChange").html(d3.format("+%")(pctChange)); }
+  else { $("#degreesChange").html("--"); }
 
   if (values == "degrees") { return degrees; }
   else if (values == "years") { return degreeYears; }
@@ -760,7 +765,8 @@ if (dataType == "race"){
   if (pctChange < 0) { $("#raceChange").addClass("neg"); }
   else if (pctChange > 0) { $("#raceChange").addClass("pos"); }
 
-  $("#raceChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#raceChange").html(d3.format("+%")(pctChange)); }
+  else { $("#raceChange").html("--"); }
 
   if (values == "race") { return minorities; }
   else if (values == "years") { return raceYears; }
@@ -790,7 +796,8 @@ if (dataType == "land"){
   if (pctChange < 0) { $("#landChange").addClass("neg"); }
   else if (pctChange > 0) { $("#landChange").addClass("pos"); }
 
-  $("#landChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#landChange").html(d3.format("+%")(pctChange)); }
+  else { $("#landChange").html("--"); }
 
   if (values == "land") { return landuse; }
   else if (values == "years") { return landYears; }
@@ -821,7 +828,8 @@ if (dataType == "population"){
   if (pctChange < 0) { $("#populationChange").addClass("neg"); }
   else if (pctChange > 0) { $("#populationChange").addClass("pos"); }
 
-  $("#populationChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#populationChange").html(d3.format("+%")(pctChange)); }
+  else { $("#populationChange").html("--"); }
 
   if (values == "population") { return populations; }
   else if (values == "years") { return years; }
@@ -851,7 +859,8 @@ if (dataType == "income"){
   if (pctChange < 0) { $("#incomeChange").addClass("neg"); }
   else if (pctChange > 0) { $("#incomeChange").addClass("pos"); }
 
-  $("#incomeChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#incomeChange").html(d3.format("+%")(pctChange)); }
+  else { $("#incomeChange").html("--"); }
 
   if (values == "income") { return income; }
   else if (values == "years") { return incomeYears; }
@@ -879,7 +888,8 @@ if (dataType == "poverty"){
   if (pctChange < 0) { $("#povertyChange").addClass("neg"); }
   else if (pctChange > 0) { $("#povertyChange").addClass("pos"); }
 
-  $("#povertyChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#povertyChange").html(d3.format("+%")(pctChange)); }
+  else { $("#povertyChange").html("--"); }
 
   if (values == "poverty") { return poverty; }
   else if (values == "years") { return povYears; }
@@ -907,7 +917,8 @@ if (dataType == "degrees"){
   if (pctChange < 0) { $("#degreesChange").addClass("neg"); }
   else if (pctChange > 0) { $("#degreesChange").addClass("pos"); }
 
-  $("#degreesChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#degreesChange").html(d3.format("+%")(pctChange)); }
+  else { $("#degreesChange").html("--"); }
 
   if (values == "degrees") { return degrees; }
   else if (values == "years") { return degreeYears; }
@@ -935,7 +946,8 @@ if (dataType == "race"){
   if (pctChange < 0) { $("#raceChange").addClass("neg"); }
   else if (pctChange > 0) { $("#raceChange").addClass("pos"); }
 
-  $("#raceChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#raceChange").html(d3.format("+%")(pctChange)); }
+  else { $("#raceChange").html("--"); }
 
   if (values == "race") { return minorities; }
   else if (values == "years") { return raceYears; }
@@ -965,7 +977,8 @@ if (dataType == "land"){
   if (pctChange < 0) { $("#landChange").addClass("neg"); }
   else if (pctChange > 0) { $("#landChange").addClass("pos"); }
 
-  $("#landChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#landChange").html(d3.format("+%")(pctChange)); }
+  else { $("#landChange").html("--"); }
 
   if (values == "land") { return landuse; }
   else if (values == "years") { return landYears; }
@@ -996,7 +1009,8 @@ if (dataType == "population"){
   if (pctChange < 0) { $("#populationChange").addClass("neg"); }
   else if (pctChange > 0) { $("#populationChange").addClass("pos"); }
 
-  $("#populationChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#populationChange").html(d3.format("+%")(pctChange)); }
+  else { $("#populationChange").html("--"); }
 
   if (values == "population") { return populations; }
   else if (values == "years") { return years; }
@@ -1025,7 +1039,8 @@ if (dataType == "income"){
   if (pctChange < 0) { $("#incomeChange").addClass("neg"); }
   else if (pctChange > 0) { $("#incomeChange").addClass("pos"); }
 
-  $("#incomeChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#incomeChange").html(d3.format("+%")(pctChange)); }
+  else { $("#incomeChange").html("--"); }
 
   if (values == "income") { return income; }
   else if (values == "years") { return incomeYears; }
@@ -1053,7 +1068,8 @@ if (dataType == "poverty"){
   if (pctChange < 0) { $("#povertyChange").addClass("neg"); }
   else if (pctChange > 0) { $("#povertyChange").addClass("pos"); }
 
-  $("#povertyChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#povertyChange").html(d3.format("+%")(pctChange)); }
+  else { $("#povertyChange").html("--"); }
 
   if (values == "poverty") { return poverty; }
   else if (values == "years") { return povYears; }
@@ -1081,7 +1097,8 @@ if (dataType == "degrees"){
   if (pctChange < 0) { $("#degreesChange").addClass("neg"); }
   else if (pctChange > 0) { $("#degreesChange").addClass("pos"); }
 
-  $("#degreesChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#degreesChange").html(d3.format("+%")(pctChange)); }
+  else { $("#degreesChange").html("--"); }
 
   if (values == "degrees") { return degrees; }
   else if (values == "years") { return degreeYears; }
@@ -1109,8 +1126,8 @@ if (dataType == "race"){
   if (pctChange < 0) { $("#raceChange").addClass("neg"); }
   else if (pctChange > 0) { $("#raceChange").addClass("pos"); }
 
-
-  $("#raceChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#raceChange").html(d3.format("+%")(pctChange)); }
+  else { $("#raceChange").html("--"); }
 
   if (values == "race") { return minorities; }
   else if (values == "years") { return raceYears; }
@@ -1140,7 +1157,8 @@ if (dataType == "land"){
   if (pctChange < 0) { $("#landChange").addClass("neg"); }
   else if (pctChange > 0) { $("#landChange").addClass("pos"); }
 
-  $("#landChange").html(d3.format("+%")(pctChange));
+  if (isFinite(pctChange)) { $("#landChange").html(d3.format("+%")(pctChange)); }
+  else { $("#landChange").html("--"); }
 
   if (values == "land") { return landuse; }
   else if (values == "years") { return landYears; }
@@ -1159,7 +1177,7 @@ var beforeMap = new mapboxgl.Map({
     container: 'before', // container id
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
     center: [-93.28469849, 45.01832962], 
-    zoom: 7.8,
+    zoom: 8,
     minZoom: 3,
     hash: false
 });
@@ -1182,17 +1200,14 @@ beforeMap.on('load', function() {
        'type': 'fill',
             'paint': {
            'fill-antialias' : true,
-           'fill-opacity': 0.9,
+           'fill-opacity': 1,
            'fill-color': {
-            "property": "Population",
+            "property": "DENSITY",
             "stops": [
-              [0, "#f7f7f7"],
-              [1600, "#d9d9d9"],
-              [3200, "#bdbdbd"],
-              [4800, "#969696"],
-              [5400, "#636363"],
-              [7000, "#252525"],
-              [8000, "#000000"]
+              [0, "#f1eef6"],
+              [20, "#bdc9e1"],
+              [40, "#74a9cf"],
+              [80, "#0570b0"]
            ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
@@ -1205,7 +1220,7 @@ var map = new mapboxgl.Map({
     container: 'after', // container id
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
     center: [-93.28469849, 45.01832962], 
-    zoom: 7.8,
+    zoom: 8,
     minZoom: 3
 });
 
@@ -1217,19 +1232,6 @@ var mapBoth = new mapboxgl.Compare(beforeMap, map, {
 map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 
-// map.addControl(new MapboxGeocoder({
-//     accessToken: mapboxgl.accessToken
-// }));
-
-$('.onoffswitch :checkbox').change(function() {  
-    if (this.checked) { 
-      map.setStyle('mapbox://styles/mapbox/satellite-streets-v9');
-    }
-    else {
-      map.setStyle(mapStyle);
-    }
-});
-
 
 //http://gis.uspatial.umn.edu/arcgis/rest/services/Libraries/MSPAerialMosaic_1966/MapServer
 map.on('load', function() {
@@ -1240,29 +1242,27 @@ map.on('load', function() {
  });
 
   map.addLayer({
-       'id': 'old-layer',
+       'id': 'new-layer',
        'interactive': true,
        'source': 'metroToday',
        'layout': {},
        'type': 'fill',
             'paint': {
            'fill-antialias' : true,
-           'fill-opacity': 0.9,
+           'fill-opacity': 1,
            'fill-color': {
-            "property": "POPULATION",
+            "property": "DENSITY",
             "stops": [
-              [0, "#f7f7f7"],
-              [1600, "#d9d9d9"],
-              [3200, "#bdbdbd"],
-              [4800, "#969696"],
-              [5400, "#636363"],
-              [7000, "#252525"],
-              [8000, "#000000"]
+              [0, "#f1eef6"],
+              [20, "#bdc9e1"],
+              [40, "#74a9cf"],
+              [80, "#0570b0"]
            ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
      }
    }, 'place-neighbourhood');
+
 
    map.addSource('metro', {
      type: 'geojson',
@@ -1281,7 +1281,7 @@ map.on('load', function() {
              'fill-color': "#dddddd",
              'fill-outline-color': 'rgba(255, 255, 255, 1)'
        }
-     });
+     }, 'place-neighbourhood');
 
 });
 
@@ -1439,19 +1439,19 @@ var map = new mapboxgl.Map({
 });
 
 map.on('load', function() {
-    // map.addLayer({
-    //     'id': 'wms-test-layer',
-    //     'type': 'raster',
-    //     'source': {
-    //         'type': 'raster',
-    //         'tiles': [
-    //           // 'http://gis.uspatial.umn.edu/arcgis/services/Libraries/MSPAerialMosaic_1966/MapServer/WmsServer?f=json'
-    //             'https://tgis2.uspatial.umn.edu/arcgis/services/Libraries/MetroAerialMosaic_1966/MapServer/WMSServer?request=GetMap&service=WMS&bbox={bbox-epsg-4326}&format=image/png&version=1.3.0&srs=EPSG:4326&width=256&height=256&layers=0,1,2,3'
-    //         ],
-    //         'tileSize': 256
-    //     },
-    //     'paint': {}
-    // });
+    map.addLayer({
+        'id': 'wms-test-layer',
+        'type': 'raster',
+        'source': {
+            'type': 'raster',
+            'tiles': [
+              // 'http://gis.uspatial.umn.edu/arcgis/services/Libraries/MSPAerialMosaic_1966/MapServer/WmsServer?f=json'
+                'https://tgis2.uspatial.umn.edu/arcgis/services/Libraries/MetroAerialMosaic_1966/MapServer/WMSServer?request=GetMap&service=WMS&bbox={bbox-epsg-4326}&format=image/png&version=1.3.0&srs=EPSG:4326&width=256&height=256&layers=0,1,2,3'
+            ],
+            'tileSize': 256
+        },
+        'paint': {}
+    });
   });
 
 var mapBoth = new mapboxgl.Compare(beforeMap, map, {
