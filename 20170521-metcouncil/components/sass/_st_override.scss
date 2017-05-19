@@ -43,11 +43,14 @@ body * {
     position:absolute; 
     top:0; 
     bottom:700px; 
-    height:500px;
+    height:350px;
 }
 
 .blockSpace {
     height:530px;
+}
+.blockSpaceOther {
+    height:375px;
 }
 .source {
     color:#bbbbbb !important;
@@ -155,12 +158,18 @@ body * {
 #wrapper  {
   width: 100%;
  }
- #map, .map, .mapOther {
+ #map, .map {
   width:100%;
-  height:250px
+  height:250px;
 }
-.blockSpace {
-    height:275px;
+
+.mapOther {
+  width:100%;
+  height:350px;
+}
+
+.blockSpaceOther {
+    height:375px;
 }
  }
 
