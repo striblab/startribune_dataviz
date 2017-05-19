@@ -1419,8 +1419,8 @@ var beforeMap = new mapboxgl.Map({
     container: 'old',
     style: mapStyle,
     center: [-93.170242, 45.012116], 
-    zoom: 10,
-    minZoom: 10,
+    zoom: 9,
+    minZoom: 9,
     hash: false,
     // maxBounds: bounds
 });
@@ -1432,8 +1432,8 @@ var map = new mapboxgl.Map({
     container: 'current',
     style: 'mapbox://styles/mapbox/satellite-streets-v9',
     center: [-93.170242, 45.012116], 
-    zoom: 10,
-    minZoom: 10,
+    zoom: 9,
+    minZoom: 9,
     hash:false,
     // maxBounds: bounds
 });
