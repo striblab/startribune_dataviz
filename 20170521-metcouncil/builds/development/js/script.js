@@ -95,7 +95,7 @@ d3.select("#counties").selectAll(".row")
   .attr("class",function(d) { return "row "; })
   // .attr("id",function(d) { if (d.CO_NAME == "Anoka County") { return "first" } else { return null; } })
   .attr("type","county")
-  .attr("zoom",9)
+  .attr("zoom",8)
   .on("mousedown",function(d) {
 
     var pop;
@@ -1420,8 +1420,8 @@ var beforeMap = new mapboxgl.Map({
     container: 'old',
     style: mapStyle,
     center: [-93.170242, 45.012116], 
-    zoom: 10,
-    minZoom: 10,
+    zoom: 9,
+    minZoom: 9,
     hash: false,
     // maxBounds: bounds
 });
@@ -1433,8 +1433,8 @@ var map = new mapboxgl.Map({
     container: 'current',
     style: 'mapbox://styles/mapbox/satellite-streets-v9',
     center: [-93.170242, 45.012116], 
-    zoom: 10,
-    minZoom: 10,
+    zoom: 9,
+    minZoom: 9,
     hash:false,
     // maxBounds: bounds
 });
