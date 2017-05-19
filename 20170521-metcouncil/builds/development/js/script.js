@@ -52,7 +52,7 @@ d3.select("#all").selectAll(".row")
   .attr("class",function(d) { if (d.REGION_NAME == "Twin Cities Region (7-county)") { return "row selected" } else { return "row "; } })
   .attr("id",function(d) { if (d.REGION_NAME == "Twin Cities Region (7-county)") { return "first" } else { return null; } })
   .attr("type","all")
-  .attr("zoom",7)
+  .attr("zoom",9)
   .on("mousedown",function(d) {
 
     var pop = d3.format(",")(dataAll[18].POPULATION);
