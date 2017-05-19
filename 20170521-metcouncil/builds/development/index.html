@@ -11,9 +11,6 @@
 
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css' type='text/css' />
   <link rel="stylesheet" href="css/style.css">
- <!-- <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' /> -->
-
 </head>
 <body>
  
@@ -26,34 +23,26 @@
 <div id="after" class="map"></div>
 </dib>
 
-<div class="onoffswitch mobileshow" style="display:none;">
-    <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
-    <label class="onoffswitch-label" for="myonoffswitch2">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-    </label>
-</div>
-
 <div class="blockSpace"></div>
 
 <div id="legendContainer">
-    <h5>Population by census tract</h5>
+    <h5>Population density</h5>
 <div id="quantize">
 <span class='legend'>
   <nav class='legend clearfix'>
     <span style='background:#fff;'>Less</span>
-    <span style='background:#f7f7f7;'></span>
-    <span style='background:#d9d9d9;'></span>
-    <span style='background:#bdbdbd;'></span>
-    <span style='background:#969696;'></span>
-    <span style='background:#636363;'></span>
-    <span style='background:#252525;'></span>
+    <span style='background:#f1eef6;'></span>
+    <span style='background:#bdc9e1;'></span>
+    <span style='background:#74a9cf;'></span>
+    <span style='background:#0570b0;'></span>
     <span style='background:#fff;'>More</span>
     <span style='background:#fff;'></span>
   </nav>
 </span>
 </div>
 </div>
+
+<div style="clear:both;"></div>
 
 <div class="topLabels"><div class="leftSide">&#60;&#60;2010</div><div class="rightSide">1970&#62;&#62;</div></div>
 
@@ -81,37 +70,37 @@ TEXT HERE
 
 <div class="adjacent">
 <div class="chartHead"><img src="img/population.png" class="icon" />
-<div class="statLabel">Population: <span class="stat" id="population"></span> | <span id="populationChange" class="pct pos"></span></div></div>
+<div class="statLabel">Population: <span class="stat" id="population"></span> | <span id="populationChange" class="pct pos"></span> change</div></div>
 <div id="chartPop" class="chart"></div>
 </div>
 
 <div class="adjacent">
 <div class="chartHead"><img src="img/race-old.png" class="icon" />
-<div class="statLabel">Undeveloped Acres: <span class="stat" id="land"></span> | <span id="landChange" class="pct neg"></span></div></div>
+<div class="statLabel">Undeveloped Acres: <span class="stat" id="land"></span> | <span id="landChange" class="pct neg"></span> change</div></div>
 <div id="chartLand" class="chart"></div>
 </div>
 
 <div class="adjacent">
 <div class="chartHead"><img src="img/income.png" class="icon" />
-<div class="statLabel">Median Income: <span class="stat" id="income"></span> | <span id="incomeChange" class="pct pos"></span></div></div>
+<div class="statLabel">Median Income: <span class="stat" id="income"></span> | <span id="incomeChange" class="pct pos"></span> change</div></div>
 <div id="chartIncome" class="chart"></div>
 </div>
 
 <div class="adjacent">
 <div class="chartHead"><img src="img/cost.png" class="icon" />
-<div class="statLabel">Poverty: <span class="stat" id="poverty"></span> | <span id="povertyChange" class="pct pos"></span></div></div>
+<div class="statLabel">Poverty: <span class="stat" id="poverty"></span> | <span id="povertyChange" class="pct pos"></span> change</div></div>
 <div id="chartPoverty" class="chart"></div>
 </div>
 
 <div class="adjacent">
 <div class="chartHead"><img src="img/race.png" class="icon" />
-<div class="statLabel">Minorities: <span class="stat" id="minorities"></span>  | <span id="raceChange" class="pct pos"></span></div></div>
+<div class="statLabel">Minorities: <span class="stat" id="minorities"></span>  | <span id="raceChange" class="pct pos"></span> change</div></div>
 <div id="chartRace" class="chart"></div>
 </div>
 
 <div class="adjacent">
 <div class="chartHead"><img src="img/education.png" class="icon" />
-<div class="statLabel">College Degrees: <span class="stat" id="degrees"></span> | <span id="degreesChange" class="pct pos"></span></div></div> 
+<div class="statLabel">College Degrees: <span class="stat" id="degrees"></span> | <span id="degreesChange" class="pct pos"></span> change</div></div> 
 <div id="chartDegrees" class="chart"></div>
 </div>
 
@@ -128,8 +117,11 @@ TEXT HERE
   </div>
 
   <div class="blockSpace"></div>
+  <div class="topLabels2"><div class="leftSide">&#60;&#60;2010</div><div class="rightSide">1966&#62;&#62;</div></div>
 
-  <div class="topLabels"><div class="leftSide">&#60;&#60;2010</div><div class="rightSide">1966&#62;&#62;</div></div>
+  <div class="chartTitle">Comparing 1966 and 2010 satellite maps</div>
+  <div class="chatter">Swipe the slider to the right to see metro area satellite imagery from 1966, and to the left to see imagery from this decade.</div>
+  <div class="source">Source: <a href="http://gis.uspatial.umn.edu/arcgis/rest/services/Libraries/MSPAerialMosaic_1966/MapServer" target="new_">University of Minnesota U-Spatial</a></div>
 
 </div>
 </div>
