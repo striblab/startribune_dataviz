@@ -73,7 +73,7 @@ d3.select("#all").selectAll(".row")
     }
 
     for (var i=0; i < dataAllLand.length; i++){
-        if (dataAllLand[i].YEAR == 2010 && (dataAllLand[i].LAND_USE_DESCRIPTION == "Non-Urbanized" || dataAllLand[i].LAND_USE_DESCRIPTION == "Institutional and Recreation" || dataAllLand[i].LAND_USE_DESCRIPTION == "Open Water Bodies" || dataAllLand[i].LAND_USE_DESCRIPTION == "Parks & Recreation Areas" || dataAllLand[i].LAND_USE_DESCRIPTION == "Vacant/Agricultural" || dataAllLand[i].LAND_USE_DESCRIPTION == "Industrial Parks not Developed" || dataAllLand[i].LAND_USE_DESCRIPTION == "Public & Semi-Public Vacant" || dataAllLand[i].LAND_USE_DESCRIPTION == "Agriculture" || dataAllLand[i].LAND_USE_DESCRIPTION == "Park, Recreational or Preserve" || dataAllLand[i].LAND_USE_DESCRIPTION == "Golf Course" || dataAllLand[i].LAND_USE_DESCRIPTION == "Undeveloped Land" || dataAllLand[i].LAND_USE_DESCRIPTION == "Open Water")) { land += dataAllLand[i].ACRES; }
+        if (dataAllLand[i].YEAR == 2010 && (dataAllLand[i].LAND_USE_DESCRIPTION != "Non-Urbanized" && dataAllLand[i].LAND_USE_DESCRIPTION != "Institutional and Recreation" && dataAllLand[i].LAND_USE_DESCRIPTION != "Open Water Bodies" && dataAllLand[i].LAND_USE_DESCRIPTION != "Parks & Recreation Areas" && dataAllLand[i].LAND_USE_DESCRIPTION != "Vacant/Agricultural" && dataAllLand[i].LAND_USE_DESCRIPTION != "Industrial Parks not Developed" && dataAllLand[i].LAND_USE_DESCRIPTION != "Public & Semi-Public Vacant" && dataAllLand[i].LAND_USE_DESCRIPTION != "Agriculture" && dataAllLand[i].LAND_USE_DESCRIPTION != "Park, Recreational or Preserve" && dataAllLand[i].LAND_USE_DESCRIPTION != "Golf Course" && dataAllLand[i].LAND_USE_DESCRIPTION != "Undeveloped Land" && dataAllLand[i].LAND_USE_DESCRIPTION != "Open Water")) { land += dataAllLand[i].ACRES; }
     }
 
     $("#population").html(pop);
@@ -375,9 +375,9 @@ $(".row").click(function() {
         });
  
 // LAND USE CHART
-  var landDataNU = dataAllLand.filter(function(d){ return d.LAND_USE_DESCRIPTION == "Non-Urbanized" || d.LAND_USE_DESCRIPTION == "Institutional and Recreation" || d.LAND_USE_DESCRIPTION == "Open Water Bodies" || d.LAND_USE_DESCRIPTION == "Parks & Recreation Areas" || d.LAND_USE_DESCRIPTION == "Vacant/Agricultural" || d.LAND_USE_DESCRIPTION == "Industrial Parks not Developed" || d.LAND_USE_DESCRIPTION == "Public & Semi-Public Vacant" || d.LAND_USE_DESCRIPTION == "Agriculture" || d.LAND_USE_DESCRIPTION == "Park, Recreational or Preserve" || d.LAND_USE_DESCRIPTION == "Golf Course" || d.LAND_USE_DESCRIPTION == "Undeveloped Land" || d.LAND_USE_DESCRIPTION == "Open Water";  })
+  var landDataNU = dataAllLand.filter(function(d){ return d.LAND_USE_DESCRIPTION != "Non-Urbanized" && d.LAND_USE_DESCRIPTION != "Institutional and Recreation" && d.LAND_USE_DESCRIPTION != "Open Water Bodies" && d.LAND_USE_DESCRIPTION != "Parks & Recreation Areas" && d.LAND_USE_DESCRIPTION != "Vacant/Agricultural" && d.LAND_USE_DESCRIPTION != "Industrial Parks not Developed" && d.LAND_USE_DESCRIPTION != "Public & Semi-Public Vacant" && d.LAND_USE_DESCRIPTION != "Agriculture" && d.LAND_USE_DESCRIPTION != "Park, Recreational or Preserve" && d.LAND_USE_DESCRIPTION != "Golf Course" && d.LAND_USE_DESCRIPTION != "Undeveloped Land" && d.LAND_USE_DESCRIPTION != "Open Water";  })
 
-  var landuseNU = ["Undeveloped Acres", 0,0,0,0,0];
+  var landuseNU = ["Developed Acres", 0,0,0,0,0];
   var landYears = ["x",1970,1980,1990,2000,2010];
 
   var indexThis = 1;
@@ -399,7 +399,7 @@ $(".row").click(function() {
                     landYears,
                     landuseNU
                 ],
-                colors: { 'Undeveloped Acres': '#333333' }
+                colors: { 'Developed Acres': '#333333' }
             },
             legend: {
                 show: false
@@ -774,9 +774,9 @@ if (dataType == "race"){
 }
 
 if (dataType == "land"){
-  var landData = dataLand.filter(function(d){ return d.CTU_NAME == city && (d.LAND_USE_DESCRIPTION == "Non-Urbanized" || d.LAND_USE_DESCRIPTION == "Institutional and Recreation" || d.LAND_USE_DESCRIPTION == "Open Water Bodies" || d.LAND_USE_DESCRIPTION == "Parks & Recreation Areas" || d.LAND_USE_DESCRIPTION == "Vacant/Agricultural" || d.LAND_USE_DESCRIPTION == "Industrial Parks not Developed" || d.LAND_USE_DESCRIPTION == "Public & Semi-Public Vacant" || d.LAND_USE_DESCRIPTION == "Agriculture" || d.LAND_USE_DESCRIPTION == "Park, Recreational or Preserve" || d.LAND_USE_DESCRIPTION == "Golf Course" || d.LAND_USE_DESCRIPTION == "Undeveloped Land" || d.LAND_USE_DESCRIPTION == "Open Water");  })
+  var landData = dataLand.filter(function(d){ return d.CTU_NAME == city && (d.LAND_USE_DESCRIPTION != "Non-Urbanized" && d.LAND_USE_DESCRIPTION != "Institutional and Recreation" && d.LAND_USE_DESCRIPTION != "Open Water Bodies" && d.LAND_USE_DESCRIPTION != "Parks & Recreation Areas" && d.LAND_USE_DESCRIPTION != "Vacant/Agricultural" && d.LAND_USE_DESCRIPTION != "Industrial Parks not Developed" && d.LAND_USE_DESCRIPTION != "Public & Semi-Public Vacant" && d.LAND_USE_DESCRIPTION != "Agriculture" && d.LAND_USE_DESCRIPTION != "Park, Recreational or Preserve" && d.LAND_USE_DESCRIPTION != "Golf Course" && d.LAND_USE_DESCRIPTION != "Undeveloped Land" && d.LAND_USE_DESCRIPTION != "Open Water");  })
 
-  var landuse = ["Undeveloped Acres", 0,0,0,0,0];
+  var landuse = ["Developed Acres", 0,0,0,0,0];
   var landYears = ["x",1970,1980,1990,2000,2010];
 
   var indexThis = 1;
@@ -955,9 +955,9 @@ if (dataType == "race"){
 }
 
 if (dataType == "land"){
-  var landData = dataCountiesLand.filter(function(d){ return d.CO_NAME == city && (d.LAND_USE_DESCRIPTION == "Non-Urbanized" || d.LAND_USE_DESCRIPTION == "Institutional and Recreation" || d.LAND_USE_DESCRIPTION == "Open Water Bodies" || d.LAND_USE_DESCRIPTION == "Parks & Recreation Areas" || d.LAND_USE_DESCRIPTION == "Vacant/Agricultural" || d.LAND_USE_DESCRIPTION == "Industrial Parks not Developed" || d.LAND_USE_DESCRIPTION == "Public & Semi-Public Vacant" || d.LAND_USE_DESCRIPTION == "Agriculture" || d.LAND_USE_DESCRIPTION == "Park, Recreational or Preserve" || d.LAND_USE_DESCRIPTION == "Golf Course" || d.LAND_USE_DESCRIPTION == "Undeveloped Land" || d.LAND_USE_DESCRIPTION == "Open Water");  })
+  var landData = dataCountiesLand.filter(function(d){ return d.CO_NAME == city && (d.LAND_USE_DESCRIPTION != "Non-Urbanized" && d.LAND_USE_DESCRIPTION != "Institutional and Recreation" && d.LAND_USE_DESCRIPTION != "Open Water Bodies" && d.LAND_USE_DESCRIPTION != "Parks & Recreation Areas" && d.LAND_USE_DESCRIPTION != "Vacant/Agricultural" && d.LAND_USE_DESCRIPTION != "Industrial Parks not Developed" && d.LAND_USE_DESCRIPTION != "Public & Semi-Public Vacant" && d.LAND_USE_DESCRIPTION != "Agriculture" && d.LAND_USE_DESCRIPTION != "Park, Recreational or Preserve" && d.LAND_USE_DESCRIPTION != "Golf Course" && d.LAND_USE_DESCRIPTION != "Undeveloped Land" && d.LAND_USE_DESCRIPTION != "Open Water");  })
 
-  var landuse = ["Undeveloped Acres", 0,0,0,0,0];
+  var landuse = ["Developed Acres", 0,0,0,0,0];
   var landYears = ["x",1970,1980,1990,2000,2010];
 
   var indexThis = 1;
@@ -1135,9 +1135,9 @@ if (dataType == "race"){
 }
 
 if (dataType == "land"){
-  var landData = dataAllLand.filter(function(d){ return d.REGION_NAME == city && (d.LAND_USE_DESCRIPTION == "Non-Urbanized" || d.LAND_USE_DESCRIPTION == "Institutional and Recreation" || d.LAND_USE_DESCRIPTION == "Open Water Bodies" || d.LAND_USE_DESCRIPTION == "Parks & Recreation Areas" || d.LAND_USE_DESCRIPTION == "Vacant/Agricultural" || d.LAND_USE_DESCRIPTION == "Industrial Parks not Developed" || d.LAND_USE_DESCRIPTION == "Public & Semi-Public Vacant" || d.LAND_USE_DESCRIPTION == "Agriculture" || d.LAND_USE_DESCRIPTION == "Park, Recreational or Preserve" || d.LAND_USE_DESCRIPTION == "Golf Course" || d.LAND_USE_DESCRIPTION == "Undeveloped Land" || d.LAND_USE_DESCRIPTION == "Open Water");  })
+  var landData = dataAllLand.filter(function(d){ return d.REGION_NAME == city && (d.LAND_USE_DESCRIPTION != "Non-Urbanized" && d.LAND_USE_DESCRIPTION != "Institutional and Recreation" && d.LAND_USE_DESCRIPTION != "Open Water Bodies" && d.LAND_USE_DESCRIPTION != "Parks & Recreation Areas" && d.LAND_USE_DESCRIPTION != "Vacant/Agricultural" && d.LAND_USE_DESCRIPTION != "Industrial Parks not Developed" && d.LAND_USE_DESCRIPTION != "Public & Semi-Public Vacant" && d.LAND_USE_DESCRIPTION != "Agriculture" && d.LAND_USE_DESCRIPTION != "Park, Recreational or Preserve" && d.LAND_USE_DESCRIPTION != "Golf Course" && d.LAND_USE_DESCRIPTION != "Undeveloped Land" && d.LAND_USE_DESCRIPTION != "Open Water");  })
 
-  var landuse = ["Undeveloped Acres", 0,0,0,0,0];
+  var landuse = ["Developed Acres", 0,0,0,0,0];
   var landYears = ["x",1970,1980,1990,2000,2010];
 
   var indexThis = 1;
@@ -1289,14 +1289,14 @@ map.on('load', function() {
     $("#first").trigger("mousedown");
 
     $("#population").html("3,005,419");
-    $("#land").html("1,328,847");
+    $("#land").html("575,447");
     $("#income").html("$68,778");
     $("#minorities").html("11%");
     $("#poverty").html("25%");
     $("#degrees").html("27%");
 
     $("#populationChange").html("+60%");
-    $("#landChange").html("-19%");
+    $("#landChange").html("+111%");
     $("#incomeChange").html("+88%");
     $("#raceChange").html("+16%");
     $("#povertyChange").html("+3%");
