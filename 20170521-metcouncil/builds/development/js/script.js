@@ -1319,148 +1319,155 @@ map.on('load', function() {
 });
 } else if (selected == "satellite"){
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+// mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 
-var mapStyle = {
-    "version": 8,
-    "name": "Dark",
-    "sources": {
-        "mapbox": {
-            "type": "vector",
-            "url": "mapbox://mapbox.mapbox-streets-v6"
-        },
-        "overlay": {
-            "type": "image",
-            "url": "./data/metro1966.png",
-            "coordinates": [
-                [-93.35296721774532,45.12774071853477],
-                [-92.97801967540039,45.12762157010823],
-                [-92.97664527671149,44.85745467286256],
-                [-93.35728758338274,44.85778181806326]
-            ]
-        }
-    },
-    "sprite": "mapbox://sprites/mapbox/streets-v9",
-    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
-    "layers": [
-        {
-            "id": "background",
-            "type": "background",
-            "paint": {"background-color": "#aaaaaa"}
-        },
-        {
-            "id": "water",
-            "source": "mapbox",
-            "source-layer": "water",
-            "type": "fill",
-            "paint": {"fill-color": "#2c2c2c"}
-        },
-        {
-            "id": "boundaries",
-            "source": "mapbox",
-            "source-layer": "admin",
-            "type": "line",
-            "paint": {"line-color": "#797979", "line-dasharray": [2, 2, 6, 2]},
-            "filter": ["all", ["==", "maritime", 0]]
-        },
-        {
-            "id": "overlay",
-            "source": "overlay",
-            "type": "raster",
-            "paint": {"raster-opacity": 1}
-        },
-        {
-            "id": "cities",
-            "source": "mapbox",
-            "source-layer": "place_label",
-            "type": "symbol",
-            "layout": {
-                "text-field": "{name_en}",
-                "text-font": ["DIN Offc Pro Bold", "Arial Unicode MS Bold"],
-                "text-size": {"stops": [[4, 9], [6, 12]]}
-            },
-            "paint": {
-                "text-opacity": 0,
-                "text-color": "#969696",
-                "text-halo-width": 2,
-                "text-halo-color": "rgba(0, 0, 0, 0.85)"
-            }
-        },
-        {
-            "id": "states",
-            "source": "mapbox",
-            "source-layer": "state_label",
-            "type": "symbol",
-            "layout": {
-                "text-transform": "uppercase",
-                "text-field": "{name_en}",
-                "text-font": ["DIN Offc Pro Bold", "Arial Unicode MS Bold"],
-                "text-letter-spacing": 0.15,
-                "text-max-width": 7,
-                "text-size": {"stops": [[4, 10], [6, 14]]}
-            },
-            "filter": [">=", "area", 80000],
-            "paint": {
-                "text-color": "#969696",
-                "text-halo-width": 2,
-                "text-halo-color": "rgba(0, 0, 0, 0.85)"
-            }
-        }
-    ]
-};
+// var mapStyle = {
+//     "version": 8,
+//     "name": "Dark",
+//     "sources": {
+//         "mapbox": {
+//             "type": "vector",
+//             "url": "mapbox://mapbox.mapbox-streets-v6"
+//         },
+//         "overlay": {
+//             "type": "image",
+//             "url": "./data/metro_full.png",
+//             "coordinates": [
+//               [-94.01979344400419,45.40017445724881],
+//               [-92.631226,45.392664],
+//               [-92.631226,44.476911],
+//               [-94.03004054510949,44.44933241738372] 
+                
+                
+//                 // [-93.35296721774532,45.12774071853477],
+//                 // [-92.97801967540039,45.12762157010823],
+//                 // [-92.97664527671149,44.85745467286256],
+//                 // [-93.35728758338274,44.85778181806326]
+//             ]
+//         }
+//     },
+//     "sprite": "mapbox://sprites/mapbox/streets-v9",
+//     "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+//     "layers": [
+//         {
+//             "id": "background",
+//             "type": "background",
+//             "paint": {"background-color": "#aaaaaa"}
+//         },
+//         {
+//             "id": "water",
+//             "source": "mapbox",
+//             "source-layer": "water",
+//             "type": "fill",
+//             "paint": {"fill-color": "#2c2c2c"}
+//         },
+//         {
+//             "id": "boundaries",
+//             "source": "mapbox",
+//             "source-layer": "admin",
+//             "type": "line",
+//             "paint": {"line-color": "#797979", "line-dasharray": [2, 2, 6, 2]},
+//             "filter": ["all", ["==", "maritime", 0]]
+//         },
+//         {
+//             "id": "overlay",
+//             "source": "overlay",
+//             "type": "raster",
+//             "paint": {"raster-opacity": 1}
+//         },
+//         {
+//             "id": "cities",
+//             "source": "mapbox",
+//             "source-layer": "place_label",
+//             "type": "symbol",
+//             "layout": {
+//                 "text-field": "{name_en}",
+//                 "text-font": ["DIN Offc Pro Bold", "Arial Unicode MS Bold"],
+//                 "text-size": {"stops": [[4, 9], [6, 12]]}
+//             },
+//             "paint": {
+//                 "text-opacity": 0,
+//                 "text-color": "#969696",
+//                 "text-halo-width": 2,
+//                 "text-halo-color": "rgba(0, 0, 0, 0.85)"
+//             }
+//         },
+//         {
+//             "id": "states",
+//             "source": "mapbox",
+//             "source-layer": "state_label",
+//             "type": "symbol",
+//             "layout": {
+//                 "text-transform": "uppercase",
+//                 "text-field": "{name_en}",
+//                 "text-font": ["DIN Offc Pro Bold", "Arial Unicode MS Bold"],
+//                 "text-letter-spacing": 0.15,
+//                 "text-max-width": 7,
+//                 "text-size": {"stops": [[4, 10], [6, 14]]}
+//             },
+//             "filter": [">=", "area", 80000],
+//             "paint": {
+//                 "text-color": "#969696",
+//                 "text-halo-width": 2,
+//                 "text-halo-color": "rgba(0, 0, 0, 0.85)"
+//             }
+//         }
+//     ]
+// };
 
 //'mapbox://styles/mapbox/satellite-v9'
 
-var bounds = [
-    [-93.35296721774532,45.12774071853477], // Southwest coordinates
-    [-92.97664527671149,44.85745467286256]  // Northeast coordinates
-];
+// var bounds = [
+//     [-93.35296721774532,45.12774071853477], // Southwest coordinates
+//     [-92.97664527671149,44.85745467286256]  // Northeast coordinates
+// ];
 
-var beforeMap = new mapboxgl.Map({
-    container: 'old',
-    style: mapStyle,
-    center: [-93.170242, 45.012116], 
-    zoom: 9,
-    minZoom: 9,
-    hash: false,
-    // maxBounds: bounds
-});
+// var beforeMap = new mapboxgl.Map({
+//     container: 'old',
+//     style: mapStyle,
+//     center: [-93.170242, 45.012116], 
+//     zoom: 9,
+//     minZoom: 5,
+//     hash: false,
+//     // maxBounds: bounds
+// });
 
-beforeMap.addControl(new mapboxgl.NavigationControl());
-beforeMap.scrollZoom.disable();
+// beforeMap.addControl(new mapboxgl.NavigationControl());
+// beforeMap.scrollZoom.disable();
 
-var map = new mapboxgl.Map({
-    container: 'current',
-    style: 'mapbox://styles/mapbox/satellite-streets-v9',
-    center: [-93.170242, 45.012116], 
-    zoom: 9,
-    minZoom: 9,
-    hash:false,
-    // maxBounds: bounds
-});
+// beforeMap.on('load', function() {
+//     map.addLayer({
+//         'id': 'wms-test-layer',
+//         'type': 'raster',
+//         'source': {
+//             'type': 'raster',
+//             'tiles': [
 
-map.on('load', function() {
-    map.addLayer({
-        'id': 'wms-test-layer',
-        'type': 'raster',
-        'source': {
-            'type': 'raster',
-            'tiles': [
-              // 'http://gis.uspatial.umn.edu/arcgis/services/Libraries/MSPAerialMosaic_1966/MapServer/WmsServer?f=json'
-                'https://tgis2.uspatial.umn.edu/arcgis/services/Libraries/MetroAerialMosaic_1966/MapServer/WMSServer?request=GetMap&service=WMS&bbox={bbox-epsg-4326}&format=image/png&version=1.3.0&srs=EPSG:4326&width=256&height=256&layers=0,1,2,3'
-            ],
-            'tileSize': 256
-        },
-        'paint': {}
-    });
-  });
+//               // 'http://gis.uspatial.umn.edu/arcgis/services/Libraries/MSPAerialMosaic_1966/MapServer/WmsServer?f=json'
+//                 // 'https://tgis2.uspatial.umn.edu/arcgis/services/Libraries/MetroAerialMosaic_1966/MapServer/WMSServer?request=GetMap&service=WMS&bbox={bbox-epsg-4326}&format=image/png&version=1.3.0&srs=EPSG:4326&width=256&height=256&layers=0,1,2,3'
+//             ],
+//             'tileSize': 256
+//         },
+//         'paint': {}
+//     });
+//   });
 
-var mapBoth = new mapboxgl.Compare(beforeMap, map, {
+// var map = new mapboxgl.Map({
+//     container: 'current',
+//     style: 'mapbox://styles/mapbox/satellite-streets-v9',
+//     center: [-93.170242, 45.012116], 
+//     zoom: 9,
+//     minZoom: 5,
+//     hash:false,
+//     // maxBounds: bounds
+// });
 
-});
+// var mapBoth = new mapboxgl.Compare(beforeMap, map, {
 
-map.addControl(new mapboxgl.NavigationControl());
-map.scrollZoom.disable();
+// });
+
+// map.addControl(new mapboxgl.NavigationControl());
+// map.scrollZoom.disable();
 
 }
 },{}]},{},[1])
