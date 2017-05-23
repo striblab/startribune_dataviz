@@ -2405,6 +2405,15 @@ p {
   cursor: pointer;
 }
 
+.name {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.county {
+  text-align: right;
+}
+
 @media (max-width: 500px) {
   #map {
     position: static;
