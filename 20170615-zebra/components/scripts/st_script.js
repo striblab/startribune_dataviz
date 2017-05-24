@@ -67,7 +67,7 @@ function playScript(step){
     // }
 
     showLayer('extent');
-    plopPopup(50.668945,41.934977,"<h3>The Caspian Sea</h3><div>Zebra mussels come from here!</div>");
+    // plopPopup(50.668945,41.934977,"<h3>The Caspian Sea</h3><div>Zebra mussels come from here!</div>");
     mapFlight(-53.964844, 35.380093,2,0,0);
   }
   if (step == 1){
@@ -80,7 +80,7 @@ function playScript(step){
     //     window.clearTimeout(id);
     // }
 
-    plopPopup(-82.691543,42.435650,"<h3>Lake Saint Claire</h3><div>Help! Zebra mussles first appear in America!</div>");
+    // plopPopup(-82.691543,42.435650,"<h3>Lake Saint Claire</h3><div>Help! Zebra mussles first appear in America!</div>");
 
     mapFlight(-82.441406,41.827619,7,0,0);
     showMarkers(1986);
@@ -542,6 +542,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
     };
 }
 
+function addLists(){
 d3.select("#listing").selectAll(".row")
   .data(dataAll.filter(function(d){ return d.State == "MN"; })).enter().append("div")
   .attr("class",function(d) { return "row"; })
@@ -553,6 +554,21 @@ d3.select("#listing").selectAll(".row")
   .html(function(d,i){ 
     return "<div class='col name'>" + d.Locality + "</div><div class='col county'>" + d.County + "</div>";
   });
+
+$('#filter_box').on('keyup search', function(e){
+    $('.row').hide();
+    var txt = $('#filter_box').val();
+    console.log(txt)
+    $('.row').each(function(){
+       if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1)){
+           $(this).show();
+       }
+    }); 
+});
+
+}
+
+addLists();
 
 });
 });
