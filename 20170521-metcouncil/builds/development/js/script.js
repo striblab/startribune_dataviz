@@ -1225,7 +1225,7 @@ var map = new mapboxgl.Map({
     minZoom: 3
 });
 
-var mapBoth = new mapboxgl.Compare(beforeMap, map, {
+var mapBoth = new mapboxgl.Compare(map, beforeMap, {
     // Set this to enable comparing two maps by mouse movement:
     // mousemove: true
 });
