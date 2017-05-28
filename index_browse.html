@@ -66,7 +66,7 @@
       .at-icon { background-color:#87C944 !important; }
 
 /*ENTRIES*/
-      #articlePane { display:inline-block !important; width:100%; }
+      #articlePane { display:inline-block; width:100%; }
       .articleName{ color: #333; font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: 23px; line-height: 120%; margin: 10px 0 15px 0; }
       .byline { font-family: "Benton Sans",Helvetica,Arial,sans-serif; font-size: .7em; color:#333; }
       .articleEntry { margin:20px; }
@@ -314,6 +314,7 @@
           </div>
         ​</div>
 </section>
+<div id="listHere"></div>
 </div>
 
 <div class="follow"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Follow me on Star Tribune</a></div>
@@ -515,7 +516,7 @@ $('.scrollToTop').click(function(){
 var data = json;
 var dataResources = json2.resources;
 
-d3.select("#articlePane").selectAll("div").data(data.published_master).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
+d3.select("#listHere").selectAll("div").data(data.published_master).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
 
 if (d.git != '') { var git = "<div class='git'><a href='" + d.git + "' target='new_'>View on Github</a></div>"; }
 else { var git = ""; }
@@ -564,6 +565,7 @@ $( ".sort-link" ).click(function() {
   killPaging = true;
   $('#filter_box').val("");
   $('#filter_box').val("");
+  $("#articlePane").show();
   $(".articleEntry").hide();
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
@@ -571,7 +573,7 @@ $( ".sort-link" ).click(function() {
   $("." + $(this).attr("id")).show();
   $("#resourcesBlock").hide();
   if ($(this).attr("id") != "tools") { $(".tools").hide(); }
-  if ($(this).attr("id") == "twitter") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#twitterBlock").show(); }
+  if ($(this).attr("id") == "twitter") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#articlePane").hide(); $("#twitterBlock").show(); }
   if ($(this).attr("id") == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show();
   $("#twitterBlock").hide(); }
   if ($(this).attr("id") == "contributors") { $("#resourcesBlock, .articleEntry").hide(); $(" #contributorsBlock").show(); $("#twitterBlock").hide(); }
@@ -579,6 +581,7 @@ $( ".sort-link" ).click(function() {
 
 $( "#allProjects, #allProjects_m" ).click(function() {
   $(".articleEntry").show();
+  $("#articlePane").show();
   $(".tools").hide();
   $("#resourcesBlock").hide();
   $(".sort-link").css("background-color","#fff");
