@@ -2,6 +2,7 @@ d3.json('./data/invasion.geojson', function(error, invasion) {
 d3.json('./data/invasion.json', function(error, invasionList) {
 d3.json('./shapefiles/waters.json', function(error, waters) {
 d3.json('./shapefiles/extent.json', function(error, extent) {
+d3.json('./shapefiles/species.json', function(error, species) {
 
 var dataAll = invasionList.waters;
 
@@ -32,6 +33,11 @@ map.on('load', function() {
    data: waters
  });
 
+  map.addSource('species', {
+   type: 'geojson',
+   data: species
+ });
+
   map.addSource('extent', {
    type: 'geojson',
    data: extent
@@ -59,6 +65,7 @@ function playScript(step){
 
   if (step == 0){
     hideLayer("waters");
+    hideLayer("species");
     unloadMarkers(1986, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -73,6 +80,7 @@ function playScript(step){
   if (step == 1){
     hideLayer("extent");
     hideLayer("waters");
+    hideLayer("species");
     unloadMarkers(1991, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -96,6 +104,7 @@ function playScript(step){
   if (step == 2){
     hideLayer("extent");
     hideLayer("waters");
+    hideLayer("species");
     unloadMarkers(1992, 2016);
 
     showMarkers(1991)
@@ -103,6 +112,7 @@ function playScript(step){
   }
   if (step == 3){
     hideLayer("extent");
+    hideLayer("species");
     unloadMarkers(1994, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -142,6 +152,7 @@ function playScript(step){
   }
   if (step == 4){
     hideLayer("extent");
+    hideLayer("species");
     // unloadMarkers(1994, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -180,6 +191,7 @@ function playScript(step){
   }
   if (step == 5){ 
     hideLayer("extent");
+    hideLayer("species");
     // unloadMarkers(1994, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -218,6 +230,7 @@ function playScript(step){
   }
   if (step == 6){
     hideLayer("extent");
+    hideLayer("species");
     // unloadMarkers(1994, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -226,6 +239,7 @@ function playScript(step){
     // }
 
     showLayer('waters');
+
     showMarkers(1992)
     setTimeout(function(){ showMarkers(1992); }, 200);
     setTimeout(function(){ showMarkers(1993); }, 400);
@@ -256,6 +270,7 @@ function playScript(step){
   }
   if (step == 7){
     hideLayer("extent");
+    hideLayer("waters");
     // unloadMarkers(1994, 2016);
 
     // var id = window.setTimeout(function() {}, 0);
@@ -263,7 +278,7 @@ function playScript(step){
     //     window.clearTimeout(id);
     // }
 
-    showLayer('waters');
+    showLayer('species');
     showMarkers(1992);
     setTimeout(function(){ showMarkers(1992); }, 200);
     setTimeout(function(){ showMarkers(1993); }, 400);
@@ -298,6 +313,7 @@ function playScript(step){
 
     hideLayer("extent");
     hideLayer('waters');
+    hideLayer('species');
 
     var interval = 800;
 
@@ -350,7 +366,7 @@ function plopLayer(data,color){
        'paint': {
            'fill-antialias' : true,
            'fill-opacity': 1,
-           'fill-color': '#b24e49',
+           'fill-color': color,
            'fill-outline-color': '#333333' 
      },
                   // "filter": [
@@ -368,8 +384,9 @@ function showLayer(data){
     map.setLayoutProperty(data + '-layer', 'visibility', 'visible');
 }
 
-plopLayer('extent','#333333');
-plopLayer('waters','#333333');
+plopLayer('extent','#b24e49');
+plopLayer('waters','#b24e49');
+plopLayer('species','#333333');
 
 function plopMarker(year,rgb,index){
 
@@ -570,6 +587,7 @@ $('#filter_box').on('keyup search', function(e){
 
 addLists();
 
+});
 });
 });
 });
