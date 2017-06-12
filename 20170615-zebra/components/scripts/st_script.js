@@ -1,3 +1,16 @@
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
 d3.json('./data/invasion.geojson', function(error, invasion) {
 d3.json('./data/invasion.json', function(error, invasionList) {
 d3.json('./shapefiles/waters.json', function(error, waters) {
@@ -586,6 +599,20 @@ $('#filter_box').on('keyup search', function(e){
 }
 
 addLists();
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map2 = new mapboxgl.Map({
+    container: 'mapLookup', // container id
+    // style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
+    style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
+    center: [-53.964844, 35.380093], 
+    zoom: 2,
+    minZoom: 2,
+    // maxBounds: bounds
+});
+
+map2.addControl(new mapboxgl.NavigationControl());
+map2.scrollZoom.disable();
 
 });
 });
