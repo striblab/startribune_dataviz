@@ -1,4 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
 d3.json('./data/invasion.geojson', function(error, invasion) {
 d3.json('./data/invasion.json', function(error, invasionList) {
 d3.json('./shapefiles/waters.json', function(error, waters) {
@@ -587,6 +600,20 @@ $('#filter_box').on('keyup search', function(e){
 }
 
 addLists();
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+var map2 = new mapboxgl.Map({
+    container: 'mapLookup', // container id
+    // style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
+    style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
+    center: [-53.964844, 35.380093], 
+    zoom: 2,
+    minZoom: 2,
+    // maxBounds: bounds
+});
+
+map2.addControl(new mapboxgl.NavigationControl());
+map2.scrollZoom.disable();
 
 });
 });
