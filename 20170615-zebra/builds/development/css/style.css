@@ -2161,7 +2161,7 @@ body {
   padding: 0;
 }
 
-#map {
+#map, #mapLookip {
   position: absolute;
   top: 0;
   bottom: 0;
