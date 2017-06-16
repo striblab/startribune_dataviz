@@ -2203,6 +2203,10 @@ body {
   background-color: #ffffff;
 }
 
+#stats {
+  padding: 10px;
+}
+
 #listing {
   height: 300px;
   overflow-x: hidden;
