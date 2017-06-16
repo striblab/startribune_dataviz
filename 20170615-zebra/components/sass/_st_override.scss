@@ -1,6 +1,11 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+.slide {
+    display:none;
 }
 
 #map, #mapLookup {
@@ -15,6 +20,37 @@ body {
     bottom: 0;
     width: 100%;
     clear: both;
+}
+
+.chatter {
+    padding: 10px;
+}
+
+.mapboxgl-popup-close-button {
+    display:none !important;
+}
+
+.title {
+    font-weight:900;
+    font-size:1.4em;
+}
+
+
+#database {
+    position: absolute;
+    width: 400px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1;
+    background-color:#ffffff;
+}
+
+#listing {
+    height:300px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    width:100%;
 }
 
 .map-overlay-container {
@@ -120,13 +156,6 @@ body {
     opacity:0.8;
 }
 
-#listing {
-    height:300px;
-    overflow-x:hidden;
-    overflow-y:auto;
-    width:100%;
-}
-
 .previous {
     float: left;
 }
@@ -189,8 +218,8 @@ small {
     display: block;
 }
 
-.chatter {
-    padding: 10px;
+.description {
+    padding:10px;
 }
 
 p {
@@ -258,7 +287,11 @@ p {
         position: static;
         height: 400px;
     }
-    .map-overlay-container {
+    #mapLookup {
+        position: static;
+        height: 350px;
+    }
+    .map-overlay-container, #database {
         width: 100%;
         position: static;
     }
