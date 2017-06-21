@@ -1,0 +1,201 @@
+<?xml version="1.0"?><!--  <!DOCTYPE metadata SYSTEM "metadata.dtd">  --><metadata><idinfo><citation><citeinfo><origin>Minnesota Department of Education</origin><pubdate>20141013</pubdate><title>Minnesota School District Boundaries, SY2014-2015</title><mgmg1cid></mgmg1cid><pubinfo><publish>Minnesota Department of Education</publish></pubinfo><ftname Sync="TRUE">sd2011</ftname><geoform Sync="TRUE">vector digital data</geoform><onlink>ftp://ftp.lmic.state.mn.us/pub/data/admin_poli/sd1415.zip</onlink></citeinfo></citation><descript><abstract>This file represents the boundaries of all public school districts in the state of Minnesota for school year 2014-2015. Minnesota school districts report any changes to their elementary, middle and high school attendance area boundaries annually. This school district file was dissolved from this statewide information file to show just the statewide school district boundary.  Since 2008, district boundaries have been modified based on county parcels. If parcels are not available then MN Dept. of Natural Resources' Township-Range-Quarter-Quarter Section boundaries are used.</abstract><purpose>This school district boundary information is developed as a GIS shapefile data set and, along with additional information, is used by the Minnesota Department of Education to identify program financial priorities.</purpose><supplinf>Minnesota, MN</supplinf><langdata Sync="TRUE">en</langdata></descript><timeperd><current>Public school district boundaries dissolved from Minnesota attendance boundaries for school year 2014-2015</current><timeinfo><sngdate><caldate>2014</caldate></sngdate></timeinfo></timeperd><status><progress>Complete</progress><update>Annually</update></status><spdom><lboundng><leftbc Sync="TRUE">189783.560000</leftbc><rightbc Sync="TRUE">761653.524100</rightbc><bottombc Sync="TRUE">4816309.330000</bottombc><topbc Sync="TRUE">5472346.500000</topbc></lboundng><bounding><westbc>-97.269688</westbc><eastbc>-89.397194</eastbc><northbc>49.403805</northbc><southbc>43.435423</southbc></bounding></spdom><keywords><theme><themekey>boundaries, school, districts</themekey><themekt>ISO 19115 Topic Category</themekt></theme><place><placekey>Minnesota, MN</placekey></place></keywords><accconst>None</accconst><useconst>If you obtain data from MDE, it is understood that you and/or your organization have the right to use them for any purpose. If you modify them, you are encouraged to apply responsible best practices by documenting those changes in a metadata record.  If you transmit or provide the data to another user, it is your responsibility to provide appropriate content, limitation, warranty and liability information as you see fit.</useconst><browse><browsen>None available</browsen></browse><native>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3500</native><crossref><citeinfo><title>See related school datasets at:
+http://www.mngeo.state.mn.us/chouse/metalong.html#admin</title></citeinfo></crossref><natvform Sync="TRUE">Shapefile</natvform><ptcontac><cntinfo><cntperp><cntorg>Minnesota Department of Education</cntorg><cntper>Scott Freburg</cntper></cntperp><cntpos>GIS Administrator</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1500 Hwy 36 W.</address><city>Roseville</city><state>MN</state><postal>55113</postal></cntaddr><cntvoice>651-582-8789</cntvoice><cntemail>scott.freburg@state.mn.us</cntemail></cntinfo></ptcontac></idinfo><dataqual><attracc><attraccr>Each school district checks the previous year's map for accuracy of school names and boundaries. Changes are verified by the Minnesota Department of Education. School district boundaries are dissolved from a larger statewide school district file containing elementary, middle and high school attendance boundaries. Boundaries are part of an Esri ArcGIS file geodatabase.</attraccr></attracc><logic>Data are topologically structured and verified.</logic><complete>All public school districts within Minnesota are included. There are 333 school district boundaries in this shapefile. One additional boundary exists for Minneapolis-St. Paul Lindbergh airport (UNI_TYP=0).</complete><posacc><horizpa><horizpar>Positional accuracy of the data sources varies widely.  Source scales range between 1:24,000 (or less) and 1:100,000.  Many of the boundaries are hand-drawn by the school districts. See notes on potential boundary inaccuracies under 'Lineage'.
+
+In an on-going process since 2008, school district boundaries have been modified to a greater accuracy using county parcel datasets or Dept. of Natural Resources' Township-Range-Section-Quarter-Quarter Section dataset.</horizpar></horizpa></posacc><lineage><srcinfo></srcinfo><procstep><procdesc>The original 1990 School District file delineation work was done at LMIC (the Land Management Information Center, now MnGeo) on contract to the U.S. Census Bureau. The Census Bureau was under contract to the U.S. Department of Education to create a nationwide school district file and population totals that matched the 1990 Census boundaries. LMIC provided delineations of the school district boundaries to the Census Bureau, based on map information provided by the County Auditor's offices to LMIC. The Census Bureau did the automation of the 1990 file.
+
+Subsequent annual updates have been made to the file to reflect boundary changes, boundary corrections, and school district consolidations. Beginning in 1998, school attendance area boundaries were added. These updates have been done by the Minnesota Legislative Coordinating Commission GIS Office (LCC), LMIC, and the Office of the Secretary of State, with assistance from the Minnesota Department of Education (formerly MN Dept. of Children, Families, and Learning).
+
+The steps used to create the original 1990 file, and subsequent updates to 1999, are outlined below.
+
+CREATION OF THE ORIGINAL 1990 SCHOOL DISTRICT BOUNDARY FILE:
+
+1. Delineation of school district boundaries (LMIC):
+
+LMIC's role was to delineate school district boundaries to match Census county, minor civil division (MCD), tract, and block boundaries. LMIC received a set of large-scale (approx 1:800) maps of census boundaries from the Census Bureau. These census boundary maps included MCD, tract, and block boundaries. 
+
+LMIC obtained school district boundary maps from the auditor's office in each county.  LMIC sent blank Minnesota Department of Transportation County Highway Maps to each County Auditor and received back those maps with the school districts delineated on them. The Auditors' Offices drew the boundaries according to their official records. LMIC still has these maps on file. 
+
+Using the County Auditors' delineation maps, LMIC transferred  the school district boundaries onto the 1:800 Census maps.  The Census had very specific guidelines, which they enforced. Delineations were to match to within 1/16 of an inch - basically, a fine pencil-width.
+
+2. Automation of School District Boundary Linework:
+
+The Census Bureau did the automation of the maps to create the digital file. This was done in two steps:
+
+1. Wherever the linework matched the Census tract, block, MCD, etc., boundaries, exactly, the census units were assigned a school district code via a lookup table.
+
+2. Where the school district boundaries did NOT follow the Census boundaries, then the Census Bureau digitized the necessary linework.  These base maps for automation eventually came back to the state, and are stored in the State Demographic Center files.
+
+3. Population totals (LMIC):
+
+Where the school district boundaries did not match the Census boundaries, LMIC also provided population figures to apportion the Census unit population into the school districts. Rather than apportioning population strictly on the basis of area, this was done through examination of other maps, sometimes, as in the metro area, by counting the houses on aerial photos.  The demographic distribution by school district was important as a basis for funding.
+
+4. File distribution (Census Bureau):
+
+In 1992, the automated 1990 School District Boundary files were delivered by the Census Bureau to the Legislative Coordinating Commission GIS Office (LCC) in TIGER/Line format. LCC extracted the data from the TIGER format and created an ARC coverage, which was then provided to LMIC and other agencies. LMIC did not receive the digital files back from the Census Bureau for any type of review or verification. Errors in the school district boundary file were reported to the LCC and the Secretary of State's Office. These errors were corrected  on the final file. Many of the errors relate to the Census boundary alignment problem - i.e., school district boundary lines were moved to coincide with the appropriate Census boundary.
+
+NOTES ON MISMATCHES OF DATA:
+
+1. The County Auditor's Office is required to delineate school district boundaries by law, and maintains the official record for tax purposes. It must be noted that the school districts also have boundary maps, and that, while the two sets of map boundaries should match, they do not always do so.  In cases where the school district and the county auditor records show different boundaries, this should be resolved locally. It becomes an issue for the maintainers of statewide files when updates are obtained from both sources.
+
+2. Mismatches between the Census Boundary lines and the School District lines: although the school district boundary file generally matches Census lines, it does not always do so. Therefore, mismatches can be legitimate, based upon the original maps from the County Auditors' Offices, and can be verified against the maps on file at LMIC and the State Demographic Center.
+
+ANNUAL UPDATES AFTER 1990:
+
+1. (1992-1996) The LCC made updates to the file as needed, based on boundary changes, boundary corrections, and school district consolidations. Information on necessary updates was forwarded to LCC by the Secretary of State's Office or the Department of Education (formerly the Minnesota Department of Children, Families, and Learning). Most updates to the files involved school district consolidations.  LCC did updates for the years 1992 through 1996.
+
+2. (1997) LMIC obtained the 1996 School District boundary file from the LCC. This file was updated with coding changes and consolidation information for SY1997.  As part of a project for the Minnesota Department of Education, LMIC added school attendance area boundaries to the file.
+
+3. (1998-2005) LMIC maintained this file on a yearly basis while adding and changing attendance boundaries based on revisions sent from the school districts to LMIC. Beginning in 1998, LMIC received attendance area boundary information for all 345+ school districts.
+
+4. (2006)  MDE brought the school district files into a Personal GeoDatabase (PGD). Also included were attendance boundaries and school locations, both public and non-public.
+
+5. (2007) Minor modifications made to attendance boundaries. Two new districts were developed through consolidations. 2902 from Russell, Tyler and Ruthton and 2899 from Plainview and Elgin-Millville.
+
+6. (2008) Minor modifications made to attendance boundaries.   County parcel data used to update district boundaries.
+
+7. (2009) Minor modifications made to attendance and some district boundaries. County parcel data used to update district boundaries.
+
+8. (2010)  County parcel data used to update district boundaries. There are 337 school districts.
+
+9. (2013)  There are 333 school districts for SY2013-14. County parcel data used to update district boundaries along with four new consolidations:
+Morris &amp; Cyrus - now Morris Area 2769
+Round Lake &amp; Brewster - now Round Lake-Brewster 2907
+Brandon &amp; Evansville - now Brandon-Evansville 2908
+Plummer &amp; Oklee - now Red Lake County Central 2906
+
+Additional Information on using County Parcels to update School District Boundaries
+
+1. Districts where county parcels were received from the county and used to update school district boundaries within the county:
+1. Aitkin (1)
+2. Anoka (2)
+3. Becker (3)
+4. Beltrami (4)
+5. Benton (5)
+6. Big Stone (6)
+7. Blue Earth (7)
+8. Brown (8)
+9. Carlton (9)
+10. Carver (10)
+11. Cass (11)
+12. Chisago (12)
+13. Clay (14)
+14. Clearwater (15)
+15. Cook (16)
+16. Crow Wing (18)
+17. Dakota (19)
+18. Douglas (21)
+19. Fillmore (23)
+20. Goodhue (25)
+21. Hennepin (27)
+22. Houston (28)
+23. Hubbard (29)
+24. Itasca (31)
+25. Koochiching (36)
+26. Lake of the Woods (39)
+27. Le Sueur (40)
+28. Lincoln (41)
+29. Lyon (42)
+30. Morrison (49)
+31. Nobles (53)
+32. Olmsted (55)
+33. Otter Tail (56)
+34. Pipestone (59)
+35. Pope (61)
+36. Ramsey (62)
+37. Renville (65)
+38. Rice (66)
+39. Rock (67)
+40. Roseau (68)
+41. St. Louis (69)
+42. Scott (70)
+43. Sherburne (71)
+44. Stearns (73)
+45. Steele (74)
+46. Wadena (80)
+47. Waseca (81)
+48. Washington (82)
+49. Watonwan  (83)
+50. Wilkin (84)
+51. Winona (85)
+52. Wright (86)
+
+2. Districts where county parcels online (county website) were used to update school district boundaries within the county:
+1. Chippewa (12)
+2. Isanti (30)
+3. Martin (46)
+4. Sibley (72)
+5. Todd (77)
+6. Wabasha (79)
+
+3. District where county parcel not needed:
+1. Lake (38)
+
+4. Districts where county parcels are incomplete. No boundary changes:
+1. Cottonwood (17)
+2. Dodge (20)
+3. Faribault (22)
+4. Freeborn (24)
+5. Grant (26)
+6. Jackson (32)
+7. Kanabec (33)
+8. Kandiyohi (34)
+9. Kittson (35)
+10. Lac Qui Parle (37)
+11. McLeod (43)
+12. Mahnomen (44)
+13. Marshall (45)
+14. Meeker (47)
+15. Mille Lacs (48)
+16. Mower (50)
+17. Murray (51)
+18. Nicollet (52)
+19. Norman (54)
+20. Pennington (57)
+21. Pine (58)
+22. Polk (60)
+23. Red Lake (63)
+24. Redwood (64)
+25. Stevens (75)
+26. Swift (76)
+27. Traverse (78)
+28. Yellow Medicine (87)
+
+- Total counties where parcel data used to update school district boundaries
+58
+- Total counties where parcel not yet available
+28
+- One county not necessary for boundary update.
+
+Since 2004, school district data has been maintained and edited in Esri ArcGIS geodatabase format. Shapefiles are created for distribution.</procdesc><proccont><cntinfo><cntperp><cntper>Scott Freburg</cntper><cntorg>Land Management Information Center</cntorg></cntperp><cntpos>Senior GIS Specialist</cntpos><cntaddr><addrtype>mailing address</addrtype><address>658 Cedar Street</address><city>St. Paul</city><state>MN</state><postal>55155</postal><country>USA</country></cntaddr><cntvoice>651-201-2485</cntvoice><cntemail>scott.freburg@state.mn.us</cntemail><hours>0700 - 1530</hours></cntinfo></proccont><procsv>ArcMAP 9.1</procsv><procdate>May 2008</procdate><proctime>3 months</proctime></procstep></lineage></dataqual><spdoinfo><direct>Vector</direct><mgmg3obj>Polygon</mgmg3obj><mgmg3til>State</mgmg3til><ptvctinf><esriterm Name="sd2011"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">338</efeacnt><spindex Sync="TRUE">TRUE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm><sdtsterm Name="sd2011"><sdtstype Sync="TRUE">G-polygon</sdtstype><ptvctcnt Sync="TRUE">338</ptvctcnt></sdtsterm></ptvctinf></spdoinfo><spref><vertdef><altsys><altdatum>not applicable</altdatum></altsys><depthsys><depthdn>not applicable</depthdn></depthsys></vertdef><horizsys><planar><gridsys><gridsysn>Universal Transverse Mercator</gridsysn><utm><utmzone>15</utmzone></utm></gridsys><planci><plandu>meters</plandu></planci></planar><geodetic><horizdn>NAD83</horizdn><ellips>GRS80</ellips></geodetic></horizsys></spref><eainfo><detailed><enttyp><enttypl>sd2013</enttypl><enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">338</enttypc></enttyp><attr><attrlabl>FID</attrlabl><attrdef>Internal feature number.</attrdef><attrdefs>ESRI</attrdefs><attrdomv><udom>Sequential unique whole numbers that are automatically generated.</udom></attrdomv><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl>Shape</attrlabl><attrdef>Feature geometry.</attrdef><attrdefs>ESRI</attrdefs><attrdomv><udom>Coordinates defining the features.</udom></attrdomv><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale></attr><attr><attrlabl>UNI_TYP</attrlabl><attalias Sync="TRUE">UNI_TYP</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth></attr><attr><attrlabl>SDNUM</attrlabl><attalias Sync="TRUE">SDNUM</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">4</attwidth></attr><attr><attrlabl>SDNAME</attrlabl><attalias Sync="TRUE">SDNAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">40</attwidth></attr><attr><attrlabl>SQMILES</attrlabl><attalias Sync="TRUE">SQMILES</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">9</attwidth><atnumdec Sync="TRUE">2</atnumdec></attr><attr><attrlabl>ACRES</attrlabl><attalias Sync="TRUE">ACRES</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">10</attwidth><atnumdec Sync="TRUE">2</atnumdec></attr><attr><attrlabl>WEB_URL</attrlabl><attalias Sync="TRUE">WEB_URL</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">100</attwidth></attr></detailed><overview><eaover>UNI_TYP (2,2,C)
+UNI_MAJ   (4,4,I)
+UNI_NAM (40,40,C)
+SQMILES (DOUBLE,8,2)
+ACRES     (DOUBLE,10,2)
+WEB_URL (150,150,C)</eaover><eadetcit>UNI_TYP - This is an MDE identifier. It is added so that Minneapolis and Aitkin school districts, which are both SD #1, can be identified separately.
+  "3" - Minneapolis (1), South St. Paul (6)
+  "2" - Franconia (323), Prinsburg (815)
+  "1" - Remaining school districts
+  "0" - Minneapolis-St. Paul International Airport
+
+UNI_MAJ - 1 (Aitkin) to 2908 (Brandon-Evansville)
+
+UNI_NAM - Aitkin (1) to Brandon-Evansville (2908)
+
+SQMILES - Square miles for each district
+
+ACRES - Acres for each district
+
+WEB_URL - School district website</eadetcit></overview></eainfo><distinfo><resdesc>School district boundaries 2014-2015</resdesc><distliab>The Minnesota Department of Education (MDE) does not warrant the results you may obtain by using this dataset. This dataset is provided ''as is'' without express or implied warranties, including warranties of merchantability and fitness. In no event will MDE be liable for any consequential, incidental or special damages, including any lost profits or lost savings, even if an MDE  representative has been advised of the possibility of such damages or any other claim by any third party.
+
+In obtaining this data from MDE and MnGeo, it is understood that you and/or your organization have the right to use them for any purpose. If you modify them, you are encouraged to apply responsible best practices by documenting those changes in a metadata record.  If you transmit or provide the data to another user, it is your responsibility to provide appropriate content, limitation, warranty and liability information as you see fit.
+
+MnGeo's disclaimer is online:  http://www.mngeo.state.mn.us/chouse/disclaimer.html</distliab><stdorder><digform><digtinfo><formname>Shapefile</formname><transize>less than 1 megabyte</transize><dssize Sync="TRUE">3.030</dssize></digtinfo></digform><ordering>1.  GIS data:  this data set is distributed on the internet by clicking below after Online Linkage.  Doing so will tell your browser to start downloading a 'ZIP' file which will contain the following:
+
+- Data in shapefile (.shp, .shx., .dbf) format
+- Documentation (.html)
+- NOTICE.TXT, the disclaimer.
+
+After downloading this 'zip' file, uncompress (unzip) it to extract the files described above. For help, see:  http://www.gda.state.mn.us/resource.html?Id=16253#compress
+
+2.  School district maps:  These maps show district and attendance boundaries, and public and non-public school program locations.  Download in PDF format or order printed wallmaps from:
+   http://www.gda.state.mn.us/maps/SchoolDistricts/</ordering></stdorder><distrib><cntinfo><cntperp><cntorg>Minnesota Department of Education</cntorg><cntper>Scott Freburg</cntper></cntperp><cntpos>GIS Administrator</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1500 Hwy 36 W.</address><city>Roseville</city><state>MN</state><postal>55113</postal></cntaddr><cntvoice>651-582-8789</cntvoice><cntemail>scott.freburg@state.mn.us</cntemail></cntinfo></distrib></distinfo><metainfo><metd>20141017</metd><metstdn>Minnesota Geographic Metadata Guidelines</metstdn><metstdv>1.2</metstdv><metextns><onlink>http://www.mngeo.state.mn.us/committee/standards/mgmg/metadata.htm</onlink></metextns><langmeta Sync="TRUE">en</langmeta><mettc Sync="TRUE">local time</mettc><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns><metc><cntinfo><cntperp><cntorg>Minnesota Department of Education</cntorg><cntper>Scott Freburg</cntper></cntperp><cntpos>GIS Administrator</cntpos><cntaddr><addrtype>mailing and physical</addrtype><address>1500 Hwy 36 W.</address><city>Roseville</city><state>MN</state><postal>55113</postal></cntaddr><cntvoice>651-582-8789</cntvoice><cntemail>scott.freburg@state.mn.us</cntemail></cntinfo></metc></metainfo><Esri><ModDate>20110923</ModDate><ModTime>10545100</ModTime><CreaDate>20100820</CreaDate><CreaTime>10351300</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20100913</SyncDate><SyncTime>15162900</SyncTime><MetaID>{3B4335ED-B860-4901-BC8A-C912B559ED78}</MetaID></Esri><mdDateSt Sync="TRUE">20110923</mdDateSt><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 3; ESRI ArcCatalog 9.3.1.3500</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">sd2011</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><dataExt><geoEle><GeoBndBox esriExtentType="native"><westBL Sync="TRUE">189783.56</westBL><eastBL Sync="TRUE">761653.5241</eastBL><northBL Sync="TRUE">5472346.5</northBL><southBL Sync="TRUE">4816309.33</southBL><exTypeCode Sync="TRUE">1</exTypeCode></GeoBndBox></geoEle></dataExt><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-97.269688</westBL><eastBL Sync="TRUE">-89.397194</eastBL><northBL Sync="TRUE">49.403805</northBL><southBL Sync="TRUE">43.435423</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\8HP25J1\E$\MDEFNS_Data\Spatial_Data\SD_Data\SY2010-11\Final_Datasets\MNGEO\sd2011.shp</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">3.030</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="sd2011"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">338</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">NAD_1983_UTM_Zone_15N</identCode></refSysID></RefSystem></refSysInfo></metadata>
