@@ -2467,4 +2467,12 @@ p {
     width: 100%;
     clear: both;
   }
+
+  .breaker {
+    display: none;
+  }
+
+  .mapboxgl-ctrl-top-right {
+    display: none !important;
+  }
 }
