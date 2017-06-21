@@ -276,7 +276,7 @@
 
 <div id="sidebar">
 
-<div class="icon sort-link selected articles" id="allProjects_m"><img data="startribune" src="img/striblab.png" alt="striblab" /></div>
+<div class="icon sort-link selected articles" id="allProjects_m" data="startribune"><img src="img/striblab.png" alt="striblab" /></div>
 <div class="icon sort-link" id="twitter"><img src="img/twitter.png" alt="twitter" /></div>
 <div class="icon sort-link" id="resources"><img src="img/tools.png" alt="tools" /></div>
 <div class="icon sort-link" id="tools"><img src="img/code.png" alt="code" /></div>
@@ -428,31 +428,7 @@
 <p>StribLab is the work of Frey Hargarten and many talented journalists across the StarTribune newsroom. All code and public datasets are open source and free for adaption and repurposing.</p><p><a href="http://bit.ly/2dHeC2O" key="E502 A15E A8D1 8CAA 478A F1CE 13AC DE60 A335 72D4">PGP Key</a></p>
 
 <div class="breaker"></div>
-<!-- 
-<div id="linkFarm" class="footerLinks">
-<div class="linkDiv">
-<h4><img src="http://freyhargarten.com/_base/img/pm_logo.png" width="50" /></h4>  
-<h4><strong><a href="http://freyhargarten.com">Frey Hargarten</a></strong></h4>
-<div class="linkage"><a href="https://www.linkedin.com/in/jeffhargarten">LinkedIn</a> | <a href="https://github.com/jhargarten">Github</a></div>
-</div>
-<div class="linkDiv">
-<h4><img src="http://freyhargarten.com/_base/img/striblab.png" width="50" /></h4>  
-<h4><strong><a href="http://striblab.github.io/startribune_dataviz">StribLab</a></strong></h4>
-<a href="http://www.startribune.com/jeff-hargarten/274254381/">StarTribune</a> | <a href="http://startribune.com/local/datadrop">Data Drop</a> | <a href="https://muckrack.com/jeffhargarten">MuckRack</a>
-</div>
-<div class="linkDiv">  
-<h4><img src="http://freyhargarten.com/_base/img/dm_logo.png" width="50" /></h4>  
-<h4><strong><a href="http://portalmancy.org">Datamancy</a></strong></h4>
-<div class="linkage"><a href="https://twitter.com/jeffhargarten">Twitter</a> | <a href="https://www.facebook.com/jeffhargarten">Facebook</a> | <a href="https://www.instagram.com/jeffhargarten/">Instagram</a></div>
-</div>
-<div class="linkDiv">
-<h4><img src="http://freyhargarten.com/_base/img/deadskies.png" width="50" /></h4>  
-<h4><strong><a href="http://deadskies.org">Dead Skies</a></strong></h4>
-<div class="linkage"><a href="http://jhshadowflare.deviantart.com/">DeviantArt</a> | <a href="http://jeffhargarten.tumblr.com/">Tumblr</a> | <a href="https://soundcloud.com/jeffhargarten">Soundcloud</a></div>
-</div>
-</div>
 
-<div class="breaker"></div> -->
 </div>
 
 <div id="topmenu">
@@ -478,35 +454,8 @@
 <script src="//assets.juicer.io/embed.js" type="text/javascript"></script>
 
 <script>
-// $(window).on('resize', function(event){
-//     var windowWidth = $(window).width();
-// if(windowWidth < 933){
-//     $(".nav-utility-btn").text("");
-// }
-// });
-
-// $(document).ready(function() {
-//     var windowWidth = $(window).width();
-// if(windowWidth < 933){
-//     $(".nav-utility-btn").text("");
-// }
-// });
-</script>
-
-<script>
-//live json magic
-
-//https://script.google.com/a/macros/umn.edu/s/AKfycbzOAHrfmtGJMR9crHeF9zdAhqU9saB9YzKf1Xxivfs/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=Sheet1
-//https://script.google.com/macros/s/AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY/exec?id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master
-
-// $jsonData = file_get_contents("https://script.googleusercontent.com/macros/echo?user_content_key=BOfjI4TSNmVu370MsVSQB_Uyyblk_gZzoGt5pocAksdR5w4v_f2ujy3Itp6RrgmHu-1uDbWlU06h6dNs9MBqWM2rkCMrzZGwOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMWojr9NvTBuBLhyHCd5hHa3HMflvAE5oEneTLZU5s79KARkcyFDMjX0ewt5-cuI2hRHouKSPCrKRcgufhrII6-M3MleihyRS6Yxs7ziheq_kx8s3fq8FhcV7V45FBz4fadfh_z-4qMMEa0mO-EXf9WyjPuXlbvplVwqJbeTowOR_fVIgxkfofiQ&lib=Mpc9sEUZubx48Zop7g8xYBjbZ7jG6IkQL");
-
-
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master", function(error, json) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=resources", function(error, json2) {
-
-// $(".nav-section-link").text("StribLab");
-// $(document).prop('title', 'Data-driven storytelling, maps, charts and more | Startribune.com');
 
 $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
@@ -682,7 +631,7 @@ $(document).ready(function () {
         $(".menu-btn a").toggleClass('btn-open').toggleClass('btn-close');
     });
 
-    $(".icon img").click(function () {
+    $(".icon").click(function () {
         $(".socialBox").hide();
         $(".icon").removeClass('selected');
         // window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
