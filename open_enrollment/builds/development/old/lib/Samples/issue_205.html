@@ -1,0 +1,132 @@
+  <!doctype html>
+
+<!--[if lte IE 8]><SCRIPT src='source/excanvas.js'></script><![endif]--><SCRIPT src='../ChartNew.js'></script>
+
+<SCRIPT>
+
+
+
+var charJSPersonnalDefaultOptions = { decimalSeparator : "," , thousandSeparator : ".", roundNumber : "none", graphTitleFontSize: 2 };
+
+defCanvasWidth=600;
+defCanvasHeight=300;
+
+
+
+
+
+ var BarData = {
+	labels : ["January","February","March","April","May","June","July"],
+	datasets : [
+		{
+			strokeColor : "rgba(220,220,220,1)",
+			pointColor : "rgba(220,220,220,1)",
+			pointDotStrokeWidth : 1,
+			pointStrokeColor : "blue",
+			data : [10,20,30,24,32,18,15],
+			title : "Bar 1"
+		},
+		{
+			fillColor : "rgba(151,187,205,0.5)",
+			strokeColor : "rgba(151,187,205,1)",
+			pointColor : "rgba(151,187,205,1)",
+			pointDotStrokeWidth : 1,
+			pointStrokeColor : "#fff",
+			data : [0,1,0,2,25,0,4],
+		      title : "Bar 2"
+		}
+	]
+}
+
+
+
+
+
+</SCRIPT>
+
+
+<html>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<head>
+		<title>Issue 205</title>
+	</head>
+	<body>
+   
+  <center>
+    <FONT SIZE=6><B>Demo of ChartNew.js !</B></FONT>    <BR>
+  <canvas id="canvas_Bar1" height="300" width="400"></canvas>
+  <canvas id="canvas_Bar2" height="300" width="400"></canvas>
+  <canvas id="canvas_Bar3" height="300" width="400"></canvas>
+  <canvas id="canvas_Bar4" height="300" width="400"></canvas>
+    <script>
+    
+  var opts1= {
+  	animation : false,
+  	legend : true,
+	inGraphDataShow : true, 
+	datasetFill : false,
+	inGraphDataYPosition: 3,
+	inGraphDataVAlign: "top",
+	inGraphDataPaddingY: -3,
+	graphTitleFontSize: 18,
+	graphTitle : "With default value for inGraphData options" 
+	};  
+
+  var opts2= {
+  	animation : false,
+  	legend : true,
+	inGraphDataShow : true, 
+	datasetFill : false,
+	inGraphDataYPosition: [3,3],
+	inGraphDataVAlign: ["top","bottom"],
+	inGraphDataPaddingY: [-3,3],
+	graphTitle : "Solution 1" 
+	};  
+
+  var opts3= {
+  	animation : false,
+  	legend : true,
+	inGraphDataShow : true, 
+	datasetFill : false,
+	inGraphDataYPosition: [3,3],
+	inGraphDataVAlign: ["top","bottom"],
+	inGraphDataPaddingY: [-3,3],
+	inGraphDataTmpl: "<%=(v3 > 0 ? v3 : '')%>",
+	graphTitle : "Solution 2 (0 not displayed)" 
+	};  
+	
+function computeInGraphVAlign(area, ctx, data,statData, posi,posj,othervars) {
+	if(posi==1 && 1*data.datasets[posi].data[posj]<6) return("bottom");
+	else return("top");
+}
+
+function computeInGraphPaddingY(area, ctx, data,statData, posi,posj,othervars) {
+	if(posi==1 && 1*data.datasets[posi].data[posj]<6) return(3);
+	else return(-3);
+}
+
+  var opts4= {
+  	animation : false,
+  	legend : true,
+	inGraphDataShow : true, 
+	datasetFill : false,
+	inGraphDataYPosition: 3,
+	inGraphDataVAlign: computeInGraphVAlign,
+	inGraphDataPaddingY: computeInGraphPaddingY,
+	inGraphDataTmpl: "<%=(v3 > 0 ? v3 : '')%>",
+	graphTitleFontSize: 18,
+	graphTitle : "Solution 3 - some options through a function" 
+	};  
+
+
+
+window.onload = function() {
+	var bar1 = new Chart(document.getElementById("canvas_Bar1").getContext("2d")).StackedBar(BarData,opts1);
+	var bar2 = new Chart(document.getElementById("canvas_Bar2").getContext("2d")).StackedBar(BarData,opts2);
+	var bar3 = new Chart(document.getElementById("canvas_Bar3").getContext("2d")).StackedBar(BarData,opts3);
+	var bar4 = new Chart(document.getElementById("canvas_Bar4").getContext("2d")).StackedBar(BarData,opts4);
+
+ }
+    </script>
+  </body>
+</html>

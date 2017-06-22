@@ -1,0 +1,141 @@
+ <!doctype html>
+ <SCRIPT src='../ChartNew.js'></script>
+ <SCRIPT>
+ defCanvasWidth=1400;
+ defCanvasHeight=800;
+ var mydata1 = {
+labels : ["January","February","March","April","May","June","July"],
+datasets : [
+    {
+        fillColor : "rgba(220,220,220,0.5)",
+        strokeColor : "rgba(220,220,220,1)",
+        pointColor : "rgba(220,220,220,1)",
+        pointStrokeColor : "#fff",
+        data : [0.65,0.59,0.90,0.81,0.56,0.55,0.40],
+                    title : "pFirst data"
+    },
+    {
+        fillColor : "rgba(151,187,205,0.5)",
+        strokeColor : "rgba(151,187,205,1)",
+        pointColor : "rgba(151,187,205,1)",
+        pointStrokeColor : "#fff",
+        data : [0.28,0.48,0.40,0.19,0.96,0.27,1.00],
+                    title : "pSecond data"
+    }
+]
+ }
+ var mydata2 = [
+{
+    value : 30,
+    color: "#D97041",
+            title : "data1"
+},
+{
+    value : 90,
+    color: "#C7604C",
+            title : "data2"
+},
+{
+    value : 24,
+    color: "#21323D",
+            title : "data3"
+},
+{
+    value : 58,
+    color: "#9D9B7F",
+            title : "data4"
+},
+{
+    value : 82,
+    color: "#7D4F6D",
+            title : "data5"
+},
+{
+    value : 8,
+    color: "#584A5E",
+            title : "data6"
+}
+ ]
+ var opt1 = {
+  multiGraph : true,
+  canvasBorders : true,
+  canvasBordersWidth : 3,
+  canvasBordersColor : "black",
+  graphTitle : "Pie",
+  legend : true,
+  inGraphDataShow : true,
+  annotateDisplay : true,
+  graphTitleFontSize: 18,
+  spaceTop : 30,
+  spaceBottom : (defCanvasHeight-30)/2,
+  spaceRight : defCanvasWidth/2,
+  crossText : ["Multiple graph in a single Canvas"],
+  crossTextIter : ["first"],
+  crossTextRelativePosX : [-2],
+  crossTextRelativePosY : [0],
+  crossTextPosY : [20],
+  crossTextFontSize : [20],
+  crossTextFontColor : ["black"]
+ }
+ var opt2 = {
+  multiGraph : true,
+  canvasBorders : true,
+  canvasBordersWidth : 3,
+  canvasBordersColor : "black",
+  graphTitle : "Doughnut",
+  legend : true,
+  inGraphDataShow : true,
+  annotateDisplay : true,
+  graphTitleFontSize: 18,
+  spaceTop : 30,
+  spaceBottom : (defCanvasHeight-30)/2,
+  spaceLeft : defCanvasWidth/2
+ }
+ var opt3 = {
+  multiGraph : true,
+  canvasBorders : true,
+  canvasBordersWidth : 3,
+  canvasBordersColor : "black",
+  graphTitle : "Line",
+  legend : true,
+  inGraphDataShow : true,
+  annotateDisplay : true,
+  graphTitleFontSize: 18,
+  spaceTop : 30 +(defCanvasHeight-30)/2,
+  spaceRight : defCanvasWidth/2
+ }
+ var opt4 = {
+  multiGraph : true,
+  canvasBorders : true,
+  canvasBordersWidth : 3,
+  canvasBordersColor : "black",
+  graphTitle : "Bar",
+  legend : true,
+  inGraphDataShow : true,
+  annotateDisplay : true,
+  graphTitleFontSize: 18,
+  spaceTop : 30 +(defCanvasHeight-30)/2,
+  spaceLeft : defCanvasWidth/2,
+ }
+ </SCRIPT>
+ <html>
+   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<head>
+    <title>Demo ChartNew.js</title>
+</head>
+<body>
+    <center>
+    <FONT SIZE=6><B>Demo of ChartNew.js !</B></FONT>    <BR>
+    <script>
+    var ctx;
+    document.write("<canvas id=\"canvas_Multigraph\" height=\""+defCanvasHeight+"\" width=\""+defCanvasWidth+"\"></canvas>");
+ window.onload = function() {
+     var myGraph = new Chart(document.getElementById("canvas_Multigraph").getContext("2d"))
+     myGraph.Pie(mydata2,opt1,myGraph);
+     myGraph.Doughnut(mydata2,opt2,myGraph);
+     myGraph.Line(mydata1,opt3,myGraph);
+     myGraph.Bar(mydata1,opt4,myGraph);
+ }
+ </script>
+ </body>
+ </html>

@@ -244,7 +244,7 @@ p {
 }
 
 .legends {
-    width: 247px;
+    width: 300px;
     height: auto;
     text-align: center;
     margin-right: auto;
@@ -303,5 +303,11 @@ p {
         position: static;
         width: 100%;
         clear: both;
+    }
+    .breaker {
+        display:none;
+    }
+    .mapboxgl-ctrl-top-right {
+        display:none !important;
     }
 }
