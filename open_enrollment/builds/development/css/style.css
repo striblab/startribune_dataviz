@@ -1843,3 +1843,30 @@ header[role="banner"] {
   bottom: 0;
   width: 100%;
 }
+
+.map-overlay-container {
+  position: absolute;
+  width: 400px;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 1;
+}
+
+.map-overlay {
+  font: 12px/20px "Benton Sans", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.map-overlay h2,
+.map-overlay p {
+  margin: 0 0 10px;
+}
+
+.switch:hover, .switch {
+  margin: 0 !important;
+  width: 32%;
+}
