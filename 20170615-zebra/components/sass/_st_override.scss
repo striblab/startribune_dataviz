@@ -31,8 +31,13 @@ body {
 }
 
 .title {
-    font-weight:900;
-    font-size:1.4em;
+    font-family: $bentonSans;
+    font-size: 16px;
+    line-height: 120%;
+    color: #333;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    font-weight:bold;
 }
 
 
@@ -41,7 +46,7 @@ body {
     width: 400px;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding-bottom: 10px;
     z-index: 1;
     background-color:#ffffff;
 }
@@ -223,7 +228,11 @@ small {
 }
 
 .description {
-    padding:10px;
+    font-family: $bentonSans;
+    font-size: 13px;
+    line-height: 120%;
+    color: #333;
+    margin: 0 0 30px 0;
 }
 
 p {
