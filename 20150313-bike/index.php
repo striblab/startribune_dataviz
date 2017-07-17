@@ -84,6 +84,15 @@ color: #999999;
 text-decoration: underline;
 }
 	
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+}
 
 /*INTRO FOR DAY ONE ONLY*/
 	
@@ -538,6 +547,7 @@ Tony Brown is a Minneapolis-based freelance writer, working primarily in journal
 <!--close bikeBucket-->
 </div>
 
+<div class="byline">Source: Star Tribune reporting | Graphic by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten, Star Tribune</a> | <a href="../data/maindata.xlsx" target="new_">Download Data</a></div>
 </div>
 
 <script>

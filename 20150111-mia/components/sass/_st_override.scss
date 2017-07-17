@@ -1,24 +1,170 @@
 /* PROJECT STYLES */
-  .nvtooltip { position: absolute; background-color: rgba(255,255,255,1); padding: 10px; border: 1px solid #ddd; z-index: 10000; width:280px; font-family: helvetiva, sans-serif;   font-size: 16px; transition: opacity 200ms linear; -moz-transition: opacity 200ms linear; -webkit-transition: opacity 200ms linear; transition-delay: 200ms; -moz-transition-delay: 200ms; -webkit-transition-delay: 200ms; -moz-box-shadow: 4px 4px 8px rgba(0,0,0,.5); -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,.5); box-shadow: 4px 4px 8px rgba(0,0,0,.5); -moz-border-radius: 10px; border-radius: 10px; pointer-events: none; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-  .nvtooltip h3 { margin: 0; padding: 5px; text-align: center; font-weight:900; background:white !important; font-size:14px; }
-  .nvtooltip p { margin: 5px 0 0 0; padding: 0; text-align: center; font-size: 13px; }
-  .nvtooltip span { display: inline-block; margin: 2px 0; }
-  .nvtooltip-pending-removal { position: absolute; pointer-events: none; }
-  .d3-tip { line-height: 1; font-weight: bold; padding: 12px; background: rgba(0, 0, 0, 0.8); color: #fff; border-radius: 2px; }
-  .d3-tip:after { box-sizing: border-box; display: inline;font-size: 10px; width: 100%; line-height: 1; color: rgba(0, 0, 0, 0.8); content: "\25BC"; position: absolute; text-align: center; }
-  .d3-tip.n:after { margin: -1px 0 0 0; top: 100%; left: 0; }
-  #africa{ background-color: #00996f; }
-  #americas{ background-color: #d90d31; }
-  #oceania{ background-color: #ffb818; }
-  #asia{ background-color: #009ac8; }
-  #japanese{ background-color: #ff6600; }
-  #decorative{ background-color: #7a9900; }
-  #paintings{ background-color: #850dd9; }
-  #photography{ background-color: #d90dd7; }
-  #drawings{ background-color: #18e7ff; }
-  .myButton { -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; border:0; display:inline-block; cursor:pointer; color:#ffffff; font-family: helvetiva, sans-serif;  font-size:12px; padding:5px; text-decoration:none; }
-  .myButton:hover { background-color:#444 !important; }
-  button:focus {outline:0 !important;} 
-  .labeling{font-family: helvetiva, sans-serif;position:absolute; left:100px; top:95px; font-size:18px; font-weight:900;}
-  svg{width:630 !important; height:320 !important;}
-  p {font-family: helvetiva, sans-serif; font-size:12px;}
+
+.nvtooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    border: 1px solid #ddd;
+    z-index: 10000;
+    width: 280px;
+    font-family: helvetiva, sans-serif;
+    font-size: 16px;
+    transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+    -webkit-transition: opacity 200ms linear;
+    transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -webkit-transition-delay: 200ms;
+    -moz-box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nvtooltip h3 {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-weight: 900;
+    background: white !important;
+    font-size: 14px;
+}
+
+.nvtooltip p {
+    margin: 5px 0 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+.nvtooltip span {
+    display: inline-block;
+    margin: 2px 0;
+}
+
+.nvtooltip-pending-removal {
+    position: absolute;
+    pointer-events: none;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+#africa {
+    background-color: #00996f;
+}
+
+#americas {
+    background-color: #d90d31;
+}
+
+#oceania {
+    background-color: #ffb818;
+}
+
+#asia {
+    background-color: #009ac8;
+}
+
+#japanese {
+    background-color: #ff6600;
+}
+
+#decorative {
+    background-color: #7a9900;
+}
+
+#paintings {
+    background-color: #850dd9;
+}
+
+#photography {
+    background-color: #d90dd7;
+}
+
+#drawings {
+    background-color: #18e7ff;
+}
+
+.myButton {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: helvetiva, sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.myButton:hover {
+    background-color: #444 !important;
+}
+
+button:focus {
+    outline: 0 !important;
+}
+
+.labeling {
+    font-family: helvetiva, sans-serif;
+    position: absolute;
+    left: 100px;
+    top: 95px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+svg {
+    width: 630 !important;
+    height: 320 !important;
+}
+
+p {
+    font-family: helvetiva, sans-serif;
+    font-size: 12px;
+}
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    color: #888;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
