@@ -2425,7 +2425,7 @@ h1.mobile-hedline {
     text-align: center;
   }
 }
-@media (max-width: 605px) {
+@media (max-width: 620px) {
   .article-headline {
     display: none;
   }
@@ -2453,6 +2453,7 @@ h1.mobile-hedline {
 
   .featherlight .featherlight-content,
   .featherlight-content .card {
+    width: 75% !important;
     background-color: #ffffff !important;
     overflow-y: auto !important;
     overflow-x: hidden;
@@ -2535,6 +2536,14 @@ h1.mobile-hedline {
     text-align: left !important;
   }
 
+  .yearLabel {
+    width: 4.7%;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
   #clickyStuff {
     visibility: hidden;
     text-align: center;
@@ -2587,7 +2596,7 @@ h1.mobile-hedline {
 
   #chartLabels .yearLabel {
     font-size: 0.5em;
-    width: 4.6%;
+    width: 4.37%;
   }
 
   #filter input {
