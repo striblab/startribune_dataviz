@@ -13,10 +13,30 @@ body {
     font-family: Popular, sans-serif;
 }
 
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+}
+
 #map {
     height: 500px;
     width: 100%;
     cursor: pointer;
+}
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
 }
 
 .legend label,
@@ -33,6 +53,16 @@ body {
 .leaflet-control-zoom {
     visibility: hidden;
     display: none;
+}
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
 }
 
 .axis path,
