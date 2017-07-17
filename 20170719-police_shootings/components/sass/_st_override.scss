@@ -738,6 +738,10 @@ h1.mobile-hedline {
         text-shadow: none;
     }
     
+    .readmore {
+      display:none !important;
+    }
+    
     .featherlight .featherlight-content,
     .featherlight-content .card {
         background-color: #ffffff !important;
@@ -844,7 +848,7 @@ h1.mobile-hedline {
     }
     
     .yearLabel {
-        width: 4.55%;
+        width: 4.44%;
     }
     
     #mobileZoom {
@@ -884,7 +888,7 @@ h1.mobile-hedline {
     .card {
         padding: 20px;
         height: auto !important;
-        width: 32%;
+        width: 37%;
         display: block;
     }
     
