@@ -897,7 +897,7 @@ h1.mobile-hedline {
     .card {
         padding: 20px;
         height: auto !important;
-        width: 37%;
+        width: 30%;
         display: block;
     }
     
@@ -906,10 +906,14 @@ h1.mobile-hedline {
         height: 200px;
     }
 }
-@media (max-width:320px) {
+@media (max-width:340px) {
     #wrapper {
         width: 100%;
         margin-top: 0px;
+    }
+    #chartLabels .yearLabel {
+        font-size: 0.5em;
+        width: 4.2%;
     }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
