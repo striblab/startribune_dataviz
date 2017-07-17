@@ -12,6 +12,17 @@
 #poverty_white .c3-grid line {
     stroke: none;
 }
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+}
+
 #poverty_white .c3-axis-x > path.domain,
 #poverty_white .tick > line[x2="-6"] {
     visibility: hidden;
