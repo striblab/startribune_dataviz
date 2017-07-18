@@ -1,0 +1,28 @@
+brkey,bridge key number (used for linking tables in inventory dataset)
+bridge_id,Bridge ID number
+featint,Feature that runs under the bridge
+facility,Highway that bridges carries
+location,Location of bridge
+yearbuilt,Year built
+tot_length,Length (in meters)
+precise_lat,latitude
+precise_lon,longitude
+chp152,Y=flag that this is a chapter 152 bridge
+chp152_id,ID number in the Chapter 152 program
+chp152_tier,"Tier (1, 2,3) in the Chapter 152 program"
+createuserkey,Not important for visualization purposes; this is one of the fields for filtering data to right set of bridges
+oppostcl,Indicates if bridge is open to traffic (A) or posted with weight limits (all the other codes are various forms of posted)
+nbi_rating,"National Bridge Inventory rating (1=structurally deficient, 2=functionally obsolete, 0=none)"
+suff_rate,Current sufficiency rating (50 or less qualifies a bridge for federal funding for rehab or replacement)
+inspdate,Last inspection date
+fcinspreq,Y=this bridge is considered fracture critical
+servtypon,"Indicates how bridge is used (1=highway, 5=highway & pedestrian); this is one of the filters we used"
+old_bridge_id,This has the old bridge ID number for bridges that were replaced
+replacement,Y=this bridge replaced an old one
+total_costs,Total money spent on this bridge in last 10 years (this is incomplete)
+mjnotes,Notes from MaryJo
+district,MNDOT district where this bridge is located (M=metro)
+notes,Notes related to the spending on this bridge
+suffrate2006,Sufficiency rating in 2006 for this bridge or its predecessor
+stat2006,NBI rating in 2006 for this bridge or its predecessor
+frac_crit2006,"Fracture critical indicator in 2006 for this bridge or its predecessor (first digit=""y"" means fracture critical)"
