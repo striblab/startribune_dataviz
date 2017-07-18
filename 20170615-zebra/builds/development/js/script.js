@@ -751,7 +751,7 @@ function zoomLake(lake){
   for (var i=0; i < dataLookup.length; i++){
     if (lake == dataLookup[i].target){
       map2.flyTo({ center: [dataLookup[i].longitude, dataLookup[i].latitude], zoom:12 });
-      plopPopup(dataLookup[i].longitude,dataLookup[i].latitude,lake)
+      plopPopup(dataLookup[i].longitude,dataLookup[i].latitude,"<div class='lakename'>" + lake + "</div><div>Since: " + dataLookup[i].since + "</div/>")
       return;
     }
   }

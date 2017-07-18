@@ -1,8 +1,7 @@
 .DS_Store
-node_modules
-.tmp
-.sass-cache
 *.zip
-node_modules
 interviews
 drafts
+.tmp
+.sass-cache
+node_modules
