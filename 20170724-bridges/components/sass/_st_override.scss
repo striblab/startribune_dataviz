@@ -1,0 +1,85 @@
+body { 
+	margin:0; 
+	padding:0; 
+    font-family: "Benton Sans";
+}
+
+#wrapper {
+    width:100%;
+}
+
+.map { 
+	position:absolute;
+	height:430px;
+	width:100%;
+}
+
+.legendary {
+    padding:4px;
+}
+
+.slide {
+    display:none;
+}
+
+.chatter {
+    line-height:140%;
+}
+
+.geocoder, .mapboxgl-ctrl-geocoder {
+    width:100%;
+    margin-bottom:10px;
+ }
+
+.geocoder-pin-right {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-geocoder {
+    font: 15px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: relative;
+    background-color: white;
+    text-align:center;
+    min-width: 100%;
+    z-index: 1;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ .byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    font-size:0.6em !important;
+    color: #888 !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    text-align:left !important;
+}
+
+.mapboxgl-compare .compare-swiper {
+    background-color: #333333;
+}
+
+.topLabels {
+    padding:20px;
+}
+
+.topLabels div {
+    width:48%;
+    display:inline-block;
+}
+
+.rightSide {
+    text-align:right;
+    font-weight:900;
+}
+
+.leftSide {
+    text-align:left;
+    font-weight:900;
+}
