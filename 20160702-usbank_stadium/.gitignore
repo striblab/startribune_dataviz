@@ -1,5 +1,7 @@
 .DS_Store
-node_modules
+*.zip
+interviews
+drafts
 .tmp
 .sass-cache
-builds/**/images/*
+node_modules

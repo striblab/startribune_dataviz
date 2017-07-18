@@ -2194,6 +2194,10 @@ body {
   padding: 10px;
 }
 
+.lakename {
+  font-weight: 900;
+}
+
 .mapboxgl-popup-close-button {
   display: none !important;
 }

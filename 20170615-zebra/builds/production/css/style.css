@@ -2173,6 +2173,16 @@ body {
   width: 100%;
 }
 
+.byline {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #888;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
 .bottom {
   position: absolute;
   bottom: 0;
@@ -2182,6 +2192,10 @@ body {
 
 .chatter {
   padding: 10px;
+}
+
+.lakename {
+  font-weight: 900;
 }
 
 .mapboxgl-popup-close-button {

@@ -31,7 +31,7 @@ The following are probably already installed on your computer if you have worked
 
 ### Install
 
-1. Get code and enter project: `git clone https://github.com/striblab/20170728-suicides.git && cd 20170728-suicides.git`
+1. Get code and enter project: `git clone https://github.com/striblab/20170719-police_shootings.git && cd 20170719-police_shootings.git`
 2. Install local dependencies: `npm install`
 
 ### Local development
@@ -59,7 +59,7 @@ Deployment is managed in specific repositories:
 The following will change based on which deployment repo this is going to and where you have that repository locally.
 
 1. Build the production version: `NODE_ENV=production gulp`
-2. Copy files (update path as needed): `mkdir -p ../20170728-suicides/ && rsync -rav ./ ../20170728-suicides/ --exclude=".git" --exclude="node_modules" --exclude=".sass-cache" --delete-after`
+2. Copy files (update path as needed): `mkdir -p ../20170719-police_shootings/ && rsync -rav ./ ../20170719-police_shootings/ --exclude=".git" --exclude="node_modules" --exclude=".sass-cache" --delete-after`
 3. Update the relevant deployment repo.
 
 ## Credits
