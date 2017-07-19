@@ -211,8 +211,7 @@ map.on('load', function() {
                          count: 4,
                          values: [0,0.03,0.06,0.09,0.12],
                          format: d3.format('%')
-                        },
-                        label: ""
+                        }
                     },
                 x: {
                     type: 'category',
@@ -233,6 +232,12 @@ map.on('load', function() {
           }
 
     });
+
+d3.select("#trafficChart svg").append("text")
+    .attr("x", 50 )
+    .attr("y", 30)
+    .style("text-anchor", "right")
+    .text("Vehicles per day");
 }
 
   function lengthChart(){
@@ -298,6 +303,7 @@ map.on('load', function() {
           }
 
     });
+
 }
 
   function bigChart(){
@@ -406,7 +412,7 @@ map.on('load', function() {
                         rotate: -60,
                         multiline: false
                     },
-                    categories: ['Pre 1930','1930','1940','1950','1960','1970','1980','1990','2000','2010'],
+                    categories: ['Pre 1930s','1930s','1940s','1950s','1960s','1970s','1980s','1990s','2000s','2010s'],
                     height: 40
                 }
             },
