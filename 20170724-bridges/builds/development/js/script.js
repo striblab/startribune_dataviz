@@ -212,7 +212,7 @@ map.on('load', function() {
                          values: [0,0.03,0.06,0.09,0.12],
                          format: d3.format('%')
                         },
-                        label: "% of bridges"
+                        label: ""
                     },
                 x: {
                     type: 'category',
@@ -277,7 +277,7 @@ map.on('load', function() {
                          values: [0,0.03,0.06,0.09,0.12],
                          format: d3.format('%')
                         },
-                        label: "% of bridges"
+                        label: ""
                     },
                 x: {
                     type: 'category',
@@ -344,7 +344,7 @@ map.on('load', function() {
                          values: [0,0.03,0.06,0.09,0.12],
                          format: d3.format('%')
                         },
-                        label: "% of bridges"
+                        label: ""
                     },
                 x: {
                     type: 'category',
@@ -398,7 +398,7 @@ map.on('load', function() {
                          values: [0,1000,2000,3000]
                          // format: d3.format('%')
                         },
-                        label: "# of bridges"
+                        label: ""
                     },
                 x: {
                     type: 'category',
