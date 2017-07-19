@@ -64,4 +64,4 @@ The following will change based on which deployment repo this is going to and wh
 
 ## Credits
 
-Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [C3](https://github.com/c3js/c3) and [jQuery](https://github.com/jquery/jquery).
+Built using Mike Bostock's [D3](https://github.com/mbostock/d3), [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js), [C3](https://github.com/c3js/c3) and [jQuery](https://github.com/jquery/jquery).
