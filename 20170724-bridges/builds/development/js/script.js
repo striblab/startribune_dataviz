@@ -195,9 +195,9 @@ map.on('load', function() {
                 }
             }
             },
-            // legend: {
-            //     show: false
-            // },
+            legend: {
+                show: false
+            },
                 color: {
                   pattern: ['#aaa','#333']
                 },
@@ -260,9 +260,9 @@ map.on('load', function() {
                 }
             }
             },
-            // legend: {
-            //     show: false
-            // },
+            legend: {
+                show: false
+            },
                 color: {
                   pattern: ['#aaa','#333']
                 },
@@ -327,9 +327,9 @@ map.on('load', function() {
                 }
             }
             },
-            // legend: {
-            //     show: false
-            // },
+            legend: {
+                show: false
+            },
                 color: {
                   pattern: ['#085388','#8F120B','#d34A44']
                 },
@@ -381,9 +381,9 @@ map.on('load', function() {
                 ],
             type: 'bar'
             },
-            // legend: {
-            //     show: false
-            // },
+            legend: {
+                show: false
+            },
                 color: {
                   pattern: ['#aaa','#333']
                 },
