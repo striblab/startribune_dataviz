@@ -2227,10 +2227,19 @@ body {
 }
 
 #listing {
-  height: 300px;
+  height: 600px;
   overflow-x: hidden;
   overflow-y: auto;
   width: 100%;
+}
+
+.lakeselect {
+  padding: 3px;
+}
+
+.lakeselect:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .map-overlay-container {
