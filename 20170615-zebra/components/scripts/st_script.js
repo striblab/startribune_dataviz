@@ -523,27 +523,27 @@ function mapFlight(long,lat,zoom,pitch,bearing){
 // mapFlight(-96, 37.8,15,-100,20);
 
 $(document).ready(function() {
-  $('#fullpage').fullpage({
-    anchors: ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eightteen', 'nineteen'],
-    sectionsColor: ['#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999', '#999999', '#999999'],
-    navigation: true,
-    navigationPosition: 'right',
+  // $('#fullpage').fullpage({
+  //   anchors: ['zero','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eightteen', 'nineteen'],
+  //   sectionsColor: ['#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999','#999999', '#999999', '#999999', '#999999', '#999999'],
+  //   navigation: true,
+  //   navigationPosition: 'right',
 
-    afterLoad: function(anchorLink, index){
-    var loadedSection = $(this);
+  //   afterLoad: function(anchorLink, index){
+  //   var loadedSection = $(this);
 
-    $(".chatter, .chartTitle").hide();
+  //   $(".chatter, .chartTitle").hide();
 
-    $(this).find(".chatter, .chartTitle").show();
+  //   $(this).find(".chatter, .chartTitle").show();
 
-      // Typed.new(".chatter", {
-      //   strings: [$(this).text()],
-      //   typeSpeed: 0
-      // });
+  //     // Typed.new(".chatter", {
+  //     //   strings: [$(this).text()],
+  //     //   typeSpeed: 0
+  //     // });
 
-    playScript(index-1)
-    }
-  });
+  //   playScript(index-1)
+  //   }
+  // });
 });
 
    $("#fullpage").show();
@@ -617,10 +617,9 @@ var popup = new mapboxgl.Popup({closeOnClick: false});
  $( function() {
 
   $('#filter_box').on('keyup search', function(e){
-    $('.row').hide();
+    $('.lakeselect').hide();
     var txt = $('#filter_box').val();
-    console.log(txt)
-    $('.row').each(function(){
+    $('.lakeselect').each(function(){
        if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1)){
            $(this).show();
        }
@@ -734,15 +733,15 @@ var popup = new mapboxgl.Popup({closeOnClick: false});
       "Big Birch Lake"
     ];
 
-   $( "#filter_box" ).autocomplete({
-     minLength: 2,
-     source: availableTags,
-     select: function(e, ui) {
-       e.preventDefault();
-       $(this).val(ui.item.label);
-       zoomLake(ui.item.value);
-     }
-   });
+   // $( "#filter_box" ).autocomplete({
+   //   minLength: 2,
+   //   source: availableTags,
+   //   select: function(e, ui) {
+   //     e.preventDefault();
+   //     $(this).val(ui.item.label);
+   //     zoomLake(ui.item.value);
+   //   }
+   // });
 
   });
 
@@ -755,6 +754,10 @@ function zoomLake(lake){
     }
   }
 }
+
+$(".lakeselect").on("click",function(){
+  zoomLake($(this).text());
+});
 
 function plopPopup(long,lat,text){
 

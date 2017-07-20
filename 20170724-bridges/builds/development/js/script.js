@@ -233,11 +233,11 @@ map.on('load', function() {
 
     });
 
-d3.select("#trafficChart svg").append("text")
-    .attr("x", 50 )
-    .attr("y", 30)
-    .style("text-anchor", "right")
-    .text("Vehicles per day");
+// d3.select("#trafficChart svg").append("text")
+//     .attr("x", 50 )
+//     .attr("y", 30)
+//     .style("text-anchor", "right")
+//     .text("Vehicles per day");
 }
 
   function lengthChart(){
