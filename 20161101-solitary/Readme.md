@@ -10,10 +10,10 @@ Source data can be found in `builds/development/data/_raw`.
 
 In order to process the data and get to the form that is used in the visual piece:
 
-1. Convert to CSV: `in2csv --sheet="Data" builds/development/data/_raw/maindata.xlsx | tail -n +4 > builds/development/data/maindata.csv`
+1. Convert to CSV: `in2csv --sheet="<name of sheet you want here>" builds/development/data/maindata.xlsx | tail -n +4 > builds/development/data/maindata.csv`
 2. Parse and compress: `node builds/development/data/maindata.js`
     * This will output: `builds/development/data/maindata.json`
-    * This will also output some info about some drugs that may be most notable.
+    Or just use something like [Mister Data Converter](https://shancarter.github.io/mr-data-converter/) to spit out JSON from tabular data
 
 ## Development
 
