@@ -13,7 +13,7 @@ In order to process the data and get to the form that is used in the visual piec
 1. Convert to CSV: `in2csv --sheet="<name of sheet you want here>" builds/development/data/maindata.xlsx | tail -n +4 > builds/development/data/maindata.csv`
 2. Parse and compress: `node builds/development/data/maindata.js`
     * This will output: `builds/development/data/maindata.json`
-
+    Or just use something like [Mister Data Converter](https://shancarter.github.io/mr-data-converter/) to spit out JSON from tabular data
 
 ## Development
 
