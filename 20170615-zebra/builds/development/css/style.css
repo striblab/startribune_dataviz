@@ -2409,7 +2409,7 @@ small {
 
 .description {
   font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 120%;
   color: #333;
   margin: 0 0 30px 0;
@@ -2480,10 +2480,10 @@ p {
 
 /* Textbox Changes */
 #database {
-  padding: 10px;
+  padding: 25px;
   box-shadow: 5px 5px 20px #999;
-  top: 20px;
-  left: 20px;
+  top: 40px;
+  left: 40px;
   border: 0.5px solid #dedede;
 }
 
@@ -2493,6 +2493,7 @@ p {
 
 #listing {
   height: 220px;
+  font: 15px/20px "Benton Sans", Helvetica, Arial, sans-serif;
 }
 
 .description {
