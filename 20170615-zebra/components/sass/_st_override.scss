@@ -343,6 +343,10 @@ font: 15px/20px $bentonSans;
 
 
 @media (max-width:500px) {
+#listing  {
+height: 140px;
+font: 15px/20px $bentonSans;
+}
     #map {
         position: static;
         height: 400px;
