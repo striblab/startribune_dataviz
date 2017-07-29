@@ -2501,6 +2501,11 @@ p {
 }
 
 @media (max-width: 500px) {
+  #listing {
+    height: 140px;
+    font: 15px/20px "Benton Sans", Helvetica, Arial, sans-serif;
+  }
+
   #map {
     position: static;
     height: 400px;
