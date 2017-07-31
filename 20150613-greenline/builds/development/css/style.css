@@ -1746,7 +1746,8 @@ button:focus {
   font-weight: 900;
 }
 
-.legend label, .legend span {
+.legend label,
+.legend span {
   display: block;
   float: left;
   height: 15px;
@@ -1822,6 +1823,16 @@ hr {
 
 h3 {
   font-family: "Popular", Helvetica, Arial, sans-serif !important;
+}
+
+.byline {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #888;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
 }
 
 #chart {
@@ -1941,7 +1952,8 @@ h3 {
     width: 100%;
   }
 }
-#blueLRT h3, #greenLRT h3 {
+#blueLRT h3,
+#greenLRT h3 {
   font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
   font-weight: 400 !important;
 }
