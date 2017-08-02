@@ -15,10 +15,10 @@ d3.csv("./data/scores.csv", function(d) {
     freelunch: +d.FreeLunch,
     povertypct: +d.PctPoverty,
     povertycat: d.PovertyCategory,
-    minoritypct: +d.PctMinority,
+    minoritypct: +d.pctminority,
     overallcat: d.Overall,
-    predicted: +d.Predicted,
-    residual: +d.Residual,
+    predicted: +d.predicted,
+    residual: +d.residual,
     category: d.CategoryName,
     enrollment: d.K12Enr
   };
@@ -188,40 +188,6 @@ d3.select("#schoolsList").selectAll(".switch")
 
   }
 
-    function crunchStatsO(district,all){
-    var totalSchools = 0;
-    var failCount = 0;
-    var metCount = 0;
-    var betterCount = 0;
-
-    if (all == true){
-    for (var k=0; k < data.length; k++){
-      if (data[k].subject == "M" && data[k].year == "15 to 16"){
-        totalSchools++;
-        if (data[k].overallcat == "As expected") { metCount++; }
-        if (data[k].overallcat == "Falling short") { failCount++; }
-        if (data[k].overallcat == "Beating the odds") { betterCount++; }
-
-      }
-    }
-    } else {
-    for (var k=0; k < data.length; k++){
-      if (data[k].district == district && data[k].subject == "M" && data[k].year == "15 to 16"){
-        totalSchools++;
-        if (data[k].overallcat == "As expected") { metCount++; }
-        if (data[k].overallcat == "Falling short") { failCount++; }
-        if (data[k].overallcat == "Beating the odds") { betterCount++; }
-
-      }
-    }
-  }
-
-    $("#failO").html(d3.format("%")(failCount / totalSchools));
-    $("#metO").html(d3.format("%")(metCount / totalSchools));
-    $("#betterO").html(d3.format("%")(betterCount / totalSchools));
-
-  }
-
   function crunchStatsM(district,all){
     var totalSchools = 0;
     var failCount = 0;
@@ -290,8 +256,6 @@ d3.select("#schoolsList").selectAll(".switch")
 
   }
 
-
-
     $("#districtSelect").click(function() { 
       $("#listedSchools").slideToggle();
     });
@@ -307,7 +271,6 @@ d3.select("#schoolsList").selectAll(".switch")
       crunchStatsP($(this).text(),false);
       crunchStatsM($(this).text(),false);
       crunchStatsR($(this).text(),false);
-      crunchStatsO($(this).text(),false);
       thisDistrict = $(this).text();
     });
 
@@ -381,9 +344,8 @@ d3.select("#schoolsList").selectAll(".switch")
     crunchStatsP("",true);
     crunchStatsM("",true);
     crunchStatsR("",true);
-    crunchStatsO("",true);
 
-    $(".zoom, #filter, #filter2").on("click keyup search", function() {
+    $(".zoom").on("click keyup search", function() {
         thisDistrict = "All"
         $("#infobox,#chart,#chartLabel").hide();
         $("#instructions").show();
@@ -430,7 +392,6 @@ d3.select("#schoolsList").selectAll(".switch")
         crunchStatsP("",true);
         crunchStatsM("",true);
         crunchStatsR("",true);
-        crunchStatsO("",true);
         $("#categoryR,#categoryM").addClass("better");
         $(".cell").removeClass("selected2");
         switchChart("A.C.G.C. SECONDARY");
@@ -532,9 +493,9 @@ var chart = c3.generate({
         x: {
             type: "category",
             // categories: ["'12 to '13", "'13 to '14", "'14 to '15", "'15 to '16"],
-            categories: ["'00 to '01","'01 to '02","'02 to '03","'03 to '04","'04 to '05","'05 to '06","'06 to '07","'07 to '08","'08 to '09","'09 to '10","'10 to '11","'11 to '12","'12 to '13", "'13 to '14", "'14 to '15", "'15 to '16"],
+            // categories: ["'00 to '01","'01 to '02","'02 to '03","'03 to '04","'04 to '05","'05 to '06","'06 to '07","'07 to '08","'08 to '09","'09 to '10","'10 to '11","'11 to '12","'12 to '13", "'13 to '14", "'14 to '15", "'15 to '16"],
             tick: {
-                count: 4,
+                // count: 4,
                 rotate: -75,
                 multiline: false
             },
@@ -554,7 +515,7 @@ var chart = c3.generate({
 
 d3.select("#chart svg").append("text")
     .attr("x", 200 )
-    .attr("y", 30)
+    .attr("y", 20)
     .style("text-anchor", "right")
     .text("Proficiency change over time");
 }
