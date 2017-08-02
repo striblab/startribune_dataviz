@@ -119,7 +119,7 @@ p {
 }
 
 #chart {
-    height: 180px;
+    height: 200px;
 }
 
 .source {
@@ -295,6 +295,14 @@ li.district:hover {
 .headcell {
     display: inline-block;
     width: 33%;
+}
+
+.povCell {
+    padding:12px;
+}
+
+.gray3 {
+    font-weight:normal !important;
 }
 
 .read {
