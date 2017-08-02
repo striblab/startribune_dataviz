@@ -238,7 +238,7 @@ d3.select("#schoolsList").selectAll(".switch")
        }
     });
 
-    $('#filter_box').keyup(function(i){
+    $('#filter_box').on("keyup search",function(i){
        $('.switch').hide();
        var txt = $('#filter_box').val();
        $('.switch').each(function(){
@@ -248,7 +248,7 @@ d3.select("#schoolsList").selectAll(".switch")
        });
     });
 
-    $('#filter2 input').keyup(function(i){
+    $('#filter2 input').on("keyup search",function(i){
        $('.district').hide();
        var txt = $('#filter2 input').val();
        
