@@ -1,0 +1,146 @@
+
+''###running this first query is crucial
+update schools_mca set schoolid=rtrim(districtnumber)+'-'+rtrim(districttype)+'-'+rtrim(schoolnumber) where schoolid is null
+
+''##This query looks for schools in the MCA data that are not in our schoollist table
+
+select *
+from schools_mca
+where schoolnumber<>'000' and schoolid not in
+(select schoolid from schools_schoollist)
+
+
+''##This query generates the sub-group totals for statewide; to look at achievement gap, etc; also useful for looking at opt-out rates
+
+select  datayear, subject, reportcategory, reportdescription, sum(counttested) as NumTested, sum(countlevel1) as NumLev1, 
+sum(countlevel2) as NumLev2, sum(countlevel3) as NumLev3, sum(countlevel4) as NumLev4, sum(countlevel3)+sum(countlevel4) as NumProficient,
+sum(countabsent) as NumAbsent, sum(countMedExempt) as NumExempt, sum(CountRefused) as NumRefused, sum(gradeEnrollment) as Enrollment 
+from schools_mca
+where districtnumber='9999'
+group by datayear, subject, reportcategory, reportdescription
+order by datayear, subject, reportcategory, reportdescription
+
+
+''##This query pulls out the sub-group info (like above), except it is at the district level and only for Minneapolis and St Paul; next year we may 
+''want to consider adding Anoka Hennepin
+
+select  districtname, datayear, subject, reportcategory, reportdescription, sum(counttested) as NumTested, sum(countlevel1) as NumLev1, 
+sum(countlevel2) as NumLev2, sum(countlevel3) as NumLev3, sum(countlevel4) as NumLev4, sum(countlevel3)+sum(countlevel4) as NumProficient,
+sum(countabsent) as NumAbsent, sum(countMedExempt) as NumExempt, sum(CountRefused) as NumRefused, sum(gradeEnrollment) as Enrollment 
+from schools_mca
+where (districtnumber='0625' or (districtnumber='0001' and districttype='03')) and filtered='N'
+group by districtname, datayear, subject, reportcategory, reportdescription
+order by districtname, datayear, subject, reportcategory, reportdescription
+
+''##This query pulls out school-level results (grades are collapsed) for schools in the metro area; excludes the special education and alternative learning schools
+
+SELECT        dbo.schools_SchoolList.SchoolID, dbo.schools_SchoolList.districtname_new, dbo.schools_SchoolList.SCHOOLNAME_NEW, dbo.schools_SchoolList.Metro7county, dbo.schools_SchoolList.Location, 
+                         dbo.schools_SchoolList.SchoolType, dbo.schools_mca.dataYear, dbo.schools_mca.subject, sum(dbo.schools_mca.countTested) as numtested, sum(dbo.schools_mca.countLevel3)+sum(dbo.schools_mca.countLevel4) as NumProf,
+						 sum(countabsent) as NumAbsent, sum(countMedExempt) as NumExempt, sum(CountRefused) as NumRefused, sum(gradeEnrollment) as Enrollment 
+FROM            dbo.schools_mca INNER JOIN
+                         dbo.schools_SchoolList ON dbo.schools_mca.schoolid = dbo.schools_SchoolList.SchoolID
+where filtered='N' and reportorder='1' and metro7county='yes' and schools_schoollist.classification<'41'
+group by dbo.schools_SchoolList.SchoolID, dbo.schools_SchoolList.districtname_new, dbo.schools_SchoolList.SCHOOLNAME_NEW, dbo.schools_SchoolList.Metro7county, dbo.schools_SchoolList.Location, 
+                         dbo.schools_SchoolList.SchoolType, dbo.schools_mca.dataYear, dbo.schools_mca.subject
+
+
+''##This pulls out school-level results for all Minneapolis public schools
+
+select schools_mca.schoolid, schoolname_new, schooltype, datayear, subject, reportorder, reportcategory, reportdescription, filtered, sum(counttested) as NumTested,
+ sum(countlevel1) as NumLev1, sum(countlevel2) as NumLev2, sum(countlevel3) as NumLev3, sum(countlevel4) as NumLev4, sum(countlevel3)+sum(countlevel4) as NumProf,
+ (cast(sum(countlevel3) as float)+cast(sum(countlevel4) as float))/cast(sum(counttested) as float) as PctProficient,
+sum(countabsent) as NumAbsent, sum(countMedExempt) as NumExempt, sum(CountRefused) as NumRefused
+from schools_mca inner join schools_schoollist on schools_mca.schoolid=schools_schoollist.schoolid
+where schools_mca.districtnumber='0001' and schools_mca.districttype='03' and filtered='N'
+group by schools_mca.schoolid, schoolname_new, schooltype, datayear, subject, reportorder, reportcategory, reportdescription, filtered
+order by datayear, subject, schoolid, reportorder
+
+
+''#This pulls out the data needed for print graphic showing overall proficiency rates over time
+
+select  datayear, subject, sum(counttested) as NumTested, sum(countlevel3)+sum(countlevel4) as NumProficient
+from schools_mca
+where districtnumber='9999'
+group by datayear, subject
+
+
+''#This pulls out the key fields you will need, summarized to the state level, for looking at opt-out rates over time
+
+SELECT DATAYEAR, GRADE, SUBJECT, SUM(countabsent) AS absentt, SUM(countMedExempt) as exempt, SUM(CountRefused) as refused, sum(counttested) as tested, sum(countinvalid) as invalid, sum(countnotcomplete) as notcomplete, 
+sum(countPSO) as pso, sum(countwronggrade) as wronggrd, sum(gradeenrollment) as OctEnroll
+from schools_mca inner join  schools_schoollist on schools_mca.schoolid=schools_schoollist.schoolid
+where reportorder='1' and districtnumber='9999'
+group by datayear, grade, subject
+
+
+''#This pulls out school-level counts to look at opt-out rates by school, just for the most current year; will need to change the where line
+
+select districtname, schoolname, subject, SUM(countabsent) AS absentt, SUM(countMedExempt) as exempt, SUM(CountRefused) as refused, sum(counttested) as tested, sum(countinvalid) as invalid, sum(countnotcomplete) as notcomplete, 
+sum(countPSO) as pso, sum(countwronggrade) as wronggrd, sum(gradeenrollment) as OctEnroll
+from schools_mca
+where reportorder='1' and datayear='15-16' and schoolnumber<>'000'
+group by districtname, schoolname, subject
+order by 4 desc
+
+
+
+''This pulls out school-level results for one district; in this case it is Anoka Hennepin; can change where line to have it pull different district
+
+select schools_mca.schoolid, schoolname_new, schooltype, datayear, subject, reportorder, reportcategory, reportdescription, filtered, sum(counttested) as NumTested,
+ sum(countlevel1) as NumLev1, sum(countlevel2) as NumLev2, sum(countlevel3) as NumLev3, sum(countlevel4) as NumLev4, sum(countlevel3)+sum(countlevel4) as NumProf,
+ (cast(sum(countlevel3) as float)+cast(sum(countlevel4) as float))/cast(sum(counttested) as float) as PctProficient,
+sum(countabsent) as NumAbsent, sum(countMedExempt) as NumExempt, sum(CountRefused) as NumRefused
+from schools_mca inner join schools_schoollist on schools_mca.schoolid=schools_schoollist.schoolid
+where schools_mca.districtnumber='0011' and filtered='N'
+group by schools_mca.schoolid, schoolname_new, schooltype, datayear, subject, reportorder, reportcategory, reportdescription, filtered
+order by datayear, subject, schoolid, reportorder
+
+''This pulls sub-group summary data for Anoka-Hennepin
+select  districtname, datayear, subject, reportcategory, reportdescription, sum(counttested) as NumTested, sum(countlevel1) as NumLev1, 
+sum(countlevel2) as NumLev2, sum(countlevel3) as NumLev3, sum(countlevel4) as NumLev4, sum(countlevel3)+sum(countlevel4) as NumProficient,
+sum(countabsent) as NumAbsent, sum(countMedExempt) as NumExempt, sum(CountRefused) as NumRefused, sum(gradeEnrollment) as Enrollment 
+from schools_mca
+where districtnumber='0011'  and filtered='N'
+group by districtname, datayear, subject, reportcategory, reportdescription
+order by districtname, datayear, subject, reportcategory, reportdescription
+
+
+
+
+''To pull data out for the data visualization, I did it in three steps. This first step summarizes the MCA data into one record for each school, and only grabbing the 
+'' all students record (excluding the various sub-group records) and collapsing all the grades; This might still be saved as a View called "schools_pullMCA"
+
+SELECT        dataYear, schoolid, districtType, schoolClassification, subject, reportOrder, reportCategory, ReportDescription, filtered, SUM(countTested) AS cntTested, SUM(countLevel1) AS cntlev1, SUM(countLevel2) 
+                         AS cntlev2, SUM(countLevel3) AS cntlev3, SUM(countLevel4) AS cntlev4, SUM(CountAbsent) AS NumAbsent, SUM(CountMedExempt) AS NumExempt, SUM(CountRefused) AS NumRefused, SUM(CountInvalid) 
+                         AS NumInvalid, SUM(CountNotComplete) AS NumIncomplete, SUM(CountPSO) AS NumPSO
+FROM            dbo.schools_mca
+WHERE        (schoolNumber <> '000') AND (reportOrder = '1') AND (filtered = 'N') AND (schoolClassification < '41')
+GROUP BY dataYear, schoolid, districtType, schoolClassification, subject, reportOrder, reportCategory, ReportDescription, filtered
+
+''The second part pulls out the freelunch info from schools_specialenroll; this might be saved as a View called schools_freelunch
+
+SELECT        DataYear, schoolid, K12Enr, FreeK12 + RedK12 AS FreeLunch, PctPoverty, PovertyCategory
+FROM            dbo.schools_specialenroll
+WHERE        (Grade = 'all grades')
+
+
+''The third part merges the PUll_MCA with the freelunch and schoollist tables to grab additional info; This might be saved as a view called Schools_mergeMCA
+
+SELECT        dbo.schools_SchoolList.SchoolID, dbo.schools_SchoolList.districtNumber, dbo.schools_SchoolList.districtType, dbo.schools_SchoolList.schoolNumber, dbo.schools_SchoolList.districtname_new, 
+                         dbo.schools_SchoolList.SCHOOLNAME_NEW, dbo.schools_SchoolList.Classification, dbo.schools_SchoolList.SchoolType, dbo.schools_SchoolList.Grades, dbo.schools_SchoolList.Metro7county, 
+                         dbo.schools_SchoolList.Location, dbo.schools_SchoolList.SchoolLocationCountyName, dbo.schools_pullMCA.dataYear, dbo.schools_pullMCA.subject, dbo.schools_pullMCA.reportOrder, 
+                         dbo.schools_pullMCA.reportCategory, dbo.schools_pullMCA.ReportDescription, dbo.schools_pullMCA.filtered, dbo.schools_pullMCA.cntTested, dbo.schools_pullMCA.cntlev1, dbo.schools_pullMCA.cntlev2, 
+                         dbo.schools_pullMCA.cntlev3, dbo.schools_pullMCA.cntlev4, dbo.schools_pullMCA.NumAbsent, dbo.schools_pullMCA.NumExempt, dbo.schools_pullMCA.NumRefused, dbo.schools_pullMCA.NumInvalid, 
+                         dbo.schools_pullMCA.NumIncomplete, dbo.schools_pullMCA.NumPSO, dbo.schools_pullMCA.cntlev3 + dbo.schools_pullMCA.cntlev4 AS NumProficient, (CAST(dbo.schools_pullMCA.cntlev3 AS float) 
+                         + CAST(dbo.schools_pullMCA.cntlev4 AS float)) / CAST(dbo.schools_pullMCA.cntTested AS float) AS PctProf, dbo.schools_freelunch.K12Enr, dbo.schools_freelunch.FreeLunch, dbo.schools_freelunch.PctPoverty, 
+                         dbo.schools_pullRace.PctMinority, dbo.schools_freelunch.PovertyCategory
+FROM            dbo.schools_pullMCA INNER JOIN
+                         dbo.schools_SchoolList ON dbo.schools_pullMCA.schoolid = dbo.schools_SchoolList.SchoolID LEFT OUTER JOIN
+                         dbo.schools_pullRace ON dbo.schools_pullMCA.schoolid = dbo.schools_pullRace.SchoolID AND dbo.schools_pullMCA.dataYear = dbo.schools_pullRace.DataYear LEFT OUTER JOIN
+                         dbo.schools_freelunch ON dbo.schools_pullMCA.dataYear = dbo.schools_freelunch.DataYear AND dbo.schools_pullMCA.schoolid = dbo.schools_freelunch.schoolid
+WHERE        (dbo.schools_SchoolList.CLOSED <> 'yes')
+
+
+''After exporting, the data needs to go through SPSS regression to pick up the remaining pieces, before it goes to data viz; Beware, however, SPSS cuts off
+''long variable names (especially school name and district name) so I found that I had to marry the regression results back to this original file before sending it
+''to the data viz. Maybe next year can find an alternative way to do this
