@@ -453,6 +453,9 @@ for (var i=0; i < data.length; i++){
   }
 }
 
+if (dataR.length > dataM.length) { dataM[dataM.length] = 0; }
+else if (dataR.length < dataM.length) { dataR[dataR.length] = 0; }
+
 if (found == true){
 
 var  padding = {
@@ -463,8 +466,6 @@ var  padding = {
     };
 
 var share = "#B0BEC5";
-
-console.log(axis + " " + dataR + " " + dataM)
 
 var chart = c3.generate({
         bindto: '#chart',
