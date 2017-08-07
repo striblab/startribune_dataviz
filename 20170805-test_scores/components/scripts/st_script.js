@@ -477,6 +477,10 @@ var chart = c3.generate({
     legend: {
         show: false
     },
+    point: {
+        // show: false
+        size: 4
+    },
     color:  { pattern: ["#51373E","#E3B5A4"] },
     axis: {
       y: {
