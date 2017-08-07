@@ -3,7 +3,7 @@ d3.csv("./data/scores.csv", function(d) {
     id: d.SchoolID,
     district: d.districtname_new,
     school: d.SCHOOLNAME_NEW,
-    type: d.Grades,
+    type: d.grds,
     metro: d.Metro7county,
     region: d.Location,
     location: d.SchoolLocationCountyName,
