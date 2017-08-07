@@ -2128,7 +2128,7 @@ li.district:hover {
 
 .cell {
   display: inline-block;
-  width: 32.9%;
+  width: 33%;
 }
 
 .headcell {
@@ -2176,7 +2176,7 @@ li.district:hover {
 
   .cell, .headcell {
     display: inline-block;
-    width: 32%;
+    width: 32.7%;
   }
 
   .mobileshow {
@@ -2202,7 +2202,7 @@ li.district:hover {
   }
 
   #schoolsList {
-    height: 100px;
+    height: 150px;
   }
 
   #mobileBreak {

@@ -515,6 +515,7 @@ var chart = c3.generate({
 d3.select("#chart svg").append("text")
     .attr("x", 200 )
     .attr("y", 20)
+    .attr("class","mobilekill")
     .style("text-anchor", "right")
     .text("Proficiency change over time");
 }
