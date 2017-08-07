@@ -16,7 +16,7 @@ d3.csv("./data/scores.csv", function(d) {
     povertycat: d.PovertyCategory,
     minoritypct: +d.pctminority,
     overallcat: d.Overall,
-    predicted: +d.predicted,
+    predicted: +d.Predicted,
     residual: +d.residual,
     category: d.CategoryName,
     enrollment: d.K12Enr
