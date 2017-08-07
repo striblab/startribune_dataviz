@@ -9,7 +9,7 @@ d3.csv("./data/scores.csv", function(d) {
     region: d.Location,
     location: d.SchoolLocationCountyName,
     county: d.SchoolLocationCountyName,
-    year: String(d.dataYear),
+    year: String(d.datayr),
     subject: d.subject,
     profpct: +d.PctProf,
     freelunch: +d.FreeLunch,
