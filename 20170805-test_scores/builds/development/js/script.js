@@ -30,7 +30,7 @@ var data = rows;
     var raceShade, lunchShade;
     var gradeShade, gradeShade2;
     var currentDistrict = "";
-    var thisDistrict = "All";
+    var thisDistrict = "All Districts";
 
 d3.select("#schoolsList").selectAll(".switch")
   .data(data.filter(function(d) { return d.year == "15 to 16" && d.subject == "R"; })).enter().append("div")
@@ -71,11 +71,11 @@ d3.select("#schoolsList").selectAll(".switch")
   .attr("longitude",function(d) { return d.longitude; })
   .on("click",function(d){
 
-    $("#minority").removeClass('gray5');
-    $("#minority").removeClass('gray4');
-    $("#minority").removeClass('gray3');
-    $("#minority").removeClass('gray2');
-    $("#minority").removeClass('gray1');
+    // $("#minority").removeClass('gray5');
+    // $("#minority").removeClass('gray4');
+    // $("#minority").removeClass('gray3');
+    // $("#minority").removeClass('gray2');
+    // $("#minority").removeClass('gray1');
     $("#poverty,#freelunch").removeClass('gray5');
     $("#poverty,#freelunch").removeClass('gray4');
     $("#poverty,#freelunch").removeClass('gray3');
@@ -140,7 +140,7 @@ d3.select("#schoolsList").selectAll(".switch")
     $("#minority").html(d3.format("%")(d.minoritypct));
 
     $("#freelunch").addClass(lunchShade);
-    $("#minority").addClass(raceShade);
+    // $("#minority").addClass(raceShade);
     $("#poverty").addClass(povShade);
     $("#categoryR").addClass(gradeShade);
     $("#categoryM").addClass(gradeShade2);
@@ -258,6 +258,7 @@ d3.select("#schoolsList").selectAll(".switch")
 
     $("#districtSelect").click(function() { 
       $("#listedSchools").slideToggle();
+      $(".directions").toggle();
     });
 
     $("li.district").click(function() { 
@@ -333,7 +334,7 @@ d3.select("#schoolsList").selectAll(".switch")
     $("#poverty").html(d3.format("%")(data[4].povertypct));
     $("#povertycat").html(data[4].povertycat);
     $("#minority").html(d3.format("%")(data[4].minoritypct));
-    $("#minority").addClass("gray1");
+    // $("#minority").addClass("gray1");
     $("#poverty").addClass("gray3");
     $("#freelunch").addClass("gray3");
     $("#categoryR,#categoryM").addClass("better");
@@ -358,11 +359,11 @@ d3.select("#schoolsList").selectAll(".switch")
         $('#listedSchools').animate({scrollTop : 0},800);
         $("#filter input, #filter2 input").val("");
         $("#enrolled").html(data[4].enrollment);
-        $("#minority").removeClass('gray5');
-        $("#minority").removeClass('gray4');
-        $("#minority").removeClass('gray3');
-        $("#minority").removeClass('gray2');
-        $("#minority").removeClass('gray1');
+        // $("#minority").removeClass('gray5');
+        // $("#minority").removeClass('gray4');
+        // $("#minority").removeClass('gray3');
+        // $("#minority").removeClass('gray2');
+        // $("#minority").removeClass('gray1');
         $("#poverty,#freelunch").removeClass('gray5');
         $("#poverty,#freelunch").removeClass('gray4');
         $("#poverty,#freelunch").removeClass('gray3');
@@ -386,7 +387,7 @@ d3.select("#schoolsList").selectAll(".switch")
         $("#poverty").html(d3.format("%")(data[4].povertypct));
         $("#povertycat").html(data[4].povertycat);
         $("#minority").html(d3.format("%")(data[4].minoritypct));
-        $("#minority").addClass("gray1");
+        // $("#minority").addClass("gray1");
         $("#freelunch").addClass("gray3");
         $("#poverty").addClass("gray3");
         crunchStatsP("",true);
@@ -489,9 +490,9 @@ var chart = c3.generate({
             min: 0,
             padding: {bottom: 0, top:0},
             tick: {
-             count: 4,
+             count: 5,
              format: d3.format('%'),
-             values: [0,0.33,0.66,1]
+             values: [0,0.25,0.50,0.75,1]
             }
         },
         x: {
