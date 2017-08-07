@@ -33,7 +33,7 @@ var data = rows;
     var thisDistrict = "All Districts";
 
 d3.select("#schoolsList").selectAll(".switch")
-  .data(data.filter(function(d) { return d.year == "15 to 16" && d.subject == "R"; })).enter().append("div")
+  .data(data.filter(function(d) { return d.year == "16 to 17" && d.subject == "R"; })).enter().append("div")
   .attr("class",function(d) { return "switch"; })
   .attr("categoryr",function(d) { 
     var category;
@@ -59,7 +59,7 @@ d3.select("#schoolsList").selectAll(".switch")
   .attr("categorym",function(d) { 
     var category;
         for (var k=0; k < data.length; k++){
-      if (data[k].school == d.school && data[k].district == d.district && data[k].subject == "M" && data[k].year == "15 to 16"){
+      if (data[k].school == d.school && data[k].district == d.district && data[k].subject == "M" && data[k].year == "16 to 17"){
         category = data[k].category;
       }
     }
@@ -89,7 +89,7 @@ d3.select("#schoolsList").selectAll(".switch")
     switchChart(d.school,d.district);
 
     for (var k=0; k < data.length; k++){
-      if (data[k].school == d.school && data[k].district == d.district && data[k].subject == "M" && data[k].year == "15 to 16"){
+      if (data[k].school == d.school && data[k].district == d.district && data[k].subject == "M" && data[k].year == "16 to 17"){
         $("#categoryM").html(data[k].category);
         $("#categoryR").html(d.category);
         $("#mPCT").html(d3.format("%")(data[k].profpct) + " proficiency");
@@ -446,7 +446,7 @@ for (var i=0; i < data.length; i++){
 
     if (data[i].subject == 'M'){
       dataM[indexYear] = data[i].profpct;
-      axis[indexYear] = data[i].year;
+      // axis[indexYear] = data[i].year;
       indexYear++;
       dataMP = data[i].predicted;
     }
@@ -464,6 +464,8 @@ var  padding = {
     };
 
 var share = "#B0BEC5";
+
+console.log(axis + " " + dataR + " " + dataM)
 
 var chart = c3.generate({
         bindto: '#chart',
