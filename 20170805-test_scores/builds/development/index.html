@@ -19,24 +19,13 @@
 
 <div id="districtSelect">Click to select a district: <span id='thisDistrict'>All</span></div>
 
-<div class="chatter">Percentage of schools in selected district by how MCA proficiency rates compare to what would be expected based on poverty rates. Click the percentages in each category to filter the list of schools.</div>
+<div class="chatter mobilekill">Displays percentage of schools in selected district by how MCA proficiency rates compare to what would be expected based on poverty rates. <span class="mobilekill">Click the buttons in each category to filter the list of schools by reading and math performance or poverty levels.</span></div>
 
 <ul id="listedSchools" class="dropdown months" tabindex="1">
 <div id="filter2"><input type="search" id="filter_box2" placeholder="Search by district name" /></div>
 </ul>
 
 <div id="bigstats">
-<!--   <div class="headcell worse" type="null">
-    <div class="label">falling short</div>
-  </div>
-  <div class="headcell expected" type="null">
-    <div class="label">as expected</div>
-  </div>
-  <div class="headcell better" type="null">
-    <div class="label mobilekill">beating the odds</div>
-    <div class="label mobileshow">beating odds</div>
-  </div> -->
-
 <div class="chartTitle">Reading</div>
   <div class="cell worse" data="Falling short" type="R">
     <div class="bigNum" id="failR">0%</div>
@@ -63,16 +52,16 @@
     <div class="bigNum" id="betterM">0%</div>
     <div class="label">better</div>
   </div>
-<div class="chartTitle">Poverty</div>
-  <div class="cell gray5 povCell" data="High" type="P">
+<div class="chartTitle mobilekill">Poverty</div>
+  <div class="cell gray5 povCell mobilekill" data="High" type="P">
 <!--     <div class="bigNum" id="failP">0%</div> -->
     <div class="label">high</div>
   </div>
-  <div class="cell gray3 povCell" data="Medium" type="P">
+  <div class="cell gray3 povCell mobilekill" data="Medium" type="P">
 <!--     <div class="bigNum" id="metP">0%</div> -->
     <div class="label">medium</div>
   </div>
-  <div class="cell gray1 povCell" data="Low" type="P">
+  <div class="cell gray1 povCell mobilekill" data="Low" type="P">
 <!--     <div class="bigNum" id="betterP">0%</div> -->
     <div class="label">low</div>
   </div>
@@ -92,7 +81,7 @@
       <div id="schoolname">school name</div>
       <div class='where'><span id="district"></span> DISTRICT <span id="location"></span></div>
       <div id="type" class='where'></div>
-      <div class="chatter description">Among the <span id="enrolled"></span> students enrolled at this school, <span id="minority"></span> are minorities<!-- , <span id="freelunch"></span> use free lunch programs --> and <span id="poverty"></span> are in poverty.</div>
+      <div class="chatter description mobilekill">Among the <span id="enrolled"></span> students enrolled at this school, <span id="minority"></span> are minorities<!-- , <span id="freelunch"></span> use free lunch programs --> and <span id="poverty"></span> are in poverty.</div>
       
       <div class="bigPCT reading legendary">READING</div>
       <div class="bigPCT math legendary">MATH</div>
