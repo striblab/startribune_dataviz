@@ -2073,6 +2073,10 @@ p {
   z-index: 90;
 }
 
+#filter2 {
+  display: none;
+}
+
 li.district {
   text-align: left !important;
   line-height: 140%;
