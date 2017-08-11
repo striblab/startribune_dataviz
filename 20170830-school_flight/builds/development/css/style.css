@@ -1884,6 +1884,7 @@ p {
 
 .chart {
   width: 48%;
+  vertical-align: top;
   display: inline-block;
 }
 
