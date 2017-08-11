@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+#states {
+  fill: #aaa;
+}
+
+#state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+path:hover{
+fill:#333 !important;
+}
+
+.tooltip{ background-color:rgba(255,255,255,1);;
+          margin: 10px;
+          height: 90px;
+          width: 230px;
+          padding-left: 10px; 
+          padding-right: 10px; 
+          padding-top: 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:0;
+    border: 1px solid black;
+    font-size:12px;
+        }
+
+#states .active {
+  fill: #333 !important;
+  fill-opacity: 1 !important;
+}
+
+.faded {
+  fill-opacity: 0.5 !important;
+}
+
+#states .active:hover {
+   fill:#333 !important;
+}
+
+#timeline{font-weight:900;}
+
+.selected{
+text-decoration:none !important;
+color:black !important;
+font-weight:900;
+}
+
+.legend label,
+.legend span {
+  display:block;
+  float:left;
+  height:15px;
+  width:30px;
+  text-align:center;
+  font-size:12px;
+  color:#808080;
+  }
+</style>
+<body>
+
+<div id="map1314"></div>
+<div id="map1213"></div>
+<div id="map1112"></div>
+<div id="map1011"></div>
+<div id="map0910"></div>
+
+<a href="javascript:void(0);" id="zoom">Reset View</a>
+<p style="padding:10px;clear:both;"></p>
+<div id="legend_lable">Percent change in total students</div>
+<div class='legend'>
+  <nav class='legend clearfix'>
+    <span style='background:#fff;'>-50%</span>
+    <span style='background:#252525;'></span>
+    <span style='background:#636363;'></span>
+    <span style='background:#969696;'></span>
+    <span style='background:#bdbdbd;'></span>
+    <span style='background:#d9d9d9;'></span>
+    <span style='background:#f7f7f7;'></span>
+    <span style='background:#fff;'>0</span>
+    <span style='background:#edf8e9;'></span>
+    <span style='background:#c7e9c0;'></span>
+    <span style='background:#a1d99b;'></span>
+    <span style='background:#74c476;'></span>
+    <span style='background:#31a354'></span>
+    <span style='background:#006d2c'></span>
+    <span style='background:#fff;'>400%</span>
+</div>
+<p style="padding:10px;clear:both;"></p>
+<div id="timeline"><a href="javascript:void(0)" id="y0910">2009-2010</a> | <a href="javascript:void(0)" id="y1011">2010-2011</a> | <a href="javascript:void(0)" id="y1112">2011-2012</a> | <a href="javascript:void(0)" id="y1213">2012-2013</a> | <a href="javascript:void(0)" id="y1314" class="selected">2013-2014</a></div>
+<p style="padding:10px;clear:both;"></p>
+<div id="#infobox"></div>
+
+
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="lib/d3.v2.min.js"></script>
+<script src="lib/topojson.js"></script>
+<script src="lib/cartogram.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+  $( "#map0910" ).hide();
+  $( "#map1011" ).hide();
+  $( "#map1112" ).hide();
+  $( "#map1213" ).hide();
+$( "#y0910" ).click(function() {
+  $( "#map0910" ).show();
+  $( "#y0910" ).addClass("selected");
+  $( "#map1011" ).hide();
+  $( "#y1011" ).removeClass("selected");
+  $( "#map1112" ).hide();
+  $( "#y1112" ).removeClass("selected");
+  $( "#map1213" ).hide();
+  $( "#y1213" ).removeClass("selected");
+  $( "#map1314" ).hide();
+  $( "#y1314" ).removeClass("selected");
+  }); 
+$( "#y1011" ).click(function() {
+  $( "#map0910" ).hide();
+  $( "#y0910" ).removeClass("selected");
+  $( "#map1011" ).show();
+  $( "#y1011" ).addClass("selected");
+  $( "#map1112" ).hide();
+  $( "#y1112" ).removeClass("selected");
+  $( "#map1213" ).hide();
+  $( "#y1213" ).removeClass("selected");
+  $( "#map1314" ).hide();
+  $( "#y1314" ).removeClass("selected");
+  }); 
+$( "#y1112" ).click(function() {
+  $( "#map0910" ).hide();
+  $( "#y0910" ).removeClass("selected");
+  $( "#map1011" ).hide();
+  $( "#y1011" ).removeClass("selected");
+  $( "#map1112" ).show();
+  $( "#y1112" ).addClass("selected");
+  $( "#map1213" ).hide();
+  $( "#y1213" ).removeClass("selected");
+  $( "#map1314" ).hide();
+  $( "#y1314" ).removeClass("selected");
+  }); 
+$( "#y1213" ).click(function() {
+  $( "#map0910" ).hide();
+  $( "#y0910" ).removeClass("selected");
+  $( "#map1011" ).hide();
+  $( "#y1011" ).removeClass("selected");
+  $( "#map1112" ).hide();
+  $( "#y1112" ).removeClass("selected");
+  $( "#map1213" ).show();
+  $( "#y1213" ).addClass("selected");
+  $( "#map1314" ).hide();
+  $( "#y1314" ).removeClass("selected");
+  }); 
+$( "#y1314" ).click(function() {
+  $( "#map0910" ).hide();
+  $( "#y0910" ).removeClass("selected");
+  $( "#map1011" ).hide();
+  $( "#y1011" ).removeClass("selected");
+  $( "#map1112" ).hide();
+  $( "#y1112" ).removeClass("selected");
+  $( "#map1213" ).hide();
+  $( "#y1213" ).removeClass("selected");
+  $( "#map1314" ).show();
+  $( "#y1314" ).addClass("selected");
+  }); 
+});
+
+//2013-2014 year
+d3.csv("enroll_13_14.csv", function(error, csvData) {
+    csvData.forEach(function(d) {
+        d.name = d.DistrictName;
+        d.year = d.DataYear;
+        d.students = +d.TotalStudents;
+        d.in = +d.TransferIn;
+        d.out = +d.TransferOut;
+        d.estBase = +d.estBase;
+        //d.percent = +d.pctgrowth;
+        d.percent = parseFloat(d.pctgrowth);
+        d.index = +d.districtNumber;
+    });
+
+
+var width = 630,
+    height = 600,
+    centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#map1314").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked2);
+
+var g = svg.append("g");
+
+var none = "#f7f7f7";
+var q1="#006d2c" //300%
+var q2="#31a354" //200%
+var q3="#74c476" //100%
+var q4="#a1d99b" //50%
+var q5="#c7e9c0" //10%
+var q6="#edf8e9" //1%
+var q7="#f7f7f7" //-1%
+var q8="#d9d9d9" //-10%
+var q9="#bdbdbd" //-20%
+var q10="#969696" //-30%
+var q11="#636363" //-40%
+var q12="#252525" //-50%
+
+var districtInfo = document.getElementById('#infobox');
+
+d3.json("districts.json", function(error, us) {
+  g.append("g")
+      .attr("id", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .on("mousedown", function(d, i){console.log("derp");for (var j = 0; j < 513; j++){if (d.properties.UNI_MAJ == csvData[j].index){districtInfo.innerHTML = "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }}})  
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .attr("width", function(d, i){for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return 200; }
+        }
+         })
+      .attr("height", function(d, i){for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return 200; }
+        }
+         })
+      .style("fill", function(d, i){
+
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ 
+            if (csvData[j].percent >= 300){ return q1; }
+            if (csvData[j].percent >= 200){ return q2; }
+            if (csvData[j].percent >= 100){ return q3; }
+            if (csvData[j].percent >= 50){ return q4; }
+            if (csvData[j].percent >= 10){ return q5; }
+            if (csvData[j].percent >= 1){ return q6; }
+            if (csvData[j].percent == 0){ return none; }
+            if (csvData[j].percent <= -50){ return q12; }
+            if (csvData[j].percent <= -40){ return q11; }
+            if (csvData[j].percent <= -30){ return q10; }
+            if (csvData[j].percent <= -20){ return q9; }
+            if (csvData[j].percent <= -5){ return q8; }
+            if (csvData[j].percent <= -1){ return q7; }
+            else { return none; }
+}
+         }
+        })
+      .call(d3.helper.tooltip(
+        function(d, i){
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }
+
+        }
+        }
+        ));
+
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+});
+
+// zoom and pan
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+svg.call(zoom);
+
+$("#zoom").click(function() {
+  clicked2();
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+var districtInfo = document.getElementById('#infobox');
+districtInfo.innerHTML = "";
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+});
+
+//2012-2013 year
+d3.csv("enroll_12_13.csv", function(error, csvData) {
+    csvData.forEach(function(d) {
+        d.name = d.DistrictName;
+        d.year = d.DataYear;
+        d.students = +d.TotalStudents;
+        d.in = +d.TransferIn;
+        d.out = +d.TransferOut;
+        d.estBase = +d.estBase;
+        d.percent = +d.pctgrowth;
+        d.index = +d.districtNumber;
+    });
+
+
+
+var width = 630,
+    height = 600,
+    centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#map1213").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked2);
+
+var g = svg.append("g");
+
+var none = "#f7f7f7";
+var q1="#006d2c" //300%
+var q2="#31a354" //200%
+var q3="#74c476" //100%
+var q4="#a1d99b" //50%
+var q5="#c7e9c0" //10%
+var q6="#edf8e9" //1%
+var q7="#f7f7f7" //-1%
+var q8="#d9d9d9" //-10%
+var q9="#bdbdbd" //-20%
+var q10="#969696" //-30%
+var q11="#636363" //-40%
+var q12="#252525" //-50%
+
+var districtInfo = document.getElementById('#infobox');
+
+d3.json("districts.json", function(error, us) {
+  g.append("g")
+      .attr("id", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .on("mousedown", function(d, i){console.log("derp");for (var j = 0; j < 513; j++){if (d.properties.UNI_MAJ == csvData[j].index){districtInfo.innerHTML = "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }}}) 
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .style("fill", function(d, i){
+
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ 
+            if (csvData[j].percent >= 300){ return q1; }
+            if (csvData[j].percent >= 200){ return q2; }
+            if (csvData[j].percent >= 100){ return q3; }
+            if (csvData[j].percent >= 50){ return q4; }
+            if (csvData[j].percent >= 10){ return q5; }
+            if (csvData[j].percent >= 1){ return q6; }
+            if (csvData[j].percent == 0){ return none; }
+            if (csvData[j].percent <= -50){ return q12; }
+            if (csvData[j].percent <= -40){ return q11; }
+            if (csvData[j].percent <= -30){ return q10; }
+            if (csvData[j].percent <= -20){ return q9; }
+            if (csvData[j].percent <= -5){ return q8; }
+            if (csvData[j].percent <= -1){ return q7; }
+            else { return none; }
+}
+         }
+        })
+      .call(d3.helper.tooltip(
+        function(d, i){
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }
+
+        }
+        }
+        ));
+
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+});
+
+// zoom and pan
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+svg.call(zoom);
+
+$("#zoom").click(function() {
+  clicked2();
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+var districtInfo = document.getElementById('#infobox');
+districtInfo.innerHTML = "";
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+});
+
+//2011-2012 year
+d3.csv("enroll_11_12.csv", function(error, csvData) {
+    csvData.forEach(function(d) {
+        d.name = d.DistrictName;
+        d.year = d.DataYear;
+        d.students = +d.TotalStudents;
+        d.in = +d.TransferIn;
+        d.out = +d.TransferOut;
+        d.estBase = +d.estBase;
+        d.percent = +d.pctgrowth;
+        d.index = +d.districtNumber;
+    });
+
+
+
+var width = 630,
+    height = 600,
+    centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#map1112").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked2);
+
+var g = svg.append("g");
+
+var none = "#f7f7f7";
+var q1="#006d2c" //300%
+var q2="#31a354" //200%
+var q3="#74c476" //100%
+var q4="#a1d99b" //50%
+var q5="#c7e9c0" //10%
+var q6="#edf8e9" //1%
+var q7="#f7f7f7" //-1%
+var q8="#d9d9d9" //-10%
+var q9="#bdbdbd" //-20%
+var q10="#969696" //-30%
+var q11="#636363" //-40%
+var q12="#252525" //-50%
+
+var districtInfo = document.getElementById('#infobox');
+
+d3.json("districts.json", function(error, us) {
+  g.append("g")
+      .attr("id", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .on("mousedown", function(d, i){console.log("derp");for (var j = 0; j < 513; j++){if (d.properties.UNI_MAJ == csvData[j].index){districtInfo.innerHTML = "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }}}) 
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .style("fill", function(d, i){
+
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ 
+            if (csvData[j].percent >= 300){ return q1; }
+            if (csvData[j].percent >= 200){ return q2; }
+            if (csvData[j].percent >= 100){ return q3; }
+            if (csvData[j].percent >= 50){ return q4; }
+            if (csvData[j].percent >= 10){ return q5; }
+            if (csvData[j].percent >= 1){ return q6; }
+            if (csvData[j].percent == 0){ return none; }
+            if (csvData[j].percent <= -50){ return q12; }
+            if (csvData[j].percent <= -40){ return q11; }
+            if (csvData[j].percent <= -30){ return q10; }
+            if (csvData[j].percent <= -20){ return q9; }
+            if (csvData[j].percent <= -5){ return q8; }
+            if (csvData[j].percent <= -1){ return q7; }
+            else { return none; }
+}
+         }
+        })
+      .call(d3.helper.tooltip(
+        function(d, i){
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }
+
+        }
+        }
+        ));
+
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+});
+
+// zoom and pan
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+svg.call(zoom);
+
+$("#zoom").click(function() {
+  clicked2();
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+var districtInfo = document.getElementById('#infobox');
+districtInfo.innerHTML = "";
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+});
+
+//2010-2011 year
+d3.csv("enroll_10_11.csv", function(error, csvData) {
+    csvData.forEach(function(d) {
+        d.name = d.DistrictName;
+        d.year = d.DataYear;
+        d.students = +d.TotalStudents;
+        d.in = +d.TransferIn;
+        d.out = +d.TransferOut;
+        d.estBase = +d.estBase;
+        d.percent = +d.pctgrowth;
+        d.index = +d.districtNumber;
+    });
+
+
+
+var width = 630,
+    height = 600,
+    centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#map1011").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked2);
+
+var g = svg.append("g");
+
+var none = "#f7f7f7";
+var q1="#006d2c" //300%
+var q2="#31a354" //200%
+var q3="#74c476" //100%
+var q4="#a1d99b" //50%
+var q5="#c7e9c0" //10%
+var q6="#edf8e9" //1%
+var q7="#f7f7f7" //-1%
+var q8="#d9d9d9" //-10%
+var q9="#bdbdbd" //-20%
+var q10="#969696" //-30%
+var q11="#636363" //-40%
+var q12="#252525" //-50%
+
+var districtInfo = document.getElementById('#infobox');
+
+d3.json("districts.json", function(error, us) {
+  g.append("g")
+      .attr("id", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .on("mousedown", function(d, i){console.log("derp");for (var j = 0; j < 513; j++){if (d.properties.UNI_MAJ == csvData[j].index){districtInfo.innerHTML = "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }}}) 
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .style("fill", function(d, i){
+
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ 
+            if (csvData[j].percent >= 300){ return q1; }
+            if (csvData[j].percent >= 200){ return q2; }
+            if (csvData[j].percent >= 100){ return q3; }
+            if (csvData[j].percent >= 50){ return q4; }
+            if (csvData[j].percent >= 10){ return q5; }
+            if (csvData[j].percent >= 1){ return q6; }
+            if (csvData[j].percent == 0){ return none; }
+            if (csvData[j].percent <= -50){ return q12; }
+            if (csvData[j].percent <= -40){ return q11; }
+            if (csvData[j].percent <= -30){ return q10; }
+            if (csvData[j].percent <= -20){ return q9; }
+            if (csvData[j].percent <= -5){ return q8; }
+            if (csvData[j].percent <= -1){ return q7; }
+            else { return none; }
+}
+         }
+        })
+      .call(d3.helper.tooltip(
+        function(d, i){
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }
+
+        }
+        }
+        ));
+
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+});
+
+// zoom and pan
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+svg.call(zoom);
+
+$("#zoom").click(function() {
+  clicked2();
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+var districtInfo = document.getElementById('#infobox');
+districtInfo.innerHTML = "";
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+});
+
+//2009-2010 year
+d3.csv("enroll_09_10.csv", function(error, csvData) {
+    csvData.forEach(function(d) {
+        d.name = d.DistrictName;
+        d.year = d.DataYear;
+        d.students = +d.TotalStudents;
+        d.in = +d.TransferIn;
+        d.out = +d.TransferOut;
+        d.estBase = +d.estBase;
+        d.percent = +d.pctgrowth;
+        d.index = +d.districtNumber;
+    });
+
+
+
+var width = 630,
+    height = 600,
+    centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#map0910").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked2);
+
+var g = svg.append("g");
+
+var none = "#f7f7f7";
+var q1="#006d2c" //300%
+var q2="#31a354" //200%
+var q3="#74c476" //100%
+var q4="#a1d99b" //50%
+var q5="#c7e9c0" //10%
+var q6="#edf8e9" //1%
+var q7="#f7f7f7" //-1%
+var q8="#d9d9d9" //-10%
+var q9="#bdbdbd" //-20%
+var q10="#969696" //-30%
+var q11="#636363" //-40%
+var q12="#252525" //-50%
+
+var districtInfo = document.getElementById('#infobox');
+
+d3.json("districts.json", function(error, us) {
+  g.append("g")
+      .attr("id", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)
+      .on("click", clicked)
+      .on("mousedown", function(d, i){console.log("derp");for (var j = 0; j < 513; j++){if (d.properties.UNI_MAJ == csvData[j].index){districtInfo.innerHTML = "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }}}) 
+      .style("stroke-width", "1px")
+      .style("stroke", "#fff")
+      .style("fill", function(d, i){
+
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ 
+            if (csvData[j].percent >= 300){ return q1; }
+            if (csvData[j].percent >= 200){ return q2; }
+            if (csvData[j].percent >= 100){ return q3; }
+            if (csvData[j].percent >= 50){ return q4; }
+            if (csvData[j].percent >= 10){ return q5; }
+            if (csvData[j].percent >= 1){ return q6; }
+            if (csvData[j].percent == 0){ return none; }
+            if (csvData[j].percent <= -50){ return q12; }
+            if (csvData[j].percent <= -40){ return q11; }
+            if (csvData[j].percent <= -30){ return q10; }
+            if (csvData[j].percent <= -20){ return q9; }
+            if (csvData[j].percent <= -5){ return q8; }
+            if (csvData[j].percent <= -1){ return q7; }
+            else { return none; }
+}
+         }
+        })
+      .call(d3.helper.tooltip(
+        function(d, i){
+        for (var j = 0; j < 513; j++){
+          if (d.properties.UNI_MAJ == csvData[j].index){ return "<b>" + d.properties.UNI_NAM + "</b> - " + csvData[j].year + "<br />Students: " + csvData[j].students + "<br />Transfers In: " + csvData[j].in + "<br />Transfers Out: " + csvData[j].out + "<br />Percent Growth: "  + csvData[j].percent + "%"; }
+        }
+        }
+        ));
+
+
+  g.append("path")
+      //.datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+});
+
+// zoom and pan
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+svg.call(zoom);
+
+$("#zoom").click(function() {
+  clicked2();
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+var districtInfo = document.getElementById('#infobox');
+districtInfo.innerHTML = "";
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+});
+
+</script>
+<script>
+d3.helper = {};
+
+d3.helper.tooltip = function(accessor){
+    return function(selection){
+        var tooltipDiv;
+        var bodyNode = d3.select('body').node();
+        selection.on("mouseover", function(d, i){
+            // Clean up lost tooltips
+            d3.select('body').selectAll('div.tooltip').remove();
+            // Append tooltip
+            tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px')
+                .style('position', 'absolute') 
+                .style('z-index', 1001);
+            // Add text using the accessor function
+            var tooltipText = accessor(d, i) || '';
+            // Crop text arbitrarily
+            //tooltipDiv.style('width', function(d, i){return (tooltipText.length > 80) ? '300px' : null;})
+            //    .html(tooltipText);
+        })
+        .on('mousemove', function(d, i) {
+            // Move tooltip
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px');
+            var tooltipText = accessor(d, i) || '';
+            tooltipDiv.html(tooltipText);
+        })
+        .on("mouseout", function(d, i){
+            // Remove tooltip
+            tooltipDiv.remove();
+        });
+
+    };
+};
+</script>

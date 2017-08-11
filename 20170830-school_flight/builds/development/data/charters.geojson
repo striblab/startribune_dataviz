@@ -1,0 +1,3515 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.66294,44.63357 ]
+    },
+    "properties": {
+    "districtid":"4013-07-000",
+    "address":"2158 Holmquist Road, Welch, MN 55089",
+    "firstyr":1996,
+    "lastyr":1996,
+    "name":"PRAIRIE ISLAND CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.9813385,44.55288696 ]
+    },
+    "properties": {
+    "districtid":"4009-07-000",
+    "address":"7 Lower Sioux Trail West, Morton, MN 56270",
+    "firstyr":1996,
+    "lastyr":1998,
+    "name":"Dakota Open",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26681,44.94931 ]
+    },
+    "properties": {
+    "districtid":"4010-07-000",
+    "address":"2922 Oakland Ave S, Minneapolis, MN 55407",
+    "firstyr":1996,
+    "lastyr":1999,
+    "name":"FREDERICK DOUGLASS MATH/SCI ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.19796,45.54399 ]
+    },
+    "properties": {
+    "districtid":"4022-07-000",
+    "address":"3335 West Saint Germain, Ste 108, St. Cloud, MN 56302",
+    "firstyr":1998,
+    "lastyr":2000,
+    "name":"CENTRAL MINNESOTA DEAF SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.31431,45.00927 ]
+    },
+    "properties": {
+    "districtid":"4014-07-000",
+    "address":"2648 West Boadway, Minneapolis, MN 55412",
+    "firstyr":1996,
+    "lastyr":2000,
+    "name":"RIGHT STEP ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15859024,44.97029276 ]
+    },
+    "properties": {
+    "districtid":"4023-07-000",
+    "address":"1380 Energy Lane #206 W, St. Paul, MN 55108",
+    "firstyr":1998,
+    "lastyr":2000,
+    "name":"SUCCESS ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.88658905,45.37479401 ]
+    },
+    "properties": {
+    "districtid":"4024-07-000",
+    "address":"PO Box 600 Chisago City, MN 55013",
+    "firstyr":1998,
+    "lastyr":2000,
+    "name":"SUMMIT SCHOOL FOR THE ARTS",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.7365,47.0705 ]
+    },
+    "properties": {
+    "districtid":"4002-07-000",
+    "address":"7705 Western Ave, PO Box 215, Meadowlands, MN 55765",
+    "firstyr":1996,
+    "lastyr":2000,
+    "name":"TOIVOLA-MEADOWLANDS CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.19033,44.8933 ]
+    },
+    "properties": {
+    "districtid":"4063-07-000",
+    "address":"500 Bloomington Road, Fort Snelling, MN 55111",
+    "firstyr":2001,
+    "lastyr":2001,
+    "name":"FORT SNELLING ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17414,44.9564 ]
+    },
+    "properties": {
+    "districtid":"4034-07-000",
+    "address":"1745 University Ave W, St. Paul, MN 55104",
+    "firstyr":1999,
+    "lastyr":2001,
+    "name":"LEARNING ADVENTURES CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.18036,44.95773 ]
+    },
+    "properties": {
+    "districtid":"4041-07-000",
+    "address":"1919 University Ave, Ste 114, St. Paul, MN 55103",
+    "firstyr":2000,
+    "lastyr":2001,
+    "name":"OPPORTUNITIES FOR LEARNING",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17471909,44.95768567 ]
+    },
+    "properties": {
+    "districtid":"4037-07-000",
+    "address":"547 Wheeler Street N, St. Paul, MN 55104",
+    "firstyr":1999,
+    "lastyr":2001,
+    "name":"SKILLS FOR TOMORROW JUNIOR HIGH",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.48735,46.33642 ]
+    },
+    "properties": {
+    "districtid":"4033-07-000",
+    "address":"3939 State 210, Pillager, MN 56473",
+    "firstyr":1999,
+    "lastyr":2001,
+    "name":"PEAKS-Pillager",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.20762688,44.42919097 ]
+    },
+    "properties": {
+    "districtid":"4047-07-000",
+    "address":"121 Railway Street, Dundas, MN 55019",
+    "firstyr":2000,
+    "lastyr":2001,
+    "name":"PEAKS-Faribault",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.771972,47.494887 ]
+    },
+    "properties": {
+    "districtid":"4040-07-000",
+    "address":"200 Wanless Street, PO Box 726, Buhl, MN 55713",
+    "firstyr":2000,
+    "lastyr":2002,
+    "name":"MARTIN HUGHES CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.08711,44.95066 ]
+    },
+    "properties": {
+    "districtid":"4060-07-000",
+    "address":"245 E 6th St, St. Paul, MN 55101",
+    "firstyr":2001,
+    "lastyr":2002,
+    "name":"MEXICA MULTICULTURAL ED CHARTER",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25503853,44.96269503 ]
+    },
+    "properties": {
+    "districtid":"4071-07-000",
+    "address":"1433 Frankline Ave, Minneapolis, MN 55404",
+    "firstyr":2001,
+    "lastyr":2003,
+    "name":"NATIVE ARTS CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.49551492,44.14906024 ]
+    },
+    "properties": {
+    "districtid":"4051-07-000",
+    "address":"212 Summit, PO Box 43, Hanska, MN 56041",
+    "firstyr":2000,
+    "lastyr":2004,
+    "name":"HANSKA CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.266453,44.977988 ]
+    },
+    "properties": {
+    "districtid":"4096-07-000",
+    "address":"219 S 4th Street, Minneapolis, MN 55401",
+    "firstyr":2003,
+    "lastyr":2005,
+    "name":"CHIRON CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.06821,44.98541 ]
+    },
+    "properties": {
+    "districtid":"4076-07-000",
+    "address":"770 Nevada Ave E, St. Paul, MN 55106",
+    "firstyr":2004,
+    "lastyr":2005,
+    "name":"MINNESOTA ACADEMY OF TECHNOLOGY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16387,44.97519 ]
+    },
+    "properties": {
+    "districtid":"4069-07-000",
+    "address":"1515 Brewster Street, St. Paul, MN 55108",
+    "firstyr":2001,
+    "lastyr":2005,
+    "name":"WILLIAM E MCGEE INSTITUTE OF TECH",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15609,45.03144 ]
+    },
+    "properties": {
+    "districtid":"4062-07-000",
+    "address":"3000 Hamline Ave N, Roseville, MN 55113",
+    "firstyr":2001,
+    "lastyr":2006,
+    "name":"FAMILY ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24647,44.96318 ]
+    },
+    "properties": {
+    "districtid":"4129-07-000",
+    "address":"924 19th Ave S, Minneapolis, MN 55404",
+    "firstyr":2006,
+    "lastyr":2006,
+    "name":"MARY MCEVOY EARLY LITERACY ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.09785432,44.94913168 ]
+    },
+    "properties": {
+    "districtid":"4065-07-000",
+    "address":"505 Wabasha St. N, St. Paul, MN 55102",
+    "firstyr":2001,
+    "lastyr":2006,
+    "name":"MINNESOTA BUSINESS ACADEMY CHARTER",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17414,44.9564 ]
+    },
+    "properties": {
+    "districtid":"4019-07-000",
+    "address":"1745 University Ave, Ste 100, St Paul, MN 55104",
+    "firstyr":1997,
+    "lastyr":2006,
+    "name":"NEW VOYAGE ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17845,44.44512 ]
+    },
+    "properties": {
+    "districtid":"4021-07-000",
+    "address":"1100 Bollenbacker Court, Northfield, MN 55057",
+    "firstyr":1998,
+    "lastyr":2006,
+    "name":"VILLAGE SCHOOL OF NORTHFIELD",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.34316,45.00017 ]
+    },
+    "properties": {
+    "districtid":"4158-07-000",
+    "address":"4955 Westbend Road, Golden Valley, MN 55422",
+    "firstyr":2007,
+    "lastyr":2007,
+    "name":"DAKOTA ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28803621,45.00508036 ]
+    },
+    "properties": {
+    "districtid":"4157-07-000",
+    "address":"2519 Lyndale Ave N, Minneapolis, MN 55411",
+    "firstyr":2007,
+    "lastyr":2007,
+    "name":"NEW SALEM ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27084,44.969297 ]
+    },
+    "properties": {
+    "districtid":"4136-07-000",
+    "address":"333 S 12th Street, Minneapolis, MN 55404",
+    "firstyr":2006,
+    "lastyr":2007,
+    "name":"SOUL ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.4853,45.11867 ]
+    },
+    "properties": {
+    "districtid":"4165-07-000",
+    "address":"9060 Zanzibar Lane N, Maple Grove, MN 55311",
+    "firstyr":2008,
+    "lastyr":2008,
+    "name":"ELOM INTERNATIONAL SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23792,44.98172 ]
+    },
+    "properties": {
+    "districtid":"4044-07-000",
+    "address":"1209 4th Street Southeast, Minneapolis, MN 55414",
+    "firstyr":2000,
+    "lastyr":2008,
+    "name":"HEART OF THE EARTH CHARTER",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.19214,45.06527 ]
+    },
+    "properties": {
+    "districtid":"4148-07-000",
+    "address":"400 10th Street NW, New Brighton, MN 55112",
+    "firstyr":2006,
+    "lastyr":2009,
+    "name":"ACADEMY OF BIOSCIENCES",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.98909,44.55072 ]
+    },
+    "properties": {
+    "districtid":"4028-07-000",
+    "address":"280 North Centennial Dr, PO Box 10, Morton, MN 56270",
+    "firstyr":1999,
+    "lastyr":2009,
+    "name":"ECI' NOMPA WOONSPE",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.067,44.9911 ]
+    },
+    "properties": {
+    "districtid":"4101-07-000",
+    "address":"1669 Arcade Street N, St. Paul, MN 55106",
+    "firstyr":2005,
+    "lastyr":2009,
+    "name":"MINNESOTA NORTH STAR ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.14222,44.95525 ]
+    },
+    "properties": {
+    "districtid":"4176-07-000",
+    "address":"1000 University, St. Paul, MN 55104",
+    "firstyr":2009,
+    "lastyr":2009,
+    "name":"WAYNEWOOD SCHOOL OF HOPE",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.86535,44.17701 ]
+    },
+    "properties": {
+    "districtid":"4072-07-000",
+    "address":"2269 100th Ave, Balaton, MN 56115",
+    "firstyr":2001,
+    "lastyr":2009,
+    "name":"YANKTON COUNTRY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.38407,45.20554 ]
+    },
+    "properties": {
+    "districtid":"4149-07-000",
+    "address":"440 Pierce Street, Anoka, MN 55303",
+    "firstyr":2007,
+    "lastyr":2010,
+    "name":"CYGNUS ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.95843,46.7281 ]
+    },
+    "properties": {
+    "districtid":"4012-07-000",
+    "address":"39811 State Highway 6, PO Box 40, Emily, MN 56477",
+    "firstyr":1996,
+    "lastyr":2010,
+    "name":"EMILY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.21595348,44.07122562 ]
+    },
+    "properties": {
+    "districtid":"4154-07-000",
+    "address":"1225 Lincoln Ave S, Owatonna, MN 55060",
+    "firstyr":2006,
+    "lastyr":2010,
+    "name":"RECOVERY SCHOOL OF SOUTHERN MN",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17471909,44.95768567 ]
+    },
+    "properties": {
+    "districtid":"4006-07-000",
+    "address":"547 Wheeler Street N, St. Paul, MN 55104",
+    "firstyr":1995,
+    "lastyr":2010,
+    "name":"SKILLS FOR TOMORROW",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.59496,43.6221 ]
+    },
+    "properties": {
+    "districtid":"4125-07-000",
+    "address":"1215 4th Ave N, Worthington, MN 56187",
+    "firstyr":2006,
+    "lastyr":2010,
+    "name":"WORTHINGTON AREA LANGUAGE ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.02748,45.00352 ]
+    },
+    "properties": {
+    "districtid":"4109-07-000",
+    "address":"2055 White Bear Ave, North, Maplewood, MN 55109",
+    "firstyr":2004,
+    "lastyr":2010,
+    "name":"Sobriety High-Maplewood",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.99603836,44.16444878 ]
+    },
+    "properties": {
+    "districtid":"4048-07-000",
+    "address":"110 N 6th Street, Mnakato, MN",
+    "firstyr":2001,
+    "lastyr":2011,
+    "name":"GREAT RIVER EDUCATION CENTER",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.15427,46.8879 ]
+    },
+    "properties": {
+    "districtid":"4046-07-000",
+    "address":"5215 Rice Lake Road, Duluth, MN 55803",
+    "firstyr":2000,
+    "lastyr":2011,
+    "name":"LAKE SUPERIOR HIGH SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15632792,44.96109504 ]
+    },
+    "properties": {
+    "districtid":"4175-07-000",
+    "address":"1330 Blair Ave, St. Paul, MN 55104",
+    "firstyr":2008,
+    "lastyr":2011,
+    "name":"LONG TIENG ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29186,44.99691 ]
+    },
+    "properties": {
+    "districtid":"4114-07-000",
+    "address":"1704 Dupont Ave N, Minneapolis, MN 55411",
+    "firstyr":2005,
+    "lastyr":2011,
+    "name":"PRESTIGE ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.35379791,45.09981155 ]
+    },
+    "properties": {
+    "districtid":"4196-07-000",
+    "address":"8901 Stafford Crossing North, Brooklyn Park, MN 55443",
+    "firstyr":2010,
+    "lastyr":2011,
+    "name":"RICHARD ALLEN MATH&SCIENCE ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.46935,44.0005 ]
+    },
+    "properties": {
+    "districtid":"4061-07-000",
+    "address":"415 16th St. SW, Rochester, MN 55902",
+    "firstyr":2001,
+    "lastyr":2011,
+    "name":"STUDIO ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.02235,44.8523 ]
+    },
+    "properties": {
+    "districtid":"4099-07-000",
+    "address":"4100 East 66th Street, Inver Grove Heights, MN 55076",
+    "firstyr":2004,
+    "lastyr":2011,
+    "name":"TAREK IBN ZIYAD ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.31018,45.00651 ]
+    },
+    "properties": {
+    "districtid":"4197-07-000",
+    "address":"2620 Russell Ave, Minneapolis, MN 55411",
+    "firstyr":2011,
+    "lastyr":2012,
+    "name":"ACADEMY OF NORTH MINNEAPOLIS",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29476,44.99887 ]
+    },
+    "properties": {
+    "districtid":"4052-07-000",
+    "address":"1113 West Broadway, Minneapolis, MN 55411",
+    "firstyr":2000,
+    "lastyr":2012,
+    "name":"FOUR DIRECTIONS CHARTER SCHOOLS",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.08363,44.89865 ]
+    },
+    "properties": {
+    "districtid":"4108-07-000",
+    "address":"33 East Wentworth, Suite 100, West St. Paul, MN 55118",
+    "firstyr":2005,
+    "lastyr":2012,
+    "name":"GENERAL JOHN VESSEY JR LEADERSHIP",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.476129,46.05172 ]
+    },
+    "properties": {
+    "districtid":"4174-07-000",
+    "address":"63842 Ojibwe Road, Sandstone, MN 55072",
+    "firstyr":2008,
+    "lastyr":2012,
+    "name":"PINE GROVE LEADERSHIP ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.21153,44.99247 ]
+    },
+    "properties": {
+    "districtid":"4180-07-000",
+    "address":"300 Industrial Blvd, NE, Minneapolis, MN 55413",
+    "firstyr":2008,
+    "lastyr":2013,
+    "name":"EMILY O. GOODRIDGE-GREY ACCELERATED",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29186,44.99691 ]
+    },
+    "properties": {
+    "districtid":"4173-07-000",
+    "address":"1704 Dupont Ave N, Minneapolis, MN 55411",
+    "firstyr":2008,
+    "lastyr":2013,
+    "name":"METRO TECH ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28454,45.01995 ]
+    },
+    "properties": {
+    "districtid":"4202-07-000",
+    "address":"3550 North 4th Street, Minneapolis, MN 55412",
+    "firstyr":2012,
+    "lastyr":2013,
+    "name":"MINNESOTA SCHOOL OF SCIENCE",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.34773173,44.93015822 ]
+    },
+    "properties": {
+    "districtid":"4182-07-000",
+    "address":"3946 Wooddale Ave, St. Louis Park, MN 55416",
+    "firstyr":2009,
+    "lastyr":2013,
+    "name":"QUEST ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.16426284,45.86744777 ]
+    },
+    "properties": {
+    "districtid":"4045-07-000",
+    "address":"601 West Nakomis Street, Osakis, MN 56360",
+    "firstyr":2000,
+    "lastyr":2013,
+    "name":"Lakes Area Charter School",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27618937,44.78323749 ]
+    },
+    "properties": {
+    "districtid":"4109-07-000",
+    "address":"12156 Nicollet Ave, Burnsville, MN 55337",
+    "firstyr":2011,
+    "lastyr":2013,
+    "name":"Sobriety High-Burnsville",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25029,44.94063 ]
+    },
+    "properties": {
+    "districtid":"4211-07-000",
+    "address":"3420 17th Ave S, Minneapolis, MN 55407",
+    "firstyr":2014,
+    "lastyr":2014,
+    "name":"ARC4H ACADEMY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.437445,44.993458 ]
+    },
+    "properties": {
+    "districtid":"4133-07-000",
+    "address":"12325 Highway 55, Plymouth, MN 55411",
+    "firstyr":2007,
+    "lastyr":2014,
+    "name":"BEACON PREPARATORY SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.36052,43.90888 ]
+    },
+    "properties": {
+    "districtid":"4123-07-000",
+    "address":"220 Golden Rule Road, Dakota, MN 55057",
+    "firstyr":2005,
+    "lastyr":2015,
+    "name":"DAKOTA AREA COMMUNITY CHARTER SCH",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29029,44.99412 ]
+    },
+    "properties": {
+    "districtid":"4086-07-000",
+    "address":"1501 Aldrich Ave N, Minneapolis, MN 55411",
+    "firstyr":2003,
+    "lastyr":2015,
+    "name":"WOODSON INSTITUTE FOR EXCELLENCE CH",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.22663,44.91212 ]
+    },
+    "properties": {
+    "districtid":"4115-07-000",
+    "address":"5011 31st Ave S, Minneapolis, MN 55417",
+    "firstyr":2005,
+    "lastyr":2016,
+    "name":"MINNEAPOLIS ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.75188,45.28223 ]
+    },
+    "properties": {
+    "districtid":"4203-07-000",
+    "address":"6673 East Oak Drive, Monticello, MN 55362",
+    "firstyr":2013,
+    "lastyr":2016,
+    "name":"MINNEAPOLIS COLLEGE PREPARATORY",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.21152,44.73453 ]
+    },
+    "properties": {
+    "districtid":"4141-07-000",
+    "address":"7200 147th Street West, Apple Valley, MN ",
+    "firstyr":2006,
+    "lastyr":2016,
+    "name":"PAIDEIA ACADEMY CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.12814152,44.92845652 ]
+    },
+    "properties": {
+    "districtid":"4042-07-000",
+    "address":"426 Osceola Ave, St. Paul, MN 55102",
+    "firstyr":2000,
+    "lastyr":2016,
+    "name":"TWIN CITIES ACADEMY HIGH SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.90484,44.15127 ]
+    },
+    "properties": {
+    "districtid":"4214-07-000",
+    "address":"306 Highland St. PO Box 353 West Concord, MN 55985",
+    "firstyr":2014,
+    "lastyr":2016,
+    "name":"WEST CONCORD PUBLIC CHARTER SCHOOL",
+    "status":"closed"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.07672,44.969297 ]
+    },
+    "properties": {
+    "districtid":"4000-07-000",
+    "address":"958 Jessie St, Saint Paul, MN, 55130-4058",
+    "firstyr":1995,
+    "lastyr":2017,
+    "name":"City Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.67266,44.04819 ]
+    },
+    "properties": {
+    "districtid":"4001-07-000",
+    "address":"1321 Gilmore Ave, Winona, MN, 55987-2459",
+    "firstyr":1996,
+    "lastyr":2017,
+    "name":"Bluffview Montessori",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.815733,45.057804 ]
+    },
+    "properties": {
+    "districtid":"4003-07-000",
+    "address":"614 W Mulberry St, Stillwater, MN, 55082-4858",
+    "firstyr":1995,
+    "lastyr":2017,
+    "name":"New Heights School, Inc.",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.247936,44.96793606 ]
+    },
+    "properties": {
+    "districtid":"4004-07-000",
+    "address":"1610 S 6th Street Ste 100, Minneapolis, MN, 55454-1102",
+    "firstyr":1996,
+    "lastyr":2017,
+    "name":"Cedar Riverside Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.161996,44.975125 ]
+    },
+    "properties": {
+    "districtid":"4005-07-000",
+    "address":"1471 Brewster St, Saint Paul, MN, 55108-2612",
+    "firstyr":1995,
+    "lastyr":2017,
+    "name":"Metro Deaf School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.90322873,44.52877175 ]
+    },
+    "properties": {
+    "districtid":"4007-07-000",
+    "address":"210 Main St, Henderson, MN, 56044-0488",
+    "firstyr":1995,
+    "lastyr":2017,
+    "name":"Minnesota New Country School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.45129,45.23379 ]
+    },
+    "properties": {
+    "districtid":"4008-07-000",
+    "address":"7250 E Ramsey Pkwy, Ramsey, MN, 55303-1691",
+    "firstyr":1995,
+    "lastyr":2017,
+    "name":"PACT Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.335362,45.1384 ]
+    },
+    "properties": {
+    "districtid":"4011-07-000",
+    "address":"10100 Noble Parkway North, Brooklyn Park, MN, 55443-1311",
+    "firstyr":1995,
+    "lastyr":2017,
+    "name":"Athlos Leadership Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.08051,44.97421 ]
+    },
+    "properties": {
+    "districtid":"4015-07-000",
+    "address":"471 Magnolia Ave E, Saint Paul, MN, 55130-3849",
+    "firstyr":1996,
+    "lastyr":2017,
+    "name":"Community of Peace Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.60848,44.81921 ]
+    },
+    "properties": {
+    "districtid":"4016-07-000",
+    "address":"112050 Hundertmark Rd, Chaska, MN, 55318-2817",
+    "firstyr":1996,
+    "lastyr":2017,
+    "name":"World Learner Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23479036,44.95079305 ]
+    },
+    "properties": {
+    "districtid":"4017-07-000",
+    "address":"2872 26th Ave S, Minneapolis, MN, 55406-1529",
+    "firstyr":1997,
+    "lastyr":2017,
+    "name":"Minnesota Transitions Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.00880256,44.9692079 ]
+    },
+    "properties": {
+    "districtid":"4018-07-000",
+    "address":"2169 Stillwater Ave, Saint Paul, MN, 55119-3508",
+    "firstyr":1997,
+    "lastyr":2017,
+    "name":"Achieve Language Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.13512,46.82679 ]
+    },
+    "properties": {
+    "districtid":"4020-07-000",
+    "address":"3301 Technology Dr, Duluth, MN, 55811-4115",
+    "firstyr":1998,
+    "lastyr":2017,
+    "name":"Duluth Public Schools Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.1567825,44.91826383 ]
+    },
+    "properties": {
+    "districtid":"4025-07-000",
+    "address":"768 Hamline Ave S, Saint Paul, MN, 55116-2224",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"Cyber Village Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.40869,44.61671 ]
+    },
+    "properties": {
+    "districtid":"4026-07-000",
+    "address":"101 Rocket Ave, Echo, MN, 56237-0158",
+    "firstyr":1998,
+    "lastyr":2017,
+    "name":"E.C.H.O. Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15885,44.94901 ]
+    },
+    "properties": {
+    "districtid":"4027-07-000",
+    "address":"1381 Marshall Ave, Saint Paul, MN, 55104-6315",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Higher Ground Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.111307,44.958252 ]
+    },
+    "properties": {
+    "districtid":"4029-07-000",
+    "address":"260 Edmund Ave, Saint Paul, MN, 55103-1783",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"St. Paul City School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.34083,45.06704 ]
+    },
+    "properties": {
+    "districtid":"4030-07-000",
+    "address":"6201 Noble Ave N, Brooklyn Center, MN, 55429-2483",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"Odyssey Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.19946,44.96518 ]
+    },
+    "properties": {
+    "districtid":"4031-07-000",
+    "address":"2455 University Ave West, Saint Paul, MN, 55114-1507",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"Jennings Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29766,44.98488 ]
+    },
+    "properties": {
+    "districtid":"4032-07-000",
+    "address":"1300 Olson Memorial Hwy, Minneapolis, MN, 55411-3968",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"Harvest Preparatory School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.06135624,44.9756731 ]
+    },
+    "properties": {
+    "districtid":"4035-07-000",
+    "address":"930 Geranium Ave East, Saint Paul, MN, 55106-2610",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"Life Prep",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.06615,44.97638 ]
+    },
+    "properties": {
+    "districtid":"4036-07-000",
+    "address":"1165 Arcade St, Saint Paul, MN, 55106-2615",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"Face To Face Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29399,45.02465 ]
+    },
+    "properties": {
+    "districtid":"4038-07-000",
+    "address":"3820 Emerson Ave N, Minneapolis, MN, 55412-2039",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Sojourner Truth Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.1498,44.95469 ]
+    },
+    "properties": {
+    "districtid":"4039-07-000",
+    "address":"1166 University Ave, Saint Paul, MN, 55104-4169",
+    "firstyr":1999,
+    "lastyr":2017,
+    "name":"High School For Recording Arts",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.93409,44.91337 ]
+    },
+    "properties": {
+    "districtid":"4043-07-000",
+    "address":"8430 Woodbury Crossing, Woodbury, MN, 55125-9433",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Math And Science Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.30734,45.17741 ]
+    },
+    "properties": {
+    "districtid":"4049-07-000",
+    "address":"11345 Robinson Dr NW, Coon Rapids, MN, 55443-3777",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Northwest Passage High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.39787,44.44487 ]
+    },
+    "properties": {
+    "districtid":"4050-07-000",
+    "address":"351 6th St, Lafayette, MN, 56054-9700",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Lafayette Public Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.0039,45.27549 ]
+    },
+    "properties": {
+    "districtid":"4053-07-000",
+    "address":"308 15th St SW, Forest Lake, MN, 55025-1177",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"North Lakes Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.30604723,43.81788489 ]
+    },
+    "properties": {
+    "districtid":"4054-07-000",
+    "address":"1116 S Oak St, La Crescent, MN, 55947-1332",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"La Crescent Montessori & STEM School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.06868,44.3394 ]
+    },
+    "properties": {
+    "districtid":"4055-07-000",
+    "address":"205 S 2nd St, Nerstrand, MN, 55053-4404",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Nerstrand Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.50033,44.04152 ]
+    },
+    "properties": {
+    "districtid":"4056-07-000",
+    "address":"2364 Valleyhigh Dr NW, Rochester, MN, 55901-7641",
+    "firstyr":2000,
+    "lastyr":2017,
+    "name":"Rosa Parks Charter High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25199,44.9278 ]
+    },
+    "properties": {
+    "districtid":"4057-07-000",
+    "address":"4137 Bloomington Ave, Minneapolis, MN, 55407-3332",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"El Colegio Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.74070419,47.5596423 ]
+    },
+    "properties": {
+    "districtid":"4058-07-000",
+    "address":"9500 Ruppstrasse NE, Bemidji, MN, 56601-8672",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"Schoolcraft Learning Community Chtr",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.111825,46.6888 ]
+    },
+    "properties": {
+    "districtid":"4059-07-000",
+    "address":"36974 County Rd 66, Crosslake, MN, 56442-2527",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"Crosslake Community Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.68836,44.05284 ]
+    },
+    "properties": {
+    "districtid":"4064-07-000",
+    "address":"1733 Service Drive Ste 18, Winona, MN, 55987-2286",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"Riverway Learning Community Chtr",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.99603836,44.16444878 ]
+    },
+    "properties": {
+    "districtid":"4066-07-000",
+    "address":"110 N 6th St, Mankato, MN, 56001-5312",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"Kato Public Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24103,44.95491 ]
+    },
+    "properties": {
+    "districtid":"4067-07-000",
+    "address":"2101 E 26TH ST, Minneapolis, MN, 55404-4102",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"Aurora Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.3531,45.07362 ]
+    },
+    "properties": {
+    "districtid":"4068-07-000",
+    "address":"6510 Zane Ave N, Brooklyn Park, MN, 55429-1559",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Excell Academy Charter",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.07343,44.9624 ]
+    },
+    "properties": {
+    "districtid":"4070-07-000",
+    "address":"720 Payne Avenue, Saint Paul, MN, 55130-4127",
+    "firstyr":2001,
+    "lastyr":2017,
+    "name":"HOPE Community Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.02401,44.97164 ]
+    },
+    "properties": {
+    "districtid":"4073-07-000",
+    "address":"1800 Ames Ave, Saint Paul, MN, 55119-4830",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Academia Cesar Chavez Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.09568,45.04587 ]
+    },
+    "properties": {
+    "districtid":"4074-07-000",
+    "address":"100 Vadnais Blvd, Vadnais Heights, MN, 55127-4036",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"AFSA High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.19876637,44.9619223 ]
+    },
+    "properties": {
+    "districtid":"4075-07-000",
+    "address":"700 Glendale St, Saint Paul, MN, 55114-1782",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Avalon School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28288,44.99016 ]
+    },
+    "properties": {
+    "districtid":"4077-07-000",
+    "address":"277 12th Ave N, Minneapolis, MN, 55401-1026",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Twin Cities International Elementary School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28288,44.99016 ]
+    },
+    "properties": {
+    "districtid":"4078-07-000",
+    "address":"277 12th Ave N, Minneapolis, MN, 55401-1026",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Minnesota International Middle Charter",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23429,44.93439 ]
+    },
+    "properties": {
+    "districtid":"4079-07-000",
+    "address":"2600 E 38th St, Minneapolis, MN, 55406-3022",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Friendship Acdmy of Fine Arts Chtr.",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.48533,46.34193 ]
+    },
+    "properties": {
+    "districtid":"4080-07-000",
+    "address":"12763 County Rd 1, Pillager, MN, 56473-2179",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Pillager Area Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27098,44.29967 ]
+    },
+    "properties": {
+    "districtid":"4081-07-000",
+    "address":"126 NW 8th St, Faribault, MN, 55021-4241",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Discovery Public School Faribault",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.08363,44.89865 ]
+    },
+    "properties": {
+    "districtid":"4082-07-000",
+    "address":"33 Wentworth Ave E Ste #100, West Saint Paul, MN, 55118-3431",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"BlueSky Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.56899,43.9135 ]
+    },
+    "properties": {
+    "districtid":"4083-07-000",
+    "address":"35564 County Rd 12, Houston, MN, 55943-4006",
+    "firstyr":2002,
+    "lastyr":2017,
+    "name":"Ridgeway Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.89973414,46.93935618 ]
+    },
+    "properties": {
+    "districtid":"4084-07-000",
+    "address":"5926 Ryan Rd, Duluth, MN, 55804-9672",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"North Shore Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.10217,46.78289 ]
+    },
+    "properties": {
+    "districtid":"4085-07-000",
+    "address":"332 W Michigan St Ste.300, Duluth, MN, 55802-1610",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"Harbor City International Charter",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.33173,45.10933 ]
+    },
+    "properties": {
+    "districtid":"4087-07-000",
+    "address":"3900 85th Ave N, Brooklyn Park, MN, 55443-1908",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"SAGE Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17078,44.91156 ]
+    },
+    "properties": {
+    "districtid":"4088-07-000",
+    "address":"1668 Montreal Avenue, Saint Paul, MN, 55116",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Urban Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26536,45.00145 ]
+    },
+    "properties": {
+    "districtid":"4089-07-000",
+    "address":"229 13th Ave NE, Minneapolis, MN, 55413-1117",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"New City School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.1570031,44.54751678 ]
+    },
+    "properties": {
+    "districtid":"4090-07-000",
+    "address":"27695 Denmark Ave, Northfield, MN, 55057-5333",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"Prairie Creek Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.18489,44.43962 ]
+    },
+    "properties": {
+    "districtid":"4091-07-000",
+    "address":"1719 Cannon Rd, Northfield, MN, 55057-1680",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Arcadia Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25129,44.8842 ]
+    },
+    "properties": {
+    "districtid":"4092-07-000",
+    "address":"6541 16th Ave So, Richfield, MN, 55423",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"Watershed High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.3529,44.88611 ]
+    },
+    "properties": {
+    "districtid":"4093-07-000",
+    "address":"1000 5th Ave SE, Hutchinson, MN, 55350-7028",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"New Century Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.89585,45.37767 ]
+    },
+    "properties": {
+    "districtid":"4095-07-000",
+    "address":"10363 Liberty Ln, Chisago City, MN, 55013-9542",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"TRIO Wolf Creek Distance Learning",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27295,44.86294 ]
+    },
+    "properties": {
+    "districtid":"4097-07-000",
+    "address":"305 E 77th St, Richfield, MN, 55423-4312",
+    "firstyr":2003,
+    "lastyr":2017,
+    "name":"Partnership Academy, Inc.",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.1380145,44.91750294 ]
+    },
+    "properties": {
+    "districtid":"4098-07-000",
+    "address":"1455 Victoria Way, Saint Paul, MN, 55102-3535",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Nova Classical Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.32556,47.75615 ]
+    },
+    "properties": {
+    "districtid":"4100-07-000",
+    "address":"550 E 5th St, Grand Marais, MN, 55604",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Great Expectations",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29605,45.00503 ]
+    },
+    "properties": {
+    "districtid":"4102-07-000",
+    "address":"2507 Fremont Ave N, Minneapolis, MN, 55411-2078",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Minnesota Internship Center",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16387,44.97519 ]
+    },
+    "properties": {
+    "districtid":"4103-07-000",
+    "address":"1515 Brewster St, Saint Paul, MN, 55108-2612",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Hmong College Prep Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26000685,45.12849831 ]
+    },
+    "properties": {
+    "districtid":"4104-07-000",
+    "address":"308 Northtown Dr, Blaine, MN, 55434-1039",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Paladin Career and Technical High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15548,44.97019 ]
+    },
+    "properties": {
+    "districtid":"4105-07-000",
+    "address":"1326 Energy Park Dr, Saint Paul, MN, 55108-5202",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Great River School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.90125698,47.4923379 ]
+    },
+    "properties": {
+    "districtid":"4106-07-000",
+    "address":"2400 Pine Ridge Avenue NW, Bemidji, MN, 56601-2110",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"TrekNorth High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.87443,47.50469 ]
+    },
+    "properties": {
+    "districtid":"4107-07-000",
+    "address":"3724 Bemidji Ave N, Bemidji, MN, 56601-4335",
+    "firstyr":2004,
+    "lastyr":2017,
+    "name":"Voyageurs Expeditionary",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.41639699,44.93261207 ]
+    },
+    "properties": {
+    "districtid":"4110-07-000",
+    "address":"1320 Main St, Hopkins, MN, 55343-7403",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Main Street School Performing Arts",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26442,44.95682 ]
+    },
+    "properties": {
+    "districtid":"4111-07-000",
+    "address":"2504 Columbus Ave, Minneapolis, MN, 55404-4432",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Augsburg Fairview Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.09494313,44.94541179 ]
+    },
+    "properties": {
+    "districtid":"4112-07-000",
+    "address":"16 W 5th Street, Saint Paul, MN, 55102-1403",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"St Paul Conservatory Performing Art",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25893786,45.00354066 ]
+    },
+    "properties": {
+    "districtid":"4113-07-000",
+    "address":"1534 6th St NE, Minneapolis, MN, 55413-1319",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Spero Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.98071,45.2678 ]
+    },
+    "properties": {
+    "districtid":"4116-07-000",
+    "address":"246 SE 11th Ave, Forest Lake, MN, 55025-1823",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Lakes International Language Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.67076,45.26008 ]
+    },
+    "properties": {
+    "districtid":"4118-07-000",
+    "address":"7525 Kalland Ave NE, Otsego, MN, 55301-9690",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Kaleidoscope Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.082521,44.890127 ]
+    },
+    "properties": {
+    "districtid":"4119-07-000",
+    "address":"60 E Marie Ave, Ste #220, West Saint Paul, MN, 55118-5932",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Academic Arts High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.797618,45.012534 ]
+    },
+    "properties": {
+    "districtid":"4120-07-000",
+    "address":"4260 Stagecoach Trl N, Stillwater, MN, 55082-1197",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"St. Croix Preparatory Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.42002373,44.93258503 ]
+    },
+    "properties": {
+    "districtid":"4121-07-000",
+    "address":"1600 Main St, Hopkins, MN, 55343-7409",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Ubah Medical Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.41893081,44.90143846 ]
+    },
+    "properties": {
+    "districtid":"4122-07-000",
+    "address":"11111 Bren Road West, Minnetonka, MN, 55343",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Eagle Ridge Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.4853,45.11867 ]
+    },
+    "properties": {
+    "districtid":"4124-07-000",
+    "address":"9060 Zanzibar Ln N, Maple Grove, MN, 55311-1261",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Beacon Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.37334,45.06671 ]
+    },
+    "properties": {
+    "districtid":"4126-07-000",
+    "address":"6200 West Broadway Ave N, Brooklyn Park, MN, 55428-2826",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"Prairie Seeds Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.50543534,44.09436741 ]
+    },
+    "properties": {
+    "districtid":"4127-07-000",
+    "address":"220 17th Ave NE, Waseca, MN, 56093-0640",
+    "firstyr":2005,
+    "lastyr":2017,
+    "name":"TEAM Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23552,44.95503 ]
+    },
+    "properties": {
+    "districtid":"4131-07-000",
+    "address":"2600 26th Ave S, Minneapolis, MN, 55406-4527",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Metro Schools Charter",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.03949951,44.96234784 ]
+    },
+    "properties": {
+    "districtid":"4132-07-000",
+    "address":"690 Birmingham, Saint Paul, MN, 55106-5199",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"Twin Cities Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.46935,44.0005 ]
+    },
+    "properties": {
+    "districtid":"4135-07-000",
+    "address":"415 16th St SW, Rochester, MN, 55902-4152",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Rochester Math And Science Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.80173,45.30418 ]
+    },
+    "properties": {
+    "districtid":"4137-07-000",
+    "address":"500 Maple St, Monticello, MN, 55362-8878",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Swan River Montessori Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.554753,44.415402 ]
+    },
+    "properties": {
+    "districtid":"4138-07-000",
+    "address":"103 Prospect St, Milroy, MN, 56263-0129",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Milroy Area Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.32233,45.00142 ]
+    },
+    "properties": {
+    "districtid":"4139-07-000",
+    "address":"2225 Zenith Ave N, Minneapolis, MN, 55422-3852",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"LoveWorks Academy For Arts",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23978953,45.00448408 ]
+    },
+    "properties": {
+    "districtid":"4140-07-000",
+    "address":"1616 Buchanan St NE, Minneapolis, MN, 55413-1609",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"Yinghua Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.216495,45.516679 ]
+    },
+    "properties": {
+    "districtid":"4142-07-000",
+    "address":"3241 Oakham Lane, Saint Cloud, MN, 56301",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Stride Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.322856,45.048115 ]
+    },
+    "properties": {
+    "districtid":"4143-07-000",
+    "address":"5105 Brooklyn Blvd, Brooklyn Center, MN, 55429",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"New Millennium Academy Charter Sch",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.00206864,44.67768189 ]
+    },
+    "properties": {
+    "districtid":"4144-07-000",
+    "address":"190 McGrann St, Green Isle, MN, 55338-0277",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Green Isle Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.853558,47.567017 ]
+    },
+    "properties": {
+    "districtid":"4145-07-000",
+    "address":"9 Good Neighbor Hill Rd Ste B, Tofte, MN, 55615",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Birch Grove Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27054657,47.12899963 ]
+    },
+    "properties": {
+    "districtid":"4146-07-000",
+    "address":"305 Bridge St, Warba, MN, 55793-2829",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Northern Lights Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.195561,44.96234 ]
+    },
+    "properties": {
+    "districtid":"4150-07-000",
+    "address":"2314 University Ave W Ste 10, Saint Paul, MN, 55114-1863",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Minnesota Online High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.90713903,44.52818261 ]
+    },
+    "properties": {
+    "districtid":"4151-07-000",
+    "address":"501 Main St, Henderson, MN, 56044-7709",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"EdVisions Off Campus School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.144059,44.97568 ]
+    },
+    "properties": {
+    "districtid":"4152-07-000",
+    "address":"1031 Como Avenue, Saint Paul, MN, 55103-1021",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Twin Cities German Immersion Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16716356,44.97410216 ]
+    },
+    "properties": {
+    "districtid":"4153-07-000",
+    "address":"1091 Snelling Avenue North, Saint Paul, MN, 55108-2705",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Dugsi Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.61517,47.18154 ]
+    },
+    "properties": {
+    "districtid":"4155-07-000",
+    "address":"2531 310th Ave, Naytahwaush, MN, 56566-9998",
+    "firstyr":2006,
+    "lastyr":2017,
+    "name":"Naytahwaush Community School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.25439,44.84644 ]
+    },
+    "properties": {
+    "districtid":"4159-07-000",
+    "address":"8600 Bloomington Ave S, Bloomington, MN, 55425-1920",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"Seven Hills Preparatory Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.55118,45.29331 ]
+    },
+    "properties": {
+    "districtid":"4160-07-000",
+    "address":"17796 Industrial Circle NW, Elk River, MN, 55330-4754",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"Spectrum High School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.3529,44.88611 ]
+    },
+    "properties": {
+    "districtid":"4161-07-000",
+    "address":"1000 5th Ave SE, Hutchinson, MN, 55350-7028",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"New Discoveries Montessori Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27156503,44.92136321 ]
+    },
+    "properties": {
+    "districtid":"4162-07-000",
+    "address":"4500 Clinton Ave S, Minneapolis, MN, 55419-5111",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"Southside Family Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.261,45.0288 ]
+    },
+    "properties": {
+    "districtid":"4163-07-000",
+    "address":"3300 5th St NE, Minneapolis, MN, 55418-1117",
+    "firstyr":2007,
+    "lastyr":2017,
+    "name":"Learning For Leadership Charter",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.16573,44.94092 ]
+    },
+    "properties": {
+    "districtid":"4164-07-000",
+    "address":"1550 Summit Ave, Saint Paul, MN, 55105-2274",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Laura Jeffrey Academy Charter",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.520826,47.480853 ]
+    },
+    "properties": {
+    "districtid":"4166-07-000",
+    "address":"2000 Siegel Blvd, Eveleth, MN, 55734-8642",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"East Range Academy of Tech-Science",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.420073,44.896123 ]
+    },
+    "properties": {
+    "districtid":"4167-07-000",
+    "address":"5959 Shady Oak Rd S, Minnetonka, MN, 55343-8969",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"International Spanish Language Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.539852,45.612786 ]
+    },
+    "properties": {
+    "districtid":"4168-07-000",
+    "address":"610 W 6th St, Starbuck, MN, 56381-9782",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Glacial Hills Elementary",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28877,44.92054 ]
+    },
+    "properties": {
+    "districtid":"4169-07-000",
+    "address":"4530 Lyndale Ave S, Minneapolis, MN, 55419-4802",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Stonebridge World School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2505,44.9188 ]
+    },
+    "properties": {
+    "districtid":"4170-07-000",
+    "address":"1611 E. 46th Street, Minneapolis, MN, 55407-3669",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Hiawatha Academies",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.36786652,45.10258484 ]
+    },
+    "properties": {
+    "districtid":"4171-07-000",
+    "address":"9477 Decatur Drive North, Brooklyn Park, MN, 55445",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Noble Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.80842348,44.78494556 ]
+    },
+    "properties": {
+    "districtid":"4172-07-000",
+    "address":"301 13th St, Clarkfield, MN, 56223-1218",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Clarkfield Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28245797,46.54377332 ]
+    },
+    "properties": {
+    "districtid":"4177-07-000",
+    "address":"20930 367th Ln, McGregor, MN, 55760-5968",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Minisinaakwaang Leadership Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24045,44.95625 ]
+    },
+    "properties": {
+    "districtid":"4178-07-000",
+    "address":"2520 Minnehaha Ave, Minneapolis, MN, 55404-2650",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Lincoln International School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.10742387,44.97641503 ]
+    },
+    "properties": {
+    "districtid":"4181-07-000",
+    "address":"170 Rose Ave W, Saint Paul, MN, 55117-4437",
+    "firstyr":2008,
+    "lastyr":2017,
+    "name":"Community School of Excellence",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.40883385,44.90389309 ]
+    },
+    "properties": {
+    "districtid":"4183-07-000",
+    "address":"5605 Green Circle Drive, Minnetonka, MN, 55343",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Lionsgate Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.384215,44.734641 ]
+    },
+    "properties": {
+    "districtid":"4184-07-000",
+    "address":"14825 Zinran Ave, Savage, MN, 55378-4557",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Aspen Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23297,45.2065 ]
+    },
+    "properties": {
+    "districtid":"4185-07-000",
+    "address":"13001 Central Ave N, Blaine, MN, 55434-4150",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"DaVinci Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.24719247,45.04202958 ]
+    },
+    "properties": {
+    "districtid":"4186-07-000",
+    "address":"4065 Central Ave NE, Columbia Heights, MN, 55421-2917",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Global Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.987049,44.841312 ]
+    },
+    "properties": {
+    "districtid":"4187-07-000",
+    "address":"920 Holley Ave Ste 3, Saint Paul Park, MN, 55071",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Natural Science Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.78513,44.76236 ]
+    },
+    "properties": {
+    "districtid":"4188-07-000",
+    "address":"1221 S Village Parkway, Cologne, MN, 55322-9335",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Cologne Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29598,45.04842 ]
+    },
+    "properties": {
+    "districtid":"4189-07-000",
+    "address":"5140 Fremont Ave N, Minneapolis, MN, 55430-3419",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Bright Water Elementary",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.094426,44.935747 ]
+    },
+    "properties": {
+    "districtid":"4190-07-000",
+    "address":"188 West Plato Blvd, Saint Paul, MN, 55107-2021",
+    "firstyr":2010,
+    "lastyr":2017,
+    "name":"Rivers Edge Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.30796019,45.04643138 ]
+    },
+    "properties": {
+    "districtid":"4191-07-000",
+    "address":"5034 Oliver Ave. N, Minneapolis, MN, 55430-3355",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"KIPP Minnesota Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.31341,44.98433 ]
+    },
+    "properties": {
+    "districtid":"4192-07-000",
+    "address":"1300 Olson Memorial Hwy, Golden Valley, MN, 55411-3968",
+    "firstyr":2009,
+    "lastyr":2017,
+    "name":"Best Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.11568,44.92909 ]
+    },
+    "properties": {
+    "districtid":"4193-07-000",
+    "address":"355 Randolph Avenue, Saint Paul, MN, 55102",
+    "firstyr":2010,
+    "lastyr":2017,
+    "name":"College Preparatory Elementary",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26338,44.31093 ]
+    },
+    "properties": {
+    "districtid":"4194-07-000",
+    "address":"1800 14th St NE, Faribault, MN, 55021-2508",
+    "firstyr":2010,
+    "lastyr":2017,
+    "name":"Cannon River STEM School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.68009343,47.9673487 ]
+    },
+    "properties": {
+    "districtid":"4195-07-000",
+    "address":"73 Upper Rd, Grand Portage, MN, 55605-3010",
+    "firstyr":2010,
+    "lastyr":2017,
+    "name":"Oshki Ogimaag Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.19906484,46.3624484 ]
+    },
+    "properties": {
+    "districtid":"4198-07-000",
+    "address":"604 N 7th St, Brainerd, MN, 56401",
+    "firstyr":2012,
+    "lastyr":2017,
+    "name":"Discovery Woods Montessori School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.42466,45.12819 ]
+    },
+    "properties": {
+    "districtid":"4199-07-000",
+    "address":"11201 96th Ave No, Maple Grove, MN, 55369-3676",
+    "firstyr":2012,
+    "lastyr":2017,
+    "name":"Parnassus Preparatory Charter Sch",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.06528328,44.95949498 ]
+    },
+    "properties": {
+    "districtid":"4200-07-000",
+    "address":"835  5th St E., Saint Paul, MN, 55106",
+    "firstyr":2012,
+    "lastyr":2017,
+    "name":"STEP Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.03230973,44.97408324 ]
+    },
+    "properties": {
+    "districtid":"4201-07-000",
+    "address":"1611 Ames Ave, Saint Paul, MN, 55106-2903",
+    "firstyr":2012,
+    "lastyr":2017,
+    "name":"Cornerstone Montessori Elementary",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.46935,44.0005 ]
+    },
+    "properties": {
+    "districtid":"4204-07-000",
+    "address":"415 16th St SW, Rochester, MN, 55902-2125",
+    "firstyr":2012,
+    "lastyr":2017,
+    "name":"Rochester STEM Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27143047,44.96161295 ]
+    },
+    "properties": {
+    "districtid":"4205-07-000",
+    "address":"2123 Clinton Ave S, Minneapolis, MN, 55404-2650",
+    "firstyr":2013,
+    "lastyr":2017,
+    "name":"Hennepin Elementary School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.278341,47.803856 ]
+    },
+    "properties": {
+    "districtid":"4207-07-000",
+    "address":"1 Enterprise Drive, Tower, MN, 55790-0000",
+    "firstyr":2014,
+    "lastyr":2017,
+    "name":"Vermilion Country School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.4694,44.9408 ]
+    },
+    "properties": {
+    "districtid":"4208-07-000",
+    "address":"3500 Williston Rd, Minnetonka, MN, 55345",
+    "firstyr":2013,
+    "lastyr":2017,
+    "name":"Nasha Shkola Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29672285,44.98511816 ]
+    },
+    "properties": {
+    "districtid":"4209-07-000",
+    "address":"1301 7th Ave N, Minneapolis, MN, 55411-3946",
+    "firstyr":2013,
+    "lastyr":2017,
+    "name":"Mastery School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.12814152,44.92845652 ]
+    },
+    "properties": {
+    "districtid":"4210-07-000",
+    "address":"426 Osceola Ave. S, Saint Paul, MN, 55102",
+    "firstyr":2014,
+    "lastyr":2017,
+    "name":"Upper Mississippi Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.085925,44.930958 ]
+    },
+    "properties": {
+    "districtid":"4212-07-000",
+    "address":"497 Humboldt Avenue, Saint Paul, MN, 55107",
+    "firstyr":2014,
+    "lastyr":2017,
+    "name":"West Side Summit Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.23665,45.04189 ]
+    },
+    "properties": {
+    "districtid":"4213-07-000",
+    "address":"1555 40th Ave NE, Columbia Heights, MN, 55421-3103",
+    "firstyr":2014,
+    "lastyr":2017,
+    "name":"Prodeo Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15632792,44.96109504 ]
+    },
+    "properties": {
+    "districtid":"4215-07-000",
+    "address":"1330 Blair Ave N, Saint Paul, MN, 55104",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Sejong Academy of Minnesota",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29765,45.00201 ]
+    },
+    "properties": {
+    "districtid":"4216-07-000",
+    "address":"2201 Girard Ave N, Minneapolis, MN, 55411",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Freedom Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.01821,45.14323 ]
+    },
+    "properties": {
+    "districtid":"4217-07-000",
+    "address":"1705 16th Street NE., Willmar, MN, 56201",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Technical Academies of Minnesota",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.26416,45.01784 ]
+    },
+    "properties": {
+    "districtid":"4218-07-000",
+    "address":"315 27th Ave. SE, Minneapolis, MN, 55414-3234",
+    "firstyr":2014,
+    "lastyr":2017,
+    "name":"Venture Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.21153,44.99247 ]
+    },
+    "properties": {
+    "districtid":"4219-07-000",
+    "address":"300 Industrial Blvd. NE, Minneapolis, MN, 55413",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Northeast College Prep",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.38181759,44.9243333 ]
+    },
+    "properties": {
+    "districtid":"4220-07-000",
+    "address":"1503 Boyce Street, Hopkins, MN, 55343",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Agamim Classical Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.02235,44.8523 ]
+    },
+    "properties": {
+    "districtid":"4221-07-000",
+    "address":"4100 East 66th Street Ste 2, Inver Grove Heights, MN, 55076",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"Discovery Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.230679,45.318939 ]
+    },
+    "properties": {
+    "districtid":"4224-07-000",
+    "address":"1562 Viking Blvd, East Bethel, MN, 55011",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Star of the North Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.21759,45.55243 ]
+    },
+    "properties": {
+    "districtid":"4223-07-000",
+    "address":"136 Division Street, Waite Park, MN, 56387-1330",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Saint Cloud Math and Science Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17414,44.9564 ]
+    },
+    "properties": {
+    "districtid":"4225-07-000",
+    "address":"1745 University Ave W, Saint Paul, MN, 55104",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Universal Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.2252868,44.95023237 ]
+    },
+    "properties": {
+    "districtid":"4226-07-000",
+    "address":"3216 E 29th Street, Minneapolis, MN, 55406",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Bdote Learning Center",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.234,45.50276 ]
+    },
+    "properties": {
+    "districtid":"4227-07-000",
+    "address":"903 6th Avenue Ct NE Ste A, Isanti, MN, 55040-3229",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Art and Science Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.97153,44.93771 ]
+    },
+    "properties": {
+    "districtid":"4228-07-000",
+    "address":"600 Weir Dr, Woodbury, MN, 55125",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Woodbury Leadership Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.057036,45.271049 ]
+    },
+    "properties": {
+    "districtid":"4229-07-000",
+    "address":"8046 83rd Street NW, Maple Lake, MN, 55358",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Jane Goodall Environmental Science Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.36764,45.10815 ]
+    },
+    "properties": {
+    "districtid":"4230-07-000",
+    "address":"6717 85th Ave. North, Brooklyn Park, MN, 55445",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Minnesota Early Learning Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.093051,44.971978 ]
+    },
+    "properties": {
+    "districtid":"4231-07-000",
+    "address":"169 Jenks Avenue, Saint Paul, MN, 55117-5068",
+    "firstyr":2015,
+    "lastyr":2017,
+    "name":"Minnesota Math and Science Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.22684959,44.91255504 ]
+    },
+    "properties": {
+    "districtid":"4232-07-000",
+    "address":"3109 E 50th. Street, Minneapolis, MN, 55417",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"Summit Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.99044,45.04921 ]
+    },
+    "properties": {
+    "districtid":"4233-07-000",
+    "address":"2600 Co Rd E East, White Bear Lake, MN, 55110",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Level Up Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28249,44.88443 ]
+    },
+    "properties": {
+    "districtid":"4235-07-000",
+    "address":"100 66th Street W, Richfield, MN, 55423-2371",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Flex Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27912,44.9606 ]
+    },
+    "properties": {
+    "districtid":"4237-07-000",
+    "address":"2201 Blaisdell Avenue S, Minneapolis, MN, 55404",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Metropolitan Education for Future Employment",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.485885,44.012005 ]
+    },
+    "properties": {
+    "districtid":"4238-07-000",
+    "address":"974 Skyline Dr SW, Rochester, MN, 55902",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Rochester Beacon Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.17414,44.9564 ]
+    },
+    "properties": {
+    "districtid":"4239-07-000",
+    "address":"1745 University Avenue West, Saint Paul, MN, 55104",
+    "firstyr":2016,
+    "lastyr":2017,
+    "name":"Tesfa International School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.15859024,44.97029276 ]
+    },
+    "properties": {
+    "districtid":"4240-07-000",
+    "address":"1380 Energy Lane, Saint Paul, MN, 55108",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"New Century School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.99366,45.01353 ]
+    },
+    "properties": {
+    "districtid":"4243-07-000",
+    "address":"2350 Helen Street, North Saint Paul, MN, 55109",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"North Metro Flex Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.152233,44.96774 ]
+    },
+    "properties": {
+    "districtid":"4248-07-000",
+    "address":"1231 Pierce Butler Rte, Saint Paul, MN, 55104",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"T.R.U.T.H. Preparatory Academy Charter School",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.29608,44.99939 ]
+    },
+    "properties": {
+    "districtid":"4249-07-000",
+    "address":"1200 W Broadway Avenue Ste 110, Minneapolis, MN, 55411",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"Sankofa Underground North Academy",
+    "status":"open"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.20062839,45.51520128 ]
+    },
+    "properties": {
+    "districtid":"4250-07-000",
+    "address":"3701 33rd Street South, Saint Cloud, MN, 56301-9920",
+    "firstyr":2017,
+    "lastyr":2017,
+    "name":"Athlos Academy of Saint Cloud",
+    "status":"open"
+    }
+  }
+]
+}
