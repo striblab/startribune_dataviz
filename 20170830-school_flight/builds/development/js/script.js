@@ -269,13 +269,13 @@ function grabData(district,subject) {
 //chart builders
 // function switchChart(district){
 
-var district = "A.C.G.C. Public School District";
+var district = "Statewide";
 
     var  padding = {
             top: 20,
             right: 60,
             bottom: 20,
-            left: 40,
+            left: 60,
         };
 
 var mainaxis = grabData(district,"axis");
