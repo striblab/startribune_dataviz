@@ -36,7 +36,7 @@ d3.json('./data/districts.json', function(error, dataLoad) {
 var data = dataLoad.districts;
 
 d3.select("#listedSchools").selectAll(".district")
-  .data(data.sort(function(a,b) { return d3.ascending(a.HomeDistName, b.HomeDistName); }).filter(function(d) { return d.datayear == "2016"; })).enter().append("li")
+  .data(data.sort(function(a,b) { return d3.ascending(a.HomeDistName, b.HomeDistName); }).filter(function(d) { return d.datayear == "2016" && d.HomeDistName != "Statewide"; })).enter().append("li")
   .attr("class",function(d) { return "district"; })
   .on("click",function(d){
     $("#county").html(grabData(d.HomeDistName,"base"));
@@ -268,7 +268,7 @@ function grabData(district,subject) {
 //chart builders
 // function switchChart(district){
 
-var district = "Statewide";
+var district = "Minneapolis Public School District";
 
     var  padding = {
             top: 20,
