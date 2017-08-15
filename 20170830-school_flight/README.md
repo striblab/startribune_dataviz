@@ -2,6 +2,10 @@
 
 Created by [Frey Hargarten](https://github.com/jeffhargarten).
 
+This is divided into two analyses. To access the district analysis, add '?chart=lookup' to the end of the browser URL.
+
+To access the charter school map, add '?chart=charters' to the end of the browser URL.
+
 ## Data
 
 Source data can be found in `builds/development/data/_raw`.
