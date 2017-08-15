@@ -560,8 +560,8 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     // style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
-    center: [-95.954590,46.489884], 
-    zoom: 6,
+    center: [-94.685900, 46.729553], 
+    zoom: 5,
     minZoom: 2,
     // maxBounds: bounds
 });
@@ -574,7 +574,7 @@ map.on('load', function() {
 $("#state").click(function() { 
   $(".switch").removeClass("selected");
   $(this).addClass("selected");
-  map.flyTo({ center: [-95.954590,46.489884], zoom:6 });
+  map.flyTo({ center: [-94.685900, 46.729553], zoom:5 });
 });
 
 $("#metro").click(function() { 
@@ -645,7 +645,7 @@ function plopMarker(year,rgb,index){
     });
 
     map.on('mousemove', function(e) {
-        var features = map.queryRenderedFeatures(e.point, { layers: ['charter-layer-' + year, 'charter-layer1-' + year] });
+        var features = map.queryRenderedFeatures(e.point, { layers: ['charter-layer-' + year,'charter-layer-1' + year] });
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
@@ -658,9 +658,9 @@ function plopMarker(year,rgb,index){
 
         // Populate the popup and set its coordinates
         // based on the feature found.
-        popup.setLngLat(e.lngLat)
-            .setHTML(feature.properties.name)
-            .addTo(map);
+        // popup.setLngLat(e.lngLat)
+        //     .setHTML(feature.properties.name)
+        //     .addTo(map);
     });
 }
 
