@@ -49,6 +49,19 @@ p {
     display:inline-block;
 }
 
+.geocoder, .mapboxgl-ctrl-geocoder {
+    width:100%;
+    margin-bottom:10px;
+ }
+
+.geocoder-pin-right {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+    display:none !important;
+}
+
 .chartDiv {
     height:250px;
 }
@@ -58,9 +71,7 @@ p {
 }
 
 #map{
-    position: absolute;
-    top: 0;
-    bottom: 0;
+    height:400px;
     width: 100%;
 }
 
@@ -74,7 +85,6 @@ p {
 }
 
 .map-overlay {
-    font: 12px/20px $bentonSans;
     background-color: #fff;
     border-radius: 3px;
     padding: 10px;
@@ -175,6 +185,18 @@ li.district:hover {
     }
     .chart {
         width:100%;
+    }
+    .map-overlay-container {
+        width: 100%;
+        padding: 10px;
+        position: static;
+    }
+
+    .map-overlay {
+        background-color: #fff;
+        border-radius: 3px;
+        padding: 10px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
     }
     #districtSelect, #thisDistrict {
         font-weight: 900;
