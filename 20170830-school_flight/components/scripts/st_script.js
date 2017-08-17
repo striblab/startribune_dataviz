@@ -55,6 +55,7 @@ $("li.district").click(function() {
   //chart reloads
       chartLeaving.load({
                 columns: [
+                    grabData($(this).text(),"axis"),
                     grabData($(this).text(),"leavingCharter"),
                     grabData($(this).text(),"leavingOpen")
                 ]
@@ -62,6 +63,7 @@ $("li.district").click(function() {
 
       raceChart.load({
                 columns: [
+                    grabData($(this).text(),"axis"),
                     grabData($(this).text(),"whiteleave"),
                     grabData($(this).text(),"blackleave"),
                     grabData($(this).text(),"asianleave"),
@@ -72,12 +74,14 @@ $("li.district").click(function() {
 
       incomingChart.load({
                 columns: [
+                    grabData($(this).text(),"axis"),
                     grabData($(this).text(),"incoming")
                 ]
       });
 
       enrollmentChart.load({
                 columns: [
+                    grabData($(this).text(),"axis"),
                     grabData($(this).text(),"enrolled"),
                     grabData($(this).text(),"residents")
                 ]
@@ -323,7 +327,7 @@ var mainaxis = grabData(district,"axis");
             axis: {
                   // rotated: true,
                   y: {
-                        max: .5,
+                        max: 1,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
@@ -336,7 +340,7 @@ var mainaxis = grabData(district,"axis");
                           padding: {bottom: 0, top: 0, right: 0, left: 0},
                           tick: {
                            count: 4,
-                           values: [2000,2006,2012,mainaxis[mainaxis.length-1]]
+                           values: [mainaxis[1],2006,2012,mainaxis[mainaxis.length-1]]
                           }
                   }
             },
@@ -401,7 +405,7 @@ var mainaxis = grabData(district,"axis");
                           padding: {bottom: 0, top: 0, right: 0, left: 0},
                           tick: {
                            count: 4,
-                           values: [2000,2006,2012,mainaxis[mainaxis.length-1]]
+                           values: [mainaxis[1],2006,2012,mainaxis[mainaxis.length-1]]
                           }
                   }
             },
@@ -449,7 +453,7 @@ var mainaxis = grabData(district,"axis");
             axis: {
                   // rotated: true,
                   y: {
-                        max: .5,
+                        max: 1,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
@@ -462,7 +466,7 @@ var mainaxis = grabData(district,"axis");
                           padding: {bottom: 0, top: 0, right: 0, left: 0},
                           tick: {
                            count: 4,
-                           values: [2000,2006,2012,mainaxis[mainaxis.length-1]]
+                           values: [mainaxis[1],2006,2012,mainaxis[mainaxis.length-1]]
                           }
                   }
             },
@@ -523,7 +527,7 @@ var mainaxis = grabData(district,"axis");
                           padding: {bottom: 0, top: 0, right: 0, left: 0},
                           tick: {
                            count: 4,
-                           values: [2000,2006,2012,mainaxis[mainaxis.length-1]]
+                           values: [mainaxis[1],2006,2012,mainaxis[mainaxis.length-1]]
                           }
                   }
               },
