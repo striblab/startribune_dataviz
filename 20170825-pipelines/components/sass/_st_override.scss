@@ -1,0 +1,47 @@
+#wrapper {
+    width:520px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#map { 
+	height:430px;
+	width:100%;
+}
+
+.chatter {
+    line-height:160%;
+}
+
+.legendary {
+    padding:4px;
+}
+
+.geocoder, .mapboxgl-ctrl-geocoder {
+    width:100%;
+    margin-bottom:10px;
+ }
+
+.geocoder-pin-right {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+    display:none !important;
+}
+
+ .byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    font-size:0.6em !important;
+    color: #888 !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    text-align:left !important;
+}
+
+@media (max-width:520px) {
+    #wrapper {
+        width:100%;
+    }
+}
