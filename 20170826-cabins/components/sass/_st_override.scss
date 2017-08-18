@@ -1,0 +1,52 @@
+#wrapper {
+    width:520px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.map { 
+	height:430px;
+	width:100%;
+    text-align:center;
+}
+
+.chatter {
+    line-height:160%;
+}
+
+.legendary {
+    padding:4px;
+}
+
+.tooltip {
+    max-width:150px;
+}
+
+.districtName {
+    font-weight:900;
+    line-height:140%;
+}
+
+ .byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    font-size:0.6em !important;
+    color: #888 !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    text-align:left !important;
+}
+
+.red5 {
+    color:#ffffff;
+}
+
+.none {
+    fill:#ffffff !important;
+}
+
+@media (max-width:520px) {
+    #wrapper {
+        width:100%;
+    }
+}
