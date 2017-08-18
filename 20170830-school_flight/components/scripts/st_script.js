@@ -63,12 +63,8 @@ $("li.district").click(function() {
 
       raceChart.load({
                 columns: [
-                    grabData($(this).text(),"axis"),
-                    grabData($(this).text(),"whiteleave"),
-                    grabData($(this).text(),"blackleave"),
-                    grabData($(this).text(),"asianleave"),
-                    grabData($(this).text(),"nativeleave"),
-                    grabData($(this).text(),"hispanicleave")
+                    ["Leaving District", grabData($(this).text(),"whiteleave"), grabData($(this).text(),"blackleave"), grabData($(this).text(),"asianleave"), grabData($(this).text(),"nativeleave"), grabData($(this).text(),"hispanicleave")],
+                    ["Residents", grabData($(this).text(),"whiteres"), grabData($(this).text(),"blackres"), grabData($(this).text(),"asianres"), grabData($(this).text(),"nativeres"), grabData($(this).text(),"hispanicres")]
                 ]
       });
 
@@ -194,77 +190,140 @@ function grabData(district,subject) {
 
   if (subject == "whiteleave"){
 
-    var whiteleave = [];
-    whiteleave[0] = "White";
+    var wleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
       if (district == dataSort[i].HomeDistName) {
-        whiteleave[index] = dataSort[i].PctWhtLeaving;
-        index++;
+        wleave = data[i].WhtLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
 
-    return whiteleave;
+    return wleave;
+
+  }
+
+  if (subject == "whiteres"){
+
+    var wres = 0;
+
+    for (var i=0; i < dataSort.length; i++){
+      if (district == dataSort[i].HomeDistName) {
+        wres = data[i].WhtResidents / data[i].residents;
+      }
+    }
+
+    return wres;
+
   }
 
   if (subject == "blackleave"){
 
-    var blackleave = [];
-    blackleave[0] = "Black";
+    var bleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
       if (district == dataSort[i].HomeDistName) {
-        blackleave[index] = dataSort[i].PctBlkLeaving;
-        index++;
+        bleave = data[i].BlkLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
 
-    return blackleave;
+    return bleave;
+  }
+
+  if (subject == "blackres"){
+
+    var bres = 0;
+
+    for (var i=0; i < dataSort.length; i++){
+      if (district == dataSort[i].HomeDistName) {
+        bres = data[i].BlkResidents / data[i].residents;
+      }
+    }
+
+    return bres;
+
   }
 
   if (subject == "nativeleave"){
 
-    var nativeleave = [];
-    nativeleave[0] = "Native";
+    var nleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
       if (district == dataSort[i].HomeDistName) {
-        nativeleave[index] = dataSort[i].PctAmIndLeaving;
-        index++;
+        nleave = data[i].AmIndLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
 
-    return nativeleave;
+    return nleave;
+  }
+
+  if (subject == "nativeres"){
+
+    var nres = 0;
+
+    for (var i=0; i < dataSort.length; i++){
+      if (district == dataSort[i].HomeDistName) {
+        bres = data[i].AmIndResidents / data[i].residents;
+      }
+    }
+
+    return nres;
+
   }
 
   if (subject == "asianleave"){
 
-    var asianleave = [];
-    asianleave[0] = "Asian";
+    var aleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
       if (district == dataSort[i].HomeDistName) {
-        asianleave[index] = dataSort[i].PctAsnLeaving;
-        index++;
+        aleave = data[i].AsnLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
 
-    return asianleave;
+    return aleave;
+  }
+
+  if (subject == "asianres"){
+
+    var ares = 0;
+
+    for (var i=0; i < dataSort.length; i++){
+      if (district == dataSort[i].HomeDistName) {
+        bres = data[i].AsnResidents / data[i].residents;
+      }
+    }
+
+    return ares;
+
   }
 
   if (subject == "hispanicleave"){
 
-    var hispanicleave = [];
-    hispanicleave[0] = "Hispanic";
+    var hleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
       if (district == dataSort[i].HomeDistName) {
-        hispanicleave[index] = dataSort[i].PctHispLeaving;
-        index++;
+        hleave = data[i].HispLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
 
-    return hispanicleave;
+    return hleave;
+
+  }
+
+
+  if (subject == "hispanicres"){
+
+    var hres = 0;
+
+    for (var i=0; i < dataSort.length; i++){
+      if (district == dataSort[i].HomeDistName) {
+        hres = data[i].HispResidents / data[i].residents;
+      }
+    }
+
+    return hres;
+
   }
 
 }
@@ -359,16 +418,11 @@ var mainaxis = grabData(district,"axis");
           bindto: "#raceChart",
           padding: padding,
           data: {
-                x: 'x',
                 columns: [
-                    mainaxis,
-                    grabData(district,"whiteleave"),
-                    grabData(district,"blackleave"),
-                    grabData(district,"asianleave"),
-                    grabData(district,"nativeleave"),
-                    grabData(district,"hispanicleave")
+                    ["Leaving District", grabData(district,"whiteleave"), grabData(district,"blackleave"), grabData(district,"asianleave"), grabData(district,"nativeleave"), grabData(district,"hispanicleave")],
+                    ["Residents", grabData(district,"whiteres"), grabData(district,"blackres"), grabData(district,"asianres"), grabData(district,"nativeres"), grabData(district,"hispanicres")]
                 ],
-            type: 'line',
+            type: 'bar',
             labels: {
                 // format: {
                 //     '18-34': d3.format('%'),
@@ -384,7 +438,7 @@ var mainaxis = grabData(district,"axis");
                 duration: 1300
             },
                 color: {
-                  pattern: ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00']
+                  pattern: ['#865f67','#333333']
                 },
             point: {
                 show: false
@@ -402,11 +456,14 @@ var mainaxis = grabData(district,"axis");
                         }
                     },
                   x: {
+                          type: "category",
+                          categories: ["White","Black","Asian","Native","Hisp."],
                           padding: {bottom: 0, top: 0, right: 0, left: 0},
                           tick: {
-                           count: 4,
-                           values: [mainaxis[1],2006,2012,mainaxis[mainaxis.length-1]]
-                          }
+                            rotate: -75,
+                            multiline: false
+                        },
+            height: 30
                   }
             },
           grid: {
