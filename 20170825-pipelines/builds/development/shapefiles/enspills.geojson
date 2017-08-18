@@ -1,0 +1,2030 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.370318,47.089551 ]
+    },
+    "properties": {
+    "NAME":"OLYMPIC PIPE LINE COMPANY",
+    "DATE":"11/2/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.762975,47.324386 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"10/20/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.754056,35.95837 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"3/29/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41198,47.68973 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/12/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75978,35.9585 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"3/11/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.76296,35.94596 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"2/14/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05718,46.68329 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/1/16",
+    "YEAR":2016,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.378703,39.995669 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"12/1/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.591633,47.261205 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/9/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75327,35.95902 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"10/29/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.99195,41.40817 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (SOUTHERN LIGHTS) L.L.C.",
+    "DATE":"8/20/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.715498,32.907579 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (EAST TEXAS) L.P.",
+    "DATE":"8/19/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0645,46.6869 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"8/15/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.44697,41.51769 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/28/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.30972,47.1375 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/27/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.689722 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/22/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.45352,41.67284 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (TOLEDO) INC",
+    "DATE":"7/20/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.408738,42.864441 ]
+    },
+    "properties": {
+    "NAME":"EXPRESS HOLDINGS (USA), LLC",
+    "DATE":"7/16/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.842889,39.411914 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"7/15/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.647391,40.943291 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"6/16/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.760237,35.945098 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"4/25/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41192,47.6899 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"4/23/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.408738,42.864441 ]
+    },
+    "properties": {
+    "NAME":"EXPRESS HOLDINGS (USA), LLC",
+    "DATE":"4/22/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.644669,40.944856 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"3/20/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.409416,47.689461 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/14/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.506797,46.359919 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/5/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.055463,46.688674 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/2/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.752126,35.93444 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"2/27/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750348,35.936355 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"2/20/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.298295,41.090482 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/10/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.764167,47.325278 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/2/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45134,41.51458 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/31/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.06135,46.68904 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/21/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.010309,48.014962 ]
+    },
+    "properties": {
+    "NAME":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "DATE":"1/17/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05685,46.6885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/13/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75335,35.95886 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"1/9/15",
+    "YEAR":2015,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.24556,45.97528 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"12/8/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.049,46.69354 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"12/3/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.390712,48.455641 ]
+    },
+    "properties": {
+    "NAME":"OLYMPIC PIPE LINE COMPANY",
+    "DATE":"11/10/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.04639,41.63611 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/7/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.44861,41.51556 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/1/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.76142,35.94373 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "DATE":"10/2/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.88528,41.55556 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"9/29/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.054722,46.683889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"8/18/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"8/10/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 104.263399,41.890476 ]
+    },
+    "properties": {
+    "NAME":"EXPRESS HOLDINGS (USA), LLC",
+    "DATE":"8/7/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.6615,47.97958 ]
+    },
+    "properties": {
+    "NAME":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "DATE":"8/6/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.22436,47.458331 ]
+    },
+    "properties": {
+    "NAME":"OLYMPIC PIPE LINE COMPANY",
+    "DATE":"7/20/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.49732,42.05679 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"6/28/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76389,47.32556 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"4/16/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.68472,43.94972 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/26/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.20851,48.720364 ]
+    },
+    "properties": {
+    "NAME":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "DATE":"3/21/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.778247,48.112149 ]
+    },
+    "properties": {
+    "NAME":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "DATE":"3/6/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45194,41.52278 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/25/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.6345,42.53934 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/13/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4512,41.51487 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/6/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76389,47.32556 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/18/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.87641,41.322508 ]
+    },
+    "properties": {
+    "NAME":"EXPRESS HOLDINGS (USA), LLC",
+    "DATE":"1/7/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.88556,41.55694 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/1/14",
+    "YEAR":2014,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.74944,35.95778 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"12/22/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.905417,32.842833 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY MARKETING LLC",
+    "DATE":"11/14/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.06,46.69 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/6/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.752403,48.325686 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"11/2/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.373875,48.304045 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"10/31/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.42361,37.79167 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"9/29/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.44906,41.51616 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"8/3/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76306,47.32444 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/22/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.119192,48.365352 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"7/22/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.81861,38.19639 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"7/20/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.631503,48.331143 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"7/15/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.64449,40.94267 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"6/6/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.77444,45.78611 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"6/5/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"5/18/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.02083,47.90556 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"5/3/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.614158,48.323422 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"5/2/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.43556,48.21111 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"4/23/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.22335,38.58556 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"4/6/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.74944,35.95778 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"2/22/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.83167,42.06139 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (TOLEDO) INC",
+    "DATE":"1/30/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.30399,48.27904 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"1/26/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"1/7/13",
+    "YEAR":2013,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.845,32.833 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY MARKETING LLC",
+    "DATE":"12/22/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.82917,40.3375 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"12/21/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.926272,48.284494 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"12/21/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.30796,35.59243 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"12/14/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.88528,41.55556 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/20/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.25444,48.24275 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"11/13/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.638236,43.895611 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/27/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"7/24/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"5/24/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"4/7/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.04994,39.72708 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"4/6/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.390712,48.455641 ]
+    },
+    "properties": {
+    "NAME":"OLYMPIC PIPE LINE COMPANY",
+    "DATE":"4/1/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.390712,48.455641 ]
+    },
+    "properties": {
+    "NAME":"OLYMPIC PIPE LINE COMPANY",
+    "DATE":"3/31/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.4097,47.6895 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/22/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.666629,47.378551 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/20/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.91791,41.49188 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/3/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45333,41.50667 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/21/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.51722,41.49806 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/17/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.63417,42.53889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/16/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.108636,44.05727 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"2/15/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.08389,38.78778 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE STORAGE (PATOKA) L.L.C.",
+    "DATE":"1/20/12",
+    "YEAR":2012,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/20/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/8/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4543,41.50506 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"10/12/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"9/25/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.752889,48.325724 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"9/25/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.55443,48.81835 ]
+    },
+    "properties": {
+    "NAME":"OLYMPIC PIPE LINE COMPANY",
+    "DATE":"9/19/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75406,35.93198 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"9/19/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"8/17/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"7/9/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"4/4/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"3/28/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.257672,48.24063 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"2/25/11",
+    "YEAR":2011,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.25139,43.26707 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"12/1/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.93861,46.93944 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"11/11/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76306,47.32444 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"9/23/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.10547,42.56794 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"9/11/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.076523,41.655265 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"9/9/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.37944,37.91083 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"8/24/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.65116,48.96572 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"8/20/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.63389,47.38361 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/29/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.57539,47.372103 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/28/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.97251,42.24329 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/25/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76306,47.32444 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"7/2/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.24833,44.67167 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"6/8/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.20851,48.720364 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"6/7/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.73207,47.31006 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"4/17/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75629,35.93985 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"3/24/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "DATE":"3/18/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"3/11/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41732,47.68857 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "DATE":"3/1/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.56593,40.16833 ]
+    },
+    "properties": {
+    "NAME":"CCPS TRANSPORTATION, LLC",
+    "DATE":"1/12/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"NO"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.52554,48.99555 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/8/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"LARGE",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0612,46.6893 ]
+    },
+    "properties": {
+    "NAME":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "DATE":"1/6/10",
+    "YEAR":2010,
+    "SPILL_TYPE_CATEGORY":"SMALL",
+    "source":"PHMSA",
+    "minnesota":"YES"
+    }
+  }
+]
+}
