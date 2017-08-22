@@ -2206,6 +2206,7 @@ header[role="banner"] {
   font-weight: 400 !important;
   font-size: 0.6em !important;
   color: #888 !important;
+  line-height: 140%;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   text-align: left !important;
