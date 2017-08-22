@@ -640,13 +640,6 @@ text {
   margin-top: 4px;
 }
 
-.switch:hover, .selected {
-  background-color: #333 !important;
-  color: #fff !important;
-  cursor: pointer;
-  margin-bottom: 4px;
-}
-
 /*SECONDARY TOGGLE BUTTONS*/
 .myButton_ {
   background-color: #8B2219;
@@ -1649,6 +1642,10 @@ header[role="banner"] {
   margin-left: auto;
 }
 
+body {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+
 .map {
   height: 430px;
   width: 100%;
@@ -1679,6 +1676,7 @@ header[role="banner"] {
   color: #888 !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+  line-height: 140%;
   text-align: left !important;
 }
 
@@ -1688,6 +1686,89 @@ header[role="banner"] {
 
 .none {
   fill: #ffffff !important;
+}
+
+.cell {
+  width: 32%;
+  display: inline-block;
+}
+
+#countyList {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.tableHead {
+  width: 32%;
+  font-weight: 900;
+  display: inline-block;
+  height: 20px;
+}
+
+.tableCell {
+  display: inline-block;
+  width: 32%;
+  height: 20px;
+  font-family: "Benton Sans";
+  vertical-align: middle;
+  padding-top: 2.7px;
+}
+
+#tableBottom {
+  padding-top: 14px;
+}
+
+.tableHead:hover,
+.selected {
+  background-color: #ffffff !important;
+  color: #000 !important;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 !important;
+}
+
+.pct {
+  text-align: center;
+  font-weight: 900;
+}
+
+#countyList .pct {
+  color: #ffffff;
+}
+
+#filter {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+#filter input:focus {
+  width: 100% !important;
+}
+
+#filter input {
+  font-size: .85em;
+  width: 100% !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+
+.scrollToTop {
+  color: steelblue !important;
+  margin-top: 5px;
+  clear: both;
+}
+
+.scrollToTop:hover {
+  color: #333 !important;
+  cursor: pointer;
+}
+
+.switch:hover,
+.selected {
+  background-color: #fff !important;
+  color: #000 !important;
+  cursor: pointer;
+  margin: 0 !important;
 }
 
 @media (max-width: 520px) {
