@@ -252,5 +252,81 @@ d3.helper.tooltip = function(accessor){
   mapBuild("#map", "#infobox", "#chart", "counties.json", "change", "mn", data, 0);
   mapBuild("#map2", "#infobox", "#chart", "counties.json", "portion", "mn", data, 0);
 
+  $('.scrollToTop').click(function(){
+    $('#countyList').animate({scrollTop : 0},800);
+    return false;
+  });
+
+function tableSort(container,party,data,candidate,sorted){
+   
+  d3.select(container).selectAll(".card").sort(function(a, b) {
+          if (candidate == "county") { 
+        if (sorted == "descend") { return d3.descending(a.county, b.county); }
+        if (sorted == "ascend") { return d3.ascending(a.county, b.county); }
+     }
+          if (candidate == "cabin_share_2016") { 
+        if (sorted == "descend") { return d3.descending(a.cabin_share_2016, b.cabin_share_2016); }
+        if (sorted == "ascend") { return d3.ascending(a.cabin_share_2016, b.cabin_share_2016); }
+     }
+           if (candidate == "cabin_share_diff") { 
+        if (sorted == "descend") { return d3.descending(a.cabin_share_diff, b.cabin_share_diff); }
+        if (sorted == "ascend") { return d3.ascending(a.cabin_share_diff, b.cabin_share_diff); }
+     }
+    })
+    .transition().duration(500);
+}
+
+function tableBuild() {
+d3.select("#countyList").selectAll(".card")
+.data(data.sort(function (a,b) { return d3.descending(a.cabin_share_2016, b.cabin_share_2016); })).enter().append("div")
+.attr("class",function (d) { return "card"; })
+.html(function (d){ 
+  var color_scale = d3.scale.linear().domain([0, 0.25, 0.5]).range(['#dddddd', '#969696', '#252525']);
+  var color = color_scale(d.cabin_share_2016);
+
+  var color_scale2 = d3.scale.linear().domain([-0.05, 0, 0.10]).range(['#9C0004', '#dddddd', '#252525']);
+  var color2 = color_scale2(d.cabin_share_diff);
+
+    return "<div class='tableCell county'>" + d.county + "</div><div class='tableCell county pct' style='background-color:" + color + ";'>" + d3.format("%")(d.cabin_share_2016) + "</div><div class='tableCell cabin_share_diff pct' style='background-color:" + color2 + ";'>" + d3.format("%")(d.cabin_share_diff) + "</div>";
+});
+
+
+//SEARCH FILTER TABLE
+  $( document ).ready(function() {
+    $('#filter_box').on('keyup search', function(e){
+        $('.card').hide();
+        var txt = $('#filter_box').val();
+        $('.card').each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+           }
+        });
+        var count = $('.card:visible').length;
+        $('#results').html(count);
+    });
+
+      $(".switch").click(function() {
+        $(".switch").removeClass("selected");
+        $(this).addClass("selected");
+        $('.card').hide();
+        $('.' + $(this).attr("data")).show();
+      });
+
+      });
+    $(".hSort").click(function() {
+      $(".hSort").removeClass("selected");
+      $(this).addClass("selected");
+      if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
+      else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
+      tableSort("#countyList",null,data,$(this).attr("data"),sorted);
+    });
+
+// });
+
+}
+
+tableBuild();
+
+
 });
 });
