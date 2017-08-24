@@ -18,6 +18,10 @@ body {
     line-height:160%;
 }
 
+.chart .c3-line {
+    stroke-width: 6px !important;
+}
+
 .legendary {
     padding:4px;
 }
