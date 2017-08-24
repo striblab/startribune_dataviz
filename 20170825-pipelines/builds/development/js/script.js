@@ -250,7 +250,7 @@ map.on('load', function() {
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML("<div class='name'>" + String(feature.properties.NAME).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>Spill</div>")
+            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>Spill</div>")
             .addTo(map);
     });
 
@@ -273,67 +273,8 @@ map.on('load', function() {
           data: {
               x: 'x',
                 columns: [
-                  ['x',2010,2011,2012,2013,2014,2015,2016],
-                  ['Spills',25,12,21,22,23,29,7]
-                ],
-            type: 'bar'
-            },
-            bar: {
-                width: {
-                    ratio: 0.2
-                }
-            },
-            legend: {
-                show: false
-            },
-            point: {
-                show: false
-            },
-                color: {
-                  pattern: ['rgba(183, 12, 12, 1)']
-                },
-            axis: {
-                  // rotated: true,
-                  y: {
-                        min: 0,
-                        padding: {bottom: 0, top: 0},
-                        tick: {
-                         count: 4,
-                         // values: [0,0.03,0.06,0.09,0.12],
-                        format: d3.format('.0f')
-                        }
-                    },
-                x: {
-                    tick: {
-                        count: 4,
-                        values: [2010,2012,2014,2016],
-                        multiline: false,
-                        format: d3.format('.0f')
-                    }
-                }
-            }
-    });
-}
-
-chartTrend();
-
-  function chartMN(){
-
-    var  padding = {
-            top: 20,
-            right: 60,
-            bottom: 20,
-            left: 40,
-        };
-
-    var chartTrend = c3.generate({
-          bindto: "#chartMN",
-          padding: padding,
-          data: {
-              x: 'x',
-                columns: [
-                  ['x',2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Spills',13,37,14,5,5,4,5,11,3]
+                  ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Spills',15,19,22,19,10,23,21,54,28,14,21,27,23,26,7]
                 ],
             type: 'bar'
             },
@@ -365,7 +306,65 @@ chartTrend();
                 x: {
                     tick: {
                         count: 5,
-                        values: [2008,2010,2012,2014,2016],
+                        multiline: false,
+                        format: d3.format('.0f')
+                    }
+                }
+            }
+    });
+}
+
+chartTrend();
+
+  function chartMN(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chartTrend = c3.generate({
+          bindto: "#chartMN",
+          padding: padding,
+          data: {
+              x: 'x',
+                columns: [
+                  ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Spills',6,9,4,0,4,5,11,38,12,2,3,3,3,5,2]
+                ],
+            type: 'bar'
+            },
+            bar: {
+                width: {
+                    ratio: 0.2
+                }
+            },
+            legend: {
+                show: false
+            },
+            point: {
+                show: false
+            },
+                color: {
+                  pattern: ['rgba(183, 12, 12, 1)']
+                },
+            axis: {
+                  // rotated: true,
+                  y: {
+                        min: 0,
+                        padding: {bottom: 0, top: 0},
+                        tick: {
+                         count: 4,
+                         // values: [0,0.03,0.06,0.09,0.12],
+                        format: d3.format('.0f')
+                        }
+                    },
+                x: {
+                    tick: {
+                        count: 5,
+                        // values: [2008,2010,2012,2014,2016],
                         multiline: false,
                         format: d3.format('.0f')
                     }
@@ -375,6 +374,124 @@ chartTrend();
 }
 
 chartMN();
+
+  function chartMNSpills(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chartTrend = c3.generate({
+          bindto: "#chartMNSpills",
+          padding: padding,
+          data: {
+              x: 'x',
+                columns: [
+                  ['x',1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Spills',8,8,7,12,8,13,23,14,9,16,10,13,13,19,13,13,17,16,14,4]
+                ],
+            type: 'bar'
+            },
+            bar: {
+                width: {
+                    ratio: 0.2
+                }
+            },
+            legend: {
+                show: false
+            },
+            point: {
+                show: false
+            },
+                color: {
+                  pattern: ['rgba(183, 12, 12, 1)']
+                },
+            axis: {
+                  // rotated: true,
+                  y: {
+                        min: 0,
+                        padding: {bottom: 0, top: 0},
+                        tick: {
+                         count: 4,
+                         // values: [0,0.03,0.06,0.09,0.12],
+                        format: d3.format('.0f')
+                        }
+                    },
+                x: {
+                    tick: {
+                        count: 5,
+                        multiline: false,
+                        format: d3.format('.0f')
+                    }
+                }
+            }
+    });
+}
+
+chartMNSpills();
+
+
+  function chartNational(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chartTrend = c3.generate({
+          bindto: "#chartNational",
+          padding: padding,
+          data: {
+              x: 'x',
+                columns: [
+                  ['x',1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Spills',346,389,339,380,341,642,672,671,719,639,611,659,627,586,590,573,619,707,714,635]
+                ],
+            type: 'bar'
+            },
+            bar: {
+                width: {
+                    ratio: 0.2
+                }
+            },
+            legend: {
+                show: false
+            },
+            point: {
+                show: false
+            },
+                color: {
+                  pattern: ['rgba(183, 12, 12, 1)']
+                },
+            axis: {
+                  // rotated: true,
+                  y: {
+                        min: 0,
+                        padding: {bottom: 0, top: 0},
+                        tick: {
+                         count: 4,
+                         // values: [0,0.03,0.06,0.09,0.12],
+                        format: d3.format('.0f')
+                        }
+                    },
+                x: {
+                    tick: {
+                        count: 5,
+                        // values: [2008,2010,2012,2014,2016],
+                        multiline: false,
+                        format: d3.format('.0f')
+                    }
+                }
+            }
+    });
+}
+
+chartNational();
 
 });
 });

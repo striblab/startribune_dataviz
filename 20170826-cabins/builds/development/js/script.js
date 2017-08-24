@@ -63,6 +63,26 @@ else if (subject == "portion") {
 
 }
 
+else if (subject == "count") {
+
+    var color = "";
+    var change = 0;
+
+           for (var i=0; i < dataCompare.length; i++){
+          if (String(d.properties.COUNTYNAME).toUpperCase() == dataCompare[i].county) {
+           change = dataCompare[i].cabin_share_2016;
+           if (dataCompare[i].cabin_share_2016 >= 0.5) { color = "gray5"; }
+           else if (dataCompare[i].cabin_share_2016 >= 0.3) { color = "gray4"; }
+           else if (dataCompare[i].cabin_share_2016 >= 0.2) { color = "gray3"; }
+           else if (dataCompare[i].cabin_share_2016 >= 0.1) { color = "gray2"; }
+           else if (dataCompare[i].cabin_share_2016 > 0) { color = "gray1"; }
+          }
+         }
+
+    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div>Cabins are <span class='" +  color + "'>" + d3.format("%")(change) + "</span> of residential property taxes"      
+
+}
+
 }
 
 function mapBuild(container, boxContainer, chartContainer, shape, subject, geo, dataCompare, index) {
@@ -114,6 +134,17 @@ d3.json("shapefiles/" + shape, function(error, us) {
           }
          }
        } else if (subject == "portion"){
+         for (var i=0; i < dataCompare.length; i++){
+          if (String(d.properties.COUNTYNAME).toUpperCase() == dataCompare[i].county) {
+           if (dataCompare[i].cabin_share_2016 >= 0.5) { return "gray5"; }
+           else if (dataCompare[i].cabin_share_2016 >= 0.3) { return "gray4"; }
+           else if (dataCompare[i].cabin_share_2016 >= 0.2) { return "gray3"; }
+           else if (dataCompare[i].cabin_share_2016 >= 0.1) { return "gray2"; }
+           else if (dataCompare[i].cabin_share_2016 > 0) { return "gray1"; }
+           else if (dataCompare[i].cabin_share_2016 == 0) { return "none"; }
+          }
+         }      
+       } else if (subject == "count"){
          for (var i=0; i < dataCompare.length; i++){
           if (String(d.properties.COUNTYNAME).toUpperCase() == dataCompare[i].county) {
            if (dataCompare[i].cabin_share_2016 >= 0.5) { return "gray5"; }
@@ -252,6 +283,7 @@ d3.helper.tooltip = function(accessor){
 //POPULATE
   mapBuild("#map", "#infobox", "#chart", "counties.json", "change", "mn", data, 0);
   mapBuild("#map2", "#infobox", "#chart", "counties.json", "portion", "mn", data, 0);
+  mapBuild("#mapCount", "#infobox", "#chart", "counties.json", "count", "mn", data, 0);
 
   $('.scrollToTop').click(function(){
     $('#countyList').animate({scrollTop : 0},800);
@@ -327,6 +359,59 @@ d3.select("#countyList").selectAll(".card")
 }
 
 tableBuild();
+
+  function chartCabins(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chartTrend = c3.generate({
+          bindto: "#chartCabins",
+          padding: padding,
+          data: {
+              x: 'x',
+                columns: [
+                  ['x',2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Spills',8,13,23,14,9,16,10,13,13,19,13,13,17,16,14,4]
+                ],
+            type: 'line'
+            },
+            legend: {
+                show: false
+            },
+            point: {
+                show: false
+            },
+                color: {
+                  pattern: ['#333']
+                },
+            axis: {
+                  // rotated: true,
+                  y: {
+                        min: 0,
+                        padding: {bottom: 0, top: 0},
+                        tick: {
+                         count: 4,
+                         // values: [0,0.03,0.06,0.09,0.12],
+                        format: d3.format('.0f')
+                        }
+                    },
+                x: {
+                    tick: {
+                        count: 5,
+                        multiline: false,
+                        format: d3.format('.0f')
+                    }
+                }
+            }
+    });
+}
+
+chartCabins();
 
 
 });
