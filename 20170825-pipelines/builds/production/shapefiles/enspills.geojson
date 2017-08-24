@@ -1,0 +1,3957 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.938056,-46.938889 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"4/13/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FLOODWOOD",
+    "COUNTY":"ST LOUIS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.845,32.833 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"12/22/12",
+    "OPERATOR":"ENBRIDGE ENERGY MARKETING LLC",
+    "CITY":"ROLLING FORK",
+    "COUNTY":"SHARKEY COUNTY",
+    "STATE":"MS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.905417,32.842833 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/14/13",
+    "OPERATOR":"ENBRIDGE ENERGY MARKETING LLC",
+    "CITY":"ROLLING FORK",
+    "COUNTY":"SHARKEY",
+    "STATE":"MS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.715498,32.907579 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"8/19/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (EAST TEXAS) L.P.",
+    "CITY":"LONE STAR",
+    "COUNTY":"MORRIS",
+    "STATE":"TX",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.107222 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/7/07",
+    "OPERATOR":"ENBRIDGE IPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75406,35.93198 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/19/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.754167,35.933333 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"5/19/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.752126,35.93444 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/27/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750348,35.936355 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/20/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75629,35.93985 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/24/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.748333,35.940278 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"7/11/09",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.755833,35.940278 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/3/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.940556 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"8/29/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C,",
+    "CITY":"CUSHING ",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.740556,35.940556 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"9/27/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.761111,35.942778 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"10/17/07",
+    "OPERATOR":"ENBRIDGE PIPELINES  LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.76142,35.94373 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"10/2/14",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.757222,35.944722 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"7/12/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.764824,35.944728 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"10/23/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING ",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.760237,35.945098 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"4/25/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.76296,35.94596 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"2/14/16",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.755833,35.950833 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/17/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.952222 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"10/14/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.952222 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"9/16/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.753056,35.952222 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/29/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.74944,35.95778 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"12/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.74944,35.95778 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"2/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.754056,35.95837 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"3/29/16",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75978,35.9585 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"3/11/16",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/18/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/7/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"7/24/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"7/9/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"3/28/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75655,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/18/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75335,35.95886 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/9/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.75327,35.95902 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"10/29/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.752778,35.959167 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"3/2/09",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.761389,35.959722 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"12/13/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.212778,36.315556 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"7/2/09",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"SKIATOOK",
+    "COUNTY":"OSAGE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.888611,37.033889 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"8/4/08",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"CANEY",
+    "COUNTY":"MONTGOMERY",
+    "STATE":"KS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.914167,37.802778 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/8/09",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.915556,37.802778 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"8/13/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.915556,37.803056 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"8/16/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.920556,37.803056 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"10/21/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.915,37.80556 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"9/12/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.37944,37.91083 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"8/24/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"RICHLAND",
+    "COUNTY":"PULASKI",
+    "STATE":"MO",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.513056,38.395 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"11/25/08",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"AMSTERDAM",
+    "COUNTY":"BATES",
+    "STATE":"MO",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.08389,38.78778 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"1/20/12",
+    "OPERATOR":"ENBRIDGE STORAGE (PATOKA) L.L.C.",
+    "CITY":"VERNON",
+    "COUNTY":"MARION",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.086111,38.827778 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"4/18/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"HARTFORD",
+    "COUNTY":"MADISON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.46,40.21 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"8/24/05",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"RUSHVILLE",
+    "COUNTY":"SCHUYLER",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.64449,40.94267 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"6/6/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PONTIAC",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.647391,40.943291 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"6/16/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PONTIAC",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.650556,40.943889 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"6/3/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PONTIAC ",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"4/28/09",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"PONTIAC ",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.298295,41.090482 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/10/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"REDDICK",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.87641,41.322508 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"1/7/14",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"GURLEY",
+    "COUNTY":"CHEYENNE",
+    "STATE":"NE",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.99195,41.40817 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"8/20/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (SOUTHERN LIGHTS) L.L.C.",
+    "CITY":"MANHATTAN",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.91791,41.49188 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"3/3/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NEW LENOX",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.51722,41.49806 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/17/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DYER",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4543,41.50506 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"10/12/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.453333,41.506667 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"9/5/08",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"SCHERERVILLE ",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45333,41.50667 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/21/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.454444,41.512222 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"4/21/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45134,41.51458 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/31/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4512,41.51487 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"2/6/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.448611,41.515556 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"5/8/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.44861,41.51556 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"11/1/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.44906,41.51616 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"8/3/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.44697,41.51769 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/28/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45194,41.52278 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"2/25/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.884167,41.554722 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/10/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL ",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.885278,41.555556 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"11/13/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.88528,41.55556 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"9/29/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.88528,41.55556 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"11/20/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.88556,41.55694 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"1/1/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.885278,41.556944 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"2/11/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.054167,41.596667 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/11/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"OWEN",
+    "COUNTY":"CLARK",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.857222,41.625278 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"9/19/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LA PORTE",
+    "COUNTY":"LA PORTE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.046667,41.635278 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"3/20/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LOCKPORT",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.04639,41.63611 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"11/7/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LOCKPORT",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.076523,41.655265 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"9/9/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ROMEOVILLE",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.45352,41.67284 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/20/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC",
+    "CITY":"OREGON",
+    "COUNTY":"LUCAS",
+    "STATE":"OH",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.6,41.806667 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"2/27/03",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC.",
+    "CITY":"SAMARIA",
+    "COUNTY":"MONROE",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.175556,41.809167 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"12/12/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NILES",
+    "COUNTY":"BERRIEN",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 104.263399,41.890476 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"8/7/14",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"YODER",
+    "COUNTY":"GOSHEN",
+    "STATE":"WY",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.496667,42.056667 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"4/23/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"HAMPSHIRE",
+    "COUNTY":"KANE",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.49732,42.05679 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"6/28/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"BURLINGTON",
+    "COUNTY":"KANE",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.831667,42.060833 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"4/20/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC.",
+    "CITY":"BRITTON",
+    "COUNTY":"LENAWEE",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.83167,42.06139 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/30/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC",
+    "CITY":"BRITTON",
+    "COUNTY":"LENNAWEE",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.238611,42.164722 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"4/1/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CARPENTERSVILLE",
+    "COUNTY":"MCHENRY",
+    "STATE":"IL",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.97251,42.24329 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"7/25/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARSHALL",
+    "COUNTY":"CALHOUN",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.63417,42.53889 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/16/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"WALWORTH",
+    "COUNTY":"WALWORTH",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.6345,42.53934 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"2/13/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"WALWORTH",
+    "COUNTY":"WALWORTH",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.10547,42.56794 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"9/11/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FOWLERVILLE",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.7725,42.696944 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"10/1/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FENTON",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.408738,42.864441 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/16/15",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"CASPER",
+    "COUNTY":"NATRONA",
+    "STATE":"WY",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.408738,42.864441 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"4/22/15",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"CASPER",
+    "COUNTY":"NATRONA",
+    "STATE":"WY",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.508611,42.901111 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"5/31/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARYSVILLE",
+    "COUNTY":"ST. CLAIR",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.51,42.901944 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"3/29/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARYSVILLE",
+    "COUNTY":"ST. CLAIR",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.25139,43.26707 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"12/1/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NORTH BRANCH",
+    "COUNTY":"LAPEER",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.394167,43.319444 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"12/29/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"JUNIATA",
+    "COUNTY":"TUSCOLA",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.240556,43.4725 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"1/18/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"BAY CITY",
+    "COUNTY":"BAY",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.987222,43.628333 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"10/13/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"BAY CITY",
+    "COUNTY":"BAY",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.638236,43.895611 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"7/27/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRAND MARSH",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.68472,43.94972 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"3/26/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRAND MARSH",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.684444,43.949722 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"5/27/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ADAMS",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.684444,43.949722 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"12/19/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ADAMS",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.108636,44.05727 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/15/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"STERLING",
+    "COUNTY":"ARENAC",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.24833,44.67167 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"6/8/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARSHFIELD",
+    "COUNTY":"WOOD",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.487447,44.88225 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"1/1/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ATWOOD",
+    "COUNTY":"CLARK",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.77444,45.78611 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"6/5/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MACKINAW CITY",
+    "COUNTY":"EMMET",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.774444,45.786111 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"10/23/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MACKINAW CITY",
+    "COUNTY":"CHEBOYGAN",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.432222,45.800333 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"3/30/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"EDGEWATER",
+    "COUNTY":"SAWYER",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.973056,45.944444 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"7/18/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"RAPID RIVER",
+    "COUNTY":"DELTA",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.24556,45.97528 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"12/8/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MANISTIQUE",
+    "COUNTY":"SCHOOLCRAFT",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.716667,46.152778 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"12/20/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MINONG",
+    "COUNTY":"WASHBURN",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.325 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"6/19/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.506797,46.359919 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"3/5/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARENISCO",
+    "COUNTY":"GOGEBIC",
+    "STATE":"MI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05718,46.68329 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"2/1/16",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.054722,46.683889 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"8/18/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.053889,46.683889 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"6/3/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.684444 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"3/22/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.684444 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"2/12/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0625,46.685 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"10/9/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.685 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/21/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.685 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"4/25/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.685 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"11/21/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS ",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.053333,46.686667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/2/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0645,46.6869 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"8/15/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.058611,46.687778 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"8/25/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.056944,46.688056 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"1/20/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05685,46.6885 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/13/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.055463,46.688674 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"3/2/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.688889 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"5/13/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"5/24/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/25/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"8/17/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"4/4/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.05972,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/11/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.06135,46.68904 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/21/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 92.058333,46.689167 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"11/28/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0612,46.6893 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"1/6/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.689722 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/22/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.06,46.69 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/6/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.063056,46.69 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"6/9/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/15/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/15/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/8/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"3/10/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"1/24/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"4/3/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.052778,46.693333 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"11/10/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.049,46.69354 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"12/3/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.761389,46.811667 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"6/9/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GOWAN",
+    "COUNTY":"ST LOUIS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.933056,46.927778 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"11/4/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FLOODWOOD",
+    "COUNTY":"ST LOUIS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.9375,46.938611 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/10/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FLOODWOOD",
+    "COUNTY":"ST LOUIS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.93861,46.93944 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"11/11/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FLOODWOOD",
+    "COUNTY":"ST. LOUIS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.370318,47.089551 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"11/2/16",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"SPANAWAY",
+    "COUNTY":"PIERCE",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.30972,47.1375 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/27/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"WARBA",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.551111,47.252778 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"2/19/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRAND RAPIDS",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.591633,47.261205 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"11/9/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"COHASSET",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.636111,47.269167 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"7/4/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"COHASSET",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.73207,47.31006 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"4/17/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.762975,47.324386 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"10/20/16",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76306,47.32444 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/22/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76306,47.32444 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"9/23/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76306,47.32444 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"7/2/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.762778,47.324444 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"7/13/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.7625,47.325 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"6/19/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.7625,47.325 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"5/14/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.764167,47.325278 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/2/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76389,47.32556 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"4/16/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.76389,47.32556 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"1/18/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.57539,47.372103 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"7/28/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CASS LAKE",
+    "COUNTY":"CASS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.412222,47.377778 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"2/22/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.6375,47.377778 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"2/14/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CASS LAKE",
+    "COUNTY":"CASS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.666629,47.378551 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"3/20/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CASS LAKE",
+    "COUNTY":"HUBBARD",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.63389,47.38361 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"7/29/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CASS LAKE",
+    "COUNTY":"CASS",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.22436,47.458331 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"7/20/14",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"RENTON",
+    "COUNTY":"KING",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.050556,47.557222 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"10/20/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PINEWOOD",
+    "COUNTY":"BELTRAMI",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.353333,47.673333 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"11/28/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41732,47.68857 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/1/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41732,47.68857 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/1/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.412222,47.688889 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"12/2/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.412222,47.688889 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"7/30/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.412222,47.688889 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"5/26/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.412222,47.688889 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"4/22/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.412222,47.688889 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"3/1/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"8/10/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"4/7/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"11/20/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41222,47.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"11/8/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 95.409167,47.689167 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"3/28/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.409722,47.689444 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/27/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.409722,47.689444 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"1/9/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.409416,47.689461 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"3/14/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.4097,47.6895 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"3/22/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.408611,47.689722 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"8/8/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41198,47.68973 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"3/12/16",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41192,47.6899 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"4/23/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.408611,47.690556 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"3/13/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.414444,47.691111 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"2/5/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.414444,47.691111 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"6/18/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.414444,47.691111 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"5/20/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.495278,47.715278 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"4/8/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GONVICK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.495,47.715278 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/22/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GONVICK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.719444,47.797222 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"4/14/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"TRAIL",
+    "COUNTY":"POLK",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.2121467,47.882222 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/7/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRAND FORKS",
+    "COUNTY":"GRAND FORKS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.2121467,47.882222 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/7/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRAND FORKS",
+    "COUNTY":"GRAND FORKS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.02083,47.90556 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/3/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PLUMMER",
+    "COUNTY":"RED LAKE",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.6615,47.97958 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"8/6/14",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"ALEXANDER",
+    "COUNTY":"MCKENZIE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.010309,48.014962 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/17/15",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"Not Within a Municipality",
+    "COUNTY":"NELSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.778247,48.112149 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"3/6/14",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"TRENTON",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.43556,48.21111 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"4/23/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"VIKING",
+    "COUNTY":"MARSHALL",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.436389,48.211944 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"2/27/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"VIKING",
+    "COUNTY":"MARSHALL",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.257672,48.24063 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"2/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.257672,48.24063 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"2/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.25444,48.24275 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"11/13/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.25444,48.24275 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"11/13/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.30399,48.27904 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/26/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"LEEDS",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.30399,48.27904 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/26/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"LEEDS",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.926272,48.284494 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"12/21/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"TIOGA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.926272,48.284494 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"12/21/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"TIOGA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.373875,48.304045 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"10/31/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.373875,48.304045 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"10/31/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.614158,48.323422 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"KNOX",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.614158,48.323422 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"KNOX",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.752403,48.325686 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.752403,48.325686 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.752889,48.325724 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.752889,48.325724 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.631503,48.331143 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/15/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"YORK",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.631503,48.331143 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/15/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"YORK",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.119192,48.365352 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"RUGBY",
+    "COUNTY":"PIERCE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.119192,48.365352 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"RUGBY",
+    "COUNTY":"PIERCE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.390712,48.455641 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"11/10/14",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.390712,48.455641 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"4/1/12",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.390712,48.455641 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"3/31/12",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4290114,48.45986879 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/3/09",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.935,48.573889 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"3/20/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DONALDSON",
+    "COUNTY":"KITTSON",
+    "STATE":"MN",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.20851,48.720364 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"3/21/14",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"MAXBASS",
+    "COUNTY":"BOTTINEAU",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.20851,48.720364 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"6/7/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRENORA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.20851,48.720364 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"6/7/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRENORA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.55443,48.81835 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/19/11",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"FERNDALE",
+    "COUNTY":"WHATCOM",
+    "STATE":"WA",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.65116,48.96572 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"8/20/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"SHERWOOD",
+    "COUNTY":"RENVILLE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.65116,48.96572 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"8/20/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"SHERWOOD",
+    "COUNTY":"RENVILLE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.52554,48.99555 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"1/8/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NECHE",
+    "COUNTY":"PEMBINA",
+    "STATE":"ND",
+    "SOURCE":"PHMSA"
+    }
+  }
+]
+}
