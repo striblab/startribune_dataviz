@@ -19,6 +19,7 @@ d3.json('./shapefiles/enspills.geojson', function(error, enspills) {
 d3.json('./shapefiles/petro_pipelines.geojson', function(error, petro) {
 d3.json('./shapefiles/enpetro.json', function(error, enpetro) {
 d3.json('./shapefiles/hgl_pipelines.geojson', function(error, hgl) {
+d3.json('./shapefiles/enhgl.geojson', function(error, enhgl) {
 d3.json('./shapefiles/natgas_pipelines.geojson', function(error, natgas) {
 d3.json('./shapefiles/ennatgas.json', function(error, ennatgas) {
 
@@ -77,6 +78,11 @@ map.on('load', function() {
  map.addSource('hgl', {
    type: 'geojson',
    data: hgl
+ });
+
+  map.addSource('enhgl', {
+   type: 'geojson',
+   data: enhgl
  });
 
  map.addSource('natgas', {
@@ -172,7 +178,7 @@ map.on('load', function() {
        'layout': {},
        'type': 'line',
           'paint': {
-           'line-color': 'rgba(88, 88, 88, 1)',
+           'line-color': 'rgba(183, 12, 12, .4)',
            'line-width': 2
             }
    }, 'place-neighbourhood');
@@ -184,7 +190,7 @@ map.on('load', function() {
        'layout': {},
        'type': 'line',
           'paint': {
-           'line-color': 'rgba(88, 88, 88, 1)',
+           'line-color': 'rgba(183, 12, 12, .4)',
            'line-width': 2
             }
    }, 'place-neighbourhood');
@@ -196,7 +202,19 @@ map.on('load', function() {
        'layout': {},
        'type': 'line',
           'paint': {
-           'line-color': 'rgba(88, 88, 88, 1)',
+           'line-color': 'rgba(183, 12, 12, .4)',
+           'line-width': 2
+            }
+   }, 'place-neighbourhood');
+
+  map.addLayer({
+       'id': 'hgl-layer-e',
+       'interactive': true,
+       'source': 'enhgl',
+       'layout': {},
+       'type': 'line',
+          'paint': {
+           'line-color': 'rgba(183, 12, 12, .4)',
            'line-width': 2
             }
    }, 'place-neighbourhood');
@@ -221,15 +239,15 @@ map.on('load', function() {
                   "type": "circle",
                   "source": "enspills",
                   "paint": {
-                     "circle-radius": 7,
-                     "circle-color": 'rgba(183, 12, 12, 1)',
+                     "circle-radius": 5,
+                     "circle-color": 'rgba(88, 88, 88, .6)',
                      "circle-stroke-color": "#ffffff",
-                     "circle-stroke-width": 1.5,
-                  },
-            "filter": [
-            ">",
-            "YEAR",
-            1999]
+                     "circle-stroke-width": 0.5,
+                  }
+            // "STATE": [
+            // "==",
+            // "SOURCE",
+            // "MN"]
       });
 
     var popup = new mapboxgl.Popup({
@@ -250,7 +268,7 @@ map.on('load', function() {
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>Spill</div>")
+            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>" + String(feature.properties.CITY).toUpperCase() +  ", MN</div>")
             .addTo(map);
     });
 
@@ -274,7 +292,7 @@ map.on('load', function() {
               x: 'x',
                 columns: [
                   ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Spills',15,19,22,19,10,23,21,54,28,14,21,27,23,26,7]
+                  ['Spills',14,18,22,19,10,23,12,21,24,14,21,27,23,26,7]
                 ],
             type: 'bar'
             },
@@ -290,7 +308,7 @@ map.on('load', function() {
                 show: false
             },
                 color: {
-                  pattern: ['rgba(183, 12, 12, 1)']
+                  pattern: ['#333333']
                 },
             axis: {
                   // rotated: true,
@@ -332,7 +350,7 @@ chartTrend();
               x: 'x',
                 columns: [
                   ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Spills',6,9,4,0,4,5,11,38,12,2,3,3,3,5,2]
+                  ['Spills',5,11,6,1,6,8,32,46,15,3,3,6,8,10,4]
                 ],
             type: 'bar'
             },
@@ -348,7 +366,7 @@ chartTrend();
                 show: false
             },
                 color: {
-                  pattern: ['rgba(183, 12, 12, 1)']
+                  pattern: ['#333333']
                 },
             axis: {
                   // rotated: true,
@@ -407,7 +425,7 @@ chartMN();
                 show: false
             },
                 color: {
-                  pattern: ['rgba(183, 12, 12, 1)']
+                  pattern: ['#333333']
                 },
             axis: {
                   // rotated: true,
@@ -466,7 +484,7 @@ chartMNSpills();
                 show: false
             },
                 color: {
-                  pattern: ['rgba(183, 12, 12, 1)']
+                  pattern: ['#333333']
                 },
             axis: {
                   // rotated: true,
@@ -493,6 +511,7 @@ chartMNSpills();
 
 chartNational();
 
+});
 });
 });
 });
