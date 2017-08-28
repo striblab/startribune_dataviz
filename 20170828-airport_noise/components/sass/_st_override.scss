@@ -1,0 +1,63 @@
+/* PROJECT STYLES */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.chatter {
+    line-height:160%;
+}
+
+.legendary {
+    padding:2.5px;
+}
+
+.orange4, .orange5 {
+    color:#ffffff;
+}
+
+#map_blocks {
+    height: 400px;
+    width:100%;
+}
+
+#wrapper {
+    width:520px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.geocoder, .mapboxgl-ctrl-geocoder {
+    width:100%;
+    margin-bottom:10px;
+ }
+
+.geocoder-pin-right {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+    display:none !important;
+}
+
+
+ .byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    font-size:0.6em !important;
+    color: #888 !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    line-height:140%;
+    text-align:left !important;
+}
+
+@media (max-width:500px) {
+    #map_blocks {
+        height: 400px;
+    }
+    #wrapper {
+        width:100%;
+    }
+}
