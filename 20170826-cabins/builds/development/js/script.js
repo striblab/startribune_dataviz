@@ -66,20 +66,26 @@ else if (subject == "portion") {
 else if (subject == "count") {
 
     var color = "";
+    var cabins = 0;
     var change = 0;
 
            for (var i=0; i < dataCompare.length; i++){
           if (String(d.properties.COUNTYNAME).toUpperCase() == dataCompare[i].county) {
-           change = dataCompare[i].cabin_share_2016;
-           if (dataCompare[i].cabin_share_2016 >= 0.5) { color = "gray5"; }
-           else if (dataCompare[i].cabin_share_2016 >= 0.3) { color = "gray4"; }
-           else if (dataCompare[i].cabin_share_2016 >= 0.2) { color = "gray3"; }
-           else if (dataCompare[i].cabin_share_2016 >= 0.1) { color = "gray2"; }
-           else if (dataCompare[i].cabin_share_2016 > 0) { color = "gray1"; }
+           cabins = dataCompare[i].cabins_2016;
+           change = dataCompare[i].cabins_diff;
+           if (dataCompare[i].cabins_diff >= 0.10) { color = "gray5"; }
+           else if (dataCompare[i].cabins_diff >= 0.05) { color = "gray4"; }
+           else if (dataCompare[i].cabins_diff >= 0.02) { color = "gray3"; }
+           else if (dataCompare[i].cabins_diff >= 0.01) { color = "gray2"; }
+           else if (dataCompare[i].cabins_diff > 0) { color = "gray1"; }
+           else if (dataCompare[i].cabins_diff == 0) { color = "none"; }
+           else if (dataCompare[i].cabins_diff <= -0.05) { color = "red5"; }
+           else if (dataCompare[i].cabins_diff <= -0.02) { color = "red3"; }
+           else if (dataCompare[i].cabins_diff < 0) { color = "red1"; }
           }
          }
 
-    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div>Cabins are <span class='" +  color + "'>" + d3.format("%")(change) + "</span> of residential property taxes"      
+    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div><div><span class='" +  color + "'>" + d3.format("+%")(change) + "</span> change</div><div>" + d3.format(",")(cabins) + " cabins in 2016</div>"      
 
 }
 
@@ -366,7 +372,7 @@ tableBuild();
             top: 20,
             right: 60,
             bottom: 20,
-            left: 40,
+            left: 60,
         };
 
     var chartTrend = c3.generate({
@@ -375,8 +381,8 @@ tableBuild();
           data: {
               x: 'x',
                 columns: [
-                  ['x',2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Spills',8,13,23,14,9,16,10,13,13,19,13,13,17,16,14,4]
+                  ['x',2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015],
+                  ['Cabins',106788,109300,112044,114661,116371,113387,114405,115531,117395,119124,122427,124471]
                 ],
             type: 'line'
             },
@@ -397,12 +403,14 @@ tableBuild();
                         tick: {
                          count: 4,
                          // values: [0,0.03,0.06,0.09,0.12],
-                        format: d3.format('.0f')
+                        format: d3.format(',.0f')
                         }
                     },
                 x: {
+                  padding: {right: 0, left: 0},
                     tick: {
                         count: 5,
+
                         multiline: false,
                         format: d3.format('.0f')
                     }
@@ -412,7 +420,6 @@ tableBuild();
 }
 
 chartCabins();
-
 
 });
 });
