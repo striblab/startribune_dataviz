@@ -239,7 +239,7 @@ map.on('load', function() {
                   "source": "enspills",
                   "paint": {
                      "circle-radius": 5,
-                     "circle-color": 'rgba(120, 120, 120, .6)',
+                     "circle-color": 'rgba(0, 0, 0, .6)',
                      "circle-stroke-color": "#ffffff",
                      "circle-stroke-width": 0.5,
                   },
@@ -249,21 +249,21 @@ map.on('load', function() {
             "MPCA"]
       });
 
-      map.addLayer({
-                  "id": "spills-layer-e2",
-                  "type": "circle",
-                  "source": "enspills",
-                  "paint": {
-                     "circle-radius": 5,
-                     "circle-color": 'rgba(0, 0, 0, .6)',
-                     "circle-stroke-color": "#ffffff",
-                     "circle-stroke-width": 0.5,
-                  },
-            "filter": [
-            "!=",
-            "SOURCE",
-            "PHMSA"]
-      });
+      // map.addLayer({
+      //             "id": "spills-layer-e2",
+      //             "type": "circle",
+      //             "source": "enspills",
+      //             "paint": {
+      //                "circle-radius": 5,
+      //                "circle-color": 'rgba(0, 0, 0, .6)',
+      //                "circle-stroke-color": "#ffffff",
+      //                "circle-stroke-width": 0.5,
+      //             },
+      //       "filter": [
+      //       "!=",
+      //       "SOURCE",
+      //       "PHMSA"]
+      // });
 
     var popup = new mapboxgl.Popup({
         closeButton: false,
@@ -366,8 +366,8 @@ chartTrend();
                 columns: [
                   ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
                   // ['Incidents',5,11,6,1,6,8,32,46,15,3,3,6,8,10,4],
-                  ['PHMSA',5,8,4,0,4,5,2,5,8,2,3,3,3,5,2],
-                  ['MPCA',0,3,2,1,2,3,30,41,7,1,3,5,5,2]
+                  ['Incidents',5,8,4,0,4,5,2,5,8,2,3,3,3,5,2],
+                  // ['MPCA',0,3,2,1,2,3,30,41,7,1,3,5,5,2]
                 ],
             groups: [
                 ['PHMSA', 'MPCA']
@@ -428,8 +428,8 @@ chartMN();
           data: {
               x: 'x',
                 columns: [
-                  ['x',1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Incidents',8,8,7,12,8,13,23,14,9,16,10,13,13,19,13,13,17,16,14,4]
+                  ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Incidents',13,23,14,9,16,10,13,13,19,13,13,17,16,14,4]
                 ],
             type: 'bar'
             },
