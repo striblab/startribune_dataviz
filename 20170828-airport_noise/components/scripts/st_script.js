@@ -16,9 +16,9 @@ map.addControl(new mapboxgl.NavigationControl());
 map.on('load', function() {
 $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by city or address");
 
-geocoder2.on('result', function(ev) {
-  map2.flyTo({ center: ev.result.geometry.coordinates, zoom: 14 });
-    });
+// geocoder2.on('result', function(ev) {
+//   map2.flyTo({ center: ev.result.geometry.coordinates, zoom: 14 });
+//     });
 
     map.addSource("contours", {
         type: "geojson",
