@@ -71,21 +71,22 @@ else if (subject == "count") {
 
            for (var i=0; i < dataCompare.length; i++){
           if (String(d.properties.COUNTYNAME).toUpperCase() == dataCompare[i].county) {
-           cabins = dataCompare[i].cabins_2016;
+           cabins = dataCompare[i].cabins_2015;
            change = dataCompare[i].cabins_diff;
-           if (dataCompare[i].cabins_diff >= 0.10) { color = "gray5"; }
-           else if (dataCompare[i].cabins_diff >= 0.05) { color = "gray4"; }
-           else if (dataCompare[i].cabins_diff >= 0.02) { color = "gray3"; }
+           if (dataCompare[i].cabins_diff >= 0.60) { color = "gray5"; }
+           else if (dataCompare[i].cabins_diff >= 0.40) { color = "gray4"; }
+           else if (dataCompare[i].cabins_diff >= 0.20) { color = "gray3"; }
            else if (dataCompare[i].cabins_diff >= 0.01) { color = "gray2"; }
            else if (dataCompare[i].cabins_diff > 0) { color = "gray1"; }
            else if (dataCompare[i].cabins_diff == 0) { color = "none"; }
-           else if (dataCompare[i].cabins_diff <= -0.05) { color = "red5"; }
-           else if (dataCompare[i].cabins_diff <= -0.02) { color = "red3"; }
+           else if (dataCompare[i].cabins_diff <= -0.40) { color = "red5"; }
+           else if (dataCompare[i].cabins_diff <= -0.20) { color = "red3"; }
+           else if (dataCompare[i].cabins_diff <= -0.01) { color = "red2"; }
            else if (dataCompare[i].cabins_diff < 0) { color = "red1"; }
           }
          }
 
-    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div><div><span class='" +  color + "'>" + d3.format("+%")(change) + "</span> change</div><div>" + d3.format(",")(cabins) + " cabins in 2016</div>"      
+    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div><div>" + d3.format(",")(cabins) + " cabins in 2015</div><div><span class='" +  color + "'>" + d3.format("+%")(change) + "</span> change since 2004</div>"      
 
 }
 
@@ -153,12 +154,12 @@ d3.json("shapefiles/" + shape, function(error, us) {
        } else if (subject == "count"){
          for (var i=0; i < dataCompare.length; i++){
           if (String(d.properties.COUNTYNAME).toUpperCase() == dataCompare[i].county) {
-           if (dataCompare[i].cabin_share_2016 >= 0.5) { return "gray5"; }
-           else if (dataCompare[i].cabin_share_2016 >= 0.3) { return "gray4"; }
-           else if (dataCompare[i].cabin_share_2016 >= 0.2) { return "gray3"; }
-           else if (dataCompare[i].cabin_share_2016 >= 0.1) { return "gray2"; }
-           else if (dataCompare[i].cabin_share_2016 > 0) { return "gray1"; }
-           else if (dataCompare[i].cabin_share_2016 == 0) { return "none"; }
+           if (dataCompare[i].cabins_2015 >= 10000) { return "gray5"; }
+           else if (dataCompare[i].cabins_2015 >= 7500) { return "gray4"; }
+           else if (dataCompare[i].cabins_2015 >= 5000) { return "gray3"; }
+           else if (dataCompare[i].cabins_2015 >= 2500) { return "gray2"; }
+           else if (dataCompare[i].cabins_2015 > 0) { return "gray1"; }
+           else if (dataCompare[i].cabins_2015 == 0) { return "none"; }
           }
          }      
        }
@@ -311,6 +312,10 @@ function tableSort(container,party,data,candidate,sorted){
         if (sorted == "descend") { return d3.descending(a.cabin_share_diff, b.cabin_share_diff); }
         if (sorted == "ascend") { return d3.ascending(a.cabin_share_diff, b.cabin_share_diff); }
      }
+           if (candidate == "cabins") { 
+        if (sorted == "descend") { return d3.descending(a.cabins_2015, b.cabins_2015); }
+        if (sorted == "ascend") { return d3.ascending(a.cabins_2015, b.cabins_2015); }
+     }
     })
     .transition().duration(500);
 }
@@ -326,7 +331,10 @@ d3.select("#countyList").selectAll(".card")
   var color_scale2 = d3.scale.linear().domain([-0.05, 0, 0.10]).range(['#9C0004', '#dddddd', '#252525']);
   var color2 = color_scale2(d.cabin_share_diff);
 
-    return "<div class='tableCell county'>" + d.county + "</div><div class='tableCell county pct' style='background-color:" + color + ";'>" + d3.format("%")(d.cabin_share_2016) + "</div><div class='tableCell cabin_share_diff pct' style='background-color:" + color2 + ";'>" + d3.format("%")(d.cabin_share_diff) + "</div>";
+  var color_scale3 = d3.scale.linear().domain([0,10000]).range(['#dddddd', '#252525']);
+  var color3 = color_scale3(d.cabins_2015);
+
+    return "<div class='tableCell county'>" + d.county + "</div><div class='tableCell county pct' style='background-color:" + color + ";'>" + d3.format("%")(d.cabin_share_2016) + "</div><div class='tableCell cabin_share_diff pct' style='background-color:" + color2 + ";'>" + d3.format("%")(d.cabin_share_diff) + "</div><div class='tableCell cabins_2015 pct' style='background-color:" + color3 + ";'>" + d3.format(",")(d.cabins_2015) + "</div>";
 });
 
 

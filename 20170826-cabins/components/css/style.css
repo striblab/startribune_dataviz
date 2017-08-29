@@ -1859,7 +1859,8 @@ body {
 }
 
 .tooltip {
-  max-width: 150px;
+  max-width: 190px;
+  line-height: 140%;
 }
 
 .districtName {
@@ -1887,18 +1888,19 @@ body {
 }
 
 .cell {
-  width: 32%;
+  width: 24%;
   display: inline-block;
 }
 
 #countyList {
-  height: 300px;
+  height: 295px;
   overflow-y: auto;
   overflow-x: auto;
+  font-size: 0.8em;
 }
 
 .tableHead {
-  width: 32%;
+  width: 24%;
   font-weight: 900;
   display: inline-block;
   height: 20px;
@@ -1906,8 +1908,8 @@ body {
 
 .tableCell {
   display: inline-block;
-  width: 32%;
-  height: 20px;
+  width: 24%;
+  height: 15px;
   font-family: "Benton Sans";
   vertical-align: middle;
   padding-top: 2.7px;
@@ -1929,6 +1931,10 @@ body {
 .pct {
   text-align: center;
   font-weight: 900;
+}
+
+.county {
+  white-space: nowrap;
 }
 
 #countyList .pct {
