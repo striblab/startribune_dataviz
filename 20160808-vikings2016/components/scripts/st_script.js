@@ -1,4 +1,4 @@
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=1PAY0eRevbywXoyk-HuK0mNBcfdq4ZKyqPveag12oj_s&sheet=passing", function(error, dataLoadP) {
+d3.json("./data/passing.json", function(error, dataLoadP) {
 
 var dataP = dataLoadP.passing;
 
