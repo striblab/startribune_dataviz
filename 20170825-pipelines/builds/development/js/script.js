@@ -392,12 +392,13 @@ chartTrend();
             axis: {
                   // rotated: true,
                   y: {
+                        max: 9,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
                          count: 4,
-                         // values: [0,0.03,0.06,0.09,0.12],
-                        format: d3.format('.0f')
+                         values: [0,3,6,9],
+                         format: d3.format('.0f')
                         }
                     },
                 x: {
@@ -451,11 +452,12 @@ chartMN();
             axis: {
                   // rotated: true,
                   y: {
+                        max: 30,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
                          count: 4,
-                         // values: [0,0.03,0.06,0.09,0.12],
+                         values: [0,10,20,30],
                         format: d3.format('.0f')
                         }
                     },
@@ -473,23 +475,23 @@ chartMN();
 chartMNSpills();
 
 
-  function chartNational(){
+  function chartGallons(){
 
     var  padding = {
             top: 20,
             right: 60,
             bottom: 20,
-            left: 40,
+            left: 80,
         };
 
     var chartTrend = c3.generate({
-          bindto: "#chartNational",
+          bindto: "#chartGallons",
           padding: padding,
           data: {
               x: 'x',
                 columns: [
-                  ['x',1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Incidents',346,389,339,380,341,642,672,671,719,639,611,659,627,586,590,573,619,707,714,635]
+                  ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+                  ['Gallons Spilled',256410,11602,42609,0,420,14280,420,517,7427,440,36,1565,152,431,15]
                 ],
             type: 'bar'
             },
@@ -510,12 +512,13 @@ chartMNSpills();
             axis: {
                   // rotated: true,
                   y: {
+                        max: 45000,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
                          count: 4,
-                         // values: [0,0.03,0.06,0.09,0.12],
-                        format: d3.format('.0f')
+                         values: [0,15000,30000,45000],
+                        format: d3.format(',.0f')
                         }
                     },
                 x: {
@@ -530,7 +533,7 @@ chartMNSpills();
     });
 }
 
-chartNational();
+chartGallons();
 
 });
 });
