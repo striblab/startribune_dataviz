@@ -322,7 +322,7 @@ map.on('load', function() {
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>" + String(feature.properties.CITY).toUpperCase() +  ", " + feature.properties.STATE + "</div><div>" + d3.format(",")(feature.properties.LOSS_GALLONS) + " HVL gallons released</div><div>Significant: " + feature.properties.SIGNIFICANT + "</div>")
+            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>" + String(feature.properties.CITY).toUpperCase() +  ", " + feature.properties.STATE + "</div><div>" + d3.format(",")(feature.properties.LOSS_GALLONS) + " hazardous liquid gallons released</div><div>Significant: " + feature.properties.SIGNIFICANT + "</div>")
             .addTo(map);
     });
 
