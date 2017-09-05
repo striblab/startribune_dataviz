@@ -97,81 +97,81 @@ map.on('load', function() {
    data: ennatgas
  });
 
-  // map.addLayer({
-  //      'id': 'pipelines-layer',
-  //      'interactive': true,
-  //      'source': 'pipelines',
-  //      'layout': {},
-  //      'type': 'line',
-  //           'paint': {
-  //          // 'fill-antialias' : true,
-  //          // 'fill-opacity': 1,
-  //          'line-color': 'rgba(51, 51, 51, 0.5)',
-  //          'line-width': 2
-  //          // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
-  //    },
-  //           "filter": [
-  //           "!=",
-  //           "ENBRIDGE",
-  //           "Opername"]
-  //  }, 'place-neighbourhood');
+  map.addLayer({
+       'id': 'pipelines-layer',
+       'interactive': true,
+       'source': 'pipelines',
+       'layout': {},
+       'type': 'line',
+            'paint': {
+           // 'fill-antialias' : true,
+           // 'fill-opacity': 1,
+           'line-color': 'rgba(51, 51, 51, 0.5)',
+           'line-width': 2
+           // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
+     },
+            "filter": [
+            "!=",
+            "ENBRIDGE",
+            "Opername"]
+   }, 'place-neighbourhood');
 
-  // map.addLayer({
-  //      'id': 'petro-layer',
-  //      'interactive': true,
-  //      'source': 'petro',
-  //      'layout': {},
-  //      'type': 'line',
-  //           'paint': {
-  //          // 'fill-antialias' : true,
-  //          // 'fill-opacity': 1,
-  //          'line-color': 'rgba(51, 51, 51, 0.5)',
-  //          'line-width': 2
-  //          // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
-  //    },
-  //           "filter": [
-  //           "!=",
-  //           "ENBRIDGE",
-  //           "Opername"]
-  //  }, 'place-neighbourhood');
+  map.addLayer({
+       'id': 'petro-layer',
+       'interactive': true,
+       'source': 'petro',
+       'layout': {},
+       'type': 'line',
+            'paint': {
+           // 'fill-antialias' : true,
+           // 'fill-opacity': 1,
+           'line-color': 'rgba(51, 51, 51, 0.5)',
+           'line-width': 2
+           // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
+     },
+            "filter": [
+            "!=",
+            "ENBRIDGE",
+            "Opername"]
+   }, 'place-neighbourhood');
 
-  // map.addLayer({
-  //      'id': 'hgl-layer',
-  //      'interactive': true,
-  //      'source': 'hgl',
-  //      'layout': {},
-  //      'type': 'line',
-  //           'paint': {
-  //          // 'fill-antialias' : true,
-  //          // 'fill-opacity': 1,
-  //          'line-color': 'rgba(51, 51, 51, 0.5)',
-  //          'line-width': 2
-  //          // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
-  //    },
-  //           "filter": [
-  //           "!=",
-  //           "ENBRIDGE",
-  //           "Opername"]
-  //  }, 'place-neighbourhood');
+  map.addLayer({
+       'id': 'hgl-layer',
+       'interactive': true,
+       'source': 'hgl',
+       'layout': {},
+       'type': 'line',
+            'paint': {
+           // 'fill-antialias' : true,
+           // 'fill-opacity': 1,
+           'line-color': 'rgba(51, 51, 51, 0.5)',
+           'line-width': 2
+           // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
+     },
+            "filter": [
+            "!=",
+            "ENBRIDGE",
+            "Opername"]
+   }, 'place-neighbourhood');
 
-  // map.addLayer({
-  //      'id': 'natgas-layer',
-  //      'interactive': true,
-  //      'source': 'natgas',
-  //      'layout': {},
-  //      'type': 'line',
-  //           'paint': {
-  //          // 'fill-antialias' : true,
-  //          // 'fill-opacity': 1,
-  //          'line-color': 'rgba(51, 51, 51, 0)',
-  //          'line-width': 2
-  //          // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
-  //    },
-  //           "filter": [
-  //           "!=",
-  //           "ENBRIDGE",
-  //           "Opername"]
-  //  }, 'place-neighbourhood');
+  map.addLayer({
+       'id': 'natgas-layer',
+       'interactive': true,
+       'source': 'natgas',
+       'layout': {},
+       'type': 'line',
+            'paint': {
+           // 'fill-antialias' : true,
+           // 'fill-opacity': 1,
+           'line-color': 'rgba(51, 51, 51, 0)',
+           'line-width': 2
+           // 'fill-outline-color': 'rgba(255, 255, 255, 1)'
+     },
+            "filter": [
+            "!=",
+            "ENBRIDGE",
+            "Opername"]
+   }, 'place-neighbourhood');
 
   map.addLayer({
        'id': 'pipelines-layer-e',
@@ -221,19 +221,19 @@ map.on('load', function() {
             }
    }, 'place-neighbourhood');
 
-      // map.addLayer({
-      //             "id": "spills-layer",
-      //             "type": "circle",
-      //             "source": "spills",
-      //             "paint": {
-      //                "circle-radius": 5,
-      //                "circle-color": 'rgba(88, 88, 88, 0.45)'
-      //             },
-      //             "filter": [
-      //             "==",
-      //             "ENBRIDGE",
-      //             "NO"]
-      // });
+      map.addLayer({
+                  "id": "spills-layer",
+                  "type": "circle",
+                  "source": "spills",
+                  "paint": {
+                     "circle-radius": 5,
+                     "circle-color": 'rgba(88, 88, 88, 0.45)'
+                  },
+                  "filter": [
+                  "==",
+                  "ENBRIDGE",
+                  "NO"]
+      });
 
 
       map.addLayer({
@@ -414,12 +414,13 @@ chartTrend();
               x: 'x',
                 columns: [
                   ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  // ['Incidents',5,11,6,1,6,8,32,46,15,3,3,6,8,10,4],
-                  ['Incidents',5,8,4,0,4,5,2,5,8,2,3,3,3,5,2],
+                  // ['Incidents',5,8,4,0,4,5,2,5,8,2,3,3,3,5,2],
+                  ['Other Spill',2,7,1,0,3,4,2,3,5,2,2,1,3,2,2],
+                  ['Significant Spill',3,1,3,0,1,1,0,2,3,0,1,2,0,3,0],
                   // ['MPCA',0,3,2,1,2,3,30,41,7,1,3,5,5,2]
                 ],
             groups: [
-                ['PHMSA', 'MPCA']
+                ['Other Spill', 'Significant Spill']
             ],
             type: 'bar'
             },
@@ -435,7 +436,7 @@ chartTrend();
                 show: false
             },
                 color: {
-                  pattern: ['#333333',"#dddddd"]
+                  pattern: ['#333333',"#888888"]
                 },
             axis: {
                   // rotated: true,
@@ -539,10 +540,15 @@ chartMNSpills();
               x: 'x',
                 columns: [
                   ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Gallons Spilled',256410,11602,42609,0,420,14280,420,517,7427,440,36,1565,152,431,15]
+                  ['Enbridge Spilled',256410,11602,42609,0,420,14280,420,517,7427,440,36,1565,152,431,15],
+                  ['Other Spilled',38262,2251,84,21178,135685,1,67739,211606,193888,5,62304,1022,2115,1302,8]
                 ],
+            groups: [
+                ['Enbridge Spilled', 'Other Spilled']
+            ],
             type: 'bar'
             },
+
             bar: {
                 width: {
                     ratio: 0.2
@@ -555,17 +561,17 @@ chartMNSpills();
                 show: false
             },
                 color: {
-                  pattern: ['#333333']
+                  pattern: ['#333333','#888888']
                 },
             axis: {
                   // rotated: true,
                   y: {
-                        max: 45000,
+                        // max: 45000,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
                          count: 4,
-                         values: [0,15000,30000,45000],
+                         // values: [0,15000,30000,45000],
                         format: d3.format(',.0f')
                         }
                     },
