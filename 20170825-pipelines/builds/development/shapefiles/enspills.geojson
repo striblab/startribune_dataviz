@@ -5,17 +5,24 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
+       "coordinates":  [ -122.3703180,47.089551 ]
     },
     "properties": {
     "YEAR":2016,
-    "DATE":"10/25/16",
-    "OPERATOR":"Enbridge Energy - Viking Station",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"11/2/16",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"SPANAWAY",
+    "COUNTY":"PIERCE",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.27,
+    "RECOVERED":0.27,
+    "LOSS_GALLONS":11.34,
+    "REC_GALLONS":11.34,
+    "NET_GALLONS":0
     }
   },
   {
@@ -32,24 +39,38 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.15,
+    "RECOVERED":0.15,
+    "LOSS_GALLONS":6.3,
+    "REC_GALLONS":6.3,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.04203796,47.91942978 ]
+       "coordinates":  [ -96.7540560,35.95837 ]
     },
     "properties": {
     "YEAR":2016,
-    "DATE":"7/13/16",
-    "OPERATOR":"Enbridge Energy - Plummer Station",
-    "CITY":"Plummer",
-    "COUNTY":"Red Lake",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Discovery of Contaminated Soil"
+    "DATE":"3/29/16",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2.6,
+    "RECOVERED":2.6,
+    "LOSS_GALLONS":109.2,
+    "REC_GALLONS":109.2,
+    "NET_GALLONS":0
     }
   },
   {
@@ -66,7 +87,86 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Leaking Tank - AST"
+    "TYPE":"Leaking Tank - AST",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.21,
+    "RECOVERED":0.21,
+    "LOSS_GALLONS":8.82,
+    "REC_GALLONS":8.82,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7597800,35.9585 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"3/11/16",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.48,
+    "RECOVERED":0.48,
+    "LOSS_GALLONS":20.16,
+    "REC_GALLONS":20.16,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7629600,35.94596 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"2/14/16",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":152,
+    "RECOVERED":152,
+    "LOSS_GALLONS":6384,
+    "REC_GALLONS":6384,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0571800,46.68329 ]
+    },
+    "properties": {
+    "YEAR":2016,
+    "DATE":"2/1/16",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":104,
+    "RECOVERED":104,
+    "LOSS_GALLONS":4368,
+    "REC_GALLONS":4368,
+    "NET_GALLONS":0
     }
   },
   {
@@ -83,41 +183,134 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.01,
+    "RECOVERED":0.01,
+    "LOSS_GALLONS":0.42,
+    "REC_GALLONS":0.42,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -96.7532700,35.95902 ]
     },
     "properties": {
     "YEAR":2015,
-    "DATE":"10/1/15",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Transformer"
+    "DATE":"10/29/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.29,
+    "RECOVERED":0.29,
+    "LOSS_GALLONS":12.18,
+    "REC_GALLONS":12.18,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -87.9919500,41.40817 ]
     },
     "properties": {
     "YEAR":2015,
-    "DATE":"9/3/15",
-    "OPERATOR":"Enbridge",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"8/20/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (SOUTHERN LIGHTS) L.L.C.",
+    "CITY":"MANHATTAN",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.7154980,32.907579 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"8/19/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (EAST TEXAS) L.P.",
+    "CITY":"LONE STAR",
+    "COUNTY":"MORRIS",
+    "STATE":"TX",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":4.2,
+    "REC_GALLONS":0,
+    "NET_GALLONS":4.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0645000,46.6869 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"8/15/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.71,
+    "RECOVERED":0.71,
+    "LOSS_GALLONS":29.82,
+    "REC_GALLONS":29.82,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4469700,41.51769 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/28/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.95,
+    "RECOVERED":0.95,
+    "LOSS_GALLONS":39.9,
+    "REC_GALLONS":39.9,
+    "NET_GALLONS":0
     }
   },
   {
@@ -134,24 +327,158 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.01,
+    "RECOVERED":0.01,
+    "LOSS_GALLONS":0.42,
+    "REC_GALLONS":0.42,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -94.724983,47.371478 ]
+       "coordinates":  [ -92.0605560,46.689722 ]
     },
     "properties": {
     "YEAR":2015,
-    "DATE":"7/8/15",
-    "OPERATOR":"Enbridge Pipeline",
-    "CITY":"Farden",
-    "COUNTY":"Hubbard",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"7/22/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":13.9,
+    "RECOVERED":13.9,
+    "LOSS_GALLONS":583.8,
+    "REC_GALLONS":583.8,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "YEAR":null,
+    "DATE":"2015",
+    "OPERATOR":"",
+    "CITY":"",
+    "COUNTY":"",
+    "STATE":"",
+    "SOURCE":"",
+    "TYPE":"",
+    "SIGNIFICANT":"",
+    "UNITS":"",
+    "LOSS":null,
+    "RECOVERED":null,
+    "LOSS_GALLONS":null,
+    "REC_GALLONS":null,
+    "NET_GALLONS":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.4535200,41.67284 ]
+    },
+    "properties": {
+    "YEAR":null,
+    "DATE":"7/20/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC",
+    "CITY":"OREGON",
+    "COUNTY":"LUCAS",
+    "STATE":"OH",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":6.02,
+    "RECOVERED":6.02,
+    "LOSS_GALLONS":252.84,
+    "REC_GALLONS":252.84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.4087380,42.864441 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"7/16/15",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"CASPER",
+    "COUNTY":"NATRONA",
+    "STATE":"WY",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":162,
+    "RECOVERED":162,
+    "LOSS_GALLONS":6804,
+    "REC_GALLONS":6804,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.6473910,40.943291 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"6/16/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PONTIAC",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7602370,35.945098 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"4/25/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
     }
   },
   {
@@ -168,7 +495,38 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":10,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":420,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.4087380,42.864441 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"4/22/15",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"CASPER",
+    "COUNTY":"NATRONA",
+    "STATE":"WY",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.2,
+    "RECOVERED":0.2,
+    "LOSS_GALLONS":8.4,
+    "REC_GALLONS":8.4,
+    "NET_GALLONS":0
     }
   },
   {
@@ -185,41 +543,134 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -89.5067970,46.359919 ]
     },
     "properties": {
     "YEAR":2015,
-    "DATE":"3/14/15",
-    "OPERATOR":"Enbridge Energy Partners - Bemidji",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"3/5/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARENISCO",
+    "COUNTY":"GOGEBIC",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.19,
+    "RECOVERED":0.19,
+    "LOSS_GALLONS":7.98,
+    "REC_GALLONS":7.98,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -92.0554630,46.688674 ]
     },
     "properties": {
     "YEAR":2015,
-    "DATE":"3/9/15",
-    "OPERATOR":"Enbridge Energy Company",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Leaking Tank - AST"
+    "DATE":"3/2/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":4.76,
+    "RECOVERED":4.76,
+    "LOSS_GALLONS":199.92,
+    "REC_GALLONS":199.92,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7521260,35.93444 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/27/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.18,
+    "RECOVERED":0.18,
+    "LOSS_GALLONS":7.56,
+    "REC_GALLONS":7.56,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7503480,35.936355 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/20/15",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.5,
+    "RECOVERED":0.5,
+    "LOSS_GALLONS":21,
+    "REC_GALLONS":21,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.2982950,41.090482 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"2/10/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"REDDICK",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.01,
+    "RECOVERED":0.01,
+    "LOSS_GALLONS":0.42,
+    "REC_GALLONS":0.42,
+    "NET_GALLONS":0
     }
   },
   {
@@ -236,41 +687,326 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.01,
+    "RECOVERED":0.01,
+    "LOSS_GALLONS":0.42,
+    "REC_GALLONS":0.42,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
+       "coordinates":  [ -87.4513400,41.51458 ]
     },
     "properties": {
-    "YEAR":2014,
-    "DATE":"12/11/14",
-    "OPERATOR":"Enbridge Energy Company",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "YEAR":2015,
+    "DATE":"1/31/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.36,
+    "RECOVERED":0.36,
+    "LOSS_GALLONS":15.12,
+    "REC_GALLONS":15.12,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.90827942,48.64466095 ]
+       "coordinates":  [ -92.0613500,46.68904 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/21/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -98.0103090,48.014962 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/17/15",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"Not Within a Municipality",
+    "COUNTY":"NELSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.06,
+    "RECOVERED":0.06,
+    "LOSS_GALLONS":2.52,
+    "REC_GALLONS":2.52,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0568500,46.6885 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/13/15",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7533500,35.95886 ]
+    },
+    "properties": {
+    "YEAR":2015,
+    "DATE":"1/9/15",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.2455600,45.97528 ]
     },
     "properties": {
     "YEAR":2014,
-    "DATE":"10/27/14",
-    "OPERATOR":"Enbridge Energy",
-    "CITY":"Kennedy",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"12/8/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MANISTIQUE",
+    "COUNTY":"SCHOOLCRAFT",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0,
+    "RECOVERED":0,
+    "LOSS_GALLONS":0,
+    "REC_GALLONS":0,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0490000,46.69354 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"12/3/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":5.95,
+    "RECOVERED":5.95,
+    "LOSS_GALLONS":249.9,
+    "REC_GALLONS":249.9,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3907120,48.455641 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"11/10/14",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":7.49,
+    "RECOVERED":7.49,
+    "LOSS_GALLONS":314.58,
+    "REC_GALLONS":314.58,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.0463900,41.63611 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"11/7/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LOCKPORT",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.36,
+    "RECOVERED":0.36,
+    "LOSS_GALLONS":15.12,
+    "REC_GALLONS":15.12,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4486100,41.51556 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"11/1/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.12,
+    "RECOVERED":0.12,
+    "LOSS_GALLONS":5.04,
+    "REC_GALLONS":5.04,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7614200,35.94373 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"10/2/14",
+    "OPERATOR":"ENBRIDGE STORAGE (CUSHING) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":8.9,
+    "RECOVERED":8.9,
+    "LOSS_GALLONS":373.8,
+    "REC_GALLONS":373.8,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.8852800,41.55556 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"9/29/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":21.4,
+    "RECOVERED":21.4,
+    "LOSS_GALLONS":898.8,
+    "REC_GALLONS":898.8,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0547220,46.683889 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"8/18/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2.5,
+    "RECOVERED":2.5,
+    "LOSS_GALLONS":105,
+    "REC_GALLONS":105,
+    "NET_GALLONS":0
     }
   },
   {
@@ -287,24 +1023,110 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Leaking Tank - AST"
+    "TYPE":"Leaking Tank - AST",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.26,
+    "RECOVERED":0.26,
+    "LOSS_GALLONS":10.92,
+    "REC_GALLONS":10.92,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ 104.2633990,41.890476 ]
     },
     "properties": {
     "YEAR":2014,
-    "DATE":"7/15/14",
-    "OPERATOR":"Enbridge Energy Company",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Leaking Container"
+    "DATE":"8/7/14",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"YODER",
+    "COUNTY":"GOSHEN",
+    "STATE":"WY",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.6615000,47.97958 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"8/6/14",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"ALEXANDER",
+    "COUNTY":"MCKENZIE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.21,
+    "RECOVERED":0.21,
+    "LOSS_GALLONS":8.82,
+    "REC_GALLONS":8.82,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.2243600,47.458331 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"7/20/14",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"RENTON",
+    "COUNTY":"KING",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.19,
+    "RECOVERED":0.19,
+    "LOSS_GALLONS":7.98,
+    "REC_GALLONS":7.98,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.4973200,42.05679 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"6/28/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"BURLINGTON",
+    "COUNTY":"KANE",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
     }
   },
   {
@@ -321,24 +1143,158 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.36,
+    "RECOVERED":0.36,
+    "LOSS_GALLONS":15.12,
+    "REC_GALLONS":15.12,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -89.6847200,43.94972 ]
     },
     "properties": {
     "YEAR":2014,
-    "DATE":"2/20/14",
-    "OPERATOR":"Enbridge Energy Company",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"3/26/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRAND MARSH",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":7,
+    "RECOVERED":7,
+    "LOSS_GALLONS":294,
+    "REC_GALLONS":294,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2085100,48.720364 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"3/21/14",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"MAXBASS",
+    "COUNTY":"BOTTINEAU",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":200,
+    "RECOVERED":200,
+    "LOSS_GALLONS":8400,
+    "REC_GALLONS":8400,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.7782470,48.112149 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"3/6/14",
+    "OPERATOR":"NORTH DAKOTA PIPELINE COMPANY LLC",
+    "CITY":"TRENTON",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4519400,41.52278 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"2/25/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":747.7,
+    "RECOVERED":747.7,
+    "LOSS_GALLONS":31403.4,
+    "REC_GALLONS":31403.4,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.6345000,42.53934 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"2/13/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"WALWORTH",
+    "COUNTY":"WALWORTH",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4512000,41.51487 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"2/6/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
     }
   },
   {
@@ -355,41 +1311,302 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -102.8764100,41.322508 ]
     },
     "properties": {
     "YEAR":2014,
-    "DATE":"1/17/14",
-    "OPERATOR":"Enbridge Energy Company",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"1/7/14",
+    "OPERATOR":"EXPRESS HOLDINGS (USA), LLC",
+    "CITY":"GURLEY",
+    "COUNTY":"CHEYENNE",
+    "STATE":"NE",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1.3,
+    "RECOVERED":1.3,
+    "LOSS_GALLONS":54.6,
+    "REC_GALLONS":54.6,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
+       "coordinates":  [ -87.8855600,41.55694 ]
+    },
+    "properties": {
+    "YEAR":2014,
+    "DATE":"1/1/14",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7494400,35.95778 ]
     },
     "properties": {
     "YEAR":2013,
-    "DATE":"11/5/13",
-    "OPERATOR":"Enbridge Energy Partners - Bemidji",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"12/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3.75,
+    "RECOVERED":3.5,
+    "LOSS_GALLONS":157.5,
+    "REC_GALLONS":147,
+    "NET_GALLONS":10.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.9054170,32.842833 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/14/13",
+    "OPERATOR":"ENBRIDGE ENERGY MARKETING LLC",
+    "CITY":"ROLLING FORK",
+    "COUNTY":"SHARKEY",
+    "STATE":"MS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0600000,46.69 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/6/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.7524030,48.325686 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":9,
+    "RECOVERED":9,
+    "LOSS_GALLONS":378,
+    "REC_GALLONS":378,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.7524030,48.325686 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"11/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":9,
+    "RECOVERED":9,
+    "LOSS_GALLONS":378,
+    "REC_GALLONS":378,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.3738750,48.304045 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"10/31/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.3738750,48.304045 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"10/31/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4490600,41.51616 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"8/3/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":160,
+    "RECOVERED":160,
+    "LOSS_GALLONS":6720,
+    "REC_GALLONS":6720,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.1191920,48.365352 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"RUGBY",
+    "COUNTY":"PIERCE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.25,
+    "RECOVERED":0.25,
+    "LOSS_GALLONS":10.5,
+    "REC_GALLONS":10.5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.1191920,48.365352 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"7/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"RUGBY",
+    "COUNTY":"PIERCE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.25,
+    "RECOVERED":0.25,
+    "LOSS_GALLONS":10.5,
+    "REC_GALLONS":10.5,
+    "NET_GALLONS":0
     }
   },
   {
@@ -406,41 +1623,182 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3.33,
+    "RECOVERED":3.33,
+    "LOSS_GALLONS":139.86,
+    "REC_GALLONS":139.86,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -99.6315030,48.331143 ]
     },
     "properties": {
     "YEAR":2013,
-    "DATE":"7/22/13",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"7/15/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"YORK",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.541560,48.312919 ]
+       "coordinates":  [ -99.6315030,48.331143 ]
     },
     "properties": {
     "YEAR":2013,
-    "DATE":"5/16/13",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Foldahl",
-    "COUNTY":"Red Lake",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"7/15/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"YORK",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.6444900,40.94267 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"6/6/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PONTIAC",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.6,
+    "RECOVERED":0.6,
+    "LOSS_GALLONS":25.2,
+    "REC_GALLONS":25.2,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.7744400,45.78611 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"6/5/13",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MACKINAW CITY",
+    "COUNTY":"EMMET",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.48,
+    "RECOVERED":0,
+    "LOSS_GALLONS":20.16,
+    "REC_GALLONS":0,
+    "NET_GALLONS":20.16
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7565500,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/18/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2246,
+    "RECOVERED":2071,
+    "LOSS_GALLONS":94332,
+    "REC_GALLONS":86982,
+    "NET_GALLONS":7350
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.2121467,47.882222 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/7/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRAND FORKS",
+    "COUNTY":"GRAND FORKS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.2121467,47.882222 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/7/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRAND FORKS",
+    "COUNTY":"GRAND FORKS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
     }
   },
   {
@@ -457,7 +1815,62 @@
     "COUNTY":"RED LAKE",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.6,
+    "RECOVERED":0.6,
+    "LOSS_GALLONS":25.2,
+    "REC_GALLONS":25.2,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.6141580,48.323422 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"KNOX",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1.5,
+    "RECOVERED":1.5,
+    "LOSS_GALLONS":63,
+    "REC_GALLONS":63,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.6141580,48.323422 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"5/2/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"KNOX",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1.5,
+    "RECOVERED":1.5,
+    "LOSS_GALLONS":63,
+    "REC_GALLONS":63,
+    "NET_GALLONS":0
     }
   },
   {
@@ -474,7 +1887,374 @@
     "COUNTY":"MARSHALL",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":33.33,
+    "RECOVERED":33.33,
+    "LOSS_GALLONS":1399.86,
+    "REC_GALLONS":1399.86,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7494400,35.95778 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"2/22/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.36,
+    "RECOVERED":0.36,
+    "LOSS_GALLONS":15.12,
+    "REC_GALLONS":15.12,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.8316700,42.06139 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/30/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC",
+    "CITY":"BRITTON",
+    "COUNTY":"LENNAWEE",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.3039900,48.27904 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/26/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"LEEDS",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.3039900,48.27904 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/26/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"LEEDS",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7565500,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2013,
+    "DATE":"1/7/13",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.8450000,32.833 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"12/22/12",
+    "OPERATOR":"ENBRIDGE ENERGY MARKETING LLC",
+    "CITY":"ROLLING FORK",
+    "COUNTY":"SHARKEY COUNTY",
+    "STATE":"MS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":3,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":126,
+    "NET_GALLONS":294
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.9262720,48.284494 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"12/21/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"TIOGA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.23,
+    "RECOVERED":0.23,
+    "LOSS_GALLONS":9.66,
+    "REC_GALLONS":9.66,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.9262720,48.284494 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"12/21/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"TIOGA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.23,
+    "RECOVERED":0.23,
+    "LOSS_GALLONS":9.66,
+    "REC_GALLONS":9.66,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.8852800,41.55556 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"11/20/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":900,
+    "RECOVERED":900,
+    "LOSS_GALLONS":37800,
+    "REC_GALLONS":37800,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2544400,48.24275 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"11/13/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":76,
+    "RECOVERED":76,
+    "LOSS_GALLONS":3192,
+    "REC_GALLONS":3192,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2544400,48.24275 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"11/13/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":76,
+    "RECOVERED":76,
+    "LOSS_GALLONS":3192,
+    "REC_GALLONS":3192,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7648240,35.944728 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"10/23/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING ",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.83,
+    "RECOVERED":0.83,
+    "LOSS_GALLONS":34.86,
+    "REC_GALLONS":34.86,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.6382360,43.895611 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"7/27/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRAND MARSH",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1729,
+    "RECOVERED":1100,
+    "LOSS_GALLONS":72618,
+    "REC_GALLONS":46200,
+    "NET_GALLONS":26418
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7565500,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"7/24/12",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0597200,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"5/24/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1.19,
+    "RECOVERED":1.19,
+    "LOSS_GALLONS":49.98,
+    "REC_GALLONS":49.98,
+    "NET_GALLONS":0
     }
   },
   {
@@ -491,7 +2271,62 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.6,
+    "RECOVERED":0.6,
+    "LOSS_GALLONS":25.2,
+    "REC_GALLONS":25.2,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3907120,48.455641 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"4/1/12",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.97,
+    "RECOVERED":0.97,
+    "LOSS_GALLONS":40.74,
+    "REC_GALLONS":40.74,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.3907120,48.455641 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"3/31/12",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1.96,
+    "RECOVERED":1.96,
+    "LOSS_GALLONS":82.32,
+    "REC_GALLONS":82.32,
+    "NET_GALLONS":0
     }
   },
   {
@@ -508,7 +2343,14 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
     }
   },
   {
@@ -525,7 +2367,158 @@
     "COUNTY":"HUBBARD",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.02,
+    "RECOVERED":0.02,
+    "LOSS_GALLONS":0.84,
+    "REC_GALLONS":0.84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.9179100,41.49188 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"3/3/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NEW LENOX",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1500,
+    "RECOVERED":255,
+    "LOSS_GALLONS":63000,
+    "REC_GALLONS":10710,
+    "NET_GALLONS":52290
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.4533300,41.50667 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/21/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":24,
+    "RECOVERED":24,
+    "LOSS_GALLONS":1008,
+    "REC_GALLONS":1008,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.5172200,41.49806 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/17/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DYER",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.01,
+    "RECOVERED":0.01,
+    "LOSS_GALLONS":0.42,
+    "REC_GALLONS":0.42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.6341700,42.53889 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/16/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"WALWORTH",
+    "COUNTY":"WALWORTH",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.1086360,44.05727 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"2/15/12",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"STERLING",
+    "COUNTY":"ARENAC",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":20,
+    "RECOVERED":20,
+    "LOSS_GALLONS":840,
+    "REC_GALLONS":840,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.0838900,38.78778 ]
+    },
+    "properties": {
+    "YEAR":2012,
+    "DATE":"1/20/12",
+    "OPERATOR":"ENBRIDGE STORAGE (PATOKA) L.L.C.",
+    "CITY":"VERNON",
+    "COUNTY":"MARION",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.17,
+    "RECOVERED":0.17,
+    "LOSS_GALLONS":7.14,
+    "REC_GALLONS":7.14,
+    "NET_GALLONS":0
     }
   },
   {
@@ -542,7 +2535,14 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Leaking Tank - AST"
+    "TYPE":"Leaking Tank - AST",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.48,
+    "RECOVERED":0.48,
+    "LOSS_GALLONS":20.16,
+    "REC_GALLONS":20.16,
+    "NET_GALLONS":0
     }
   },
   {
@@ -559,24 +2559,326 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":10,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":420,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -94.8796463,47.47314072 ]
+       "coordinates":  [ -87.4543000,41.50506 ]
     },
     "properties": {
     "YEAR":2011,
-    "DATE":"6/8/11",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Bemidji",
-    "COUNTY":"Beltrami",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Transformer"
+    "DATE":"10/12/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":398,
+    "RECOVERED":398,
+    "LOSS_GALLONS":16716,
+    "REC_GALLONS":16716,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0597200,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/25/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":15,
+    "RECOVERED":15,
+    "LOSS_GALLONS":630,
+    "REC_GALLONS":630,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.7528890,48.325724 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":20,
+    "RECOVERED":20,
+    "LOSS_GALLONS":840,
+    "REC_GALLONS":840,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.7528890,48.325724 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"BERTHOLD",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":20,
+    "RECOVERED":20,
+    "LOSS_GALLONS":840,
+    "REC_GALLONS":840,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.5544300,48.81835 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/19/11",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"FERNDALE",
+    "COUNTY":"WHATCOM",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.29,
+    "RECOVERED":0.29,
+    "LOSS_GALLONS":12.18,
+    "REC_GALLONS":12.18,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7540600,35.93198 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"9/19/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0597200,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"8/17/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.95,
+    "RECOVERED":0.95,
+    "LOSS_GALLONS":39.9,
+    "REC_GALLONS":39.9,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7565500,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"7/9/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.6,
+    "RECOVERED":0.6,
+    "LOSS_GALLONS":25.2,
+    "REC_GALLONS":25.2,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0597200,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"4/4/11",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":0.29,
+    "RECOVERED":0.29,
+    "LOSS_GALLONS":12.18,
+    "REC_GALLONS":12.18,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7565500,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"3/28/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":4.5,
+    "RECOVERED":4.5,
+    "LOSS_GALLONS":189,
+    "REC_GALLONS":189,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2576720,48.24063 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"2/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2576720,48.24063 ]
+    },
+    "properties": {
+    "YEAR":2011,
+    "DATE":"2/25/11",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.2513900,43.26707 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"12/1/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NORTH BRANCH",
+    "COUNTY":"LAPEER",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
     }
   },
   {
@@ -593,24 +2895,14 @@
     "COUNTY":"ST. LOUIS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -94.381341,47.326278 ]
-    },
-    "properties": {
-    "YEAR":2010,
-    "DATE":"10/12/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Cass Lake",
-    "COUNTY":"Hubbard",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.36,
+    "RECOVERED":0.36,
+    "LOSS_GALLONS":15.12,
+    "REC_GALLONS":15.12,
+    "NET_GALLONS":0
     }
   },
   {
@@ -627,24 +2919,158 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -92.42489624,46.66365814 ]
+       "coordinates":  [ -96.8622520,37.81724 ]
     },
     "properties": {
     "YEAR":2010,
-    "DATE":"9/17/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Carlton",
-    "COUNTY":"Carlton",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"9/12/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.1054700,42.56794 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"9/11/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FOWLERVILLE",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.24,
+    "RECOVERED":0.24,
+    "LOSS_GALLONS":10.08,
+    "REC_GALLONS":10.08,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.0765230,41.655265 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"9/9/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ROMEOVILLE",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":7538,
+    "RECOVERED":7538,
+    "LOSS_GALLONS":316596,
+    "REC_GALLONS":316596,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.3794400,37.91083 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"8/24/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"RICHLAND",
+    "COUNTY":"PULASKI",
+    "STATE":"MO",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1.43,
+    "RECOVERED":1.43,
+    "LOSS_GALLONS":60.06,
+    "REC_GALLONS":60.06,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.6511600,48.96572 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"8/20/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"SHERWOOD",
+    "COUNTY":"RENVILLE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.38,
+    "RECOVERED":0.38,
+    "LOSS_GALLONS":15.96,
+    "REC_GALLONS":15.96,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.6511600,48.96572 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"8/20/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"SHERWOOD",
+    "COUNTY":"RENVILLE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.38,
+    "RECOVERED":0.38,
+    "LOSS_GALLONS":15.96,
+    "REC_GALLONS":15.96,
+    "NET_GALLONS":0
     }
   },
   {
@@ -661,7 +3087,14 @@
     "COUNTY":"CASS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":155,
+    "RECOVERED":155,
+    "LOSS_GALLONS":6510,
+    "REC_GALLONS":6510,
+    "NET_GALLONS":0
     }
   },
   {
@@ -678,7 +3111,38 @@
     "COUNTY":"CASS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.23,
+    "RECOVERED":0.23,
+    "LOSS_GALLONS":9.66,
+    "REC_GALLONS":9.66,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.9725100,42.24329 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"7/25/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARSHALL",
+    "COUNTY":"CALHOUN",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":20082,
+    "RECOVERED":18245,
+    "LOSS_GALLONS":843444,
+    "REC_GALLONS":766290,
+    "NET_GALLONS":77154
     }
   },
   {
@@ -695,24 +3159,86 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":10,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":420,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -92.38542938,46.61621094 ]
+       "coordinates":  [ -90.2483300,44.67167 ]
     },
     "properties": {
     "YEAR":2010,
-    "DATE":"6/22/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Wrenshall",
-    "COUNTY":"Carlton",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"6/8/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARSHFIELD",
+    "COUNTY":"WOOD",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2085100,48.720364 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"6/7/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRENORA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2085100,48.720364 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"6/7/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GRENORA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
     }
   },
   {
@@ -729,24 +3255,86 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":4,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":168,
+    "NET_GALLONS":42
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -96.7562900,35.93985 ]
     },
     "properties": {
     "YEAR":2010,
-    "DATE":"4/16/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"3/24/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.25,
+    "RECOVERED":0.25,
+    "LOSS_GALLONS":10.5,
+    "REC_GALLONS":10.5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.7565500,35.95885 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/18/10",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":7,
+    "RECOVERED":7,
+    "LOSS_GALLONS":294,
+    "REC_GALLONS":294,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0597200,46.68889 ]
+    },
+    "properties": {
+    "YEAR":2010,
+    "DATE":"3/11/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.75,
+    "RECOVERED":0.75,
+    "LOSS_GALLONS":31.5,
+    "REC_GALLONS":31.5,
+    "NET_GALLONS":0
     }
   },
   {
@@ -763,7 +3351,14 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
     }
   },
   {
@@ -780,755 +3375,134 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.495498,47.241555 ]
-    },
-    "properties": {
-    "YEAR":2010,
-    "DATE":"2/8/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -94.20874023,47.34297943 ]
+       "coordinates":  [ -97.5255400,48.99555 ]
     },
     "properties": {
     "YEAR":2010,
     "DATE":"1/8/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Bena",
-    "COUNTY":"Cass",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Facility Spill or Release"
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NECHE",
+    "COUNTY":"PEMBINA",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":3784,
+    "RECOVERED":1547,
+    "LOSS_GALLONS":158928,
+    "REC_GALLONS":64974,
+    "NET_GALLONS":93954
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.52752686,47.23591995 ]
+       "coordinates":  [ -92.0612000,46.6893 ]
     },
     "properties": {
     "YEAR":2010,
-    "DATE":"1/2/10",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Grand Rapids",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"1/6/10",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0.48,
+    "RECOVERED":0.48,
+    "LOSS_GALLONS":20.16,
+    "REC_GALLONS":20.16,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -94.20874023,47.34297943 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"12/31/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Bena",
-    "COUNTY":"Cass",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.52752686,47.23591995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"12/30/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Grand Rapids",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"12/15/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"12/15/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"12/10/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"12/6/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.86811066,48.45323944 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/28/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Stephen",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/24/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/17/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -94.61203003,47.38240051 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/16/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Cass Lake",
-    "COUNTY":"Cass",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Facility Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/14/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/13/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/13/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/12/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/12/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/11/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/11/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.81591034,48.33456039 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/10/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Argyle",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/6/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/6/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"11/6/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -103.6426980,47.843076 ]
     },
     "properties": {
     "YEAR":2009,
     "DATE":"11/5/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"ALEXANDER ",
+    "COUNTY":"MCKENZIE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":7,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":294,
+    "NET_GALLONS":126
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
+       "coordinates":  [ -83.7725,42.696944 ]
     },
     "properties": {
     "YEAR":2009,
-    "DATE":"11/4/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"10/1/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"FENTON",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
+       "coordinates":  [ -96.212778,36.315556 ]
     },
     "properties": {
     "YEAR":2009,
-    "DATE":"11/4/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.90827942,48.64466095 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/31/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Kennedy",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/26/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.19316101,47.08634186 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/22/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Swan River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.90827942,48.64466095 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/22/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Kennedy",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/19/09",
-    "OPERATOR":"Enbridge Energy",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.19316101,47.08634186 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/17/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Swan River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.26873779,47.12900925 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/16/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Warba",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.26873779,47.12900925 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/15/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Warba",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.52752686,47.23591995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"10/12/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Grand Rapids",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.52752686,47.23591995 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/29/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Grand Rapids",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.62335205,47.26420975 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/25/09",
-    "OPERATOR":"Enbridge Energy Partners - Grand Rapids",
-    "CITY":"Cohasset",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.62335205,47.26420975 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/25/09",
-    "OPERATOR":"Enbridge Energy Partners - Grand Rapids",
-    "CITY":"Cohasset",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/16/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.42395782,47.28976059 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/12/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Coleraine",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -92.4804306,46.71429825 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/12/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Cloquet",
-    "COUNTY":"Carlton",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.62335205,47.26420975 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/11/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Cohasset",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.62335205,47.26420975 ]
-    },
-    "properties": {
-    "YEAR":2009,
-    "DATE":"9/10/09",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Cohasset",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"7/2/09",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"SKIATOOK",
+    "COUNTY":"OSAGE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":0,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":0,
+    "NET_GALLONS":84
     }
   },
   {
@@ -1545,7 +3519,62 @@
     "COUNTY":"ST LOUIS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":0,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":0,
+    "NET_GALLONS":210
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.650556,40.943889 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"6/3/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"PONTIAC ",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":8,
+    "RECOVERED":0,
+    "LOSS_GALLONS":336,
+    "REC_GALLONS":0,
+    "NET_GALLONS":336
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.685 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/21/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":154,
+    "RECOVERED":140,
+    "LOSS_GALLONS":6468,
+    "REC_GALLONS":5880,
+    "NET_GALLONS":588
     }
   },
   {
@@ -1562,14 +3591,45 @@
     "COUNTY":"ST LOUIS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":4,
+    "RECOVERED":4,
+    "LOSS_GALLONS":168,
+    "REC_GALLONS":168,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -92.938056,-46.938889 ]
+       "coordinates":  [ -96.914167,37.802778 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/8/09",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.938056,46.938889 ]
     },
     "properties": {
     "YEAR":2009,
@@ -1579,551 +3639,182 @@
     "COUNTY":"ST LOUIS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.408611,47.690556 ]
+       "coordinates":  [ -96.752778,35.959167 ]
     },
     "properties": {
     "YEAR":2009,
-    "DATE":"3/13/09",
-    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
-    "CITY":"CLEARBROOK",
-    "COUNTY":"CLEARWATER",
-    "STATE":"MN",
+    "DATE":"3/2/09",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.436389,48.211944 ]
+       "coordinates":  [ -92.060556,46.684444 ]
     },
     "properties": {
     "YEAR":2009,
-    "DATE":"2/27/09",
+    "DATE":"2/12/09",
     "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
-    "CITY":"VIKING",
-    "COUNTY":"MARSHALL",
-    "STATE":"MN",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":1,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":42,
+    "NET_GALLONS":42
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -94.513056,38.395 ]
     },
     "properties": {
     "YEAR":2008,
-    "DATE":"10/17/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"11/25/08",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"AMSTERDAM",
+    "COUNTY":"BATES",
+    "STATE":"MO",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":0,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":0,
+    "NET_GALLONS":84
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.51667023,47.73740005 ]
+       "coordinates":  [ -92.059722,46.685 ]
     },
     "properties": {
     "YEAR":2008,
-    "DATE":"10/15/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Gonvick",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"8/25/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":115,
+    "RECOVERED":108,
+    "LOSS_GALLONS":4830,
+    "REC_GALLONS":4536,
+    "NET_GALLONS":294
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.62294006,47.76890182 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"10/6/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Gully",
-    "COUNTY":"Polk",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"10/4/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Polk",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"10/3/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Polk",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.405880,48.218584 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"10/2/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Red Lake",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.146258,47.985656 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/30/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/27/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/18/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/18/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/17/08",
-    "OPERATOR":"Enbridge Pipeline",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/13/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/10/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/9/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/8/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.18077087,48.11912918 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/8/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Thief River Falls",
-    "COUNTY":"Pennington",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/5/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.90827942,48.64466095 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"9/2/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Kennedy",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/29/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.55000305,48.33330154 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/26/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Foldahl",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.712327,48.423287 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/20/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Wanger",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.81591034,48.33456039 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/19/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Argyle",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.90827942,48.64466095 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/18/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Kennedy",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.86811066,48.45323944 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/15/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Stephen",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.86811066,48.45323944 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/9/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Stephen",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.86811066,48.45323944 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/9/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Stephen",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.827090,48.496820 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/7/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Sinnott",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
-    },
-    "properties": {
-    "YEAR":2008,
-    "DATE":"8/6/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
+       "coordinates":  [ -95.888611,37.033889 ]
     },
     "properties": {
     "YEAR":2008,
     "DATE":"8/4/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"CANEY",
+    "COUNTY":"MONTGOMERY",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":10,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":420,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.89694214,48.57223129 ]
+       "coordinates":  [ -86.51363373,41.70578003 ]
     },
     "properties": {
     "YEAR":2008,
-    "DATE":"8/2/08",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Donaldson",
-    "COUNTY":"Kittson",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"5/27/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NEW CARLISLE",
+    "COUNTY":"ST JOSEPH",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":6,
+    "RECOVERED":0,
+    "LOSS_GALLONS":252,
+    "REC_GALLONS":0,
+    "NET_GALLONS":252
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.42765808,41.52391815 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"4/15/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"GRIFFITH ",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":260,
+    "RECOVERED":260,
+    "LOSS_GALLONS":10920,
+    "REC_GALLONS":10920,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2140,7 +3831,62 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":6,
+    "RECOVERED":4,
+    "LOSS_GALLONS":252,
+    "REC_GALLONS":168,
+    "NET_GALLONS":84
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.88054657,37.80975342 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"4/6/08",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":550,
+    "RECOVERED":550,
+    "LOSS_GALLONS":23100,
+    "REC_GALLONS":23100,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.432222,45.800333 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"3/30/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"EDGEWATER",
+    "COUNTY":"SAWYER",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":4,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":168,
+    "NET_GALLONS":42
     }
   },
   {
@@ -2157,7 +3903,38 @@
     "COUNTY":"KITTSON",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":4,
+    "RECOVERED":3,
+    "LOSS_GALLONS":168,
+    "REC_GALLONS":126,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.432474,36.535647 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"2/27/08",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CHELSEA",
+    "COUNTY":"ROGERS",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":1,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":42,
+    "NET_GALLONS":84
     }
   },
   {
@@ -2174,7 +3951,38 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":325,
+    "RECOVERED":0,
+    "LOSS_GALLONS":13650,
+    "REC_GALLONS":0,
+    "NET_GALLONS":13650
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.1424789,48.72174072 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"11/24/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"MAXBASS",
+    "COUNTY":"BOTTINEAU",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":84,
+    "RECOVERED":84,
+    "LOSS_GALLONS":3528,
+    "REC_GALLONS":3528,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2191,58 +3999,38 @@
     "COUNTY":"CLEARWATER ",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.360693,47.619009 ]
+       "coordinates":  [ -96.761111,35.942778 ]
     },
     "properties": {
     "YEAR":2007,
-    "DATE":"11/13/07",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Holst",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
-    },
-    "properties": {
-    "YEAR":2007,
-    "DATE":"10/18/07",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
-    },
-    "properties": {
-    "YEAR":2007,
-    "DATE":"10/5/07",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Leaking Tank - AST"
+    "DATE":"10/17/07",
+    "OPERATOR":"ENBRIDGE PIPELINES  LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":20,
+    "RECOVERED":20,
+    "LOSS_GALLONS":840,
+    "REC_GALLONS":840,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2259,7 +4047,86 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.884167,41.554722 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/10/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL ",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.755833,35.940278 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/3/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.76850128,35.98508072 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"4/10/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING ",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2276,7 +4143,62 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.054167,41.596667 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/11/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"OWEN",
+    "COUNTY":"CLARK",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.6277008,48.96249008 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/11/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"SHERWOOD",
+    "COUNTY":"RENVILLE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2293,7 +4215,86 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":7,
+    "RECOVERED":6,
+    "LOSS_GALLONS":294,
+    "REC_GALLONS":252,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.244048,45.668017 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"2/2/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"EXELAND",
+    "COUNTY":"RUSK",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":4800,
+    "RECOVERED":2734,
+    "LOSS_GALLONS":201600,
+    "REC_GALLONS":114828,
+    "NET_GALLONS":86772
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.3905716,48.31343079 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"1/25/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":215,
+    "RECOVERED":200,
+    "LOSS_GALLONS":9030,
+    "REC_GALLONS":8400,
+    "NET_GALLONS":630
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.487447,44.88225 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"1/1/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ATWOOD",
+    "COUNTY":"CLARK",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1500,
+    "RECOVERED":1450,
+    "LOSS_GALLONS":63000,
+    "REC_GALLONS":60900,
+    "NET_GALLONS":2100
     }
   },
   {
@@ -2310,24 +4311,38 @@
     "COUNTY":"BELTRAMI",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":0,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":0,
+    "NET_GALLONS":210
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.00154114,47.50098038 ]
+       "coordinates":  [ -96.915556,37.802778 ]
     },
     "properties": {
     "YEAR":2006,
-    "DATE":"10/20/06",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Wilton",
-    "COUNTY":"Beltrami",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"8/13/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":140,
+    "RECOVERED":138,
+    "LOSS_GALLONS":5880,
+    "REC_GALLONS":5796,
+    "NET_GALLONS":84
     }
   },
   {
@@ -2344,24 +4359,86 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":1,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":42,
+    "NET_GALLONS":42
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -96.40606689,48.21800995 ]
+       "coordinates":  [ -100.912529,48.7153511 ]
     },
     "properties": {
     "YEAR":2006,
-    "DATE":"8/3/06",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Viking",
-    "COUNTY":"Marshall",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Leaking Tank - AST"
+    "DATE":"6/16/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"NEWBURG ",
+    "COUNTY":"BOTTINEAU",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":0,
+    "RECOVERED":0,
+    "LOSS_GALLONS":0,
+    "REC_GALLONS":0,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.508611,42.901111 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"5/31/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARYSVILLE",
+    "COUNTY":"ST. CLAIR",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":20,
+    "RECOVERED":20,
+    "LOSS_GALLONS":840,
+    "REC_GALLONS":840,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.831667,42.060833 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"4/20/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC.",
+    "CITY":"BRITTON",
+    "COUNTY":"LENAWEE",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":25,
+    "RECOVERED":25,
+    "LOSS_GALLONS":1050,
+    "REC_GALLONS":1050,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2378,7 +4455,38 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.45012665,41.49217987 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"3/7/06",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2395,58 +4503,398 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -102.3905716,48.31343079 ]
     },
     "properties": {
     "YEAR":2005,
-    "DATE":"1/9/05",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.762778,47.324444 ]
-    },
-    "properties": {
-    "YEAR":2004,
-    "DATE":"7/13/04",
-    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
-    "CITY":"DEER RIVER",
-    "COUNTY":"ITASCA",
-    "STATE":"MN",
+    "DATE":"12/14/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":12,
+    "RECOVERED":10,
+    "LOSS_GALLONS":504,
+    "REC_GALLONS":420,
+    "NET_GALLONS":84
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -102.3905716,48.31343079 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"11/2/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"STANLEY",
+    "COUNTY":"MOUNTRAIL",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":6,
+    "RECOVERED":6,
+    "LOSS_GALLONS":252,
+    "REC_GALLONS":252,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.920556,37.803056 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"10/21/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2350,
+    "RECOVERED":2340,
+    "LOSS_GALLONS":98700,
+    "REC_GALLONS":98280,
+    "NET_GALLONS":420
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.1039505,46.72130966 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"10/3/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -99.525567,48.344513 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"9/27/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"YORK",
+    "COUNTY":"BENSON",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":350,
+    "RECOVERED":320,
+    "LOSS_GALLONS":14700,
+    "REC_GALLONS":13440,
+    "NET_GALLONS":1260
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.46,40.21 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"8/24/05",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"RUSHVILLE",
+    "COUNTY":"SCHUYLER",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":107,
+    "RECOVERED":71,
+    "LOSS_GALLONS":4494,
+    "REC_GALLONS":2982,
+    "NET_GALLONS":1512
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.9850640,-96.76697 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"7/18/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.754167,35.933333 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"5/19/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":15,
+    "RECOVERED":13,
+    "LOSS_GALLONS":630,
+    "REC_GALLONS":546,
+    "NET_GALLONS":84
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.086111,38.827778 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"4/18/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"HARTFORD",
+    "COUNTY":"MADISON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.238611,42.164722 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"4/1/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CARPENTERSVILLE",
+    "COUNTY":"MCHENRY",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":210,
+    "REC_GALLONS":210,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.240556,43.4725 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"1/18/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"BAY CITY",
+    "COUNTY":"BAY",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":100,
+    "RECOVERED":85,
+    "LOSS_GALLONS":4200,
+    "REC_GALLONS":3570,
+    "NET_GALLONS":630
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.22624969,43.44666672 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"1/14/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"RIO",
+    "COUNTY":"COLUMBIA",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":3,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":126,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.394167,43.319444 ]
     },
     "properties": {
     "YEAR":2004,
-    "DATE":"7/13/04",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"12/29/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"JUNIATA",
+    "COUNTY":"TUSCOLA",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.952222 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"10/14/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":90,
+    "RECOVERED":90,
+    "LOSS_GALLONS":3780,
+    "REC_GALLONS":3780,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.740556,35.940556 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"9/27/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.757222,35.944722 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"7/12/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":9,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":378,
+    "NET_GALLONS":42
     }
   },
   {
@@ -2463,41 +4911,182 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":9,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":378,
+    "NET_GALLONS":42
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.431123,47.691901 ]
+       "coordinates":  [ -122.205101,47.47513962 ]
     },
     "properties": {
     "YEAR":2004,
-    "DATE":"5/20/04",
-    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
-    "CITY":"CLEARBROOK",
-    "COUNTY":"CLEARWATER",
-    "STATE":"MN",
+    "DATE":"5/23/04",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"RENTON",
+    "COUNTY":"KING",
+    "STATE":"WA",
     "SOURCE":"PHMSA",
-    "TYPE":"Leaking Tank - AST"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":45,
+    "RECOVERED":20,
+    "LOSS_GALLONS":1890,
+    "REC_GALLONS":840,
+    "NET_GALLONS":1050
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.51667023,47.73740005 ]
+       "coordinates":  [ -92.060556,46.688889 ]
     },
     "properties": {
     "YEAR":2004,
-    "DATE":"3/23/04",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Gonvick",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"5/13/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":40,
+    "RECOVERED":38,
+    "LOSS_GALLONS":1680,
+    "REC_GALLONS":1596,
+    "NET_GALLONS":84
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.753056,35.952222 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/29/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":22,
+    "RECOVERED":20,
+    "LOSS_GALLONS":924,
+    "REC_GALLONS":840,
+    "NET_GALLONS":84
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/15/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/8/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":42,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.053333,46.686667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/2/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":2,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":84,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"3/10/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":1,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":42,
+    "NET_GALLONS":84
     }
   },
   {
@@ -2514,24 +5103,38 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":1003,
+    "RECOVERED":9,
+    "LOSS_GALLONS":42126,
+    "REC_GALLONS":378,
+    "NET_GALLONS":41748
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -95.43097687,47.6933403 ]
+       "coordinates":  [ -91.716667,46.152778 ]
     },
     "properties": {
     "YEAR":2003,
-    "DATE":"12/3/03",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Clearbrook",
-    "COUNTY":"Clearwater",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Pipeline"
+    "DATE":"12/20/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MINONG",
+    "COUNTY":"WASHBURN",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":15,
+    "RECOVERED":14,
+    "LOSS_GALLONS":630,
+    "REC_GALLONS":588,
+    "NET_GALLONS":42
     }
   },
   {
@@ -2548,7 +5151,38 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":47,
+    "RECOVERED":40,
+    "LOSS_GALLONS":1974,
+    "REC_GALLONS":1680,
+    "NET_GALLONS":294
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.987222,43.628333 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"10/13/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"BAY CITY",
+    "COUNTY":"BAY",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":500,
+    "RECOVERED":430,
+    "LOSS_GALLONS":21000,
+    "REC_GALLONS":18060,
+    "NET_GALLONS":2940
     }
   },
   {
@@ -2565,24 +5199,38 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -92.91470337,46.92919922 ]
+       "coordinates":  [ -92.060556,46.325 ]
     },
     "properties": {
     "YEAR":2003,
-    "DATE":"6/23/03",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Floodwood",
-    "COUNTY":"St. Louis",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"6/19/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":0,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":0,
+    "NET_GALLONS":84
     }
   },
   {
@@ -2599,24 +5247,38 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7921524,47.33274078 ]
+       "coordinates":  [ -89.684444,43.949722 ]
     },
     "properties": {
     "YEAR":2003,
-    "DATE":"6/19/03",
-    "OPERATOR":"Enbridge Energy Partners",
-    "CITY":"Deer River",
-    "COUNTY":"Itasca",
-    "STATE":"MN",
-    "SOURCE":"MPCA",
-    "TYPE":"Spill or Release"
+    "DATE":"5/27/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ADAMS",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":0,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":0,
+    "NET_GALLONS":84
     }
   },
   {
@@ -2633,24 +5295,38 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":100,
+    "RECOVERED":100,
+    "LOSS_GALLONS":4200,
+    "REC_GALLONS":4200,
+    "NET_GALLONS":0
     }
   },
   {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.7625,47.325 ]
+       "coordinates":  [ -87.448611,41.515556 ]
     },
     "properties": {
     "YEAR":2003,
-    "DATE":"5/14/03",
+    "DATE":"5/8/03",
     "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
-    "CITY":"DEER RIVER",
-    "COUNTY":"ITASCA",
-    "STATE":"MN",
+    "CITY":"GRIFFITH",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":700,
+    "RECOVERED":695,
+    "LOSS_GALLONS":29400,
+    "REC_GALLONS":29190,
+    "NET_GALLONS":210
     }
   },
   {
@@ -2667,7 +5343,14 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Pipeline"
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
     }
   },
   {
@@ -2684,7 +5367,14 @@
     "COUNTY":"POLK",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":125,
+    "RECOVERED":75,
+    "LOSS_GALLONS":5250,
+    "REC_GALLONS":3150,
+    "NET_GALLONS":2100
     }
   },
   {
@@ -2701,7 +5391,158 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.6,41.806667 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"2/27/03",
+    "OPERATOR":"ENBRIDGE PIPELINES (TOLEDO) INC.",
+    "CITY":"SAMARIA",
+    "COUNTY":"MONROE",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":130,
+    "RECOVERED":125,
+    "LOSS_GALLONS":5460,
+    "REC_GALLONS":5250,
+    "NET_GALLONS":210
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"1/24/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":4500,
+    "RECOVERED":4450,
+    "LOSS_GALLONS":189000,
+    "REC_GALLONS":186900,
+    "NET_GALLONS":2100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.205101,47.47513962 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"12/28/02",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"RENTON",
+    "COUNTY":"KING",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":35,
+    "RECOVERED":35,
+    "LOSS_GALLONS":1470,
+    "REC_GALLONS":1470,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.684444,43.949722 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"12/19/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ADAMS",
+    "COUNTY":"ADAMS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.175556,41.809167 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"12/12/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"NILES",
+    "COUNTY":"BERRIEN",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":3,
+    "RECOVERED":0,
+    "LOSS_GALLONS":126,
+    "REC_GALLONS":0,
+    "NET_GALLONS":126
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 92.058333,46.689167 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"11/28/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":2,
+    "RECOVERED":1,
+    "LOSS_GALLONS":84,
+    "REC_GALLONS":42,
+    "NET_GALLONS":42
     }
   },
   {
@@ -2718,7 +5559,14 @@
     "COUNTY":"ST LOUIS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":4,
+    "RECOVERED":1,
+    "LOSS_GALLONS":168,
+    "REC_GALLONS":42,
+    "NET_GALLONS":126
     }
   },
   {
@@ -2735,7 +5583,62 @@
     "COUNTY":"ITASCA",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":6000,
+    "RECOVERED":2574,
+    "LOSS_GALLONS":252000,
+    "REC_GALLONS":108108,
+    "NET_GALLONS":143892
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2213211,48.51305008 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"4/11/02",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"GLENBURN",
+    "COUNTY":"RENVILLE",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":25,
+    "RECOVERED":24,
+    "LOSS_GALLONS":1050,
+    "REC_GALLONS":1008,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"4/3/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
     }
   },
   {
@@ -2752,7 +5655,14 @@
     "COUNTY":"CLEARWATER",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":50,
+    "RECOVERED":50,
+    "LOSS_GALLONS":2100,
+    "REC_GALLONS":2100,
+    "NET_GALLONS":0
     }
   },
   {
@@ -2769,7 +5679,14 @@
     "COUNTY":"CASS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":50,
+    "RECOVERED":45,
+    "LOSS_GALLONS":2100,
+    "REC_GALLONS":1890,
+    "NET_GALLONS":210
     }
   },
   {
@@ -2786,7 +5703,1070 @@
     "COUNTY":"CASS",
     "STATE":"MN",
     "SOURCE":"PHMSA",
-    "TYPE":"Spill or Release"
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"BARRELS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":0,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.056944,46.688056 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"1/20/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"BARRELS",
+    "LOSS":10,
+    "RECOVERED":9,
+    "LOSS_GALLONS":420,
+    "REC_GALLONS":378,
+    "NET_GALLONS":42
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.3055690,44.8839 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"12/21/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LEWISTON",
+    "COUNTY":"MONTMORENCY",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":10,
+    "RECOVERED":10,
+    "LOSS_GALLONS":10,
+    "REC_GALLONS":10,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.885278,41.555556 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"11/13/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":1,
+    "REC_GALLONS":1,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.0625,46.685 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"10/9/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":5,
+    "REC_GALLONS":5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.748333,35.940278 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"7/11/09",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":25,
+    "RECOVERED":25,
+    "LOSS_GALLONS":25,
+    "REC_GALLONS":25,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.4290114,48.45986879 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"5/3/09",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"MOUNT VERNON",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":63,
+    "RECOVERED":63,
+    "LOSS_GALLONS":63,
+    "REC_GALLONS":63,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"4/28/09",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"PONTIAC ",
+    "COUNTY":"LIVINGSTON",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":15,
+    "RECOVERED":15,
+    "LOSS_GALLONS":15,
+    "REC_GALLONS":15,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.685 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"4/25/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":42,
+    "RECOVERED":21,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":21,
+    "NET_GALLONS":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.060556,46.684444 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"3/22/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":5,
+    "REC_GALLONS":5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.408611,47.690556 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"3/13/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":50,
+    "RECOVERED":50,
+    "LOSS_GALLONS":50,
+    "REC_GALLONS":50,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.436389,48.211944 ]
+    },
+    "properties": {
+    "YEAR":2009,
+    "DATE":"2/27/09",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"VIKING",
+    "COUNTY":"MARSHALL",
+    "STATE":"MN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Pipeline",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":5,
+    "REC_GALLONS":5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.685 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"11/21/08",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS ",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":10,
+    "RECOVERED":0,
+    "LOSS_GALLONS":10,
+    "REC_GALLONS":0,
+    "NET_GALLONS":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.453333,41.506667 ]
+    },
+    "properties": {
+    "YEAR":2008,
+    "DATE":"9/5/08",
+    "OPERATOR":"CCPS TRANSPORTATION, LLC",
+    "CITY":"SCHERERVILLE ",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":20,
+    "RECOVERED":20,
+    "LOSS_GALLONS":20,
+    "REC_GALLONS":20,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.6117325,48.51747894 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"12/20/07",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"ANACORTES",
+    "COUNTY":"SKAGIT",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":7,
+    "RECOVERED":7,
+    "LOSS_GALLONS":7,
+    "REC_GALLONS":7,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.774444,45.786111 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"10/23/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MACKINAW CITY",
+    "COUNTY":"CHEBOYGAN",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":30,
+    "RECOVERED":20,
+    "LOSS_GALLONS":30,
+    "REC_GALLONS":20,
+    "NET_GALLONS":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.915556,37.803056 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"8/16/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"EL DORADO",
+    "COUNTY":"BUTLER",
+    "STATE":"KS",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":15,
+    "RECOVERED":15,
+    "LOSS_GALLONS":15,
+    "REC_GALLONS":15,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.973056,45.944444 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"7/18/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"RAPID RIVER",
+    "COUNTY":"DELTA",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":30,
+    "RECOVERED":25,
+    "LOSS_GALLONS":30,
+    "REC_GALLONS":25,
+    "NET_GALLONS":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.755833,35.950833 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"5/17/07",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":15,
+    "RECOVERED":14,
+    "LOSS_GALLONS":15,
+    "REC_GALLONS":14,
+    "NET_GALLONS":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.496667,42.056667 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"4/23/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"HAMPSHIRE",
+    "COUNTY":"KANE",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":6,
+    "RECOVERED":6,
+    "LOSS_GALLONS":6,
+    "REC_GALLONS":6,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.55702972,44.94589996 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/14/07",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"OWEN",
+    "COUNTY":"CLARK",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":25,
+    "RECOVERED":25,
+    "LOSS_GALLONS":25,
+    "REC_GALLONS":25,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.76697,35.985064 ]
+    },
+    "properties": {
+    "YEAR":2007,
+    "DATE":"3/7/07",
+    "OPERATOR":"ENBRIDGE IPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":15,
+    "RECOVERED":15,
+    "LOSS_GALLONS":15,
+    "REC_GALLONS":15,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.940556 ]
+    },
+    "properties": {
+    "YEAR":2006,
+    "DATE":"8/29/06",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C,",
+    "CITY":"CUSHING ",
+    "COUNTY":"LINCOLN",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":1,
+    "RECOVERED":1,
+    "LOSS_GALLONS":1,
+    "REC_GALLONS":1,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.03500366,44.54059982 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"12/22/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"ARPIN",
+    "COUNTY":"WOOD",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":5,
+    "REC_GALLONS":5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.0930634,47.91239929 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"11/7/05",
+    "OPERATOR":"OLYMPIC PIPELINE",
+    "CITY":"BOTHELL",
+    "COUNTY":"SNOHOMISH",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":30,
+    "RECOVERED":30,
+    "LOSS_GALLONS":30,
+    "REC_GALLONS":30,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.928009,48.39385986 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"8/22/05",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) LLC",
+    "CITY":"TIOGA",
+    "COUNTY":"WILLIAMS",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":10,
+    "RECOVERED":0,
+    "LOSS_GALLONS":10,
+    "REC_GALLONS":0,
+    "NET_GALLONS":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.205101,47.47513962 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"7/15/05",
+    "OPERATOR":"OLYMPIC PIPELINE COMPANY",
+    "CITY":"RENTON",
+    "COUNTY":"KING",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":40,
+    "RECOVERED":40,
+    "LOSS_GALLONS":40,
+    "REC_GALLONS":40,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.454444,41.512222 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"4/21/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SCHERERVILLE",
+    "COUNTY":"LAKE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":5,
+    "RECOVERED":5,
+    "LOSS_GALLONS":5,
+    "REC_GALLONS":5,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.51,42.901944 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"3/29/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MARYSVILLE",
+    "COUNTY":"ST. CLAIR",
+    "STATE":"MI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":21,
+    "RECOVERED":0,
+    "LOSS_GALLONS":21,
+    "REC_GALLONS":0,
+    "NET_GALLONS":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.885278,41.556944 ]
+    },
+    "properties": {
+    "YEAR":2005,
+    "DATE":"2/11/05",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"MOKENA",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":10,
+    "RECOVERED":10,
+    "LOSS_GALLONS":10,
+    "REC_GALLONS":10,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.761389,35.959722 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"12/13/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) LLC",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":1,
+    "RECOVERED":0,
+    "LOSS_GALLONS":1,
+    "REC_GALLONS":0,
+    "NET_GALLONS":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.750278,35.952222 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"9/16/04",
+    "OPERATOR":"ENBRIDGE PIPELINES (OZARK) L.L.C.",
+    "CITY":"CUSHING",
+    "COUNTY":"PAYNE",
+    "STATE":"OK",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":0,
+    "RECOVERED":0,
+    "LOSS_GALLONS":0,
+    "REC_GALLONS":0,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.762778,47.324444 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"7/13/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":42,
+    "RECOVERED":21,
+    "LOSS_GALLONS":42,
+    "REC_GALLONS":21,
+    "NET_GALLONS":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.063056,46.69 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"6/9/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":21,
+    "RECOVERED":0,
+    "LOSS_GALLONS":21,
+    "REC_GALLONS":0,
+    "NET_GALLONS":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.053889,46.683889 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"6/3/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":21,
+    "RECOVERED":0,
+    "LOSS_GALLONS":21,
+    "REC_GALLONS":0,
+    "NET_GALLONS":21
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.431123,47.691901 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"5/20/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"CLEARBROOK",
+    "COUNTY":"CLEARWATER",
+    "STATE":"MN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Leaking Tank - AST",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":21,
+    "RECOVERED":20,
+    "LOSS_GALLONS":21,
+    "REC_GALLONS":20,
+    "NET_GALLONS":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.8913574,47.03923035 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/16/04",
+    "OPERATOR":"OLYMPIC PIPE LINE COMPANY",
+    "CITY":"OLYMPIA",
+    "COUNTY":"THURSTON",
+    "STATE":"WA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":15,
+    "RECOVERED":15,
+    "LOSS_GALLONS":15,
+    "REC_GALLONS":15,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.059722,46.691667 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"4/15/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":21,
+    "RECOVERED":10,
+    "LOSS_GALLONS":21,
+    "REC_GALLONS":10,
+    "NET_GALLONS":11
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -88.046667,41.635278 ]
+    },
+    "properties": {
+    "YEAR":2004,
+    "DATE":"3/20/04",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LOCKPORT",
+    "COUNTY":"WILL",
+    "STATE":"IL",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":9,
+    "RECOVERED":9,
+    "LOSS_GALLONS":9,
+    "REC_GALLONS":9,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.052778,46.693333 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"11/10/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"SUPERIOR",
+    "COUNTY":"DOUGLAS",
+    "STATE":"WI",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":20,
+    "RECOVERED":0,
+    "LOSS_GALLONS":20,
+    "REC_GALLONS":0,
+    "NET_GALLONS":20
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.990625,29.854929 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"10/22/03",
+    "OPERATOR":"ENBRIDGE PIPELINES (LOUISIANA LIQUIDS) LLC",
+    "CITY":"BELLE CHASSE",
+    "COUNTY":"PLAQUEMINES",
+    "STATE":"LA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":17,
+    "RECOVERED":0,
+    "LOSS_GALLONS":17,
+    "REC_GALLONS":0,
+    "NET_GALLONS":17
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.990625,29.854929 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"10/19/03",
+    "OPERATOR":"ENBRIDGE PIPELINES (LOUISIANA LIQUIDS) LLC",
+    "CITY":"",
+    "COUNTY":"PLAQUEMINES",
+    "STATE":"LA",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"YES",
+    "UNITS":"GALLONS",
+    "LOSS":17,
+    "RECOVERED":0,
+    "LOSS_GALLONS":17,
+    "REC_GALLONS":0,
+    "NET_GALLONS":17
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.7625,47.325 ]
+    },
+    "properties": {
+    "YEAR":2003,
+    "DATE":"5/14/03",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"DEER RIVER",
+    "COUNTY":"ITASCA",
+    "STATE":"MN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":10,
+    "RECOVERED":0,
+    "LOSS_GALLONS":10,
+    "REC_GALLONS":0,
+    "NET_GALLONS":10
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.857222,41.625278 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"9/19/02",
+    "OPERATOR":"ENBRIDGE ENERGY, LIMITED PARTNERSHIP",
+    "CITY":"LA PORTE",
+    "COUNTY":"LA PORTE",
+    "STATE":"IN",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":8,
+    "RECOVERED":8,
+    "LOSS_GALLONS":8,
+    "REC_GALLONS":8,
+    "NET_GALLONS":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -101.2960663,48.23611069 ]
+    },
+    "properties": {
+    "YEAR":2002,
+    "DATE":"2/12/02",
+    "OPERATOR":"ENBRIDGE PIPELINES (NORTH DAKOTA) INC",
+    "CITY":"MINOT",
+    "COUNTY":"WARD",
+    "STATE":"ND",
+    "SOURCE":"PHMSA",
+    "TYPE":"Spill or Release",
+    "SIGNIFICANT":"NO",
+    "UNITS":"GALLONS",
+    "LOSS":10,
+    "RECOVERED":5,
+    "LOSS_GALLONS":10,
+    "REC_GALLONS":5,
+    "NET_GALLONS":5
     }
   }
 ]

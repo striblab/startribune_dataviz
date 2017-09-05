@@ -222,48 +222,38 @@ map.on('load', function() {
             }
    }, 'place-neighbourhood');
 
-      map.addLayer({
-                  "id": "spills-layer",
-                  "type": "circle",
-                  "source": "spills",
-                  "paint": {
-                     "circle-radius": 5,
-                     "circle-color": 'rgba(88, 88, 88, 0.45)'
-                  },
-                  "filter": [
-                  "==",
-                  "ENBRIDGE",
-                  "NO"]
-      });
+      // map.addLayer({
+      //             "id": "spills-layer",
+      //             "type": "circle",
+      //             "source": "spills",
+      //             "paint": {
+      //                "circle-radius": 5,
+      //                "circle-color": 'rgba(88, 88, 88, 0.45)'
+      //             },
+      //             "filter": [
+      //             "==",
+      //             "ENBRIDGE",
+      //             "NO"]
+      // });
 
 
       map.addLayer({
                   "id": "spills-layer-e",
                   "type": "circle",
                   "source": "enspills",
-                  // "filter": ["has", "point_count"],
-        //           paint: {
-        //     "circle-color": {
-        //         property: "point_count",
-        //         type: "interval",
-        //         stops: [
-        //             [0, "#51bbd6"],
-        //             [100, "#f1f075"],
-        //             [750, "#f28cb1"],
-        //         ]
-        //     },
-        //     "circle-radius": {
-        //         property: "point_count",
-        //         type: "interval",
-        //         stops: [
-        //             [0, 20],
-        //             [100, 30],
-        //             [750, 40]
-        //         ]
-        //     }
-        // }
                   "paint": {
-                     "circle-radius": 5,
+                     "circle-radius": {
+                      property: "LOSS_GALLONS",
+                      type: "interval",
+                      stops: [
+                          // ["YES", 10],
+                          // ["NO", 5]
+                          [1, 5],
+                          [10000, 10],
+                          [50000, 15],
+                          [100000, 20]
+                      ]
+                   },
                      "circle-color": 'rgba(0, 0, 0, .6)',
                      "circle-stroke-color": "#ffffff",
                      "circle-stroke-width": 0.5,
@@ -333,7 +323,7 @@ map.on('load', function() {
         var feature = features[0];
 
         popup.setLngLat(e.lngLat)
-            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>" + String(feature.properties.CITY).toUpperCase() +  ", MN</div>")
+            .setHTML("<div class='name'>" + String(feature.properties.OPERATOR).toUpperCase() + "</div><div class='date'>" + feature.properties.DATE + "</div><div class=''>" + String(feature.properties.CITY).toUpperCase() +  ", " + feature.properties.STATE + "</div><div>" + d3.format(",")(feature.properties.LOSS_GALLONS) + " HVL gallons lost</div><div>Significant: " + feature.properties.SIGNIFICANT + "</div>")
             .addTo(map);
     });
 
@@ -481,7 +471,7 @@ chartMN();
               x: 'x',
                 columns: [
                   ['x',2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
-                  ['Incidents',10,16,5,3,8,6,7,11,12,3,11,12,10,8,3]
+                  ['Spills',10,16,5,3,8,6,7,11,12,3,11,12,10,8,3]
                 ],
             type: 'bar'
             },
