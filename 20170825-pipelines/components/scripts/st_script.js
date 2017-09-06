@@ -247,10 +247,11 @@ map.on('load', function() {
                       stops: [
                           // ["YES", 10],
                           // ["NO", 5]
-                          [1, 5],
-                          [10000, 10],
-                          [50000, 15],
-                          [100000, 20]
+                          // [1, 5],
+                          [1, 2],
+                          [210, 5],
+                          [10000, 15],
+                          [50000, 20]
                       ]
                    },
                      "circle-color": 'rgba(0, 0, 0, .6)',
@@ -262,31 +263,6 @@ map.on('load', function() {
             "SOURCE",
             "MPCA"]
       });
-
-// map.addLayer({
-//         id: "cluster-count",
-//         type: "symbol",
-//         source: "enspills",
-//         filter: ["has", "point_count"],
-//         layout: {
-//             "text-field": "{point_count_abbreviated}",
-//             "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-//             "text-size": 12
-//         }
-//     });
-
-//     map.addLayer({
-//         id: "unclustered-point",
-//         type: "circle",
-//         source: "enspills",
-//         filter: ["!has", "point_count"],
-//         paint: {
-//             "circle-color": "#11b4da",
-//             "circle-radius": 4,
-//             "circle-stroke-width": 1,
-//             "circle-stroke-color": "#fff"
-//         }
-//     });
 
       // map.addLayer({
       //             "id": "spills-layer-e2",
