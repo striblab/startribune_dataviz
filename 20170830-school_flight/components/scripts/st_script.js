@@ -381,7 +381,7 @@ var mainaxis = grabData(district,"axis");
                 show: false
             },
                 color: {
-                  pattern: ['#a3858b','#4c1926']
+                  pattern: ['#b2cba2','#a5c3d2']
                 },
             axis: {
                   // rotated: true,
@@ -438,7 +438,7 @@ var mainaxis = grabData(district,"axis");
                 duration: 1300
             },
                 color: {
-                  pattern: ['#865f67','#333333']
+                  pattern: ['#b2cba2','#a5c3d2']
                 },
             point: {
                 show: false
@@ -505,7 +505,7 @@ var mainaxis = grabData(district,"axis");
                 show: false
             },
                 color: {
-                  pattern: ['#865f67']
+                  pattern: ['#b2cba2']
                 },
             axis: {
                   // rotated: true,
@@ -563,7 +563,7 @@ var mainaxis = grabData(district,"axis");
                 duration: 1300
             },
                 color: {
-                  pattern: ['#693c46','#333333']
+                  pattern: ['#7c9979','#7c94a0']
                 },
             point: {
                 show: false
