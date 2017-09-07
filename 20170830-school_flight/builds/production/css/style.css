@@ -586,7 +586,7 @@ the valuable copyrighted property of WebType LLC, The Font Bureau
 and/or their suppliers. You may not
 attempt to copy, install, redistribute, convert, modify or reverse
 engineer this font software. Please contact WebType with any
-questions: http://www.webtype.com
+questions: http://www.webtype.com comment here
 */
 @font-face {
   font-family: "Benton Sans";
@@ -2286,6 +2286,8 @@ p {
   font-weight: 900;
   font-size: 1.7em;
   text-align: left;
+  color: red;
+  
 }
 
 .divider {
