@@ -2183,7 +2183,11 @@ p {
 }
 
 .legendary {
-  padding: 3px;
+  border-radius: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+  display: inline-block;
+  margin-bottom: 3px;
 }
 
 .slide {
@@ -2212,6 +2216,7 @@ p {
 .chatter {
   line-height: 160%;
   text-align: left;
+  margin-bottom: 20px;
 }
 
 .chart {
@@ -2272,9 +2277,21 @@ p {
   width: 32%;
 }
 
+input::focus {
+  width: 95%;
+}
+
 #filter input {
   border-radius: 0 !important;
-  width: 100% !important;
+  width: 100%;
+}
+
+#filter input:focus {
+  width: 95% !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  box-shadow: 0 0 5px #999;
+  padding: 1px 10px 1px 10px;
+  border: 1px solid #61bd1a;
 }
 
 #filter {
@@ -2283,19 +2300,34 @@ p {
 }
 
 #districtSelect, #thisDistrict {
-  font-weight: 900;
-  font-size: 1.7em;
+  font-weight: normal;
+  font-size: 1.2em;
   text-align: left;
+}
+
+#thisDistrict {
+  padding: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+#districtSelect {
+  color: #626567;
+  padding: 15px;
+}
+
+.directions {
+  font-size: 0.6em;
 }
 
 .divider {
   margin-bottom: 10px;
-  border-bottom: 1px solid black;
+  /*border-bottom:1px solid black;*/
 }
 
 #districtSelect:hover {
   cursor: pointer;
-  opacity: .5;
 }
 
 #listedSchools {
@@ -2304,17 +2336,42 @@ p {
   overflow-y: auto;
   display: none;
   z-index: 90;
+  width: 96.8%;
+  margin-bottom: 15px;
 }
 
 li.district {
   text-align: left !important;
-  line-height: 140%;
+  line-height: 25px;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  margin-left: 1px;
+  padding-left: 14px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.outline {
+  border: 1px solid #CACFD2;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 50px;
 }
 
 li.district:hover {
-  background-color: #4C4C39 !important;
-  color: #fff !important;
   cursor: pointer;
+  border-bottom: 1px solid #CACFD2;
+  border-top: 1px solid #CACFD2;
+  background-color: #F2F3F4;
+}
+
+li.district.selected {
+  border-bottom: 1px solid #CACFD2 !important;
+  border-top: 1px solid #CACFD2 !important;
+  background-color: #F2F3F4 !important;
+  color: black !important;
 }
 
 .cell:hover,
@@ -2331,7 +2388,15 @@ li.district:hover {
 
 #filter input {
   border-radius: 0 !important;
-  width: 100% !important;
+  width: 95% !important;
+  margin-left: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+#filter_box {
+  width: 95% !important;
+  margin-left: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 #filter {
@@ -2348,6 +2413,12 @@ li.district:hover {
 
 #incomingChart .c3-area, #leavingChart .c3-area, #raceChart .c3-area {
   opacity: 0.8 !important;
+}
+
+.chartTitle {
+  letter-spacing: -0.2px;
+  font-size: 1.1em;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 800px) {
@@ -2373,8 +2444,6 @@ li.district:hover {
   }
 
   #districtSelect, #thisDistrict {
-    font-weight: 900;
-    font-size: 1.2em;
     text-align: left;
   }
 }

@@ -194,7 +194,7 @@ function grabData(district,subject) {
     var wleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         wleave = data[i].WhtLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
@@ -208,7 +208,7 @@ function grabData(district,subject) {
     var wres = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         wres = data[i].WhtResidents / data[i].residents;
       }
     }
@@ -222,7 +222,7 @@ function grabData(district,subject) {
     var bleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         bleave = data[i].BlkLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
@@ -235,7 +235,7 @@ function grabData(district,subject) {
     var bres = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         bres = data[i].BlkResidents / data[i].residents;
       }
     }
@@ -249,7 +249,7 @@ function grabData(district,subject) {
     var nleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         nleave = data[i].AmIndLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
@@ -262,8 +262,8 @@ function grabData(district,subject) {
     var nres = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
-        bres = data[i].AmIndResidents / data[i].residents;
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
+        nres = data[i].AmIndResidents / data[i].residents;
       }
     }
 
@@ -276,7 +276,7 @@ function grabData(district,subject) {
     var aleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         aleave = data[i].AsnLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
@@ -289,10 +289,13 @@ function grabData(district,subject) {
     var ares = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
-        bres = data[i].AsnResidents / data[i].residents;
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
+        ares = data[i].AsnResidents / data[i].residents;
+        
       }
     }
+
+    
 
     return ares;
 
@@ -303,7 +306,7 @@ function grabData(district,subject) {
     var hleave = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         hleave = data[i].HispLeaving / (data[i].WhtLeaving + data[i].AmIndLeaving + data[i].BlkLeaving + data[i].AsnLeaving + data[i].HispLeaving);
       }
     }
@@ -318,7 +321,7 @@ function grabData(district,subject) {
     var hres = 0;
 
     for (var i=0; i < dataSort.length; i++){
-      if (district == dataSort[i].HomeDistName) {
+      if (district == dataSort[i].HomeDistName && dataSort[i].datayear == 2017) {
         hres = data[i].HispResidents / data[i].residents;
       }
     }
@@ -382,7 +385,7 @@ var mainaxis = grabData(district,"axis");
                 show: false
             },
                 color: {
-                  pattern: ['#a3858b','#4c1926']
+                  pattern: ['#b2cba2','#a5c3d2']
                 },
             axis: {
                   // rotated: true,
@@ -439,7 +442,7 @@ var mainaxis = grabData(district,"axis");
                 duration: 1300
             },
                 color: {
-                  pattern: ['#865f67','#333333']
+                  pattern: ['#b2cba2','#a5c3d2']
                 },
             point: {
                 show: false
@@ -506,7 +509,7 @@ var mainaxis = grabData(district,"axis");
                 show: false
             },
                 color: {
-                  pattern: ['#865f67']
+                  pattern: ['#b2cba2']
                 },
             axis: {
                   // rotated: true,
@@ -564,7 +567,7 @@ var mainaxis = grabData(district,"axis");
                 duration: 1300
             },
                 color: {
-                  pattern: ['#693c46','#333333']
+                  pattern: ['#7c9979','#7c94a0']
                 },
             point: {
                 show: false
