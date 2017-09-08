@@ -112,7 +112,15 @@ input::focus {
 
 #filter input {
     border-radius: 0 !important;
-    width: 100% !important;
+    width: 100%;
+}
+
+#filter input:focus {
+    width: 95% !important;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    box-shadow: 0 0 5px #999;
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #61bd1a ;
 }
 
 #filter {
