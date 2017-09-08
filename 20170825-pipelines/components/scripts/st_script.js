@@ -407,12 +407,12 @@ chartTrend();
             axis: {
                   // rotated: true,
                   y: {
-                        max: 9,
+                        max: 8,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
-                         count: 4,
-                         values: [0,3,6,9],
+                         count: 5,
+                         values: [0,2,4,6,8],
                          format: d3.format('.0f')
                         }
                     },
