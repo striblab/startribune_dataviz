@@ -1,0 +1,18 @@
+Sub Demo()
+Application.ScreenUpdating = False
+Dim i As Long, Rng As Range
+With ActiveDocument
+  For i = .Hyperlinks.Count To 1 Step -1
+    With .Hyperlinks(i)
+      Set Rng = .Range
+      Rng.InsertAfter ": "
+      Rng.Collapse wdCollapseEnd
+      Rng.FormattedText = .Range.FormattedText
+      Rng.Hyperlinks(1).TextToDisplay = .Address
+      .Range.Fields(1).Unlink
+      Rng.InsertAfter "' target='_new'></a>"
+    End With
+  Next
+End With
+Application.ScreenUpdating = True
+End Sub
