@@ -434,6 +434,11 @@ var mainaxis = grabData(district,"axis");
                 //     '65+': d3.format('%')
                 // }
             }},
+            bar: {
+              width: {
+                ratio: 0.8
+              }
+            },
             legend: {
                 show: false
             },
