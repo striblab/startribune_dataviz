@@ -1,3 +1,13 @@
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
 body,
 #filter,
 #filter input:focus,
@@ -52,6 +62,10 @@ p {
     width:48%;
     vertical-align:top;
     display:inline-block;
+}
+
+.left {
+    margin-right: 3.5%;
 }
 
 .geocoder, .mapboxgl-ctrl-geocoder {
@@ -186,7 +200,7 @@ li.district {
     border: 1px solid #CACFD2;
     border-radius: 10px;
     width: 100%;
-    margin-top: 50px;
+ //   margin-top: 50px;
 }
 
 li.district:hover {
@@ -248,6 +262,10 @@ li.district.selected {
     letter-spacing: -0.2px;
     font-size: 1.1em;
     margin-bottom: 10px;
+}
+
+.c3-line {
+    stroke-width: 2.5px !important;
 }
 
 @media (max-width:800px) {

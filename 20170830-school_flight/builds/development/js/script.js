@@ -339,9 +339,9 @@ var district = "Minneapolis Public School District";
 
     var  padding = {
             top: 20,
-            right: 60,
+            right: 45,
             bottom: 20,
-            left: 60,
+            left: 45,
         };
 
 var mainaxis = grabData(district,"axis");
@@ -435,6 +435,11 @@ var mainaxis = grabData(district,"axis");
                 //     '65+': d3.format('%')
                 // }
             }},
+            bar: {
+              width: {
+                ratio: 0.8
+              }
+            },
             legend: {
                 show: false
             },
