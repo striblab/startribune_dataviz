@@ -1,3 +1,13 @@
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
 body,
 #filter,
 #filter input:focus,
@@ -190,7 +200,7 @@ li.district {
     border: 1px solid #CACFD2;
     border-radius: 10px;
     width: 100%;
-    margin-top: 50px;
+ //   margin-top: 50px;
 }
 
 li.district:hover {
