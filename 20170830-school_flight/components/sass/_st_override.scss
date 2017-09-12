@@ -54,6 +54,10 @@ p {
     display:inline-block;
 }
 
+.left {
+    margin-right: 3.5%;
+}
+
 .geocoder, .mapboxgl-ctrl-geocoder {
     width:100%;
     margin-bottom:10px;
@@ -248,6 +252,10 @@ li.district.selected {
     letter-spacing: -0.2px;
     font-size: 1.1em;
     margin-bottom: 10px;
+}
+
+.c3-line {
+    stroke-width: 2.5px !important;
 }
 
 @media (max-width:800px) {
