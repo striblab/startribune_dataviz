@@ -2425,6 +2425,10 @@ li.district.selected {
   margin-bottom: 10px;
 }
 
+.c3-line {
+  stroke-width: 2.5px !important;
+}
+
 @media (max-width: 800px) {
   #wrapper {
     width: 100%;
