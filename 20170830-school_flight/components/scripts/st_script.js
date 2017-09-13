@@ -484,6 +484,10 @@ var mainaxis = grabData(district,"axis");
 
     });
 
+d3.selectAll(".c3-target-Leaving-District")
+    .selectAll(".c3-bar")
+    .attr("transform", "translate(-2, 0)");
+
 //incoming chart
     var incomingChart = c3.generate({
           bindto: "#incomingChart",
