@@ -1653,7 +1653,7 @@ body {
   margin-right: auto;
 }
 
-a {
+#timeline a {
   color: steelblue;
   text-decoration: underline;
 }
