@@ -1,3 +1,16 @@
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
 // d3.json('./data/timeline.json', function(error, dataLoad) {
 d3.json('http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1_XVZfr5kc9uC38uSqKZH4ZV5t92W2XlknQf0L_7XVtg&sheet=events', function(error, dataLoad) {
 
