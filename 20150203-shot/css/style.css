@@ -6661,3 +6661,18 @@ h2 {
     color: white !important;
     font-weight: bold !important;
 }
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    font-size:0.6em !important;
+    color: #888 !important;
+    line-height:140%;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    text-align:left !important;
+}
+
+.byline a {
+    color: #888 !important;
+}
