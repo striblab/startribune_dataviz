@@ -20,8 +20,8 @@ map.scrollWheelZoom.disable();
 if (map.tap) map.tap.disable();
 
 //Pull interactive, data-infused vector layers from the .mbtiles hosted on the server
-var dataTiles = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/smoking.tilejson').addTo(map);
-var dataGrid = L.mapbox.gridLayer('http://apps.startribune.com/news/tileserver/smoking.tilejson').addTo(map);
+var dataTiles = L.mapbox.tileLayer('./shapefiles/tileserver/smoking.tilejson').addTo(map);
+var dataGrid = L.mapbox.gridLayer('./shapefiles/tileserver/smoking.tilejson').addTo(map);
 var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
 
 //Add the legend to the map
