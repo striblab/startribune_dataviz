@@ -36,9 +36,10 @@ var map = new mapboxgl.Map({
 });
 
 map.addControl(new mapboxgl.NavigationControl());
+map.scrollZoom.disable();
+// map.addControl(new mapboxgl.FullscreenControl());
 
 map.on('load', function() {
-$(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by city or address");
 
 //2017
     map.addSource("mpls2017a", {
@@ -197,6 +198,12 @@ $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by city or address
             }
    }, 'place-neighbourhood');
 
+
+
+// $(".mapboxgl-ctrl-fullscreen").on("click",function(){
+//   $( ".map" ).toggleClass("full");
+// });
+
 });
 
 //STP MAP
@@ -210,31 +217,36 @@ var map2 = new mapboxgl.Map({
 });
 
 map2.addControl(new mapboxgl.NavigationControl());
+map.scrollZoom.disable();
+// map2.addControl(new mapboxgl.FullscreenControl());
 
 map2.on('load', function() {
 $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by city or address");
 
-// geocoder2.on('result', function(ev) {
-//   map2.flyTo({ center: ev.result.geometry.coordinates, zoom: 14 });
-//     });
+    map2.addSource("stp", {
+        type: "geojson",
+        data: stp
+    });
 
-   //  map.addSource("contours", {
-   //      type: "geojson",
-   //      data: contours
-   //  });
-
-   //    map.addLayer({
-   //     'id': 'contours-layer',
-   //     'interactive': true,
-   //     'source': 'contours',
-   //     'layout': {},
-   //     'type': 'line',
-   //        'paint': {
-   //         'line-color': '#E07242',
-
-   //         'line-width': 2
-   //          }
-   // }, 'place-neighbourhood');
+      map2.addLayer({
+       'id': 'stp-layer',
+       'interactive': true,
+       'source': 'stp',
+       'layout': {},
+       'type': 'line',
+          'paint': {
+           'line-color': {
+             property: "year",
+             type: "interval",
+             stops: [
+                 [2005, "#636363"],
+                 [2013, "#299E3D"],
+                 [2017, "#C22A22"]
+             ]
+           },
+           'line-width': 2
+            }
+   }, 'place-neighbourhood');
 
 });
 
