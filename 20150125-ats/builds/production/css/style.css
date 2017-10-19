@@ -1744,6 +1744,7 @@ hr {
 
 .chatter {
   padding: 10px;
+  line-height: 140%;
 }
 
 .nvtooltip {
@@ -1918,6 +1919,10 @@ h6 {
 }
 
 @media only screen and (max-width: 650px) {
+  #wrapper {
+    width: 100%;
+  }
+
   #sidebox2 {
     float: none;
     padding: 15px;
