@@ -25,7 +25,12 @@
     color: white !important;
 }
 
+.byline a {
+    color: #888;
+}
+
 .byline {
+    line-height:140%;
     font-family: "Benton Sans", Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size:0.6em;
@@ -34,7 +39,6 @@
     padding-bottom:10px;
     text-align:left;
 }
-
 path {
     fill: #333 !important;
     fill-opacity: 0.6 !important;

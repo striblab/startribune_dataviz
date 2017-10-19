@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=19bO4c54kCdh0I0sk2NBxtsddueWheTsV_YqtbcVaz1w&sheet=groups", function(error, dataLoad) {
-
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=19bO4c54kCdh0I0sk2NBxtsddueWheTsV_YqtbcVaz1w&sheet=groups", function(error, dataLoad) {
+d3.json("./data/groups.json", function(error, dataLoad) {
 d3.json("./shapefiles/metro_cities.json", function(error, cities) {
 
 var data = dataLoad.groups;

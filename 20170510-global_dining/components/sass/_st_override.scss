@@ -2,6 +2,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
+#wrapper {
+    vertical-align:bottom;
+}
 .map {
 	position: absolute;
 	top: 0;
@@ -21,9 +24,12 @@ body {
 .byline {
     font-family: "Benton Sans", Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size:0.6em;
+    font-size:0.75em;
     color: #888;
     padding-top:10px;
     padding-bottom:10px;
     text-align:left;
+    position: absolute;
+    bottom: 10px;
+    z-index:10 !important;
 }

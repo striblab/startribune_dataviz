@@ -1,0 +1,53 @@
+body {
+    overflow-x: hidden;
+}
+
+#wrapper {
+    width:520px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+}
+
+.chatter {
+    line-height:180%;
+}
+
+.steelblue {
+    background-color:#C6D1D9;
+}
+
+.legendary {
+    padding:3px;
+    font-weight:900;
+    color:#ffffff;
+}
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400 !important;
+    font-size:0.6em !important;
+    color: #888 !important;
+    line-height:140%;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+    text-align:left !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+    display:none !important;
+}
+
+.chart .c3-line {
+    stroke-width: 6px !important;
+}
+
+@media (max-width:520px) {
+    #wrapper {
+        width:100%;
+    }
+}
