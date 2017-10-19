@@ -27,6 +27,10 @@ body {
     color:#ffffff;
 }
 
+.full {
+    position:absolute; top:0; bottom:0; width:100%;
+}
+
 .byline {
     font-family: "Benton Sans", Helvetica, Arial, sans-serif;
     font-weight: 400 !important;
@@ -38,7 +42,7 @@ body {
     text-align:left !important;
 }
 
-.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass, .mapboxgl-ctrl-logo {
     display:none !important;
 }
 
