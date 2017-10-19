@@ -1,3 +1,4 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 d3.json("./shapefiles/mn_places.json", function(error, mncities) {
 d3.json("./shapefiles/wi_places.json", function(error, wicities) {
 d3.json("./shapefiles/mpls_nb.json", function(error, mplsnb) {
@@ -12,15 +13,15 @@ d3.select("#cities").selectAll(".row")
   .attr("class",function(d) { if (d.name == "Richfield") { return "row selected" } else { return "row "; } })
   .style('background-color',function(d) { 
 
-    var color = "#888888";
+  	var color = "#888888";
 
-  if (d.IndexScore >= 300) { color = "#993404"; }
-  else if (d.IndexScore >= 240) { color = "#d95f0e"; }
-  else if (d.IndexScore >= 180) { color = "#fe9929"; }
-  else if (d.IndexScore >= 120) { color = "#fec44f"; }
-  else if (d.IndexScore >= 60) { color = "#fee391"; }
+	if (d.IndexScore >= 300) { color = "#993404"; }
+	else if	(d.IndexScore >= 240) { color = "#d95f0e"; }
+	else if	(d.IndexScore >= 180) { color = "#fe9929"; }
+	else if	(d.IndexScore >= 120) { color = "#fec44f"; }
+	else if	(d.IndexScore >= 60) { color = "#fee391"; }
 
-  return color;
+	return color;
 
   })
   .attr("latitude",function(d) { return d.latitude; })
@@ -95,19 +96,19 @@ $(".th").click(function() {
 });
 
 $(".row").click(function() {
-  $(".row").removeClass("selected");
-  $(this).addClass("selected");
+	$(".row").removeClass("selected");
+	$(this).addClass("selected");
   // var random = Math.floor(Math.random() * 4) + 1;
   // var span = Math.floor(Math.random() * 100) + -100;
   // var pitch = span / random;
   // var bearing = span / random;
   var pitch = 0;
   var bearing = 0;
-  var longitude = $(this).attr("longitude");
-  var latitude = $(this).attr("latitude");
+	var longitude = $(this).attr("longitude");
+	var latitude = $(this).attr("latitude");
   if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
-  else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
-  metricLoad($(this).find(".name").text());
+	else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+	metricLoad($(this).find(".name").text());
 });
 
 });
@@ -194,17 +195,17 @@ $('.onoffswitch :checkbox').change(function() {
            'fill-antialias' : true,
            'fill-opacity': 0.8,
            'fill-color': {
-            "property": "index_IndexScore",
-            "type": "interval",
-            "stops": [
-                [0, "#888888"],
+		        "property": "index_IndexScore",
+		        "type": "interval",
+		        "stops": [
+		            [0, "#888888"],
                 [60, "#fee391"],
                 [120, "#fec44f"],
                 [180, "#fe9929"],
                 [240, "#d95f0e"],
                 [300, "#993404"]
-            ]
-        },
+		        ]
+		    },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
      }
    }, 'place-neighbourhood');
@@ -224,17 +225,17 @@ $('.onoffswitch :checkbox').change(function() {
            'fill-antialias' : true,
            'fill-opacity': 0.8,
            'fill-color': {
-            "property": "index_IndexScore",
-            "type": "interval",
-            "stops": [
+		        "property": "index_IndexScore",
+		        "type": "interval",
+		        "stops": [
                 [0, "#888888"],
                 [60, "#fee391"],
                 [120, "#fec44f"],
                 [180, "#fe9929"],
                 [240, "#d95f0e"],
                 [300, "#993404"]
-            ]
-        },
+		        ]
+		    },
            'fill-outline-color': 'rgba(255, 255, 255, 0)'
      }
    }, 'place-neighbourhood');
@@ -330,12 +331,12 @@ $('.onoffswitch :checkbox').change(function() {
 });
 
 function reset(){
-  map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
-  $('#filter_box').val("");
-  $('.row').show();
+	map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
+	$('#filter_box').val("");
+	$('.row').show();
 }
 
-function metricLoad(city){      
+function metricLoad(city){			
 
     var cityData = data.filter(function(d){ return d.name == city; })
 
@@ -356,7 +357,7 @@ function metricLoad(city){
     $("#indexRow").css('border',"3px solid " + color);
     
     $("#days").html(cityData[0].DaysMarket);
-    $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
+	  $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
     $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
     $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
 
@@ -443,3 +444,4 @@ metricLoad("Richfield");
 });
 });
 });
+},{}]},{},[1])

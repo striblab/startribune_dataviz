@@ -1,10 +1,10 @@
-var aspect = 550 / 550,
-    chart = $("#map svg");
-$(window).on("resize", function() {
-    var targetWidth = chart.parent().width();
-    chart.attr("width", targetWidth);
-    chart.attr("height", targetWidth / aspect);
-});
+// var aspect = 550 / 550,
+//     chart = $("#map svg");
+// $(window).on("resize", function() {
+//     var targetWidth = chart.parent().width();
+//     chart.attr("width", targetWidth);
+//     chart.attr("height", targetWidth / aspect);
+// });
 
 $( document ).ready(function() {
   $("#national").css("background-color","#333");
@@ -253,8 +253,8 @@ function redrawChart(data){
     nv.utils.windowResize(chart.update);
 }
 
-var width = 630,
-    height = 600,
+var width = 450,
+    height = 500,
     centered;
 
 var projection = d3.geo.albersUsa()

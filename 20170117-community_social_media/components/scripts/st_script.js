@@ -1,5 +1,5 @@
-d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=19bO4c54kCdh0I0sk2NBxtsddueWheTsV_YqtbcVaz1w&sheet=groups", function(error, dataLoad) {
-
+// d3.json("http://googlescript.startribune.com/?macro=AKfycbwG7mX6qPZaIhkwY2AJ2lU7kNarbm6OWIkWVfnmYZGYruIl40cu&id=19bO4c54kCdh0I0sk2NBxtsddueWheTsV_YqtbcVaz1w&sheet=groups", function(error, dataLoad) {
+d3.json("./data/groups.json", function(error, dataLoad) {
 d3.json("./shapefiles/metro_cities.json", function(error, cities) {
 
 var data = dataLoad.groups;
