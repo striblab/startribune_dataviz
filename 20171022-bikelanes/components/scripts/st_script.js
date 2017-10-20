@@ -217,7 +217,7 @@ var map2 = new mapboxgl.Map({
 });
 
 map2.addControl(new mapboxgl.NavigationControl());
-map.scrollZoom.disable();
+map2.scrollZoom.disable();
 // map2.addControl(new mapboxgl.FullscreenControl());
 
 map2.on('load', function() {
