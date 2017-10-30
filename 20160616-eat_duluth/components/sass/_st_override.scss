@@ -408,7 +408,6 @@ body {
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 0) 100%);
     content: " ";
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
     height: 18px;
     pointer-events: none;
     position: absolute;
@@ -423,7 +422,6 @@ body {
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
     bottom: 0;
     content: " ";
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
     height: 18px;
     pointer-events: none;
     position: absolute;

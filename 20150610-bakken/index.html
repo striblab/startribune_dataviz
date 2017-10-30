@@ -2355,7 +2355,7 @@ impression_data.push({"moduleType":"page-nav","moduleName":"All Section Navigati
     .legend text { fill: #777; font: 10px sans-serif; text-anchor: middle; }
     #chart1 { max-width:100%; width:100%; display: block; text-align:center; margin-left:auto; margin-right:auto; height:510px; }
     #chart1 svg { max-width:100% !important; width:100%; height:100%; }
-    .source { font-size:12px !important; color:#ccc !important;font-family: "Benton Sans",Helvetica,Arial,sans-serif;padding:5px 0 10px 0; }
+    .source { font-size:12px !important; color:#888 !important;font-family: "Benton Sans",Helvetica,Arial,sans-serif;padding:5px 0 10px 0; }
     .title { text-align:center; font-family:Popular; }
     #credits{ padding:25px; margin-top:20px;}
     #nerdbox { padding:25px; }
@@ -3148,7 +3148,7 @@ impression_data.push({"moduleType":"page-nav","moduleName":"All Section Navigati
 </div>
 
 <div class="download_links">
-  <div class="download"><a href="https://docs.google.com/spreadsheets/d/1nUZ3tkpty2ajdD-mupvV6YsE6NvZKn2cmQWPi-ET1MA/pub?output=xlsx" target="new_"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
+  <div class="download"><a href="./data/maindata.xlsx" target="new_"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
 </div>
 
 <div id="credits">
@@ -3761,14 +3761,14 @@ if (here != "") { map.removeLayer(here); }
 });
 
     $(document).ready(function() {
-  $.getJSON('buffer.json', function(data) {
+  $.getJSON('./data/buffer.json', function(data) {
     var buffer = L.geoJson(data, {
       'style': {fillColor: '#f00', strokeColor: '#f00', fillOpacity: 0, opacity: 1, weight: 1, color: '#f00'},
       'onEachFeature': null
     });
     map.addLayer(buffer);
 })
-    $.getJSON('rail.json', function(data) {
+    $.getJSON('./data/rail.json', function(data) {
      var rail = L.geoJson(data, {
       'style': {fillColor: '#333', strokeColor: '#333', fillOpacity: 0, opacity: 1, weight: 1, color: '#333'},
       'onEachFeature': null
@@ -3914,7 +3914,7 @@ var q3 = "#C6A29E";
 var q4 = "#210507";
 
 
-d3.json("counties.json", function(error, us) {
+d3.json("./data/counties.json", function(error, us) {
 
   g.append("g")
       .attr("id", "states")
@@ -3990,7 +3990,7 @@ $(document).ready(function() {
 
   document.getElementById('image').src = 'img/legend.png'
 
-    $.getJSON('blocks.json', function(data) {
+    $.getJSON('./data/blocks.json', function(data) {
     var blocks = L.geoJson(data, {
       'style': {fillColor: '#500', strokeColor: '#333', fillOpacity: 0.5, opacity: 1, weight: 1, color: '#333'},
       'onEachFeature': null
