@@ -93,10 +93,10 @@ A new class of insecticides, based on synthetic nicotine and known as neonicotin
 <script>
 var map = L.mapbox.map('map');
 
-var overlay = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/bees2b.tilejson').addTo(map);
+var overlay = L.mapbox.tileLayer('./bees2b.tilejson').addTo(map);
 
-var dataTiles = L.mapbox.tileLayer('http://apps.startribune.com/news/tileserver/bees2.tilejson').addTo(map);
-var dataGrid = L.mapbox.gridLayer('http://apps.startribune.com/news/tileserver/bees2.tilejson').addTo(map);
+var dataTiles = L.mapbox.tileLayer('./bees2.tilejson').addTo(map);
+var dataGrid = L.mapbox.gridLayer('./bees2.tilejson').addTo(map);
 var dataControl = L.mapbox.gridControl(dataGrid).addTo(map);
 
 dataControl.options.follow = true;
