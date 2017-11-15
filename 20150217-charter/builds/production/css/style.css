@@ -1672,6 +1672,10 @@ body {
   text-align: left;
 }
 
+.byline a {
+  color: #888 !important;
+}
+
 tr.odd td.sorting_1 {
   background-color: #efefef;
 }
@@ -1746,6 +1750,7 @@ th:hover {
 
 tr:hover {
   border: 1px solid black !important;
+  margin: 0 !important;
 }
 
 .School-cell {
@@ -1761,6 +1766,14 @@ tr:hover {
 #stuff {
   width: 100%;
   font-size: 11px;
+}
+
+#stuff_filter {
+  width: 100%;
+}
+
+.selected {
+  margin: 0 !important;
 }
 
 .dataTables_scrollHeadInner {

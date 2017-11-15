@@ -22,7 +22,7 @@ var nb;
 $(document).ready(function() {
   $.getJSON('shapefiles/mpls.json', function(data) {
     nb = L.geoJson(data, {
-      'style': {fillColor: '#ddd', strokeColor: '#333', fillOpacity: 0, opacity: 1, weight: 1, color: '#fff'},
+      'style': {fillColor: '#ddd', strokeColor: '#333', fillOpacity: 1, opacity: 1, weight: 1, color: '#fff'},
       'onEachFeature': null
     });
     map.addLayer(nb);
@@ -53,7 +53,7 @@ else if (marker.toGeoJSON().properties.students >= 0){markerColor = '#98d399';}
                 }));
 
             // Bind a popup to each icon based on the same properties
-            marker.bindPopup("<strong>" + marker.toGeoJSON().properties.school + "</strong><br />Public School<br /><br /><div class='stat'><div class='bigNum'>" + marker.toGeoJSON().properties.students + "</div>students from Minneapolis</div>");
+            marker.bindPopup("<strong>" + marker.toGeoJSON().properties.school + "</strong><br />Public School<br /><br /><div class='stat'><div class='bigNum'>" + marker.toGeoJSON().properties.students + "</div> students from Minneapolis</div>");
         });
     });
 
@@ -81,13 +81,13 @@ else if (marker.toGeoJSON().properties.students >= 0){markerColor = '#98d399';}
                 }));
 
             // Bind a popup to each icon based on the same properties
-            marker.bindPopup("<strong>" + marker.toGeoJSON().properties.school + "</strong><br />Charter School<br /><br /><div class='stat'><div class='bigNum'>" + marker.toGeoJSON().properties.students + "</div>students from Minneapolis</div>");
+            marker.bindPopup("<strong>" + marker.toGeoJSON().properties.school + "</strong><br />Charter School<br /><br /><div class='stat'><div class='bigNum'>" + marker.toGeoJSON().properties.students + "</div> students from Minneapolis</div>");
         });
     });
 
 map.addLayer(charters);
 
-var mpls = omnivore.csv('https://docs.google.com/spreadsheets/d/18PDilsW9QF7KYr50TTwrqCgBBYmea4rfzqETLgnZ4U8/export?format=csv&id=18PDilsW9QF7KYr50TTwrqCgBBYmea4rfzqETLgnZ4U8&gid=1754775514')
+var mpls = omnivore.csv('./data/enrollmentMPLS.csv')
     .on('ready', function(layer) {
 
         this.eachLayer(function(marker) {
@@ -109,7 +109,7 @@ else if (marker.toGeoJSON().properties.students >= 0){markerColor = '#98d399';}
                 }));
 
             // Bind a popup to each icon based on the same properties
-            marker.bindPopup("<strong>" + marker.toGeoJSON().properties.school + "</strong><br />Public School<br /><br /><div class='stat'><div class='bigNum'>" + marker.toGeoJSON().properties.students + "</div>students from Minneapolis</div>");
+            marker.bindPopup("<strong>" + marker.toGeoJSON().properties.school + "</strong><br />Public School<br /><br /><div class='stat'><div class='bigNum'>" + marker.toGeoJSON().properties.students + "</div>s tudents from Minneapolis</div>");
         });
     });
 
@@ -141,15 +141,19 @@ mpls.on('mouseout', function(e) {
 $('#publics input').on('change', function () {
     if (this.checked) {
        map.addLayer(publics);
+       $(this).parent().removeClass("selected");
     } else {
        map.removeLayer(publics);
+       $(this).parent().addClass("selected");
     }
 });
 $('#charters input').on('change', function () {
     if (this.checked) {
         map.addLayer(charters);
+        $(this).parent().removeClass("selected");
     } else {
         map.removeLayer(charters);
+        $(this).parent().addClass("selected");
     }
 });
 

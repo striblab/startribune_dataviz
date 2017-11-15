@@ -38,6 +38,8 @@ The following are probably already installed on your computer if you have worked
 
 1. Run `gulp` to build the code and run a local webserver at `http://localhost:3000`.
 2. Make changes to the code and the changes should be automatically updated in your browser.
+3. Use URL parameter ?chart=growth to see the demographic lookup
+4. Use URL parameter ?chart=satellite to see the comparative map
 
 ### Project structure and editing
 

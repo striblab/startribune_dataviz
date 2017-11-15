@@ -1678,7 +1678,7 @@ header[role="banner"] {
 
 .tooltip {
   background-color: white;
-  height: 20px;
+  height: auto;
   width: 150px;
   padding: 10px;
   -webkit-border-radius: 10px;
@@ -1725,7 +1725,7 @@ header[role="banner"] {
 
 #map {
   float: left;
-  width: 600px;
+  width: 500px;
 }
 
 #sidebox {

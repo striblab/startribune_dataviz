@@ -739,8 +739,8 @@ d3.csv("data/mn_data.csv", function(error, csvData) {
     });
 
 
-var width = 630,
-    height = 650,
+var width = 500,
+    height = 500,
     centered;
 
 var projection = d3.geo.albersUsa()

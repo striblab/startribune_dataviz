@@ -10,7 +10,7 @@ d3.json("./data/painFargo.json", function(error, dataFRGpainLoad) {
 $( document ).ready(function() {
   $("#meds").css("background-color","#333");
 $( ".myButton2" ).click(function() {
-  $(".myButton2").css("background-color","#888");
+  $(".myButton2").css("background-color","#d7d6c5");
   $(this).css("background-color","#333");
   });   
 $( "#meds" ).click(function() {

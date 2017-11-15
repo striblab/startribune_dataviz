@@ -2707,10 +2707,12 @@ body {
 }
 
 #map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  height: 500px;
   width: 100%;
+}
+
+.leaflet-control-fullscreen {
+  display: none;
 }
 
 .bottom {
@@ -2720,6 +2722,11 @@ body {
   clear: both;
 }
 
+.selected {
+  background-color: #333333 !important;
+  margin: 0 !important;
+}
+
 .map-overlay-container {
   position: absolute;
   width: 400px;
@@ -2727,6 +2734,10 @@ body {
   left: 0;
   padding: 10px;
   z-index: 1;
+}
+
+.bigNum {
+  font-size: 1.5em !important;
 }
 
 .map-overlay {
