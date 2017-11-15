@@ -33,7 +33,7 @@
 
 .tooltip {
     background-color: rgba(255, 255, 255, 1);
-    height: 20px;
+    height: auto;
     width: 150px;
     padding: 10px;
     -webkit-border-radius: 10px;
@@ -80,7 +80,7 @@
 
 #map {
     float: left;
-    width: 600px;
+    width: 500px;
 }
 
 #sidebox {

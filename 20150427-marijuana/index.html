@@ -1074,20 +1074,6 @@ Krux('scrape', { 'user_attr_user_state': {js_global: "user_state"}});
     }
 </script>
 
-<li class="nav-weather-temp"><li class="nav-weather-temp">
-<span class="icn-weather">
-<a class="nav-weather-link" href="http://www.startribune.com/weather/" data-linkname="Current Conditions" data-linktype="weather navigation" data-modulename="Page Navigation Top" data-moduletype="header-page-nav" data-position="0-9">
-<img class="cloudy" alt="cloudy" src="./index_files/weather_cloudy.png">
-</a>
-</span>
-<span class="nav-weather-temp-txt">
-<a class="nav-weather-link" href="http://www.startribune.com/weather/" data-linkname="Current Temperature" data-linktype="weather navigation" data-modulename="Page Navigation Top" data-moduletype="header-page-nav" data-position="0-10">
-47°
-</a>
-</span>
-</li>
-</li>
-
 <li class="nav-weather-item">
     <a class="nav-weather-link" href="http://www.startribune.com/weather/" data-linkname="Forecast" data-linktype="weather navigation" data-modulename="Page Navigation Top" data-moduletype="header-page-nav" data-position="0-11">Forecast</a>
 </li>
@@ -1158,6 +1144,12 @@ impression_data.push({"moduleType":"page-nav","moduleName":"Page Navigation Top"
 .dpp img {
   border: none;
   width: 98px;
+}
+.nav-weather-temp:first {
+  display:none !important;
+}
+text {
+  font-family:Helvetica !important;
 }
 </style>
 <!--[if lte IE 8]>
@@ -2370,8 +2362,8 @@ impression_data.push({"moduleType":"page-nav","moduleName":"All Section Navigati
     .nvtooltip-pending-removal { position: absolute; pointer-events: none; }
     p { font-family: "Poynter Serif RE",Georgia,Times,serif; font-size: 15px; line-height: 140%; margin-bottom: 14px; letter-spacing: -0.3px; }
 
-    #population{float:left; }
-    #cases{float:right; }
+    #population{float:left; width:48%; }
+    #cases{float:right; width:48%; }
 
     .white{fill:#a1d99b;}
     .black{fill:#a1d99b;}
@@ -2415,10 +2407,12 @@ impression_data.push({"moduleType":"page-nav","moduleName":"All Section Navigati
     #states_legend{font-family:arial; font-weight:bold; color:#000; margin-bottom:14px; clear:both;}
     #poll_legend{font-family:arial; font-weight:bold; color:#000; margin-bottom:14px}
     #map_buttons{display:none;}
-    .source { font-size:1em !important; color:#ccc !important; }
+    .source { font-size:1em !important; color:#888 !important; }
+    .source a { color:#888; font-weight:normal !important; }
     .source_link { float:left; padding-top:5px; width:100%;}
     .download { float:none;}
     .source_row {clear:both; height:8px;}
+    .source:before { content:"" !important;}
     .download_links { padding-top:10px;}
     #nerdbox{ padding:25px;}
     #credits{ padding:25px; margin-top:20px;}
@@ -3169,10 +3163,10 @@ try {
 <div style="clear:both"></div>
 
 <div class="download_links">
-  <p class="source_row"></p><div class="source_link">Supreme Court of Minnesota - Marijuana-related cases filed 2010-2013</div> <div class="download"><a href="https://github.com/jhargarten/dataviz-projects/blob/master/strib/20150427-marijuana/data/scom.zip?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
-  <p class="source_row"></p><div class="source_link">Supreme Court of Minnesota - Conviction Depositions, Statute 152.027, 2007-2014</div>  <div class="download"><a href="https://github.com/jhargarten/dataviz-projects/blob/master/strib/20150427-marijuana/data/pettys.xlsx?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
-  <p class="source_row"></p><div class="source_link">Minneapolis Police Department - Low-level arrests 2012-2014</div>  <div class="download"><a href="https://github.com/jhargarten/dataviz-projects/blob/master/strib/20150427-marijuana/data/mpd.xlsx?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
-  <p class="source_row"></p><div class="source_link">Minnesota Bureau of Apprehension - Uniform Crime Reports 2009-2014</div>  <div class="download"><a href="https://github.com/jhargarten/dataviz-projects/blob/master/strib/20150427-marijuana/data/mpls_ucr.zip?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
+  <p class="source_row"></p><div class="source_link">Supreme Court of Minnesota - Marijuana-related cases filed 2010-2013</div> <div class="download"><a href="./data/_raw/scom.zip" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
+  <p class="source_row"></p><div class="source_link">Supreme Court of Minnesota - Conviction Depositions, Statute 152.027, 2007-2014</div>  <div class="download"><a href="./data/_raw/pettys.xlsx?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
+  <p class="source_row"></p><div class="source_link">Minneapolis Police Department - Low-level arrests 2012-2014</div>  <div class="download"><a href="./data/_raw/mpd.xlsx?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
+  <p class="source_row"></p><div class="source_link">Minnesota Bureau of Apprehension - Uniform Crime Reports 2009-2014</div>  <div class="download"><a href="./data/_raw/mpls_ucr.zip?raw=true" target="_new"><button class="downloadButton">▼ Download Data</button></a></div><p></p>
 </div>
 </div>
 
@@ -3972,8 +3966,31 @@ L.mapbox.featureLayer({
 
 <script>
 
-var chart2;
-nv.addGraph(function() {
+var chart3 = nv.addGraph(function() {
+    chart3 = nv.models.multiBarChart()
+        .x(function(d) { return d.label })
+        .y(function(d) { return d.value })
+      .transitionDuration(350)
+      .reduceXTicks(false)   //If 'false', every single x-axis tick label will be rendered.
+      .rotateLabels(0)      //Angle to rotate x-axis labels.
+      .showControls(false)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
+      .stacked(true)
+      .groupSpacing(0.1)    //Distance between each group of bars.
+      .tooltip(function(key, x, y, e, graph) {return '<h3>' + x + '</h3>' + '<p>' +  y + ' ' + key + '</p>';});
+
+    chart3.yAxis
+        .tickFormat(d3.format(','));
+
+    d3.select('#chart_mpls svg')
+        .datum(mplsData)
+        .call(chart3);
+
+    nv.utils.windowResize(chart3.update);
+
+    return chart3;
+});
+
+var chart2 = nv.addGraph(function() {
     chart2 = nv.models.multiBarChart()
         .x(function(d) { return d.label })
         .y(function(d) { return d.value })
@@ -3998,55 +4015,30 @@ nv.addGraph(function() {
     return chart2;
 });
 
-var chart3;
-nv.addGraph(function() {
-    chart3 = nv.models.multiBarChart()
-        .x(function(d) { return d.label })
-        .y(function(d) { return d.value })
-      .transitionDuration(350)
-      .reduceXTicks(false)   //If 'false', every single x-axis tick label will be rendered.
-      .rotateLabels(0)      //Angle to rotate x-axis labels.
-      .showControls(false)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
-      .stacked(true)
-      .groupSpacing(0.1)    //Distance between each group of bars.
-      .tooltip(function(key, x, y, e, graph) {return '<h3>' + x + '</h3>' + '<p>' +  y + ' ' + key + '</p>';});
+// var chart4;
+// nv.addGraph(function() {
+//     chart4 = nv.models.multiBarChart()
+//         .x(function(d) { return d.label })
+//         .y(function(d) { return d.value })
+//       .transitionDuration(350)
+//       .reduceXTicks(false)   //If 'false', every single x-axis tick label will be rendered.
+//       .rotateLabels(0)      //Angle to rotate x-axis labels.
+//       .showControls(true)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
+//       .stacked(false)
+//       .groupSpacing(0.1)    //Distance between each group of bars.
+//       .tooltip(function(key, x, y, e, graph) {return '<h3>' + x + '</h3>' + '<p>' +  y + ' ' + key + 's arrested</p>';});
 
-    chart3.yAxis
-        .tickFormat(d3.format(','));
+//     chart4.yAxis
+//         .tickFormat(d3.format(','));
 
-    d3.select('#chart_mpls svg')
-        .datum(mplsData)
-        .call(chart3);
+//     d3.select('#chart_aclu svg')
+//         .datum(acluData)
+//         .call(chart4);
 
-    nv.utils.windowResize(chart3.update);
+//     nv.utils.windowResize(chart4.update);
 
-    return chart3;
-});
-
-var chart4;
-nv.addGraph(function() {
-    chart4 = nv.models.multiBarChart()
-        .x(function(d) { return d.label })
-        .y(function(d) { return d.value })
-      .transitionDuration(350)
-      .reduceXTicks(false)   //If 'false', every single x-axis tick label will be rendered.
-      .rotateLabels(0)      //Angle to rotate x-axis labels.
-      .showControls(true)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
-      .stacked(false)
-      .groupSpacing(0.1)    //Distance between each group of bars.
-      .tooltip(function(key, x, y, e, graph) {return '<h3>' + x + '</h3>' + '<p>' +  y + ' ' + key + 's arrested</p>';});
-
-    chart4.yAxis
-        .tickFormat(d3.format(','));
-
-    d3.select('#chart_aclu svg')
-        .datum(acluData)
-        .call(chart4);
-
-    nv.utils.windowResize(chart4.update);
-
-    return chart4;
-});
+//     return chart4;
+// });
 
 var chart5;
 nv.addGraph(function() {
@@ -5238,7 +5230,32 @@ function redrawChart(data){
 }
 
 function redrawChart2(data){
-    d3.select('#chart2 svg').datum(data).transition().duration(500).call(chart2);
+  var chartHELP = nv.addGraph(function() {
+    chart2 = nv.models.multiBarChart()
+        .x(function(d) { return d.label })
+        .y(function(d) { return d.value })
+      .transitionDuration(350)
+      .reduceXTicks(false)   //If 'false', every single x-axis tick label will be rendered.
+      .rotateLabels(0)      //Angle to rotate x-axis labels.
+      .showControls(false)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
+      .stacked(true)
+      .groupSpacing(0.1)    //Distance between each group of bars.
+      .margin({top: 30, right: 30, bottom: 30, left: 50})
+      .tooltip(function(key, x, y, e, graph) { return '<h3>' + key + '</h3>' +'<p>' +  y + ' in ' + x + '</p>';});
+
+    chart2.yAxis
+        .tickFormat(d3.format(','));
+
+    d3.select('#chart2 svg')
+        .datum(caseYearData)
+        .call(chart2);
+
+    nv.utils.windowResize(chart2.update);
+
+    return chart2;
+});
+
+    d3.select('#chart2 svg').datum(data).transition().duration(500).call(chartHELP);
     nv.utils.windowResize(chart2.update);
 }
 
@@ -5248,6 +5265,7 @@ function redrawCopChart(data){
 }
 
 function redrawMPLSChart(data){
+  console.log("TEXT");
     d3.select('#chart_mpls svg').datum(data).transition().duration(500).call(chart3);
     nv.utils.windowResize(chart9.update);
 }

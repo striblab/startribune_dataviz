@@ -2431,6 +2431,16 @@ body * {
   stroke-width: 6px !important;
 }
 
+.byline {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #888;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
 #map {
   width: 800px;
 }

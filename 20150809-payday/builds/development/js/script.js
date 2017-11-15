@@ -60,7 +60,7 @@ var slider2 = d3.slider().axis(true);
                 "paging":         false,
                 "sAjaxDataProp": "feed.entry",
                 "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/18hUwmsYrcVGJkFM7dGYNyfUzvCX6QBk0HkWIZnLF_d4/od6/public/values?&alt=json",
+                "sAjaxSource": "./data/rixmann.jsonp",
                 "aoColumns": [
             null,
             { "fnRender": function ( oObj ) {

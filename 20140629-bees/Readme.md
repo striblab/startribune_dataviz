@@ -7,4 +7,4 @@ Built using [Tilemill](https://github.com/mapbox/tilemill) and [Mapbox.js](https
 
 The files for each map can be run in any live server setup. Just open the index.html files in your browser.
 
-http://apps.startribune.com/news/bees/index.html?site=full/&site=full
+http://static.startribune.com/news/legacy-apps/bees/index.html

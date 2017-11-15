@@ -11,7 +11,7 @@
                 "bProcessing":true,
                 "sAjaxDataProp": "feed.entry",
                 "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1XBn-4N1Ri_8VjbTNiITlBTYhB-UsL7TiHShvor3zExQ/od6/public/values?&alt=json",
+                "sAjaxSource": "./data/docpay.json",
                 "aoColumns": [                 
                     { "mDataProp": "gsx$physlname.$t" },
                     { "mDataProp": "gsx$physfname.$t" },
@@ -25,6 +25,9 @@
                     { "mDataProp": "gsx$payform.$t" },
                             ]
             } );
+
+$('.dataTables_filter input').attr("placeholder", "Search by keyword");
+
 
         } );
 
