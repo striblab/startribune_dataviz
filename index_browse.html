@@ -33,7 +33,7 @@
       .link a:hover { text-decoration:none !important; color: #87C944 !important; }
       .masthead  a { color:#000 !important; }
       .masthead { font-weight:900; font-family:Helvetica; /*letter-spacing:20px;*/ text-align:left !important; font-size:1.5em; }
-      p { font-family:Helvetica; }
+      p { font-family:Helvetica; line-height:150%; }
       #wrapper { width:800px;; margin-right:auto; margin-left:auto; }
       h1 { font-family:"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif; text-align:left; letter-spacing:20px; }
       #sidebar { width:170px; text-align:center; float:left; }
@@ -182,7 +182,7 @@
       #sharethis { clear:both !important; text-align:center; }
       #topmenu { text-align:center; }
       .siteNav { display:inline-block; width:48%; }
-      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:15px; text-align:center; background-color:#fff; border:1px solid black; width:100%; border-radius:0; }
+      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:5px; text-align:center; background-color:#fff; border:1px solid black; width:100%; border-radius:0; }
       .topbutton:hover { opacity:.8; cursor:pointer; }
       .this { background-color:#ddd; border:1px solid #ddd; }
       #socialmenu img:hover { opacity:.8; }
@@ -277,10 +277,10 @@
 <div id="sidebar">
 
 <div class="icon sort-link selected articles" id="allProjects_m" data="startribune"><img src="img/striblab.png" alt="striblab" /></div>
-<div class="icon sort-link" id="twitter"><img src="img/twitter.png" alt="twitter" /></div>
-<div class="icon sort-link" id="resources"><img src="img/tools.png" alt="tools" /></div>
-<div class="icon sort-link" id="tools"><img src="img/code.png" alt="code" /></div>
-<div class="icon github"><a class="icon sort-link" href="https://github.com/striblab" target="new_"><img data="github" src="img/github.png" alt="github" /></a></div>
+<div class="icon sort-link" id="twitter" data="tweets"><img src="img/twitter.png" alt="twitter" /></div>
+<div class="icon sort-link" id="resources" data="resourceList"><img src="img/tools.png" alt="tools" /></div>
+<div class="icon sort-link" id="tools" data="toolbox"><img src="img/code.png" alt="code" /></div>
+<div class="icon github" data="git"><a class="icon sort-link" href="https://github.com/striblab"><img data="github" src="img/github.png" alt="github" /></a></div>
 
 </div>
 
@@ -425,7 +425,7 @@
 
 <div id="about">
 <img src="http://freyhargarten.com/_base/img/profile.jpg" width="200" id="profile" alt="profile" />
-<p>StribLab is the work of <a href="https://plus.google.com/+JeffHargarten" rel="me">Frey Hargarten</a> and many talented journalists across the StarTribune newsroom. All code and public datasets are open source and free for adaption and repurposing.</p><p><a href="http://bit.ly/2dHeC2O" key="E502 A15E A8D1 8CAA 478A F1CE 13AC DE60 A335 72D4">PGP Key</a></p>
+<p>StribLab is the work of <a href="https://plus.google.com/+JeffHargarten" rel="me">Frey Hargarten</a> and many talented journalists across the StarTribune newsroom. All code and public datasets are open source and free for adaption and repurposing.</p><p><a href="bit.ly/2jmBjig" key="3C28 11FC 1FF9 860D 14B8 4EF3 E35E 9A4C 61B3 39DF">PGP Key</a></p>
 
 <div class="breaker"></div>
 
@@ -438,12 +438,12 @@
 
 <div class="siteNav"><a href="http://datamancy.org"><button class="topbutton">Blog</button></a><div><a href="https://www.mixcloud.com/jeff-hargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/mixcloud.png" alt="mixcloud" /></a><a href="https://www.vimeo.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/vimeo.png" alt="vimeo" /></a><a href="https://giphy.com/channel/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/giphy.png" alt="giphy" /></a></div></div>
 
-<div class="siteNav"><a href="http://deadskies.org"><button class="topbutton this">Artwork</button></a><div><a href="http://jhshadowflare.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" alt="deviantart" /></a><a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" alt="tumblr" /></a><a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" alt="soundcloud" /></a></div></div>
+<div class="siteNav"><a href="http://deadskies.org"><button class="topbutton this">Artwork</button></a><div><a href="http://jeffhargarten.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" alt="deviantart" /></a><a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" alt="tumblr" /></a><a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" alt="soundcloud" /></a></div></div>
 </div>
 
 <p></p>
 
-<div id="footer"><span><a href="https://creativecommons.org/" target="new_"><img src="http://freyhargarten.com/_base/img/cc.large.png" width="15" alt="CC" /></a></span> Star Tribune, Frey Hargarten 2017</div>
+<div id="footer"><span><a href="https://creativecommons.org/" target="new_"><img src="http://freyhargarten.com/_base/img/cc.large.png" width="15" alt="CC" /></a></span> Star Tribune, Frey Hargarten 2018</div>
 
 </div>
 <!--close wrapper-->
@@ -503,7 +503,6 @@ spitResources("graphics");
 
 var killPaging = false;
 
-$('#allProjects, #allProjects_m').css("background-color","#ddd");
   $( ".sort-link" ).each(function( index ) {
   var type = "." + $(this).attr("id");
   $(this).find(".count").html($(type).length);
@@ -518,7 +517,6 @@ $( ".sort-link" ).click(function() {
   $(".articleEntry").hide();
   $(".sort-link").css("background-color","#fff");
   $(this).css("background-color","#ddd");
-  console.log($(this).attr("data"));
   $("." + $(this).attr("id")).show();
   $("#resourcesBlock").hide();
   if ($(this).attr("id") != "tools") { $(".tools").hide(); }
@@ -585,8 +583,8 @@ $.urlParam = function(name){
 if ($.urlParam('cat') != 0 ) {
   var catTerm = $.urlParam('cat'); 
   $(".articleEntry").hide();
-  $(".sort-link").removeClass("linkSelect");
-  $("#dataSidebar #" + catTerm).addClass("linkSelect");
+  $(".sort-link").removeClass("selected");
+  $("#dataSidebar #" + catTerm).addClass("selected");
   $("." + catTerm).show();
   killPaging = true;
 }
@@ -594,17 +592,28 @@ if ($.urlParam('cat') != 0 ) {
 
 if ($.urlParam('page') != 0 ) {
   var pageTerm = $.urlParam('page'); 
-  $(".sort-link").removeClass("linkSelect");
+  $(".sort-link").removeClass("selected");
   killPaging = true;
   if (pageTerm == "resources") { 
     $(".articleEntry").hide(); 
     $("#resourcesBlock").show(); 
-    $("#dataSidebar #resources").addClass("linkSelect");
+    $("#resources").addClass("selected");
   }
-  if (pageTerm == "contributors") { 
-    $(".articleEntry").hide(); 
-    $("#contributorsBlock").show(); 
-    $("#dataSidebar #contributors").addClass("linkSelect");
+  else { 
+    $('#filter_box').val("");
+    $('#filter_box').val("");
+    $("#articlePane").show();
+    $(".articleEntry").hide();
+    $(".sort-link").css("background-color","#fff");
+    $("#" + pageTerm).css("background-color","#ddd");
+    $("." + $(this).attr("id")).show();
+    $("#resourcesBlock").hide();
+    if (pageTerm != "tools") { $(".tools").hide(); }
+    if (pageTerm == "tools") { $(".tools").show(); }
+    if (pageTerm == "twitter") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#articlePane").hide(); $("#twitterBlock").show(); }
+    if (pageTerm == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show();
+    $("#twitterBlock").hide(); }
+    if (pageTerm == "contributors") { $("#resourcesBlock, .articleEntry").hide(); $(" #contributorsBlock").show(); $("#twitterBlock").hide(); }
   }
 }
 
@@ -634,7 +643,7 @@ $(document).ready(function () {
     $(".icon").click(function () {
         $(".socialBox").hide();
         $(".icon").removeClass('selected');
-        // window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
+        window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
         $(this).parent().addClass('selected');
         $("#" + $(this).attr("data")).fadeToggle(200);
     });
