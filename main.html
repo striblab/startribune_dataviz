@@ -32,8 +32,9 @@
       a:hover { color:#333 !important; color:inherit !important; }
       .link a:hover { text-decoration:none !important; color: #87C944 !important; }
       .masthead  a { color:#000 !important; }
-      .masthead { font-weight:900; font-family:Helvetica; /*letter-spacing:20px;*/ text-align:center !important; font-size:1.5em; }
-      p { font-family:Helvetica; }
+      .masthead { font-weight:900; font-family:Helvetica; /*letter-spacing:20px;*/ text-align:left !important; font-size:1.5em; }
+      p { font-family:Helvetica; line-height:150%; }
+      .chatter { line-height:150%; }
       #wrapper { width:800px;; margin-right:auto; margin-left:auto; }
       h1 { font-family:"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif; text-align:left; letter-spacing:20px; }
       #sidebar { width:170px; text-align:center; float:left; }
@@ -41,10 +42,7 @@
       button:focus { outline:0 !important; }
       :focus { outline:0; }
       a h3 { color:#000 !important; font-family:"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif; text-align:left; }
-      #blogBlock { display:none; }
       h4 { color:#333; text-align:center; margin:0; padding:10px 0 0; }
-      .chartTitle { font-family: "Benton Sans", Helvetica, Arial, sans-serif !important; font-weight: 900; margin-top: 15px; font-size: 1.2em; }      
-      .chatter { line-height:160%; font-family: "Benton Sans", Helvetica, Arial, sans-serif !important; font-size: .9em; margin-top: 5px; }
 
 /*HEADER*/
       .starlogo { float:left; margin:15px; }
@@ -65,7 +63,7 @@
       .linkage { text-align:left; }
       #overall { text-align:left !important; }
       div#at4-share { display:none !important; }
-      .tagline { text-align:center !important; }
+      .tagline { text-align:left !important; }
       .at-icon { background-color:#87C944 !important; }
 
 /*ENTRIES*/
@@ -172,12 +170,12 @@
       #footerStuff { display:none; }
       #intro { text-align:center; }
       #photo img { width:200px; }
-      .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; }
-      #footer { text-align:center; padding-top:5px; border-top:1px solid #ddd; padding:15px; }
-      .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; font-size:.9em; }
-      .linkDiv { display:inline-block !important; margin:5px; }
-      .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
-      .scrollToTop:hover { color:#333 !important; cursor:pointer; }
+     .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; }
+     #footer { text-align:center; padding-top:5px; border-top:1px solid #ddd; padding:15px; }
+     .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; font-size:.9em; }
+     .linkDiv { display:inline-block !important; margin:5px; }
+     .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
+     .scrollToTop:hover { color:#333 !important; cursor:pointer; }
       #intro { text-align:center; }
       #photo img { width:200px; }
       #about { margin-top:15px; border-top:1px solid #ddd;}
@@ -185,7 +183,7 @@
       #sharethis { clear:both !important; text-align:center; }
       #topmenu { text-align:center; }
       .siteNav { display:inline-block; width:48%; }
-      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:15px; text-align:center; background-color:#fff; border:1px solid black; width:100%; border-radius:0; }
+      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:5px; text-align:center; background-color:#fff; border:1px solid black; width:100%; border-radius:0; }
       .topbutton:hover { opacity:.8; cursor:pointer; }
       .this { background-color:#ddd; border:1px solid #ddd; }
       #socialmenu img:hover { opacity:.8; }
@@ -281,10 +279,10 @@
 <div id="sidebar">
 
 <div class="icon sort-link selected articles" id="allProjects_m" data="startribune"><img src="img/striblab.png" alt="striblab" /></div>
-<div class="icon sort-link" id="blog"><img src="img/blog.png" alt="blog" /></div>
-<div class="icon sort-link" id="resources"><img src="img/tools.png" alt="tools" /></div>
-<div class="icon sort-link" id="tools"><img src="img/code.png" alt="code" /></div>
-<div class="icon sort-link"><a href="https://github.com/striblab"><img data="github" src="img/github.png" alt="github" /></a></div>
+<div class="icon sort-link" id="blog" data="blogs"><img src="img/blog.png" alt="blog" /></div>
+<div class="icon sort-link" id="resources" data="resourceList"><img src="img/tools.png" alt="tools" /></div>
+<div class="icon sort-link" id="tools" data="toolbox"><img src="img/code.png" alt="code" /></div>
+<div class="icon sort-link" data="git"><a href="https://github.com/striblab"><img data="github" src="img/github.png" alt="github" /></a></div>
 
 </div>
 
@@ -319,9 +317,7 @@
 </div>
 
 <div id="blogBlock" class="blog">
-  <div class="chartTitle">Welcome</div>
-  <div class="chatter">Welcome to StribLab, the Star Tribune's aggregation of data-driven, visual storytelling.</div>
-  <div class="chatter">Here you will find links to tools, source code and other resources related to many data-drive enterprise projects by various team members around the newsroom.</div>
+  <div class="chatter">Welcome to StribLab, the Star Tribune's aggregation of data-driven, visual storytelling. Here you will find links to tools, source code and other resources related to many data-drive enterprise projects by various team members around the newsroom.</div>
 </div>
 
 <div id="resourcesBlock" class="resources">
@@ -426,7 +422,7 @@
 
 <div class="breaker"></div>
 
-<div id="footer"><span><a href="https://creativecommons.org/" target="new_"><img src="http://freyhargarten.com/_base/img/cc.large.png" width="15" alt="CC" /></a></span> Star Tribune<!-- , Frey Hargarten --> 2017</div>
+<div id="footer"><span><a href="https://creativecommons.org/" target="new_"><img src="http://freyhargarten.com/_base/img/cc.large.png" width="15" alt="CC" /></a></span> Star Tribune<!-- , Frey Hargarten --> 2018</div>
 
 </div>
 <!--close wrapper-->
@@ -486,7 +482,6 @@ spitResources("graphics");
 
 var killPaging = false;
 
-$('#allProjects, #allProjects_m').css("background-color","#ddd");
   $( ".sort-link" ).each(function( index ) {
   var type = "." + $(this).attr("id");
   $(this).find(".count").html($(type).length);
@@ -568,8 +563,8 @@ $.urlParam = function(name){
 if ($.urlParam('cat') != 0 ) {
   var catTerm = $.urlParam('cat'); 
   $(".articleEntry").hide();
-  $(".sort-link").removeClass("linkSelect");
-  $("#dataSidebar #" + catTerm).addClass("linkSelect");
+  $(".sort-link").removeClass("selected");
+  $("#dataSidebar #" + catTerm).addClass("selected");
   $("." + catTerm).show();
   killPaging = true;
 }
@@ -577,17 +572,28 @@ if ($.urlParam('cat') != 0 ) {
 
 if ($.urlParam('page') != 0 ) {
   var pageTerm = $.urlParam('page'); 
-  $(".sort-link").removeClass("linkSelect");
+  $(".sort-link").removeClass("selected");
   killPaging = true;
   if (pageTerm == "resources") { 
     $(".articleEntry").hide(); 
     $("#resourcesBlock").show(); 
-    $("#dataSidebar #resources").addClass("linkSelect");
+    $("#resources").addClass("selected");
   }
-  if (pageTerm == "contributors") { 
-    $(".articleEntry").hide(); 
-    $("#contributorsBlock").show(); 
-    $("#dataSidebar #contributors").addClass("linkSelect");
+  else { 
+    $('#filter_box').val("");
+    $('#filter_box').val("");
+    $("#articlePane").show();
+    $(".articleEntry").hide();
+    $(".sort-link").css("background-color","#fff");
+    $("#" + pageTerm).css("background-color","#ddd");
+    $("." + $(this).attr("id")).show();
+    $("#resourcesBlock").hide();
+    if (pageTerm != "tools") { $(".tools").hide(); }
+    if (pageTerm == "tools") { $(".tools").show(); }
+    if (pageTerm == "twitter") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#articlePane").hide(); $("#twitterBlock").show(); }
+    if (pageTerm == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show();
+    $("#twitterBlock").hide(); }
+    if (pageTerm == "contributors") { $("#resourcesBlock, .articleEntry").hide(); $(" #contributorsBlock").show(); $("#twitterBlock").hide(); }
   }
 }
 
@@ -617,7 +623,7 @@ $(document).ready(function () {
     $(".icon").click(function () {
         $(".socialBox").hide();
         $(".icon").removeClass('selected');
-        // window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
+        window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
         $(this).parent().addClass('selected');
         $("#" + $(this).attr("data")).fadeToggle(200);
     });
