@@ -58,7 +58,7 @@ function mapTips(d, subject, dataCompare){
             var color_scale = d3.scale.linear().domain([7000,15000]).range(['#F7F7F7','#252525']);
         }
     } 
-    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div><div><span class='legendary' style='background-color:" + color_scale(total) + "'>" + d3.format("$,.0f")(total) + "</span> average taxes paid</div>"
+    return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div><div><span class='legendary' style='background-color:" + color_scale(total) + "'>" + d3.format("$,.0f")(total) + "</span> average tax deductions</div>"
        
 }
 
