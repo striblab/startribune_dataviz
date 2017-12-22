@@ -107,7 +107,7 @@ d3.json("shapefiles/" + shape, function(error, us) {
          return mapColor(d, race, dataCompare);
         })
       .style("stroke-width", "1px")
-      .style("stroke", "#fff")
+      .style("stroke", "#bbbbbb")
       .call(d3.helper.tooltip(function(d, i){
         return mapTips(d, race, dataCompare);
       }));
