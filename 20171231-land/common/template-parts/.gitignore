@@ -1,0 +1,67 @@
+# Common
+.drake
+*yarn.lock
+.tmp
+.yo-rc.json
+node_modules/
+bower_components/
+.npm-debug
+.npm-log
+npm*
+.env
+.sass-cache
+.tmp
+tmp
+.temp
+temp
+*.psd
+*.[oa]
+*.py[co]
+*.rbc
+*.egg
+*.egg-info
+develop-eggs
+.installed.cfg
+.Python
+pip-log.txt
+.coverage
+coverage
+.tox
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+*.~*
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
