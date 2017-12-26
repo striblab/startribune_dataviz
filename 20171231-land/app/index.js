@@ -61,7 +61,7 @@ function mapTips(d, subject, dataCompare){
         }
     } 
     console.log(color_scale(total));
-    if (color_scale(total) == "#f7f7f7" || color_scale(total) == "#f2f2f2" || color_scale(total) == "#f1f1f1") {
+    if (color_scale(total) == "#f7f7f7" || color_scale(total) == "#f2f2f2" || color_scale(total) == "#f1f1f1" || color_scale(total) == "#e6e6e6" || color_scale(total) == "#e5e5e5" || color_scale(total) == "#f5f5f5" || color_scale(total) == "#f3f3f3" || color_scale(total) == "#f6f6f6") {
       text = "#000000";
     }
     return "<div class='districtName'>" + d.properties.COUNTYNAME + " County</div><div><span class='legendary' style='background-color:" + color_scale(total) + "; color:" + text + " !important;'>" + total + "</span> acres sold</div>";
