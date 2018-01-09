@@ -78,6 +78,7 @@ var chart = c3.generate({
             }
         },
         x: {
+            padding: {right: 1, left:0},
             tick: {
                 values: ['1910', '1950', '1990', '2016'],
                 count: 4,
