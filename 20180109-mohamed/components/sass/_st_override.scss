@@ -5,6 +5,10 @@ body,
     font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif;
 }
 
+.slide {
+    display:none;
+}
+
 #chart .c3-line {
     stroke-width: 6px !important;
 }
