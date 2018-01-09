@@ -1,0 +1,7 @@
+.DS_Store
+*.zip
+interviews
+drafts
+.tmp
+.sass-cache
+node_modules
