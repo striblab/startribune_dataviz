@@ -27,20 +27,20 @@ $("#" + selected).show();
           padding: padding,
           data: {
                 columns: [
-                    ['Henry', 143],
-                    ['Maverick', 35],
-                    ['Mohamed', 24],
-                    ['Xavier', 24]
+                    ['Henry', 143,null,null,null],
+                    ['Maverick', null,35,null,null],
+                    ['Mohamed', null,null,24,null],
+                    ['Xavier',null,null,null,24]
                 ],
             type: 'bar',
-            labels: {
-                format: {
-                    'Henry': d3.format(','),
-                    'Maverick': d3.format(','),
-                    'Mohamed': d3.format(','),
-                    'Xavier': d3.format(',')
-                }
-            }
+             labels: {
+              format: function(v) {
+                return v === 0 ? '' : v;
+              }
+            },
+            groups: [
+            ['Henry', 'Maverick', 'Mohamed','Xavier']
+        ]
             },
             legend: {
                 show: false
@@ -70,7 +70,7 @@ $("#" + selected).show();
                     },
                 x: {
                     type: 'category',
-                    categories: ['Rate per 10,000 births']
+                    categories: ['Henry','Maverick','Mohamed','Xavier']
                 }
             }
           // grid: {
@@ -83,21 +83,21 @@ $("#" + selected).show();
 
     });
 
-d3.selectAll(".c3-target-Henry")
-    .selectAll(".c3-bar, .c3-texts")
-    .attr("transform", "translate(-10, 0)");
+// d3.selectAll(".c3-target-Henry")
+//     .selectAll(".c3-bar, .c3-texts")
+//     .attr("transform", "translate(-10, 0)");
 
-d3.selectAll(".c3-target-Maverick")
-    .selectAll(".c3-bar, .c3-texts")
-    .attr("transform", "translate(-4, 0)");
+// d3.selectAll(".c3-target-Maverick")
+//     .selectAll(".c3-bar, .c3-texts")
+//     .attr("transform", "translate(-4, 0)");
 
-d3.selectAll(".c3-target-Mohamed")
-    .selectAll(".c3-bar, .c3-texts")
-    .attr("transform", "translate(4, 0)");
+// d3.selectAll(".c3-target-Mohamed")
+//     .selectAll(".c3-bar, .c3-texts")
+//     .attr("transform", "translate(4, 0)");
 
-d3.selectAll(".c3-target-Xavier")
-    .selectAll(".c3-bar, .c3-texts")
-    .attr("transform", "translate(10, 0)");
+// d3.selectAll(".c3-target-Xavier")
+//     .selectAll(".c3-bar, .c3-texts")
+//     .attr("transform", "translate(10, 0)");
 
 }
 
