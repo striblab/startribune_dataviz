@@ -60,6 +60,7 @@ $("#" + selected).show();
             axis: {
                   // rotated: true,
                   y: {
+                        label: 'Rate per 10k births',
                         max: 150,
                         min: 0,
                         padding: {bottom: 0, top: 0},
@@ -99,6 +100,12 @@ $("#" + selected).show();
 // d3.selectAll(".c3-target-Xavier")
 //     .selectAll(".c3-bar, .c3-texts")
 //     .attr("transform", "translate(10, 0)");
+
+// d3.select("#chart2 svg").append("text")
+//     .attr("x", 150 )
+//     .attr("y", 30)
+//     .style("text-anchor", "right")
+//     .text("Rate per 10k births");
 
 }
 
