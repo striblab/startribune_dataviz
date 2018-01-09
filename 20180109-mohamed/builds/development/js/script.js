@@ -122,7 +122,7 @@ var dataStream = [];
 axis[0] = 'x';
 var indexYear = 1;
 
-for (var j=1910; j<2017; j++){
+for (var j=1980; j<2017; j++){
   axis[indexYear] = j;
   dataStream[indexYear] = 0;
   indexYear++;
@@ -189,7 +189,7 @@ var chart = c3.generate({
         x: {
             padding: {right: 0, left:0},
             tick: {
-                values: ['1910', '1950', '1990', '2016'],
+                values: ['1980', '1990', '2000', '2016'],
                 count: 4,
                 multiline: false
             }
