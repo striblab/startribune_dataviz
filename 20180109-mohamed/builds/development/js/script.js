@@ -60,11 +60,12 @@ $("#" + selected).show();
             axis: {
                   // rotated: true,
                   y: {
+                        max: 150,
                         min: 0,
-                        padding: {bottom: 0},
+                        padding: {bottom: 0, top: 0},
                         tick: {
                          count: 7,
-                         values: [0,25,50,75,100,125,150],
+                         values: [0,50,100,150],
                          format: d3.format(',')
                         }
                     },
@@ -176,15 +177,17 @@ var chart = c3.generate({
     legend: { show: false },
     axis: {
       y: {
+            max: 30,
             min: 0,
-            padding: {bottom: 0},
+            padding: {bottom: 0, top: 0},
             tick: {
              count: 4,
-             format: d3.format('.1f')
+             values: [0,10,20,30],
+             format: d3.format('.0f')
             }
         },
         x: {
-            padding: {right: 1, left:0},
+            padding: {right: 0, left:0},
             tick: {
                 values: ['1910', '1950', '1990', '2016'],
                 count: 4,
