@@ -60,7 +60,7 @@ $("#" + selected).show();
             axis: {
                   // rotated: true,
                   y: {
-                        label: 'Rate per 10k births',
+                        label: 'Rate per 10,000 births',
                         max: 150,
                         min: 0,
                         padding: {bottom: 0, top: 0},
