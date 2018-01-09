@@ -1,3 +1,108 @@
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected == "all"){
+$(".slide").show();
+} else if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
+  function namesChart(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chart = c3.generate({
+          bindto: "#chart2",
+          padding: padding,
+          data: {
+                columns: [
+                    ['Henry', 143],
+                    ['Maverick', 35],
+                    ['Mohamed', 24],
+                    ['Xavier', 24]
+                ],
+            type: 'bar',
+            labels: {
+                format: {
+                    'Henry': d3.format(','),
+                    'Maverick': d3.format(','),
+                    'Mohamed': d3.format(','),
+                    'Xavier': d3.format(',')
+                }
+            }
+            },
+            legend: {
+                show: false
+            },            
+            bar: {
+                  width: {
+                      ratio: 0.6
+                  }
+              },            
+            tooltip: {
+                show: false
+            },
+                color: {
+                  pattern: ['#BF603C','#969696',"#66AF50","#4C4C39"]
+                },
+            axis: {
+                  // rotated: true,
+                  y: {
+                        min: 0,
+                        padding: {bottom: 0},
+                        tick: {
+                         count: 7,
+                         values: [0,25,50,75,100,125,150],
+                         format: d3.format(',')
+                        }
+                    },
+                x: {
+                    type: 'category',
+                    categories: ['Rate per 10,000 births']
+                }
+            }
+          // grid: {
+          //     y: {
+          //     lines: [
+          //           {value: 0.5, text: '', position: 'start', class:'powerline'}
+          //     ]
+          //     }
+          // }
+
+    });
+
+d3.selectAll(".c3-target-Henry")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(-10, 0)");
+
+d3.selectAll(".c3-target-Maverick")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(-4, 0)");
+
+d3.selectAll(".c3-target-Mohamed")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(4, 0)");
+
+d3.selectAll(".c3-target-Xavier")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(10, 0)");
+
+}
+
+  namesChart();
+
+
 d3.csv("./data/names.csv", function(d) {
   return {
     gender: d.GENDER,
@@ -150,7 +255,7 @@ if ($.urlParam('name') != 0 ) {
   var gender = String($.urlParam('gender')).toUpperCase();
   var genderStatus = gender; 
   $("#" + gender).addClass("selected");
-  if (gender == "M") { var colorMe = "#333333"; var sex = "boy"; var genderfull="male" }
+  if (gender == "M") { var colorMe = "#66AF50"; var sex = "boy"; var genderfull="male" }
   else  { var colorMe = "#AA6666";  var sex = "girl"; var genderfull = "female"; }
   $("#named, #named2").html(name);
   $("#gender").html(sex);

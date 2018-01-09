@@ -1,4 +1,109 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected == "all"){
+$(".slide").show();
+} else if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
+  function namesChart(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chart = c3.generate({
+          bindto: "#chart2",
+          padding: padding,
+          data: {
+                columns: [
+                    ['Henry', 143],
+                    ['Maverick', 35],
+                    ['Mohamed', 24],
+                    ['Xavier', 24]
+                ],
+            type: 'bar',
+            labels: {
+                format: {
+                    'Henry': d3.format(','),
+                    'Maverick': d3.format(','),
+                    'Mohamed': d3.format(','),
+                    'Xavier': d3.format(',')
+                }
+            }
+            },
+            legend: {
+                show: false
+            },            
+            bar: {
+                  width: {
+                      ratio: 0.6
+                  }
+              },            
+            tooltip: {
+                show: false
+            },
+                color: {
+                  pattern: ['#BF603C','#969696',"#66AF50","#4C4C39"]
+                },
+            axis: {
+                  // rotated: true,
+                  y: {
+                        min: 0,
+                        padding: {bottom: 0},
+                        tick: {
+                         count: 7,
+                         values: [0,25,50,75,100,125,150],
+                         format: d3.format(',')
+                        }
+                    },
+                x: {
+                    type: 'category',
+                    categories: ['Rate per 10,000 births']
+                }
+            }
+          // grid: {
+          //     y: {
+          //     lines: [
+          //           {value: 0.5, text: '', position: 'start', class:'powerline'}
+          //     ]
+          //     }
+          // }
+
+    });
+
+d3.selectAll(".c3-target-Henry")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(-10, 0)");
+
+d3.selectAll(".c3-target-Maverick")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(-4, 0)");
+
+d3.selectAll(".c3-target-Mohamed")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(4, 0)");
+
+d3.selectAll(".c3-target-Xavier")
+    .selectAll(".c3-bar, .c3-texts")
+    .attr("transform", "translate(10, 0)");
+
+}
+
+  namesChart();
+
+
 d3.csv("./data/names.csv", function(d) {
   return {
     gender: d.GENDER,
@@ -16,7 +121,7 @@ var dataStream = [];
 axis[0] = 'x';
 var indexYear = 1;
 
-for (var j=1980; j<2017; j++){
+for (var j=1910; j<2017; j++){
   axis[indexYear] = j;
   dataStream[indexYear] = 0;
   indexYear++;
@@ -81,7 +186,7 @@ var chart = c3.generate({
         x: {
             padding: {right: 1, left:0},
             tick: {
-                values: ['1980', '1990', '2000', '2016'],
+                values: ['1910', '1950', '1990', '2016'],
                 count: 4,
                 multiline: false
             }
