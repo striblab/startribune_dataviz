@@ -60,7 +60,7 @@ $("#" + selected).show();
             axis: {
                   // rotated: true,
                   y: {
-                        label: 'Rate per 10,000 births',
+                        label: 'Rate per 10k births',
                         max: 150,
                         min: 0,
                         padding: {bottom: 0, top: 0},
@@ -72,7 +72,12 @@ $("#" + selected).show();
                     },
                 x: {
                     type: 'category',
-                    categories: ['Henry','Maverick','Mohamed','Xavier']
+                    categories: ['Henry','Maverick','Mohamed','Xavier'],
+                    tick: {
+                        rotate: -75,
+                        multiline: false
+                    },
+                    height: 40
                 }
             }
           // grid: {
