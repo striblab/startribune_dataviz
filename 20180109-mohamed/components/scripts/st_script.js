@@ -71,7 +71,12 @@ $("#" + selected).show();
                     },
                 x: {
                     type: 'category',
-                    categories: ['Henry','Maverick','Mohamed','Xavier']
+                    categories: ['Henry','Maverick','Mohamed','Xavier'],
+                    tick: {
+                        rotate: -75,
+                        multiline: false
+                    },
+                    height: 40
                 }
             }
           // grid: {
