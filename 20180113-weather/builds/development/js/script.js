@@ -501,8 +501,11 @@ var chartPrecipHistory = c3.generate({
               'annualPrecip': 'Total Precipitation'
             }
         },
-    point: {
+      point: {
             show: false
+        },
+        legend: {
+          show: false
         },
         axis: {
           y: {
