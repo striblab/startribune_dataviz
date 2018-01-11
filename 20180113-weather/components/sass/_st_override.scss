@@ -1,0 +1,183 @@
+/* PROJECT STYLES */
+
+#wrapper {
+    width:800px;  
+    margin-right:auto;
+    margin-left:auto; 
+    font-family: "Benton Sans Condensed Medium",Helvetica,Arial,sans-serif !important;
+}
+
+.chartTitle, .chatter {
+    font-family: "Benton Sans Condensed Medium",Helvetica,Arial,sans-serif !important;
+}
+
+.chatter {
+    font-size:1em;
+}
+
+.bigTitle {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: center;
+    line-height:160%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.legendary {
+    padding:4px;
+    color: #fff;
+    font-weight:bold;
+    border-radius: 5px;
+    padding: 0 7px;
+    margin-bottom: 3px;
+}
+
+.icon {
+    text-align: center;
+    display: block;
+}
+
+.icon img {
+    width: 60px;
+}
+
+.highlights {
+    text-align: center;
+    margin-top:30px;
+}
+
+p, .chatter {
+    line-height:160%;
+}
+
+.chart {
+    margin-bottom: 35px;
+}
+
+.byline {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.7em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    line-height:160%;
+    text-align:left;
+}
+
+.highlightNum {
+    width: 180px;
+    font-size: 3em;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+}
+
+.highlightText {
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.highlightBreak {
+    clear: both;
+}
+
+.wrapper-dropdown-1 {
+    width: 100%;
+}
+
+.wrapper-demo {
+    width: 100%;
+    z-index: 9000 !important;
+}
+
+.blueswatch {
+    color: #407F7F;
+}
+
+.lowswatch {
+    color: #E7A9A9;
+}
+
+.redswatch {
+    color: #801515;
+}
+
+.greyswatch {
+    color: #333;
+}
+
+.orangeswatch {
+    color: #AA6C38;
+}
+
+.hottest {
+    fill: #a70518;
+}
+
+.snowswatch {
+    color: #96ADB0;
+}
+
+.windswatch {
+    color: #E7C6A9;
+}
+
+.greenswatch {
+    color: #3D813D;
+}
+
+.precipswatch {
+    color: #87B887;
+}
+
+.summary {
+    vertical-align: top;
+    display: table-cell;
+}
+
+.chart {
+    height: 400px;
+}
+
+#pdf {
+    text-align: center;
+    margin-bottom:50px;
+}
+
+#monthly {
+    display: none;
+}
+
+.monthBar {
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    width: 20%;
+    font-weight: bold;
+}
+
+p a,
+.l-utility-inner p a {
+    color: #036;
+    text-decoration: underline!important;
+}
+
+p a:hover,
+.l-utility-inner p a:hover {
+    color: #666666;
+    text-decoration: none!important;
+}
+
+@media (max-width:800px) {
+    #wrapper {
+        width:100%;
+    }
+}
