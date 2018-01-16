@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./_head.ejs.html')
+  </head>
+
+  <body class="strib">
+    
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" id="announcer" class="sr-only"></div>
+
+    <!-- Skip to main content -->
+    <a href="#main-content" class="to-main-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="project-header" role="banner">
+      @@include('./_header.ejs.html')
+    </header>
+
+    <!-- Main content here -->
+    <main id="main-content" class="content" role="main">
+      @@include('./_main-index.ejs.html')
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      @@include('./_footer.ejs.html')
+    </footer>
+
+    <!-- Global/external scripts -->
+    <% if (config.js && config.js.globals) { config.js.globals.forEach(function(s) { %>
+      <script src="<%= s %>"></script>
+    <% }); } %>
+
+    <!-- Scripts -->
+    <script src="./app.bundle.js"></script>
+    
+  </body>
+</html>
