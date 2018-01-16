@@ -1,0 +1,17 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+
+$root: true;
+
+@import '../node_modules/strib-styles/source/styles/root.scss';
+
+// Project specific styles.  Split styles into files per component
+
+@import 'project';
+

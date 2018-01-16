@@ -1,0 +1,99 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<title><%%= _.escape(content.title) %> | <%%= _.escape(content.organization) || 'Star Tribune' %></title>
+
+<meta name="author" content="<%%= _.escape(content.author) || 'Star Tribune Visuals' %>">
+<meta name="description" content="<%%= _.escape(content.socialDescription) %>">
+<meta name="robots" content="index, follow">
+
+<!-- Shortcut and related icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="./assets/images/favicons/manifest.json">
+<link rel="mask-icon" href="./assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="./assets/images/favicons/favicon.ico">
+<meta name="msapplication-config" content="./assets/images/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- For proper phone zoom -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Global/external styles -->
+<%% if (config.styles && config.styles.globals) { config.styles.globals.forEach(function(s) { %>
+  <link href="<%%= s %>" rel="stylesheet" type="text/css">
+<%% }); } %>
+
+<!-- Project-specific styles-->
+<link rel="stylesheet" href="./styles.bundle.css" type="text/css">
+
+<!-- Social Media Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%%= config.publish.production.url %>">
+<meta property="og:title" content="<%%= _.escape(content.title) %>">
+<meta property="og:description" content="<%%= _.escape(content.socialDescription) %>">
+<%% if (config.social && config.social.image) { %>
+  <meta property="og:image" content="<%%= config.publish.production.url %><%%= config.social.image %>">
+<%% } %>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="<%%= content.twitterAccount || '@StarTribune' %>">
+<meta name="twitter:title" content="<%%= _.escape(content.title) %>">
+<meta name="twitter:description" content="<%%= _.escape(content.socialDescription) %>">
+<%% if (config.social && config.social.image) { %>
+  <meta name="twitter:image" content="<%%= config.publish.production.url %><%%= config.social.image %>">
+<%% } %>
+
+<!-- Google structured data -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<%%= config.publish.production.url %>"
+    },
+    "headline": "<%%= _.escape(content.title) %>",,
+    "description": "<%%= _.escape(content.socialDescription) %>"
+    <%% if (config.social && config.social.image) { %>
+    "image": {
+      "@type": "ImageObject",
+      "url": "<%%= config.publish.production.url %><%%= config.social.image %>"
+    },
+    <%% } %>
+    "author": {
+      "@type": "Person",
+      "name": "<%%= _.escape(content.author) || 'Star Tribune Visuals' %>"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "<%%= _.escape(content.organization) || 'Star Tribune' %>",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%%= config.publish.production.url %>assets/images/strib/strib-logo-transparent-307.png",
+        "width": 307,
+        "height": 292
+      }
+    }
+  }
+</script>
+
+<%% if (config.googleAnalytics) { %>
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '<%%= config.googleAnalytics %>']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src =
+        ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+        '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+<%% } %>
