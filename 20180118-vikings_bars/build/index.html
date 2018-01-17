@@ -104,9 +104,76 @@
       <div id="wrapper">
 <div id="lookup" class="slide">
 	<div class="chartTitle">Vikings expat nation, by the bar</div>
-	<div class="chatter">Shows location of  <span class="legendary vikings">Vikings-themed bars</span> outside of Minnesota.</div>
+	<div class="chatter">Find <span class="legendary vikings">Vikings fan bars</span> outside of Minnesota by selecting a state from the dropdown.</div>
+	<!-- <div id="filter"><input type="search" id="filter_box" placeholder="Search by name, state or location" /></div> -->
 
-	<div id="map">
+		<div id="viewSwitch">
+		<div id="selector">
+		  <section class="main">
+		        <div class="wrapper-demo">
+		          <div id="dd" class="wrapper-dropdown-1" tabindex="1">
+		            <span>Arizona</span>
+		              <ul class="dropdown months" tabindex="1">
+				        <li class="thisSwitch">Alabama</li>
+						<li class="thisSwitch">Alaska</li>
+						<li class="thisSwitch">Arizona</li>
+						<li class="thisSwitch">Arkansas</li>
+						<li class="thisSwitch">California</li>
+						<li class="thisSwitch">Colorado</li>
+						<li class="thisSwitch">Connecticut</li>
+						<li class="thisSwitch">Delaware</li>
+						<li class="thisSwitch">Florida</li>
+						<li class="thisSwitch">Georgia</li>
+						<li class="thisSwitch">Hawaii</li>
+						<li class="thisSwitch">Idaho</li>
+						<li class="thisSwitch">Illinois</li>
+						<li class="thisSwitch">Indiana</li>
+						<li class="thisSwitch">Iowa</li>
+						<li class="thisSwitch">Kansas</li>
+						<li class="thisSwitch">Kentucky</li>
+						<li class="thisSwitch">Louisiana</li>
+						<li class="thisSwitch">Maine</li>
+						<li class="thisSwitch">Maryland</li>
+						<li class="thisSwitch">Massachusetts</li>
+						<li class="thisSwitch">Michigan</li>
+						<li class="thisSwitch">Minnesota</li>
+						<li class="thisSwitch">Mississippi</li>
+						<li class="thisSwitch">Missouri</li>
+						<li class="thisSwitch">Montana</li>
+						<li class="thisSwitch">Nebraska</li>
+						<li class="thisSwitch">Nevada</li>
+						<li class="thisSwitch">New Hampshire</li>
+						<li class="thisSwitch">New Jersey</li>
+						<li class="thisSwitch">New Mexico</li>
+						<li class="thisSwitch">New York</li>
+						<li class="thisSwitch">North Carolina</li>
+						<li class="thisSwitch">North Dakota</li>
+						<li class="thisSwitch">Ohio</li>
+						<li class="thisSwitch">Oklahoma</li>
+						<li class="thisSwitch">Oregon</li>
+						<li class="thisSwitch">Pennsylvania</li>
+						<li class="thisSwitch">Rhode Island</li>
+						<li class="thisSwitch">South Carolina</li>
+						<li class="thisSwitch">South Dakota</li>
+						<li class="thisSwitch">Tennessee</li>
+						<li class="thisSwitch">Texas</li>
+						<li class="thisSwitch">Utah</li>
+						<li class="thisSwitch">Vermont</li>
+						<li class="thisSwitch">Virginia</li>
+						<li class="thisSwitch">Washington</li>
+						<li class="thisSwitch">West Virginia</li>
+						<li class="thisSwitch">Wisconsin</li>
+						<li class="thisSwitch">Wyoming</li>
+		              </ul>
+		          </div>
+		        ​</div>
+		</section>
+		</div>
+		</div>
+
+	<div id="listing" class="toggle"></div>
+
+	<div id="map" class="toggle">
 
 	<div id="infobox" style="">
 		<div class="info-wrapper">
@@ -114,8 +181,8 @@
 		<div id="address" class="stat"></div>
 		<div id="phone" class="stat"></div>
 		<div id="website" class="stat"></div>
-		<div id="area" class="stat"></div>
-		<div id="notes" class="stat"></div>
+<!-- 		<div id="area" class="stat"></div>
+		<div id="notes" class="stat"></div> -->
 		</div>
 	</div>
 
@@ -123,15 +190,11 @@
 
 	</div>
 
-
-		
-	<div id="filter"><input type="search" id="filter_box" placeholder="Filter by name or location" /></div>
-
-	<div id="listing"></div>
+    
 
 </div>
 
-	<div class="byline">Source: Team Bar Finder, Star Tribune reporting | Graphic by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten, Star Tribune</a> | <a href="./data/maindata.xlsx" target="new_">Download Data</a></div>
+	<div class="byline">Source: Star Tribune reporting | Graphic by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten, Star Tribune</a><!--  | <a href="./data/maindata.xlsx" target="new_">Download Data</a> --></div>
 </div>
     </main>
 
@@ -149,6 +212,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     
       <script src="js/d3.v3.min.js"></script>
     

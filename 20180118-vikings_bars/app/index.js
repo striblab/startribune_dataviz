@@ -8,9 +8,58 @@ import utilsFn from './utils.js';
 
 utilsFn({ });
 
+     function DropDown(el)  { 
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype =  { 
+        initEvents : function()  { 
+          var obj = this;
+
+          obj.dd.on('click', function(event) { 
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function() { 
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function()  { 
+          return this.val;
+        },
+        getIndex : function()  { 
+          return this.index;
+        }
+      }
+
+      $(function()  { 
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function()  { 
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
+
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1PzsxrXT6YjRJlHH64m26HcfJMlfrOOLVIyKT_SMnIuw&sheet=bars", function(error, dataLoad) {
 
 var data = dataLoad.bars;
+
+  jQuery.ui.autocomplete.prototype._resizeMenu = function () {
+    var ul = this.menu.element;
+    ul.outerWidth(this.element.outerWidth());
+  }
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 var map = new mapboxgl.Map({
@@ -41,7 +90,7 @@ function spillBars(){
   .on("mousedown", function(d, i){ 
 
     $("#name, .pname").html(d.NAME);
-    $("#address, .paddress").html("<div>" + d.DISPLAY_ADDRESS + "</div><div>" + d.CITY + ", " + d.STATE + "</div>");
+    $("#address, .paddress").html("<div>" + d.NAME + "</div><div>" + d.DISPLAY_ADDRESS + "</div><div>" + d.CITY + ", " + d.STATE + "</div>");
     $("#phone, .pphone").html(d.PHONE);
     $("#website, .pwebsite").html("<a href='" + d.WEBSITE + "' target='new_'>Website</a> | <a href='https://maps.google.com?daddr=" + d.ADDRESS + "' target='new_'>Directions</a>");
   })
@@ -124,12 +173,36 @@ function spillBars(){
   		    popup.remove();
   	});
 
-    return "<div class='col'>" + d.NAME + "</div><div class='col places'>" + d.CITY + "</div><div class='col places'>" + d.STATE + "</div>";
+   //  var $input = $('#filter_box');
+
+   //  $input.autocomplete({
+   //  minLength: 3,
+   //   source: data.map(function(d) {
+   //     return {
+   //       value: d.INDEX,
+   //       label: "<div class='col'>" + d.NAME + "</div><div class='col places'>" + d.CITY + "</div><div class='col places'>" + d.STATE + "</div>"
+   //     }
+   //   }),
+   //   select: function(e, ui) {
+   //     e.preventDefault();
+   //     $input.val(ui.item.label);
+   //     if (ui.item.value) {
+   //             var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+   //              var pitch = $(this).attr("pitch") / random;
+   //              var bearing = $(this).attr("bearing") / random;
+   //              map.flyTo({ center: [d.LAT, d.LONG], zoom: 14, pitch: pitch, bearing: bearing });
+   //     }
+   //   }
+   // });
+
+    return "<div class='col'>" + d.NAME + "</div><div class='col places'>" + d.CITY + "</div><div class='col places'>" + d.STATE + "</div><div class='col'>" + d.PHONE + "</div>";
   });
 
-     $('#filter_box').keyup(function(i){
+     $('.thisSwitch').click(function(i){
+        $("#map").hide();
+        $("#listing").show();
         $('.card').hide();
-        var txt = $('#filter_box').val();
+        var txt = $(this).text();
         $('.card').each(function(){
            if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
                $(this).show();
@@ -138,12 +211,14 @@ function spillBars(){
     });
 
     $(".card").click(function() { 
-      var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-      var pitch = $(this).attr("pitch") / random;
-      var bearing = $(this).attr("bearing") / random;
-      map.flyTo({ center: [$(this).attr("longitude"), $(this).attr("latitude")], zoom: 14, pitch: pitch, bearing: bearing });
-      $(".card").removeClass("selected");
-      $(this).addClass("selected"); 
+        $("#map").show();
+        $("#listing").hide();
+        var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
+        var pitch = $(this).attr("pitch") / random;
+        var bearing = $(this).attr("bearing") / random;
+        map.flyTo({ center: [$(this).attr("longitude"), $(this).attr("latitude")], zoom: 14, pitch: pitch, bearing: bearing });
+        $(".card").removeClass("selected");
+        $(this).addClass("selected"); 
     });
 }
 
