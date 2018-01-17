@@ -216,6 +216,7 @@ function spillBars(){
         var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
         var pitch = $(this).attr("pitch") / random;
         var bearing = $(this).attr("bearing") / random;
+        $("#infobox").show();
         map.flyTo({ center: [$(this).attr("longitude"), $(this).attr("latitude")], zoom: 14, pitch: pitch, bearing: bearing });
         $(".card").removeClass("selected");
         $(this).addClass("selected"); 
@@ -242,5 +243,6 @@ spillBars();
 		    $(".card").removeClass("selected");
 		    $("#filter_box").val("");
 		    $(".card").show();
+        $("#infobox").hide();
 	});
 });
