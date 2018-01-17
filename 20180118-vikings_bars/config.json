@@ -17,6 +17,7 @@
       "https://cdn.polyfill.io/v2/polyfill.min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js",
       "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js",
+      "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js",
       "js/d3.v3.min.js",
       "js/mapbox-gl.js"
     ]
