@@ -129,27 +129,27 @@ function spillBars(){
             }
         });
 
-        var popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false
-    });
+   //      var popup = new mapboxgl.Popup({
+   //      closeButton: false,
+   //      closeOnClick: false
+   //  });
 
-  	map.on('mousemove', function(e) {
-  	    var features = map.queryRenderedFeatures(e.point, { layers: ['dots-' + d.INDEX] });
-  	    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+  	// map.on('mousemove', function(e) {
+  	//     var features = map.queryRenderedFeatures(e.point, { layers: ['dots-' + d.INDEX] });
+  	//     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
-  	    if (!features.length) {
-  	        popup.remove();
-  	        return;
-  	    }
+  	//     if (!features.length) {
+  	//         popup.remove();
+  	//         return;
+  	//     }
 
-  	    var feature = features[0];
+  	//     var feature = features[0];
 
-  	    popup.setLngLat(e.lngLat)
-  	        .setHTML(feature.properties.title)
-  	        .addTo(map);
+  	//     popup.setLngLat(e.lngLat)
+  	//         .setHTML(feature.properties.title)
+  	//         .addTo(map);
 
-  	});
+  	// });
 
   	// $(".card").click(function(e) {
   	//     var features = map.queryRenderedFeatures(e.point, { layers: ['dots-' + d.INDEX] });
