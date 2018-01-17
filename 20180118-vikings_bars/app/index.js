@@ -41,9 +41,9 @@ function spillBars(){
   .on("mousedown", function(d, i){ 
 
     $("#name, .pname").html(d.NAME);
-    $("#address, .paddress").html(d.ADDRESS + ", " + d.CITY + ", " + d.STATE);
+    $("#address, .paddress").html("<div>" + d.DISPLAY_ADDRESS + "</div><div>" + d.CITY + ", " + d.STATE + "</div>");
     $("#phone, .pphone").html(d.PHONE);
-    $("#website, .pwebsite").html("<a href='" + d.WEBSITE + "' target='new_'>Website</a> | <a href='https://www.google.com/maps/dir/" + d.ADDRESS + "' target='new_'>Directions</a>");
+    $("#website, .pwebsite").html("<a href='" + d.WEBSITE + "' target='new_'>Website</a> | <a href='https://maps.google.com?daddr=" + d.ADDRESS + "' target='new_'>Directions</a>");
   })
   .html(function(d){ 
 
@@ -102,23 +102,23 @@ function spillBars(){
 
   	});
 
-  	$(".card").click(function(e) {
-  	    var features = map.queryRenderedFeatures(e.point, { layers: ['dots-' + d.INDEX] });
+  	// $(".card").click(function(e) {
+  	//     var features = map.queryRenderedFeatures(e.point, { layers: ['dots-' + d.INDEX] });
 
-  	    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+  	//     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
-  	    if (!features.length) {
-  	        popup.remove();
-  	        return;
-  	    }
+  	//     if (!features.length) {
+  	//         popup.remove();
+  	//         return;
+  	//     }
 
-  	    var feature = features[0];
-  	    var placeName = ""; 
+  	//     var feature = features[0];
+  	//     var placeName = ""; 
 
-  	    popup.setLngLat([$(this).attr("longitude"), $(this).attr("latitude")])
-  	        .setHTML($(this).attr("placeName"))
-  	        .addTo(map);
-  	});
+  	//     popup.setLngLat([$(this).attr("longitude"), $(this).attr("latitude")])
+  	//         .setHTML($(this).attr("placeName"))
+  	//         .addTo(map);
+  	// });
 
   	$(".zoom").click(function() {
   		    popup.remove();
