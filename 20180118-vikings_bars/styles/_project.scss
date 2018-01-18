@@ -110,6 +110,12 @@ footer {
     display:inline-block;
 }
 
+.clicky {
+  border:1px solid black;
+  color:black;
+  font-weight:normal;
+}
+
 .geocoder, .mapboxgl-ctrl-geocoder {
     width:100%;
     margin-bottom:10px;
