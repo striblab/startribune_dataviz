@@ -19,7 +19,7 @@
       "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js",
       "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js",
       "js/d3.v3.min.js",
-      "js/mapbox-gl.js"
+      "https://api.tiles.mapbox.com/mapbox-gl-js/v0.43.0/mapbox-gl.js"
     ]
   },
 
