@@ -23,8 +23,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
     center: [-109.160156, 42.916206],
     zoom: 2,
-    minZoom: 2,
-    interactive: false
+    minZoom: 2
 });
 
 // map.addControl(new mapboxgl.NavigationControl());
