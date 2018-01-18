@@ -100,8 +100,10 @@ function spillBars(){
 
         if (thisState != d.STATE) {
           thisState = d.STATE;
-          newState = "<div class='stateName'>" + thisState + "</div>";
+          newState = "<li class='thisSwitch'>" + thisState + "</li>";
         }
+
+       $("#switches").append(newState);
 
         map.addLayer({
             "id": "dots-" + d.INDEX,
