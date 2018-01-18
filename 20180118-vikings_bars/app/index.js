@@ -49,7 +49,7 @@ function spillBars(){
   .on("mousedown", function(d, i){ 
 
     $("#name, .pname").html(d.NAME);
-    $("#address, .paddress").html("<div>" + d.NAME + "</div><div>" + d.DISPLAY_ADDRESS + "</div><div>" + d.CITY + ", " + d.STATE + "</div>");
+    $("#address, .paddress").html("<div>" + d.NAME + "</div><div>" + d.DISPLAY_ADDRESS + "</div><div>" + d.CITY + ", " + d.AB + "</div>");
     $("#phone, .pphone").html(d.PHONE);
     $("#website, .pwebsite").html("<a href='" + d.WEBSITE + "' target='new_'>Website</a> | <a href='https://maps.google.com?daddr=" + d.ADDRESS + "' target='new_'>Directions</a>");
   })
@@ -156,7 +156,7 @@ function spillBars(){
    //   }
    // });
 
-    return "<div class='col'>" + d.NAME + "</div><div class='col places'>" + d.CITY + "</div><div class='col places'>" + d.STATE + "</div><div class='col'>" + d.PHONE + "</div>";
+    return "<div class='col'>" + d.NAME + "</div><div class='col places'>" + d.CITY + "</div><div class='col places hideme'>" + d.STATE + "</div><div class='col places'>" + d.AB + "</div><div class='col'>" + d.PHONE + "</div>";
   });
 
      $('.thisSwitch').click(function(i){
