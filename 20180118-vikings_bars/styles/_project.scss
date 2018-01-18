@@ -49,6 +49,10 @@
   text-decoration:underline;
 }
 
+.return:hover {
+  cursor:pointer;
+}
+
 #listing {
 	overflow-x:hidden;
 	overflow-y:auto;
@@ -59,6 +63,10 @@
 
 .vikings {
 	background-color:#4F2683;
+}
+
+.mapify:hover {
+  cursor:pointer;
 }
 
 footer {
@@ -99,10 +107,25 @@ footer {
     border-radius: 5px;
     padding: 0 7px;
     margin-bottom: 3px;
+    display:inline-block;
+}
+
+.geocoder, .mapboxgl-ctrl-geocoder {
+    width:100%;
+    margin-bottom:10px;
+ }
+
+.geocoder-pin-right {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass, .mapboxgl-ctrl-logo {
+    display:none !important;
 }
 
 .chatter {
     line-height:160%;
+    font-size:1.3em;
 }
 
 .chartTitle {

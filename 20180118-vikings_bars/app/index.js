@@ -21,12 +21,13 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LF
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
-    center: [-95.712891, 37.090240],
+    center: [-109.160156, 42.916206],
     zoom: 2,
-    minZoom: 2
+    minZoom: 2,
+    interactive: false
 });
 
-map.addControl(new mapboxgl.NavigationControl());
+// map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 
 map.on('load', function () {
@@ -229,24 +230,36 @@ function spillBars(){
 
 spillBars();
 
+
+
 });
 
-// $( document ).ready(function() {
-//     if ($("#wrapper").width() < 920) { map.flyTo({ center: center, zoom: 8, pitch: 0, bearing: 0 }); }
-//     else { map.flyTo({ center: center, zoom: 10 }); }
-//     $(window).resize(function() {
-//     if ($("#wrapper").width() < 920) { map.flyTo({ center: center, zoom: 8, pitch: 0, bearing: 0 }); }
-//     else { map.flyTo({ center: center, zoom: 9 }); }
-//     });
+$( document ).ready(function() {
+    if ($("#wrapper").width() < 520) { map.flyTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 }); }
+    else { map.flyTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 }); }
+    $(window).resize(function() {
+    if ($("#wrapper").width() < 520) { map.flyTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 }); }
+    else { map.flyTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 }); }
+    });
 
-// });
+});
 
-	$(".zoom").click(function() {
-		    map.flyTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 });
-		    $(".stat").html("");
-		    $(".card").removeClass("selected");
-		    $("#filter_box").val("");
-		    $(".card").show();
-        $("#infobox").hide();
-	});
+    $(".zoom, .mapify").click(function() {
+          map.flyTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 });
+          $(".stat").html("");
+          $(".card").removeClass("selected");
+          $("#filter_box").val("");
+          $(".card").show();
+          $("#infobox").hide();
+          $("#map").show();
+          $("#listing").hide();
+          $("#selectText").html('Select a state');
+    });
+
+    $(".return").click(function() {
+        $("#map").hide();
+        $("#listing").show();
+        $(".card").show();
+    });
+
 });
