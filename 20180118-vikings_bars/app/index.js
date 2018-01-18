@@ -35,6 +35,8 @@ function spillBars(){
 
   var thisState = "Alaska";
 
+  $("#switches").append("<li class='thisSwitch'>" + thisState + "</li>");
+
 	d3.select("#listing").selectAll(".card")
   .data(data.sort(function(x, y){ return d3.ascending(x.STATE, y.STATE); })).enter().append("div")
   .attr("class",function(d) { return "card "; })
