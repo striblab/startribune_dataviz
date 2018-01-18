@@ -8,50 +8,6 @@ import utilsFn from './utils.js';
 
 utilsFn({ });
 
-     function DropDown(el)  { 
-        this.dd = el;
-        this.placeholder = this.dd.children('span');
-        this.opts = this.dd.find('ul.dropdown > li');
-        this.val = '';
-        this.index = -1;
-        this.initEvents();
-      }
-      DropDown.prototype =  { 
-        initEvents : function()  { 
-          var obj = this;
-
-          obj.dd.on('click', function(event) { 
-            $(this).toggleClass('active');
-            return false;
-          });
-
-          obj.opts.on('click',function() { 
-            var opt = $(this);
-            obj.val = opt.text();
-            obj.index = opt.index();
-            obj.placeholder.text(obj.val);
-          });
-        },
-        getValue : function()  { 
-          return this.val;
-        },
-        getIndex : function()  { 
-          return this.index;
-        }
-      }
-
-      $(function()  { 
-
-        var dd = new DropDown( $('#dd') );
-        var dd2 = new DropDown( $('#ddY') );
-
-        $(document).click(function()  { 
-          // all dropdowns
-          $('.wrapper-dropdown-1').removeClass('active');
-        });
-
-      });
-
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1PzsxrXT6YjRJlHH64m26HcfJMlfrOOLVIyKT_SMnIuw&sheet=bars", function(error, dataLoad) {
 
 var data = dataLoad.bars;
@@ -223,6 +179,50 @@ function spillBars(){
         $(".card").removeClass("selected");
         $(this).addClass("selected"); 
     });
+
+         function DropDown(el)  { 
+        this.dd = el;
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        this.initEvents();
+      }
+      DropDown.prototype =  { 
+        initEvents : function()  { 
+          var obj = this;
+
+          obj.dd.on('click', function(event) { 
+            $(this).toggleClass('active');
+            return false;
+          });
+
+          obj.opts.on('click',function() { 
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+          });
+        },
+        getValue : function()  { 
+          return this.val;
+        },
+        getIndex : function()  { 
+          return this.index;
+        }
+      }
+
+      $(function()  { 
+
+        var dd = new DropDown( $('#dd') );
+        var dd2 = new DropDown( $('#ddY') );
+
+        $(document).click(function()  { 
+          // all dropdowns
+          $('.wrapper-dropdown-1').removeClass('active');
+        });
+
+      });
 }
 
 spillBars();
