@@ -150,7 +150,7 @@ function spillBars(){
    //             var random = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
    //              var pitch = $(this).attr("pitch") / random;
    //              var bearing = $(this).attr("bearing") / random;
-   //              map.flyTo({ center: [d.LAT, d.LONG], zoom: 14, pitch: pitch, bearing: bearing });
+   //              map.jumpTo({ center: [d.LAT, d.LONG], zoom: 14, pitch: pitch, bearing: bearing });
    //     }
    //   }
    // });
@@ -177,7 +177,7 @@ function spillBars(){
         var pitch = $(this).attr("pitch") / random;
         var bearing = $(this).attr("bearing") / random;
         $("#infobox").show();
-        map.flyTo({ center: [$(this).attr("longitude"), $(this).attr("latitude")], zoom: 14, pitch: pitch, bearing: bearing });
+        map.jumpTo({ center: [$(this).attr("longitude"), $(this).attr("latitude")], zoom: 14, pitch: pitch, bearing: bearing });
         $(".card").removeClass("selected");
         $(this).addClass("selected"); 
     });
@@ -234,17 +234,17 @@ spillBars();
 });
 
 $( document ).ready(function() {
-    if ($("#wrapper").width() < 520) { map.flyTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 }); }
-    else { map.flyTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 }); }
+    if ($("#wrapper").width() < 520) { map.jumpTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 }); }
+    else { map.jumpTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 }); }
     $(window).resize(function() {
-    if ($("#wrapper").width() < 520) { map.flyTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 }); }
-    else { map.flyTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 }); }
+    if ($("#wrapper").width() < 520) { map.jumpTo({ center: [-95.712891, 37.090240], zoom: 2, pitch: 0, bearing: 0 }); }
+    else { map.jumpTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 }); }
     });
 
 });
 
     $(".zoom, .mapify").click(function() {
-          map.flyTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 });
+          map.jumpTo({ center: [-109.160156, 42.916206], zoom: 2, pitch: 0, bearing: 0 });
           $(".stat").html("");
           $(".card").removeClass("selected");
           $("#filter_box").val("");
