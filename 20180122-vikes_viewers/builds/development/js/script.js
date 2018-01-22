@@ -30,7 +30,7 @@ $("#" + selected).show();
               x: 'x',
               xFormat: '%Y-%m-%d %H:%M:%S',
                 columns: [
-                  ['x',"2018-07-22 17:30:00","2018-07-22 17:45:00","2018-07-22 18:00:00","2018-07-22 18:15:00","2018-07-22 18:30:00","2018-07-22 18:45:00","2018-07-22 19:00:00","2018-07-22 19:15:00","2018-07-22 19:30:00","2018-07-22 19:45:00","2018-07-22 20:00:00","2018-07-22 20:15:00","2018-07-22 20:30:00","2018-07-22 20:45:00"],
+                  ['x',"2018-07-22 5:30:00","2018-07-22 5:45:00","2018-07-22 6:00:00","2018-07-22 6:15:00","2018-07-22 6:30:00","2018-07-22 6:45:00","2018-07-22 7:00:00","2018-07-22 7:15:00","2018-07-22 7:30:00","2018-07-22 7:45:00","2018-07-22 8:00:00","2018-07-22 8:15:00","2018-07-22 8:30:00","2018-07-22 8:45:00"],
                   ['Viewers',842704,969024,1029588,1033048,1017475,1022666,1007092,960372,970754,925764,744072,794254,721577,228413],
                 ],
             type: 'line',
@@ -67,23 +67,23 @@ $("#" + selected).show();
                     padding: {right: 0, left: 0},
                     tick: {
                         count: 6,
-                        values: ['2018-07-22 17:30:00','2018-07-22 18:00:00','2018-07-22 18:30:00','2018-07-22 19:00:00','2018-07-22 19:30:00','2018-07-22 20:00:00','2018-07-22 20:30:00'],
+                        values: ['2018-07-22 5:30:00','2018-07-22 6:00:00','2018-07-22 6:30:00','2018-07-22 7:00:00','2018-07-22 7:30:00','2018-07-22 8:00:00','2018-07-22 8:30:00'],
                         multiline: false,
-                        format: d3.time.format("%H:%M")
+                        format: d3.time.format("%-H:%M pm")
                     }
                 }
             },
           grid: {
               x: {
               lines: [
-                    {value: '2018-07-22 17:49:00', text: 'Vikings take 7-0 lead', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 18:08:00', text: 'Eagles score on INT', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 18:26:00', text: 'Eagles lead 14-7', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 18:49:00', text: 'Eagles TD off Keenum fumble', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 19:07:00', text: 'FG puts Eagles up 24-7', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 19:41:00', text: 'Eagles score to open second half', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 19:57:00', text: 'Eagles take 38-7 lead', position: 'start', class:'powerline'},
-                    {value: '2018-07-22 20:25:00', text: 'Keenum INT', position: 'start', class:'powerline'}
+                    {value: '2018-07-22 5:49:00', text: 'Vikings take 7-0 lead', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 6:08:00', text: 'Eagles score on INT', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 6:26:00', text: 'Eagles lead 14-7', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 6:49:00', text: 'Eagles TD off Keenum fumble', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 7:07:00', text: 'FG puts Eagles up 24-7', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 7:41:00', text: 'Eagles score to open second half', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 7:57:00', text: 'Eagles take 38-7 lead', position: 'start', class:'powerline'},
+                    {value: '2018-07-22 8:25:00', text: 'Keenum INT', position: 'start', class:'powerline'}
 
               ]
               }

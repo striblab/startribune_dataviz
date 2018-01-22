@@ -95,3 +95,9 @@ h3 {
     cursor: pointer;
     margin: 0 !important;
 }
+
+@media (max-width:520px) {
+    #wrapper {
+        width:100%;
+    }
+}
