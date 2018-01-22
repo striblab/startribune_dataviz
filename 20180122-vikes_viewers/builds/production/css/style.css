@@ -1844,8 +1844,10 @@ body,
   font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif;
 }
 
-.slide {
-  display: none;
+#wrapper {
+  width: 520px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #chart .c3-line {
@@ -1860,20 +1862,8 @@ body,
   line-height: 160%;
 }
 
-.c3-texts-Henry .c3-text-1, .c3-texts-Henry .c3-text-2, .c3-texts-Henry .c3-text-3 {
-  opacity: 0 !important;
-}
-
-.c3-texts-Maverick .c3-text-0, .c3-texts-Maverick .c3-text-2, .c3-texts-Maverick .c3-text-3 {
-  opacity: 0 !important;
-}
-
-.c3-texts-Mohamed .c3-text-0, .c3-texts-Mohamed .c3-text-1, .c3-texts-Mohamed .c3-text-3 {
-  opacity: 0 !important;
-}
-
-.c3-texts-Xavier .c3-text-1, .c3-texts-Xavier .c3-text-1, .c3-texts-Xavier .c3-text-2 {
-  opacity: 0 !important;
+.vikings {
+  background-color: #4F2683;
 }
 
 .legendary {
@@ -1943,4 +1933,10 @@ h3 {
   color: #fff !important;
   cursor: pointer;
   margin: 0 !important;
+}
+
+@media (max-width: 520px) {
+  #wrapper {
+    width: 100%;
+  }
 }
