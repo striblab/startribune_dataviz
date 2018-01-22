@@ -31,7 +31,7 @@ The following are probably already installed on your computer if you have worked
 
 ### Install
 
-1. Get code and enter project: `git clone https://github.com/striblab/20180109-mohamed.git && cd 20170518-babynames.git`
+1. Get code and enter project: `git clone https://github.com/striblab/20180109-mohamed.git && cd 20180109-mohamed.git`
 2. Install local dependencies: `npm install`
 
 ### Local development
