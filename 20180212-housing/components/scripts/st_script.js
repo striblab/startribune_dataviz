@@ -181,6 +181,10 @@ $('.onoffswitch :checkbox').change(function() {
 
 $(".zoom").click(function() {
   map.jumpTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
+  $('#cities').animate({scrollTop : 0},800);
+  $(".row").removeClass("selected");
+  $(".row:contains('Richfield')").addClass("selected");
+  metricLoad("Richfield");
 });
 
  map.addSource('mncities', {
