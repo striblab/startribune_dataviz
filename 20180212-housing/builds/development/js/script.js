@@ -422,6 +422,7 @@ function metricLoad(city){
                 },
                 x: {
                     type: 'timeseries',
+                    padding: {right: 0, left: 0},
                     // label: {
                     //   text: 'Price per square foot over time',
                     //   position: 'inner-center'
