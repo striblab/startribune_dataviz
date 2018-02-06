@@ -1,0 +1,26 @@
+{
+  "name": "data-viz-workflows",
+  "version": "0.0.1",
+  "description": "template workflow for data viz",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "David Braunger and Frey Hargarten",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-jsonminify": "^1.0.0",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "jquery": "^3.1.1",
+    "mustache": "^2.2.1"
+  }
+}
