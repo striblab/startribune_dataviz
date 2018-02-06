@@ -64,26 +64,27 @@ $( document ).ready(function() {
 $('#filter_box').on('keyup search', function(e){
     $('.row').hide();
 
-    if (checked){
+    // if (checked){
     var txt = $('#filter_box').val();
     $('.row').each(function(){
        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
            $(this).show();
        }
     });
-    $('.row').each(function(){
-       if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
-           $(this).hide();
-       }
-     });
-    } else {
-    var txt = $('#filter_box').val();
-    $('.row').each(function(){
-       if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) && ($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1)){
-           $(this).show();
-       }
-    });     
-    }
+    // $('.row').each(function(){
+    //    if($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1){
+    //        $(this).hide();
+    //    }
+    //  });
+    // } 
+    // else {
+    // var txt = $('#filter_box').val();
+    // $('.row').each(function(){
+    //    if(($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1) && ($(this).text().toUpperCase().indexOf("(MPLS)") != -1 || $(this).text().toUpperCase().indexOf("(STP)") != -1)){
+    //        $(this).show();
+    //    }
+    // });     
+    // }
 });
 
 $(".th").click(function() {
@@ -105,8 +106,8 @@ $(".row").click(function() {
   var bearing = 0;
   var longitude = $(this).attr("longitude");
   var latitude = $(this).attr("latitude");
-  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.flyTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
-  else { map.flyTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.jumpTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
+  else { map.jumpTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
   metricLoad($(this).find(".name").text());
 });
 
@@ -159,7 +160,7 @@ $('.onoffswitch :checkbox').change(function() {
     map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
     map.setLayoutProperty('mncities-layer', 'visibility', 'none');
     map.setLayoutProperty('wicities-layer', 'visibility', 'none');
-    map.flyTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
+    map.jumpTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
     metricLoad("(MPLS) Bottineau");
 
     $(".row").removeClass("selected");
@@ -178,6 +179,9 @@ $('.onoffswitch :checkbox').change(function() {
     console.log(checked);
 });
 
+$(".zoom").click(function() {
+  map.jumpTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
+});
 
  map.addSource('mncities', {
    type: 'geojson',
@@ -330,7 +334,7 @@ $('.onoffswitch :checkbox').change(function() {
 });
 
 function reset(){
-  map.flyTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
+  map.jumpTo({ center: [-93.28469849, 45.01832962], zoom: 7.8, pitch:0, bearing:0 });
   $('#filter_box').val("");
   $('.row').show();
 }
