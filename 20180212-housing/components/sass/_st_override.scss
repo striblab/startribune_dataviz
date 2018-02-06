@@ -28,12 +28,16 @@ body {
 }
 
 .legendary {
-    padding:4px;
+    padding:7px;
     color: #fff;
-    font-weight:bold;
     border-radius: 5px;
     padding: 0 7px;
     margin-bottom: 3px;
+    display:inline-block;
+}
+
+.gray3 {
+  font-weight:normal !important;
 }
 
 .byline {
@@ -61,13 +65,23 @@ body {
 }
 
 .th { 
-  padding:5px; 
+  padding:1px; 
   font-weight:900;
 }
 
 .th:hover {
   opacity:0.8;
   cursor:pointer;
+}
+
+.zoom {
+    font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif;
+    bottom: 1px;
+    right:3px;
+    color: #ffffff;
+    font-size: 1.2em;
+    position: absolute;
+    z-index: 2;
 }
 
 .selected3 {
