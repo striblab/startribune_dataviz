@@ -1,4 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
 d3.json("./shapefiles/mn_places.json", function(error, mncities) {
 d3.json("./shapefiles/wi_places.json", function(error, wicities) {
 d3.json("./shapefiles/mpls_nb.json", function(error, mplsnb) {
@@ -108,7 +121,7 @@ $(".row").click(function() {
   var longitude = $(this).attr("longitude");
   var latitude = $(this).attr("latitude");
   if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.jumpTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
-  else { map.jumpTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+  else { map.jumpTo({ center: [longitude, latitude], zoom: 10, pitch: pitch, bearing: bearing }); }
   metricLoad($(this).find(".name").text());
 });
 
