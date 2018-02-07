@@ -2362,7 +2362,7 @@ body {
 }
 
 #map {
-  height: 330px;
+  height: 350px;
   width: 100%;
 }
 
@@ -2370,13 +2370,21 @@ body {
   display: none !important;
 }
 
+.mapboxgl-canvas {
+  position: static !important;
+}
+
 #listing {
   float: left;
   width: 30%;
 }
 
+#filter {
+  margin-bottom: 10px;
+}
+
 #cities {
-  height: 335px;
+  height: 435px;
   overflow-y: auto;
 }
 

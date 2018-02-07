@@ -1,3 +1,16 @@
+$.urlParam = function(name){
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results != null) { return results[1] || 0; }
+  else { return null; }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null){
+$(".slide").hide();
+$("#" + selected).show();
+}
+
 d3.json("./shapefiles/mn_places.json", function(error, mncities) {
 d3.json("./shapefiles/wi_places.json", function(error, wicities) {
 d3.json("./shapefiles/mpls_nb.json", function(error, mplsnb) {
@@ -107,7 +120,7 @@ $(".row").click(function() {
   var longitude = $(this).attr("longitude");
   var latitude = $(this).attr("latitude");
   if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.jumpTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
-  else { map.jumpTo({ center: [longitude, latitude], zoom: 11.5, pitch: pitch, bearing: bearing }); }
+  else { map.jumpTo({ center: [longitude, latitude], zoom: 10, pitch: pitch, bearing: bearing }); }
   metricLoad($(this).find(".name").text());
 });
 
@@ -160,7 +173,7 @@ $('.onoffswitch :checkbox').change(function() {
     map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
     map.setLayoutProperty('mncities-layer', 'visibility', 'none');
     map.setLayoutProperty('wicities-layer', 'visibility', 'none');
-    map.jumpTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
+    map.jumpTo({ center: [-93.202515, 44.969656], zoom: 11.5, pitch:0, bearing:0 });
     metricLoad("(MPLS) Bottineau");
 
     $(".row").removeClass("selected");
@@ -360,8 +373,8 @@ function metricLoad(city){
     else if (cityData[0].IndexScore >= 50) { color = "#fee391"; }
 
     
-    $("#districtName").css('background-color',color);
-    $("#indexRow").css('border',"3px solid " + color);
+    // $("#districtName").css('background-color',color);
+    // $("#indexRow").css('border',"3px solid " + color);
     
     $("#days").html(cityData[0].DaysMarket);
     $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
