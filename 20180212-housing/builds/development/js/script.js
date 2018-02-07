@@ -174,7 +174,7 @@ $('.onoffswitch :checkbox').change(function() {
     map.setLayoutProperty('mplsnb-layer', 'visibility', 'visible');
     map.setLayoutProperty('mncities-layer', 'visibility', 'none');
     map.setLayoutProperty('wicities-layer', 'visibility', 'none');
-    map.jumpTo({ center: [-93.202515, 44.969656], zoom: 9.8, pitch:0, bearing:0 });
+    map.jumpTo({ center: [-93.202515, 44.969656], zoom: 11.5, pitch:0, bearing:0 });
     metricLoad("(MPLS) Bottineau");
 
     $(".row").removeClass("selected");
@@ -374,8 +374,8 @@ function metricLoad(city){
     else if (cityData[0].IndexScore >= 50) { color = "#fee391"; }
 
     
-    $("#districtName").css('background-color',color);
-    $("#indexRow").css('border',"3px solid " + color);
+    // $("#districtName").css('background-color',color);
+    // $("#indexRow").css('border',"3px solid " + color);
     
     $("#days").html(cityData[0].DaysMarket);
     $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
