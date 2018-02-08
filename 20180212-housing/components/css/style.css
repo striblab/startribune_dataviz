@@ -2351,8 +2351,8 @@ header[role="banner"] {
 }
 
 /* PROJECT STYLES */
-body {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+body, .chatter, .chartTitle, #wrapper, * {
+  font-family: "Benton Sans Condensed Medium",Helvetica,Arial,sans-serif !important;
 }
 
 #wrapper {
@@ -2366,12 +2366,24 @@ body {
   width: 100%;
 }
 
+#chartMarket {
+  height: 350px;
+}
+
+#chartHighlights {
+  height: 400px;
+}
+
 .mapboxgl-ctrl-attrib {
   display: none !important;
 }
 
 .mapboxgl-canvas {
   position: static !important;
+}
+
+.chatter {
+  line-height: 140%;
 }
 
 #listing {
