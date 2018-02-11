@@ -381,13 +381,11 @@ function metricLoad(city){
     $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
     $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
 
-    $("#income").html(d3.format("$,.0f")(cityData[0].MedianHHincome));
-    $("#homes").html(d3.format("%")(cityData[0].PctSingleFamilyUnits));
-    $("#apartments").html(d3.format("%")(cityData[0].PctLargeApartmentBldgs));
-    $("#kids").html(d3.format("%")(cityData[0].PctKids));
-    $("#renters").html(d3.format("%")(cityData[0].PctRenters));
-
-    console.log(cityData[0].PPSF2016);
+    // $("#income").html(d3.format("$,.0f")(cityData[0].MedianHHincome));
+    // $("#homes").html(d3.format("%")(cityData[0].PctSingleFamilyUnits));
+    // $("#apartments").html(d3.format("%")(cityData[0].PctLargeApartmentBldgs));
+    // $("#kids").html(d3.format("%")(cityData[0].PctKids));
+    // $("#renters").html(d3.format("%")(cityData[0].PctRenters));
 
     chart.load({
                 columns: [
@@ -395,6 +393,40 @@ function metricLoad(city){
                     ['PPSF', cityData[0].PPSF2003, cityData[0].PPSF2004, cityData[0].PPSF2005, cityData[0].PPSF2006, cityData[0].PPSF2007, cityData[0].PPSF2008, cityData[0].PPSF2009, cityData[0].PPSF2010, cityData[0].PPSF2011, cityData[0].PPSF2012, cityData[0].PPSF2013, cityData[0].PPSF2014, cityData[0].PPSF2015, cityData[0].PPSF2016, cityData[0].PPSF2017],
                 ]
     })
+
+}
+
+
+function chartHighlights(city){
+
+    var cityData = data.filter(function(d){ return d.name == city; })
+
+    if (String(city).indexOf("(MPLS)") != -1) { $("#districtName").html(cityData[0].CityState + ", Minneapolis, MN"); }
+    else if (String(city).indexOf("(STP)") != -1) { $("#districtName").html(cityData[0].CityState + ", St. Paul, MN"); }
+    else { $("#districtName").html(cityData[0].CityState); }
+
+    var color = "#888888";
+
+    if (cityData[0].IndexScore >= 300) { color = "#993404"; }
+    else if (cityData[0].IndexScore >= 240) { color = "#d95f0e"; }
+    else if (cityData[0].IndexScore>= 180) { color = "#fe9929"; }
+    else if (cityData[0].IndexScore >= 120) { color = "#fec44f"; }
+    else if (cityData[0].IndexScore >= 50) { color = "#fee391"; }
+
+    
+    // $("#districtName").css('background-color',color);
+    // $("#indexRow").css('border',"3px solid " + color);
+    
+    // $("#days").html(cityData[0].DaysMarket);
+    // $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
+    // $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
+    // $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
+
+    $(".income").html(d3.format("$,.0f")(cityData[0].MedianHHincome));
+    $(".homes").html(d3.format("%")(cityData[0].PctSingleFamilyUnits));
+    $(".apartments").html(d3.format("%")(cityData[0].PctLargeApartmentBldgs));
+    $(".kids").html(d3.format("%")(cityData[0].PctKids));
+    $(".renters").html(d3.format("%")(cityData[0].PctRenters));
 
 }
 
@@ -468,10 +500,6 @@ metricLoad("Richfield");
 
 
 //charts
-
-function chartHighlights(){
-
-}
 
 function chartMarket(){
 

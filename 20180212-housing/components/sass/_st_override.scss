@@ -1,6 +1,8 @@
 /* PROJECT STYLES */
 body, .chatter, .chartTitle, #wrapper, * {
   font-family: "Benton Sans Condensed Medium",Helvetica,Arial,sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: normal;
 }
 
 #wrapper  {
@@ -14,12 +16,13 @@ body, .chatter, .chartTitle, #wrapper, * {
      width: 100%;
  }
 
+ .chartTitle {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
  #chartMarket {
       height:350px;
- }
-
- #chartHighlights {
-      height:400px;
  }
 
 .mapboxgl-ctrl-attrib  {
@@ -32,6 +35,7 @@ body, .chatter, .chartTitle, #wrapper, * {
 
 .chatter {
   line-height:140%;
+  font-size: 16px;
 }
 
 #listing  {
@@ -52,24 +56,19 @@ body, .chatter, .chartTitle, #wrapper, * {
     padding:7px;
     color: #fff;
     border-radius: 5px;
+    font-weight:bold;
     padding: 0 7px;
     margin-bottom: 3px;
     display:inline-block;
 }
 
-.gray3 {
-  font-weight:normal !important;
-}
-
 .byline {
-    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    font-size:0.7em;
-    color: #888;
-    padding-top:10px;
-    padding-bottom:10px;
-    text-align:left;
-    line-height:140%;
+    font-family: Benton Sans,Helvetica,Arial,sans-serif;
+    line-height: 1.4em;
+    letter-spacing: normal;
+    font-weight: normal;
+    margin: 0 0 1rem;
+    font-size: .85em;
 }
 
 #reference {
