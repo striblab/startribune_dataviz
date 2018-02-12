@@ -2484,6 +2484,11 @@ body, .chatter, .chartTitle, #wrapper, * {
   cursor: pointer;
 }
 
+.stretch:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .th, .th2 {
   padding: 1px;
   font-weight: 900;
