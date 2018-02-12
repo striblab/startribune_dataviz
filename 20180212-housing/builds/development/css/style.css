@@ -2484,12 +2484,12 @@ body, .chatter, .chartTitle, #wrapper, * {
   cursor: pointer;
 }
 
-.th {
+.th, .th2 {
   padding: 1px;
   font-weight: 900;
 }
 
-.th:hover {
+.th:hover, .th2:hover {
   opacity: 0.8;
   cursor: pointer;
 }
