@@ -524,8 +524,13 @@ function chartHighlights(){
     $(".cell").mouseover(function() {
       $(".value").hide();
       $(this).find(".value").show();
-
     });
+
+    $(".stretch").mouseover(function() {
+      $(".value").hide();
+      $(this).parent().find(".value").show();
+    });
+
 
 }
 
