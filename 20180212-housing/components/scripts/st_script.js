@@ -36,6 +36,15 @@ d3.select("#cities").selectAll(".row")
   return color;
 
   })
+  .style('color',function(d) { 
+
+    var color = "#000000";
+
+  if (d.IndexScore >= 300) { color = "#ffffff"; }
+
+  return color;
+
+  })
   .attr("latitude",function(d) { return d.latitude; })
   .attr("longitude",function(d) { return d.longitude; })
   .html(function(d,i){ 
@@ -397,37 +406,172 @@ function metricLoad(city){
 }
 
 
-function chartHighlights(city){
+function chartHighlights(){
 
-    var cityData = data.filter(function(d){ return d.name == city; })
+  $("#chartHead").html('<div class="cell stretch th">Community</div> \
+      <div class="cell th selected" data="index">Index score</div> \
+      <div class="cell th mobilekill" data="market">avg market days</div> \
+      <div class="cell th mobilekill" data="change">% change ppsf</div> \
+      <div class="cell th mobilekill" data="distressed">% distressed</div> \
+      <div class="cell th mobilekill" data="price">% original price</div> \
+      <div class="cell th" data="family">% single family</div> \
+      <div class="cell th" data="renters">% renters</div> \
+      <div class="cell th" data="kids">% kids</div> \
+      <div class="cell th" data="income">median income</div>');
 
-    if (String(city).indexOf("(MPLS)") != -1) { $("#districtName").html(cityData[0].CityState + ", Minneapolis, MN"); }
-    else if (String(city).indexOf("(STP)") != -1) { $("#districtName").html(cityData[0].CityState + ", St. Paul, MN"); }
-    else { $("#districtName").html(cityData[0].CityState); }
+  d3.select("#chartHighlights").selectAll(".listrow")
+    .data(data.filter(function(d){ return d.IndexScore >= 250; }).sort(function(a,b) { return b.IndexScore - a.IndexScore; })).enter().append("div")
+    .attr("class",function(d) { return "listrow "; })
+    .style('background-color',function(d) { 
 
-    var color = "#888888";
+    //   var color = "#888888";
 
-    if (cityData[0].IndexScore >= 300) { color = "#993404"; }
-    else if (cityData[0].IndexScore >= 240) { color = "#d95f0e"; }
-    else if (cityData[0].IndexScore>= 180) { color = "#fe9929"; }
-    else if (cityData[0].IndexScore >= 120) { color = "#fec44f"; }
-    else if (cityData[0].IndexScore >= 50) { color = "#fee391"; }
+    // if (d.IndexScore >= 300) { color = "#993404"; }
+    // else if (d.IndexScore >= 240) { color = "#d95f0e"; }
+    // else if (d.IndexScore >= 180) { color = "#fe9929"; }
+    // else if (d.IndexScore >= 120) { color = "#fec44f"; }
+    // else if (d.IndexScore >= 0) { color = "#fee391"; }
 
-    
-    // $("#districtName").css('background-color',color);
-    // $("#indexRow").css('border',"3px solid " + color);
-    
-    // $("#days").html(cityData[0].DaysMarket);
-    // $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
-    // $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
-    // $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
+    // return color;
 
-    $(".income").html(d3.format("$,.0f")(cityData[0].MedianHHincome));
-    $(".homes").html(d3.format("%")(cityData[0].PctSingleFamilyUnits));
-    $(".apartments").html(d3.format("%")(cityData[0].PctLargeApartmentBldgs));
-    $(".kids").html(d3.format("%")(cityData[0].PctKids));
-    $(".renters").html(d3.format("%")(cityData[0].PctRenters));
+    })
+    .html(function(d,i){ 
 
+      var class1 = "";
+      var class2 = "";
+      var class3 = "";
+      var class4 = "";
+      var class5 = "";
+      var class6 = "";
+      var class7 = "";
+      var class8 = "";
+      var class9 = "";
+
+      if (d.IndexScore >= 300) { class1 = "orange5"; }
+      else if (d.IndexScore >= 240) { class1 = "orange4"; }
+      else if (d.IndexScore >= 180) { class1 = "orange3"; }
+      else if (d.IndexScore >= 120) { class1 = "orange2"; }
+      else if (d.IndexScore >= 0) { class1 = "orange1"; }
+
+      if (d.DaysMarket >= 120) { class2 = "orange5"; }
+      else if (d.DaysMarket >= 90) { class2 = "orange4"; }
+      else if (d.DaysMarket >= 60) { class2 = "orange3"; }
+      else if (d.DaysMarket >= 30) { class2 = "orange2"; }
+      else if (d.DaysMarket >= 0) { class2 = "orange1"; }
+
+      if (d.PctChgfromAvg >= 0.20) { class3 = "orange5"; }
+      else if (d.PctChgfromAvg >= 0.15) { class3 = "orange4"; }
+      else if (d.PctChgfromAvg >= 0.10) { class3 = "orange3"; }
+      else if (d.PctChgfromAvg >= 0.05) { class3 = "orange2"; }
+      else if (d.PctChgfromAvg >= 0) { class3 = "orange1"; }
+
+      if (d.PctDistressed >= 0.08) { class4 = "orange5"; }
+      else if (d.PctDistressed >= 0.06) { class4 = "orange4"; }
+      else if (d.PctDistressed >= 0.04) { class4 = "orange3"; }
+      else if (d.PctDistressed >= 0.02) { class4 = "orange2"; }
+      else if (d.PctDistressed >= 0) { class4 = "orange1"; }
+
+      if (d.PctOrigPrice >= 0.08) { class5 = "orange5"; }
+      else if (d.PctOrigPrice >= 0.06) { class5 = "orange4"; }
+      else if (d.PctOrigPrice >= 0.04) { class5 = "orange3"; }
+      else if (d.PctOrigPrice >= 0.02) { class5 = "orange2"; }
+      else if (d.PctOrigPrice >= 0) { class5 = "orange1"; }
+
+      if (d.PctSingleFamilyUnits >= 0.9) { class6 = "orange5"; }
+      else if (d.PctSingleFamilyUnits >= 0.7) { class6 = "orange4"; }
+      else if (d.PctSingleFamilyUnits >= 0.5) { class6 = "orange3"; }
+      else if (d.PctSingleFamilyUnits >= 0.3) { class6 = "orange2"; }
+      else if (d.PctSingleFamilyUnits >= 0) { class6 = "orange1"; }
+
+      if (d.PctRenters >= 0.4) { class7 = "orange5"; }
+      else if (d.PctRenters >= 0.3) { class7 = "orange4"; }
+      else if (d.PctRenters >= 0.2) { class7 = "orange3"; }
+      else if (d.PctRenters >= 0.1) { class7 = "orange2"; }
+      else if (d.PctRenters >= 0) { class7 = "orange1"; }
+
+      if (d.PctKids >= 0.4) { class8 = "orange5"; }
+      else if (d.PctKids >= 0.3) { class8 = "orange4"; }
+      else if (d.PctKids >= 0.2) { class8 = "orange3"; }
+      else if (d.PctKids >= 0.1) { class8 = "orange2"; }
+      else if (d.PctKids >= 0) { class8 = "orange1"; }
+
+      if (d.MedianHHincome >= 110000) { class9 = "orange5"; }
+      else if (d.MedianHHincome >= 90000) { class9 = "orange4"; }
+      else if (d.MedianHHincome >= 70000) { class9 = "orange3"; }
+      else if (d.MedianHHincome >= 50000) { class9 = "orange2"; }
+      else if (d.MedianHHincome >= 30000) { class9 = "orange1"; }
+
+      return '<div class="cell stretch">' + d.name + '</div> \
+      <div class="cell ' + class1 + ' index"><span class="value">' + d.IndexScore + '</span></div> \
+      <div class="cell ' + class2 + ' mobilekill"><span class="value">' + d.DaysMarket + '</span></div> \
+      <div class="cell ' + class3 + ' mobilekill"><span class="value">' + d3.format("+%")(d.PctChgfromAvg) + '</span></div> \
+      <div class="cell ' + class4 + ' mobilekill"><span class="value">' + d3.format("+%.0f")(d.PctDistressed) + '</span></div> \
+      <div class="cell ' + class5 + ' mobilekill"><span class="value">' + d3.format("%.0f")(d.PctOrigPrice) + '</span></div> \
+      <div class="cell ' + class6 + '"><span class="value">' + d3.format("%.0f")(d.PctSingleFamilyUnits) + '</span></div> \
+      <div class="cell ' + class7 + '"><span class="value">' + d3.format("%.0f")(d.PctRenters) + '</span></div> \
+      <div class="cell ' + class8 + '"><span class="value">' + d3.format("%.0f")(d.PctKids) + '</span></div> \
+      <div class="cell ' + class9 + '"><span class="value">' + d3.format("$,")(d.MedianHHincome) + '</span></div>';
+    });
+
+    $(".th").click(function() {
+      $(".th").removeClass("selected");
+      $(this).addClass("selected");
+      if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
+      else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
+      tableSort("#chartHighlights",data,$(this).attr("data"),sorted);
+    });
+
+    $(".cell").mouseover(function() {
+      $(".value").hide();
+      $(this).find(".value").show();
+
+    });
+
+}
+
+chartHighlights();
+
+function tableSort(container,data,column,sorted){
+   
+  d3.select(container).selectAll(".listrow").sort(function(a, b) {
+          if (column == "index") { 
+        if (sorted == "descend") { return d3.descending(a.IndexScore, b.IndexScore); }
+        if (sorted == "ascend") { return d3.ascending(a.IndexScore, b.IndexScore); }
+     }
+
+          if (column == "market") { 
+        if (sorted == "descend") { return d3.descending(a.DaysMarket, b.DaysMarket); }
+        if (sorted == "ascend") { return d3.ascending(a.DaysMarket, b.DaysMarket); }
+     }
+          if (column == "change") { 
+        if (sorted == "descend") { return d3.descending(a.PctChgfromAvg, b.PctChgfromAvg); }
+        if (sorted == "ascend") { return d3.ascending(a.PctChgfromAvg, b.PctChgfromAvg); }
+     }
+          if (column == "distressed") { 
+        if (sorted == "descend") { return d3.descending(a.PctDistressed, b.PctDistressed); }
+        if (sorted == "ascend") { return d3.ascending(a.PctDistressed, b.PctDistressed); }
+     }
+          if (column == "price") { 
+        if (sorted == "descend") { return d3.descending(a.PctOrigPrice, b.PctOrigPrice); }
+        if (sorted == "ascend") { return d3.ascending(a.PctOrigPrice, b.PctOrigPrice); }
+     }
+          if (column == "family") { 
+        if (sorted == "descend") { return d3.descending(a.PctSingleFamilyUnits, b.PctSingleFamilyUnits); }
+        if (sorted == "ascend") { return d3.ascending(a.PctSingleFamilyUnits, b.PctSingleFamilyUnits); }
+     }
+          if (column == "renters") { 
+        if (sorted == "descend") { return d3.descending(a.PctRenters, b.PctRenters); }
+        if (sorted == "ascend") { return d3.ascending(a.PctRenters, b.PctRenters); }
+     }
+          if (column == "kids") { 
+        if (sorted == "descend") { return d3.descending(a.PctKids, b.PctKids); }
+        if (sorted == "ascend") { return d3.ascending(a.PctKids, b.PctKids); }
+     }
+          if (column == "income") { 
+        if (sorted == "descend") { return d3.descending(a.MedianHHincome, b.MedianHHincome); }
+        if (sorted == "ascend") { return d3.ascending(a.MedianHHincome, b.MedianHHincome); }
+     }
+    }).transition().duration(500);
 }
 
 // function loadChart(city){

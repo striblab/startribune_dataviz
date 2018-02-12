@@ -16,6 +16,45 @@ body, .chatter, .chartTitle, #wrapper, * {
      width: 100%;
  }
 
+.value {
+  font-weight:normal !important;
+  display:none;
+}
+
+
+ .cell {
+     width:8%;
+     display:inline-block;
+     vertical-align:top;
+     line-height:120%;
+     text-align:center;
+     height:18px;
+ }
+
+ .cell:hover,  .value:hover {
+  cursor:default;
+ }
+
+ .stretch.cell:hover, .index.cell:hover {
+    cursor:default;
+ }
+
+  .stretch {
+     width:20%;
+     display:inline-block;
+     text-align:left;
+ }
+
+ .th {
+    vertical-align:bottom;
+    height:auto;
+    font-size:0.9em;
+ }
+
+.listrow {
+  padding:2px;
+}
+
  .chartTitle {
     font-size: 1.5em;
     font-weight: 900;
@@ -23,6 +62,11 @@ body, .chatter, .chartTitle, #wrapper, * {
 
  #chartMarket {
       height:350px;
+      pointer-events:none !important;
+ }
+
+ .orange5 .value {
+ color:#ffffff !important;
  }
 
 .mapboxgl-ctrl-attrib  {
@@ -63,12 +107,17 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 .byline {
-    font-family: Benton Sans,Helvetica,Arial,sans-serif;
+    font-family: Benton Sans,Helvetica,Arial,sans-serif !important;
     line-height: 1.4em;
     letter-spacing: normal;
     font-weight: normal;
     margin: 0 0 1rem;
     font-size: .85em;
+}
+
+.byline a {
+  font-weight:normal !important;
+  font-family: Benton Sans,Helvetica,Arial,sans-serif !important;
 }
 
 #reference {
@@ -288,9 +337,31 @@ h5 {
 
 @media only screen and (max-width:500px)  {
 
+.cell, .th {
+    width: 15%;
+    font-size: 0.7em;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 120%;
+    text-align: center;
+    height: 13px;
+}
+
+.th {
+    font-size: 0.9em;
+    height: auto;
+    vertical-align:bottom;
+}
+
 .mobilekill {
   display:none;
 }
+
+.stretch {
+     width:20%;
+     display:inline-block;
+     text-align:left;
+ }
 
 .mobileshow {
   display:none;
