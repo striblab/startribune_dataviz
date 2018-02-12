@@ -110,8 +110,8 @@ $('#filter_box').on('keyup search', function(e){
     // }
 });
 
-$(".th").click(function() {
-  $(".th").removeClass("selected3");
+$(".th2").click(function() {
+  $(".th2").removeClass("selected3");
   $(this).addClass("selected3");
   if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
   else if ($(this).hasClass("selected3")) { $(this).addClass("toggled"); var sorted ="descend"; } 
@@ -519,7 +519,7 @@ function chartHighlights(){
       $(this).addClass("selected");
       if ($(this).hasClass("toggled")) { $(this).removeClass("toggled"); var sorted = "ascend"; }
       else if ($(this).hasClass("selected")) { $(this).addClass("toggled"); var sorted ="descend"; } 
-      tableSort("#chartHighlights",data,$(this).attr("data"),sorted);
+      tableSort2("#chartHighlights",data,$(this).attr("data"),sorted);
     });
 
     $(".cell").mouseover(function() {
@@ -532,7 +532,7 @@ function chartHighlights(){
 
 chartHighlights();
 
-function tableSort(container,data,column,sorted){
+function tableSort2(container,data,column,sorted){
    
   d3.select(container).selectAll(".listrow").sort(function(a, b) {
           if (column == "index") { 
