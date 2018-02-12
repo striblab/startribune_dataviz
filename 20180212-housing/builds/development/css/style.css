@@ -2353,6 +2353,8 @@ header[role="banner"] {
 /* PROJECT STYLES */
 body, .chatter, .chartTitle, #wrapper, * {
   font-family: "Benton Sans Condensed Medium",Helvetica,Arial,sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: normal;
 }
 
 #wrapper {
@@ -2366,12 +2368,56 @@ body, .chatter, .chartTitle, #wrapper, * {
   width: 100%;
 }
 
-#chartMarket {
-  height: 350px;
+.value {
+  font-weight: normal !important;
+  display: none;
 }
 
-#chartHighlights {
-  height: 400px;
+.cell {
+  width: 8%;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 120%;
+  text-align: center;
+  height: 18px;
+}
+
+.cell:hover, .value:hover {
+  cursor: default;
+}
+
+.stretch.cell:hover, .index.cell:hover {
+  cursor: default;
+}
+
+.stretch {
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+}
+
+.th {
+  vertical-align: bottom;
+  height: auto;
+  font-size: 0.9em;
+}
+
+.listrow {
+  padding: 2px;
+}
+
+.chartTitle {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+#chartMarket {
+  height: 350px;
+  pointer-events: none !important;
+}
+
+.orange5 .value {
+  color: #ffffff !important;
 }
 
 .mapboxgl-ctrl-attrib {
@@ -2384,6 +2430,7 @@ body, .chatter, .chartTitle, #wrapper, * {
 
 .chatter {
   line-height: 140%;
+  font-size: 16px;
 }
 
 #listing {
@@ -2404,24 +2451,24 @@ body, .chatter, .chartTitle, #wrapper, * {
   padding: 7px;
   color: #fff;
   border-radius: 5px;
+  font-weight: bold;
   padding: 0 7px;
   margin-bottom: 3px;
   display: inline-block;
 }
 
-.gray3 {
-  font-weight: normal !important;
+.byline {
+  font-family: Benton Sans,Helvetica,Arial,sans-serif !important;
+  line-height: 1.4em;
+  letter-spacing: normal;
+  font-weight: normal;
+  margin: 0 0 1rem;
+  font-size: .85em;
 }
 
-.byline {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 0.7em;
-  color: #888;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: left;
-  line-height: 140%;
+.byline a {
+  font-weight: normal !important;
+  font-family: Benton Sans,Helvetica,Arial,sans-serif !important;
 }
 
 #reference {
@@ -2668,8 +2715,30 @@ h5 {
   }
 }
 @media only screen and (max-width: 500px) {
+  .cell, .th {
+    width: 15%;
+    font-size: 0.7em;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 120%;
+    text-align: center;
+    height: 13px;
+  }
+
+  .th {
+    font-size: 0.9em;
+    height: auto;
+    vertical-align: bottom;
+  }
+
   .mobilekill {
     display: none;
+  }
+
+  .stretch {
+    width: 20%;
+    display: inline-block;
+    text-align: left;
   }
 
   .mobileshow {
