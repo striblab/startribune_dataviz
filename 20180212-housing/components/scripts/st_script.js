@@ -386,6 +386,7 @@ function metricLoad(city){
     // $("#indexRow").css('border',"3px solid " + color);
     
     $("#days").html(cityData[0].DaysMarket);
+    $("#daysC").html(cityData[0].diff);
     $("#change").html(d3.format("+%")(cityData[0].PctChgfromAvg));
     $("#distressed").html(d3.format("%")(cityData[0].PctDistressed));
     $("#ppsf").html(d3.format("%")(cityData[0].PctOrigPrice));
