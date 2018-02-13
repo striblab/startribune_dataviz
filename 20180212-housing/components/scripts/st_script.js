@@ -409,11 +409,11 @@ function metricLoad(city){
 function chartHighlights(){
 
   $("#chartHead").html('<div class="cell stretch th" data="name">Community</div> \
-      <div class="cell th selected" data="index">Index score</div> \
-      <div class="cell th" data="market">avg market days</div> \
-      <div class="cell th" data="change">% change ppsf</div> \
-      <div class="cell th" data="distressed">% distressed</div> \
-      <div class="cell th" data="price">% change market days</div> \
+      <div class="cell th selected" data="index">Housing index score</div> \
+      <div class="cell th" data="market">average market days</div> \
+      <div class="cell th" data="change">% change price per sqft</div> \
+      <div class="cell th" data="distressed">% distressed properties</div> \
+      <div class="cell th" data="price">change in market days</div> \
       <div class="cell th hideme" data="family">% single family</div> \
       <div class="cell th hideme" data="renters">% renters</div> \
       <div class="cell th hideme" data="kids">% kids</div> \
@@ -671,9 +671,9 @@ var chart = c3.generate({
     padding: padding,
     data: {
         xs: {
-            cities2: 'DaysMarket17',
-            cities: 'DaysMarket16',
-            cities3: 'DaysMarket15',
+          cities3: 'DaysMarket15',
+          cities: 'DaysMarket16',
+          cities2: 'DaysMarket17'  
         },
         // iris data from R
         columns: [
@@ -686,9 +686,9 @@ var chart = c3.generate({
         ],
         type: 'scatter',
         colors: {
-            'DaysMarket15': '#857AAA',
-            'DaysMarket16': '#3580A3',
-            'DaysMarket17': '#E07242'
+            'cities3': '#857AAA',
+            'cities': '#3580A3',
+            'cities2': '#E07242'
         },
     },
             legend: {
