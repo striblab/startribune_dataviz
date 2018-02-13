@@ -408,16 +408,16 @@ function metricLoad(city){
 
 function chartHighlights(){
 
-  $("#chartHead").html('<div class="cell stretch th">Community</div> \
+  $("#chartHead").html('<div class="cell stretch th" data="name">Community</div> \
       <div class="cell th selected" data="index">Index score</div> \
-      <div class="cell th mobilekill" data="market">avg market days</div> \
-      <div class="cell th mobilekill" data="change">% change ppsf</div> \
-      <div class="cell th mobilekill" data="distressed">% distressed</div> \
-      <div class="cell th mobilekill" data="price">% original price</div> \
-      <div class="cell th" data="family">% single family</div> \
-      <div class="cell th" data="renters">% renters</div> \
-      <div class="cell th" data="kids">% kids</div> \
-      <div class="cell th" data="income">median income</div>');
+      <div class="cell th" data="market">avg market days</div> \
+      <div class="cell th" data="change">% change ppsf</div> \
+      <div class="cell th" data="distressed">% distressed</div> \
+      <div class="cell th" data="price">% change market days</div> \
+      <div class="cell th hideme" data="family">% single family</div> \
+      <div class="cell th hideme" data="renters">% renters</div> \
+      <div class="cell th hideme" data="kids">% kids</div> \
+      <div class="cell th hideme" data="income">median income</div>');
 
   d3.select("#chartHighlights").selectAll(".listrow")
     .data(data.filter(function(d){ return d.IndexScore >= 250; }).sort(function(a,b) { return b.IndexScore - a.IndexScore; })).enter().append("div")
@@ -471,11 +471,11 @@ function chartHighlights(){
       else if (d.PctDistressed >= 0.02) { class4 = "orange2"; }
       else if (d.PctDistressed >= 0) { class4 = "orange1"; }
 
-      if (d.PctOrigPrice >= 0.08) { class5 = "orange5"; }
-      else if (d.PctOrigPrice >= 0.06) { class5 = "orange4"; }
-      else if (d.PctOrigPrice >= 0.04) { class5 = "orange3"; }
-      else if (d.PctOrigPrice >= 0.02) { class5 = "orange2"; }
-      else if (d.PctOrigPrice >= 0) { class5 = "orange1"; }
+      if (d.diff >= 20) { class5 = "orange5"; }
+      else if (d.diff >= 10) { class5 = "orange4"; }
+      else if (d.diff >= 0) { class5 = "orange3"; }
+      else if (d.diff <= -10) { class5 = "orange2"; }
+      else if (d.diff <= 0) { class5 = "orange1"; }
 
       if (d.PctSingleFamilyUnits >= 0.9) { class6 = "orange5"; }
       else if (d.PctSingleFamilyUnits >= 0.7) { class6 = "orange4"; }
@@ -503,14 +503,14 @@ function chartHighlights(){
 
       return '<div class="cell stretch">' + d.name + '</div> \
       <div class="cell ' + class1 + ' index"><span class="value">' + d.IndexScore + '</span></div> \
-      <div class="cell ' + class2 + ' mobilekill"><span class="value">' + d.DaysMarket + '</span></div> \
-      <div class="cell ' + class3 + ' mobilekill"><span class="value">' + d3.format("+%")(d.PctChgfromAvg) + '</span></div> \
-      <div class="cell ' + class4 + ' mobilekill"><span class="value">' + d3.format("+%.0f")(d.PctDistressed) + '</span></div> \
-      <div class="cell ' + class5 + ' mobilekill"><span class="value">' + d3.format("%.0f")(d.PctOrigPrice) + '</span></div> \
-      <div class="cell ' + class6 + '"><span class="value">' + d3.format("%.0f")(d.PctSingleFamilyUnits) + '</span></div> \
-      <div class="cell ' + class7 + '"><span class="value">' + d3.format("%.0f")(d.PctRenters) + '</span></div> \
-      <div class="cell ' + class8 + '"><span class="value">' + d3.format("%.0f")(d.PctKids) + '</span></div> \
-      <div class="cell ' + class9 + '"><span class="value">' + d3.format("$,")(d.MedianHHincome) + '</span></div>';
+      <div class="cell ' + class2 + ' "><span class="value">' + d.DaysMarket + '</span></div> \
+      <div class="cell ' + class3 + '"><span class="value">' + d3.format("+%")(d.PctChgfromAvg) + '</span></div> \
+      <div class="cell ' + class4 + '"><span class="value">' + d3.format("+%.0f")(d.PctDistressed) + '</span></div> \
+      <div class="cell ' + class5 + '"><span class="value">' + d3.format("+.0f")(d.diff) + '</span></div> \
+      <div class="cell ' + class6 + ' hideme"><span class="value">' + d3.format("%.0f")(d.PctSingleFamilyUnits) + '</span></div> \
+      <div class="cell ' + class7 + ' hideme"><span class="value">' + d3.format("%.0f")(d.PctRenters) + '</span></div> \
+      <div class="cell ' + class8 + ' hideme"><span class="value">' + d3.format("%.0f")(d.PctKids) + '</span></div> \
+      <div class="cell ' + class9 + ' hideme"><span class="value">' + d3.format("$,")(d.MedianHHincome) + '</span></div>';
     });
 
     $(".th").click(function() {
@@ -539,6 +539,11 @@ chartHighlights();
 function tableSort2(container,data,column,sorted){
    
   d3.select(container).selectAll(".listrow").sort(function(a, b) {
+          if (column == "name") { 
+        if (sorted == "descend") { return d3.descending(a.name, b.name); }
+        if (sorted == "ascend") { return d3.ascending(a.name, b.name); }
+     }
+
           if (column == "index") { 
         if (sorted == "descend") { return d3.descending(a.IndexScore, b.IndexScore); }
         if (sorted == "ascend") { return d3.ascending(a.IndexScore, b.IndexScore); }
@@ -557,8 +562,8 @@ function tableSort2(container,data,column,sorted){
         if (sorted == "ascend") { return d3.ascending(a.PctDistressed, b.PctDistressed); }
      }
           if (column == "price") { 
-        if (sorted == "descend") { return d3.descending(a.PctOrigPrice, b.PctOrigPrice); }
-        if (sorted == "ascend") { return d3.ascending(a.PctOrigPrice, b.PctOrigPrice); }
+        if (sorted == "descend") { return d3.descending(a.diff, b.diff); }
+        if (sorted == "ascend") { return d3.ascending(a.diff, b.diff); }
      }
           if (column == "family") { 
         if (sorted == "descend") { return d3.descending(a.PctSingleFamilyUnits, b.PctSingleFamilyUnits); }
@@ -668,15 +673,23 @@ var chart = c3.generate({
         xs: {
             cities2: 'DaysMarket17',
             cities: 'DaysMarket16',
+            cities3: 'DaysMarket15',
         },
         // iris data from R
         columns: [
+            // ["cities3",2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104],
+            // ["DaysMarket15",28,36.5,34.5,34,36,43,41,39.5,56,40,38,34,33,50.5,29,35,42,36,38,37,34,41,38,38,39,30,34,37,34.5,43,30,55,45,42,43,40,54,41,39,68,40,41,47,45,33,48,47,40,38,34,34,36,79.5,41.5,42,44,38,57,36.5,39.5,35,70,27.5,32,40.5,48,43,48,44,41,38,63,41.5,47,63,60,41.5,46,46,89.5,56,47.5,40,56,50,55,63,36,51.5,47,50,63,55.5,67,63,49.5,49,46,72.5,40,53,119,87.5],
             ["cities",2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104],
             ["DaysMarket16",40,49,48,47,48,58,52,53,81,46,56,48,46,58,60,54,53,50,51,51,52,55,48,63,59,52,54,56,51,55,50,79,65,55,51,53,87,62,51,81,60,56,71,55,56,64,62,61,70,48,50,59,137,63,63,57,62,93,52,57,61,112,77,54,60,61,68,67,75,56,51,71,81,66,119,96,75,58,78,104,82,111,69,69,85,86,96,69,73,65,74,124,89,158,91,74,75,89,119,72,70,128,137],
             ["cities2",2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104],
             ["DaysMarket17",29,37,43,35,37,37,37,37,65,36,42,42,36,50,45,43,47,41,39,36,41,45,38,43,49,41,39,72,49,44,46,55,52,45,43,45,82,51,50,56,51,46,63,49,50,53,49,46,47,43,43,47,144,56,52,52,46,76,61,54,44,89,74,49,59,62,55,59,55,61,41,76,58,56,94,88,70,56,59,94,70,87,60,88,75,74,77,63,62,52,68,110,93,135,61,78,64,73,138,100,73,134,120]
         ],
-        type: 'scatter'
+        type: 'scatter',
+        colors: {
+            'DaysMarket15': '#857AAA',
+            'DaysMarket16': '#3580A3',
+            'DaysMarket17': '#E07242'
+        },
     },
             legend: {
                 show: false

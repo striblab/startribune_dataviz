@@ -2373,8 +2373,12 @@ body, .chatter, .chartTitle, #wrapper, * {
   display: none;
 }
 
+.hideme {
+  display: none !important;
+}
+
 .cell {
-  width: 8%;
+  width: 15%;
   display: inline-block;
   vertical-align: top;
   line-height: 120%;
@@ -2412,7 +2416,7 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 #chartMarket {
-  height: 350px;
+  height: 400px;
   pointer-events: none !important;
 }
 
@@ -2741,7 +2745,7 @@ h5 {
 }
 @media only screen and (max-width: 500px) {
   .cell, .th {
-    width: 15%;
+    width: 14%;
     font-size: 0.7em;
     display: inline-block;
     vertical-align: top;
@@ -2761,7 +2765,7 @@ h5 {
   }
 
   .stretch {
-    width: 20%;
+    width: 24%;
     display: inline-block;
     text-align: left;
   }
