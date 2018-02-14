@@ -207,6 +207,7 @@ $(".zoom").click(function() {
   $(".row").removeClass("selected");
   $(".row:contains('Richfield')").addClass("selected");
   metricLoad("Richfield");
+  popup.remove();
 });
 
  map.addSource('mncities', {
@@ -357,6 +358,40 @@ $(".zoom").click(function() {
 //         .addTo(map);
 // });
 
+var popup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: false
+});
+
+$(".row").click(function(e) {
+        var features = map.queryRenderedFeatures(e.point, { layers: ['mncities-layer'] });
+    // Change the cursor style as a UI indicator.
+    map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+
+    if (!features.length) {
+        popup.remove();
+        return;
+    }
+
+    var feature = features[0];
+
+    // Populate the popup and set its coordinates
+    // based on the feature found.
+
+    var placeName = ""; //feature.properties.name
+  
+   // for (i=0; i < data.length; i++){
+   //  console.log(data[i].latitude)
+   //  if (data[i].latitude == $(this).attr("latitude") && data[i].longitude == $(this).attr("longitude")){
+   //    placeName = data[i].name;
+   //  }
+   // }
+
+    popup.setLngLat([$(this).attr("longitude"), $(this).attr("latitude")])
+        .setHTML($(this).find(".name").text())
+        .addTo(map);
+});
+
 });
 
 function reset(){
@@ -454,11 +489,11 @@ function chartHighlights(){
       else if (d.IndexScore >= 120) { class1 = "orange2"; }
       else if (d.IndexScore >= 0) { class1 = "orange1"; }
 
-      if (d.DaysMarket >= 120) { class2 = "orange5"; }
-      else if (d.DaysMarket >= 90) { class2 = "orange4"; }
+      if (d.DaysMarket >= 120) { class2 = "orange1"; }
+      else if (d.DaysMarket >= 90) { class2 = "orange2"; }
       else if (d.DaysMarket >= 60) { class2 = "orange3"; }
-      else if (d.DaysMarket >= 30) { class2 = "orange2"; }
-      else if (d.DaysMarket >= 0) { class2 = "orange1"; }
+      else if (d.DaysMarket >= 30) { class2 = "orange4"; }
+      else if (d.DaysMarket >= 0) { class2 = "orange5"; }
 
       if (d.PctChgfromAvg >= 0.20) { class3 = "orange5"; }
       else if (d.PctChgfromAvg >= 0.15) { class3 = "orange4"; }
@@ -472,11 +507,11 @@ function chartHighlights(){
       else if (d.PctDistressed >= 0.02) { class4 = "orange2"; }
       else if (d.PctDistressed >= 0) { class4 = "orange1"; }
 
-      if (d.diff >= 20) { class5 = "orange5"; }
-      else if (d.diff >= 10) { class5 = "orange4"; }
+      if (d.diff >= 20) { class5 = "orange1"; }
+      else if (d.diff >= 10) { class5 = "orange2"; }
       else if (d.diff >= 0) { class5 = "orange3"; }
-      else if (d.diff <= -10) { class5 = "orange2"; }
-      else if (d.diff <= 0) { class5 = "orange1"; }
+      else if (d.diff <= -10) { class5 = "orange5"; }
+      else if (d.diff <= 0) { class5 = "orange4"; }
 
       if (d.PctSingleFamilyUnits >= 0.9) { class6 = "orange5"; }
       else if (d.PctSingleFamilyUnits >= 0.7) { class6 = "orange4"; }
@@ -522,10 +557,10 @@ function chartHighlights(){
       tableSort2("#chartHighlights",data,$(this).attr("data"),sorted);
     });
 
-    $(".cell").mouseover(function() {
-      $(".value").hide();
-      $(this).find(".value").show();
-    });
+    // $(".cell").mouseover(function() {
+    //   $(".value").hide();
+    //   $(this).find(".value").show();
+    // });
 
     $(".stretch").mouseover(function() {
       $(".value").hide();
@@ -660,9 +695,9 @@ function chartMarket(){
 
       var  padding = {
             top: 40,
-            right: 0,
+            right: 20,
             bottom: 30,
-            left: 0,
+            left: 60,
         };
 
 var cities = ["Richfield","Mounds View","Champlin","Brooklyn Center","Fridley","Robbinsdale","New Brighton","Columbia Heights","Dayton","Crystal","Albertville","New Hope","Coon Rapids","Carver","St. Anthony","Minneapolis","Savage","Apple Valley","Cottage Grove","Circle Pines","Bloomington","Ramsey","St. Louis Park","Roseville","Big Lake","Eagan","North St. Paul","Isanti","Brooklyn Park","Inver Grove Heights","Otsego","Little Canada","St. Michael","Monticello","South St. Paul","Shoreview","Somerset","Hugo","Farmington","Jordan","Elk River","Rosemount","Golden Valley","Montrose","Blaine","Waconia","Maplewood","Maple Grove","Wyoming","Oakdale","White Bear Lake","Shakopee","Wayzata","St. Francis","St. Paul","Vadnais Heights","West St. Paul","Lindstrom","Andover","Woodbury","Burnsville","New Richmond","Delano","Anoka","Lakeville","Cambridge","Chaska","Zimmerman","Chanhassen","North Branch","Hopkins","Mahtomedi","Belle Plaine","Buffalo","River Falls","Hudson","East Bethel","Rogers","Minnetonka","Annandale","Forest Lake","Victoria","Plymouth","Lake Elmo","Oak Grove","Stillwater","Mound","Lino Lakes","Prior Lake","Hastings","Eden Prairie","Shorewood","Edina","North Oaks","Princeton","Mendota Heights","Becker","Elko New Market","Medina","Chisago City","Ham Lake","Orono","Minnetrista"]
@@ -672,9 +707,9 @@ var chart = c3.generate({
     padding: padding,
     data: {
         xs: {
-          cities3: 'DaysMarket15',
-          cities: 'DaysMarket16',
-          cities2: 'DaysMarket17'  
+          DaysMarket15: 'cities3',
+          DaysMarket16: 'cities',
+          DaysMarket17: 'cities2'  
         },
         // iris data from R
         columns: [
@@ -687,9 +722,9 @@ var chart = c3.generate({
         ],
         type: 'scatter',
         colors: {
-            'cities3': '#857AAA',
-            'cities': '#3580A3',
-            'cities2': '#E07242'
+            'DaysMarket15': '#857AAA',
+            'DaysMarket16': '#3580A3',
+            'DaysMarket17': '#E07242'
         },
     },
             legend: {
@@ -701,11 +736,8 @@ var chart = c3.generate({
     axis: {
         x: {
             // label: 'Sepal.Width',
-            padding: {right: 0, left: 0},
-            label: {
-                text: 'Average days on market',
-                position: 'outer-center'
-            },
+            show: false,
+            
             tick: {
                 fit: false
             },
@@ -713,15 +745,18 @@ var chart = c3.generate({
         },
       y: {
             max: 160,
-            min: -2,
-            show: false,
-            padding: {bottom: 0, top: 0},
-            tick: {
-             format: function (d) {
-                    return cities[d];
-                },
-              values: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104],
-            }
+            min: 0,
+            padding: {bottom: 0, top: 0, right: 0, left: 0},
+            label: {
+                text: '⬅ Average days on market',
+                position: 'outer-center'
+            },
+            // tick: {
+            //  format: function (d) {
+            //         return cities[d];
+            //     },
+            //   values: [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104],
+            // }
         }
     }
 });
