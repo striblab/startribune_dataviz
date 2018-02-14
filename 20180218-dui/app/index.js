@@ -102,7 +102,7 @@ function chartTrend(){
               x: 'x',
               columns:
               [
-                  ['x',2013,2014,2015,2016,2017],
+                  ['x','2013','2014','2015','2016','2017'],
                   ['DWI Arrests',157,187,327,387,476]
               ],
               type: 'bar',
@@ -125,12 +125,12 @@ function chartTrend(){
           axis: {
               // rotated: true,
                 y: {
-                      max: 500,
+                      max: 600,
                         min: 0,
                         padding: {bottom: 0, top: 0},
                         tick: {
-                         count: 4,
-                         values: [0,100,200,300,400,500],
+                         count: 5,
+                         values: [0,100,200,300,400,500,600],
                          format: d3.format('.0f')
                         }
                     },
@@ -139,6 +139,13 @@ function chartTrend(){
                   tick:{
                     multiline:false
                   }
+              }
+          },
+          grid: {
+              x: {
+              lines: [
+                    {value: '2015', text: 'DWI grant begins', position: 'end', class:'powerline'},
+              ]
               }
           }
     });
