@@ -1,0 +1,18 @@
+HOUSING
+
+
+Top chart:
+
+Might consider adding some more granularity to the highlight colors. The housing index score, for example, only has two levels, so doesn't seem to add much info. Also, do the colors have meaning across the columns or just within a column? For example, does the darkest color represent something like the top quartile in all cases, or does it mean something different depending on the column?
+
+The hover interactions are tricky but worth giving some more thought to. I think you're right to not show all the numbers by default (would look way too busy), but hover interactions also don't work particularly well on mobile and they don't allow for easy comparison.
+
+Not sure what the right answer is here, but a legend of some kind might be a start. And if we decide to stick with hover, maybe show all numbers in a row when any given cell is hovered over? Will think about this more.
+
+
+Dot chart
+
+A couple options I can think of:
+
+Use a subset of the communities and highlight change in something like an arrow chart. The reason I say a subset is because an arrow chart including all the communities might be kind of long. Politico also came up with a design that kinda works horizontally ...
+Figure out some way within the chart to better highlight the backward movement. Maybe could even be a button that toggles between 2016 and 2017 and animates the dots? Worth thinking about some ideas here.

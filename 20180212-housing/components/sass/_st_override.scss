@@ -16,6 +16,10 @@ body, .chatter, .chartTitle, #wrapper, * {
      width: 100%;
  }
 
+ .name, .score {
+    pointer-events:none !important;
+ }
+
 .value {
   font-weight:normal !important;
   display:none;
