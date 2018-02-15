@@ -21,11 +21,11 @@
   #filter input:focus { width: 100% !important; font-family: $bentonSans !important; box-shadow: 0 0 5px #999; padding: 1px 10px 1px 10px; border: 1px solid #61bd1a; }
 
 /*VARIOUS TITLES AND CHATTER*/
-  .chartTitle { font-family: $bentonSans !important; font-weight:900; margin-top:15px; font-size:1.2em; }
-  .chatter { font-family: $bentonSans !important; font-size:.9em; margin-top:5px; }
+  .chartTitle { font-family: $bentonSans; font-weight:900; margin-top:15px; font-size:1.2em; }
+  .chatter { font-family: $bentonSans; font-size:.9em; margin-top:5px; }
   p { font-family: $poynterSerif; font-size: 15px; line-height: 140%; margin-bottom: 14px; letter-spacing: -0.3px; }
   .demographic { font-family: $bentonSans !important; font-size:.9em; }
-  .source { font-size:.5em; color:#ccc; font-family: $bentonSans;  }
+  .source { font-size:.85em; color:#888; font-family: $bentonSans;  }
 
 /*HIGHLIGHTED NUMBERS*/
   .num { font-family: $popular; font-weight:900; }
@@ -56,7 +56,7 @@
   th, text { color:#000 !important; font-family: $bentonSans; font-size:11px; }
   .tips th { background-color:#fff !important; }
   .tips { border:none !important; }
-  .value { color:#000 !important; font-family: $popular; font-weight:900; } 
+  .value { color:#000 !important; font-family: $popular; font-weight:600; } 
   .name { font-family: $bentonSans; }
 
 /*NVD3 STYLES*/
@@ -98,7 +98,7 @@
    :focus { outline:0; }
    
 /*BREAKER*/
-  .breaker { clear:both; margin:7px; padding:10px; }
+  .breaker { clear:both; margin: 3em 0 4em 0; padding:1;border-bottom:1px solid #ccc; }
 
 /*RESET BUTTON*/
   .zoom{ text-decoration:none; font-weight:normal !important; color:steelblue; float:right !important; font-family: $bentonSans !important; }

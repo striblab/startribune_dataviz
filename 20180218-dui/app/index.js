@@ -56,7 +56,7 @@ $("#" + selected).show();
                 show: false
             },
             color: {
-                  pattern: ['#333']
+                  pattern: ['#3580A3']
                 },
             tooltip: {
             	// show: false
@@ -120,7 +120,7 @@ function chartTrend(){
                 show: false
             },
             color: {
-                  pattern: ['#333']
+                  pattern: ['#3580A3']
                 },
           axis: {
               // rotated: true,
@@ -152,6 +152,60 @@ function chartTrend(){
 }
 
 chartTrend();
+
+  function chartSize(){
+
+    var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 120,
+        };
+
+    var chartSize = c3.generate({
+          bindto: "#chartSize",
+          padding: padding,
+          data: {
+              x: 'x',
+              columns:
+              [
+                  ["x","Edina PD","Fridley PD","Olmsted SO","Winona PD","Coon Rapids PD","Inver Grove Heights PD","Bloomington PD","Richfield PD","Moorhead PD","St. Cloud PD","Beltrami SO","Stearns SO","St Louis Park PD","Eden Prairie PD","Prior Lake PD","Apple Valley PD","Duluth PD","Shakopee PD","Minnetonka PD","Anoka SO","Woodbury PD","Otter Tail SO","Carver SO","Brooklyn Center PD","Washington SO","Oakdale PD","Savage PD","Owatonna PD","Sherburne SO","Blaine PD","Maplewood PD","Pine SO","Maple Grove PD","Itasca SO","Cottage Grove PD","Chisago SO","St. Louis SO (Hibbing)","Wright SO","Crow Wing SO","Ramsey PD","Ramsey SO","Plymouth PD","Lakeville PD","Eagan PD","Rochester PD","Burnsville PD","Brooklyn Park PD","St Paul PD","Minneapolis PD","Roseville PD"],
+                  ["DWI Arrest Rate",94.1139253,52.85678329,51.31070921,50.36850487,48.25264508,47.36226426,45.6767737,45.04257072,42.11071118,41.87642001,41.81620625,41.43368599,41.41890506,39.19608976,37.25695657,35.81939281,34.84725287,34.54742868,33.61828835,32.17293858,32.15899873,32.01442904,30.1301623,30.10390703,29.81025771,29.77561944,28.60080982,27.5621118,26.62127957,26.61807811,26.29592657,25.60110707,25.077741,24.8939378,24.88662759,24.8765455,23.21624783,22.91095396,22.10781345,21.69527652,21.29416927,20.6504234,20.46085643,19.04105071,18.44562512,17.01865569,16.04010025,15.26717557,13.67723173,10.01279413]
+              ],
+              type: 'bar'
+          },
+            legend: {
+                show: false
+            },
+            color: {
+                  pattern: ['#3580A3']
+                },
+            tooltip: {
+              // show: false
+            },
+          axis: {
+              rotated: true,
+                y: {
+                        max: 100,
+                        min: 0,
+                        padding: {bottom: 0, top: 0},
+                        tick: {
+                         count: 3,
+                         values: [0,20,40,60,80,100],
+                         format: d3.format('.0f')
+                        }
+                    },
+              x: {
+                  type: 'category',
+                  tick: {
+                    multiline:false
+                  }
+              }
+          }
+    });
+}
+
+chartSize();
 
 d3.json("./shapefiles/mn_places.json", function(error, mncities) {
 d3.json("./data/stops.geojson", function(error, stops) {
@@ -197,7 +251,7 @@ map.on('load', function () {
         //         [300, "#993404"]
         //     ]
         // },
-           'fill-outline-color': 'rgba(255, 0, 0, 1)'
+           'fill-outline-color': 'rgba(0, 0, 0, 1)'
      },
             "filter": [
             "==",
@@ -228,8 +282,8 @@ map.on('load', function () {
                           [100, 20]
                       ]
                    },
-                     "circle-color": 'rgba(0, 0, 0, .6)',
-                     "circle-stroke-color": "#ffffff",
+                     "circle-color": 'rgba(53,128,163, .6)',
+                     "circle-stroke-color": "#000000",
                      "circle-stroke-width": 0.5,
                   }
       });
