@@ -117,22 +117,6 @@ $(".th2").click(function() {
   tableSort("#cities",null,data,$(this).attr("data"),sorted);
 });
 
-$(".row").click(function() {
-  $(".row").removeClass("selected");
-  $(this).addClass("selected");
-  // var random = Math.floor(Math.random() * 4) + 1;
-  // var span = Math.floor(Math.random() * 100) + -100;
-  // var pitch = span / random;
-  // var bearing = span / random;
-  var pitch = 0;
-  var bearing = 0;
-  var longitude = $(this).attr("longitude");
-  var latitude = $(this).attr("latitude");
-  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.jumpTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
-  else { map.jumpTo({ center: [longitude, latitude], zoom: 10, pitch: pitch, bearing: bearing }); }
-  metricLoad($(this).find(".name").text());
-});
-
 });
 
 var sw = new mapboxgl.LngLat(-93.716125, 44.643254);
@@ -363,7 +347,22 @@ var popup = new mapboxgl.Popup({
     closeOnClick: false
 });
 
-$(".row").click(function(e) {
+$(".row").on("mousedown click", function(e) {
+  $(".row").removeClass("selected");
+  $(this).addClass("selected");
+  // var random = Math.floor(Math.random() * 4) + 1;
+  // var span = Math.floor(Math.random() * 100) + -100;
+  // var pitch = span / random;
+  // var bearing = span / random;
+  var pitch = 0;
+  var bearing = 0;
+  var longitude = $(this).attr("longitude");
+  var latitude = $(this).attr("latitude");
+  if ($(this).find(".name").text().indexOf("(MPLS)") != -1 || $(this).find(".name").text().indexOf("(STP)") != -1) { map.jumpTo({ center: [longitude, latitude], zoom: 13.5, pitch: pitch, bearing: bearing }); }
+  else { map.jumpTo({ center: [longitude, latitude], zoom: 10, pitch: pitch, bearing: bearing }); }
+  metricLoad($(this).find(".name").text());
+
+  popup.remove();
         var features = map.queryRenderedFeatures(e.point, { layers: ['mncities-layer'] });
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
@@ -388,9 +387,10 @@ $(".row").click(function(e) {
    // }
 
     popup.setLngLat([$(this).attr("longitude"), $(this).attr("latitude")])
-        .setHTML($(this).find(".name").text())
+        .setHTML("&nbsp;")
         .addTo(map);
 });
+
 
 });
 

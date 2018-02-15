@@ -992,14 +992,14 @@ a:hover {
 
 /*VARIOUS TITLES AND CHATTER*/
 .chartTitle {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   font-weight: 900;
   margin-top: 15px;
   font-size: 1.2em;
 }
 
 .chatter {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   font-size: .9em;
   margin-top: 5px;
 }
@@ -1018,8 +1018,8 @@ p {
 }
 
 .source {
-  font-size: .5em;
-  color: #ccc;
+  font-size: .85em;
+  color: #888;
   font-family: "Benton Sans", Helvetica, Arial, sans-serif;
 }
 
@@ -1157,7 +1157,7 @@ th, text {
 .value {
   color: #000 !important;
   font-family: "Popular", Helvetica, Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .name {
@@ -1387,8 +1387,9 @@ button:focus {
 /*BREAKER*/
 .breaker {
   clear: both;
-  margin: 7px;
-  padding: 10px;
+  margin: 3em 0 4em 0;
+  padding: 1;
+  border-bottom: 1px solid #ccc;
 }
 
 /*RESET BUTTON*/
@@ -2351,10 +2352,15 @@ header[role="banner"] {
 }
 
 /* PROJECT STYLES */
-body, .chatter, .chartTitle, #wrapper, * {
-  font-family: "Benton Sans Condensed Medium",Helvetica,Arial,sans-serif !important;
+body,
+.chatter,
+.chartTitle,
+#wrapper,
+* {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   letter-spacing: normal;
+  font-size: 14px;
 }
 
 #wrapper {
@@ -2364,7 +2370,7 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 #map {
-  height: 350px;
+  height: 353px;
   width: 100%;
 }
 
@@ -2375,6 +2381,7 @@ body, .chatter, .chartTitle, #wrapper, * {
 .value {
   font-weight: normal !important;
   display: none;
+  font-size: .9em;
 }
 
 .hideme {
@@ -2390,11 +2397,13 @@ body, .chatter, .chartTitle, #wrapper, * {
   height: 18px;
 }
 
-.cell:hover, .value:hover {
+.cell:hover,
+.value:hover {
   cursor: default;
 }
 
-.stretch.cell:hover, .index.cell:hover {
+.stretch.cell:hover,
+.index.cell:hover {
   cursor: default;
 }
 
@@ -2405,18 +2414,25 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 .th {
-  vertical-align: bottom;
+  vertical-align: top;
   height: auto;
-  font-size: 0.9em;
 }
 
 .listrow {
   padding: 2px;
 }
 
+.rowHead {
+  padding: 1em 0;
+  width: 90%;
+}
+
 .chartTitle {
-  font-size: 1.5em;
-  font-weight: 900;
+  color: #333;
+  font-family: "Whitman Display Condensed Bold", Georgia, Times, serif;
+  font-size: 42px;
+  line-height: 42px;
+  margin-top: 12px;
 }
 
 #chartMarket {
@@ -2457,8 +2473,11 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 .chatter {
-  line-height: 140%;
-  font-size: 16px;
+  font-family: "Poynter Serif RE", Georgia, Times, serif;
+  font-size: 18px;
+  line-height: 22px;
+  padding-right: 20px;
+  margin-top: 3px;
 }
 
 #listing {
@@ -2471,11 +2490,12 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 #cities {
-  height: 435px;
+  height: 395px;
   overflow-y: auto;
 }
 
 .legendary {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   padding: 7px;
   color: #fff;
   border-radius: 5px;
@@ -2483,20 +2503,21 @@ body, .chatter, .chartTitle, #wrapper, * {
   padding: 0 7px;
   margin-bottom: 3px;
   display: inline-block;
+  font-size: 15px;
 }
 
 .byline {
-  font-family: Benton Sans,Helvetica,Arial,sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
   line-height: 1.4em;
   letter-spacing: normal;
   font-weight: normal;
-  margin: 0 0 1rem;
+  margin: 1rem 0;
   font-size: .85em;
 }
 
 .byline a {
   font-weight: normal !important;
-  font-family: Benton Sans,Helvetica,Arial,sans-serif !important;
+  font-family: Benton Sans, Helvetica, Arial, sans-serif !important;
 }
 
 #reference {
@@ -2517,12 +2538,14 @@ body, .chatter, .chartTitle, #wrapper, * {
   cursor: pointer;
 }
 
-.th, .th2 {
+.th,
+.th2 {
   padding: 1px;
-  font-weight: 900;
+  font-weight: 600;
 }
 
-.th:hover, .th2:hover {
+.th:hover,
+.th2:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -2554,10 +2577,10 @@ body, .chatter, .chartTitle, #wrapper, * {
 }
 
 .score {
-  font-weight: 900;
+  font-weight: 600;
   text-align: right;
   width: 15%;
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
 }
 
 #metrics {
@@ -2601,12 +2624,18 @@ h5 {
   padding: 7px;
 }
 
-#chart, #chart svg {
+#chart,
+#chart svg {
   height: 200px;
 }
 
 #chart .c3-line {
   stroke-width: 6px !important;
+}
+
+#chartHead {
+  font-size: 1.1em;
+  margin-top: 2.5em;
 }
 
 /*#income {
@@ -2662,7 +2691,8 @@ h5 {
   transition: margin 0.3s ease-in 0s;
 }
 
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
   display: block;
   float: left;
   width: 50%;
@@ -2726,11 +2756,13 @@ h5 {
     height: 157px;
   }
 
-  #chart, #chart svg {
+  #chart,
+  #chart svg {
     height: 200px;
   }
 
-  #listing, #metrics {
+  #listing,
+  #metrics {
     float: none;
     width: 100%;
   }
@@ -2748,7 +2780,8 @@ h5 {
   }
 }
 @media only screen and (max-width: 500px) {
-  .cell, .th {
+  .cell,
+  .th {
     width: 14%;
     font-size: 0.7em;
     display: inline-block;
