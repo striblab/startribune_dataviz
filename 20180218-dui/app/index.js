@@ -26,9 +26,11 @@ $.urlParam = function(name){
 
 var selected = $.urlParam('chart');
 
-if (selected != null){
-$(".slide").hide();
-$("#" + selected).show();
+if (selected == "all"){
+  $(".slide").show();
+} else if (selected != null){
+  $(".slide").hide();
+  $("#" + selected).show();
 }
 
   function chartRank(){
