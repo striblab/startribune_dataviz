@@ -539,7 +539,7 @@ function chartHighlights(){
       else if (d.MedianHHincome >= 30000) { class9 = "orange1"; }
 
       return '<div class="cell stretch">' + d.name + '</div> \
-      <div class="cell ' + class1 + ' index"><span class="value">' + d.IndexScore + '</span></div> \
+      <div class="cell ' + class1 + ' index"><span class="value index">' + d.IndexScore + '</span></div> \
       <div class="cell ' + class2 + ' "><span class="value">' + d.DaysMarket + '</span></div> \
       <div class="cell ' + class3 + '"><span class="value">' + d3.format("+%")(d.PctChgfromAvg) + '</span></div> \
       <div class="cell ' + class4 + '"><span class="value">' + d3.format("+%.0f")(d.PctDistressed) + '</span></div> \
