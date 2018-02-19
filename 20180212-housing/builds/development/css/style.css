@@ -2369,8 +2369,12 @@ body,
   margin-right: auto;
 }
 
+.index {
+  font-weight: 900 !important;
+}
+
 #map {
-  height: 353px;
+  height: 365px;
   width: 100%;
 }
 
