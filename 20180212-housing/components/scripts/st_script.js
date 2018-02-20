@@ -27,11 +27,11 @@ d3.select("#cities").selectAll(".row")
 
     var color = "#888888";
 
-  if (d.IndexScore >= 300) { color = "#993404"; }
-  else if (d.IndexScore >= 240) { color = "#d95f0e"; }
-  else if (d.IndexScore >= 180) { color = "#fe9929"; }
-  else if (d.IndexScore >= 120) { color = "#fec44f"; }
-  else if (d.IndexScore >= 0) { color = "#fee391"; }
+  if (d.IndexScore >= 300) { color = "#a63603"; }
+  else if (d.IndexScore >= 240) { color = "#e6550d"; }
+  else if (d.IndexScore >= 180) { color = "#fd8d3c"; }
+  else if (d.IndexScore >= 120) { color = "#fdbe85"; }
+  else if (d.IndexScore >= 0) { color = "#feedde"; }
 
   return color;
 
@@ -213,11 +213,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#fee391"],
-                [120, "#fec44f"],
-                [180, "#fe9929"],
-                [240, "#d95f0e"],
-                [300, "#993404"]
+                [50, "#feedde"],
+                [120, "#fdbe85"],
+                [180, "#fd8d3c"],
+                [240, "#e6550d"],
+                [300, "#a63603"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
@@ -243,11 +243,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#fee391"],
-                [120, "#fec44f"],
-                [180, "#fe9929"],
-                [240, "#d95f0e"],
-                [300, "#993404"]
+                [50, "#feedde"],
+                [120, "#fdbe85"],
+                [180, "#fd8d3c"],
+                [240, "#e6550d"],
+                [300, "#a63603"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0)'
@@ -273,11 +273,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#fee391"],
-                [120, "#fec44f"],
-                [180, "#fe9929"],
-                [240, "#d95f0e"],
-                [300, "#993404"]
+                [50, "#feedde"],
+                [120, "#fdbe85"],
+                [180, "#fd8d3c"],
+                [240, "#e6550d"],
+                [300, "#a63603"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -303,11 +303,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#fee391"],
-                [120, "#fec44f"],
-                [180, "#fe9929"],
-                [240, "#d95f0e"],
-                [300, "#993404"]
+                [50, "#feedde"],
+                [120, "#fdbe85"],
+                [180, "#fd8d3c"],
+                [240, "#e6550d"],
+                [300, "#a63603"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
