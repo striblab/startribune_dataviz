@@ -1389,7 +1389,6 @@ button:focus {
   clear: both;
   margin: 3em 0 4em 0;
   padding: 1;
-  border-bottom: 1px solid #ccc;
 }
 
 /*RESET BUTTON*/
