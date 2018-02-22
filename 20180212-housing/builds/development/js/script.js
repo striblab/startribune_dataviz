@@ -727,8 +727,8 @@ var chart = c3.generate({
         type: 'scatter',
         colors: {
             'DaysMarket15': '#857AAA',
-            'DaysMarket16': '#857AAA',
-            'DaysMarket17': '#5bbf48'
+            'DaysMarket16': '#271D42',
+            'DaysMarket17': '#299e3d'
         },
     },
             legend: {
