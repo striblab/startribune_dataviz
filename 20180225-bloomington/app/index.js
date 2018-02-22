@@ -102,7 +102,7 @@ map.on('load', function () {
             'paint': {
            'fill-antialias' : true,
            'fill-opacity': 1,
-           'fill-color': '#888888',
+           'fill-color': '#5BBF48',
            'fill-outline-color': 'rgba(0, 0, 0, 1)'
      }
             // "filter": [
