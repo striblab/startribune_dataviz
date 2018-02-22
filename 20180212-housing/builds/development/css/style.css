@@ -2373,6 +2373,10 @@ body,
   width: 100%;
 }
 
+.slide {
+  display: none;
+}
+
 .name, .score {
   pointer-events: none !important;
 }
