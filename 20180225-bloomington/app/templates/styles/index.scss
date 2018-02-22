@@ -1,0 +1,22 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+<% if (answers.projectType === 'cms') { %>
+// Assumed that this project lives within an exist page, so we add a
+// wrapper that is very specific and wrap our other styles in it.
+$root: false;
+$selector-wrapper: '.strib.strib-styles.strib-styles-specifically';
+<% } else { %>
+$root: true;
+<% } %>
+@import '../node_modules/strib-styles/source/styles/root.scss';
+
+// Project specific styles.  Split styles into files per component
+<% if (answers.projectType === 'cms') { %>.strib.strib-styles.strib-styles-specifically {<% } %>
+@import 'project';
+<% if (answers.projectType === 'cms') { %>}<% } %>
