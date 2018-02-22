@@ -33,9 +33,9 @@ d3.select("#cities").selectAll(".row")
 
   if (d.IndexScore >= 300) { color = "#118241"; }
   else if (d.IndexScore >= 240) { color = "#299e3d"; }
-  else if (d.IndexScore >= 180) { color = "#fe9929"; }
-  else if (d.IndexScore >= 120) { color = "#fec44f"; }
-  else if (d.IndexScore >= 0) { color = "#fee391"; }
+  else if (d.IndexScore >= 180) { color = "#5bbf48"; }
+  else if (d.IndexScore >= 120) { color = "#9ee384"; }
+  else if (d.IndexScore >= 0) { color = "#c7e5b5"; }
 
   return color;
 
