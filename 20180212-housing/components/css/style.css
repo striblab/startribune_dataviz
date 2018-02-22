@@ -2448,23 +2448,27 @@ body,
 }
 
 .orange5 {
-  background-color: #a63603;
+  background-color: #118241;
 }
 
 .orange4 {
-  background-color: #e6550d;
+  background-color: #299e3d;
 }
 
 .orange3 {
-  background-color: #fd8d3c;
+  background-color: #5bbf48;
 }
 
 .orange2 {
-  background-color: #fdbe85;
+  background-color: #9ee384;
 }
 
 .orange1 {
-  background-color: #feedde;
+  background-color: #c7e5b5;
+}
+
+.orange35 {
+  background-color: #bf7f63;
 }
 
 .mapboxgl-ctrl-attrib {

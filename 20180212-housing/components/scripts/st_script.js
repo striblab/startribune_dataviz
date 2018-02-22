@@ -6,7 +6,10 @@ $.urlParam = function(name){
 
 var selected = $.urlParam('chart');
 
-if (selected != null){
+if (selected == "all"){
+$(".slide").show();
+}
+else if (selected != null){
 $(".slide").hide();
 $("#" + selected).show();
 }
@@ -27,11 +30,11 @@ d3.select("#cities").selectAll(".row")
 
     var color = "#888888";
 
-  if (d.IndexScore >= 300) { color = "#a63603"; }
-  else if (d.IndexScore >= 240) { color = "#e6550d"; }
-  else if (d.IndexScore >= 180) { color = "#fd8d3c"; }
-  else if (d.IndexScore >= 120) { color = "#fdbe85"; }
-  else if (d.IndexScore >= 0) { color = "#feedde"; }
+  if (d.IndexScore >= 300) { color = "#118241"; }
+  else if (d.IndexScore >= 240) { color = "#299e3d"; }
+  else if (d.IndexScore >= 180) { color = "#fe9929"; }
+  else if (d.IndexScore >= 120) { color = "#fec44f"; }
+  else if (d.IndexScore >= 0) { color = "#fee391"; }
 
   return color;
 
@@ -213,11 +216,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#feedde"],
-                [120, "#fdbe85"],
-                [180, "#fd8d3c"],
-                [240, "#e6550d"],
-                [300, "#a63603"]
+                [50, "#c7e5b5"],
+                [120, "#9ee384"],
+                [180, "#5bbf48"],
+                [240, "#299e3d"],
+                [300, "#118241"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.1)'
@@ -243,12 +246,12 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#feedde"],
-                [120, "#fdbe85"],
-                [180, "#fd8d3c"],
-                [240, "#e6550d"],
-                [300, "#a63603"]
-            ]
+                [50, "#c7e5b5"],
+                [120, "#9ee384"],
+                [180, "#5bbf48"],
+                [240, "#299e3d"],
+                [300, "#118241"]            
+                ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0)'
      }
@@ -273,11 +276,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#feedde"],
-                [120, "#fdbe85"],
-                [180, "#fd8d3c"],
-                [240, "#e6550d"],
-                [300, "#a63603"]
+                [50, "#c7e5b5"],
+                [120, "#9ee384"],
+                [180, "#5bbf48"],
+                [240, "#299e3d"],
+                [300, "#118241"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -303,11 +306,11 @@ $(".zoom").click(function() {
             "type": "interval",
             "stops": [
                 [0, "#888888"],
-                [50, "#feedde"],
-                [120, "#fdbe85"],
-                [180, "#fd8d3c"],
-                [240, "#e6550d"],
-                [300, "#a63603"]
+                [50, "#c7e5b5"],
+                [120, "#9ee384"],
+                [180, "#5bbf48"],
+                [240, "#299e3d"],
+                [300, "#118241"]
             ]
         },
            'fill-outline-color': 'rgba(255, 255, 255, 0.4)'
@@ -723,8 +726,8 @@ var chart = c3.generate({
         type: 'scatter',
         colors: {
             'DaysMarket15': '#857AAA',
-            'DaysMarket16': '#3580A3',
-            'DaysMarket17': '#E07242'
+            'DaysMarket16': '#857AAA',
+            'DaysMarket17': '#5bbf48'
         },
     },
             legend: {
