@@ -49,6 +49,7 @@ var map = new mapboxgl.Map({
 // map.addControl(new mapboxgl.NavigationControl());
 map.scrollZoom.disable();
 map.dragRotate.disable();
+map.doubleClickZoom.disable();
 map.touchZoomRotate.disableRotation();
 
 map.on('load', function () {
@@ -116,7 +117,7 @@ var popup = new mapboxgl.Popup({
     closeOnClick: false
 });
 
-map.on('mousedown', function(e) {
+map.on('mousemove', function(e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['bloomington-layer'] });
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
