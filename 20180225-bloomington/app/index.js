@@ -116,7 +116,7 @@ var popup = new mapboxgl.Popup({
     closeOnClick: false
 });
 
-map.on('mousemove', function(e) {
+map.on('mousedown', function(e) {
     var features = map.queryRenderedFeatures(e.point, { layers: ['bloomington-layer'] });
     // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
