@@ -2377,7 +2377,8 @@ body,
   display: none;
 }
 
-.name, .score {
+.name,
+.score {
   pointer-events: none !important;
 }
 
@@ -2398,6 +2399,7 @@ body,
   line-height: 120%;
   text-align: center;
   height: 18px;
+  padding-top: 2px;
 }
 
 .cell:hover,
@@ -2432,8 +2434,8 @@ body,
 
 .chartTitle {
   color: #333;
-  font-family: "Whitman Display Condensed Bold", Georgia, Times, serif;
-  font-size: 42px;
+  font-weight: bold;
+  font-size: 36px;
   line-height: 42px;
   margin-top: 12px;
 }
@@ -2480,10 +2482,9 @@ body,
 }
 
 .chatter {
-  font-family: "Poynter Serif RE", Georgia, Times, serif;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 22px;
-  padding-right: 20px;
+  padding-right: 80px;
   margin-top: 3px;
 }
 
@@ -2511,6 +2512,10 @@ body,
   margin-bottom: 3px;
   display: inline-block;
   font-size: 15px;
+}
+
+.legendary.orange1 {
+  color: #333;
 }
 
 .byline {
@@ -2616,7 +2621,7 @@ h5 {
 }
 
 .metricCol div {
-  padding: 1px;
+  padding: 3px;
 }
 
 .metric {
@@ -2641,8 +2646,12 @@ h5 {
 }
 
 #chartHead {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-top: 2.5em;
+}
+
+#chartHead > div {
+  padding: 5px;
 }
 
 /*#income {
@@ -2766,6 +2775,10 @@ h5 {
   #chart,
   #chart svg {
     height: 200px;
+  }
+
+  .chatter {
+    padding-right: 10px;
   }
 
   #listing,

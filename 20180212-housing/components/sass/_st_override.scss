@@ -23,17 +23,18 @@ body,
 }
 
 .slide {
-    display:none;
+    display: none;
 }
 
- .name, .score {
-    pointer-events:none !important;
- }
+.name,
+.score {
+    pointer-events: none !important;
+}
 
 .value {
     font-weight: normal !important;
     display: none;
-    font-size:.9em;
+    font-size: .9em;
 }
 
 .hideme {
@@ -47,6 +48,7 @@ body,
     line-height: 120%;
     text-align: center;
     height: 18px;
+    padding-top: 2px;
 }
 
 .cell:hover,
@@ -67,18 +69,22 @@ body,
 
 .th {
     vertical-align: top;
-    height: auto;
-    // font-size: 0.9em;
+    height: auto; // font-size: 0.9em;
 }
 
 .listrow {
     padding: 2px;
 }
-.rowHead {padding:1em 0;width:90%;}
+
+.rowHead {
+    padding: 1em 0;
+    width: 90%;
+}
+
 .chartTitle {
-    color: #333;
-    font-family: "Whitman Display Condensed Bold", Georgia, Times, serif;
-    font-size: 42px;
+    color: #333; // font-family: "Whitman Display Condensed Bold", Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 36px;
     line-height: 42px;
     margin-top: 12px;
 }
@@ -91,9 +97,10 @@ body,
 .orange5 .value {
     color: #ffffff !important;
 }
+
 .orange5 {
     // background-color: #993404;
-    background-color:#118241;
+    background-color: #118241;
 }
 
 .orange4 {
@@ -103,7 +110,7 @@ body,
 
 .orange3 {
     // background-color: #fe9929;
-    background-color:#5bbf48;
+    background-color: #5bbf48;
 }
 
 .orange2 {
@@ -113,10 +120,11 @@ body,
 
 .orange1 {
     // background-color: #fee391;
-    background-color:#c7e5b5;
+    background-color: #c7e5b5;
 }
+
 .orange35 {
-     background-color:#bf7f63;
+    background-color: #bf7f63;
 }
 
 .mapboxgl-ctrl-attrib {
@@ -128,10 +136,10 @@ body,
 }
 
 .chatter {
-    font-family: "Poynter Serif RE", Georgia, Times, serif;
-    font-size: 18px;
+    // font-family: "Poynter Serif RE", Georgia, Times, serif;
+    font-size: 14px;
     line-height: 22px;
-    padding-right: 20px;
+    padding-right: 80px;
     margin-top: 3px;
 }
 
@@ -159,6 +167,10 @@ body,
     margin-bottom: 3px;
     display: inline-block;
     font-size: 15px;
+}
+
+.legendary.orange1 {
+    color: #333;
 }
 
 .byline {
@@ -196,8 +208,7 @@ body,
 .th,
 .th2 {
     padding: 1px;
-    font-weight: 600;
-    // text-transform: uppercase
+    font-weight: 600; // text-transform: uppercase
 }
 
 .th:hover,
@@ -265,7 +276,7 @@ h5 {
 }
 
 .metricCol div {
-    padding: 1px;
+    padding: 3px;
 }
 
 .metric {
@@ -290,8 +301,12 @@ h5 {
 }
 
 #chartHead {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 2.5em;
+}
+
+#chartHead>div {
+    padding: 5px;
 }
 
 
@@ -419,7 +434,9 @@ h5 {
     #chart svg {
         height: 200px;
     }
-
+    .chatter {
+        padding-right: 10px;
+    }
     #listing,
     #metrics {
         float: none;
