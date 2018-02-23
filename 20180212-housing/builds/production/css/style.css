@@ -992,14 +992,14 @@ a:hover {
 
 /*VARIOUS TITLES AND CHATTER*/
 .chartTitle {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   font-weight: 900;
   margin-top: 15px;
   font-size: 1.2em;
 }
 
 .chatter {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   font-size: .9em;
   margin-top: 5px;
 }
@@ -1018,8 +1018,8 @@ p {
 }
 
 .source {
-  font-size: .5em;
-  color: #ccc;
+  font-size: .85em;
+  color: #888;
   font-family: "Benton Sans", Helvetica, Arial, sans-serif;
 }
 
@@ -1157,7 +1157,7 @@ th, text {
 .value {
   color: #000 !important;
   font-family: "Popular", Helvetica, Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .name {
@@ -1387,8 +1387,8 @@ button:focus {
 /*BREAKER*/
 .breaker {
   clear: both;
-  margin: 7px;
-  padding: 10px;
+  margin: 3em 0 4em 0;
+  padding: 1;
 }
 
 /*RESET BUTTON*/
@@ -2351,8 +2351,15 @@ header[role="banner"] {
 }
 
 /* PROJECT STYLES */
-body {
+body,
+.chatter,
+.chartTitle,
+#wrapper,
+* {
   font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: normal;
+  font-size: 14px;
 }
 
 #wrapper {
@@ -2362,12 +2369,121 @@ body {
 }
 
 #map {
-  height: 330px;
+  height: 350px;
   width: 100%;
+}
+
+.slide {
+  display: none;
+}
+
+.name, .score {
+  pointer-events: none !important;
+}
+
+.value {
+  font-weight: normal !important;
+  display: none;
+  font-size: .9em;
+}
+
+.hideme {
+  display: none !important;
+}
+
+.cell {
+  width: 15%;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 120%;
+  text-align: center;
+  height: 18px;
+  padding-top: 2px;
+}
+
+.cell:hover,
+.value:hover {
+  cursor: default;
+}
+
+.stretch.cell:hover,
+.index.cell:hover {
+  cursor: default;
+}
+
+.stretch {
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+}
+
+.th {
+  vertical-align: top;
+  height: auto;
+}
+
+.listrow {
+  padding: 2px;
+}
+
+.rowHead {
+  padding: 1em 0;
+  width: 90%;
+}
+
+.chartTitle {
+  color: #333;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 12px;
+}
+
+#chartMarket {
+  height: 400px;
+  pointer-events: none !important;
+}
+
+.orange5 .value {
+  color: #ffffff !important;
+}
+
+.orange5 {
+  background-color: #118241;
+}
+
+.orange4 {
+  background-color: #299e3d;
+}
+
+.orange3 {
+  background-color: #5bbf48;
+}
+
+.orange2 {
+  background-color: #9ee384;
+}
+
+.orange1 {
+  background-color: #c7e5b5;
+}
+
+.orange35 {
+  background-color: #bf7f63;
 }
 
 .mapboxgl-ctrl-attrib {
   display: none !important;
+}
+
+.mapboxgl-canvas {
+  position: static !important;
+}
+
+.chatter {
+  font-size: 14px;
+  line-height: 22px;
+  padding-right: 20px;
+  margin-top: 3px;
 }
 
 #listing {
@@ -2375,33 +2491,39 @@ body {
   width: 30%;
 }
 
+#filter {
+  margin-bottom: 10px;
+}
+
 #cities {
-  height: 335px;
+  height: 380px;
   overflow-y: auto;
 }
 
 .legendary {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
   padding: 7px;
   color: #fff;
   border-radius: 5px;
+  font-weight: bold;
   padding: 0 7px;
   margin-bottom: 3px;
   display: inline-block;
-}
-
-.gray3 {
-  font-weight: normal !important;
+  font-size: 15px;
 }
 
 .byline {
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 0.7em;
-  color: #888;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: left;
-  line-height: 140%;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  line-height: 1.4em;
+  letter-spacing: normal;
+  font-weight: normal;
+  margin: 1rem 0;
+  font-size: .85em;
+}
+
+.byline a {
+  font-weight: normal !important;
+  font-family: Benton Sans, Helvetica, Arial, sans-serif !important;
 }
 
 #reference {
@@ -2417,12 +2539,19 @@ body {
   cursor: pointer;
 }
 
-.th {
-  padding: 1px;
-  font-weight: 900;
+.stretch:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-.th:hover {
+.th,
+.th2 {
+  padding: 1px;
+  font-weight: 600;
+}
+
+.th:hover,
+.th2:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -2454,10 +2583,10 @@ body {
 }
 
 .score {
-  font-weight: 900;
+  font-weight: 600;
   text-align: right;
   width: 15%;
-  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
 }
 
 #metrics {
@@ -2480,13 +2609,13 @@ h5 {
 
 .metricCol {
   display: inline-block;
-  width: 24%;
+  width: 19%;
   text-align: center;
   vertical-align: top;
 }
 
 .metricCol div {
-  padding: 1px;
+  padding: 3px;
 }
 
 .metric {
@@ -2501,12 +2630,22 @@ h5 {
   padding: 7px;
 }
 
-#chart, #chart svg {
+#chart,
+#chart svg {
   height: 200px;
 }
 
 #chart .c3-line {
   stroke-width: 6px !important;
+}
+
+#chartHead {
+  font-size: 1em;
+  margin-top: 2.5em;
+}
+
+#chartHead > div {
+  padding: 5px;
 }
 
 /*#income {
@@ -2562,7 +2701,8 @@ h5 {
   transition: margin 0.3s ease-in 0s;
 }
 
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
   display: block;
   float: left;
   width: 50%;
@@ -2626,11 +2766,13 @@ h5 {
     height: 157px;
   }
 
-  #chart, #chart svg {
+  #chart,
+  #chart svg {
     height: 200px;
   }
 
-  #listing, #metrics {
+  #listing,
+  #metrics {
     float: none;
     width: 100%;
   }
@@ -2648,8 +2790,31 @@ h5 {
   }
 }
 @media only screen and (max-width: 500px) {
+  .cell,
+  .th {
+    width: 14%;
+    font-size: 0.7em;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 120%;
+    text-align: center;
+    height: 13px;
+  }
+
+  .th {
+    font-size: 0.8em;
+    height: auto;
+    vertical-align: bottom;
+  }
+
   .mobilekill {
     display: none;
+  }
+
+  .stretch {
+    width: 24%;
+    display: inline-block;
+    text-align: left;
   }
 
   .mobileshow {
