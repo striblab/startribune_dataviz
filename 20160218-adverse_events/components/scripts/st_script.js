@@ -37,11 +37,11 @@ var chartDecade = c3.generate({
         axis: {
           rotated: true,
           y: {
-            max:20,
+            max:30,
             min:0,
             padding: {top:0,bottom:0},
             tick: {
-             values: ['0', '10', '20'],
+             values: ['0', '15', '30'],
              format: d3.format('r')
             }
         },
