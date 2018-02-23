@@ -2377,7 +2377,8 @@ body,
   display: none;
 }
 
-.name, .score {
+.name,
+.score {
   pointer-events: none !important;
 }
 
@@ -2433,6 +2434,7 @@ body,
 
 .chartTitle {
   color: #333;
+  font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   margin-top: 12px;
@@ -2482,7 +2484,7 @@ body,
 .chatter {
   font-size: 14px;
   line-height: 22px;
-  padding-right: 20px;
+  padding-right: 80px;
   margin-top: 3px;
 }
 
@@ -2510,6 +2512,10 @@ body,
   margin-bottom: 3px;
   display: inline-block;
   font-size: 15px;
+}
+
+.legendary.orange1 {
+  color: #333;
 }
 
 .byline {
@@ -2769,6 +2775,10 @@ h5 {
   #chart,
   #chart svg {
     height: 200px;
+  }
+
+  .chatter {
+    padding-right: 10px;
   }
 
   #listing,
