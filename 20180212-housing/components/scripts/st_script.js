@@ -450,7 +450,7 @@ function chartHighlights(){
   $("#chartHead").html('<div class="cell stretch th" data="name">Community</div> \
       <div class="cell th selected" data="index">Housing market index score</div> \
       <div class="cell th" data="market">average days on market</div> \
-      <div class="cell th" data="change">% change price per sqft</div> \
+      <div class="cell th" data="change">% change price per sq. ft.*</div> \
       <div class="cell th" data="distressed">% distressed properties</div> \
       <div class="cell th" data="price">change in market days</div> \
       <div class="cell th hideme" data="family">% single family</div> \
