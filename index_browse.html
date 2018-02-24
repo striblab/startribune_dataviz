@@ -510,7 +510,7 @@ $('.scrollToTop').click(function(){
 var data = json;
 var dataResources = json2.resources;
 
-d3.select("#listHere").selectAll("div").data(data.published_master).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
+d3.select("#listHere").selectAll("div").data(data.published_master.filter(function(d) { return d.notes == "#";})).enter().append("div").attr("class",function (d){ return "articleEntry " + d.articleType }).html(function (d){
 
 if (d.git != '') { var git = "<div class='git'><a href='" + d.git + "' target='new_'>View on Github</a></div>"; }
 else { var git = ""; }
@@ -655,7 +655,7 @@ if ($.urlParam('page') != 0 ) {
     $("#resourcesBlock").hide();
     if (pageTerm != "tools") { $(".tools").hide(); }
     if (pageTerm == "tools") { $(".tools").show(); }
-    if (pageTerm == "twitter") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#articlePane").hide(); $("#twitterBlock").show(); }
+    if (pageTerm == "twitter" || pageTerm == "tweets") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#articlePane").hide(); $("#twitterBlock").show(); }
     if (pageTerm == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show();
     $("#twitterBlock").hide(); }
     if (pageTerm == "contributors") { $("#resourcesBlock, .articleEntry").hide(); $(" #contributorsBlock").show(); $("#twitterBlock").hide(); }
@@ -688,7 +688,7 @@ $(document).ready(function () {
     $(".icon").click(function () {
         $(".socialBox").hide();
         $(".icon").removeClass('selected');
-        window.history.replaceState(null, null, '/?page=' + $(this).attr("data"));
+        window.history.replaceState(null, null, 'startribune_dataviz/index_browse.html?page=' + $(this).attr("data"));
         $(this).parent().addClass('selected');
         $("#" + $(this).attr("data")).fadeToggle(200);
     });
