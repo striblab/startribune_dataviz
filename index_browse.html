@@ -32,7 +32,7 @@
       a:hover { color:#333 !important; color:inherit !important; }
       .link a:hover { text-decoration:none !important; color: #87C944 !important; }
       .masthead  a { color:#000 !important; }
-      .masthead { font-weight:900; font-family:Helvetica; /*letter-spacing:20px;*/ text-align:left !important; font-size:1.5em; }
+      .masthead { font-weight:900; font-family:Helvetica; /*letter-spacing:20px;*/ text-align:center !important; font-size:1.5em; }
       p { font-family:Helvetica; line-height:150%; }
       #wrapper { width:800px;; margin-right:auto; margin-left:auto; }
       h1 { font-family:"Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,AppleGothic,sans-serif; text-align:left; letter-spacing:20px; }
@@ -44,26 +44,18 @@
       h4 { color:#333; text-align:center; margin:0; padding:10px 0 0; }
 
 /*HEADER*/
-      .starlogo { float:left; margin:15px; }
-      #logo_container { width:208px; }
-      .datalab-logo { float:left; margin:10px; width:100%;}
-      #top { padding:3px; margin-bottom:10px; }
-      #viewSwitch { display:none; }
-      .dash { display:none; }
-      .main { text-align:center; }
-      .resume_icon { text-align:center; padding:25px; }
-      .resume_icon img { width:90px; }
-      .section h1 { text-align:center; }
-      .icon { width:100%; display:block; }
-      .breaker { clear:both; margin:10px; }
-      .icon img { margin:10px; width:64px; }
-      .icon:hover { cursor:pointer; opacity:.8; }
-      .selected { background-color:#ddd !important; margin:0 !important; }
-      .linkage { text-align:left; }
-      #overall { text-align:left !important; }
-      div#at4-share { display:none !important; }
-      .tagline { text-align:left !important; }
-      .at-icon { background-color:#87C944 !important; }
+    .count { padding:5px; font-weight:bold; font-size:1.2em; display:none; }
+    .section h1 { text-align:center; }
+    .icon { width:100%; display:block; }
+    .icon p { margin:0 !important; display:none; }
+    .icon:hover, .share-buttons li:hover { opacity:.8; cursor:pointer; }
+    .icon img { margin:10px; width:64px; }
+    .selected { background-color:#ddd; }
+    div#at4-share { display:none !important; }
+    .tagline { text-align:center !important; }
+    .at-icon { background-color:#87C944 !important; }
+    .this { background-color:#ddd; border:1px solid #ddd; }
+    div.panel { display:none; }
 
 /*ENTRIES*/
       #articlePane { display:inline-block; width:100%; }
@@ -88,7 +80,6 @@
 
 /*SIDEBAR*/
       #dataSidebar { float:left !important; display:inline-block !important; width:30% !important; border: 1px solid #ddd; }
-      .sectionBox { margin:7px; }
       .creditBox { width:32%; height:auto; float:left; }
       #articleHeader { margin-top:40px; }
       .articleName a { color: #333; text-decoration: none; }
@@ -161,31 +152,61 @@
       .linkage { padding:5px; }
       .databankLink { font-weight:900; margin-right:auto; margin-left:auto; padding:20px; text-align:center; }
       .source { font-size:1em !important; }
-      
+
+/*COLORS*/
+    .blue {
+        border-bottom:5px solid #3580A3 !important;
+    }
+    .green {
+        border-bottom:5px solid #5BBF48 !important;
+    }
+    .red {
+        border-bottom:5px solid #C22A22 !important;
+    }
+    .purple {
+        border-bottom:5px solid #857AAA !important;
+    }
+    .gray {
+        border-bottom:5px solid #CCC !important;
+    }
+    .gold {
+        border-bottom:5px solid #F2D2A4 !important;
+    }
+    .orange {
+        border-bottom:5px solid #E07242 !important;
+    }
+
+/*MENU*/
+   .taghead { font-weight:900; padding:5px; }
+   #topper { height:100px; background-color:#000000; color:#ffffff; position:relative; background: url('../img/topper.png') no-repeat center; }
+   .slideout { position: absolute; top:0; right:0; border: none; outline:none; background: url('../img/menu.png') no-repeat center; width: 50px; height: 50px; }
+   .side { display:inline-block; }
+   #menu { display:none; }
+   .slideout:hover { cursor:pointer; }
+   #menu { height:auto; }
+   #menu a { color:#000000 !important; font-weight:900; font-size:1.3em; }
+   #menu .siteNav { width:100%; text-align:left; }
+   #menu .siteNav img { display:inline-block !important; width:60px !important; }
+
 /*FOOTER*/
-      .scrollToTop { color:#87C944 !important; text-align:center; padding:15px; }
-      .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-      #footerBottom { text-align:center; width:100%; border-top:1px solid #ddd; padding:15px; clear:both; float:none; }
-      #footerStuff { display:none; }
-      #intro { text-align:center; }
-      #photo img { width:200px; }
-     .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; }
+     #intro { text-align:center !important; }
+     #photo img { width:200px; }
      #footer { text-align:center; padding-top:5px; border-top:1px solid #ddd; padding:15px; }
      .footerLinks { display:inline-block; width:100%; text-align:center; vertical-align:top; font-size:.9em; }
-     .linkDiv { display:inline-block !important; margin:5px; }
+     .linkDiv { display:inline-block; margin:5px; }
      .scrollToTop { color:#aaa !important; text-align:center; padding:15px; }
      .scrollToTop:hover { color:#333 !important; cursor:pointer; }
-      #intro { text-align:center; }
-      #photo img { width:200px; }
-      #about { margin-top:15px; border-top:1px solid #ddd;}
-      #profile { float:left; margin:10px; }
-      #sharethis { clear:both !important; text-align:center; }
-      #topmenu { text-align:center; }
-      .siteNav { display:inline-block; width:48%; }
-      .topbutton { display:inline-block; font-size:1em; font-weight:900; padding:5px; text-align:center; background-color:#fff; border:1px solid black; width:100%; border-radius:0; }
-      .topbutton:hover { opacity:.8; cursor:pointer; }
-      .this { background-color:#ddd; border:1px solid #ddd; }
-      #socialmenu img:hover { opacity:.8; }
+     #about { margin-top:15px; border-top:1px solid #ddd;}
+     #profile { float:left; margin:10px; }
+     #sharethis { clear:both !important; text-align:center; }
+     #topmenu { text-align:center; }
+     .topbutton { display:inline-block; font-size:1em; border:0; font-weight:900; padding:1px; text-align:center; background-color:#fff; width:13.8%; border-radius:0; }
+     .topbutton:hover { opacity:.8; cursor:pointer; }
+     .this { background-color:#ddd; border:1px solid #ddd; }
+     .siteNav img:hover { opacity:.8; }
+     .siteNav img { width:36px ; }
+     .siteNav { display:inline-block; font-size:1em; font-weight:900; text-align:center; background-color:#fff; width:13.8%; }
+
 
 /*BREAKPOINTS*/
     @media only screen and (min-width:650px) {
@@ -265,6 +286,44 @@
 
 <body>
 <div id="wrapper">
+<div id="topper">
+<div class='taghead'>@jeffhargarten</div>
+
+<button class="slideout side"></button>
+</div>
+
+<div id="menu">
+<a href="http://freyhargarten.com"><div class="blue">Resume</div></a>
+
+<div class="siteNav"><a href="https://plus.google.com/+JeffHargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/googleplus.png" alt="googleplus" /></a> <a href="https://www.about.me/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/aboutme.png" alt="aboutme" /></a> <a href="https://www.linkedin.com/in/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/linkedin.png" alt="linkedin" /></a></div>
+
+
+<a href="http://striblab.github.io/startribune_dataviz/index_browse.html"><div class="this green">Articles</div></a>
+
+<div class="siteNav"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/striblab.png" alt="striblab" /></a> <a href="http://twitter.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/twitter.png" alt="twitter" /></a> <a href="https://github.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/github.png" alt="github" /></a></div>
+
+
+<a href="http://datamancy.org"><div class="red">Blog</div></a>
+
+<div class="siteNav"><a href="https://www.mixcloud.com/jeff-hargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/mixcloud.png" alt="mixcloud" /></a> <a href="https://www.vimeo.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/vimeo.png" alt="vimeo" /></a> <a href="https://giphy.com/channel/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/giphy.png" alt="giphy" /></a></div>
+
+<a href="http://portalmancy.com"><div class="this purple">Artwork</div></a>
+
+<div class="siteNav"><a href="http://jeffhargarten.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" alt="deviantart" /></a> <a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" alt="tumblr" /></a> <a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" alt="soundcloud" /></a></div>
+
+<a href="http://jeffhargarten.github.io/worldmap"><div class="gray">Worldmap</div></a>
+
+<div class="siteNav"><a href="https://www.facebook.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/facebook.png" alt="facebook" /></a> <a href="https://www.instagram.com/jeffhargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/instagram.png" alt="instagram" /></a> <a href="https://www.snapchat.com/add/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/snapchat.png" alt="snapchat" /></a></div>
+
+<a href="http://jeffhargarten.github.io/metrics"><div class="gold">Metrics</div></a>
+
+<div class="siteNav"><a href="http://fitbit.com/user/5RYD4D" target="new_"><img src="http://freyhargarten.com/_base/img/icons/fitbit.png" alt="fitbit" /></a> <a href="#" target="new_"><img src="http://freyhargarten.com/_base/img/icons/dailyburn.png" alt="dailyburn" /></a> <a href="#" target="new_"><img src="http://freyhargarten.com/_base/img/icons/headspace.png" alt="headspace" /></a></div>
+
+<a href="http://jeffhargarten.github.io/about"><div class="orange">About</div></a>
+
+<div class="siteNav"><a href="#" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tinder.png" alt="tinder" /></a> <a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/league.png" alt="league" /></a> <a href="#" target="new_"><img src="http://freyhargarten.com/_base/img/icons/bumble.png" alt="bumble" /></a></div>
+</div>
+
 <div id="intro" class="section">
 <div class='masthead'><a href="./index_browse.html">striblab</a></div>
 <p class='tagline'>converging storytelling, data, code, and design</p>
@@ -292,6 +351,8 @@
 </div>
 
 <div id="articlePane" class="sectionBox">
+<div class="follow"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Follow me on Star Tribune</a></div>
+
 <div id="sorting" class="sectionBox">
   <section class="main">
         <div class="wrapper-demo">
@@ -314,10 +375,10 @@
           </div>
         ​</div>
 </section>
+
 <div id="listHere"></div>
 </div>
 
-<div class="follow"><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Follow me on Star Tribune</a></div>
 </div>
 
 
@@ -421,28 +482,6 @@
 
 <div id="sharethis"><div class="addthis_sharing_toolbox"></div></div>
 
-<div class="breaker"></div>
-
-<div id="about">
-<img src="http://freyhargarten.com/_base/img/profile.jpg" width="200" id="profile" alt="profile" />
-<p>StribLab is the work of <a href="https://plus.google.com/+JeffHargarten" rel="me">Frey Hargarten</a> and many talented journalists across the StarTribune newsroom. All code and public datasets are open source and free for adaptation and repurposing.</p><p><a href="bit.ly/2jmBjig" key="3C28 11FC 1FF9 860D 14B8 4EF3 E35E 9A4C 61B3 39DF">PGP Key</a></p>
-
-<div class="breaker"></div>
-
-</div>
-
-<div id="topmenu">
-<div class="siteNav"><a href="http://freyhargarten.com"><button class="topbutton">Resume</button></a><div><a href="https://www.linkedin.com/in/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/linkedin.png" alt="linkedin" /></a><a href="https://www.facebook.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/facebook.png" alt="facebook" /></a><a href="https://www.instagram.com/jeffhargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/instagram.png" alt="instagram" /></a></div></div>
-
-<div class="siteNav"><a href="http://striblab.github.io/startribune_dataviz/index_browse.html"><button class="topbutton">Articles</button></a><div><a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/striblab.png" alt="striblab" /></a><a href="http://twitter.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/twitter.png" alt="twitter" /></a><a href="https://github.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/github.png" alt="github" /></a></div></div>
-
-<div class="siteNav"><a href="http://datamancy.org"><button class="topbutton">Blog</button></a><div><a href="https://www.mixcloud.com/jeff-hargarten/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/mixcloud.png" alt="mixcloud" /></a><a href="https://www.vimeo.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/vimeo.png" alt="vimeo" /></a><a href="https://giphy.com/channel/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/giphy.png" alt="giphy" /></a></div></div>
-
-<div class="siteNav"><a href="http://deadskies.org"><button class="topbutton this">Artwork</button></a><div><a href="http://jeffhargarten.deviantart.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/deviantart.png" alt="deviantart" /></a><a href="http://jeffhargarten.tumblr.com/" target="new_"><img src="http://freyhargarten.com/_base/img/icons/tumblr.png" alt="tumblr" /></a><a href="https://soundcloud.com/jeffhargarten" target="new_"><img src="http://freyhargarten.com/_base/img/icons/soundcloud.png" alt="soundcloud" /></a></div></div>
-</div>
-
-<p></p>
-
 <div id="footer"><span><a href="https://creativecommons.org/" target="new_"><img src="http://freyhargarten.com/_base/img/cc.large.png" width="15" alt="CC" /></a></span> Star Tribune, Frey Hargarten 2018</div>
 
 </div>
@@ -456,6 +495,12 @@
 <script>
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=published_master", function(error, json) {
 d3.json("http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1MrdiPvoMBzgfSGyF_DpDQPvs2ZFFJpD5_YYttKqtKQ0&sheet=resources", function(error, json2) {
+
+
+$(".slideout").click(function () {
+  $("#menu").toggle();
+});
+
 
 $('.scrollToTop').click(function(){
     $('html, body').animate({scrollTop : 0},800);
