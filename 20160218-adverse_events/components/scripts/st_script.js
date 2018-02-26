@@ -115,8 +115,10 @@ var chartDecade = c3.generate({
               x: {
                   type: 'category',
                   tick:{
+                    rotate: -75,
                     multiline:false
-                  }
+                  },
+                  height:50
               }
           }
     });
