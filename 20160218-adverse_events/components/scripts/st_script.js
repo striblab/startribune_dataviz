@@ -7,7 +7,7 @@ var dataChart = json2.sum;
 // CHART
 var  padding = {
         top: 20,
-        right: 40,
+        right: 60,
         bottom: 20,
         left: 270,
     };
@@ -26,13 +26,22 @@ var chartDecade = c3.generate({
               'count': 'Number of Adverse Events'
             },
             types: {
-            'count': 'bar'
+              'count': 'bar'
+            },
+            labels: {
+              format: { "count": d3.format(",.0f") }
             }
         },
        bar: {
         width: {
             ratio: 0.5
         }
+      },
+      tooltip: {
+        show:false
+      },
+      legend: {
+        show:false
       },
         axis: {
           rotated: true,
@@ -54,8 +63,64 @@ var chartDecade = c3.generate({
           }
         },
       subchart: { show: false },
-        color: { pattern: ['#CCC'] },
+        color: { pattern: ['#3580A3'] },
     });
+
+   var  padding = {
+            top: 20,
+            right: 60,
+            bottom: 20,
+            left: 40,
+        };
+
+    var chartTrend = c3.generate({
+          bindto: "#chartTrend",
+          padding: padding,
+          data: {
+              x: 'x',
+              columns:
+              [
+                ["x","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017"],
+                ["count",312,301,305,316,314,258,308,292,336,341]
+              ],
+              type: 'bar',
+            labels: {
+                format: {
+                    'count': d3.format('.0f')
+              }
+            }
+          },
+
+            legend: {
+                show: false
+            },
+            tooltip: {
+                show: false
+            },
+            color: {
+                  pattern: ['#3580A3']
+                },
+          axis: {
+              // rotated: true,
+                y: {
+                      max: 400,
+                        min: 0,
+                        padding: {bottom: 0, top: 0},
+                        tick: {
+                         count: 7,
+                         values: [0,50,100,150,200,250,300,350,400],
+                         format: d3.format('.0f')
+                        }
+                    },
+              x: {
+                  type: 'category',
+                  tick:{
+                    multiline:false
+                  }
+              }
+          }
+    });
+
 
 function tableSpill() {
 
