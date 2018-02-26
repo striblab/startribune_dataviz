@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif !important;
 }
 
 #header {
@@ -16,6 +16,14 @@ body {
     height: 280px;
 }
 
+.legendary {
+    padding:4px;
+    color: #fff;
+    font-weight:bold;
+    border-radius: 5px;
+    padding: 0 7px;
+    margin-bottom: 3px;
+}
 
 .byline {
     font-family: "Benton Sans", Helvetica, Arial, sans-serif;
