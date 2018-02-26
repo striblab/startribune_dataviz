@@ -1842,7 +1842,7 @@ header[role="banner"] {
   width: 100%;
 }
 
-body {
+body, .chatter, .chartTitle {
   font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif !important;
 }
 
