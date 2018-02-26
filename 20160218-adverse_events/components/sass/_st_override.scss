@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-body {
+body, .chatter, .chartTitle {
     font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif !important;
 }
 
@@ -30,6 +30,7 @@ body {
     font-weight: 400;
     font-size:0.6em;
     color: #888;
+    line-height:140%;
     padding-top:10px;
     padding-bottom:10px;
     text-align:left;
