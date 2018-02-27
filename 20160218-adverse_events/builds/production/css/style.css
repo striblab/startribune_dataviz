@@ -1846,6 +1846,10 @@ body, .chatter, .chartTitle {
   font-family: "Benton Sans Condensed Medium", Helvetica, Arial, sans-serif !important;
 }
 
+.chatter {
+  line-height: 140%;
+}
+
 #header {
   margin-bottom: 10px;
 }
