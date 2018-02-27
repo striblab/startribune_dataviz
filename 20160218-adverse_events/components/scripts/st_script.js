@@ -7,7 +7,7 @@ var dataChart = json2.sum;
 // CHART
 var  padding = {
         top: 20,
-        right: 60,
+        right: 100,
         bottom: 20,
         left: 270,
     };
@@ -46,11 +46,11 @@ var chartDecade = c3.generate({
         axis: {
           rotated: true,
           y: {
-            max:40,
+            max:50,
             min:0,
             padding: {top:0,bottom:0},
             tick: {
-             values: ['0', '20', '40'],
+             values: ['0', '25', '50'],
              format: d3.format('r')
             }
         },
