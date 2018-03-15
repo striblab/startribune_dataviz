@@ -45,10 +45,10 @@ body,
     width: 15%;
     display: inline-block;
     vertical-align: top;
-    line-height: 120%;
     text-align: center;
     height: 18px;
     padding-top: 2px;
+    line-height:120% !important;
 }
 
 .cell:hover,
@@ -82,7 +82,7 @@ body,
 }
 
 .chartTitle {
-    color: #333; // font-family: "Whitman Display Condensed Bold", Georgia, Times, serif;
+    color: #333;
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
@@ -153,7 +153,7 @@ body,
 }
 
 #cities {
-    height: 380px;
+    height: 390px;
     overflow-y: auto;
 }
 
