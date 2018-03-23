@@ -173,7 +173,7 @@ d3.helper.tooltip = function(accessor){
         });
     };
 };
-for (var i=2000; i <= 2017; i++){ spitDots(i); }
+for (var i=2000; i <= 2018; i++){ spitDots(i); }
 //SEARCH FILTER TABLE
   // $( document ).ready(function() {
      $('#filter_box').keyup(function(i){

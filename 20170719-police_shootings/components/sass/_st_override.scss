@@ -490,7 +490,7 @@ body {
     text-align: center;
 }
 .yearLabel {
-    width: 5%;
+    width: 4.57%;
     display: inline-block;
     text-align: center;
     font-size: .9em;
@@ -727,7 +727,7 @@ h1.mobile-hedline {
         text-align: center;
     }
 }
-@media (max-width:620px) {
+@media (max-width:770px) {
     .article-headline {
         display: none;
     }
@@ -839,7 +839,7 @@ h1.mobile-hedline {
     }
 
     .yearLabel {
-        width: 4.7%;
+        width: 4.57%;
         display: inline-block;
         text-align: center;
         font-size: 0.7em;
@@ -868,7 +868,7 @@ h1.mobile-hedline {
     }
     
     .yearLabel {
-        width: 4.56%;
+        width: 4.1%;
     }
     
     #mobileZoom {
