@@ -7,9 +7,12 @@ $.urlParam = function(name){
 var selected = $.urlParam('chart');
 
 if (selected != null){
-$(".slide").hide();
-$("#" + selected).show();
+  $(".slide").hide();
+  $("#" + selected).show();
 }
+if (selected == "all"){
+  $(".slide").show();
+} 
 
 d3.json('./data/bridges.geojson', function(error, bridges) {
 d3.json('./data/bridges2006.geojson', function(error, bridges2006) {
