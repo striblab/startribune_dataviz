@@ -1,0 +1,66 @@
+{
+  "name": "police-payouts",
+  "version": "0.0.1",
+  "description": "A database of payments made by Minnesota police departments.",
+  "author": {
+    "name": "jeff.hargarten@startribune.com",
+    "email": "jeff.hargarten@startribune.com"
+  },
+  "main": "app/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=6.9"
+  },
+  "dependencies": {
+    "query-string": "^4.3.2"
+  },
+  "devDependencies": {
+    "d3-dsv": "^1.0.4",
+    "jest-cli": "^20.0.4",
+    "lodash": "^4.17.4",
+    "request": "^2.79.0",
+    "sander": "^0.6.0",
+    "aws-sdk": "^2.77.0",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-3": "^6.17.0",
+    "browser-sync": "^2.18.12",
+    "chrome-remote-interface": "^0.23.2",
+    "del": "^2.2.2",
+    "dotenv": "^4.0.0",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^19.0.0",
+    "gulp": "^3.9.1",
+    "gulp-a11y": "^0.1.2",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-awspublish": "^3.3.0",
+    "gulp-ejs": "^3.0.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-file-include": "^1.1.0",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-noopener": "^1.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-stylelint": "^3.9.0",
+    "gulp-util": "^3.0.8",
+    "htmlhint-stylish": "^1.0.3",
+    "lighthouse": "^2.2.1",
+    "moment": "^2.19.1",
+    "openurl": "^1.1.1",
+    "run-sequence": "^1.2.2",
+    "strib-styles": "^0.0.2",
+    "stylelint-config-standard": "^17.0.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "underscore": "^1.8.3",
+    "webpack": "^3.1.0",
+    "webpack-stream": "^3.2.0",
+    "yargs": "^8.0.2"
+  },
+  "license": "MIT"
+}

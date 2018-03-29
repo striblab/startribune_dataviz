@@ -1,0 +1,53 @@
+{
+  "about this file": "This document defines configuration for this project that is not content or copy.",
+  "projectIdentifier": "<%= package.name %>",
+<% if (answers.projectType === 'cms' ) { %>
+  "cms": {
+    "id": "<%= answers.cmsIDs ? answers.cmsIDs[0] : 'NEEDS-CMS-ID-IN-CONFIG.JSON' %>",
+    "pages": <%- answers.cmsIDs ? JSON.stringify(answers.cmsIDs) : '["other", "cms-ids"]' %>,
+    "lcds": <%- answers.lcdIDs ? JSON.stringify(answers.lcdIDs) : '["other", "cms-ids"]' %>
+  },
+<% } %>
+<% if (answers.projectType === 'standalone' ) { %>
+  "social": {
+    "image": "assets/images/strib/strib-logo-name-social-card.png"
+  },
+  "styles": {
+    "globals": [
+      "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    ]
+  },
+  "js": {
+    "globals": [
+      "https://cdnjs.cloudflare.com/ajax/libs/pym/1.2.2/pym.v1.min.js",
+      "https://cdn.polyfill.io/v2/polyfill.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+    ]
+  },
+<% } %>
+  "content": {
+
+  },
+  "publish": {
+<% if (answers.projectType === 'standalone' ) { %>
+    "default": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects-staging/all/<%= package.name %>",
+      "url": "http://static.startribune.com/news/projects-staging/all/<%= package.name %>/",
+      "cacheSeconds": 30
+    },
+    "testing": {
+      "bucket": "stribtest-bucket",
+      "path": "news/projects/<%= package.name %>",
+      "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/<%= package.name %>/",
+      "cacheSeconds": 30
+    },
+<% } %>
+    "production": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects/all/<%= package.name %>",
+      "url": "http://static.startribune.com/news/projects/all/<%= package.name %>/",
+      "cacheSeconds": 600
+    }
+  }
+}
