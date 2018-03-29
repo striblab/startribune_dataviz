@@ -1,0 +1,1316 @@
+/**
+ * Project specific styling.
+ */
+
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
+body,
+#filter,
+#filter input:focus,
+p {
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+    width:520px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.legendary {
+    border-radius: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+#down {
+    display:none;
+}
+
+.byline a {
+    color: #888;
+}
+
+.byline {
+    line-height:130%;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+}
+
+.chatter {
+    line-height:160%;
+    text-align:left;
+    margin-bottom: 7px;
+}
+
+.chart {
+    width:100%;
+    vertical-align:top;
+    display:inline-block;
+}
+
+.bigBar {
+  height:auto;
+}
+
+.bar {
+  background-color:#3580A3;
+  height:10%;
+}
+
+.total {
+  text-align:center;
+  font-weight:900;
+  font-size:1.3em;
+  color:#3580A3;
+}
+
+.percentage {
+  color:#3580A3;
+  font-weight:900;
+  font-size:1.3em;
+  text-align:center;
+}
+
+#chartYear, #chartTime {
+  height:300px !important;
+}
+
+#chartYear text {
+  display:none !important;
+  opacity:0 !important;
+}
+
+.column {
+  display:inline-block;
+  width:48%;
+  overflow:hidden;
+  vertical-align:top;
+}
+
+.left {
+    margin-right: 3.5%;
+}
+
+#filter input:focus {
+    width: 95% !important;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    -webkit-box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #999;
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #3580A3 !important;
+}
+
+.geocoder, .mapboxgl-ctrl-geocoder {
+    width:100%;
+    margin-bottom:10px;
+ }
+
+.geocoder-pin-right {
+    display:none !important;
+}
+
+.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-compass {
+    display:none !important;
+}
+
+.chartDiv {
+    height:250px;
+}
+
+.c3-line {
+    stroke-width: 1px !important;
+}
+
+.switch:hover, .switch {
+    margin:0 !important;
+    width:32%;
+}
+
+input::focus {
+    width: 95%;
+}
+
+#filter input {
+    border-radius: 0 !important;
+    width: 100%;
+}
+
+#filter input:focus {
+    width: 95% !important;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+    box-shadow: 0 0 5px #999;
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #61bd1a ;
+}
+
+#filter {
+    padding: 0px !important;
+    display: none;
+}
+
+#districtSelect, #thisDistrict {
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+#thisDistrict {
+    padding: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+#districtSelect {
+    color: #626567;
+    padding: 15px;
+}
+
+.directions {
+    font-size: 1.4em;
+}
+
+.divider {
+    margin-bottom:10px;
+    /*border-bottom:1px solid black;*/
+}
+
+#districtSelect:hover {
+    cursor: pointer;
+}
+
+#agenciesList {
+    display: block;
+    height: 369px;
+    overflow-y: auto; 
+    display: none;
+    z-index: 90;
+    width: 96.8%;
+    margin-bottom: 15px;
+}
+
+li.district {
+    text-align: left !important;
+    line-height:25px;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    margin-left:1px;
+    padding-left: 14px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.outline {
+    border: 1px solid #CACFD2;
+    border-radius: 10px;
+    width: 100%;
+ //   margin-top: 50px;
+}
+
+li.district:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #CACFD2;
+    border-top: 1px solid #CACFD2;
+    background-color: #F2F3F4;
+}
+
+li.district.selected {
+    border-bottom: 1px solid #CACFD2 !important;
+    border-top: 1px solid #CACFD2 !important;
+    background-color: #F2F3F4 !important;
+    color: black !important;
+}
+
+.cell:hover,
+.selected2 {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.zoom {
+    float: none !important;
+    text-align: center;
+    padding: 15px;
+}
+
+#filter input {
+    border-radius: 0 !important;
+    width: 95% !important;
+    margin-left: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+#filter_box {
+    width: 95% !important;
+    margin-left: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+#filter {
+    padding: 0px !important;
+}
+
+.selected {
+    margin:0 !important;
+}
+
+#incomingChart .c3-line, #leavingChart .c3-line {
+    opacity:0 !important;
+}
+
+#incomingChart .c3-area, #leavingChart .c3-area, #raceChart .c3-area {
+  opacity: 0.8 !important;
+}
+
+.chartTitle {
+    letter-spacing: -0.2px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.c3-line {
+    stroke-width: 2.5px !important;
+}
+
+@media (max-width:520px) {
+    #wrapper { 
+        width:100%;
+    }
+    .chart {
+        width:100%;
+    }
+    .map-overlay-container {
+        width: 100%;
+        padding: 10px;
+        position: static;
+    }
+
+    .map-overlay {
+        background-color: #fff;
+        border-radius: 3px;
+        padding: 10px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+    }
+    #districtSelect, #thisDistrict {
+        text-align: left;
+    }   
+}
+
+
+.site-view, footer, .project-header {
+  display:none !important;
+}
+
+
+#chartTrend .c3-line {
+    opacity:0 !important;
+}
+
+#chartTrend .c3-area {
+  opacity: 1 !important;
+}
+
+#chartType {
+  height:500px;
+}
+
+.byline a {
+    color: #888 !important;
+}
+
+.noclicky {
+  pointer-events:none !important;
+}
+
+.tooltip {
+  width:180px !important;
+}
+
+.byline {
+    line-height:140%;
+    font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size:0.6em;
+    color: #888;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:left;
+}
+
+.districtName {
+  font-weight:bold;
+}
+
+.red5 {
+  color:#ffffff;
+}
+
+.chart .c3-line {
+    stroke-width: 6px !important;
+}
+
+.legendary {
+    padding:4px;
+    color: #fff;
+    font-weight:bold;
+    border-radius: 5px;
+    padding: 0 7px;
+    margin-bottom: 3px;
+}
+
+.chatter {
+    line-height:140%;
+}
+
+.chartTitle {
+	font-size:1.5em;
+	font-weight:900;
+}
+
+.map {
+	text-align:center;
+}
+
+@media (max-width:800px) {
+    #wrapper {
+        width:100%;
+    }
+}
+
+/*-- Chart --*/
+.c3 svg {
+  font: 10px sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c3 path, .c3 line {
+  fill: none;
+  stroke: #000;
+}
+
+.c3 text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.c3-legend-item-tile, .c3-xgrid-focus, .c3-ygrid, .c3-event-rect, .c3-bars path {
+  shape-rendering: crispEdges;
+}
+
+.c3-chart-arc path {
+  stroke: #fff;
+}
+
+.c3-chart-arc text {
+  fill: #fff;
+  font-size: 13px;
+}
+
+/*-- Axis --*/
+/*-- Grid --*/
+.c3-grid line {
+  stroke: #aaa;
+}
+
+.c3-grid text {
+  fill: #aaa;
+}
+
+.c3-xgrid, .c3-ygrid {
+  stroke-dasharray: 3 3;
+}
+
+/*-- Text on Chart --*/
+.c3-text.c3-empty {
+  fill: #808080;
+  font-size: 2em;
+}
+
+/*-- Line --*/
+.c3-line {
+  stroke-width: 1px;
+}
+
+/*-- Point --*/
+.c3-circle._expanded_ {
+  stroke-width: 1px;
+  stroke: white;
+}
+
+.c3-selected-circle {
+  fill: white;
+  stroke-width: 2px;
+}
+
+/*-- Bar --*/
+.c3-bar {
+  stroke-width: 0;
+}
+
+.c3-bar._expanded_ {
+  fill-opacity: 0.75;
+}
+
+/*-- Focus --*/
+.c3-target.c3-focused {
+  opacity: 1;
+}
+
+.c3-target.c3-focused path.c3-line, .c3-target.c3-focused path.c3-step {
+  stroke-width: 2px;
+}
+
+.c3-target.c3-defocused {
+  opacity: 0.3 !important;
+}
+
+/*-- Region --*/
+.c3-region {
+  fill: steelblue;
+  fill-opacity: 0.1;
+}
+
+/*-- Brush --*/
+.c3-brush .extent {
+  fill-opacity: 0.1;
+}
+
+/*-- Select - Drag --*/
+/*-- Legend --*/
+.c3-legend-item {
+  font-size: 12px;
+}
+
+.c3-legend-item-hidden {
+  opacity: 0.15;
+}
+
+.c3-legend-background {
+  opacity: 0.75;
+  fill: white;
+  stroke: lightgray;
+  stroke-width: 1;
+}
+
+/*-- Title --*/
+.c3-title {
+  font: 14px sans-serif;
+}
+
+/*-- Tooltip --*/
+.c3-tooltip-container {
+  z-index: 10;
+}
+
+.c3-tooltip {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  empty-cells: show;
+  -webkit-box-shadow: 7px 7px 12px -9px #777777;
+  -moz-box-shadow: 7px 7px 12px -9px #777777;
+  box-shadow: 7px 7px 12px -9px #777777;
+  opacity: 0.9;
+}
+.c3-tooltip tr {
+  border: 1px solid #CCC;
+}
+.c3-tooltip th {
+  background-color: #aaa;
+  font-size: 14px;
+  padding: 2px 5px;
+  text-align: left;
+  color: #FFF;
+}
+.c3-tooltip td {
+  font-size: 13px;
+  padding: 3px 6px;
+  background-color: #fff;
+  border-left: 1px dotted #999;
+}
+.c3-tooltip td > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+}
+.c3-tooltip td.value {
+  text-align: right;
+}
+
+/*-- Area --*/
+.c3-area {
+  stroke-width: 0;
+  opacity: 0.2;
+}
+
+/*-- Arc --*/
+.c3-chart-arcs-title {
+  dominant-baseline: middle;
+  font-size: 1.3em;
+}
+
+.c3-chart-arcs .c3-chart-arcs-background {
+  fill: #e0e0e0;
+  stroke: none;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-unit {
+  fill: #000;
+  font-size: 16px;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-max {
+  fill: #777;
+}
+.c3-chart-arcs .c3-chart-arcs-gauge-min {
+  fill: #777;
+}
+
+.c3-chart-arc .c3-gauge-value {
+  fill: #000;
+  /*  font-size: 28px !important;*/
+}
+
+/*
+This CSS resource incorporates links to font software which is
+the valuable copyrighted property of WebType LLC, The Font Bureau
+and/or their suppliers. You may not
+attempt to copy, install, redistribute, convert, modify or reverse
+engineer this font software. Please contact WebType with any
+questions: http://www.webtype.com
+*/
+@font-face {
+  font-family: "Benton Sans";
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-2.eot");
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-3.woff") format("woff"), url("//apps.startribune.com/fonts/Benton-Sans-Regular/c80c8df9-343a-4ee8-a64b-6213022724fd-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Benton Sans";
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-2.eot");
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-3.woff") format("woff"), url("//apps.startribune.com/fonts/Benton-Sans-Regular-Italic/2c74d4f4-5f5a-4841-9646-6cb371baa21a-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Benton Sans";
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-2.eot");
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-3.woff") format("woff"), url("//apps.startribune.com/fonts/Benton-Sans-Bold/34ba72ff-8e42-428e-b0a6-d43e43d09b7f-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Benton Sans Condensed Medium";
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-2.eot");
+  src: url("//apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-3.woff") format("woff"), url("//apps.startribune.com/fonts/Benton-Sans-Condensed-Medium/06f4dbf6-2449-4b99-9621-e8abb9e595a2-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Popular Light";
+  src: url("//apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot");
+  src: url("//apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-3.woff") format("woff"), url("//apps.startribune.com/fonts/Popular-Light/64136bfc-6015-473a-b534-6f235774c8ab-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Popular";
+  src: url("//apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-2.eot");
+  src: url("//apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-3.woff") format("woff"), url("//apps.startribune.com/fonts/Popular-Regular/a6cd39cd-f989-4756-ba40-dfd8fdcee7ca-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Popular Medium";
+  src: url("//apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot");
+  src: url("//apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-3.woff") format("woff"), url("//apps.startribune.com/fonts/Popular-Medium/ce490641-b5d9-4eff-a05c-38dbe1948f17-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Popular";
+  src: url("//apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-2.eot");
+  src: url("//apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-3.woff") format("woff"), url("//apps.startribune.com/fonts/Popular-Bold/cec9083e-fac8-488a-8891-4f7eacf77220-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Poynter Serif RE";
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-2.eot");
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-3.woff") format("woff"), url("//apps.startribune.com/fonts/Poynter-Serif-RE/6da0e483-5b55-412e-9685-611b9bb101fd-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Poynter Serif RE";
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-2.eot");
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-3.woff") format("woff"), url("//apps.startribune.com/fonts/Poynter-Serif-RE-Italic/fcc7dbe8-7d79-4278-a765-8e1eb8535c3f-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Poynter Serif RE";
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-2.eot");
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-3.woff") format("woff"), url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold/a9cccbf1-281e-4903-b5f3-4b5dcd9d9cfa-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Poynter Serif RE";
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-2.eot");
+  src: url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-3.woff") format("woff"), url("//apps.startribune.com/fonts/Poynter-Serif-RE-Bold-Italic/8cf6fa2c-d12a-46b5-b282-c93fbad37343-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Whitman Display Compressed Bold";
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Display-Comp-Bold/c1ec7b66-657a-4549-9c44-00ae270517c5-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Whitman Display Condensed Bold";
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Display-Cond-Bold/8406d32c-8dc4-4285-a5ee-200b97edd2ab-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Whitman Display";
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Display-Regular/afc69d83-243c-4a7f-8d26-1795692dfade-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Whitman Display";
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Display-Regular-Italic/e9683d36-3a41-45c2-8aeb-f461fa1825f1-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Whitman Display";
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Display-Bold/d34b615f-025d-471c-a1a0-a5a039248094-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Whitman OSF";
+  src: url("//apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Roman-OSF/c35df3ea-93e1-47b6-9629-bc761414cf65-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Whitman OSF";
+  src: url("//apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Bold-OSF/90508854-65ad-4bc0-b4f5-13734269e40e-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Whitman OSF";
+  src: url("//apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-2.eot");
+  src: url("//apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-2.eot?") format("embedded-opentype"), url("//apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-3.woff") format("woff"), url("//apps.startribune.com/fonts/Whitman-Italic-OSF/4227a9bf-e403-4086-8d26-9a6d738858e0-1.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+::selection {
+  background: #bbb !important;
+}
+
+/*DEMOCRATIC PARTY QUANTILE*/
+.dq1 {
+  fill: #99D0E5;
+  background-color: #99D0E5;
+}
+
+.dq2 {
+  fill: #79B0C5;
+  background-color: #79B0C5;
+}
+
+.dq3 {
+  fill: #629ABB;
+  background-color: #629ABB;
+}
+
+.dq4 {
+  fill: #4B85B1;
+  background-color: #4B85B1;
+}
+
+.dq5 {
+  fill: #356FA7;
+  background-color: #356FA7;
+}
+
+.dq6 {
+  fill: #1E5A9D;
+  background-color: #1E5A9D;
+}
+
+/*REPUBLICAN PARTY QUANTILE*/
+.rq1 {
+  fill: #C6A29E;
+  background-color: #C6A29E;
+}
+
+.rq2 {
+  fill: #A7706B;
+  background-color: #A7706B;
+}
+
+.rq3 {
+  fill: #A45958;
+  background-color: #A45958;
+}
+
+.rq4 {
+  fill: #A14345;
+  background-color: #A14345;
+}
+
+.rq5 {
+  fill: #9E2C32;
+  background-color: #9E2C32;
+}
+
+.rq6 {
+  fill: #9B161F;
+  background-color: #9B161F;
+}
+
+/*GREEN MAP QUANTILE*/
+.mq1 {
+  fill: #74C476;
+  background-color: #74C476;
+}
+
+.mq2 {
+  fill: #49ab4b;
+  background-color: #49ab4b;
+}
+
+.mq3 {
+  fill: #347c36;
+  background-color: #347c36;
+}
+
+.mq4 {
+  fill: #204c21;
+  background-color: #204c21;
+}
+
+.mq5 {
+  fill: #1E5A9D;
+  background-color: #163417;
+}
+
+/*HIGHLIGHT background-color SWATCHES*/
+.b_swatch {
+  background-color: #1F6D6D;
+  font-weight: 900;
+}
+
+.r_swatch {
+  background-color: #B53434;
+  font-weight: 900;
+}
+
+.o_swatch {
+  background-color: #B56E34;
+  font-weight: 900;
+}
+
+.g_swatch {
+  background-color: #299129;
+  font-weight: 900;
+}
+
+/*CATEGORICAL CHARTS*/
+.leaf {
+  fill: #66AF50;
+  background-color: #66AF50;
+}
+
+.clay {
+  fill: #BF603C;
+  background-color: #BF603C;
+}
+
+.swedish {
+  fill: #59A897;
+  background-color: #59A897;
+}
+
+.bark {
+  fill: #4C4C39;
+  background-color: #4C4C39;
+}
+
+/*RED SHADED RAMP*/
+.red1 {
+  fill: #F2AC93;
+  background-color: #F2AC93;
+}
+
+.red2 {
+  fill: #F28670;
+  background-color: #F28670;
+}
+
+.red3 {
+  fill: #F2614C;
+  background-color: #F2614C;
+}
+
+.red4 {
+  fill: #C22A22;
+  background-color: #C22A22;
+}
+
+.red5 {
+  fill: #9C0004;
+  background-color: #9C0004;
+}
+
+/*ORANGE SHADED RAMP*/
+.orange1 {
+  fill: #F2D2A4;
+  background-color: #F2D2A4;
+}
+
+.orange2 {
+  fill: #F2AF80;
+  background-color: #F2AF80;
+}
+
+.orange3 {
+  fill: #E07242;
+  background-color: #E07242;
+}
+
+.orange4 {
+  fill: #C2421F;
+  background-color: #C2421F;
+}
+
+.orange5 {
+  fill: #822010;
+  background-color: #822010;
+}
+
+/*BLUE SHADED RAMP*/
+.blue1 {
+  fill: #D1E6E1;
+  background-color: #D1E6E1;
+}
+
+.blue2 {
+  fill: #A7E6E3;
+  background-color: #A7E6E3;
+}
+
+.blue3 {
+  fill: #67B4C2;
+  background-color: #67B4C2;
+}
+
+.blue4 {
+  fill: #3580A3;
+  background-color: #3580A3;
+}
+
+.blue5 {
+  fill: #0D4673;
+  background-color: #0D4673;
+}
+
+/*GREEN SHADED RAMP*/
+.green1 {
+  fill: #C7E5B5;
+  background-color: #C7E5B5;
+}
+
+.green2 {
+  fill: #9EE384;
+  background-color: #9EE384;
+}
+
+.green3 {
+  fill: #5BBF48;
+  background-color: #5BBF48;
+}
+
+.green4 {
+  fill: #299E3D;
+  background-color: #299E3D;
+}
+
+.green5 {
+  fill: #118241;
+  background-color: #118241;
+}
+
+/*GREY SHADED RAMP*/
+.gray1 {
+  fill: #ddd;
+  background-color: #ddd;
+}
+
+.gray2 {
+  fill: #CCC;
+  background-color: #CCC;
+}
+
+.gray3 {
+  fill: #969696;
+  background-color: #969696;
+}
+
+.gray4 {
+  fill: #636363;
+  background-color: #636363;
+  color: #fff;
+}
+
+.gray5 {
+  fill: #252525;
+  background-color: #252525;
+  color: #fff;
+}
+
+/*BLUE-GREY SHADED RAMP*/
+.grayblue1 {
+  fill: #DAE1E7;
+  background-color: #DAE1E7;
+}
+
+.grayblue2 {
+  fill: #C6D1D9;
+  background-color: #C6D1D9;
+}
+
+.grayblue3 {
+  fill: #A8B9C5;
+  background-color: #A8B9C5;
+}
+
+.grayblue4 {
+  fill: #7F98AA;
+  background-color: #7F98AA;
+}
+
+.grayblue5 {
+  fill: #556E7F;
+  background-color: #556E7F;
+}
+
+.grayblue6 {
+  fill: #2C3942;
+  background-color: #2C3942;
+}
+
+/*PURPLE SHADED RAMP*/
+.purple5 {
+  fill: #4c1926;
+  background-color: #4c1926;
+  color: #ffffff;
+}
+
+.purple4 {
+  fill: #693c46;
+  background-color: #693c46;
+  color: #ffffff;
+}
+
+.purple3 {
+  fill: #865f67;
+  background-color: #865f67;
+  color: #ffffff;
+}
+
+.purple2 {
+  fill: #a3858b;
+  background-color: #a3858b;
+  color: #ffffff;
+}
+
+.purple1 {
+  fill: #C1ACB1;
+  background-color: #C1ACB1;
+}
+
+/*POLITICAL SHADED RAMP*/
+.gopDark {
+  fill: #9C0004;
+  background-color: #9C0004;
+}
+
+.gopLight {
+  fill: #F2614C;
+  background-color: #F2614C;
+}
+
+.neutral {
+  fill: #F7F7F7;
+  background-color: #F7F7F7;
+}
+
+.dflLight {
+  fill: #67B4C2;
+  background-color: #67B4C2;
+}
+
+.dflDark {
+  fill: #0D4673;
+  background-color: #0D4673;
+}
+
+.republican {
+  fill: #8C1B17 !important;
+  pointer-events: all;
+  font-weight: bold;
+  color: #fff;
+}
+
+.rlikely {
+  background-color: #A5484D;
+  fill: #A5484D !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.rlean {
+  background-color: #f7816E;
+  fill: #f7816E !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.r1 {
+  background-color: #C68985;
+  fill: #C68985 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.r2 {
+  background-color: #A5484D;
+  fill: #A5484D !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.r3 {
+  background-color: #A52129;
+  fill: #A52129 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.r4 {
+  background-color: #8C1B17;
+  fill: #8C1B17 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.r0 {
+  background-color: #8C1B17;
+  fill: #8C1B17 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.gray3 {
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.mid {
+  background-color: #aaa;
+  fill: #aaa !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.democrat {
+  fill: #3F88C5 !important;
+  pointer-events: all;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dlikely {
+  background-color: #5ca5c3;
+  fill: #5ca5c3 !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.dlean {
+  background-color: #72A9D6;
+  fill: #72A9D6 !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.d1 {
+  background-color: #ABCEE8;
+  fill: #ABCEE8 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.d2 {
+  background-color: #5ca5c3;
+  fill: #5ca5c3 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.d3 {
+  background-color: #4f97c4;
+  fill: #4f97c4 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.d4 {
+  background-color: #3f88c5;
+  fill: #3f88c5 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+.d0 {
+  background-color: #3F88C5;
+  fill: #3F88C5 !important;
+  color: white !important;
+  pointer-events: all;
+  font-weight: bold;
+}
+
+/*BLIND SAFE DIVERGENCE RAMP*/
+.negDark {
+  fill: #271D42;
+  background-color: #271D42;
+  color: #fff;
+}
+
+.negMid {
+  fill: #61538F;
+  background-color: #61538F;
+  color: #fff;
+}
+
+.negLight {
+  fill: #AFA8C9;
+  background-color: #AFA8C9;
+}
+
+.neutral {
+  fill: #ddd;
+  background-color: #ddd;
+}
+
+.posLight {
+  fill: #82D870;
+  background-color: #82D870;
+}
+
+.posMid {
+  fill: #3FAA29;
+  background-color: #3FAA29;
+  color: #fff;
+}
+
+.posDark {
+  fill: #118241;
+  background-color: #118241;
+  color: #fff;
+}
+
+
+text {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif !important;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+.states {
+  fill: #aaa;
+}
+
+#state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.tooltip {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  background-color: white;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border-radius: 0;
+  border: 1px solid black;
+  font-size: 13px;
+  font-family: Arial;
+}
+
+.states .active {
+  fill: #333 !important;
+  fill-opacity: 1 !important;
+}
+
+.faded {
+  fill-opacity: 0.5 !important;
+}
+
+.states path:hover {
+  fill: #333 !important;
+  cursor: pointer;
+}
