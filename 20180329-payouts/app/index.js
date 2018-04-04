@@ -200,7 +200,7 @@ $('#filter input').on("keyup search",function(i){
                         tick: {
                          values: [2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017],
                          count: 11,
-                         format: d3.format('$,.0f')
+                         format: d3.format(',')
                         }
                     },
               x: {

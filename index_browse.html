@@ -562,6 +562,7 @@ $( ".sort-link" ).click(function() {
   $(this).css("background-color","#ddd");
   $("." + $(this).attr("id")).show();
   $("#resourcesBlock").hide();
+  $(".tools").show();
   if ($(this).attr("id") != "tools") { $(".tools").hide(); }
   if ($(this).attr("id") == "twitter") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").hide(); $("#articlePane").hide(); $("#twitterBlock").show(); }
   if ($(this).attr("id") == "resources") { $(".articleEntry, #contributorsBlock").hide(); $("#resourcesBlock").show();
