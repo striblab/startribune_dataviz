@@ -22,11 +22,9 @@ d3.json("./data/locations.json", function(error, locationsAll) {
         d3.json("./shapefiles/minneapolis_zoning.geojson", function(error, zones) {
             d3.json("./shapefiles/nicollet_mall.geojson", function(error, nicmall) {
                 d3.json("./shapefiles/rail.geojson", function(error, rail) {
-                    d3.json("./data/west.json", function(error, west) {
                         // d3.json("./shapefiles/locations.geojson", function(error, locations) {
 
                         var locations = locationsAll.locations;
-                        var wesb = west.locations;
 
                         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
                         var map = new mapboxgl.Map({
@@ -215,27 +213,10 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             }, 'building');
 
 
-                            // map.addSource('rail', {
-                            //     type: 'geojson',
-                            //     data: rail
-                            // });
-
-                            // map.addLayer({
-                            //     'id': 'rail-layer',
-                            //     'interactive': true,
-                            //     'source': 'rail',
-                            //     'layout': {},
-                            //     'type': 'line',
-                            //     'paint': {
-                            //         'line-color': "#aaaaaa",
-                            //         'line-width': 5,
-                            //     },
-                            //     "filter": [
-                            //         "==",
-                            //         "OBJECTID",
-                            //         1521
-                            //     ]
-                            // }, 'place-neighbourhood');
+                            map.addSource('rail', {
+                                type: 'geojson',
+                                data: rail
+                            });
 
 
                             map.addLayer({
@@ -246,18 +227,18 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 'type': 'line',
                                 'paint': {
                                     'line-color': "#aaaaaa",
-                                    'line-width': 5,
+                                    'line-width': 20,
                                 },
                                 "filter": [
                                     "==",
                                     "RR_ABBR",
                                     "BNSF"
                                 ]
-                            }, 'place-neighbourhood');
+                            }, 'building');
 
                             for (var i = 0; i < locations.length; i++) {
                                 if (locations[i].type != "stripclub" && locations[i].type != "sexshop" && locations[i].type != "club") {
-                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1524));
+                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1550));
 
                                     map.addLayer({
                                         "id": "polygon-layer" + i,
@@ -273,18 +254,18 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             }
 
 
-                            // map.addSource("west", createGeoJSONCircle([west[0].longitude, west[0].latitude], 0.1524));
+                            map.addSource("west", createGeoJSONCircle([-93.279934, 44.986930], 0.4048));
 
-                            //         map.addLayer({
-                            //             "id": "west-layer",
-                            //             "type": "fill",
-                            //             "source": "west",
-                            //             "layout": {},
-                            //             "paint": {
-                            //                 "fill-color": "#aaaaaa",
-                            //                 "fill-opacity": 1
-                            //             }
-                            //         }, 'building'); //road-street
+                                    map.addLayer({
+                                        "id": "west-layer",
+                                        "type": "fill",
+                                        "source": "west",
+                                        "layout": {},
+                                        "paint": {
+                                            "fill-color": "#aaaaaa",
+                                            "fill-opacity": 1
+                                        }
+                                    }, 'building'); //road-street
 
 
                             map.addSource('locationsMap', {
@@ -327,22 +308,22 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 ]
                             });
 
-                            map.addLayer({
-                                "id": "locations-layer3",
-                                "type": "circle",
-                                "source": "locationsMap",
-                                "paint": {
-                                    "circle-radius": 4,
-                                    "circle-color": '#ffffff',
-                                    "circle-stroke-color": "#9C0004",
-                                    "circle-stroke-width": 2,
-                                },
-                                "filter": [
-                                    "==",
-                                    "type",
-                                    "club"
-                                ]
-                            });
+                            // map.addLayer({
+                            //     "id": "locations-layer3",
+                            //     "type": "circle",
+                            //     "source": "locationsMap",
+                            //     "paint": {
+                            //         "circle-radius": 4,
+                            //         "circle-color": '#ffffff',
+                            //         "circle-stroke-color": "#9C0004",
+                            //         "circle-stroke-width": 2,
+                            //     },
+                            //     "filter": [
+                            //         "==",
+                            //         "type",
+                            //         "club"
+                            //     ]
+                            // });
 
                             map.addLayer({
                                 "id": "church-layer",
@@ -367,7 +348,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#636363',
+                                    "circle-color": '#969696',
                                     "circle-stroke-color": "#000000",
                                     "circle-stroke-width": 2,
                                 },
@@ -384,7 +365,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#CCC',
+                                    "circle-color": '#cccccc',
                                     "circle-stroke-color": "#000000",
                                     "circle-stroke-width": 2,
                                 },
@@ -401,7 +382,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#F7F7F7',
+                                    "circle-color": '#f7f7f7',
                                     "circle-stroke-color": "#000000",
                                     "circle-stroke-width": 2,
                                 },
@@ -474,5 +455,4 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                 });
             });
         });
-    });
 });

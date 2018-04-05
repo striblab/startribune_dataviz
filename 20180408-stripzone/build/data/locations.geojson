@@ -207,7 +207,7 @@
     "type":"church",
     "address":"519 Oak Grove St, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -222,7 +222,7 @@
     "type":"church",
     "address":"88 17th St N, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -312,7 +312,7 @@
     "type":"church",
     "address":"810 S 7th St, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -327,7 +327,7 @@
     "type":"church",
     "address":"707 10th Ave S, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -342,7 +342,7 @@
     "type":"church",
     "address":"720 13th Ave S, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -402,7 +402,7 @@
     "type":"church",
     "address":"107 3rd Ave N, Minneapolis, MN 55401",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -417,7 +417,7 @@
     "type":"church",
     "address":"514 N 3rd St, Minneapolis, MN 55401",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -447,7 +447,7 @@
     "type":"childcare",
     "address":"200 East Lyndale Ave N, Minneapolis, MN 55405",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -462,7 +462,7 @@
     "type":"childcare",
     "address":"1601 Laurel Ave W, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -507,7 +507,7 @@
     "type":"childcare",
     "address":"1310 Hennepin Ave, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -597,7 +597,7 @@
     "type":"childcare",
     "address":"614 S 3rd St, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -612,7 +612,7 @@
     "type":"childcare",
     "address":"810 S 7th St, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -642,7 +642,7 @@
     "type":"school",
     "address":"510 Park Ave, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"school",
+    "icon":"school_n",
     "show":"n"
     }
   },
