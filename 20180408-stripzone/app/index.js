@@ -32,7 +32,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
                             // style: 'mapbox://styles/shadowflare/cjf30xlkn2h1f2sqn8swyx29g',
                             center: [-93.276494, 44.977528],
-                            zoom: 14.5,
+                            zoom: 14.2,
                             minZoom: 2,
                             interactive: true
                         });
@@ -404,7 +404,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 } else {
                                     map.flyTo({
                                         center: [-93.276494, 44.977528],
-                                        zoom: 14.7
+                                        zoom: 14.2
                                     });
                                 }
                                 $(window).resize(function() {
@@ -418,7 +418,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                     } else {
                                         map.flyTo({
                                             center: [-93.276494, 44.977528],
-                                            zoom: 14.7
+                                            zoom: 14.2
                                         });
                                     }
                                 });
