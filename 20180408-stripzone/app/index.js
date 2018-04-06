@@ -26,6 +26,11 @@ d3.json("./data/locations.json", function(error, locationsAll) {
 
                         var locations = locationsAll.locations;
 
+                        var bounds = [
+                            [-93.331100, 44.959416], // Southwest coordinates
+                            [-93.208534, 45.000287]  // Northeast coordinates
+                        ];
+
                         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
                         var map = new mapboxgl.Map({
                             container: 'map',
@@ -34,6 +39,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             center: [-93.276494, 44.977528],
                             zoom: 14.2,
                             minZoom: 2,
+                            maxBounds: bounds,
                             interactive: true
                         });
 
