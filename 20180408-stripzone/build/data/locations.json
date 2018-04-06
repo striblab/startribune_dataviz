@@ -14,6 +14,7 @@
 {"name":"eagleBOLTbar","type":"club","address":"515 Washington Avenue South, Minneapolis, MN 55415","restriction":"one per block face","latitude":44.978349,"longitude":-93.260873,"icon":"redlight","show":"y"},
 {"name":"Sneak Pete's","type":"club","address":"14 N 5th St, Minneapolis, MN 55403","restriction":"one per block face","latitude":44.980127,"longitude":-93.272886,"icon":"redlight","show":"y"},
 {"name":"The Brass Rail Lounge","type":"club","address":"422 Hennepin Ave, Minneapolis, MN 55401","restriction":"one per block face","latitude":44.97996,"longitude":-93.272344,"icon":"redlight","show":"y"},
+{"name":"Azul Nightclub","type":"club","address":"400 N 3rd Ave, Minneapolis, MN 55401","restriction":"one per block face","latitude":44.984466,"longitude":-93.272428,"icon":"redlight","show":"y"},
 {"name":"Hennepin Avenue United Methodist Church","type":"church","address":"511 Groveland Ave, Minneapolis, MN 55403","restriction":"500 feet","latitude":44.966293,"longitude":-93.287651,"icon":"church","show":"n"},
 {"name":"Saint Mark's Episcopal Cathedral","type":"church","address":"519 Oak Grove St, Minneapolis, MN 55403","restriction":"500 feet","latitude":44.968026,"longitude":-93.286943,"icon":"church","show":"n"},
 {"name":"Basilica of Saint Mary","type":"church","address":"88 17th St N, Minneapolis, MN 55403","restriction":"500 feet","latitude":44.968026,"longitude":-93.286943,"icon":"church","show":"n"},

@@ -245,6 +245,21 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
+       "coordinates":  [ -93.275184,44.982843 ]
+    },
+    "properties": {
+    "name":"Azul Nightclub",
+    "type":"club",
+    "address":"400 N 3rd Ave, Minneapolis, MN 55401",
+    "restriction":"one per block face",
+    "icon":"redlight",
+    "show":"y"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
        "coordinates":  [ -93.287651,44.966293 ]
     },
     "properties": {
