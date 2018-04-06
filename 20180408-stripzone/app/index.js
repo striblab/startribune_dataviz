@@ -394,7 +394,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             });
 
                             $(document).ready(function() {
-                                if ($("#wrapper").width() < 920) {
+                                if ($("#wrapper").width() < 800) {
                                     map.flyTo({
                                         center: [-93.269656, 44.977368],
                                         zoom: 13,
@@ -408,7 +408,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                     });
                                 }
                                 $(window).resize(function() {
-                                    if ($("#wrapper").width() < 920) {
+                                    if ($("#wrapper").width() < 800) {
                                         map.flyTo({
                                             center: [-93.269656, 44.977368],
                                             zoom: 13,

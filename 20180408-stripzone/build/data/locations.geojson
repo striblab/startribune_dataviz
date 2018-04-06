@@ -740,7 +740,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.270034,44.980257 ]
+       "coordinates":  [ -93.270036,44.980828 ]
     },
     "properties": {
     "name":"Minneapolis Central Library",
