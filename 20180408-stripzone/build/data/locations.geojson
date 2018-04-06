@@ -245,29 +245,14 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.275184,44.982843 ]
-    },
-    "properties": {
-    "name":"Azul Nightclub",
-    "type":"club",
-    "address":"400 N 3rd Ave, Minneapolis, MN 55401",
-    "restriction":"one per block face",
-    "icon":"redlight",
-    "show":"y"
-    }
-  },
-  {
-    "type": "Feature",
-    "geometry": {
-       "type": "Point",
-       "coordinates":  [ -93.287651,44.966293 ]
+       "coordinates":  [ -93.286532,44.966077 ]
     },
     "properties": {
     "name":"Hennepin Avenue United Methodist Church",
     "type":"church",
     "address":"511 Groveland Ave, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -275,14 +260,14 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.286943,44.968026 ]
+       "coordinates":  [ -93.286875,44.968031 ]
     },
     "properties": {
     "name":"Saint Mark's Episcopal Cathedral",
     "type":"church",
     "address":"519 Oak Grove St, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -297,7 +282,7 @@
     "type":"church",
     "address":"88 17th St N, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -380,14 +365,14 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -93.260567,44.972315 ]
+       "coordinates":  [ -93.260461,44.972264 ]
     },
     "properties": {
     "name":"First Covenant Church Minneapolis",
     "type":"church",
     "address":"810 S 7th St, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -402,7 +387,7 @@
     "type":"church",
     "address":"707 10th Ave S, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -417,7 +402,7 @@
     "type":"church",
     "address":"720 13th Ave S, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -477,7 +462,7 @@
     "type":"church",
     "address":"107 3rd Ave N, Minneapolis, MN 55401",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -492,7 +477,7 @@
     "type":"church",
     "address":"514 N 3rd St, Minneapolis, MN 55401",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n"
     }
   },
@@ -522,7 +507,7 @@
     "type":"childcare",
     "address":"200 East Lyndale Ave N, Minneapolis, MN 55405",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -537,7 +522,7 @@
     "type":"childcare",
     "address":"1601 Laurel Ave W, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -552,7 +537,7 @@
     "type":"childcare",
     "address":"50 South 6th St, Minneapolis, MN 55402",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -582,7 +567,7 @@
     "type":"childcare",
     "address":"1310 Hennepin Ave, Minneapolis, MN 55403",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -672,7 +657,7 @@
     "type":"childcare",
     "address":"614 S 3rd St, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -687,7 +672,7 @@
     "type":"childcare",
     "address":"810 S 7th St, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"child",
+    "icon":"child_n",
     "show":"n"
     }
   },
@@ -777,7 +762,7 @@
     "type":"sexshop",
     "address":"3010 Lyndale Ave S, Minneapolis, MN 55408",
     "restriction":"one per block face",
-    "icon":"redlight",
+    "icon":"redlight_n",
     "show":"y"
     }
   },
@@ -792,7 +777,7 @@
     "type":"sexshop",
     "address":"711 W Lake St STE 104, Minneapolis, MN 55408",
     "restriction":"one per block face",
-    "icon":"redlight",
+    "icon":"redlight_n",
     "show":"y"
     }
   },
@@ -807,8 +792,233 @@
     "type":"stripclub",
     "address":"29 W Broadway Ave, Minneapolis, MN 55411",
     "restriction":"one per block face",
-    "icon":"redlight",
+    "icon":"redlight_n",
     "show":"y"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.276619,44.972543 ]
+    },
+    "properties": {
+    "name":"YWCA Minneapolis Downtown",
+    "type":"church",
+    "address":"2405, 1130 Nicollet Ave, Minneapolis, MN 55403",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.271322,44.977268 ]
+    },
+    "properties": {
+    "name":"Dayton YMCA at Gaviidae",
+    "type":"church",
+    "address":"651 Nicollet Mall #300, Minneapolis, MN 55402",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.276029,44.969541 ]
+    },
+    "properties": {
+    "name":"Wesley United Methodist Church",
+    "type":"church",
+    "address":"101 E Grant St, Minneapolis, MN 55403",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.270842,44.974177 ]
+    },
+    "properties": {
+    "name":"Catholic Charities Exodus Residence",
+    "type":"church",
+    "address":"819, 2nd Ave S, Minneapolis, MN 55402",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.270613,44.969441 ]
+    },
+    "properties": {
+    "name":"Central Lutheran Church",
+    "type":"church",
+    "address":"333 S 12th St, Minneapolis, MN 55404",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.266208,44.970161 ]
+    },
+    "properties": {
+    "name":"Grace in the City Church",
+    "type":"church",
+    "address":"609 S 10th St, Minneapolis, MN 55404",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.266213,44.974778 ]
+    },
+    "properties": {
+    "name":"Thrivent Financial",
+    "type":"church",
+    "address":"625 S 4th Ave, Minneapolis, MN 55415",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.265585,44.973083 ]
+    },
+    "properties": {
+    "name":"Catholic Charities",
+    "type":"church",
+    "address":"510 S 8th St, Minneapolis, MN 55404",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.263465,44.972661 ]
+    },
+    "properties": {
+    "name":"House of Charity Food Center",
+    "type":"church",
+    "address":"714 Park Ave, Minneapolis, MN 55404",
+    "restriction":"500 feet",
+    "icon":"church_n",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.279088,44.978674 ]
+    },
+    "properties": {
+    "name":"Salvation Army",
+    "type":"church",
+    "address":"53 Glenwood Ave #1, Minneapolis, MN 55403",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.279947,44.978248 ]
+    },
+    "properties": {
+    "name":"Harbor Light Shelter",
+    "type":"church",
+    "address":"1010 Currie Ave, Minneapolis, MN 55403",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.282329,44.970871 ]
+    },
+    "properties": {
+    "name":"Booth Manor",
+    "type":"church",
+    "address":"60-104 Willow St, Minneapolis, MN 55403",
+    "restriction":"500 feet",
+    "icon":"church_n",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.28536,44.97884 ]
+    },
+    "properties": {
+    "name":"Higher Ground Catholic Charities",
+    "type":"church",
+    "address":"165 Glenwood Ave, Minneapolis, MN 55405",
+    "restriction":"500 feet",
+    "icon":"church_n",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.270613,44.969441 ]
+    },
+    "properties": {
+    "name":"Downtown Congregations to End Homelessness",
+    "type":"church",
+    "address":"333 S 12th St, Minneapolis, MN 55404",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.27128,44.974925 ]
+    },
+    "properties": {
+    "name":"Christian Science",
+    "type":"church",
+    "address":"121 S 8th St #1160, Minneapolis, MN 55402",
+    "restriction":"500 feet",
+    "icon":"church",
+    "show":"n"
     }
   }
 ]

@@ -237,8 +237,8 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             }, 'building');
 
                             for (var i = 0; i < locations.length; i++) {
-                                if (locations[i].type != "stripclub" && locations[i].type != "sexshop" && locations[i].type != "club") {
-                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1525));
+                                if (locations[i].type != "stripclub" && locations[i].type != "sexshop" && locations[i].type != "club" && locations[i].type != "childcare") {
+                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1500));
 
                                     map.addLayer({
                                         "id": "polygon-layer" + i,
@@ -254,18 +254,18 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             }
 
 
-                            map.addSource("west", createGeoJSONCircle([-93.279934, 44.986930], 0.4048));
+                            // map.addSource("west", createGeoJSONCircle([-93.279934, 44.986930], 0.4048));
 
-                                    map.addLayer({
-                                        "id": "west-layer",
-                                        "type": "fill",
-                                        "source": "west",
-                                        "layout": {},
-                                        "paint": {
-                                            "fill-color": "#aaaaaa",
-                                            "fill-opacity": 1
-                                        }
-                                    }, 'building'); //road-street
+                            //         map.addLayer({
+                            //             "id": "west-layer",
+                            //             "type": "fill",
+                            //             "source": "west",
+                            //             "layout": {},
+                            //             "paint": {
+                            //                 "fill-color": "#aaaaaa",
+                            //                 "fill-opacity": 1
+                            //             }
+                            //         }, 'building'); //road-street
 
 
                             map.addSource('locationsMap', {
@@ -282,7 +282,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                     "circle-radius": 4,
                                     "circle-color": '#C22A22',
                                     "circle-stroke-color": "#9C0004",
-                                    "circle-stroke-width": 2,
+                                    "circle-stroke-width": 2
                                 },
                                 "filter": [
                                     "==",
@@ -297,7 +297,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#F2AC93',
+                                    "circle-color": '#C22A22',
                                     "circle-stroke-color": "#9C0004",
                                     "circle-stroke-width": 2,
                                 },
@@ -314,7 +314,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#ffffff',
+                                    "circle-color": '#C22A22',
                                     "circle-stroke-color": "#9C0004",
                                     "circle-stroke-width": 2,
                                 },
@@ -342,22 +342,22 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 ]
                             });
 
-                            map.addLayer({
-                                "id": "kids-layer",
-                                "type": "circle",
-                                "source": "locationsMap",
-                                "paint": {
-                                    "circle-radius": 4,
-                                    "circle-color": '#969696',
-                                    "circle-stroke-color": "#000000",
-                                    "circle-stroke-width": 2,
-                                },
-                                "filter": [
-                                    "==",
-                                    "icon",
-                                    "child"
-                                ]
-                            });
+                            // map.addLayer({
+                            //     "id": "kids-layer",
+                            //     "type": "circle",
+                            //     "source": "locationsMap",
+                            //     "paint": {
+                            //         "circle-radius": 4,
+                            //         "circle-color": '#252525',
+                            //         "circle-stroke-color": "#000000",
+                            //         "circle-stroke-width": 2,
+                            //     },
+                            //     "filter": [
+                            //         "==",
+                            //         "icon",
+                            //         "child"
+                            //     ]
+                            // });
 
                             map.addLayer({
                                 "id": "school-layer",
@@ -365,7 +365,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#cccccc',
+                                    "circle-color": '#252525',
                                     "circle-stroke-color": "#000000",
                                     "circle-stroke-width": 2,
                                 },
@@ -382,7 +382,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 "source": "locationsMap",
                                 "paint": {
                                     "circle-radius": 4,
-                                    "circle-color": '#f7f7f7',
+                                    "circle-color": '#252525',
                                     "circle-stroke-color": "#000000",
                                     "circle-stroke-width": 2,
                                 },
@@ -431,7 +431,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
 
                             map.on('mousemove', function(e) {
                                 var features = map.queryRenderedFeatures(e.point, {
-                                    layers: ['locations-layer', 'locations-layer2', 'locations-layer3','church-layer', 'kids-layer', 'school-layer', 'library-layer']
+                                    layers: ['locations-layer', 'locations-layer2', 'locations-layer3','church-layer','school-layer', 'library-layer']
                                 });
                                 // Change the cursor style as a UI indicator.
                                 map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
