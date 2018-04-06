@@ -237,8 +237,8 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                             }, 'building');
 
                             for (var i = 0; i < locations.length; i++) {
-                                if (locations[i].type != "stripclub" && locations[i].type != "sexshop" && locations[i].type != "club" && locations[i].type != "childcare") {
-                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1500));
+                                if (locations[i].type != "stripclub" && locations[i].type != "sexshop" && locations[i].type != "club" && locations[i].type != "childcare" && locations[i].hide != "y") {
+                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1524));
 
                                     map.addLayer({
                                         "id": "polygon-layer" + i,
