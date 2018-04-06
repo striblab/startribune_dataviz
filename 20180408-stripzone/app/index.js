@@ -238,7 +238,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
 
                             for (var i = 0; i < locations.length; i++) {
                                 if (locations[i].type != "stripclub" && locations[i].type != "sexshop" && locations[i].type != "club") {
-                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1550));
+                                    map.addSource("polygon" + i, createGeoJSONCircle([locations[i].longitude, locations[i].latitude], 0.1525));
 
                                     map.addLayer({
                                         "id": "polygon-layer" + i,
@@ -308,22 +308,22 @@ d3.json("./data/locations.json", function(error, locationsAll) {
                                 ]
                             });
 
-                            // map.addLayer({
-                            //     "id": "locations-layer3",
-                            //     "type": "circle",
-                            //     "source": "locationsMap",
-                            //     "paint": {
-                            //         "circle-radius": 4,
-                            //         "circle-color": '#ffffff',
-                            //         "circle-stroke-color": "#9C0004",
-                            //         "circle-stroke-width": 2,
-                            //     },
-                            //     "filter": [
-                            //         "==",
-                            //         "type",
-                            //         "club"
-                            //     ]
-                            // });
+                            map.addLayer({
+                                "id": "locations-layer3",
+                                "type": "circle",
+                                "source": "locationsMap",
+                                "paint": {
+                                    "circle-radius": 4,
+                                    "circle-color": '#ffffff',
+                                    "circle-stroke-color": "#9C0004",
+                                    "circle-stroke-width": 2,
+                                },
+                                "filter": [
+                                    "==",
+                                    "type",
+                                    "club"
+                                ]
+                            });
 
                             map.addLayer({
                                 "id": "church-layer",
@@ -431,7 +431,7 @@ d3.json("./data/locations.json", function(error, locationsAll) {
 
                             map.on('mousemove', function(e) {
                                 var features = map.queryRenderedFeatures(e.point, {
-                                    layers: ['locations-layer', 'locations-layer2', 'church-layer', 'kids-layer', 'school-layer', 'library-layer']
+                                    layers: ['locations-layer', 'locations-layer2', 'locations-layer3','church-layer', 'kids-layer', 'school-layer', 'library-layer']
                                 });
                                 // Change the cursor style as a UI indicator.
                                 map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
