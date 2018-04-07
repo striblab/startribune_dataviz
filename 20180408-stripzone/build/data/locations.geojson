@@ -412,7 +412,7 @@
     "type":"church",
     "address":"625 S 4th Ave, Minneapolis, MN 55415",
     "restriction":"500 feet",
-    "icon":"church",
+    "icon":"church_n",
     "show":"n",
     "hide":"n"
     }
