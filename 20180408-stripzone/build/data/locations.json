@@ -55,7 +55,7 @@
 {"name":"Gay 90's Minneapolis","type":"club","address":"408 Hennepin Ave, Minneapolis, MN 55401","restriction":"one per block face","latitude":44.980447,"longitude":-93.271911,"icon":"redlight","show":"y","hide":"n"},
 {"name":"The Saloon","type":"club","address":"830 Hennepin Ave, Minneapolis, MN 55403","restriction":"one per block face","latitude":44.976837,"longitude":-93.277062,"icon":"redlight","show":"y","hide":"n"},
 {"name":"eagleBOLTbar","type":"club","address":"515 Washington Avenue South, Minneapolis, MN 55415","restriction":"one per block face","latitude":44.978349,"longitude":-93.260873,"icon":"redlight","show":"y","hide":"n"},
-{"name":"Sneak Pete's","type":"club","address":"14 N 5th St, Minneapolis, MN 55403","restriction":"one per block face","latitude":44.980127,"longitude":-93.272886,"icon":"redlight","show":"y","hide":"n"},
+{"name":"Sneaky Pete's","type":"club","address":"14 N 5th St, Minneapolis, MN 55403","restriction":"one per block face","latitude":44.980127,"longitude":-93.272886,"icon":"redlight","show":"y","hide":"n"},
 {"name":"The Brass Rail Lounge","type":"club","address":"422 Hennepin Ave, Minneapolis, MN 55401","restriction":"one per block face","latitude":44.97996,"longitude":-93.272344,"icon":"redlight","show":"y","hide":"n"},
 {"name":"Smitten Kitten","type":"sexshop","address":"3010 Lyndale Ave S, Minneapolis, MN 55408","restriction":"one per block face","latitude":44.947894,"longitude":-93.288485,"icon":"redlight_n","show":"y","hide":"y"},
 {"name":"Venus Unveiled","type":"sexshop","address":"711 W Lake St STE 104, Minneapolis, MN 55408","restriction":"one per block face","latitude":44.948079,"longitude":-93.288821,"icon":"redlight_n","show":"y","hide":"y"},
