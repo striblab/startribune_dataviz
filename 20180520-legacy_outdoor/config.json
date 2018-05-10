@@ -1,8 +1,6 @@
 {
   "about this file": "This document defines configuration for this project that is not content or copy.",
   "projectIdentifier": "20180520-legacy_outdoor",
-
-
   "social": {
     "image": "assets/images/strib/strib-logo-name-social-card.png"
   },
@@ -21,12 +19,8 @@
       "js/mapbox-gl.js"
     ]
   },
-
-  "content": {
-
-  },
+  "content": {},
   "publish": {
-
     "default": {
       "bucket": "static.startribune.com",
       "path": "news/projects-staging/all/20180520-legacy_outdoor",
@@ -39,12 +33,12 @@
       "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/20180520-legacy_outdoor/",
       "cacheSeconds": 30
     },
-
     "production": {
       "bucket": "static.startribune.com",
       "path": "news/projects/all/20180520-legacy_outdoor",
       "url": "http://static.startribune.com/news/projects/all/20180520-legacy_outdoor/",
       "cacheSeconds": 600
     }
-  }
+  },
+  "publishToken": "926ed2f50840c55455fec67e6d19e1c2"
 }
