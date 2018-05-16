@@ -50,7 +50,7 @@ d3.json("./shapefiles/counties.json", function(error, counties) {
             container: 'map',
             // style: 'mapbox://styles/shadowflare/ciqznymjs0009btm891qyu49n',
             style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
-            center: [-94.685900, 46.729553],
+            center: [-94.310360, 46.472504],
             zoom: 6,
             minZoom: 2,
             maxBounds: bounds,
@@ -142,7 +142,7 @@ d3.json("./shapefiles/counties.json", function(error, counties) {
                 'paint': {
                     'fill-antialias': true,
                     'fill-opacity': 1,
-                       'fill-color': "#999999",
+                       'fill-color': "#bbbbbb",
                     'fill-outline-color': 'rgba(255, 255, 255, 1)'
                 }
             }, 'parks');
@@ -150,28 +150,28 @@ d3.json("./shapefiles/counties.json", function(error, counties) {
             $(document).ready(function() {
                 if ($("#wrapper").width() < 800) {
                     map.flyTo({
-                        center: [-94.685900, 46.729553],
+                        center: [-94.310360, 46.472504],
                         zoom: 5,
                         pitch: 0,
                         bearing: 0
                     });
                 } else {
                     map.flyTo({
-                        center: [-94.685900, 46.729553],
+                        center: [-94.310360, 46.472504],
                         zoom: 6
                     });
                 }
                 $(window).resize(function() {
                     if ($("#wrapper").width() < 800) {
                         map.flyTo({
-                            center: [-94.685900, 46.729553],
+                            center: [-94.310360, 46.472504],
                             zoom: 5,
                             pitch: 0,
                             bearing: 0
                         });
                     } else {
                         map.flyTo({
-                            center: [-94.685900, 46.729553],
+                            center: [-94.310360, 46.472504],
                             zoom: 6
                         });
                     }
