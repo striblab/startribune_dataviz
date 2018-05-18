@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><gmd:MD_Metadata xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<gmd:characterSet>
+<gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</gmd:MD_CharacterSetCode>
+</gmd:characterSet>
+<gmd:hierarchyLevel>
+<gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
+</gmd:hierarchyLevel>
+<gmd:hierarchyLevelName>
+<gco:CharacterString>dataset</gco:CharacterString>
+</gmd:hierarchyLevelName>
+<gmd:contact gco:nilReason="missing"/>
+<gmd:dateStamp gco:nilReason="missing"/>
+<gmd:metadataStandardName>
+<gco:CharacterString>ISO 19139 Geographic Information - Metadata - Implementation Specification</gco:CharacterString>
+</gmd:metadataStandardName>
+<gmd:metadataStandardVersion>
+<gco:CharacterString>2007</gco:CharacterString>
+</gmd:metadataStandardVersion>
+<gmd:identificationInfo>
+<gmd:MD_DataIdentification>
+<gmd:citation gco:nilReason="missing"/>
+<gmd:abstract>
+<gco:CharacterString>An overlay district is any of several additional districts
+established by the zoning regulations that may be more or less restrictive than
+the primary zoning district. Where a property is located within an overlay
+district, it is subject to the provisions of both the primary zoning district
+and the overlay district. Where the provisions are in conflict, the overlay
+district governs. In the city’s municipal code, these districts are described
+in chapter 551: https://www.municode.com/library/mn/minneapolis/codes/code_of_ordinances?nodeId=MICOOR_TIT20ZOCO_CH551OVDI
+
+ 
+
+ 
+
+
+ 
+  
+  FID
+  
+  
+  Auto-generated unique identifier for individual features.
+  
+ 
+ 
+  
+  Shape
+  
+  
+  Auto-generated field indicating feature type
+  
+ 
+ 
+  
+  NAME
+  
+  
+  Abbreviated code indicating the type of overlay district
+  represented by the feature.
+  
+ 
+ 
+  
+  SYMBOL_NAM
+  
+  
+  Indicates the type of overlay district represented by the
+  feature.
+  
+ 
+</gco:CharacterString>
+</gmd:abstract>
+<gmd:purpose>
+<gco:CharacterString>Zoning districts with special requirements</gco:CharacterString>
+</gmd:purpose>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>open data</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Minneapolis</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Planning</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>open data</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Minneapolis</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Planning</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString>open data</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Minneapolis</gco:CharacterString>
+</gmd:keyword>
+<gmd:keyword>
+<gco:CharacterString>Planning</gco:CharacterString>
+</gmd:keyword>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:resourceConstraints>
+<gmd:MD_Constraints>
+<gmd:useLimitation>
+<gco:CharacterString>The maps provided by the City of Minneapolis are compilations of records, information and data from various sources, and they are to be used for reference purposes only. The City of Minneapolis does not warrant or guarantee that the Geographic Information Systems (GIS) data or maps are complete, current, or accurate. The City of Minneapolis does not represent that the GIS data can be used for navigational, tracking, legal, engineering, surveying, or any other purpose requiring exacting measurement of distance or direction or precision in the depiction of geographic features. Pursuant to Minnesota Statutes, Section 466.03, Subdivision 21, the City of Minneapolis disclaims any liability for claims based on alleged or actual inaccuracies in the GIS data or maps.This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.</gco:CharacterString>
+</gmd:useLimitation>
+</gmd:MD_Constraints>
+</gmd:resourceConstraints>
+<gmd:language gco:nilReason="missing"/>
+<gmd:characterSet>
+<gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</gmd:MD_CharacterSetCode>
+</gmd:characterSet>
+<gmd:extent>
+<gmd:EX_Extent>
+<gmd:geographicElement>
+<gmd:EX_GeographicBoundingBox>
+<gmd:westBoundLongitude>
+<gco:Decimal>-93.365</gco:Decimal>
+</gmd:westBoundLongitude>
+<gmd:eastBoundLongitude>
+<gco:Decimal>-93.19</gco:Decimal>
+</gmd:eastBoundLongitude>
+<gmd:southBoundLatitude>
+<gco:Decimal>44.877</gco:Decimal>
+</gmd:southBoundLatitude>
+<gmd:northBoundLatitude>
+<gco:Decimal>45.108</gco:Decimal>
+</gmd:northBoundLatitude>
+</gmd:EX_GeographicBoundingBox>
+</gmd:geographicElement>
+</gmd:EX_Extent>
+</gmd:extent>
+</gmd:MD_DataIdentification>
+</gmd:identificationInfo>
+</gmd:MD_Metadata>
