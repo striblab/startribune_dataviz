@@ -1,0 +1,220 @@
+{% extends "article.twig" %}
+
+{##
+ # Render the sharing markup and store it for use
+ # in the layout, so we can replace <!--sharing-->
+ # with it.
+ #}
+{% set sharing %}
+	{% include "components/article-share.twig" with {
+		moduleName: story.typeName,
+		moduleType: moduleType,
+		modulePosition: modulePosition,
+		zoneType: zoneType
+	} %}
+{% endset %}
+
+
+{##
+ # Allow LCD to override the hero
+ #}
+{% block article_hero %}
+	{% if story.getLinkedContent('Hero') || story.getLinkedContent('Desktop hero') %}
+    {% if story.getLinkedContent('Hero') %}
+		  {{ story.getLinkedContent('Hero')|replace({'<!-- share -->': sharing})|raw }}
+  	{% endif %}
+
+    {% if story.getLinkedContent('Desktop hero') %}
+		  {{ story.getLinkedContent('Desktop hero')|replace({'<!-- share -->': sharing})|raw }}
+  	{% endif %}
+
+    {# Unsure why this is needed here? #}
+    <script type="text/javascript" src="{{ theme_asset( '/assets/js/libs/imgix.min.js' ) }}"></script>
+  	<script>
+  		imgix.onready(function() {
+  			imgix.fluid({
+  				updateOnResizeDown: true,
+  				pixelStep: 5,
+  				autoInsertCSSBestPractices: true
+  			});
+  		});
+  	</script>
+	{% else %}
+		{{ parent() }}
+	{% endif %}
+{% endblock %}
+
+
+{##
+ # Scripts to go in the header.
+ #
+ # Overall, these should not be needed often.
+ #}
+{% block headerScripts %}
+	{{ parent() }}
+
+  {% if story.getLinkedContent('Header scripts') %}
+  	{{ story.getLinkedContent('Header scripts')|raw }}
+  {% endif %}
+
+  {% if story.getLinkedContent('Desktop header scripts') %}
+  	{{ story.getLinkedContent('Desktop header scripts')|raw }}
+  {% endif %}
+{% endblock %}
+
+
+{##
+ # Styles (that go in the header?)
+ #}
+{% block styles %}
+	{{ parent() }}
+
+  {% if story.getLinkedContent('Style libraries') %}
+  	{{ story.getLinkedContent('Style libraries')|raw }}
+  {% endif %}
+
+  {% if story.getLinkedContent('Desktop style libraries') %}
+  	{{ story.getLinkedContent('Desktop style libraries')|raw }}
+  {% endif %}
+
+  {# Main CSS file for project
+   #
+   # This gets served through the local
+   # new-platform, then at static.startribune.com/... in production
+   #
+   # Example: news/projects/all/strib-nonprofit-100-2017/app.bundle.js
+   #}
+  {% if story.getLinkedContent('Styles') %}
+    {% set stylesArray = story.getLinkedContent('Styles')|split(',') %}
+    {% for style in stylesArray %}
+      <link rel="stylesheet" href="{{ static_asset(style|trim) }}" type="text/css">
+    {% endfor %}
+  {% endif %}
+
+  {% if story.getLinkedContent('Desktop styles') %}
+    {% set desktopStylesArray = story.getLinkedContent('Desktop styles')|split(',') %}
+    {% for style in desktopStylesArray %}
+      <link rel="stylesheet" href="{{ static_asset(style|trim) }}" type="text/css">
+    {% endfor %}
+  {% endif %}
+{% endblock %}
+
+
+{##
+ # Page class.  Overall, it's easier to manager
+ # different styles with a class, than separate sheets.
+ #}
+{% block page_class %}{{ parent() }} wide-body page-desktop{% if story.getLinkedContent('Body class') %} {{ story.getLinkedContent('Body class')|trim }}{% endif %}{% if story.getLinkedContent('Desktop body class') %} {{ story.getLinkedContent('Desktop body class')|trim }}{% endif %}{% endblock %}
+
+
+{##
+ # Include default navigation
+ #}
+{% block navigation %}
+	{{ parent() }}
+{% endblock %}
+
+
+{##
+ # Include default shortcuts
+ #}
+{% block nav_shortcuts %}
+	{{ parent() }}
+{% endblock %}
+
+
+{##
+ # Main article body content.
+ #}
+{% block article_body %}
+  {% if story.getLinkedContent('Content') %}
+    <div class="article-lcd-body-content">
+      {{ story.getLinkedContent('Content')|replace({'<!-- share -->': sharing})|raw }}
+    </div><!-- end article-lcd-body-content -->
+  {% endif %}
+
+  {% if story.getLinkedContent('Desktop content') %}
+    <div class="article-lcd-desktop-body-content">
+      {{ story.getLinkedContent('Desktop content')|replace({'<!-- share -->': sharing})|raw }}
+    </div><!-- end article-lcd-desktop-body-content -->
+  {% endif %}
+
+  {# Note if we don't seem to have any content. #}
+  {% if not story.getLinkedContent('Content') and not story.getLinkedContent('Desktop content') %}
+    <div class="no-lcd-content" style="margin: 0 auto; padding: 2em; font-size: 20px;">
+      Can't seem to find a <strong>Content</strong> or <strong>Desktop content</strong> in the
+      Linked Content Data (LCD) for this article.  Make sure there is only one LCD
+      for this or any article.
+    </div>
+  {% endif %}
+
+  {##
+   # Allow to add library scripts here.
+   #}
+  {% if story.getLinkedContent('Script libraries') %}
+  	{{ story.getLinkedContent('Script libraries')|raw }}
+  {% endif %}
+
+  {% if story.getLinkedContent('Desktop script libraries') %}
+  	{{ story.getLinkedContent('Desktop script libraries')|raw }}
+  {% endif %}
+
+  {##
+   # Main JS file for project.  This is managed as a comma separated
+   # list in the LCD.
+   #
+   # This gets served through the local
+   # new-platform, then at static.startribune.com/... in production
+   #
+   # Example: news/projects/all/strib-nonprofit-100-2017/app.bundle.js
+   #}
+  {% if story.getLinkedContent('Scripts') %}
+    {% set scriptsArray = story.getLinkedContent('Scripts')|split(',') %}
+    {% for script in scriptsArray %}
+      <script src="{{ static_asset(script|trim) }}"></script>
+    {% endfor %}
+  {% endif %}
+
+  {% if story.getLinkedContent('Desktop scripts') %}
+    {% set desktopScriptsArray = story.getLinkedContent('Desktop scripts')|split(',') %}
+    {% for script in desktopScriptsArray %}
+      <script src="{{ static_asset(script|trim) }}"></script>
+    {% endfor %}
+  {% endif %}
+{% endblock article_body %}
+
+
+{##
+ # Footer block.
+ #
+ # DO NOT USE: This gets put below the </html> tag which is not good
+ #}
+{% block footer %}
+	{{ parent() }}
+{% endblock %}
+
+
+{##
+ # Turn on these blocks as needed, simply put the following in:
+ # {{ parent() }}
+ #}
+{% block article_topleaderboard %}{% endblock %}
+{% block article_topper %}{% endblock %}
+{% block article_headline %}{% endblock %}
+{% block featured_media %}{% endblock featured_media %}
+{% block set_secondary_media %}{% endblock set_secondary_media %}
+{% block more_from_section %}{% endblock more_from_section %}
+{% block bottomleaderboard %}{% endblock bottomleaderboard %}
+{% block recommended %}{% endblock recommended %}
+{% block downpage %}{% endblock downpage %}
+{% block downpage_left %}{% endblock downpage_left %}
+{% block article_author_info %}{% endblock %}
+{% block zone2 %}{% endblock %}
+{% block article_recirculation %}{% endblock %}
+{% block premium_skin %}{% endblock %}
+{% block article_share %}{% endblock article_share %}
+{% block ads_header %}{% endblock %}
+{% block welcome %}{% endblock %}
+{% block adOverlay %}{% endblock %}
+{% block scripts %}{% endblock %}
+{% block extraJS %}{% endblock %}

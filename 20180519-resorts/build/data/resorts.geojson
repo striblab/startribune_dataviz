@@ -1,0 +1,1175 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.3141,46.49336 ]
+    },
+    "properties": {
+    "Name":"Grand View Lodge",
+    "Address":"23521 Nokomis Ave. Nisswa MN 56468",
+    "Phone":"1-866-801-2951",
+    "Website":"http://www.grandviewlodge.com",
+    "Details":"Grand View Lodge offers many lodging options in four distinct areas, from lodge rooms to townhouses near the golf course. In high season, two-bedroom cabins with four queen beds on the main property go for $680 per night; a two-bedroom cabin at Colony Bay Inn, on Gull Lake three miles from the main property, run $390 per night ",
+    "Review":"Set on the north shore of Gull Lake only a mile outside Nisswa � the kind of small Minnesota town that still has an A&W drive-in � Grand View did suit at least one of our vacation preferences, which is staying in historic lodges. How ironic, then, that we�ve never actually stayed in the 1919-dated lodge itself but have rented nearly every type of cabin, townhouse and fourplex unit the resort has to offer, usually based on whatever is being offered under the �Last Minute Vacancies� tab on their site .",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.20851,46.58977 ]
+    },
+    "properties": {
+    "Name":"Breezy Point Resort",
+    "Address":"9252 Breezy Point Drive, Breezy Point MN 56472",
+    "Phone":"1-800-432-3777",
+    "Website":"http://www.breezypointresort.com",
+    "Details":"na",
+    "Review":"Breezy Point on Pelican Lake has 250 cabins, condos and hotel rooms. Very family friendly there are options with four to 11 bedrooms, and it is adjacent to a golf course. Has its own Elvis impersonator, as well.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.95193,47.92344 ]
+    },
+    "properties": {
+    "Name":"Burntside Lodge",
+    "Address":"2755 Burntside Lodge Road  Ely, MN 55731",
+    "Phone":"Burntside Lodge",
+    "Website":"http://www.burntside.com/",
+    "Details":" Burntside Lodge, on the southern shore of Burntside Lake near Ely, Minn., has 21 cabins. In high season, two-bedroom cabins start at $295 per night ",
+    "Review":"We�re drawn to the lodge for the great food and ambience, but also for the elevated views of the water. We�ve loved learning about the history of the lake and the 102-year-old resort, which has been owned by members of the LaMontagne family since 1941 and been listed on the National Register of Historic Places since 1988. ",
+    "Contributor":"Scott Gillespie",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.33705,46.91658 ]
+    },
+    "properties": {
+    "Name":"Cedar Bay Resort",
+    "Address":"3066 Cedar Shores Dr. NW, Hackensack MN 56452",
+    "Phone":"1-218-682-2431",
+    "Website":"http://www.cedarbayresort.com",
+    "Details":"na",
+    "Review":"If you like a cabin at the lake, with a fishing boat, a canoe, paddle boat, a little beach area and it is far away from the noise and activities of much bigger resorts, this is the place to go. It is so quiet and peaceful. Cabins have kitchens and are comfortable. Nothing fancy here except the sounds of nature, nearby trails and a big bright night sky. We loved it.",
+    "Contributor":"Ray Grumney",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.23097,46.66103 ]
+    },
+    "properties": {
+    "Name":"Clamshell Beach Resort",
+    "Address":"35197 S Clamshell Dr, Pequot Lakes, MN 56472",
+    "Phone":"1-888-252-6743",
+    "Website":"http://clamshellbeachresort.com/",
+    "Details":" Clamshell Beach Resort has 17 cottages; most have three or more bedrooms. The resort�s only two-bedroom, for purposes of comparison, goes for $280 a night in mid-August.",
+    "Review":"Clamshell Beach Resort, near Pequot Lakes, was the perfect spot to do that. The �cottages� are built for such a gathering: This weekend ours had four bedrooms with two baths. The newer ones on the lake are even nicer, with kitchens of granite and wine chillers and romantic spa baths overlooking the lake. Only the houses are big, though. The resort itself is intimate, with something for everyone, but all in proximity.",
+    "Contributor":"Karen Lundegaard ",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.37007774,46.38746693 ]
+    },
+    "properties": {
+    "Name":"Cragun's Resort and Hotel on Gull Lake",
+    "Address":"11000 Craguns Drive, Brainerd MN 56401",
+    "Phone":"1-218-829-3591",
+    "Website":"http://www.craguns.com",
+    "Details":"na",
+    "Review":"Craguns has more than 263 lodging units adjacent to 54 holes of golf, a mile-long sandy beach and has on-site eating and entertainment for kids. Is open year-round.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.709063,47.029157 ]
+    },
+    "properties": {
+    "Name":"Crow Wing Crest Lodge ",
+    "Address":"31159 County Road 23 Akeley, MN 56433",
+    "Phone":"1-800-279-2754 or 1-218-652-3111",
+    "Website":"http://www.crowwing.com/",
+    "Details":"33-acre resort offering 19 cabins with full kitchens plus water activities, playgrounds & fishing.",
+    "Review":"The lodge, built in 1898 as a headquarters for hunters, is a beautiful log and timber number with big screened windows, wood floors, a fireplace, snack bar and a pool table. There have been two owners during our time at Crow Wing Crest. John and Kim Bowen bought the resort in 2000, and along with Kim�s brother, Kris, and a few others, they keep things shipshape. John also does reflexology sessions, Kim adds aromatherapy, and they have been known to bring in a massage therapist.",
+    "Contributor":"Graydon Royce_",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.2936,46.52959 ]
+    },
+    "properties": {
+    "Name":"Eagles Nest Resort",
+    "Address":"5108 Poplar Ave., Nisswa MN 56468",
+    "Phone":"1-800-922-0440",
+    "Website":"http://www.eaglesnestnisswa.com",
+    "Details":"na",
+    "Review":"A sign at the entrance says, No pets, no jets, and that sets the tone for the kind of clients this ma and pa resort aims to attract. The cabins have plumbing and theres a fridge and stove, but these rustic lakeside cabins are not insulated and the furniture seems artfully unmatched. Its away from the hubbub of the nearby Brainerd-Baxter area, which is about 20 minutes south.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.29539,46.53018 ]
+    },
+    "properties": {
+    "Name":"Good Ol' Days Family Resort",
+    "Address":"26050 Oak Lane Nisswa MN 56468",
+    "Phone":"1-218-963-2478",
+    "Website":"http://www.goodoldaysresort.com",
+    "Details":"na",
+    "Review":"This Lower Cullen Lake resort is likely to appeal to those who want a more upscale cabin vacation next to the Paul Bunyan trail. A few years ago all of the original were replaced with 10 deluxe townhouse-style cabins and eight lodge units in the Arts and Crafts-style.",
+    "Contributor":"Chris Riemenschneider_",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.376514,46.378733 ]
+    },
+    "properties": {
+    "Name":"Kavanaugh's Sylvan Lake Resort",
+    "Address":"1685 Kavanaugh Drive, East Gull Lake MN 56401",
+    "Phone":"1-218-829-5226",
+    "Website":"http://www.kavanaughs.com",
+    "Details":"na",
+    "Review":"This resort has 52 upscale cottages and townhouses next to 108 holes of golf along Sylvan Lake. Its upscale, well-tended and is more intimate than many of its larger competitors. Is next to 108 holes of golf.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.353044,46.461545 ]
+    },
+    "properties": {
+    "Name":"Lyhins Pinehurst Resort",
+    "Address":"1414 Pinehurst Lane., Nisswa MN 56468",
+    "Phone":"1-800-963-2485",
+    "Website":"http://www.pinehurstongull.com",
+    "Details":"na",
+    "Review":"This is a classic nine-cabin resort under cover of tall white pines along the west shores of Gull Lake. Is secluded, pet-free and smoke-free. Family owned.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.35056852,46.3836785 ]
+    },
+    "properties": {
+    "Name":"Madden's on Gull Lake",
+    "Address":"1266 Pine Beach Rd., East Gull Lake MN 56401-3293",
+    "Phone":"1-218-829-2811",
+    "Website":"http://www.maddens.com",
+    "Details":"na",
+    "Review":"Maddens has 287 lodging units including cabins, condos and townhouses along the shore of Gull Lake. There are five pools, three beaches and 63 holes of golf.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.36477,46.44881 ]
+    },
+    "properties": {
+    "Name":"Quarterdeck Resort",
+    "Address":"9820 Birch Bay Drive SW., Nisswa MN 56468",
+    "Phone":"1-218-963-2482",
+    "Website":"http://www.quarterdeckresort.com",
+    "Details":"na",
+    "Review":"This year-round resort has 44 cabins and lakeside villas along the west side of Gull Lake, and a restaurant known for its lakeside deck. Is open year-round and offers boat rental.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.87125,46.40862 ]
+    },
+    "properties": {
+    "Name":"Rutger's Bay Lake Resort",
+    "Address":"25039 Tame Fish Lake Road, Deerwood MN 56444",
+    "Phone":"1-800-450-4545",
+    "Website":"http://www.ruttgersresorts.com",
+    "Details":"na",
+    "Review":"This is a full-service resort with a golf course, restaurant and spa, open seasonally along the shores of Bay Lake about 20 minutes east of the busy Brainerd/Baxter area. Caters to families, golfers and convention and has 167 lodging units including some original shoreline cottages. People come here to golf, boat, swim and fish.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.35144,46.45632 ]
+    },
+    "properties": {
+    "Name":"Sandy Beach Resort",
+    "Address":"1314 Sandy Point Road SW., Lake Shore MN 56468",
+    "Phone":"1-218-963-4458",
+    "Website":"http://www.sandybeachresort.net",
+    "Details":"na",
+    "Review":"This is a no-frills classic with 31 white-with-yellow trim cabins along a wide sugar-sand beach that wraps idyllically around a point along Gull Lake. Is family owned and very much has the feel of a ma and pa resort.",
+    "Contributor":"Jim Buchta",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.1585,46.662319 ]
+    },
+    "properties": {
+    "Name":"Pine Terrace Resort",
+    "Address":"35101 Pine Terrace Road Crosslake, Minnesota 56442",
+    "Phone":"218-543-4606",
+    "Website":"http://www.pineterrace.com/contact/index.shtml",
+    "Details":"This family owned resort is the only one on Star Lake which is part of the Ossawinimakee Lake Chain. Of the 13 cabins, 10 are right on the lake with docks for your boat or theirs. You can enjoy fishing, canoeing, kayaking, paddleboats, water bikes, and a small sandy beach. The resort is on 34 wooded acres with walking trails.",
+    "Review":"We had a nice week-long stay, part of which included grandchildren and their parents. The children enjoyed the beach and the very nice playground area. If you are not looking for a big lake for jet skis and speed boats, then look into Pine Terrace Resort.",
+    "Contributor":"Ray Grumney, Star Tribune Visual Journalist",
+    "Source":"Star Tribune",
+    "Icon Color":"large_green"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.12739,46.71821 ]
+    },
+    "properties": {
+    "Name":"Manhattan Beach Lodge",
+    "Address":"39051 County Road 66, Crosslake MN 56442",
+    "Phone":"1-218-692-3381",
+    "Website":"http://www.crosslakereservations.com",
+    "Details":"na",
+    "Review":"Historic 80 year lodge with awarding winning food at Manhattan�۪s restaurant. One the Whitefish chain of 14 lakes with breathtaking sunsets.",
+    "Contributor":"Cystal Glaser of Whitefish Lodge",
+    "Source":"Resort",
+    "Icon Color":"large_yellow"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.10477,46.67188 ]
+    },
+    "properties": {
+    "Name":"Whitefish Lodge & Suites",
+    "Address":"14150 Swann Dr. Crosslake MN 56442-5504",
+    "Phone":"1-218-692-2246 ext 412",
+    "Website":"http://www.crosslakereservations.com",
+    "Details":"na",
+    "Review":"Located right in the heart of Crosslake on the 11th hole of Crosswoods golf course. 54 cabin themed rooms and suites with a pool, oversized hot tub, kiddie pool, sauna and arcade.",
+    "Contributor":"Cystal Glaser of Whitefish Lodge",
+    "Source":"Resort",
+    "Icon Color":"large_yellow"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.62479,46.2529 ]
+    },
+    "properties": {
+    "Name":"Auger's Pine View Resort",
+    "Address":"34052 Auger Drive, Motley, MN 56466",
+    "Phone":"1-888-705-5253",
+    "Website":"http://www.augerspineview.com/",
+    "Details":"12 cabins and 55 campsites (45 are occupied year-round; 10 available for reservation) on Lake Shamineau, 26 miles south of Brainerd.",
+    "Review":"Beginning in August 1997, my husband and I have hosted a family gathering at Auger's Resort . . . The grandchildren, some of whom were five years old when they came to Augers for first time, are now in college and they still treasure coming to Auger's. [The owners] converted a large building with windows facing the lake known as The Arcade into a Family Reunion Center. Then they built an attractive log house to house the arcade on the first floor and a loft apartment on the second level. They also took down two cabins and replaced them with side by side cabins with A/C, larger sleeping accommodations, and kitchen/eating areas. But they kept the 'Tin Can,' a three bedroom mobile home which our high school- and college-age grandchildren have stamped as theirs because they can stay up until 2 a.m. (or later) and sleep until noon.  . . . The first summer we were there, we celebrated the marriage of one of our five daughters. I brought used bridesmail dresses with me and a wedding dress. The women put them on, jumped into the lake, and then went down the long red slide, Auger's signature beach fixture.",
+    "Contributor":"Ruth Bartling, Minneapolis",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.19156,47.03519 ]
+    },
+    "properties": {
+    "Name":"Bear Paw Resort",
+    "Address":"31926 County Hwy 50, Park Rapids, MN 56470",
+    "Phone":"1-800-254-0605",
+    "Website":"http://www.bearpawresort.com",
+    "Details":"9 Lakeside Cabins and 2 Full Hook-up RV sites; 15 miles NW of Park Rapids on Two Inlets Lake and 10 miles S of Itasca State Park.",
+    "Review":"Enjoy this beautiful and very clean Family Resort nestled in a peaceful Northwoods setting. All the Cabins have been recently renovated and updated with all new full size appliances, large kitchens, full baths, direcTV satellite, DVD players and WiFi (deluxe units with A/C, dishwasher, 2 baths, screened porch). Tons of Fun things to do for all ages and FREE to use: 20ft Water Bongo, hydrobikes, canoe, kayaks, paddle boat, curvy water slide, paddlers, shuffleboard, horseshoes, ping pong, tetherball, basketball and sand volleyball. ",
+    "Contributor":"Tracey Hays, Park Rapids",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.36463,46.45566 ]
+    },
+    "properties": {
+    "Name":"Birch Bay Golf Resort",
+    "Address":"1646 S. Agate Shore Dr. SW, Nisswa, MN 56468",
+    "Phone":"1-218-963-4488 or 1-800-450-4481 or 1-218-963-4488",
+    "Website":"http://www.birchbaygolfresort.com",
+    "Details":"Nine cabins and seven rooms in the inn on Agate Lake in Nisswa.",
+    "Review":"Our favorite resort is a little mom and pop golf resort named Birchbay\".  It's fabulous for families.  Out your cabin door to the right is a great little 9 hole golf course.  Out the door to the left is a wonderful sand beach perfect for kids.  We'd been going to this resort for over 18 years.  After a few years lapse time for kids to go to college, get married, and have families of their own, we are all congregating back at Birch Bay this June.\"",
+    "Contributor":"Mary Ott",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.83527,47.57415 ]
+    },
+    "properties": {
+    "Name":"Blue Fin Bay",
+    "Address":"7192 West Highway 61, Tofte, MN 55615",
+    "Phone":"1-800-258-3346 or 1-218-663-7296",
+    "Website":"http://www.bluefinbay.com",
+    "Details":"Suites, condos and townhomes on the shore of Lake Superior.",
+    "Review":"Our favorite family resort, and the one we keep going back to time and time again, is Blue Fin Bay.  . . . The drive to the north shore, always with a stop in Duluth for lunch, is part of the adventure.   . . .  There are always activities planned for the kids, including local hiking adventures.",
+    "Contributor":"Shelby Kohner, Minnetrista",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.18838,47.03172 ]
+    },
+    "properties": {
+    "Name":"Brookside Resort",
+    "Address":"31671 County Highway 50, Park Rapids, MN 56470",
+    "Phone":"1-800-247-1615",
+    "Website":"http://www.brookside-resort.com",
+    "Details":"28 cabins on Two Inlets Lake, 15 miles northwest of Park Rapids.",
+    "Review":"At least 35 years ago, our family and my husbands sister's family would travel two weeks every year to two different locations looking for the perfect resort.  When we found Brookside we quit looking any further.  . . ..  Several years ago the grandchildren were old enough and we started back  . . .  I'm not sure if it is the indoor/outdoor pool, the soda fountain and ice cream counter, the game room, the water activities or just the freedom to run from one event to the other that captivates them.  . . . They like it better than Mexico.",
+    "Contributor":"Mary Ann Johnson, Delano",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.72966,45.34301 ]
+    },
+    "properties": {
+    "Name":"Bug-Bee Hive Resort",
+    "Address":"29659 Queen Bee Lane, Paynesville, MN 56362",
+    "Phone":"1-320-243-4448",
+    "Website":"http://www.bugbeehiveresort.com",
+    "Details":"30 units, from cottages to lodge suites, on Lake Koronis, in Paynesville, 35 miles west of St. Cloud.",
+    "Review":"Our absolutely, without a doubt, very favorite Minnesota summer resort is Bug-Bee Hive Resort, which is in central Minnesota. . . . My husband and I started going there to get away from it all down here, and to be somewhat near our hometowns (Melrose and Greenwald, Minn.).  We eventually had children and they LOVE our summer vacation at Bug Bee Hive.  There is something for everyone to do there, old and young alike.  They have cabins and duplexes that are beautifully furnished.  They have a lodge and retreat center with a swimming pool and hot tub, and internet cafe.  There are daily activities planned for the kids!  We have met such wonderful families who return there the same week as us each year.",
+    "Contributor":"Sarah Nietfeld, Lakeville",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.637396,46.218074 ]
+    },
+    "properties": {
+    "Name":"Campfire Bay Resort",
+    "Address":"31504 Azure Rd.. Cushing MN 56443-2041",
+    "Phone":"1-800-677-7263",
+    "Website":"http://www.campfirebayresort.com",
+    "Details":"na",
+    "Review":"Located a half hour southwest of Brainerd in the quiet Lincoln Lakes area - less than 2 hours from the Cities - a true mom and pop resort catering to fishermen, families (lots of fun programming) and scrapbookers.",
+    "Contributor":"Jann Stumbo",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.71992032,47.73515874 ]
+    },
+    "properties": {
+    "Name":"Cedar Rapids Lodge",
+    "Address":"25387 Everts Road Northeast, Tenstrike, MN 56683",
+    "Phone":"1-800-233-8562 or 1-218-243-2487",
+    "Website":"http://www.crlodge.com",
+    "Details":"13 cabins on Medicine Lake, just north of Bemidji.",
+    "Review":"CRL is the only resort on Medicine Lake, so the resort is quiet, safe and away from the hustle and bustle of other vacation spots . . . We started going there before some of our children were born, then brought them there as babies, and now they're coming with their friends and spouses. . .  Once you find the perfect resort, you never give up your spot. And for our family, Cedar Rapids Lodge is that perfect spot.",
+    "Contributor":"Julie Flicek Halvorson, Madelia",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.58327,47.10317 ]
+    },
+    "properties": {
+    "Name":"Chase on the Lake",
+    "Address":"502 Cleveland Blvd., Walker MN 56484",
+    "Phone":"1-218-547-7777",
+    "Website":"http://www.chaseonthelake.com",
+    "Details":"na",
+    "Review":"I love this resort because it is located in downtown Walker which is a fabulous and fun little city with great shops and dining. The Chase is also located right at the waters' edge of Leech Lake, the third largest lake in the state with great walleye fishing. The Chase On The Lake is an upscale hotel with a laid back attitude and includes beautiful hotel rooms, condos, beach, indoor pool, conference space, an Aveda spa, a two lane bowling alley and a wonderful restaurant and bar. It has it all!",
+    "Contributor":"Sara Taylor",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.312055,47.252177 ]
+    },
+    "properties": {
+    "Name":"Cove Point Lodge",
+    "Address":"4614 Minnesota 61, Beaver Bay, MN 55601",
+    "Phone":"1-800-598-3221 or 1-218-226-3221",
+    "Website":"http://www.covepointlodge.com",
+    "Details":"Lodge rooms and cottages on Lake Superior, 50 miles northwest of Duluth.",
+    "Review":"You don't have to be Norwegian to enjoy Cove Point Lodge or the Norwegian complimentary breakfast! . . . All rooms face the Big Lake. There is north woods decorating with a big stone fireplace in the lobby . . . It is in a central location on Highway 61, so can easily take side trips to Ely, Grand Marais, Duluth, Lutsen, and others.",
+    "Contributor":"Joanne Berg, Brooklyn Center",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.04062,45.25159 ]
+    },
+    "properties": {
+    "Name":"Dickersons Lake Florida Resort",
+    "Address":"13194 2nd St NE, Spicer, MN 56288",
+    "Phone":"1-320-354-4272",
+    "Website":"http://www.dickersonsresort.com",
+    "Details":"13 cabins on Lake Florida, 6 miles west of Green Lake in the Little Crow Lakes Area.",
+    "Review":"The beach is beautiful and runs in front of all but 3 cabins.  The cabins are immaculate and kept up-to-date.  Lake Florida is a quiet lake and sitting on your private deck you can hear the loons.  . . . There are a number of beach toys, lake toys, swingsets, and bikes available and free for use by the guests of the resort.  [The owners] go out of their way to make you feel at home, including homemade donuts on Sunday morning, a pizza party Monday night, and a hayride for the kids.  No child catches a fish without having their picture taken for the wall of honor in the resort store.",
+    "Contributor":"Tami Riley, Redwood Falls",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.02443613,46.71756161 ]
+    },
+    "properties": {
+    "Name":"Fair Hills Resort",
+    "Address":"4270 Co. Hwy 20. Detroit Lakes MN 56501",
+    "Phone":"1-800-323-2849",
+    "Website":"http://www.fairhillsresort.com",
+    "Details":"na",
+    "Review":"Fair Hills is a 3rd-generation owned resort near Detroit Lakes on Pelican Lake, geared to families. The cabins, sans phone or t.v. are nestled among the pines on the beautiful sandyshore line. Amenities include 3 home cooked meals a day, including Grandma Caldahls famous brown bread, golf, tennis, volleyball, a pool, an old fashioned soda fountain. No alcohol is sold on the premises which supports the family theme.",
+    "Contributor":"Robert and Dianne Hayes",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.57047,46.47357 ]
+    },
+    "properties": {
+    "Name":"Four Seasons Resort on Rush Lake",
+    "Address":"35232 Rush lake Loop, Ottertail, Mn, 56571",
+    "Phone":"888-263-4210",
+    "Website":"http://www.fishrushlake.com",
+    "Details":"You can savor the scenery from comfortable dock benches, make a sandcastle, swim in the swim area, read a book from the library, play some horse shoes or play some other out side games, swing on the tire swing at the playground, shoot some pool in the game room or just relax next to the campfire roasting marshmallows and more with out leaving the relaxing MN resort.",
+    "Review":"A small Mom & Pop MN resort, just 8 Lakeside Cottages. A great place to sit back, slow down, unwind and enjoy yourself.  Minnesota Excellent Fishing in Ottertail County, Rush Lake is one of Minnesota's best over all fishing spots with 5,338 acres full of Walleye's, Northern Pike, Large-mouth Bass, Crappies, Bluegills and panfish. Family fun great area to relax, shop, and experience. A nice playground, beach, game-room, level Park-like grounds. Bait & Gas, Pontoon & boat + motor rental. Fire rings and free firewood Sorry we do not accept pets",
+    "Contributor":"Michael Pendy",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.33277,45.88665 ]
+    },
+    "properties": {
+    "Name":"Geneva Beach Resort",
+    "Address":"105 Linden Avenue, Alexandria, MN 56308",
+    "Phone":"1-320-763-3200 or 1-877-891-3200",
+    "Website":"http://www.genevabeachresort.com",
+    "Details":"16 lodging options from a 4-bedroom cottage to townhouse studios on Lake Geneva two miles from downtown Alexandria.",
+    "Review":"We've been coming to Geneva Beach since 1992 after several resorts had been sold and turned into private property over the years. It's a great place for the kids to hang out and play on the beach, the water trampoline, or play volleyball, play ball in the big yard, or just relax and enjoy the atmosphere. It's right on the bike trail so it's easy to go walking, biking, or running.",
+    "Contributor":"Don Becker, Sioux Falls, S.D.",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.74945015,48.08450009 ]
+    },
+    "properties": {
+    "Name":"Gunflint Lodge",
+    "Address":"143 County Road 50,Grand Marais, MN 55604",
+    "Phone":"1-800-328-3325 or 1-218-388-2294",
+    "Website":"http://www.gunflint.com",
+    "Details":"23 cabins, from homes to romantic cottages, on Gunflint Lake, 43 miles west of Grand Marais.",
+    "Review":"I went for the first time in 1999 with a friend to one of their Women's Weekend getaway packages, and have made the trip with friends and family at various times of the year.  One year in particular stands out, it was the first year I took my son.  We went for a weekend at the end of May, and he was 8 years old.  I wanted to get him to appreciate ,and hopefully love, the outdoors and nature. We had a sunny weekend . . . We went horseback riding, fed ducks, threw rocks, canoed, took a pontoon ride and hike to Bridal Falls, and joined naturalist guided activities over the 3 day weekend.  I even hired a half-day fishing guide that provided a fantastic adventure, complete with poles and bait for four hours on the lakes.  . . .  We saw beavers and loons on the lake while fishing, and the day was 70 degrees and full of sun.  On the morning of our Sunday departure I told my son that we would head down to breakfast and start our trip home. All of a sudden, tears welled up in his eyes and he started to cry. He said, 'I don't want to go home.",
+    "Contributor":"Melody West, Minneapolis",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.47241,46.13934 ]
+    },
+    "properties": {
+    "Name":"Hunter Winfield's",
+    "Address":"510 W. Lake Street, Isle MN 56342",
+    "Phone":"1-800-414-4298",
+    "Website":"http://www.hunterwinfields.com",
+    "Details":"na",
+    "Review":"Quaint original log cabins, great firepit to talk with other guests, awesome dock, guide fishing. Simple, quiet and relaxing.",
+    "Contributor":"Martha Webb",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.34065,46.51536 ]
+    },
+    "properties": {
+    "Name":"Lost Lake Lodge",
+    "Address":"7965 Lost Lake Road,Nisswa, MN 56468",
+    "Phone":"1-800-450-2681 or 1-218-963-2681",
+    "Website":"http://www.lostlake.com",
+    "Details":"13 cabins on Gull Lake Narrows, just east of Nisswa.",
+    "Review":"\"The lodge is nestled in a wooded area, on one side is the small Lost Lake, and on the other side is the larger lake, Gull Lake. It is an all inclusive, full service resort. We go to relax on our porch or in front of our fireplace in our cabin, or enjoy  many activities such as canoeing, kayaking, playing on the giant water 'hotdog'  . . . shuffle board and ping pong.  It is a worry free atmosphere for kids. The food is really outstanding. We are served a breakfast and evening meal by friendly servers.\"",
+    "Contributor":"Jean Wyatt, Savage, Minn.",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.708367,47.636064 ]
+    },
+    "properties": {
+    "Name":"Lutsen Resort",
+    "Address":"5700 Minnesota 61,Lutsen, MN 55612",
+    "Phone":"1-800-258-8736 or 1218-663-7212",
+    "Website":"http://www.lutsenresort.com",
+    "Details":"170 units, including lodge rooms, cabins and townhouses, on Lake Superior.",
+    "Review":"Lutsen's totem-style sign off Highway 61 tempts you ... when you make the drive down the hill and see the big red lodge resting in a protected cove on Lake Superior, you are charmed.  We were made welcome inside the gracious lodge that became ours, from the hand-hewn mantle over the fireplace to the cedar-scented paneling of the upstairs rooms. . . . One of the first things we do after the long drive is to cross the covered bridge to take the trail along the Poplar River to see the waterfall. . . . Eating in the dining room, we anticipate the raisin rye bread and Swedish pancakes but mostly the view out the small paned windows.",
+    "Contributor":"Debra Palmquist, Plymouth",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.94117,47.07875 ]
+    },
+    "properties": {
+    "Name":"Mantrap Lodge",
+    "Address":"20725 Jewel Drive,Park Rapids, MN 56470",
+    "Phone":"1-800-424-0901",
+    "Website":"http://www.mantraplodge.com",
+    "Details":"16 cabins on Big Mantrap Lake.",
+    "Review":"When we went to our cabin, there was a dog there to greet us. It belonged to the owners of the lodge . . . when we went fishing one day, we saw an eagle's nest with an eagle in it. The same day we saw a loon and my brother tried to talk to it. We had a tractor race and the tractor we were in won! After the race, we had s'mores. . . . One morning they had kids minnor races. . . . I named mine Speedy. Even though I lost, I had a fun time.",
+    "Contributor":"Mitchell Heilman, Shoreview (10 years old)",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.87095341,48.08749199 ]
+    },
+    "properties": {
+    "Name":"Melgeorge's Elephant Lake Lodge",
+    "Address":"376 County Road 180, Orr, MN 55771",
+    "Phone":"1-800-205-9001 or 1-218-374-3621",
+    "Website":"http://www.melgeorges.com/",
+    "Details":"11 cabins and 8 lodge rooms on Elephant Lake in Orr.",
+    "Review":"Cut out of the beautiful forest near Voyageur's National Park, Melgeorges is . . . formerly a logging camp in it's third generation of Mom and Pop proprietors. The lake is large enough for skiing yet small enough for a great canoe ride around beautiful  Buzzard Island, in the middle of it. The lodging  . . . was all constructed by the family and ranges from quaint older dwellings to brand new log cabins large enough to accommodate the whole family.  . . . My visits to Melgeorges defined the phrase Summer Vacation.\" Biking on the logging trails, hiking the wilderness, fishing and canoeing are what I've always envisioned a summer vacation should be. Having moved here 15 years ago from Colorado I wondered what \"going up north\" meant. Now I know.\"",
+    "Contributor":"Brad G. Bridwell, Minneapolis",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.04964,47.81678 ]
+    },
+    "properties": {
+    "Name":"Naniboujou Lodge",
+    "Address":"20 Naniboujou Trail,Grand Marais, MN 55604",
+    "Phone":"1-218-387-2688",
+    "Website":"http://www.naniboujou.com",
+    "Details":"24 rooms with no television or phones in the historic lodge on Lake Superior, 15 north of Grand Marais",
+    "Review":"Some destinations lose their charm after a few visits.  Familiarity takes away the luster. Our favorite Minnesota getaway ̢���� the Naniboujou Lodge near Grand Marais - has the opposite effect. Its familiarity draws us back each year.Who wouldn't want to repeat waking to the sound of Lake Superior's waves on a magnificent beach? You can start your day right outside the lodge with the hike up the Brule River to the mysterious Devil's Kettle where half the river is swallowed by a large opening in the rock, rumored to have no bottom. . . . The beauty of the lodge and the majesty of the lake combine to refresh and invigorate.  The combination of exerting yourselves on the trails along Superior only to return to a place of simple luxuries keeps us coming back. Dinner in the famous dining room is always a treat, with old favorites and a new item or two on the menu each year.",
+    "Contributor":"Larry and Susie Voeller, Roseville",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.057015,46.988646 ]
+    },
+    "properties": {
+    "Name":"Northern Pine Lodge",
+    "Address":"14588 230th Street, Park Rapids, MN 56470",
+    "Phone":"1-218-732-5103",
+    "Website":"http://www.northernpinelodge.com",
+    "Details":"21 cabins on Potato Lake, 6 miles north of Park Rapids.",
+    "Review":"Staying at Northern Pine Lodge is like stepping back in time. It is the classic old school Minnesota lake cabin resort with modest but clean and comfortable cabins on one of the best lakes in the state. The resort itself sits on a sort of dead-end peninsula of Potato Lake with no noise or thru traffic of any kind. It has a super-safe swim beach, paddle boats, kayaks, bicycles, mini-golf, an old clay tennis court, docks for fishing and several row boats for rent. The heart of the resort is a beautiful 100-year-old log building with pool tables, just enough arcade games and an impressive stone fireplace for those rare chilly mornings.  There is also a log sauna building.  . . . Every day at a certain time, an old school bell rings and kids run from all over the resort to take part in that day's special activity . . .  In the evenings, there are family-centered activities like Bingo Night and Movie Night in the lodge.  It truly is an idyllic place.",
+    "Contributor":"Amy Hagen, St. Paul",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.45983,47.55444 ]
+    },
+    "properties": {
+    "Name":"Paradise Resort",
+    "Address":"8677 N Moose Lake Rd NE, Pennington, MN 56663",
+    "Phone":"1-218-835-6514 or 1-800-845-9124",
+    "Website":"http://www.paradiseresort.com",
+    "Details":"11 lakeside cabins on Moose Lake, 26 miles east of Bemidji.",
+    "Review":"We discovered this gem of a resort about 7 years ago. Wow, the grounds are immaculate . . . the cabins are right on the water, and everyone has a private dock and fire pit . . . our grand kids love all  the kids activities, the fishing, the lodge with its great food. . . .  All we can say is, if you havent stayed here before, your missing out on a quiet little gem.",
+    "Contributor":"Kim Wagner, Fargo, N.D.",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.41101,45.61421 ]
+    },
+    "properties": {
+    "Name":"Peter's Sunset Beach Resort",
+    "Address":"20000 South Lakeshore Drive, Glenwood, MN 56334",
+    "Phone":"1-800-356-8654 or 1-320-634-4501",
+    "Website":"http://www.petersresort.com",
+    "Details":"25 cottages, including five large���reunion�۝ cabins, and 24 rooms on Lake Minnewaska, 17 miles southwest of Alexandria.",
+    "Review":"It all started over 20 years ago when my ... mom called me and asked what I thought about them giving all of their adult children and families a long weekend at a resort instead of another sweater, and our family tradition began. Peter's Sunset Beach Resort . . . has been our favorite part of June every year. . . . Peter's offers an unbelievably beautiful golf course. . . . There's the beach with great inflatables in the water for the kids (all ages) to enjoy, tennis courts, shuffleboard, and a clubhouse, where we play pool.",
+    "Contributor":"Julie 0' Shaughnessy, Burnsville",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.11252,46.56047 ]
+    },
+    "properties": {
+    "Name":"PineCrest Resort",
+    "Address":"13873 Co. Rd. 109. Merrifield MN 56465",
+    "Phone":"1-877-841-2461",
+    "Website":"http://www.pinecrestresort.net",
+    "Details":"na",
+    "Review":"Our favorite resort is PineCrest. They have 6 cabins and a sandy beach that goes on forever! This is our 3rd year there. They are reasonably priced and very family friendly.",
+    "Contributor":"Del Hinton",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.65418,47.16581 ]
+    },
+    "properties": {
+    "Name":"Sugar Lake Lodge",
+    "Address":"37584 Otis Lane, Cohasset, MN 55721",
+    "Phone":"1-800-450-4555 or 1-218-327-1462",
+    "Website":"http://www.sugarlakelodge.com",
+    "Details":"103 units, from cabins to lodge units, on aqua-colored Sugar Lake, southwest of Grand Rapids.",
+    "Review":"I've been bringing a golf group up to Sugar Lake Lodge for the last six years to play golf on Sugarbrooke Golf Course. This resort and golf course are perfect for a family vacation or a weekend golf getaway. The golf course is beautiful, the resort grounds and lodging are perfect and the food . . . is always excellent.. . . One particular memory that stands out is when a few of our group members got a little excited from a great round of golf (and a few adult beverages) and decided to take a swim in beautiful Sugar Lake (right off the 18th green), with their golf clothes still on.",
+    "Contributor":"Matt Sannes, Waconia, Minn.",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.4375354,48.15700196 ]
+    },
+    "properties": {
+    "Name":"Timberwolf Point Resort",
+    "Address":"7079 Echo Trl, Buyck, MN 55771",
+    "Phone":"1-218-993-2310",
+    "Website":"http://www.timberwolfpoint.com",
+    "Details":"Six cabins on Echo Lake near Voyageurs National Park, 60 miles north of Virginia.",
+    "Review":"For my money, the best 'Minnesota Getaway' is this a rustic little resort on the Echo Trail. One of only two resorts on Echo Lake, this is mom and pop\" in the truest sense of the phrase. . . . [the owners] provide clean cabins at very reasonable prices with all the necessities, boat rentals, boat docking if you bring your own, free canoes to registered guests, all with a friendliness and personal interest that is all too rare these days. Echo Lake itself offers great fishing. . . . Bring your camera as well as your fishing gear; wildlife is abundant with deer, moose, otter, beaver, eagles and the occasional bear. There's a phrase at the top of the resort's web page that says it all: 'we don't have to get back to nature. We never left.\"",
+    "Contributor":"Bill Prepodnik, Owatonna, Minn.",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.19509,47.03951 ]
+    },
+    "properties": {
+    "Name":"Two Inlets Resort",
+    "Address":"32240 County Highway 50, Park Rapids, MN 56470",
+    "Phone":"1-800-843-7453 or 1-218-732-5434",
+    "Website":"http://www.twoinlets.com",
+    "Details":"13 housekeeping cabins on Two Inlets Lake in Park Rapids.",
+    "Review":"Our family has been multi-generational vacationing at Two Inlets Resort near Park Rapids for the last eight years. The resort has a back-to-basics feel that helps us to unplug from a busy life . . . . One of our favorite memories is when we accidentally caught a turtle instead of an intended fish. My niece named it Mr. Incredible, and we donated him to the resort's turtle pond and the kids visited him every day of our vacation.",
+    "Contributor":"Lisa Bakke, Ankeny, IA",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.479437,47.960203 ]
+    },
+    "properties": {
+    "Name":"Vermilion Dam Lodge",
+    "Address":"3276 Randa Road, Cook, MN 55723",
+    "Phone":"1-800-325-5780 or 1-218-666-5418",
+    "Website":"http://www.vdl.com",
+    "Details":"19 cabins on Lake Vermilion, on the spillway where the lake forms Vermilion River, 22 miles north of Cook .",
+    "Review":"The smell of pine trees captivates my senses  . . . pine fresh room spray, has nothing on the real thing. . . . Hiking along the dam trail is such an adventure. The rocks and the constant rushing water are refreshing and gorgeous. . . . The swimming pool and the top of the dam were Mom's favorite spots. . . . Hiking, swimming, rock climbing, dam walking, fishing, paddle boating, pontoon rides with picnics on the bay. A walking trip to the DNR tower was incredible. . . . For my Dad, well, we hardly saw him during the day. He went out fishing early mornings, then came home for lunch, napped and went right back out again in the afternoon.",
+    "Contributor":"Becky Lietzau, Rockford, Minn.",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.76997,46.59357 ]
+    },
+    "properties": {
+    "Name":"Big McDonald Resort",
+    "Address":"34654 big McDonald lane, Dent, MN 56528",
+    "Phone":"2187582369",
+    "Website":"http://http//:www.bigmcdonaldresort.com",
+    "Details":"8 updated cabins on quiet spring fed lake filled with Northerns, Walleye, Bass, and Crappies. Many activities available for the family and all cabins face the lake!",
+    "Review":"Fun, fishing, fish fries....",
+    "Contributor":"Lisa Gabrielson",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.10237349,47.52156762 ]
+    },
+    "properties": {
+    "Name":"Eagle Nest Lodge",
+    "Address":"58671 Eagle Nest Road, Deer River, Minnesota 56636",
+    "Phone":"(218)246-8701",
+    "Website":"http//:www.eaglenestlodge.net",
+    "Details":"14 Housekeeping cabins with all the amenities. 1000 feet of shoreline on Cutfoot Sioux/ Lake Winnibigoshis with sandy beach for recreationa activities. Great walleye, muskie, crappie, and Northren fishing. Rental deluxe fishing boats available on site. Full dock services to include lures, bait, and fuel. Recreational programs for all ages. Great get away for the family.",
+    "Review":"This is an excellent get away and opportunity to reconnect with family and friends. Beautiful setting in Northern Minnesota. Having grown up in Grand Rapids, this place and setting has special meaning. I return to this vacation lodge yearly with my family--as do many other guests-- from Idaho. This is truly a small piece of heaven--",
+    "Contributor":"Dr. Thomas M. Chopp",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.85634,46.55589 ]
+    },
+    "properties": {
+    "Name":"East Silent Lake Resort",
+    "Address":"30424 410th St, Dent MN 56528",
+    "Phone":"1-800-242-6904",
+    "Website":"http://www.eastsilentresort.com",
+    "Details":"Nice and relaxing and family friendly place to get away from city life and still have most of the amenities of home . \n \n Beautiful lakefront and multiple cabins to rent from. \n \n There is a lodge that has many things to purchase from snacks to coffee, pizza and soda. You can also rent boating items as well as the resort pontoon, and fishing boats.\n \n They have miniature horses on the property that they get hooked up to a trailer and offer pony rides for the vacationers. \n \n There is a bait shop on site and a place to clean the fish that have been caught that day.\n \n They also have organized children events and crafts, such as hat making, tubing and the \"human launch\"!\n \n There is also a weekly night of a bonfire with s'more making while you can also just relax around a fire on a nice evening in the country.",
+    "Review":"My family and I have been going to this resort yearly for at least the last 5yrs and the owners have been so welcoming and willing to assist with anything to make our stay the best we've had. It started with just my immediate family going and now has become an extended family event for the last couple of years. Whether you want beach time or out in the water, (the inflatable toys are so much fun) or even just relaxing in the cabin, this is place to go. I look forward to this vacation away every year! :)\n \n They do not allow pets at this resort, but they are very helpful in recommending boarding facilities in the area that are trustworthy. Just give them a call. I work in veterinary medicine and have pretty high standards as to where i board my dog... there is a really nice place about 20-30min from the resort that I have had my dog stay at and have been very pleased.",
+    "Contributor":"Kelsey Brown, St Paul MN",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.85634,46.55589 ]
+    },
+    "properties": {
+    "Name":"East Silent Resort",
+    "Address":"30424 410th St Dent, MN 56528",
+    "Phone":"1.800.242.6904",
+    "Website":"http://eastsilentresort.com/",
+    "Details":"They have amazing amenities and continue to make upgrades and improvements. There's a lodge with coffee and rolls and a few to-go dinning options (such as pizza and ice cream treats), board games for all ages which you can take to your cabin or play in the lodge for free, each of the cabins has a TV (some of them very large and new), and laundry. There's a wonderful beach and lots of water activities. During the summer season they provide morning pontoon rides and give boat rides with tubing, skiing, and/or wake boarding. The best attraction for kids is always the new water toys. There's a water trampoline, a very large slide and jumping toy, and of course, the blob that launches kids into the water (always a hit!). There's also a sand volleyball court, a playground, a fire pit, shelter, and lots of open green space. Oh, and the animals! There's a miniature donkey and three mini ponies. No lie! They even give pony rides to the kids! It's amazing.\n \n The new buildings have even more amenities such as a fireplace and full sized kitchens. They think of everything!",
+    "Review":"My family and I go to East Silent Resort every year. It started with just my immediate family, but has grown to include grandparents, aunts and uncles, and all the cousins. We love it! The resort-goers in my family range in age from 1 to 88, and everyone has a good time. There is something for everyone here!\n \n You really can't beat all the personal touches and the family feel of the resort. The owners treat you like family and are so attentive to the needs of the guests. They provide all of these personal touches like the boat rides, kid's activities, bonfires, and pony rides. You really can't get that anywhere else. I highly recommend ESR.",
+    "Contributor":"Katie Brown",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.85509,46.93743 ]
+    },
+    "properties": {
+    "Name":"Royal Starr Resort",
+    "Address":"19222 Echo Ridge Drive, Nevis, MN 56467",
+    "Phone":"218-652-3821",
+    "Website":"http://royalstarrresort.com/",
+    "Details":"Sandy beach,table chairs umbrellas children sand toys, lots and lots of water toys. Two swim rafts, 20 ft dia Bongo inflated swim raft with slide, walk way boarding plate form and an 8 x 10 sunning raft. Canoes, kayaks, paddle boats, all for you enjoyment.<br>\n Oh yeah, we have fish, check out our Facebook page at facebook/royalstarrresort.com",
+    "Review":"Visit our Premier Family Friendly Resort! We have 13 totally modern cabins, ALL on level lake shore.\n The Starr is conveniently located 10 miles east of Park Rapids and jut 15 miles west of Walker. We are the only resort on the 6th Crowing lake. \n .",
+    "Contributor":"Resort Owner",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.336256,46.492907 ]
+    },
+    "properties": {
+    "Name":"Samara Point Resort on Gull Lake",
+    "Address":"1026 Birchwood Hills Trail, Nisswa, Minnesota 56468 ",
+    "Phone":"218-963-2615",
+    "Website":"http://www.samarapoint.com",
+    "Details":"Discover an intimate housekeeping resort, nestled on the north end of Gull Lake in the Brainerd Lakes Area. Seven lakeside, two-bedroom cabins and one four-bedroom Channel Home beckon with fireplaces, screened porches and all the comforts of home.",
+    "Review":"Samara Point Resort offers an ideal location on the sandy shore of a beautiful, tranquil bay. Each cabin is lake-level and just steps from the water's edge. The Channel Home is privately tucked away on a channel of Gull Lake, across from a nature preserve. As the only resort at the end of a road, we pride ourselves on maintaining a fine country retreat for those wanting to quietly get away from it all, with all the comforts of home.",
+    "Contributor":"The Bombenger's",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.47725,47.54151 ]
+    },
+    "properties": {
+    "Name":"Stennes' and Buhn's Moose Lake Resort",
+    "Address":"7418 South Moose Lake Road N.E., Blackduck, Mn. 56630",
+    "Phone":"218-835-6542",
+    "Website":"http://www.mooselakeresort.com",
+    "Details":"Beautiful cabins. A great sandy beach and swimming area. There are boats and motors available. Also, a lovely area for a short golf game and a beautiful lodge for all guests to use. You'll find a pool table and plenty of tables and chairs for cards and games. A bar and kitchen area too. The kids have their own area available, for games and videos.",
+    "Review":"My family has been going to this wonderful resort for at least 55 years. Our children and grandkids are carrying on the tradition. The lake and grounds are absolutely beautiful. We look forward to relaxing with a book, listening to the loons and having a blast at the lodge.",
+    "Contributor":"The Anderson's",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.5214,47.48135 ]
+    },
+    "properties": {
+    "Name":"Pike Hole Resort",
+    "Address":"25061 Connor Road NE Cass Lake, MN 53366",
+    "Phone":"218-335-2328",
+    "Website":"http://www.pikeholeresort.com/",
+    "Details":"Family owned since 1972, by Frank & Gert Patterson. Pike Hole Resort has six tidy cabins on the Turtle River. The Turtle River connects to Cass & Kitchi Lakes, as well as several smaller lakes. Fish the Turtle River or any of the lakes for Bass, Crappie, Muskie, Northern, Sunfish, Walleye... Choose from two pontoons for rent to get your fishing on. Cook in the cabin or take a short walk across the road and leave the cooking up to Pike Hole Bar & Grill; owned and operated by Tom Patterson & Kevin Randolph.",
+    "Review":"Our Family has been vacationing at Pike Hole Resort since I was a kid. Now we bring our kids up for plenty of relaxation and fishing. We appreciate the friendly hospitality of the Patterson's and the convenience of being able to eat an awesome meal at Pike Hole Bar & Grill.",
+    "Contributor":"Kim Cohn, Zimmerman, MN",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.700757,48.836574 ]
+    },
+    "properties": {
+    "Name":"Border View Lodge",
+    "Address":"3409 State Hwy 172 NW, Baudette MN 56623",
+    "Phone":"800-776-3474",
+    "Website":"http://www.borderviewlodge.com",
+    "Details":"Full service winter and guided summer Walleye fishing",
+    "Review":"Superior accomodations and service with a great staff and excellent food!",
+    "Contributor":"Border View Lodge",
+    "Source":"Resort",
+    "Icon Color":"large_yellow"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.299056,48.609851 ]
+    },
+    "properties": {
+    "Name":"Camp Idlewood Resort",
+    "Address":"3033 County Rd 20, International Falls, MN 56649",
+    "Phone":"1-888-741-1228",
+    "Website":"http://www.campidlewood.com",
+    "Details":"9 modern housekeeping cabins, sand beach, boat rental, sauna, access to Voyageurs Nat'l Park all on Beautiful Rainy Lake.",
+    "Review":"Small private resort within sight of Canada. Quiet family setting perfect for the fisherman and kids. Classic look of a resort from the good old days with the comforts of home. All cabins are newly remodeled.",
+    "Contributor":"Jerry Williams",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.2912,45.71994 ]
+    },
+    "properties": {
+    "Name":"Canary Beach Resort",
+    "Address":"17405 County Road 28; Villard, MN 56385",
+    "Phone":"320-554-2471",
+    "Website":"http://www.canarybeachresort.com",
+    "Details":"10 Lake Front cabins with 1000 feet of safe, natural sandy beach. * Lake Waterpark * Hayrides * Shuffleboard * Horseshoes * Playground * Dock Fishing * Pontoon Rentals * Sand Volleyball * Game room * New Meeting Room/Event Center * Open Year-round * Pet Free * Fireplaces * Large cabins full kitchens * Only Resort on Lake Villard",
+    "Review":"Canary Beach Resort has 10 lake front cabins with 6 brand new, year round vacation homes. One of the nicest natural sandy beaches in the area with amenities to keep every age entertained! Able to host: Family Reunions, Snowmobile groups, Scrapbooking/crafting retreats, Bachelor/Bachelorette gathering, Holiday Reunions, Ice Fishing, Ladies/Men's Get-a-ways, Family Vacations and more! New Event Center/Meeting room for 80!",
+    "Contributor":"Christine Olschlager",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.73794,47.67509 ]
+    },
+    "properties": {
+    "Name":"Eagle Ridge Resort",
+    "Address":"10246 Stallion Ct NE, Tenstrike, MN 56683",
+    "Phone":"(218)586-2700 or (800)279-5177",
+    "Website":"http://www.eagleridgeresort.net",
+    "Details":"Eagle Ridge Resort is a \"Family\" fishing resort on Gull Lake in the beautiful Bemidji Resort area. There are both new, modern lakeside cabins, and older affordable lakeside cabins. RV and tent camping. The bluegill fishing is incredible, walleyes, northern pike and bass are abundant. A swimming beach, hiking in the woods, and a beautiful lake shore with wildlife including waterfowl, loons & an Eagle nest to observe and capture incredible photos.",
+    "Review":"Over 50 different species of birds have been identified on the resort.",
+    "Contributor":"Janine Faris",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.80946,48.40554 ]
+    },
+    "properties": {
+    "Name":"Ebel's Voyageur Houseboats",
+    "Address":"10326 Ash River Trail Orr, MN 55771-8044",
+    "Phone":"80-253-5475",
+    "Website":"http://www.ebels.com",
+    "Details":"Hot tubs,\nAIr conditioning\nHot & cold running water with toilet and shower\nStove, oven and refridgerator\nSwimslides\n",
+    "Review":"This is a fantastic way to explore thousands of miles of Minnesota's National Park...Voyageur.  Swim, fish, cruise and relax while leaving nothing behind.  You captain yourself.  Amazing scenery and wildlife.  ",
+    "Contributor":"Katy Ebel",
+    "Source":"Resort",
+    "Icon Color":"large_yellow"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.47725,47.54151 ]
+    },
+    "properties": {
+    "Name":"Stennes' & Buhn's Moose Lake Resort",
+    "Address":"7418 South Moose Lake Road NE Blackduck, MN 56630",
+    "Phone":"218-835-6542",
+    "Website":"http://www.mooselakeresort.com",
+    "Details":"Fishing, water skiing, boating, swimming, beach, kayaking, canoeing, nature trails, playground and clean, well-equipped cabins",
+    "Review":"The whole family looks forward to our annual week at Moose Lake Resort. My second grader even wrote his \"My Special Places\" paper about it. A family owned property, the staff is friendly and helpful. The cabins are clean and have comfortable beds and well-stocked kitchens. Family fun and peaceful beauty are the order of the day at Moose Lake!",
+    "Contributor":"Kathleen Wittleder",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.32994,46.30364 ]
+    },
+    "properties": {
+    "Name":"Shady Hollow Resort",
+    "Address":"1009 Shady Hollow Rd SW, Pillager, MN 56473",
+    "Phone":"1-218-828-9308 or 1-800-450-9308",
+    "Website":"http://www.shadyhollowresort.com",
+    "Details":"Eight cabins and eight campsights on Hardy Lake, just west of Brainerd.",
+    "Review":"Shady Hollow has been a wonderful getaway for several summers. I have three grandsons now, 16, 15, and 12, and they still look forward to going to our own little resort with just a few cabins and easy access to a small lake where they can kayak, fish, swim, motor or just play in the sand.",
+    "Contributor":"Patricia Banwart, West Bend, Iowa",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.27548,45.69746 ]
+    },
+    "properties": {
+    "Name":"Shady Rest Resort",
+    "Address":"16953 142nd Street, Villard, MN 56385",
+    "Phone":"320-554-2017",
+    "Website":"http://www.shadyrestresort.com",
+    "Details":"The resort has 12 cabins, 20 over night RV sites, and 70 seasonal RV sites. They have 2 tennis courts, basketball, 2 playgrounds, horse shoe, pontoon and boat rentals, and a safe clean beach on Lake Amelia with a swim raft and a slide in the water.",
+    "Review":"This is a true family resort where kids are number one! The staff is wonderful. the lake is crystal clear, and it's so close to the Twin Cities.",
+    "Contributor":"Dave Langhoff",
+    "Source":"Reader",
+    "Icon Color":"large_red"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.65253,46.36197 ]
+    },
+    "properties": {
+    "Name":"The Red Door Resort",
+    "Address":"38421 State Highway 18 Aitkin,Mn 56431",
+    "Phone":"218-678-3686",
+    "Website":"http://www.thereddoorresort.com",
+    "Details":"The Red Door Resort is located on the beautiful north shore of Lake Mille Lacs. <br>We are a family owned business with something to offer your whole family. Located in the heart of Minnesota's vacationland, we are only a few hours drive from the Twin Cities.<br> Whether you enjoy open water or ice fishing, hunting, shopping, biking, hiking, snowmobiling, gambling or just a relaxing day at the lake.\n <br>We are open year round, so whatever your favorite season, you can enjoy it at The Red Door Resort.\n <br>We have 10 motel rooms and 11 cabins. The resort also offers \"The Waypoint Cafe\" a nice addition to the other services we offer.",
+    "Review":"If fishing isn't your preference, you are welcome to stay on shore and enjoy our resort. We put a dock out into the lake with a deck, so you can sit and enjoy the lake and its sights or get into some sunbathing. The sandy lake bottom ensures a great swimming area also. We have shuffleboard, tetherball, horse shoes and a basketball court. There is also a beautiful playground for the younger of our guests. We also have a lodge where we offer groceries, bait & tackle. Pop is still seventy five cents and a coffee a quarter a cup! It's a great place to sit and share stories or play a game of pool. There is a special corner for the kids to play games, read books or watch a movie.",
+    "Contributor":"Bob Carlson The Red Door Resort staff member",
+    "Source":"Resort",
+    "Icon Color":"large_yellow"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.55124,46.93058 ]
+    },
+    "properties": {
+    "Name":"Hyde-A-Way Bay Resort",
+    "Address":"3489 Ford Dr. NW, Hackensack, MN  56452",
+    "Phone":"218-675-6683",
+    "Website":"http://www.hydeawaybay.com/",
+    "Details":"Clean comfortable cabins.  Nice sand beach with water toys.  Great lodge with large game room.  Playground sets, volleyeball, basketball, horseshoes and large green space for kids to run.",
+    "Review":"Friendly and accommodating owners that go out of their way to make your memories possible.",
+    "Contributor":"Mark Novotny",
+    "Source":"Resort",
+    "Icon Color":"large_yellow"
+    }
+  }
+]
+}
