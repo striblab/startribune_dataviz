@@ -1,8 +1,0 @@
-{
-  "title": "<%= answers.title.replace(/"/g, '\\"') %>",
-  "organization": "Star Tribune",
-  "authors": "<%= answers.authorName.replace(/"/g, '\\"') %>",
-  "socialDescription": null,
-  "tweet": "Check out this new project.",
-  "twitterAccount": "@StarTribune"
-}
