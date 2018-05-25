@@ -1,6 +1,6 @@
 # Stripzone
 
-An parcel analysis of Minneapolis zoning rules around strip clubs
+An parcel analysis of Minneapolis zoning rules around strip clubs. Built using [Mapbox](https://github.com/mapbox/mapbox-gl-js).
 
 
 ## Data

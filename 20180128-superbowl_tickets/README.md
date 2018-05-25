@@ -1,6 +1,6 @@
 # Superbowl Tickets
 
-A scrape of available Superbowl 52 tickets from StubHub spanning December 2017 until February 2018
+A scrape of available Superbowl 52 tickets from StubHub spanning December 2017 until February 2018. 
 
 
 ## Data

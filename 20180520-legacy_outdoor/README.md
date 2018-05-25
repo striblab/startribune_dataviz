@@ -1,6 +1,6 @@
 # Legacy
 
-An analysis of Minnesota legacy art grant funding over time
+An analysis of Minnesota Legacy outdoors funding over time. Built using [Mapbox](https://github.com/mapbox/mapbox-gl-js).
 
 
 ## Data
