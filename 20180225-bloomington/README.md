@@ -1,6 +1,6 @@
 # 20180225 Bloomington
 
-The City of Bloomington&#39;s plan to split into neighborhoods.
+The City of Bloomington&#39;s plan to split into neighborhoods. Built using [Mapbox](https://github.com/mapbox/mapbox-gl-js) and [jQuery](https://github.com/jquery/jquery).
 
 
 ## Data

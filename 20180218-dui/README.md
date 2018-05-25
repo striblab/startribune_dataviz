@@ -1,6 +1,6 @@
 # 20180218 Dui
 
-Analysis of drunk driving citations in the metro area suburbs.
+Analysis of drunk driving citations in the metro area suburbs. Built using [Mapbox](https://github.com/mapbox/mapbox-gl-js), [C3](https://github.com/masayuki0812/c3) and [jQuery](https://github.com/jquery/jquery).
 
 
 ## Data

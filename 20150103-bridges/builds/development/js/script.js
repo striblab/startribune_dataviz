@@ -211,28 +211,28 @@ d3.json("shapefiles/roads.json", function(error, mn) {
 
 $(document).ready(function() {
 
-           var eventsTable = $('#table_view').DataTable( {
-                responsive: {
-        details: {
-            type: 'row'
-        }
-    },
-                "bServerSide":false,
-                "bProcessing":true,
-                "sAjaxDataProp": "feed.entry",
-                "order": [[ 3, "desc" ]],
-                "oLanguage": {"sSearch": ""},
-                "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI/od6/public/values?&alt=json",
-                "aoColumns": [                 
-                    { "mDataProp": "gsx$county.$t" },
-                    { "mDataProp": "gsx$facility.$t" },
-                    { "mDataProp": "gsx$intersection.$t" },
-                    { "mDataProp": "gsx$year.$t" },
-                    { "mDataProp": "gsx$rating.$t" },
-                    { "mDataProp": "gsx$status.$t" },
-                    { "mDataProp": "gsx$inspected.$t" },
-                            ]
-            } );
+    //        var eventsTable = $('#table_view').DataTable( {
+    //             responsive: {
+    //     details: {
+    //         type: 'row'
+    //     }
+    // },
+    //             "bServerSide":false,
+    //             "bProcessing":true,
+    //             "sAjaxDataProp": "feed.entry",
+    //             "order": [[ 3, "desc" ]],
+    //             "oLanguage": {"sSearch": ""},
+    //             "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI/od6/public/values?&alt=json",
+    //             "aoColumns": [                 
+    //                 { "mDataProp": "gsx$county.$t" },
+    //                 { "mDataProp": "gsx$facility.$t" },
+    //                 { "mDataProp": "gsx$intersection.$t" },
+    //                 { "mDataProp": "gsx$year.$t" },
+    //                 { "mDataProp": "gsx$rating.$t" },
+    //                 { "mDataProp": "gsx$status.$t" },
+    //                 { "mDataProp": "gsx$inspected.$t" },
+    //                         ]
+    //         } );
 
 // $('.dataTables_filter input').attr("placeholder", "Enter an employee's name or county and click their last name for further information");
 
@@ -248,7 +248,7 @@ $(document).ready(function() {
       .attr("title", function(d, i){return d.properties.COUNTYNAME;})  
       .attr("id", "polys")    
       .on("click", clicked)
-      .on("mousedown", function(d, i){console.log("derp");eventsTable.fnFilter(d.properties.COUNTYNAME + ' ');})   
+      // .on("mousedown", function(d, i){console.log("derp");eventsTable.fnFilter(d.properties.COUNTYNAME + ' ');})   
       .style("stroke-width", "2px")
       .style("stroke", "#fff")
       .style("fill", function(d, i){

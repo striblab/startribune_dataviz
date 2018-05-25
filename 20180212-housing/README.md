@@ -1,6 +1,6 @@
 # Star Tribune - Hot housing in the Twin Cities
 
-Created by [Frey Hargarten](https://github.com/jeffhargarten).
+Created by [Frey Hargarten](https://github.com/jeffhargarten). Built using [Mapbox](https://github.com/mapbox/mapbox-gl-js), [C3](https://github.com/masayuki0812/c3) and [jQuery](https://github.com/jquery/jquery).
 
 ## Data
 
