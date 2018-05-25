@@ -1,6 +1,6 @@
 # Legacy
 
-An analysis of Minnesota legacy art grant funding over time
+An analysis of Minnesota Legacy art grant funding over time.
 
 
 ## Data

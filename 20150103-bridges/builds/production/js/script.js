@@ -1,1 +1,412 @@
-!function t(e,r,a){function o(n,i){if(!r[n]){if(!e[n]){var l="function"==typeof require&&require;if(!i&&l)return l(n,!0);if(s)return s(n,!0);throw new Error("Cannot find module '"+n+"'")}var p=r[n]={exports:{}};e[n][0].call(p.exports,function(t){var r=e[n][1][t];return o(r||t)},p,p.exports,t,e,r,a)}return r[n].exports}for(var s="function"==typeof require&&require,n=0;n<a.length;n++)o(a[n]);return o}({1:[function(t,e,r){d3.json("./data/highway_bridges.json",function(t,e){d3.json("shapefiles/counties.json",function(t,r){var a=e,o=a.highway_bridges,s=$("#counties svg");$(window).on("resize",function(){var t=s.parent().width();s.attr("width",t),s.attr("height",t/1.05)}),$(document).ready(function(){var t,e="#edf8e9",a="#c7e9c0",n="#a1d99b",i="#74c476",l=630,p=600,d=d3.geo.albersUsa().scale(5070).translate([100,970]),c=d3.geo.path().projection(d),u=d3.select("#counties svg").attr("width",l).attr("height",p),f=(d3.select("#roads").append("svg").attr("width",l).attr("height",p),d3.geo.albersUsa().scale(5070).translate([100,970])),h=d3.geo.path().projection(f),N=u.append("g"),m=u.append("g"),y=u.append("g");y.append("g").attr("id","markers").selectAll("circle").data(o).enter().append("circle").attr("class","mark").style("fill","#333").attr("r",function(t){return 2.8==Number(t.rating)?10:1/(Number(t.rating)/100)}).attr("transform",function(t){return"translate("+d([t.long,t.lat])+")"}),d3.helper={},d3.helper.tooltip=function(t){return function(e){var r,a=d3.select("body").node();e.on("mouseover",function(e,o){d3.select("body").selectAll("div.tooltip").remove(),r=d3.select("body").append("div").attr("class","tooltip");var s=d3.mouse(a);r.style("left",s[0]+10+"px").style("top",s[1]-15+"px").style("position","absolute").style("z-index",1001);t(e,o)}).on("mousemove",function(e,o){var s=d3.mouse(a);r.style("left",s[0]+10+"px").style("top",s[1]-15+"px");var n=t(e,o)||"";r.html(n)}).on("mouseout",function(t,e){r.remove()})}},d3.helper.tooltip2=function(t){return function(e){var r,a=d3.select("body").node();e.on("mouseover",function(e,o){d3.select("body").selectAll("div.tooltip2").remove(),r=d3.select("body").append("div").attr("class","tooltip2");d3.mouse(a);r.style("left","500px").style("top","250px").style("position","absolute").style("z-index",1001);t(e,o)}).on("mousemove",function(e,o){d3.mouse(a);r.style("left","500px").style("top","250px");var s=t(e,o)||"";r.html(s)}).on("mouseout",function(t,e){})}},d3.json("shapefiles/roads.json",function(t,e){m.append("g").attr("id","roads").selectAll("path").data(e.features).enter().append("path").attr("d",h).style("fill","#50d922").style("fill-opacity",".04").style("stroke-opacity",".04").style("stroke-width",".5px").style("stroke","#333"),m.append("path").datum(topojson.mesh(e,e.features,function(t,e){return t!==e})).attr("id","roadways").attr("d",h)}),$(document).ready(function(){function o(e){var r,a,o;if(e&&t!==e){var s=c.centroid(e);r=s[0],a=s[1],o=4,t=e}else r=l/2,a=p/2,o=1,t=null;N.selectAll("path").classed("faded",!0).classed("active",t&&function(e){return e===t}),N.transition().duration(750).attr("transform","translate("+l/2+","+p/2+")scale("+o+")translate("+-r+","+-a+")").style("stroke-width",1.5/o+"px"),y.selectAll("circle").classed("faded",!1).classed("active",t&&function(e){return e===t}),y.transition().duration(750).attr("transform","translate("+l/2+","+p/2+")scale("+o+")translate("+-r+","+-a+")").style("stroke-width",1.5/o+"px"),m.selectAll("path").classed("faded",!0).classed("active",t&&function(e){return e===t}),m.transition().duration(750).attr("transform","translate("+l/2+","+p/2+")scale("+o+")translate("+-r+","+-a+")").style("stroke-width",1.5/o+"px")}function s(e){var r,a,o;if(e&&t!==e){var s=c.centroid(e);r=s[0],a=s[1],o=4,t=e}else r=l/2,a=p/2,o=1,t=null;N.selectAll("path").classed("faded",!1).classed("active",t&&function(e){return e===t}),N.transition().duration(750).attr("transform","translate("+l/2+","+p/2+")scale("+o+")translate("+-r+","+-a+")").style("stroke-width",1.5/o+"px"),y.selectAll("circle").classed("faded",!1).classed("active",t&&function(e){return e===t}),y.transition().duration(750).attr("transform","translate("+l/2+","+p/2+")scale("+o+")translate("+-r+","+-a+")").style("stroke-width",1.5/o+"px"),m.selectAll("path").classed("faded",!1).classed("active",t&&function(e){return e===t}),m.transition().duration(750).attr("transform","translate("+l/2+","+p/2+")scale("+o+")translate("+-r+","+-a+")").style("stroke-width",1.5/o+"px")}var u=$("#table_view").DataTable({responsive:{details:{type:"row"}},bServerSide:!1,bProcessing:!0,sAjaxDataProp:"feed.entry",order:[[3,"desc"]],oLanguage:{sSearch:""},sAjaxSource:"https://spreadsheets.google.com/feeds/list/1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI/od6/public/values?&alt=json",aoColumns:[{mDataProp:"gsx$county.$t"},{mDataProp:"gsx$facility.$t"},{mDataProp:"gsx$intersection.$t"},{mDataProp:"gsx$year.$t"},{mDataProp:"gsx$rating.$t"},{mDataProp:"gsx$status.$t"},{mDataProp:"gsx$inspected.$t"}]});N.append("g").attr("id","states").selectAll("path").data(r.features).enter().append("path").attr("d",c).attr("title",function(t,e){return t.properties.COUNTYNAME}).attr("id","polys").on("click",o).on("mousedown",function(t,e){console.log("derp"),u.fnFilter(t.properties.COUNTYNAME+" ")}).style("stroke-width","2px").style("stroke","#fff").style("fill",function(t,r){return"Hennepin"==t.properties.COUNTYNAME?i:"Itasca"==t.properties.COUNTYNAME?a:"Carlton"==t.properties.COUNTYNAME?n:"Blue Earth"==t.properties.COUNTYNAME?e:"Ramsey"==t.properties.COUNTYNAME?"#31a354":"Aitkin"==t.properties.COUNTYNAME?e:"Chippewa"==t.properties.COUNTYNAME?a:"Brown"==t.properties.COUNTYNAME?e:"Beltrami"==t.properties.COUNTYNAME?a:"Nicollet"==t.properties.COUNTYNAME?n:"Pine"==t.properties.COUNTYNAME?a:"Kittson"==t.properties.COUNTYNAME?e:"Lake"==t.properties.COUNTYNAME?a:"Mower"==t.properties.COUNTYNAME?a:"Douglas"==t.properties.COUNTYNAME?a:"Redwood"==t.properties.COUNTYNAME?e:"Rock"==t.properties.COUNTYNAME?e:"Polk"==t.properties.COUNTYNAME?a:"Red Lake"==t.properties.COUNTYNAME?e:"Sherburne"==t.properties.COUNTYNAME?e:"St. Louis"==t.properties.COUNTYNAME?i:"Steele"==t.properties.COUNTYNAME?e:"Washington"==t.properties.COUNTYNAME?e:"Wilkin"==t.properties.COUNTYNAME?a:"#ddd"}),N.append("path").datum(topojson.mesh(r,r.features,function(t,e){return t!==e})).attr("id","state-borders").attr("d",c);d3.behavior.zoom().on("zoom",function(){N.attr("transform","translate("+d3.event.translate.join(",")+")scale("+d3.event.scale+")"),N.selectAll("circle").attr("d",c.projection(d)),N.selectAll("path").attr("d",c.projection(d))});$(".zoom").click(function(){s(),oTable.fnFilter("")})});var v=s.parent().width();s.attr("width",v),s.attr("height",v/1.05)})})})},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+d3.json("./data/highway_bridges.json", function(error, json) {
+d3.json("shapefiles/counties.json", function(error, us) {
+
+var data = json;
+
+var csvData = data.highway_bridges;
+
+var aspect = 630 / 600, chart = $("#counties svg");
+$(window).on("resize", function() {   
+  var targetWidth = chart.parent().width();   
+  chart.attr("width", targetWidth);
+  chart.attr("height", targetWidth / aspect);
+});
+
+
+$(document).ready(function(){
+
+var ramsey = 8;
+var hennepin = 6;
+var st_louis = 6;
+var carlton = 3;
+var nicollet = 3;
+var beltrami = 2;
+var chippewa = 2;
+var itasca = 2;
+var douglas = 2;
+var wilkin = 2;
+var pine = 2;
+var polk = 2;
+var lake = 2;
+var mower = 2;
+var redwood = 1;
+var rock = 1;
+var sherburne = 1;
+var kittson = 1;
+var steele = 1;
+var washington = 1;
+var winona = 1;
+var aitkin = 1;
+var blue_earth = 1;
+var brown = 1;
+
+var none = "#ddd";
+var q1 = "#edf8e9";
+var q2 = "#c7e9c0";
+var q3 = "#a1d99b";
+var q4 = "#74c476";
+var q5 = "#31a354";
+var q6 = "#006d2c";
+
+var width = 630,
+    height = 600,
+    centered;
+
+var projection = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var svg = d3.select("#counties svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var svg2 = d3.select("#roads").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+
+var projection2 = d3.geo.albersUsa()
+    .scale(5070)
+    .translate([100, 970]);
+
+var path2 = d3.geo.path()
+    .projection(projection2);
+
+
+// svg.append("rect")
+//     .attr("class", "background")
+//     .attr("width", width)
+//     .attr("height", height)
+//     .on("click", clicked2);
+
+// svg2.append("rect")
+//     .attr("class", "background")
+//     .attr("width", width)
+//     .attr("height", height)
+//     .on("click", clicked2);
+
+var g = svg.append("g");
+var b = svg.append("g");
+var c = svg.append("g");
+
+ c.append("g")
+     .attr("id", "markers")
+    .selectAll("circle")
+      .data(csvData)
+      .enter()
+      .append("circle")
+      .attr("class", "mark")
+      .style("fill", "#333")
+      .attr('r', function(d) {if (Number(d.rating) == 2.8) {return 10;} else {return 1 / (Number(d.rating) / 100);}})
+      //.attr("cx", function (d,i) { console.log(d.long); return projection(d.long); })
+      //.attr("cy", function (d,i) { return projection(d.lat); });
+      .attr("transform", function(d) { 
+        return "translate(" + projection([d.long,d.lat]) + ")"; 
+      });
+      // .call(d3.helper.tooltip(
+      //   function(d, i){
+      //     return  "<div class='county'>" + d.county + " COUNTY</div><hr /><div class='road'>" +  d.facility + " and " + d.intersection + "</div><div class='rating'>Sufficiency Rating</div><div class='rating_num'>" + d.rating + "</div><br /><div class='rating'>Year Built</div><div class='rating_num'>" + d.year + "</div><br /><div class='rating'>Road Carried</div><div class='rating_num'>" + d.facility + "</div>";
+      //   }
+      //   ));
+
+d3.helper = {};
+
+d3.helper.tooltip = function(accessor){
+    return function(selection){
+        var tooltipDiv;
+        var bodyNode = d3.select('body').node();
+        selection.on("mouseover", function(d, i){
+            // Clean up lost tooltips
+            d3.select('body').selectAll('div.tooltip').remove();
+            // Append tooltip
+            tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip');
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px')
+                .style('position', 'absolute') 
+                .style('z-index', 1001);
+            // Add text using the accessor function
+            var tooltipText = accessor(d, i) || '';
+            // Crop text arbitrarily
+            //tooltipDiv.style('width', function(d, i){return (tooltipText.length > 80) ? '300px' : null;})
+            //    .html(tooltipText);
+        })
+        .on('mousemove', function(d, i) {
+            // Move tooltip
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', (absoluteMousePos[0] + 10)+'px')
+                .style('top', (absoluteMousePos[1] - 15)+'px');
+            var tooltipText = accessor(d, i) || '';
+            tooltipDiv.html(tooltipText);
+        })
+        .on("mouseout", function(d, i){
+            // Remove tooltip
+            tooltipDiv.remove();
+        });
+
+    };
+};
+
+d3.helper.tooltip2 = function(accessor){
+    return function(selection){
+        var tooltipDiv;
+        var bodyNode = d3.select('body').node();
+        selection.on("mouseover", function(d, i){
+            // Clean up lost tooltips
+            d3.select('body').selectAll('div.tooltip2').remove();
+            // Append tooltip
+            tooltipDiv = d3.select('body').append('div').attr('class', 'tooltip2');
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', '500px')
+                .style('top', '250px')
+                .style('position', 'absolute') 
+                .style('z-index', 1001);
+            // Add text using the accessor function
+            var tooltipText = accessor(d, i) || '';
+            // Crop text arbitrarily
+            //tooltipDiv.style('width', function(d, i){return (tooltipText.length > 80) ? '300px' : null;})
+            //    .html(tooltipText);
+        })
+        .on('mousemove', function(d, i) {
+            // Move tooltip
+            var absoluteMousePos = d3.mouse(bodyNode);
+            tooltipDiv.style('left', '500px')
+                .style('top', '250px');
+            var tooltipText = accessor(d, i) || '';
+            tooltipDiv.html(tooltipText);
+        })
+        .on("mouseout", function(d, i){
+            // Remove tooltip
+            //tooltipDiv.remove();
+        });
+
+    };
+};
+
+
+
+d3.json("shapefiles/roads.json", function(error, mn) {
+  b.append("g")
+      .attr("id", "roads")
+    .selectAll("path")
+      .data(mn.features)
+    .enter().append("path")
+      .attr("d", path2)
+      .style("fill", "#50d922")
+      .style("fill-opacity", ".04")
+      .style("stroke-opacity", ".04")
+      .style("stroke-width", ".5px")
+      .style("stroke", "#333");
+
+
+  b.append("path")
+      .datum(topojson.mesh(mn, mn.features, function(a, b) { return a !== b; }))
+      .attr("id", "roadways")
+      .attr("d", path2);
+});
+
+$(document).ready(function() {
+
+    //        var eventsTable = $('#table_view').DataTable( {
+    //             responsive: {
+    //     details: {
+    //         type: 'row'
+    //     }
+    // },
+    //             "bServerSide":false,
+    //             "bProcessing":true,
+    //             "sAjaxDataProp": "feed.entry",
+    //             "order": [[ 3, "desc" ]],
+    //             "oLanguage": {"sSearch": ""},
+    //             "sAjaxSource": "https://spreadsheets.google.com/feeds/list/1Fplv-r-SL1F1L8RrjEp5F1pq00NWKjBq9ZZi4tRQ6WI/od6/public/values?&alt=json",
+    //             "aoColumns": [                 
+    //                 { "mDataProp": "gsx$county.$t" },
+    //                 { "mDataProp": "gsx$facility.$t" },
+    //                 { "mDataProp": "gsx$intersection.$t" },
+    //                 { "mDataProp": "gsx$year.$t" },
+    //                 { "mDataProp": "gsx$rating.$t" },
+    //                 { "mDataProp": "gsx$status.$t" },
+    //                 { "mDataProp": "gsx$inspected.$t" },
+    //                         ]
+    //         } );
+
+// $('.dataTables_filter input').attr("placeholder", "Enter an employee's name or county and click their last name for further information");
+
+
+// oTable = $('#table_view').dataTable({'iDisplayLength': 5, "oLanguage": {"sSearch": ""}});
+
+  g.append("g")
+      .attr("id", "states")
+    .selectAll("path")
+      .data(us.features)
+    .enter().append("path")
+      .attr("d", path)    
+      .attr("title", function(d, i){return d.properties.COUNTYNAME;})  
+      .attr("id", "polys")    
+      .on("click", clicked)
+      // .on("mousedown", function(d, i){console.log("derp");eventsTable.fnFilter(d.properties.COUNTYNAME + ' ');})   
+      .style("stroke-width", "2px")
+      .style("stroke", "#fff")
+      .style("fill", function(d, i){
+          if (d.properties.COUNTYNAME == "Hennepin"){ return q4; }
+          if (d.properties.COUNTYNAME == "Itasca"){ return q2; }
+          if (d.properties.COUNTYNAME == "Carlton"){ return  q3; }
+          if (d.properties.COUNTYNAME == "Blue Earth"){ return  q1; }
+          if (d.properties.COUNTYNAME == "Ramsey"){ return q5; }
+          if (d.properties.COUNTYNAME == "Aitkin"){ return  q1; }
+          if (d.properties.COUNTYNAME == "Chippewa"){ return  q2; }
+          if (d.properties.COUNTYNAME == "Brown"){ return  q1; }
+          if (d.properties.COUNTYNAME == "Beltrami"){ return q2; }
+          if (d.properties.COUNTYNAME == "Nicollet"){ return  q3; }
+          if (d.properties.COUNTYNAME == "Pine"){ return q2; }
+          if (d.properties.COUNTYNAME == "Kittson"){ return q1; }
+          if (d.properties.COUNTYNAME == "Lake"){ return q2; }
+          if (d.properties.COUNTYNAME == "Mower"){ return q2; }
+          if (d.properties.COUNTYNAME == "Douglas"){ return q2; }
+          if (d.properties.COUNTYNAME == "Redwood"){ return q1; }
+          if (d.properties.COUNTYNAME == "Rock"){ return q1; }
+          if (d.properties.COUNTYNAME == "Polk"){ return q2; }
+          if (d.properties.COUNTYNAME == "Red Lake"){ return q1; }
+          if (d.properties.COUNTYNAME == "Sherburne"){ return q1; }
+          if (d.properties.COUNTYNAME == "St. Louis"){ return q4; }
+          if (d.properties.COUNTYNAME == "Steele"){ return q1; }
+          if (d.properties.COUNTYNAME == "Washington"){ return q1; }
+          if (d.properties.COUNTYNAME == "Wilkin"){ return q2; }
+          else { return none; }
+        });
+
+
+
+  g.append("path")
+      .datum(topojson.mesh(us, us.features, function(a, b) { return a !== b; }))
+      .attr("id", "state-borders")
+      .attr("d", path);
+
+
+
+
+// zoom and pan
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+
+  });
+
+//svg.call(zoom);
+
+$(".zoom").click(function() {
+  clicked2();
+  oTable.fnFilter('');
+  //zoom.translate([0,0]).scale(1);
+});
+
+function clicked(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+  c.selectAll("circle")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  c.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+  b.selectAll("path")
+      .classed("faded", true)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  b.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+
+function clicked2(d) {
+  var x, y, k;
+
+  if (d && centered !== d) {
+    var centroid = path.centroid(d);
+    x = centroid[0];
+    y = centroid[1];
+    k = 4;
+    centered = d;
+  } else {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+  }
+
+  g.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  g.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+  c.selectAll("circle")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  c.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+
+  b.selectAll("path")
+      .classed("faded", false)
+      .classed("active", centered && function(d) { return d === centered; });
+
+  b.transition()
+      .duration(750)
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+      .style("stroke-width", 1.5 / k + "px");
+}
+});
+
+
+
+  var targetWidth = chart.parent().width();   
+  chart.attr("width", targetWidth);
+  chart.attr("height", targetWidth / aspect);
+        } );
+
+
+
+});
+});
+},{}]},{},[1])

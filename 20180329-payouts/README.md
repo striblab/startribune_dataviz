@@ -1,6 +1,6 @@
 # Police Payouts
 
-A database of payments made by Minnesota police departments.
+A database of payments made by Minnesota police departments. Built using Mike Bostock's [D3](https://github.com/d3/d3), [C3](https://github.com/masayuki0812/c3) and [jQuery](https://github.com/jquery/jquery).
 
 
 ## Data
