@@ -6,12 +6,12 @@ $.urlParam = function(name){
 }
 
 var selected = $.urlParam('chart');
+var selected2 = $.urlParam('size');
 
 if (selected != null){
 $(".slide").hide();
 $("#" + selected).show();
 }
-
 
 d3.json('./shapefiles/2001_mpls_dedicated.json', function(error, mpls2001a) {
 d3.json('./shapefiles/2001_mpls_offstreet.json', function(error, mpls2001b) {
@@ -25,6 +25,19 @@ d3.json('./shapefiles/2017_mpls_shared.json', function(error, mpls2017c) {
 d3.json('./shapefiles/stp_bike_lanes.json', function(error, stp) {
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
+
+if (selected == "mpls" && selected2 == "full"){
+$(".slide").hide();
+$("#mpls").show();
+$( "#wrapper" ).css("width","100%");
+$( "#mapMPLS" ).addClass("full");
+} else if (selected == "stp" && selected2 == "full"){
+$(".slide").hide();
+$("#stp").show();
+$( "#wrapper" ).css("width","100%");
+$( "#mapSTP" ).addClass("full");
+}
+
 
 //MPLS MAP
 var map = new mapboxgl.Map({
@@ -200,9 +213,11 @@ map.on('load', function() {
    }, 'place-neighbourhood');
 
 
-
+if (selected == "mpls" && selected2 == "full"){
+map.setZoom(11);
+}
 // $(".mapboxgl-ctrl-fullscreen").on("click",function(){
-//   $( ".map" ).toggleClass("full");
+//   $( "#mapMPLS" ).toggleClass("full");
 // });
 
 });
@@ -248,6 +263,19 @@ $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by city or address
            'line-width': 2
             }
    }, 'place-neighbourhood');
+
+      // $(".mapboxgl-ctrl-fullscreen").on("click", function(){
+
+      //   $("#mapSTP").toggleClass("full");
+      // });
+
+if (selected == "stp" && selected2 == "full"){
+$(".slide").hide();
+$("#stp").show();
+$( "#wrapper" ).css("width","100%");
+$( "#mapSTP" ).addClass("full");
+map2.setZoom(11);
+}
 
 });
 
@@ -310,6 +338,8 @@ $(".mapboxgl-ctrl-geocoder input").attr("placeholder","Search by city or address
 }
 
 chartChange();
+
+
 
 });
 });
