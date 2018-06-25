@@ -745,6 +745,10 @@ h1.mobile-hedline {
     #chartMobile { 
       display:block;
     }
+
+    #filterBox {
+    height: 300px;
+    }
     
     h1.mobile-hedline {
         display: block;
@@ -1163,7 +1167,7 @@ h1.mobile-hedline {
     }
     
     .mobileNumbers {
-        display: block;
+        display: none;
         width: 100%;
         height: auto;
         margin: 0 auto 12px auto;
