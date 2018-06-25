@@ -2391,6 +2391,10 @@ h1.mobile-hedline {
     #chartMobile { 
       display:block;
     }
+
+    #filterBox {
+    height: 300px;
+    }
     
     h1.mobile-hedline {
         display: block;
