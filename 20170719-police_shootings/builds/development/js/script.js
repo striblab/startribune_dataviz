@@ -70,7 +70,33 @@ $(".featherlight-content .card").attr("data-featherlight","");
     window.open($(this).find("a").attr("href"), '_new');
     return false;
   });
+
+
+var incidents = [];
+var index = 1;
+incidents[0] = "Incident";
+incidents[1] = 0;
+incidents[2] = 0;
+incidents[3] = 0;
+incidents[4] = 0;
+incidents[5] = 0;
+incidents[6] = 0;
+incidents[7] = 0;
+incidents[8] = 0;
+incidents[9] = 0;
+incidents[10] = 0;
+incidents[11] = 0;
+incidents[12] = 0;
+incidents[13] = 0;
+incidents[14] = 0;
+incidents[15] = 0;
+incidents[16] = 0;
+incidents[17] = 0;
+incidents[18] = 0;
+incidents[19] = 0;
+
 function spitDots(year){
+
 d3.select("#y" + year).selectAll(".dot")
 .data(dataShootings.filter(function(d){ return d.year == year; }).sort(function(a, b) { return d3.ascending(a.Mental, b.Mental); })).enter().append("div")
 .attr("class", "dot")
@@ -101,13 +127,101 @@ d3.select("#y" + year).selectAll(".dot")
         var count = $('.card:visible').length;
         $('.results').html(count);
   })
-.html(function (d){ return "";})
+.html(function (d){ 
+
+  if (d.year == 2000) { incidents[1]++; }
+  if (d.year == 2001) { incidents[2]++; }
+  if (d.year == 2002) { incidents[3]++; }
+  if (d.year == 2003) { incidents[4]++; }
+  if (d.year == 2004) { incidents[5]++; }
+  if (d.year == 2005) { incidents[6]++; }
+  if (d.year == 2006) { incidents[7]++; }
+  if (d.year == 2007) { incidents[8]++; }
+  if (d.year == 2008) { incidents[9]++; }
+  if (d.year == 2009) { incidents[10]++; }
+  if (d.year == 2010) { incidents[11]++; }
+  if (d.year == 2011) { incidents[12]++; }
+  if (d.year == 2012) { incidents[13]++; }
+  if (d.year == 2013) { incidents[14]++; }
+  if (d.year == 2014) { incidents[15]++; }
+  if (d.year == 2015) { incidents[16]++; }
+  if (d.year == 2016) { incidents[17]++; }
+  if (d.year == 2017) { incidents[18]++; }
+  if (d.year == 2018) { incidents[19]++; }
+
+  return "";
+
+})
 .call(d3.helper.tooltip(function(d, i){
   var mentalStatus = "";
   if (d.Mental == "Yes") { mentalStatus = "<div class='mentallabel' style='color:#999;font-weight:900;font-size:.8em;'>MENTAL HEALTH ISSUES</div>"; }
     return "<div class='name'>" + d.FirstName + " " + d.LastName + "</div>" + mentalStatus;
 }));
+
 }
+
+  function chartMobile() {
+
+    console.log(incidents);
+
+         var  padding = {
+                top: 20,
+                right: 40,
+                bottom: 20,
+                left: 40,
+            };
+
+        var chartCounts = c3.generate({
+              bindto: "#chartMobile",
+              padding: padding,
+              data: {
+                    x: 'x',
+                    columns: [
+                        ['x',2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                        ["Incident",7,9,8,7,9,5,6,7,8,11,12,8,11,11,9,13,13,10,3]
+                    ],
+                type: 'bar',
+                labels: {
+                    format: {
+                        'Incident': d3.format(',.0f'),
+                    }
+                }
+            },
+                tooltip: {
+                    show: false
+                },
+                legend: {
+                  show: false
+                },
+                    color: {
+                      pattern: ['#b75b60']
+                    },
+                axis: {
+                      rotated: true,
+                      y: {
+                            max: 30,
+                            min: 0,
+                            padding: {bottom: 0, top: 0},
+                            tick: {
+                             count: 4,
+                             values: [0,10,20,30],
+                             format: d3.format(',.0f')
+                            }
+                        },
+                    x: {
+                            tick: {
+                             count: 19,
+                             values: [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+                             format: d3.format('.0f')
+                            }
+                    }
+                }
+        });
+
+  }
+
+  chartMobile();
+
 $(".zoom").click(function() {
   $('.card').show();
   var count = $('.card:visible').length;
