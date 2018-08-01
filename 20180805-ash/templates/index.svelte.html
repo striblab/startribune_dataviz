@@ -1,0 +1,44 @@
+<HeadContents {...props} />
+
+
+<div class="project-page-container">
+  
+
+  <!-- Main content here -->
+  <div class="main-app-container">
+    <IndexContent {...props} />
+  </div>
+
+  
+
+  <!-- JS parts -->
+  {#if config && config.js && config.js.globals}
+    {#each config.js.globals as js}
+      <script src="{ js }"></script>
+    {/each}
+  {/if}
+
+  <script src="./app.bundle.js"></script>
+</div>
+
+<script>
+// <head> contents
+import HeadContents from './_head.svelte.html';
+
+// Main content.
+import IndexContent from './_index-content.svelte.html';
+
+
+export default {
+  components: {
+    HeadContents,
+    
+    IndexContent
+  },
+
+  computed: {
+    // Get all properties.  Easy to pass to sub components
+    props: state => state
+  }
+};
+</script>

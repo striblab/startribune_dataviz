@@ -1,0 +1,52 @@
+
+
+
+<!-- Screen reader announcements -->
+<div aria-live="polite" id="announcer" class="sr-only"></div>
+
+<!-- Skip to main content -->
+<a href="#main-content" class="to-main-content">Skip to main content</a>
+
+<!-- Header -->
+<header class="project-header" role="banner">
+  <div class="container-lg">
+    <h1>{ content.title }</h1>
+  </div>
+</header>
+
+<!-- Main content here -->
+<main id="main-content" class="content" role="main">
+  <div class="container-lg" id="wrapper">
+  		<div id="trend" class="slide">
+    		<div class="chartTitle">Removals outpace plantings</div>
+    		<div class="chatter">Shows the removal of <span class="legendary red3">ash trees</span> and <span class="legendary purple3">other trees</span> compared to the <span class="legendary blue3">planting of new trees</span> in St. Paul from 2010 to 2017.</div>
+    		<div class="chart" id="chartTrend"></div>
+    		<div class="byline">Source: City of St. Paul | Graphic by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten, Star Tribune</a> | <a href="./data/maindata.xlsx" target="new_">Download Data</a></div>
+    	</div>
+
+      <div id="remove" class="slide">
+        <div class="chartTitle">Replacing infected ash trees</div>
+        <div class="chatter">Shows the removal of ash trees per half mile in St. Paul from 2010 to 2017. Shaded from <span class="legendary red1">less</span> to <span class="legendary red5">more</span></div>
+
+        <div id="mapRemove" class="map"></div>
+
+        <div class="breaker"></div>
+
+        <div class="chatter">Shows the planting of new trees to replace removed ash trees per half mile in St. Paul from 2010 to 2017. Shaded from <span class="legendary blue1">less</span> to <span class="legendary blue5">more</span></div>
+
+        <div id="mapReplace" class="map"></div>
+
+        <div class="byline">Source: City of St. Paul | Graphic by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten, Star Tribune</a> | <a href="./data/maindata.xlsx" target="new_">Download Data</a></div>
+      </div>
+
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <div class="container-lg">
+    <p>Footer content</p>
+  </div>
+</footer>
+

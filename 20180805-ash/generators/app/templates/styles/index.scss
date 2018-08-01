@@ -1,0 +1,34 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+<% if (package && package.devDependencies['@striblab/strib-icons']) { %>
+// Include strib-icons
+$strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/<%= package.devDependencies["@striblab/strib-icons"].replace(/[^0-9.]/g, '') %>/';
+@import '@striblab/strib-icons/build/strib-icons.scss';
+<% } %>
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+<% if (answers.projectType === 'cms') { %>
+// Assumed that this project lives within an existing page, so we add a
+// wrapper that is very specific and wrap our other styles in it so
+// that we don't affect other styles on the page.  Note that
+// this increases the CSS size, and it means strib-styles won't use
+// rems when it would otherwise.
+$selector-wrapper: '<%= answers.stribStylesWrapper %>';
+@import '@striblab/strib-styles/source/styles/default-wrapper.scss';
+
+// Project specific styles.  Split styles into files per component
+#{$selector-wrapper} {
+  // Split your styles into multiple files so its easier to understand and change
+  @import 'project';
+}
+<% } else { %>
+@import '@striblab/strib-styles/source/styles/default.scss';
+
+// Split your styles into multiple files so its easier to understand and change
+@import 'project';
+<% } %>

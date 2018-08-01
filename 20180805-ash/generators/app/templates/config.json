@@ -1,0 +1,57 @@
+{
+  "about this file": "This document defines configuration for this project that is not content or copy.",
+
+  "projectIdentifier": "<%= package.name %>",
+
+  "data": {
+    "content": "./content.json",
+    "pkg": "./package.json"
+  },
+<% if (answers.projectType === 'cms' ) { %>
+  "cms": {
+    "id": "<%= answers.cmsIDs ? answers.cmsIDs[0] : 'NEEDS-CMS-ID-IN-CONFIG.JSON' %>",
+    "pages": <%- answers.cmsIDs ? JSON.stringify(answers.cmsIDs) : '["other", "cms-ids"]' %>,
+    "lcds": <%- answers.lcdIDs ? JSON.stringify(answers.lcdIDs) : '["lcd-id-for-first", "lcd-id-for-second"]' %>,
+    "rewriteMapping": {
+      "article-lcd-body-content": "_index-content.html"
+    }
+  },
+<% } %>
+<% if (answers.projectType === 'standalone' ) { %>
+  "social": {
+    "image": "assets/images/strib/strib-logo-name-social-card.png"
+  },
+<% } %>
+  "styles": {
+    "globals": [
+    ]
+  },
+  "js": {
+    "globals": [
+      "https://cdn.polyfill.io/v2/polyfill.min.js",
+      "https://static.startribune.com/assets/libs/pym.js/1.3.2/pym.v1.min.js",
+      "https://static.startribune.com/assets/libs/lodash/4.17.4/lodash.min.js"
+    ]
+  },
+  "publishToken": "<%= token %>",
+  "publish": {
+    "default": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects-staging/all/<%= package.name %>",
+      "url": "http://static.startribune.com/news/projects-staging/all/<%= package.name %>/",
+      "cacheSeconds": 30
+    },
+    "testing": {
+      "bucket": "stribtest-bucket",
+      "path": "news/projects/<%= package.name %>",
+      "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/<%= package.name %>/",
+      "cacheSeconds": 30
+    },
+    "production": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects/all/<%= package.name %>",
+      "url": "http://static.startribune.com/news/projects/all/<%= package.name %>/",
+      "cacheSeconds": 600
+    }
+  }
+}
