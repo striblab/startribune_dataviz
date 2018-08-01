@@ -1,0 +1,61 @@
+<HeadContents {...props} />
+<% if (answers.projectType === 'cms') { %><CMSAssets {...props} /><% } %>
+
+<div class="project-page-container">
+  <% if (answers.projectType === 'cms') { %><!-- CMS header -->
+  <div class="<%= answers.stribStylesWrapper.replace(/\./g, ' ').trim() %>">
+    <CMSNav {...props} />
+  </div><% } %>
+
+  <!-- Main content here -->
+  <div class="main-app-container">
+    <IndexContent {...props} />
+  </div>
+
+  <% if (answers.projectType === 'cms') { %><!-- CMS footer -->
+  <div class="<%= answers.stribStylesWrapper.replace(/\./g, ' ').trim() %>">
+    <CMSFooter {...props} />
+  </div><% } %>
+
+  <!-- JS parts -->
+  {#if config && config.js && config.js.globals}
+    {#each config.js.globals as js}
+      <script src="{ js }"></script>
+    {/each}
+  {/if}
+
+  <script src="./app.bundle.js"></script>
+</div>
+
+<script>
+// <head> contents
+import HeadContents from './_head.svelte.html';
+<% if (answers.projectType === 'cms') { %>
+// The CMS assets to help simulate the CMS better
+import CMSAssets from './_cms-assets.svelte.html';
+// The CMS footer via the Strib Styles
+import CMSFooter from './_cms-footer.svelte.html';
+// The CMS header nav via the Strib Styles
+import CMSNav from './_cms-nav.svelte.html';
+// Main content.  This is the content that will be copied into the CMS.
+import IndexContent from './_index-content.svelte.html';
+<% } else { %>
+// Main content.
+import IndexContent from './_index-content.svelte.html';
+<% } %>
+
+export default {
+  components: {
+    HeadContents,
+    <% if (answers.projectType === 'cms') { %>CMSAssets,
+    CMSFooter,
+    CMSNav,<% } %>
+    IndexContent
+  },
+
+  computed: {
+    // Get all properties.  Easy to pass to sub components
+    props: state => state
+  }
+};
+</script>

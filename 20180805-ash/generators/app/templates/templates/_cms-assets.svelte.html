@@ -1,0 +1,41 @@
+<svelte:head>
+  <!-- Setings from site -->
+<script>
+  var twigJsDomain = '{ (argv.mobile) ? "m" : "www" }.startribune.com';
+  var assetDomain = "assets.startribune.com";
+  if (assetDomain != "" && typeof assetDomain == "string") {
+    twigJsDomain = assetDomain;
+  }
+  twigJsDomain = location.protocol + "//" + twigJsDomain;
+</script>
+
+  <!-- Mockup to help catch error -->
+  <script>
+    window.Bugsnag = { use: function() { }};
+    window.FeatureAPI_JS_TipsNavigation = false
+  </script>
+
+  <!-- Shared styles -->
+  <link href="http://www.startribune.com/vendor/css/startribune.css?d=<%= +(new Date()) %>" rel="stylesheet" type="text/css">
+
+  {#if argv.mobile }
+    <!-- Mobile assets -->
+    <link href="http://m.startribune.com/assets/css/main.css?d={ +(new Date()) }" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js?d={ +(new Date()) }"></script>
+    <script src="http://m.startribune.com/assets/js/libs/modernizr.js?d={ +(new Date()) }"></script>
+    <script src="http://m.startribune.com/assets/min/main.min.js?d={ +(new Date()) }"></script>
+  {:else}
+    <!-- Desktop assets -->
+    <link href="http://assets.startribune.com/static/css/screen.css?d={ +(new Date()) }" rel="stylesheet" type="text/css">
+
+    <script src="http://assets.startribune.com/static/vendor/jquery/dist/jquery.min.js?d={ +(new Date()) }"></script>
+    <script src="http://assets.startribune.com/static/min/header.min.js?d={ +(new Date()) }"></script>
+    <script src="http://assets.startribune.com/static/min/footer.min.js?d={ +(new Date()) }"></script>
+  {/if}
+
+  <!-- Shared scripts -->
+  <script src="http://www.startribune.com/vendor/js/shims.js?d={ +(new Date()) }"></script>
+  <!-- <script src="http://www.startribune.com/vendor/js/bugsnag.js?d=<%= +(new Date()) %>"></script> -->
+  <script src="http://www.startribune.com/vendor/js/startribune.js?d={ +(new Date()) }"></script>
+</svelte:head>

@@ -1,0 +1,53 @@
+{
+  "about this file": "This document defines configuration for this project that is not content or copy.",
+
+  "projectIdentifier": "20180805-ash",
+
+  "data": {
+    "content": "./content.json",
+    "pkg": "./package.json"
+  },
+
+
+  "social": {
+    "image": "assets/images/strib/strib-logo-name-social-card.png"
+  },
+
+  "styles": {
+    "globals": [
+    ]
+  },
+  "js": {
+    "globals": [
+      "https://cdn.polyfill.io/v2/polyfill.min.js",
+      "https://static.startribune.com/assets/libs/pym.js/1.3.2/pym.v1.min.js",
+      "https://static.startribune.com/assets/libs/lodash/4.17.4/lodash.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js",
+      "js/d3.v3.min.js",
+      "js/c3.min.js",
+      "https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js",
+      "js/turf.min.js"
+    ]
+  },
+  "publishToken": "06b8b860b0f3ae9d8fcbffbdb7da1f73",
+  "publish": {
+    "default": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects-staging/all/20180805-eab",
+      "url": "http://static.startribune.com/news/projects-staging/all/20180805-ash/",
+      "cacheSeconds": 30
+    },
+    "testing": {
+      "bucket": "stribtest-bucket",
+      "path": "news/projects/20180805-eab",
+      "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/20180805-ash/",
+      "cacheSeconds": 30
+    },
+    "production": {
+      "bucket": "static.startribune.com",
+      "path": "news/projects/all/20180805-eab",
+      "url": "http://static.startribune.com/news/projects/all/20180805-ash/",
+      "cacheSeconds": 600
+    }
+  }
+}
