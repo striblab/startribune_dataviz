@@ -33,6 +33,24 @@ utilsFn({});
 //   }
 // });
 
+$.urlParam = function(name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results != null) {
+        return results[1] || 0;
+    } else {
+        return null;
+    }
+}
+
+var selected = $.urlParam('chart');
+
+if (selected != null) {
+    $(".slide").hide();
+    $("#" + selected).show();
+}
+if (selected == "all") {
+    $(".slide").show();
+}
 
 //CHARTS
 function chartTrend() {
