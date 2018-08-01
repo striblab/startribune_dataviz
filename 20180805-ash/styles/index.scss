@@ -1,0 +1,20 @@
+/**
+ * Main style file for project.
+ * Uses SASS, specifically the SCSS syntax
+ * http://sass-lang.com/
+ */
+
+
+// Include strib-icons
+$strib-fonts-location: '//static.startribune.com/assets/libs/strib-icons/0.0.10/';
+@import '@striblab/strib-icons/build/strib-icons.scss';
+
+
+// Strib styles
+// https://github.com/striblab/strib-styles/blob/master/source/styles/_variables.scss
+
+@import '@striblab/strib-styles/source/styles/default.scss';
+
+// Split your styles into multiple files so its easier to understand and change
+@import 'project';
+
