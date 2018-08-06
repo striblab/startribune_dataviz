@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>planted-fix-6</name>
+		<description> | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>Greenwood</value>
+							</Data>
+												<Data name='dir'>
+								<value>W</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>152 St Paul St</address>
+				<Point>
+					<coordinates>-79.2446296,43.1574805,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>GARFIELD</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>313 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.2685878,43.1431801,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>PARK</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>90 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.2450658,43.1567816,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>PARK</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>90 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.2450658,43.1567816,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>EDGEWATER</value>
+							</Data>
+												<Data name='dir'>
+								<value>E</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2160 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>5TH</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>342 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.2415974,43.1599619,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>MRB</value>
+							</Data>
+												<Data name='dir'>
+								<value>N</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>36 St Paul BLVD</address>
+				<Point>
+					<coordinates>-79.2431597,43.1585988,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>ST ANTHONY</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>629 St Paul BLVD</address>
+				<Point>
+					<coordinates>-79.240176,43.1618061,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>MCKNIGHT</value>
+							</Data>
+												<Data name='dir'>
+								<value>E</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2256 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>HAZEL</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>1897 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>Cleveland</value>
+							</Data>
+												<Data name='dir'>
+								<value>N</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2076 St Paul Ave</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>Cleveland</value>
+							</Data>
+												<Data name='dir'>
+								<value>N</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2076 St Paul Ave</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>CLEVELAND</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2063 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>CLEVELAND</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2063 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>Cleveland</value>
+							</Data>
+												<Data name='dir'>
+								<value>N</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2059 St Paul Ave</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>Cleveland </value>
+							</Data>
+												<Data name='dir'>
+								<value>N</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2057 St Paul Ave</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>Prior</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2021 St Paul Ave</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>CLEVELAND</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2004 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>CLEVELAND</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2004 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>CLEVELAND</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>2004 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3116289,43.1390829,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+												<Data name='street'>
+								<value>PRIOR</value>
+							</Data>
+												<Data name='state'>
+								<value> MN</value>
+							</Data>
+									</ExtendedData>
+								<address>1983 St Paul AVE</address>
+				<Point>
+					<coordinates>-79.3107677,43.139091,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
+</kml>

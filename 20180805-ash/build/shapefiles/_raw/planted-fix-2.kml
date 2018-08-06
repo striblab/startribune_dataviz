@@ -1,0 +1,2257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>planted-fix-2</name>
+		<description> | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>295 MATILDA AVE W St Paul MN</address>
+				<Point>
+					<coordinates>-93.112264,44.9853462,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2256 MCKNIGHT AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0049808,45.0080289,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1244 MERRILL AVE W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1526998,44.9882802,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>515 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.1220182,44.9523337,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>525 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.1225121,44.9523304,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>629 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.2148353,45.0139775,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>711 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.130156,44.9523277,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>735 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.1310573,44.9523394,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>749 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.1318802,44.9523534,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>753 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.1320369,44.9523855,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>901 ST ANTHONY BLVD St Paul MN</address>
+				<Point>
+					<coordinates>-93.1380917,44.9523836,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1730 Herschell St St Paul MN</address>
+				<Point>
+					<coordinates>-93.173358,44.9540148,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1731 HERSCHEL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.173358,44.9540148,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1727 Herschell St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0899578,44.9537029,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1724 HERSCHEL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.173171,44.9445579,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2036 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1649 CALIFORNIA ST St Paul MN</address>
+				<Point>
+					<coordinates>-93.0300372,44.9912783,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1649 CALIFORNIA ST St Paul MN</address>
+				<Point>
+					<coordinates>-93.0300372,44.9912783,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2024 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2024 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2023 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2020 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2019 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2017 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2017 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2017 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2016 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2016 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2016 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2016 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2016 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2015 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1855846,44.9423669,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2015 Wilder St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1855846,44.9423669,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2001 WILDER AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.185727,44.9483911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2115 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2076 Cleveland Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1867332,45.0038371,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2076 Cleveland Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1867332,45.0038371,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2064 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1875514,44.9276223,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2064 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1875514,44.9276223,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2058 Cleveland  Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2058 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2058 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2058 CLEVELAND AVE W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2056 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2063 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1871365,45.0038274,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2063 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1871365,45.0038274,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2059 Cleveland Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1871361,45.0036121,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2052 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2052 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2057 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2057 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2057 Cleveland  Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.187136,45.0035045,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2055 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1868377,44.9795845,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2055 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1868377,44.9795845,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2055 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2021 Prior Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.182046,45.002216,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1864787,45.0014549,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1864787,45.0014549,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 CLEVELAND AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1864787,45.0014549,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 Cleveland Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1874346,44.8986554,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1983 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1820499,45.0010119,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2147 Hythe St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1901443,44.9871589,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1954 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.182098,44.9982167,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1953 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1820748,44.9982168,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1952 Prior St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1822753,44.9687747,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1953 Prior St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1822753,44.968771,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1946 Prior St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1822753,44.9687747,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>45.0014077 -93.18708358 High St. Paul MN</address>
+				<Point>
+					<coordinates>-93.0899578,44.9537029,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1947 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1822753,44.968771,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1947 Prior Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1824967,44.9092311,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1946 Prior St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1822753,44.9687747,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1944 Prior Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1819746,44.9023097,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1943 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1825559,44.9356004,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1943 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1825559,44.9356004,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1942 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1825898,44.9423098,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1942 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1825898,44.9423098,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1943 Prior Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1825559,44.9356004,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1943 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1825559,44.9356004,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1939 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1819125,44.9982175,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1938 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1819125,44.9982175,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1938 Prior Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1819125,44.9982175,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1939 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823104,44.8968823,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1938 Prior Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1819746,44.9023097,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1936 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1937 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1937 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1937 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1936 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1937 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1936 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1936 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1937 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1936 Prior Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1821042,44.9003371,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1936 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1823009,44.9343143,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1933 Prior Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1818429,44.9982177,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1920 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1817038,44.9982183,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1920 PRIOR AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1817038,44.9982183,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1920 Prior St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1822852,44.9213861,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1999 FURNESS AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0097831,44.998757,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1992 FURNESS AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0093912,44.9988525,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1960 FURNESS AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0092257,44.9984702,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1965 FURNESS AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0118623,44.9909937,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1935 FURNESS AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0100858,44.9982214,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1885 TATUM AVE W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1803903,44.9979361,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2004 FURNESS AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0097831,44.998757,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2025 FURNESS AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0118623,44.9909937,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2025 FURNESS AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0118623,44.9909937,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1898 HOWELL PKWY St Paul MN</address>
+				<Point>
+					<coordinates>-93.1804474,44.9490694,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1898 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1804474,44.9490694,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1898 Howell St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1804474,44.9490694,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1898 Howell St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1804474,44.9490694,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1899 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1807439,44.9467221,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1862 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1797667,44.9342997,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1883 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1800197,44.9384268,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1879 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0899578,44.9537029,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1876 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1795843,44.9357384,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1877 Howell  Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1797667,44.9342997,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1826 Fairview Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1823 Fairview Ave W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1823 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1823 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1823 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1771833,44.9684587,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1766397,44.9508769,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 Fairview St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1766397,44.9508769,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1766397,44.9508769,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1822 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1821 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1774193,44.916411,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1821 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1771833,44.9684587,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1821 Fairview St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1774193,44.916411,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1821 Fairview Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1774193,44.916411,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>693 Van Buren St St Paul MN</address>
+				<Point>
+					<coordinates>-93.129552,44.9623248,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1819 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>690 VAN BUREN ST St Paul MN</address>
+				<Point>
+					<coordinates>-93.1294476,44.9618916,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 Fairview Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 Fairview St S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1818 Fairview Ave St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770217,44.9293152,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1817 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1817 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1773442,44.9963912,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1817 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1817 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1817 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1817 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1773442,44.9963912,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>687 VAN BUREN PKWY N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1293692,44.9623239,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1816 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770543,44.9302908,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1816 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770543,44.9302908,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1816 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770543,44.9302908,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1816 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770543,44.9302908,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1814 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1814 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1825 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1771833,44.9684587,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1825 Fairview Ave N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1771833,44.9684587,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1983 Moore St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1844052,44.9497656,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1979 Moore St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1839306,44.9466742,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1981 Moore St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1841536,44.9462051,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1985 Moore St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1843966,44.9497858,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1812 FAIRVIEW AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1761738,44.9513525,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1815 Fairview Ave S St Paul MN</address>
+				<Point>
+					<coordinates>-93.1772131,44.9302903,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1815 Fairview St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770688,44.9963745,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1815 Fairview St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1770688,44.9963745,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1841 VAN DYKE AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219812,44.9968306,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1841 Van Dyke St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219812,44.9968306,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1840 VAN DYKE AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219796,44.9975537,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1840 Van Dyke St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219796,44.9975537,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1840 Van Dyke St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219796,44.9975537,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1839 VAN DYKE AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0225755,44.9707018,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1839 Van Dyke St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.0225755,44.9707018,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1839 Van Dyke St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.0225755,44.9707018,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1837 VAN DYKE AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0229563,44.9690207,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1837 Van Dyke St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0229563,44.9690207,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1836 Van Dyke St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219784,44.9974929,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1836 VAN DYKE AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219784,44.9974929,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1836 VAN DYKE AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219784,44.9974929,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1834 VAN DYKE AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219778,44.9974625,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1831 Van Dyke St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.0220416,44.9966573,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1901 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1789385,44.9069064,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1904 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1807439,44.9467221,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1907 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1789385,44.9069064,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1906 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.181055,44.9660142,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1907 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1789385,44.9069064,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1906 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.181055,44.9660142,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1905 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1807439,44.9467221,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1911 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1807439,44.9467221,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1912 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1789592,44.9069178,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1918 HOWELL AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1789592,44.9069178,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1978 MOORE AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1841536,44.9462051,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1981 MOORE AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1841536,44.9462051,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1985 MOORE AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1843966,44.9497858,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1800 Van Dyke St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0219749,44.9969457,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1763 White Bear St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0257759,44.9943068,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1724 FLANDRAU AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.027126,44.993346,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1722 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0275939,44.9788409,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1722 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0275939,44.9788409,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1722 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0275939,44.9788409,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1722 FLANDRAU AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0275939,44.9788409,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 FLANDRAU ST E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1721 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282532,44.99327,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1719 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.028501,44.993217,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1719 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.028501,44.993217,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1719 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.028501,44.993217,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1718 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.027126,44.993209,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1720 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0273446,44.9932548,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1716 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0280591,44.9845195,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1716 FLANDRAU ST E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0280591,44.9845195,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1715 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.028501,44.993079,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1715 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.028501,44.993079,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1715 FLANDRAU AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.028501,44.993079,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1664 FRY AVE W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1699007,44.9922157,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1711 Flandrau St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0282535,44.9929763,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2017 RUTH AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.0150416,44.99196,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2016 Ruth St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0150416,44.99196,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2026 Ruth St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0150416,44.99196,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2027 Ruth St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0150416,44.99196,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2047 Ruth St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0151265,44.9552676,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2022 Ruth St St Paul MN</address>
+				<Point>
+					<coordinates>-93.0149508,44.9720324,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>59 ABELL PKWY E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0989611,44.9917484,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>59 ABELL PKWY E St Paul MN</address>
+				<Point>
+					<coordinates>-93.0989611,44.9917484,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>20 GURNEY AVE E St Paul MN</address>
+				<Point>
+					<coordinates>-93.1002944,44.9918759,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>21 GURNEY PKWY E St Paul MN</address>
+				<Point>
+					<coordinates>-93.1002944,44.9918759,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1642 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1698997,44.9920618,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1636 FRY AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1687895,44.9685897,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1636 FRY AVE W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1698995,44.9920198,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1636 FRY AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1687895,44.9685897,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1636 Fry  St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1687895,44.9685897,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1636 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1687895,44.9685897,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1630 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1692869,44.9500547,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1630 Fry St N St Paul MN</address>
+				<Point>
+					<coordinates>-93.1692869,44.9500547,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1630 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1692869,44.9500547,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1633 FRY AVE St Paul MN</address>
+				<Point>
+					<coordinates>-93.1687895,44.9685897,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1628 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.1698991,44.9919638,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1631 Fry  Ave W St Paul MN</address>
+				<Point>
+					<coordinates>-93.1687895,44.9685897,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1626 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.169899,44.9919498,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1626 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.169899,44.9919498,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#1</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1626 Fry St St Paul MN</address>
+				<Point>
+					<coordinates>-93.169899,44.9919498,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/red_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style><Style id="1"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
+</kml>

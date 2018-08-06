@@ -1,0 +1,619 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>removal-fix-1</name>
+		<description> | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1474 ALAMEDA ST Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>200 7TH ST W Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1028411,44.9437117,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>174 7TH ST W Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1025725,44.9441353,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>859 ST PAUL AVE Front  4 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1743386,44.9039384,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>859 ST PAUL AVE Front  7 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1363244,44.9270583,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1242 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1784954,44.9051785,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1250 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1743386,44.9039384,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1252 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1330 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1761224,44.9045332,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1344 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1572209,44.940927,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1360 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1578124,44.9552693,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1372 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.174345,44.904589,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1384 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.173926,44.9045212,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1398 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1734554,44.9045342,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1398 ST PAUL AVE Front  4 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1734554,44.9045342,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1410 ST PAUL AVE Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1743386,44.9039384,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>250 5TH ST E Front 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0865747,44.9493407,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>790 CLEVELAND AVE S Front 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1869024,44.9173895,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>772 CLEVELAND AVE S Front 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1870793,44.918258,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>240 6TH ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.087373,44.9500699,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Rear  3 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1495046,44.9755181,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Rear  5 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1495046,44.9755181,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Rear  6 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1495046,44.9755181,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Side  5 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0693956,44.9379082,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Side  6 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0827495,44.9332911,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Side  7 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0623584,44.9642305,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Side  8 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1497549,44.9763361,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Side  9 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0320408,44.9772313,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1151 COMO AVE Side  10 St Paul MN</address>
+				<Point>
+					<coordinates>-93.14591,44.9776613,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>840 LAKE ST Front 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0061704,44.9668345,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>250 5TH ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0864647,44.9492695,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>220 5TH ST E Front 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.090003,44.9483611,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>834 7TH ST W Front 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.103382,44.944546,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>654 6TH ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>654 6TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.073454,44.95619,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>670 6TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0742789,44.9561497,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>674 6TH ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>674 6TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0727446,44.9566882,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>350 ST PETER ST Front  4 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0952148,44.9448689,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>Hamline Ave woodline St Paul MN</address>
+				<Point>
+					<coordinates>-93.1565191,44.9771822,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1138 CHURCHILL ST Side 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0989691,44.9117221,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1138 CHURCHILL ST Side 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0989691,44.9117221,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1138 CHURCHILL ST Side 3 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0886963,44.9400632,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1754 5TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0263485,44.9593083,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>495 HAMLINE AVE S Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.156714,44.926658,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1616 PARK ST Side  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1037613,44.9660587,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>327 MAPLE ST Side  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0680271,44.9572161,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>326 MAPLE ST Side  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0886963,44.9400632,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>218 7TH ST E Side  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.089003,44.950704,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>218 7TH ST E Side  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.089003,44.950704,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>218 7TH ST E Side  3 St Paul MN</address>
+				<Point>
+					<coordinates>-93.089003,44.950704,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1199 7TH ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1328335,44.923858,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1199 7TH ST W Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1328335,44.923858,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1748 5TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0266614,44.9593001,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1770 5TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.025762,44.9592874,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>220 5TH ST E Side 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.086982,44.948777,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>220 5TH ST E Side 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0865747,44.9493407,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>220 5TH ST E Side 5 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0865747,44.9493407,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1535 3RD ST E Side 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0356555,44.9570219,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1075 3RD ST E Front  11 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0549594,44.9573645,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2327 HILLSIDE AVE Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1989109,44.9772165,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1663 3RD ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0301415,44.9570587,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1675 3RD ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0295158,44.9570388,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1180 CLEVELAND AVE N Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1885652,44.9779424,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1180 CLEVELAND AVE N Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1885652,44.9779424,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>880 CLEVELAND AVE S Front  7 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1875198,44.9399906,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2121 5TH ST E Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>2017 CLEVELAND AVE S Side 3 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1871364,44.9274787,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
+</kml>
