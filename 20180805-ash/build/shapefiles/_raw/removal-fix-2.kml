@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>removal-fix-2</name>
+		<description> | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>194 6TH ST E Front  4 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0891605,44.9491883,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>242 ROSE AVE W Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>566 SYNDICATE ST S Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1541041,44.9244844,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>450 HILL ST Front 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1156134,44.9466704,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1157 BRADLEY ST Front 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1173 BRADLEY ST Front 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>150 EVA ST Front  9 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1443524,44.9699629,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>233 MCMILLAN ST Rear 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1069546,45.0471768,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>11 alley LUDLOW AVE Rear  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1973767,44.9765817,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>844 ST PAUL AVE Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.135668,44.9397,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>499 SARATOGA ST S Front 2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.164762,44.926397,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
+</kml>
