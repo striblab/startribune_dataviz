@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>removal-fix-3</name>
+		<description> | Created with https://batchgeo.com</description>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1375 ST PAUL AVE Front  12 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1743386,44.9039384,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1375 ST PAUL AVE Front  8 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1743386,44.9039384,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>123 ROSE AVE E Front  10 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1016003,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>123 ROSE AVE E Front  11 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1016139,44.970296,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>123 ROSE AVE E Front  12 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1016098,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>303 JOHNSON PKWY Front  4 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0481982,44.9506232,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Side 14 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Side 16 St Paul MN</address>
+				<Point>
+					<coordinates>-93.083353,44.942485,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Side 22 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835884,44.9426919,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 22 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 26 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 28 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 34 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>366 SELBY AVE Front 1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.115442,44.9463889,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Side 18 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835884,44.9426919,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Side 20 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 16 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 20 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 24 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>10 RIVER PARK PLZ Rear 30 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0835285,44.9425348,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>775 4TH ST E Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0668742,44.9578656,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>1302 FREMONT AVE Median  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.0454336,44.9574908,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>305 ST PETER ST Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.1015624,44.9702959,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>360 ST PETER ST Front  1 St Paul MN</address>
+				<Point>
+					<coordinates>-93.095427,44.945057,0</coordinates>
+				</Point>
+			</Placemark>
+					<Placemark>
+				<styleUrl>#0</styleUrl>
+								<ExtendedData>
+									</ExtendedData>
+								<address>360 ST PETER ST Front  2 St Paul MN</address>
+				<Point>
+					<coordinates>-93.095427,44.945057,0</coordinates>
+				</Point>
+			</Placemark>
+		<Style id="0"><IconStyle><scale>1</scale><Icon><href>https://batchgeo.com/images/icons/_shadow_Marker.png</href></Icon><hotSpot x=".3" y=".8" xunits="fraction" yunits="fraction" /></IconStyle><LabelStyle><scale>0</scale></LabelStyle></Style>	</Document>
+</kml>
