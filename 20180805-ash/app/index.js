@@ -93,7 +93,7 @@ function chartTrend() {
             // r: function(d) { if (d.x == 2017) { return 6;} else { return 2.5; } }
         },
         color: {
-            pattern: ['#F2614C', '#857AAA', '#67B4C2', '#5BBF48']
+            pattern: ['#F2614C', '#857AAA', '#5BBF48', '#5BBF48']
         },
         axis: {
             // rotated: true,
@@ -155,13 +155,14 @@ chartTrend();
 
 d3.json('./shapefiles/removed.geojson', function(error, removed) {
     d3.json('./shapefiles/planted.geojson', function(error, planted) {
+        d3.json('./shapefiles/planted_all.geojson', function(error, plantedAll) {
 
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhZG93ZmxhcmUiLCJhIjoiS3pwY1JTMCJ9.pTSXx_LFgR3XBpCNNxWPKA';
 
         var center = [-93.089958, 44.953703];
         var zoom = 10.7;
         var centerM = [-93.089958, 44.953703];
-        var zoomM = 10.3;
+        var zoomM = 10;
 
         //REMOVAL MAP
         var map = new mapboxgl.Map({
@@ -189,6 +190,19 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
             doubleClickZoom: false
         });
 
+        //DIFF MAP
+        // var map3 = new mapboxgl.Map({
+        //     container: 'mapDIFF',
+        //     style: 'mapbox://styles/shadowflare/ciqzo0bu20004bknkbrhrm6wf',
+        //     // center: [-93.179770, 44.877039],
+        //     center: center,
+        //     zoom: zoom,
+        //     minZoom: 2,
+        //     scrollZoom: false,
+        //     boxZoom: false,
+        //     doubleClickZoom: false
+        // });
+
 
         //CREATE A BOUNDING BOX AROUND POINTS (ALSO USE FOR HEX GRID)
         var enveloped = turf.envelope(removed); //send point geojson to turf, creates an 'envelope' (bounding box) around points
@@ -206,26 +220,45 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
         //CREATE A HEX GRID
         //must be in order: minX, minY, maxX, maxY ... you have to pick these out from your envelope that you created previously
         var bbox = [-93.00432, 44.992016, -93.207787, 44.887399];
-        var hexgridUnits = 'miles' //units that will determine the width of the hex grid
-        var cellWidth = 1 //in the units you defined above
+        var hexgridUnits = 'miles'; //units that will determine the width of the hex grid
+        var cellWidth = 0.9; //in the units you defined above
         var hexgrid = turf.hexGrid(bbox, cellWidth, hexgridUnits); //makes the new geojson hexgrid features
 
         //COUNT THE NUMBER OF TREES IN EACH HEX BIN
         var hexRemoved = turf.count(hexgrid, removed, 'removedCount');
         var hexPlanted = turf.count(hexgrid, planted, 'plantedCount');
+        var hexDIFF = turf.count(hexgrid, plantedAll, 'plantedAllCount');
+
+        //CALCULATE DIFFERENCE AND ADD TO GEOJSON AS FIELD
+        for(var i=0; i < 84; i++){
+                var loss = hexDIFF.features[i].properties.removedCount;
+                var gain = hexDIFF.features[i].properties.plantedAllCount;
+                hexDIFF.features[i].properties["DIFF"] = gain - loss;
+
+            }
 
         //create jenks natural breaks - generates min, breaks, max ... remember for 5 categories, we only need 4 numbers
-        var numberBreaks = 7
+        var numberBreaks = 10
         var jenksbreaks = turf.jenks(hexRemoved, 'removedCount', numberBreaks);
-        var colors = ['#F2AC93', '#F2AC93', '#F28670', '#F28670', '#F2614C', '#F2614C', '#C22A22', '#C22A22', '#9C0004']
-        var transparency = [0, 1, 1, 1, 1, 1, 1, 1, 1]
+        var colors = ['#F2AC93', '#F2AC93', '#F2AC93', '#F28670', '#F28670', '#F2614C', '#F2614C', '#C22A22', '#C22A22', '#9C0004']
+        var transparency = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
-        var numberBreaks2 = 7
-        var jenksbreaks2 = turf.jenks(hexPlanted, 'plantedCount', numberBreaks2);
-        var colors2 = ['#D1E6E1', '#D1E6E1', '#A7E6E3', '#A7E6E3', '#67B4C2', '#67B4C2', '#3580A3', '#3580A3', '#0D4673']
-        var transparency2 = [0, 1, 1, 1, 1, 1, 1, 1, 1]
+        var numberBreaks2 = 10
+        var jenksbreaks2 = turf.jenks(hexPlanted, 'removedCount', numberBreaks2);
+        var colors2 = ['#C7E5B5', '#C7E5B5', '#C7E5B5', '#9EE384', '#9EE384', '#5BBF48', '#5BBF48', '#299E3D', '#299E3D', '#118241']
+        var transparency2 = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+        
+        var numberBreaks3 = 3
+        var jenksbreaks3 = turf.jenks(hexDIFF, 'DIFF', numberBreaks3);
+        var colors3 = ['#ef3b2c', '#f7f7f7', '#084594']
+        var transparency3 = [1, 0, 1]
+
+
+
 
         jenksbreaks.forEach(function(element, i) {
+
             if (i > 0) {
                 jenksbreaks[i] = [element, colors[i - 1], transparency[i - 1]];
             } else {
@@ -240,6 +273,21 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                 jenksbreaks2[i] = [element, null];
             }
         });
+
+        var binaryBreaks = [-1,0,1];
+
+        jenksbreaks3.forEach(function(element, i) {
+            if (i > 0) {
+                jenksbreaks3[i] = [binaryBreaks[i - 1], colors3[i - 1], transparency3[i - 1]];
+            } else {
+                jenksbreaks3[i] = [0, null];
+            }
+        });
+
+        console.log(jenksbreaks);
+        console.log(jenksbreaks2);
+
+
 
         map.on('load', function() {
 
@@ -274,10 +322,10 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                 };
             });
 
-            //  map.addSource("removed", {
-            //     type: "geojson",
-            //     data: removed
-            // });
+             map.addSource("removed", {
+                type: "geojson",
+                data: removed
+            });
 
             //  map.addLayer({
             //           "id": "removed-layer",
@@ -324,6 +372,58 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                 };
             });
 
+            map2.addSource("planted", {
+                type: "geojson",
+                data: planted
+            });
+            
+            //  map2.addLayer({
+            //           "id": "planted-layer",
+            //           "type": "circle",
+            //           "source": "planted",
+            //           "paint": {
+            //              "circle-radius": 2,
+            //              "circle-color": 'rgba(158,227,132, 0.3)'
+            //           }
+            // });
+
+        });
+
+        
+
+        // map3.on('load', function() {
+
+            //HEXGRIDS
+            // map3.addSource('diffHexGrid', {
+            //     "type": "geojson",
+            //     "data": hexDIFF //this is the hexgrid we just created!
+            // });
+            // for (var i = 0; i < jenksbreaks3.length; i++) {
+            //     if (i > 0) {
+            //         map3.addLayer({
+            //             "id": "diffHexGrid-" + (i - 1),
+            //             "type": "fill",
+            //             "source": "diffHexGrid",
+            //             "layout": {},
+            //             "paint": {
+            //                 'fill-color': jenksbreaks3[i][1],
+            //                 'fill-opacity': jenksbreaks3[i][2],
+            //             }
+            //         }, "road-label-medium");
+            //     };
+            // };
+
+            // jenksbreaks3.forEach(function(jenksbreak3, i) {
+            //     if (i > 0) {
+            //         var filters = ['all', ['<=', 'DIFF', jenksbreak3[0]]];
+            //         if (i > 1) {
+            //             filters.push(['>=', 'DIFF', jenksbreaks3[i - 1][0]]);
+            //             map3.setFilter('diffHexGrid-' + (i - 1), filters);
+            //         };
+
+            //     };
+            // });
+
             // map2.addSource("planted", {
             //     type: "geojson",
             //     data: planted
@@ -339,7 +439,7 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
             //           }
             // });
 
-        });
+        // });
 
         $(document).ready(function() {
             if ($("#wrapper").width() < 520) {
@@ -355,6 +455,12 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                     pitch: 0,
                     bearing: 0
                 });
+                // map3.flyTo({
+                //     center: centerM,
+                //     zoom: zoomM,
+                //     pitch: 0,
+                //     bearing: 0
+                // });
             } else {
                 map.flyTo({
                     center: center,
@@ -364,6 +470,10 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                     center: center,
                     zoom: zoom
                 });
+                // map3.flyTo({
+                //     center: center,
+                //     zoom: zoom
+                // });
             }
         $(window).resize(function() {
             if ($("#wrapper").width() < 520) {
@@ -379,6 +489,12 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                     pitch: 0,
                     bearing: 0
                 });
+                // map3.flyTo({
+                //     center: centerM,
+                //     zoom: zoomM,
+                //     pitch: 0,
+                //     bearing: 0
+                // });
             } else {
                 map.flyTo({
                     center: center,
@@ -388,9 +504,13 @@ d3.json('./shapefiles/removed.geojson', function(error, removed) {
                     center: center,
                     zoom: zoom
                 });
+                // map3.flyTo({
+                //     center: center,
+                //     zoom: zoom
+                // });
             }
             });
         });
-
+ });
     });
 });

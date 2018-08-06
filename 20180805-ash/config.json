@@ -33,19 +33,19 @@
   "publish": {
     "default": {
       "bucket": "static.startribune.com",
-      "path": "news/projects-staging/all/20180805-eab",
+      "path": "news/projects-staging/all/20180805-ash",
       "url": "http://static.startribune.com/news/projects-staging/all/20180805-ash/",
       "cacheSeconds": 30
     },
     "testing": {
       "bucket": "stribtest-bucket",
-      "path": "news/projects/20180805-eab",
+      "path": "news/projects/20180805-ash",
       "url": "https://s3.amazonaws.com/stribtest-bucket/news/projects/20180805-ash/",
       "cacheSeconds": 30
     },
     "production": {
       "bucket": "static.startribune.com",
-      "path": "news/projects/all/20180805-eab",
+      "path": "news/projects/all/20180805-ash",
       "url": "http://static.startribune.com/news/projects/all/20180805-ash/",
       "cacheSeconds": 600
     }
